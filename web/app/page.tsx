@@ -12,23 +12,29 @@ export default function Home() {
         <Link className="site-name" href="/">
           FOWT Research Digest
         </Link>
-        <nav aria-label="Primary navigation">
-          <a href="#weekly">Weekly</a>
-          <a href="#archive">Archive</a>
-          <a href="#methodology">Methodology</a>
-          <a href="#about">About</a>
-        </nav>
+        <div className="header-actions">
+          <nav aria-label="Primary navigation">
+            <a href="#weekly">Weekly</a>
+            <a href="#archive">Archive</a>
+            <a href="#methodology">Methodology</a>
+            <a href="#about">About</a>
+          </nav>
+          <fieldset className="theme-toggle" aria-label="Theme mode">
+            <legend>Theme</legend>
+            <input id="theme-light" name="theme" type="radio" defaultChecked />
+            <label htmlFor="theme-light">Light</label>
+            <input id="theme-dark" name="theme" type="radio" />
+            <label htmlFor="theme-dark">Dark</label>
+          </fieldset>
+        </div>
       </header>
 
       <section className="intro" aria-labelledby="intro-heading">
-        <p className="eyebrow">Weekly research briefing</p>
-        <h1 id="intro-heading">
-          A concise digest for floating offshore wind turbine research.
-        </h1>
+        <p className="eyebrow">Field notes for floating wind</p>
+        <h1 id="intro-heading">Fresh FOWT literature, distilled.</h1>
         <p>
-          This website curates weekly academic and conference research related
-          to floating offshore wind turbines, helping technical readers scan
-          what matters and why.
+          A weekly scan of academic and conference work for engineers who need
+          the signal without the noise.
         </p>
       </section>
 
@@ -60,7 +66,9 @@ export default function Home() {
           {mockPapers.map((paper) => (
             <li key={paper.id}>
               <article>
-                <p className="paper-number">No. {paper.number}</p>
+                <p className="paper-number">
+                  {String(paper.number).padStart(2, "0")}
+                </p>
                 <h3>{paper.title}</h3>
                 <dl className="paper-meta">
                   <div>
@@ -81,7 +89,7 @@ export default function Home() {
                   </div>
                   <div>
                     <dt>Score</dt>
-                    <dd>{paper.score}/10</dd>
+                    <dd className="paper-score">{paper.score}/10</dd>
                   </div>
                 </dl>
                 <p>{paper.editorialSummary}</p>

@@ -51,6 +51,23 @@ fowt-digest/
 - [Design direction](docs/design.md)
 - [Architecture](docs/architecture.md)
 
+## Running the Website
+
+The initial homepage lives in `web/`.
+
+```powershell
+cd web
+npm install
+npm run dev
+```
+
+Useful checks:
+
+```powershell
+npm run lint
+npm run build
+```
+
 ## Current Status
 
-Initial project documentation is being established before application code is written. The next implementation step is to initialize the Next.js website under `web/` only after the project definition is accepted.
+The project now contains a minimal Next.js homepage structure using local fictional paper data. Additional MVP pages have not been implemented yet.

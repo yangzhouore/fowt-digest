@@ -1,11 +1,20 @@
 import Link from "next/link";
-import {
-  currentEdition,
-  mockPapers,
-  recentEditions,
-} from "../data/mock-papers";
+import { notFound } from "next/navigation";
+import { currentEdition, mockPapers } from "../../../data/mock-papers";
 
-export default function Home() {
+type WeeklyPageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export default async function WeeklyPage({ params }: WeeklyPageProps) {
+  const { slug } = await params;
+
+  if (slug !== currentEdition.slug) {
+    notFound();
+  }
+
   return (
     <main>
       <header className="site-header">
@@ -14,10 +23,8 @@ export default function Home() {
         </Link>
         <div className="header-actions">
           <nav aria-label="Primary navigation">
-            <a href="#weekly">Weekly</a>
-            <a href="#archive">Archive</a>
-            <a href="#methodology">Methodology</a>
-            <a href="#about">About</a>
+            <Link href="/">Home</Link>
+            <a href="#papers">Papers</a>
           </nav>
           <fieldset className="theme-toggle" aria-label="Theme mode">
             <legend>Theme</legend>
@@ -29,25 +36,18 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="intro" aria-labelledby="intro-heading">
-        <p className="eyebrow">Field notes for floating wind</p>
-        <h1 id="intro-heading">Fresh FOWT literature, distilled.</h1>
-        <p>
-          A weekly scan of academic and conference work for engineers who need
-          the signal without the noise.
-        </p>
+      <section className="intro" aria-labelledby="weekly-heading">
+        <p className="eyebrow">Weekly edition</p>
+        <h1 id="weekly-heading">{currentEdition.dateRange}</h1>
+        <p>{currentEdition.introduction}</p>
       </section>
 
-      <section className="edition-meta" aria-labelledby="edition-heading">
-        <h2 id="edition-heading">Current edition</h2>
+      <section className="edition-meta" aria-labelledby="edition-meta-heading">
+        <h2 id="edition-meta-heading">Edition metadata</h2>
         <dl>
           <div>
             <dt>Date range</dt>
-            <dd>
-              <Link href={`/weekly/${currentEdition.slug}`}>
-                {currentEdition.dateRange}
-              </Link>
-            </dd>
+            <dd>{currentEdition.dateRange}</dd>
           </div>
           <div>
             <dt>Papers reviewed</dt>
@@ -64,8 +64,8 @@ export default function Home() {
         </dl>
       </section>
 
-      <section id="weekly" aria-labelledby="papers-heading">
-        <h2 id="papers-heading">Selected papers</h2>
+      <section id="papers" aria-labelledby="selected-papers-heading">
+        <h2 id="selected-papers-heading">Selected papers</h2>
         <ol className="paper-list">
           {mockPapers.map((paper) => (
             <li key={paper.id}>
@@ -105,34 +105,13 @@ export default function Home() {
         </ol>
       </section>
 
-      <section id="archive" aria-labelledby="recent-editions-heading">
-        <h2 id="recent-editions-heading">Recent editions</h2>
-        <ul className="edition-list">
-          {recentEditions.map((edition) => (
-            <li key={edition.slug}>
-              <a href={`#edition-${edition.slug}`}>{edition.dateRange}</a>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section id="methodology" aria-labelledby="notice-heading">
-        <h2 id="notice-heading">Mock-data notice</h2>
+      <section aria-labelledby="weekly-notice-heading">
+        <h2 id="weekly-notice-heading">Mock-data notice</h2>
         <p>
-          All displayed paper information is fictional and for development only.
-          It does not describe real publications, real results, or real source
-          links.
+          This edition and all listed paper information are fictional mock
+          content for development only.
         </p>
       </section>
-
-      <footer id="about">
-        <p>
-          FOWT Research Digest is a developing editorial reference for floating
-          offshore wind turbine literature.
-        </p>
-        <p>Copyright 2026 FOWT Research Digest.</p>
-      </footer>
     </main>
   );
 }
-

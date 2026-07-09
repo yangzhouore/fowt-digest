@@ -303,3 +303,30 @@ footer {
     margin-bottom: 10px;
   }
 }
+.paper-detail-meta dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 28px;
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+.analysis-sections > section {
+  padding: 22px 0;
+}
+
+.analysis-sections > section:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.text-link-row {
+  margin-top: 18px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (max-width: 720px) {
+  .paper-detail-meta dl {
+    grid-template-columns: 1fr;
+  }
+}

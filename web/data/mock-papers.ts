@@ -30,7 +30,15 @@ export const currentEdition = {
     "This fictional edition groups six floating wind research themes into a compact reading path for MVP testing.",
 };
 
-export const recentEditions = [
+export const archiveEditions = [
+  {
+    slug: currentEdition.slug,
+    dateRange: currentEdition.dateRange,
+    papersReviewed: currentEdition.papersReviewed,
+    papersSelected: currentEdition.papersSelected,
+    readingTime: currentEdition.readingTime,
+    available: true,
+  },
   {
     dateRange: "27 July-2 August 2026",
     slug: "2026-08-02",

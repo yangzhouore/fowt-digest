@@ -1,33 +1,15 @@
 import Link from "next/link";
+import { SiteHeader } from "./site-header";
 import {
+  archiveEditions,
   currentEdition,
   mockPapers,
-  recentEditions,
 } from "../data/mock-papers";
 
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <Link className="site-name" href="/">
-          FOWT Research Digest
-        </Link>
-        <div className="header-actions">
-          <nav aria-label="Primary navigation">
-            <a href="#weekly">Weekly</a>
-            <a href="#archive">Archive</a>
-            <a href="#methodology">Methodology</a>
-            <a href="#about">About</a>
-          </nav>
-          <fieldset className="theme-toggle" aria-label="Theme mode">
-            <legend>Theme</legend>
-            <input id="theme-light" name="theme" type="radio" defaultChecked />
-            <label htmlFor="theme-light">Light</label>
-            <input id="theme-dark" name="theme" type="radio" />
-            <label htmlFor="theme-dark">Dark</label>
-          </fieldset>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="intro" aria-labelledby="intro-heading">
         <p className="eyebrow">Field notes for floating wind</p>
@@ -108,15 +90,22 @@ export default function Home() {
       <section id="archive" aria-labelledby="recent-editions-heading">
         <h2 id="recent-editions-heading">Recent editions</h2>
         <ul className="edition-list">
-          {recentEditions.map((edition) => (
+          {archiveEditions.slice(0, 3).map((edition) => (
             <li key={edition.slug}>
-              <a href={`#edition-${edition.slug}`}>{edition.dateRange}</a>
+              {edition.available ? (
+                <Link href={`/weekly/${edition.slug}`}>{edition.dateRange}</Link>
+              ) : (
+                <span>{edition.dateRange}</span>
+              )}
             </li>
           ))}
         </ul>
+        <p className="text-link-row">
+          <Link href="/archive">View archive</Link>
+        </p>
       </section>
 
-      <section id="methodology" aria-labelledby="notice-heading">
+      <section aria-labelledby="notice-heading">
         <h2 id="notice-heading">Mock-data notice</h2>
         <p>
           All displayed paper information is fictional and for development only.
@@ -125,7 +114,7 @@ export default function Home() {
         </p>
       </section>
 
-      <footer id="about">
+      <footer>
         <p>
           FOWT Research Digest is a developing editorial reference for floating
           offshore wind turbine literature.
@@ -135,4 +124,3 @@ export default function Home() {
     </main>
   );
 }
-

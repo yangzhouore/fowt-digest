@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SiteHeader } from "../../site-header";
 import { notFound } from "next/navigation";
 import { currentEdition, mockPapers } from "../../../data/mock-papers";
 
@@ -17,24 +18,7 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
 
   return (
     <main>
-      <header className="site-header">
-        <Link className="site-name" href="/">
-          FOWT Research Digest
-        </Link>
-        <div className="header-actions">
-          <nav aria-label="Primary navigation">
-            <Link href="/">Home</Link>
-            <a href="#papers">Papers</a>
-          </nav>
-          <fieldset className="theme-toggle" aria-label="Theme mode">
-            <legend>Theme</legend>
-            <input id="theme-light" name="theme" type="radio" defaultChecked />
-            <label htmlFor="theme-light">Light</label>
-            <input id="theme-dark" name="theme" type="radio" />
-            <label htmlFor="theme-dark">Dark</label>
-          </fieldset>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="intro" aria-labelledby="weekly-heading">
         <p className="eyebrow">Weekly edition</p>
@@ -115,3 +99,4 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
     </main>
   );
 }
+

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SiteHeader } from "../../site-header";
 import { notFound } from "next/navigation";
 import { currentEdition, mockPapers } from "../../../data/mock-papers";
 
@@ -18,24 +19,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
 
   return (
     <main>
-      <header className="site-header">
-        <Link className="site-name" href="/">
-          FOWT Research Digest
-        </Link>
-        <div className="header-actions">
-          <nav aria-label="Primary navigation">
-            <Link href={`/weekly/${currentEdition.slug}`}>Weekly edition</Link>
-            <Link href="/">Home</Link>
-          </nav>
-          <fieldset className="theme-toggle" aria-label="Theme mode">
-            <legend>Theme</legend>
-            <input id="theme-light" name="theme" type="radio" defaultChecked />
-            <label htmlFor="theme-light">Light</label>
-            <input id="theme-dark" name="theme" type="radio" />
-            <label htmlFor="theme-dark">Dark</label>
-          </fieldset>
-        </div>
-      </header>
+      <SiteHeader />
 
       <article>
         <section className="intro" aria-labelledby="paper-heading">
@@ -119,3 +103,4 @@ export default async function PaperPage({ params }: PaperPageProps) {
     </main>
   );
 }
+

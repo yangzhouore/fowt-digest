@@ -1,59 +1,73 @@
 # FOWT Research Digest
 
-FOWT Research Digest is an MVP website for publishing a weekly digest of academic and conference papers related to floating offshore wind turbines.
+FOWT Research Digest is an MVP editorial website for floating offshore wind
+turbine research. It presents a weekly, content-first digest using fictional
+local paper data while the product and pipeline are still being defined.
 
-The project is currently in the definition phase. No Next.js application has been initialized yet.
+The current implementation is a static Next.js website. It does not collect
+real papers, score research, publish automatically, or connect to external
+research sources.
 
-## MVP Scope
+## Implemented
 
-The first version will include:
+- Homepage
+- Weekly edition page
+- Individual paper detail pages
+- Archive page with prototype edition entries
+- Methodology page
+- About page
+- Local fictional mock paper data
+- Next.js App Router
+- TypeScript
+- Plain global CSS
 
-- a homepage;
-- one weekly edition page;
-- individual paper pages;
-- an archive page;
-- a methodology page;
-- mock paper data stored locally.
+## Not Yet Implemented
 
-The MVP will not include authentication, user accounts, comments, payments, personalised recommendations, a database, an API server, autonomous publication, MCP servers, production AI agents, or automated ingestion.
+Future work includes:
 
-## Technical Direction
+- Archive data improvements
+- Methodology and About content refinements
+- Python collection pipeline
+- OpenAlex integration
+- Crossref integration
+- arXiv integration
+- AI scoring
+- AI writing
+- AI review
+- Database
+- Automatic publishing
 
-The planned implementation is:
-
-- Next.js and TypeScript for the website;
-- plain CSS or CSS Modules for styling;
-- local JSON for mock MVP data;
-- Python for a future paper-processing pipeline;
-- no FastAPI, database, authentication, MCP, AI agents, or UI component library in the initial MVP.
-
-## Proposed Repository Structure
+## Repository Structure
 
 ```text
 fowt-digest/
-  AGENTS.md
+  AGENTS.md              # Contributor and engineering rules
+  DIRECTIONS.md          # Project decisions and future direction
+  PROJECT_STATUS.md      # Current status and technical debt notes
   README.md
   docs/
-    product.md
-    design.md
     architecture.md
+    design.md
+    product.md
   web/
-    # Next.js app, added later
-  data/
-    # Local mock JSON, added with the MVP
-  pipeline/
-    # Python scripts, added later
+    app/
+      about/
+      archive/
+      methodology/
+      papers/[slug]/
+      weekly/[slug]/
+      globals.css
+      layout.tsx
+      page.tsx
+      site-header.tsx
+    data/
+      mock-papers.ts
+    package.json
 ```
-
-## Project Documents
-
-- [Product definition](docs/product.md)
-- [Design direction](docs/design.md)
-- [Architecture](docs/architecture.md)
 
 ## Running the Website
 
-The initial homepage lives in `web/`.
+Install dependencies and start the local development server from `web/`:
 
 ```powershell
 cd web
@@ -68,6 +82,12 @@ npm run lint
 npm run build
 ```
 
-## Current Status
+## Engineering Philosophy
 
-The project now contains a minimal Next.js homepage structure using local fictional paper data. Additional MVP pages have not been implemented yet.
+The project follows the rules in `AGENTS.md`: keep the website simple, avoid
+premature abstractions, use local structured data until more is needed, and keep
+the future Python or AI pipeline separate from the frontend. The visual direction
+is restrained, editorial, typography-first, and content-focused.
+
+Do not add backend services, databases, UI component libraries, AI agents, or
+production integrations unless the project scope explicitly changes.

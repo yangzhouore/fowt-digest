@@ -20,6 +20,15 @@ export type MockPaper = {
   fictional: true;
 };
 
+export type ArchiveEdition = {
+  slug: string;
+  dateRange: string;
+  papersReviewed: number;
+  papersSelected: number;
+  readingTime: string;
+  available: boolean;
+};
+
 export const currentEdition = {
   slug: "2026-08-09",
   dateRange: "3-9 August 2026",
@@ -30,7 +39,7 @@ export const currentEdition = {
     "This fictional edition groups six floating wind research themes into a compact reading path for MVP testing.",
 };
 
-export const archiveEditions = [
+export const archiveEditions: ArchiveEdition[] = [
   {
     slug: currentEdition.slug,
     dateRange: currentEdition.dateRange,
@@ -42,14 +51,26 @@ export const archiveEditions = [
   {
     dateRange: "27 July-2 August 2026",
     slug: "2026-08-02",
+    papersReviewed: 16,
+    papersSelected: 6,
+    readingTime: "8 minutes",
+    available: false,
   },
   {
     dateRange: "20-26 July 2026",
     slug: "2026-07-26",
+    papersReviewed: 14,
+    papersSelected: 5,
+    readingTime: "7 minutes",
+    available: false,
   },
   {
     dateRange: "13-19 July 2026",
     slug: "2026-07-19",
+    papersReviewed: 12,
+    papersSelected: 5,
+    readingTime: "7 minutes",
+    available: false,
   },
 ];
 

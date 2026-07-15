@@ -23,34 +23,38 @@ The AI system should remain completely separated from the frontend.
 
 Milestone:
 
-M3A - Pipeline Foundation
+M3B - OpenAlex Collector
 
 Status:
 
-Complete
+In Progress
 
 Completed:
 
-- pipeline package skeleton
-- deterministic run ID helper
-- deterministic candidate ID helper
-- deterministic paper ID helper
-- DOI normalisation
-- title normalisation
-- `pipeline/run_storage.py`
-- run directory creation
-- six contract JSON filenames supported
-- UTF-8 deterministic JSON writing
-- atomic file replacement
-- identifier tests
-- storage tests
+- M3A Pipeline Foundation
+- M3B-1 OpenAlex Query Builder
+- 13 contract search terms supported
+- published-date filter construction
+- cursor pagination parameter construction
+- deterministic OpenAlex search parameter generation
+- deterministic query URL generation
+- query-builder tests
 
 Latest validation result:
 
-- 17 passed
+- 27 passed
 - 0 failed
 
-Pipeline Foundation is complete.
+Not yet implemented:
+
+- OpenAlex client
+- HTTP requests
+- response parsing
+- raw response storage
+- metadata normalisation
+- deduplication
+
+M3B-1 is complete. M3B-2 is next.
 
 ---
 
@@ -62,11 +66,11 @@ master
 
 Current Development Branch:
 
-feature/pipeline-foundation
+feature/openalex-collector
 
 Expected current branch:
 
-feature/pipeline-foundation
+feature/openalex-collector
 
 ---
 
@@ -74,13 +78,13 @@ feature/pipeline-foundation
 
 Current objective:
 
-M3B - OpenAlex Collector.
+M3B-2 - OpenAlex Client.
 
 Required work:
 
-- implement OpenAlex query construction
-- implement the minimal OpenAlex client only when starting M3B
-- preserve raw OpenAlex responses in the contract-defined run files
+- implement the minimal OpenAlex client
+- perform HTTP requests only in the M3B-2 slice
+- preserve raw OpenAlex responses in contract-defined run files when storage is introduced for the client
 - keep outputs local and independent from the website
 
 Do not implement yet:
@@ -96,7 +100,7 @@ Do not implement yet:
 - FastAPI
 - MCP
 
-OpenAlex is not implemented yet.
+OpenAlex query construction is implemented. The OpenAlex client, collector execution, response parsing, and storage are not implemented yet.
 
 ---
 
@@ -108,9 +112,11 @@ Implemented:
 - docs/
 - pipeline/__init__.py
 - pipeline/ids.py
+- pipeline/openalex_query.py
 - pipeline/run_storage.py
 - pipeline/tests/__init__.py
 - pipeline/tests/test_ids.py
+- pipeline/tests/test_openalex_query.py
 - pipeline/tests/test_run_storage.py
 
 Not yet implemented:
@@ -337,9 +343,11 @@ Current implementation:
 
 - `pipeline/__init__.py`
 - `pipeline/ids.py`
+- `pipeline/openalex_query.py`
 - `pipeline/run_storage.py`
 - `pipeline/tests/__init__.py`
 - `pipeline/tests/test_ids.py`
+- `pipeline/tests/test_openalex_query.py`
 - `pipeline/tests/test_run_storage.py`
 
 Implemented:
@@ -353,20 +361,29 @@ Implemented:
 - six contract JSON filenames supported
 - UTF-8 deterministic JSON writing
 - atomic file replacement
-- pytest coverage for identifier and storage behaviour
+- 13 OpenAlex contract search terms supported
+- published-date filter construction
+- cursor pagination parameter construction
+- deterministic OpenAlex search parameter generation
+- deterministic query URL generation
+- pytest coverage for identifier, storage, and query-builder behaviour
 
-Pipeline Foundation is complete.
+Completed pipeline slices:
+
+- M3A Pipeline Foundation
+- M3B-1 OpenAlex Query Builder
 
 Latest validation result:
 
-- 17 passed
+- 27 passed
 - 0 failed
 
-Not yet implemented beyond Pipeline Foundation:
+Not yet implemented beyond M3B-1:
 
-- OpenAlex request construction
 - OpenAlex API client
-- pagination, timeout, retry, or rate-limit handling
+- HTTP requests
+- pagination execution
+- timeout, retry, or rate-limit handling
 - raw response storage
 - run summary writing
 - candidate record generation
@@ -413,8 +430,8 @@ Reorganise only when it becomes difficult to maintain.
 Dark mode is NOT part of the MVP.
 
 6. Pipeline design documents describe intended future stages, while the current
-   implementation only covers Pipeline Foundation: deterministic ID helpers,
-   normalisation helpers used by IDs, and run storage.
+   implementation only covers Pipeline Foundation and M3B-1 query construction.
+   The OpenAlex client and collector execution are not implemented.
 
 ---
 
@@ -440,9 +457,9 @@ Unacceptable technical debt:
 
 Still missing:
 
-- Python paper collection pipeline beyond Pipeline Foundation
+- Python paper collection pipeline beyond Pipeline Foundation and M3B-1 query construction
 
-- OpenAlex integration
+- OpenAlex client and integration
 - Crossref integration
 - arXiv integration
 
@@ -516,11 +533,24 @@ Current status:
 - Storage tests complete
 - Latest validation: 17 passed, 0 failed
 
+Completed milestone:
+
+M3B-1 - OpenAlex Query Builder
+
+Current status:
+
+- 13 contract search terms supported
+- Published-date filter implemented
+- Cursor pagination parameters implemented
+- Deterministic params and URL generation implemented
+- Latest validation: 27 passed, 0 failed
+- No HTTP requests, parsing, or storage implemented yet
+
 Immediate next milestone:
 
-M3B - OpenAlex Collector
+M3B-2 - OpenAlex Client
 
-Do not claim OpenAlex is implemented. Do not start Crossref, arXiv, metadata normalisation, deduplication, or AI workflow modules until their milestones are explicitly started.
+Do not claim the OpenAlex client or full collector is implemented. Do not start Crossref, arXiv, metadata normalisation, deduplication, or AI workflow modules until their milestones are explicitly started.
 
 ---
 

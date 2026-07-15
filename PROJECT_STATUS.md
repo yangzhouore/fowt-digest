@@ -19,6 +19,109 @@ The AI system should remain completely separated from the frontend.
 
 ---
 
+# Current Milestone
+
+Milestone:
+
+M3A - Pipeline Foundation
+
+Status:
+
+Complete
+
+Completed:
+
+- pipeline package skeleton
+- deterministic run ID helper
+- deterministic candidate ID helper
+- deterministic paper ID helper
+- DOI normalisation
+- title normalisation
+- `pipeline/run_storage.py`
+- run directory creation
+- six contract JSON filenames supported
+- UTF-8 deterministic JSON writing
+- atomic file replacement
+- identifier tests
+- storage tests
+
+Latest validation result:
+
+- 17 passed
+- 0 failed
+
+Pipeline Foundation is complete.
+
+---
+
+# Current Git Status
+
+Default Branch:
+
+master
+
+Current Development Branch:
+
+feature/pipeline-foundation
+
+Expected current branch:
+
+feature/pipeline-foundation
+
+---
+
+# Immediate Next Task
+
+Current objective:
+
+M3B - OpenAlex Collector.
+
+Required work:
+
+- implement OpenAlex query construction
+- implement the minimal OpenAlex client only when starting M3B
+- preserve raw OpenAlex responses in the contract-defined run files
+- keep outputs local and independent from the website
+
+Do not implement yet:
+
+- metadata normalisation
+- deduplication
+- Crossref
+- arXiv
+- AI scoring
+- AI writing
+- AI reviewer
+- database
+- FastAPI
+- MCP
+
+OpenAlex is not implemented yet.
+
+---
+
+# Current Repository Snapshot
+
+Implemented:
+
+- web/
+- docs/
+- pipeline/__init__.py
+- pipeline/ids.py
+- pipeline/run_storage.py
+- pipeline/tests/__init__.py
+- pipeline/tests/test_ids.py
+- pipeline/tests/test_run_storage.py
+
+Not yet implemented:
+
+- pipeline/openalex.py
+- pipeline/normaliser.py
+- pipeline/deduplicator.py
+- AI workflow modules
+
+---
+
 # Project Philosophy
 
 This project follows four core engineering principles.
@@ -234,7 +337,10 @@ Current implementation:
 
 - `pipeline/__init__.py`
 - `pipeline/ids.py`
+- `pipeline/run_storage.py`
+- `pipeline/tests/__init__.py`
 - `pipeline/tests/test_ids.py`
+- `pipeline/tests/test_run_storage.py`
 
 Implemented:
 
@@ -243,9 +349,20 @@ Implemented:
 - deterministic paper ID helper
 - DOI normalisation
 - title normalisation
-- pytest coverage for identifier and normalisation behaviour
+- run directory creation
+- six contract JSON filenames supported
+- UTF-8 deterministic JSON writing
+- atomic file replacement
+- pytest coverage for identifier and storage behaviour
 
-Not yet implemented:
+Pipeline Foundation is complete.
+
+Latest validation result:
+
+- 17 passed
+- 0 failed
+
+Not yet implemented beyond Pipeline Foundation:
 
 - OpenAlex request construction
 - OpenAlex API client
@@ -256,12 +373,6 @@ Not yet implemented:
 - metadata normalisation
 - deduplication output
 - local JSON run output under `pipeline/data/runs/<runId>/`
-
-Note:
-
-The older `pipeline/run_storage.py` and `pipeline/tests/test_run_storage.py`
-are currently deleted in the working tree. Treat that as the current local state
-unless explicitly restored.
 
 ---
 
@@ -302,7 +413,8 @@ Reorganise only when it becomes difficult to maintain.
 Dark mode is NOT part of the MVP.
 
 6. Pipeline design documents describe intended future stages, while the current
-   implementation only covers deterministic ID helpers.
+   implementation only covers Pipeline Foundation: deterministic ID helpers,
+   normalisation helpers used by IDs, and run storage.
 
 ---
 
@@ -328,7 +440,7 @@ Unacceptable technical debt:
 
 Still missing:
 
-- Python paper collection pipeline beyond identifier helpers
+- Python paper collection pipeline beyond Pipeline Foundation
 
 - OpenAlex integration
 - Crossref integration
@@ -390,23 +502,25 @@ Category
 
 Build Python pipeline.
 
+Completed milestone:
+
+M3A - Pipeline Foundation
+
 Current status:
 
-- Pipeline package skeleton
-- Deterministic ID helpers
-- ID helper tests
+- Pipeline package skeleton complete
+- Deterministic ID helpers complete
+- DOI and title normalisation complete
+- Run storage complete
+- ID helper tests complete
+- Storage tests complete
+- Latest validation: 17 passed, 0 failed
 
-Next:
+Immediate next milestone:
 
-Collect papers from:
+M3B - OpenAlex Collector
 
-- OpenAlex
-- Crossref
-- arXiv
-
-Deduplicate.
-
-Store structured paper metadata.
+Do not claim OpenAlex is implemented. Do not start Crossref, arXiv, metadata normalisation, deduplication, or AI workflow modules until their milestones are explicitly started.
 
 ---
 

@@ -33,31 +33,35 @@ Completed:
 
 - M3A Pipeline Foundation
 - M3B-1 OpenAlex Query Builder
+- M3B-2 OpenAlex Client
+- M3B-3 Collector Orchestration
 - 13 contract search terms supported
 - published-date filter construction
 - cursor pagination parameter construction
 - deterministic OpenAlex search parameter generation
 - deterministic query URL generation
 - query-builder tests
+- HTTP GET execution through urllib
+- timeout, retry, HTTP status, and JSON decoding tests
+- collector writes raw_openalex.json and run_summary.json
+- full success, partial success, and total failure supported
+- raw successful OpenAlex responses preserved
 
 Latest validation result:
 
-- 27 passed
+- 48 passed
 - 0 failed
 
 Not yet implemented:
 
-- OpenAlex client
-- HTTP requests
-- response parsing
-- raw response storage
+- OpenAlex pagination loop
 - metadata normalisation
 - deduplication
+- AI workflow
 
-M3B-1 is complete. M3B-2 is next.
+M3B-1, M3B-2, and M3B-3 are complete. OpenAlex pagination and final collector acceptance are next.
 
 ---
-
 # Current Git Status
 
 Default Branch:
@@ -78,14 +82,15 @@ feature/openalex-collector
 
 Current objective:
 
-M3B-2 - OpenAlex Client.
+OpenAlex pagination and final collector acceptance.
 
 Required work:
 
-- implement the minimal OpenAlex client
-- perform HTTP requests only in the M3B-2 slice
-- preserve raw OpenAlex responses in contract-defined run files when storage is introduced for the client
-- keep outputs local and independent from the website
+- implement the minimal pagination loop for OpenAlex collection
+- continue to preserve raw OpenAlex responses
+- keep writing raw_openalex.json and run_summary.json
+- keep full success, partial success, and total failure behaviour
+- run final collector acceptance checks
 
 Do not implement yet:
 
@@ -100,10 +105,9 @@ Do not implement yet:
 - FastAPI
 - MCP
 
-OpenAlex query construction is implemented. The OpenAlex client, collector execution, response parsing, and storage are not implemented yet.
+OpenAlex query construction, the HTTP client, and collector orchestration are implemented. Pagination is not yet implemented. Metadata normalisation, deduplication, and AI workflow modules do not exist yet.
 
 ---
-
 # Current Repository Snapshot
 
 Implemented:
@@ -112,10 +116,14 @@ Implemented:
 - docs/
 - pipeline/__init__.py
 - pipeline/ids.py
+- pipeline/openalex_client.py
+- pipeline/openalex_collector.py
 - pipeline/openalex_query.py
 - pipeline/run_storage.py
 - pipeline/tests/__init__.py
 - pipeline/tests/test_ids.py
+- pipeline/tests/test_openalex_client.py
+- pipeline/tests/test_openalex_collector.py
 - pipeline/tests/test_openalex_query.py
 - pipeline/tests/test_run_storage.py
 
@@ -127,7 +135,6 @@ Not yet implemented:
 - AI workflow modules
 
 ---
-
 # Project Philosophy
 
 This project follows four core engineering principles.
@@ -343,10 +350,14 @@ Current implementation:
 
 - `pipeline/__init__.py`
 - `pipeline/ids.py`
+- `pipeline/openalex_client.py`
+- `pipeline/openalex_collector.py`
 - `pipeline/openalex_query.py`
 - `pipeline/run_storage.py`
 - `pipeline/tests/__init__.py`
 - `pipeline/tests/test_ids.py`
+- `pipeline/tests/test_openalex_client.py`
+- `pipeline/tests/test_openalex_collector.py`
 - `pipeline/tests/test_openalex_query.py`
 - `pipeline/tests/test_run_storage.py`
 
@@ -366,33 +377,35 @@ Implemented:
 - cursor pagination parameter construction
 - deterministic OpenAlex search parameter generation
 - deterministic query URL generation
-- pytest coverage for identifier, storage, and query-builder behaviour
+- HTTP GET execution through the OpenAlex client
+- timeout, retry, HTTP status, and JSON decoding behaviour
+- collector orchestration for one raw collection run
+- raw_openalex.json writing
+- run_summary.json writing
+- full success, partial success, and total failure handling
+- pytest coverage for identifier, storage, query-builder, client, and collector behaviour
 
 Completed pipeline slices:
 
 - M3A Pipeline Foundation
 - M3B-1 OpenAlex Query Builder
+- M3B-2 OpenAlex Client
+- M3B-3 Collector Orchestration
 
 Latest validation result:
 
-- 27 passed
+- 48 passed
 - 0 failed
 
-Not yet implemented beyond M3B-1:
+Not yet implemented beyond M3B-3:
 
-- OpenAlex API client
-- HTTP requests
 - pagination execution
-- timeout, retry, or rate-limit handling
-- raw response storage
-- run summary writing
 - candidate record generation
 - metadata normalisation
 - deduplication output
-- local JSON run output under `pipeline/data/runs/<runId>/`
+- AI workflow modules
 
 ---
-
 ## Git
 
 Git is initialized.
@@ -430,8 +443,9 @@ Reorganise only when it becomes difficult to maintain.
 Dark mode is NOT part of the MVP.
 
 6. Pipeline design documents describe intended future stages, while the current
-   implementation only covers Pipeline Foundation and M3B-1 query construction.
-   The OpenAlex client and collector execution are not implemented.
+   implementation covers Pipeline Foundation, OpenAlex query construction, the
+   OpenAlex client, and collector orchestration. Pagination, metadata
+   normalisation, deduplication, and AI workflow modules are not implemented.
 
 ---
 
@@ -457,11 +471,12 @@ Unacceptable technical debt:
 
 Still missing:
 
-- Python paper collection pipeline beyond Pipeline Foundation and M3B-1 query construction
-
-- OpenAlex client and integration
+- OpenAlex pagination loop and final collector acceptance
 - Crossref integration
 - arXiv integration
+
+- Metadata normalisation
+- Deduplication
 
 - Paper Scorer
 - Paper Selector
@@ -475,7 +490,6 @@ Still missing:
 - Database
 
 ---
-
 # Development Roadmap
 
 ## Phase 1 (Current)
@@ -544,16 +558,45 @@ Current status:
 - Cursor pagination parameters implemented
 - Deterministic params and URL generation implemented
 - Latest validation: 27 passed, 0 failed
-- No HTTP requests, parsing, or storage implemented yet
+- No HTTP requests, parsing, or storage were implemented in this slice
 
-Immediate next milestone:
+Completed milestone:
 
 M3B-2 - OpenAlex Client
 
-Do not claim the OpenAlex client or full collector is implemented. Do not start Crossref, arXiv, metadata normalisation, deduplication, or AI workflow modules until their milestones are explicitly started.
+Current status:
+
+- HTTP GET execution implemented
+- request timeout implemented
+- contract retry behaviour implemented
+- HTTP status validation implemented
+- JSON decoding implemented
+- mocked client tests complete
+
+Completed milestone:
+
+M3B-3 - Collector Orchestration
+
+Current status:
+
+- one collection run is created
+- all contract OpenAlex queries are generated
+- queries execute through the existing OpenAlex client
+- successful raw responses are preserved
+- failed query errors are recorded
+- raw_openalex.json is written
+- run_summary.json is written
+- full success, partial success, and total failure are supported
+- latest validation: 48 passed, 0 failed
+- no metadata normalisation, deduplication, pagination loop, or AI workflow exists yet
+
+Immediate next milestone:
+
+OpenAlex pagination and final collector acceptance
+
+Do not claim metadata normalisation, deduplication, Crossref, arXiv, or AI workflow modules are implemented. Do not start them until their milestones are explicitly started.
 
 ---
-
 ## Phase 4
 
 Implement AI workflow.

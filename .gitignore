@@ -1,2 +1,4 @@
-﻿pipeline/__pycache__/
+__pycache__/
+*.py[cod]
+pipeline/__pycache__/
 pipeline/tests/__pycache__/

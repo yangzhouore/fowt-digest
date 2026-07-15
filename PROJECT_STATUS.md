@@ -1,6 +1,6 @@
 # PROJECT STATUS
 
-Last Updated: 2026-07-10
+Last Updated: 2026-07-15
 
 ---
 
@@ -16,6 +16,109 @@ new FOWT publications using AI-assisted workflows.
 
 The website itself should remain a simple editorial publication.
 The AI system should remain completely separated from the frontend.
+
+---
+
+# Current Milestone
+
+Milestone:
+
+M3A - Pipeline Foundation
+
+Status:
+
+Complete
+
+Completed:
+
+- pipeline package skeleton
+- deterministic run ID helper
+- deterministic candidate ID helper
+- deterministic paper ID helper
+- DOI normalisation
+- title normalisation
+- `pipeline/run_storage.py`
+- run directory creation
+- six contract JSON filenames supported
+- UTF-8 deterministic JSON writing
+- atomic file replacement
+- identifier tests
+- storage tests
+
+Latest validation result:
+
+- 17 passed
+- 0 failed
+
+Pipeline Foundation is complete.
+
+---
+
+# Current Git Status
+
+Default Branch:
+
+master
+
+Current Development Branch:
+
+feature/pipeline-foundation
+
+Expected current branch:
+
+feature/pipeline-foundation
+
+---
+
+# Immediate Next Task
+
+Current objective:
+
+M3B - OpenAlex Collector.
+
+Required work:
+
+- implement OpenAlex query construction
+- implement the minimal OpenAlex client only when starting M3B
+- preserve raw OpenAlex responses in the contract-defined run files
+- keep outputs local and independent from the website
+
+Do not implement yet:
+
+- metadata normalisation
+- deduplication
+- Crossref
+- arXiv
+- AI scoring
+- AI writing
+- AI reviewer
+- database
+- FastAPI
+- MCP
+
+OpenAlex is not implemented yet.
+
+---
+
+# Current Repository Snapshot
+
+Implemented:
+
+- web/
+- docs/
+- pipeline/__init__.py
+- pipeline/ids.py
+- pipeline/run_storage.py
+- pipeline/tests/__init__.py
+- pipeline/tests/test_ids.py
+- pipeline/tests/test_run_storage.py
+
+Not yet implemented:
+
+- pipeline/openalex.py
+- pipeline/normaliser.py
+- pipeline/deduplicator.py
+- AI workflow modules
 
 ---
 
@@ -87,10 +190,16 @@ Current repository:
 
 ```
 docs/
+pipeline/
 web/
 ```
 
-The website currently contains only a frontend.
+The repository currently contains:
+
+- a static Next.js frontend in `web/`;
+- local mock website data in `web/data/`;
+- product, design, architecture, and pipeline planning docs in `docs/`;
+- an initial Python pipeline package in `pipeline/`.
 
 There is currently NO:
 
@@ -104,9 +213,9 @@ There is currently NO:
 - admin dashboard
 - Docker
 
-The future Python pipeline must remain independent from the website.
+The Python pipeline must remain independent from the website.
 
-Recommended future architecture:
+Current architecture:
 
 ```
 web/
@@ -116,7 +225,8 @@ docs/
 
 The website consumes structured data.
 
-The pipeline produces structured data.
+The pipeline is intended to produce structured data, but currently only contains
+foundation identifier helpers and tests.
 
 They should remain loosely coupled.
 
@@ -185,6 +295,9 @@ Completed pages:
 - Homepage
 - Weekly Edition
 - Paper Detail
+- Archive
+- Methodology
+- About
 
 Current navigation:
 
@@ -198,6 +311,12 @@ Weekly Edition
 
 Paper Detail
 
+Additional navigation:
+
+- Archive
+- Methodology
+- About
+
 ---
 
 ## Mock Data
@@ -209,6 +328,51 @@ No real papers are collected.
 No database exists.
 
 No API exists.
+
+---
+
+## Pipeline
+
+Current implementation:
+
+- `pipeline/__init__.py`
+- `pipeline/ids.py`
+- `pipeline/run_storage.py`
+- `pipeline/tests/__init__.py`
+- `pipeline/tests/test_ids.py`
+- `pipeline/tests/test_run_storage.py`
+
+Implemented:
+
+- UTC run ID generation using the collector contract format
+- deterministic OpenAlex candidate ID helper
+- deterministic paper ID helper
+- DOI normalisation
+- title normalisation
+- run directory creation
+- six contract JSON filenames supported
+- UTF-8 deterministic JSON writing
+- atomic file replacement
+- pytest coverage for identifier and storage behaviour
+
+Pipeline Foundation is complete.
+
+Latest validation result:
+
+- 17 passed
+- 0 failed
+
+Not yet implemented beyond Pipeline Foundation:
+
+- OpenAlex request construction
+- OpenAlex API client
+- pagination, timeout, retry, or rate-limit handling
+- raw response storage
+- run summary writing
+- candidate record generation
+- metadata normalisation
+- deduplication output
+- local JSON run output under `pipeline/data/runs/<runId>/`
 
 ---
 
@@ -226,9 +390,9 @@ Development should continue using feature branches.
 
 Current known issues:
 
-1. README needs updating because project scope has changed.
+1. Archive metadata is prototype-only and fictional.
 
-2. Archive metadata is incomplete.
+2. Methodology and About content are first-pass prototype content.
 
 3. Homepage and Weekly page share duplicated Paper List markup.
 
@@ -247,6 +411,10 @@ Reorganise only when it becomes difficult to maintain.
 5. Theme persistence is intentionally ignored.
 
 Dark mode is NOT part of the MVP.
+
+6. Pipeline design documents describe intended future stages, while the current
+   implementation only covers Pipeline Foundation: deterministic ID helpers,
+   normalisation helpers used by IDs, and run storage.
 
 ---
 
@@ -272,11 +440,7 @@ Unacceptable technical debt:
 
 Still missing:
 
-- Archive page
-- Methodology page
-- About page
-
-- Python paper collection pipeline
+- Python paper collection pipeline beyond Pipeline Foundation
 
 - OpenAlex integration
 - Crossref integration
@@ -301,19 +465,18 @@ Still missing:
 
 Static website
 
-✓ Homepage
+Done:
 
-✓ Weekly page
+- Homepage
+- Weekly page
+- Paper page
+- Archive
+- Methodology
+- About
 
-✓ Paper page
+Next frontend work:
 
-Next:
-
-Archive
-
-Methodology
-
-About
+Refine archive metadata and prototype page content only when needed.
 
 ---
 
@@ -339,15 +502,25 @@ Category
 
 Build Python pipeline.
 
-Collect papers from:
+Completed milestone:
 
-- OpenAlex
-- Crossref
-- arXiv
+M3A - Pipeline Foundation
 
-Deduplicate.
+Current status:
 
-Store structured paper metadata.
+- Pipeline package skeleton complete
+- Deterministic ID helpers complete
+- DOI and title normalisation complete
+- Run storage complete
+- ID helper tests complete
+- Storage tests complete
+- Latest validation: 17 passed, 0 failed
+
+Immediate next milestone:
+
+M3B - OpenAlex Collector
+
+Do not claim OpenAlex is implemented. Do not start Crossref, arXiv, metadata normalisation, deduplication, or AI workflow modules until their milestones are explicitly started.
 
 ---
 

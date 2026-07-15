@@ -1,49 +1,69 @@
-"""Run directory and JSON file storage for the collector pipeline."""
+"""Local run-directory storage helpers for the collector pipeline."""
 
 from __future__ import annotations
 
 import json
 import os
+import tempfile
 from pathlib import Path
 from typing import Any
 
-RUN_FILE_NAMES = {
-    "run_summary": "run_summary.json",
-    "raw_openalex": "raw_openalex.json",
-    "candidates": "candidates.json",
-    "normalised": "normalised.json",
-    "deduplication_result": "deduplication_result.json",
-    "deduplicated_papers": "deduplicated_papers.json",
-}
+DEFAULT_RUNS_ROOT = Path("pipeline/data/runs")
+
+SUPPORTED_RUN_FILENAMES = (
+    "run_summary.json",
+    "raw_openalex.json",
+    "candidates.json",
+    "normalised.json",
+    "deduplication_result.json",
+    "deduplicated_papers.json",
+)
 
 
-def create_run_directory(run_id: str, base_dir: Path | str = Path("pipeline/data/runs")) -> Path:
-    """Create and return pipeline/data/runs/<runId>/ without overwriting a run."""
-    if not run_id or not run_id.strip():
-        raise ValueError("run_id is required")
+def create_run_directory(
+    run_id: str, *, runs_root: str | Path = DEFAULT_RUNS_ROOT
+) -> Path:
+    """Create and return the contract run directory for a new pipeline run."""
+    run_directory = Path(runs_root) / run_id
+    run_directory.mkdir(parents=True, exist_ok=False)
+    return run_directory
 
-    run_dir = Path(base_dir) / run_id
-    run_dir.mkdir(parents=True, exist_ok=False)
-    return run_dir
+
+def run_file_path(run_directory: str | Path, filename: str) -> Path:
+    """Return the path for a supported run output filename."""
+    _validate_supported_filename(filename)
+    return Path(run_directory) / filename
 
 
-def write_run_json(run_dir: Path | str, file_key: str, data: Any) -> Path:
-    """Write one contract-defined JSON file with stable formatting and UTF-8."""
-    if file_key not in RUN_FILE_NAMES:
-        allowed = ", ".join(sorted(RUN_FILE_NAMES))
-        raise ValueError(f"unknown run file key '{file_key}'. Allowed keys: {allowed}")
-
-    target = Path(run_dir) / RUN_FILE_NAMES[file_key]
-    target.parent.mkdir(parents=True, exist_ok=True)
-    temp_path = target.with_name(f".{target.name}.tmp")
+def write_run_json(run_directory: str | Path, filename: str, data: Any) -> Path:
+    """Write supported run JSON using UTF-8 and atomic replacement."""
+    destination = run_file_path(run_directory, filename)
+    temp_path: Path | None = None
 
     try:
-        with temp_path.open("w", encoding="utf-8", newline="\n") as file:
-            json.dump(data, file, ensure_ascii=False, indent=2, sort_keys=True)
-            file.write("\n")
-        os.replace(temp_path, target)
-    finally:
-        if temp_path.exists():
-            temp_path.unlink()
+        with tempfile.NamedTemporaryFile(
+            "w",
+            encoding="utf-8",
+            newline="\n",
+            dir=destination.parent,
+            prefix=f".{destination.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as temp_file:
+            temp_path = Path(temp_file.name)
+            json.dump(data, temp_file, ensure_ascii=False, indent=2, sort_keys=True)
+            temp_file.write("\n")
+            temp_file.flush()
+            os.fsync(temp_file.fileno())
 
-    return target
+        os.replace(temp_path, destination)
+        return destination
+    except Exception:
+        if temp_path is not None:
+            temp_path.unlink(missing_ok=True)
+        raise
+
+
+def _validate_supported_filename(filename: str) -> None:
+    if filename not in SUPPORTED_RUN_FILENAMES:
+        raise ValueError(f"unsupported run output filename: {filename}")

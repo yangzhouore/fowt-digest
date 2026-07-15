@@ -1,5 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
+import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
 import { currentEdition, mockPapers } from "../../../data/mock-papers";
 
@@ -8,6 +10,30 @@ type PaperPageProps = {
     slug: string;
   }>;
 };
+
+export function generateStaticParams() {
+  return mockPapers.map((paper) => ({
+    slug: paper.slug,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: PaperPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const paper = mockPapers.find((item) => item.slug === slug);
+
+  if (!paper) {
+    return {
+      title: "Paper not found",
+    };
+  }
+
+  return {
+    title: paper.title,
+    description: paper.editorialSummary,
+  };
+}
 
 export default async function PaperPage({ params }: PaperPageProps) {
   const { slug } = await params;
@@ -100,7 +126,8 @@ export default async function PaperPage({ params }: PaperPageProps) {
           </p>
         </section>
       </article>
+
+      <SiteFooter />
     </main>
   );
 }
-

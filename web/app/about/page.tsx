@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "../site-header";
+import { SiteFooter } from "../site-footer";
 
 const readers = [
   "researchers",
@@ -18,6 +20,12 @@ const topics = [
   "reliability and fatigue",
   "floating wind farm analysis",
 ];
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "About the FOWT Research Digest prototype and its intended technical readers.",
+};
 
 export default function AboutPage() {
   return (
@@ -56,6 +64,8 @@ export default function AboutPage() {
           against original publications before any research or engineering use.
         </p>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }

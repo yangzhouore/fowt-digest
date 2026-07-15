@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "../site-header";
+import { SiteFooter } from "../site-footer";
 
 const discoverySources = [
   "OpenAlex",
@@ -15,6 +17,12 @@ const scoringDimensions = [
   "evidence quality",
   "information completeness",
 ];
+
+export const metadata: Metadata = {
+  title: "Methodology",
+  description:
+    "Prototype methodology for how the FOWT Research Digest will be assembled.",
+};
 
 export default function MethodologyPage() {
   return (
@@ -85,6 +93,8 @@ export default function MethodologyPage() {
           content for development only.
         </p>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }

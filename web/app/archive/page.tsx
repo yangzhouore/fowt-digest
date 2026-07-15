@@ -1,6 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "../site-header";
+import { SiteFooter } from "../site-footer";
 import { archiveEditions } from "../../data/mock-papers";
+
+export const metadata: Metadata = {
+  title: "Archive",
+  description:
+    "Prototype archive of weekly floating offshore wind research digest editions.",
+};
 
 export default function ArchivePage() {
   return (
@@ -62,7 +70,8 @@ export default function ArchivePage() {
           Historical prototype editions are intentionally not linked.
         </p>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }
-

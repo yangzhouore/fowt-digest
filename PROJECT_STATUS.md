@@ -23,34 +23,36 @@ The AI system should remain completely separated from the frontend.
 
 Milestone:
 
-M3A - Pipeline Foundation
+W1 - Website Structure Review
 
 Status:
 
-Complete
+In Progress
 
 Completed:
 
-- pipeline package skeleton
-- deterministic run ID helper
-- deterministic candidate ID helper
-- deterministic paper ID helper
-- DOI normalisation
-- title normalisation
-- `pipeline/run_storage.py`
-- run directory creation
-- six contract JSON filenames supported
-- UTF-8 deterministic JSON writing
-- atomic file replacement
-- identifier tests
-- storage tests
+- Homepage exists
+- Weekly Edition page exists
+- Paper Detail pages exist
+- Archive page exists
+- Methodology page exists
+- About page exists
+- local fictional mock paper data exists
+- shared header navigation exists
 
-Latest validation result:
+Current W1 work:
 
-- 17 passed
-- 0 failed
+- review existing website structure
+- complete shared layout consistency
+- add basic page metadata
+- verify internal navigation and production build
 
-Pipeline Foundation is complete.
+Known limitations:
+
+- website still uses fictional mock data
+- no pipeline integration
+- no backend, database, API, CMS, analytics, or AI workflow
+- detailed visual polishing is out of scope
 
 ---
 
@@ -62,11 +64,11 @@ master
 
 Current Development Branch:
 
-feature/pipeline-foundation
+feature/web-mvp
 
 Expected current branch:
 
-feature/pipeline-foundation
+feature/web-mvp
 
 ---
 
@@ -74,29 +76,29 @@ feature/pipeline-foundation
 
 Current objective:
 
-M3B - OpenAlex Collector.
+Complete W1 Website Structure Review.
 
 Required work:
 
-- implement OpenAlex query construction
-- implement the minimal OpenAlex client only when starting M3B
-- preserve raw OpenAlex responses in the contract-defined run files
-- keep outputs local and independent from the website
+- keep all existing MVP pages reachable
+- preserve Homepage -> Weekly -> Paper reading flow
+- keep Archive, Methodology, and About accessible
+- keep shared header, footer, and editorial visual language consistent
+- verify lint, production build, and public routes
 
 Do not implement yet:
 
-- metadata normalisation
-- deduplication
-- Crossref
-- arXiv
-- AI scoring
-- AI writing
-- AI reviewer
+- search
+- authentication
 - database
-- FastAPI
-- MCP
+- API routes
+- pipeline integration
+- AI workflow
+- CMS
+- analytics
+- newsletter
 
-OpenAlex is not implemented yet.
+Pipeline work remains separate and unchanged during Web MVP work.
 
 ---
 
@@ -290,7 +292,7 @@ Completed:
 
 ## Website
 
-Completed pages:
+MVP pages included:
 
 - Homepage
 - Weekly Edition
@@ -299,23 +301,19 @@ Completed pages:
 - Methodology
 - About
 
-Current navigation:
+Current reading flow:
 
-Homepage
-
-↓
-
-Weekly Edition
-
-↓
-
-Paper Detail
+Homepage -> Weekly Edition -> Paper Detail
 
 Additional navigation:
 
 - Archive
 - Methodology
 - About
+
+Current website milestone:
+
+W1 - Website Structure Review
 
 ---
 

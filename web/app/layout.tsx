@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FOWT Research Digest",
+  title: {
+    default: "FOWT Research Digest",
+    template: "%s | FOWT Research Digest",
+  },
   description:
-    "A weekly digest of fictional floating offshore wind turbine research for MVP development.",
+    "A prototype weekly digest of fictional floating offshore wind turbine research for MVP development.",
 };
 
 export default function RootLayout({

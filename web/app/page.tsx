@@ -1,10 +1,18 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "./site-header";
+import { SiteFooter } from "./site-footer";
 import {
   archiveEditions,
   currentEdition,
   mockPapers,
 } from "../data/mock-papers";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "A prototype weekly digest for floating offshore wind turbine research.",
+};
 
 export default function Home() {
   return (
@@ -114,13 +122,7 @@ export default function Home() {
         </p>
       </section>
 
-      <footer>
-        <p>
-          FOWT Research Digest is a developing editorial reference for floating
-          offshore wind turbine literature.
-        </p>
-        <p>Copyright 2026 FOWT Research Digest.</p>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

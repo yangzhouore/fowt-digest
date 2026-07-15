@@ -1,5 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
+import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
 import { currentEdition, mockPapers } from "../../../data/mock-papers";
 
@@ -8,6 +10,27 @@ type WeeklyPageProps = {
     slug: string;
   }>;
 };
+
+export function generateStaticParams() {
+  return [{ slug: currentEdition.slug }];
+}
+
+export async function generateMetadata({
+  params,
+}: WeeklyPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  if (slug !== currentEdition.slug) {
+    return {
+      title: "Weekly edition not found",
+    };
+  }
+
+  return {
+    title: currentEdition.dateRange,
+    description: currentEdition.introduction,
+  };
+}
 
 export default async function WeeklyPage({ params }: WeeklyPageProps) {
   const { slug } = await params;
@@ -96,7 +119,8 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
           content for development only.
         </p>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }
-

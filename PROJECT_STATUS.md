@@ -1,6 +1,6 @@
 # PROJECT STATUS
 
-Last Updated: 2026-07-10
+Last Updated: 2026-07-15
 
 ---
 
@@ -87,10 +87,16 @@ Current repository:
 
 ```
 docs/
+pipeline/
 web/
 ```
 
-The website currently contains only a frontend.
+The repository currently contains:
+
+- a static Next.js frontend in `web/`;
+- local mock website data in `web/data/`;
+- product, design, architecture, and pipeline planning docs in `docs/`;
+- an initial Python pipeline package in `pipeline/`.
 
 There is currently NO:
 
@@ -104,9 +110,9 @@ There is currently NO:
 - admin dashboard
 - Docker
 
-The future Python pipeline must remain independent from the website.
+The Python pipeline must remain independent from the website.
 
-Recommended future architecture:
+Current architecture:
 
 ```
 web/
@@ -116,7 +122,8 @@ docs/
 
 The website consumes structured data.
 
-The pipeline produces structured data.
+The pipeline is intended to produce structured data, but currently only contains
+foundation identifier helpers and tests.
 
 They should remain loosely coupled.
 
@@ -185,6 +192,9 @@ Completed pages:
 - Homepage
 - Weekly Edition
 - Paper Detail
+- Archive
+- Methodology
+- About
 
 Current navigation:
 
@@ -198,6 +208,12 @@ Weekly Edition
 
 Paper Detail
 
+Additional navigation:
+
+- Archive
+- Methodology
+- About
+
 ---
 
 ## Mock Data
@@ -209,6 +225,43 @@ No real papers are collected.
 No database exists.
 
 No API exists.
+
+---
+
+## Pipeline
+
+Current implementation:
+
+- `pipeline/__init__.py`
+- `pipeline/ids.py`
+- `pipeline/tests/test_ids.py`
+
+Implemented:
+
+- UTC run ID generation using the collector contract format
+- deterministic OpenAlex candidate ID helper
+- deterministic paper ID helper
+- DOI normalisation
+- title normalisation
+- pytest coverage for identifier and normalisation behaviour
+
+Not yet implemented:
+
+- OpenAlex request construction
+- OpenAlex API client
+- pagination, timeout, retry, or rate-limit handling
+- raw response storage
+- run summary writing
+- candidate record generation
+- metadata normalisation
+- deduplication output
+- local JSON run output under `pipeline/data/runs/<runId>/`
+
+Note:
+
+The older `pipeline/run_storage.py` and `pipeline/tests/test_run_storage.py`
+are currently deleted in the working tree. Treat that as the current local state
+unless explicitly restored.
 
 ---
 
@@ -226,9 +279,9 @@ Development should continue using feature branches.
 
 Current known issues:
 
-1. README needs updating because project scope has changed.
+1. Archive metadata is prototype-only and fictional.
 
-2. Archive metadata is incomplete.
+2. Methodology and About content are first-pass prototype content.
 
 3. Homepage and Weekly page share duplicated Paper List markup.
 
@@ -247,6 +300,9 @@ Reorganise only when it becomes difficult to maintain.
 5. Theme persistence is intentionally ignored.
 
 Dark mode is NOT part of the MVP.
+
+6. Pipeline design documents describe intended future stages, while the current
+   implementation only covers deterministic ID helpers.
 
 ---
 
@@ -272,11 +328,7 @@ Unacceptable technical debt:
 
 Still missing:
 
-- Archive page
-- Methodology page
-- About page
-
-- Python paper collection pipeline
+- Python paper collection pipeline beyond identifier helpers
 
 - OpenAlex integration
 - Crossref integration
@@ -301,19 +353,18 @@ Still missing:
 
 Static website
 
-✓ Homepage
+Done:
 
-✓ Weekly page
+- Homepage
+- Weekly page
+- Paper page
+- Archive
+- Methodology
+- About
 
-✓ Paper page
+Next frontend work:
 
-Next:
-
-Archive
-
-Methodology
-
-About
+Refine archive metadata and prototype page content only when needed.
 
 ---
 
@@ -338,6 +389,14 @@ Category
 ## Phase 3
 
 Build Python pipeline.
+
+Current status:
+
+- Pipeline package skeleton
+- Deterministic ID helpers
+- ID helper tests
+
+Next:
 
 Collect papers from:
 

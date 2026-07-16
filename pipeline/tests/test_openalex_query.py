@@ -66,19 +66,16 @@ def test_build_pagination_params_uses_contract_defaults():
     }
 
 
-def test_build_pagination_params_accepts_explicit_cursor_and_limit():
-    assert build_pagination_params(per_page=25, cursor="abc") == {
-        "per-page": 25,
+def test_build_pagination_params_accepts_explicit_cursor():
+    assert build_pagination_params(cursor="abc") == {
+        "per-page": 50,
         "cursor": "abc",
     }
 
 
-def test_build_pagination_params_rejects_out_of_contract_limits():
-    with pytest.raises(ValueError, match="between 1 and 50"):
-        build_pagination_params(per_page=0)
-
-    with pytest.raises(ValueError, match="between 1 and 50"):
-        build_pagination_params(per_page=51)
+def test_build_pagination_params_rejects_non_contract_page_size():
+    with pytest.raises(ValueError, match="per_page must be 50"):
+        build_pagination_params(per_page=25)
 
 
 def test_build_search_params_is_deterministic_for_identical_input():

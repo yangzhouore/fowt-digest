@@ -57,8 +57,8 @@ def build_pagination_params(
     *, per_page: int = DEFAULT_PER_PAGE, cursor: str = DEFAULT_CURSOR
 ) -> dict[str, str | int]:
     """Build cursor-pagination parameters for an OpenAlex Works query."""
-    if per_page < 1 or per_page > DEFAULT_PER_PAGE:
-        raise ValueError("per_page must be between 1 and 50")
+    if per_page != DEFAULT_PER_PAGE:
+        raise ValueError("per_page must be 50")
     if not cursor:
         raise ValueError("cursor must not be empty")
 

@@ -36,7 +36,7 @@ export const currentEdition = {
   papersSelected: 6,
   readingTime: "9 minutes",
   introduction:
-    "This fictional edition groups six floating wind research themes into a compact reading path for MVP testing.",
+    "This fictional edition groups six floating wind research themes into a compact reading path for testing the public MVP.",
 };
 
 export const archiveEditions: ArchiveEdition[] = [

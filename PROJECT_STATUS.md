@@ -58,6 +58,25 @@ Latest validation result:
 - 57 passed
 - 0 failed
 
+Current website status:
+
+- W1 Website Structure Review complete
+- W2 Navigation, Layout, and Responsive Consistency complete
+- W3 Content Readiness complete
+- W4 Deployment Readiness complete
+- coherent static MVP skeleton
+- Homepage -> Weekly Edition -> Paper Detail reading flow
+- Archive, Methodology, and About pages accessible
+- production build passes
+- ready for first public prototype deployment
+- fictional local mock data only
+- no pipeline integration, backend, database, API, CMS, analytics, or AI workflow
+
+Deployment status:
+
+- deployment readiness complete
+- website has not yet been deployed
+
 Not yet implemented:
 
 - metadata normalisation
@@ -65,6 +84,7 @@ Not yet implemented:
 - AI workflow
 - database
 - frontend integration
+- production deployment
 
 M3B-1, M3B-2, M3B-3, and M3B-4 are complete. The full OpenAlex Collector milestone has passed final acceptance.
 
@@ -97,18 +117,22 @@ Required work after merge:
 - convert raw OpenAlex records into the contract-defined internal metadata shape
 - keep deduplication, AI workflow, database, and frontend integration out of scope until their milestones begin
 
+Frontend deployment task:
+
+- deploy the completed Web MVP to Vercel when deployment work resumes
+- record the deployment URL in project documentation after deployment
+
 Do not implement yet:
 
-- metadata normalisation
-- deduplication
-- Crossref
-- arXiv
-- AI scoring
-- AI writing
-- AI reviewer
+- search
+- authentication
 - database
-- FastAPI
-- MCP
+- API routes
+- pipeline integration
+- AI workflow
+- CMS
+- analytics
+- newsletter
 
 OpenAlex query construction, the HTTP client, collector orchestration, raw response storage, cursor pagination, run-wide cap handling, partial/total failure handling, and fixed request spacing are implemented. Metadata normalisation, deduplication, and AI workflow modules do not exist yet.
 
@@ -308,7 +332,7 @@ Completed:
 
 ## Website
 
-Completed pages:
+MVP pages included:
 
 - Homepage
 - Weekly Edition
@@ -317,23 +341,19 @@ Completed pages:
 - Methodology
 - About
 
-Current navigation:
+Current reading flow:
 
-Homepage
-
-↓
-
-Weekly Edition
-
-↓
-
-Paper Detail
+Homepage -> Weekly Edition -> Paper Detail
 
 Additional navigation:
 
 - Archive
 - Methodology
 - About
+
+Current website milestone:
+
+W4 - Deployment Readiness complete
 
 ---
 
@@ -432,7 +452,7 @@ Current known issues:
 
 1. Archive metadata is prototype-only and fictional.
 
-2. Methodology and About content are first-pass prototype content.
+2. Website content is MVP-ready but still describes fictional mock data.
 
 3. Homepage and Weekly page share duplicated Paper List markup.
 
@@ -440,7 +460,7 @@ Current decision:
 
 DO NOT extract a reusable component yet.
 
-Wait until there are at least 3–4 real reuse locations.
+Wait until there are at least 3-4 real reuse locations.
 
 4. Global CSS is growing.
 
@@ -516,7 +536,7 @@ Done:
 
 Next frontend work:
 
-Refine archive metadata and prototype page content only when needed.
+Deploy to Vercel.
 
 ---
 
@@ -618,31 +638,31 @@ Implement AI workflow.
 
 Collector
 
-↓
+->
 
 Classifier
 
-↓
+->
 
 Scorer
 
-↓
+->
 
 Selector
 
-↓
+->
 
 Writer
 
-↓
+->
 
 Reviewer
 
-↓
+->
 
 Human Approval
 
-↓
+->
 
 Publish
 

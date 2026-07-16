@@ -1,5 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
+import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
 import { currentEdition, mockPapers } from "../../../data/mock-papers";
 
@@ -8,6 +10,27 @@ type WeeklyPageProps = {
     slug: string;
   }>;
 };
+
+export function generateStaticParams() {
+  return [{ slug: currentEdition.slug }];
+}
+
+export async function generateMetadata({
+  params,
+}: WeeklyPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  if (slug !== currentEdition.slug) {
+    return {
+      title: "Weekly edition not found",
+    };
+  }
+
+  return {
+    title: currentEdition.dateRange,
+    description: `Prototype weekly edition: ${currentEdition.introduction}`,
+  };
+}
 
 export default async function WeeklyPage({ params }: WeeklyPageProps) {
   const { slug } = await params;
@@ -93,10 +116,12 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
         <h2 id="weekly-notice-heading">Mock-data notice</h2>
         <p>
           This edition and all listed paper information are fictional mock
-          content for development only.
+          content for development only. No automated collection, scoring, or AI
+          review has been used to produce this page.
         </p>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }
-

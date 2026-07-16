@@ -5,7 +5,11 @@ from urllib.parse import parse_qs, urlparse
 import pytest
 
 from pipeline.ids import make_run_id
-from pipeline.openalex_collector import RUN_RECORD_LIMIT, collect_openalex_raw
+from pipeline.openalex_collector import (
+    DEFAULT_REQUEST_DELAY_SECONDS,
+    RUN_RECORD_LIMIT,
+    collect_openalex_raw,
+)
 from pipeline.openalex_query import FOWT_KEYWORD_GROUPS
 
 STARTED_AT = datetime(2026, 8, 9, 9, 15, 0, tzinfo=UTC)
@@ -14,10 +18,15 @@ FROM_DATE = date(2026, 8, 3)
 TO_DATE = date(2026, 8, 9)
 
 
+def _collect_openalex_raw(**kwargs):
+    kwargs.setdefault("sleep", lambda seconds: None)
+    return collect_openalex_raw(**kwargs)
+
+
 def test_successful_single_page_run_writes_raw_pages_and_summary(tmp_path):
     raw_payload = {"meta": {}, "results": [{"id": "https://openalex.org/W1"}]}
 
-    result = collect_openalex_raw(
+    result = _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -77,6 +86,54 @@ def test_successful_single_page_run_writes_raw_pages_and_summary(tmp_path):
     }
 
 
+def test_request_delay_occurs_between_requests_not_before_or_after(tmp_path):
+    events = []
+
+    def fake_fetch(url):
+        events.append(("fetch", _cursor_from_url(url)))
+        if len([event for event in events if event[0] == "fetch"]) == 1:
+            return {"meta": {"next_cursor": "cursor-2"}, "results": [{"id": "W1"}]}
+        return {"meta": {}, "results": [{"id": "W2"}]}
+
+    def fake_sleep(seconds):
+        events.append(("sleep", seconds))
+
+    _collect_openalex_raw(
+        from_publication_date=FROM_DATE,
+        to_publication_date=TO_DATE,
+        runs_root=tmp_path,
+        fetch_json=fake_fetch,
+        sleep=fake_sleep,
+        started_at=STARTED_AT,
+        completed_at=COMPLETED_AT,
+    )
+
+    assert events[0][0] == "fetch"
+    assert events[-1][0] == "fetch"
+    assert [event for event in events if event[0] == "sleep"] == [
+        ("sleep", DEFAULT_REQUEST_DELAY_SECONDS)
+    ] * 13
+    assert [event[0] for event in events] == ["fetch"] + ["sleep", "fetch"] * 13
+    assert [event for event in events if event[0] == "fetch"][:2] == [
+        ("fetch", "*"),
+        ("fetch", "cursor-2"),
+    ]
+
+
+def test_request_delay_must_be_at_least_one_second(tmp_path):
+    with pytest.raises(ValueError, match="at least 1.0"):
+        _collect_openalex_raw(
+            from_publication_date=FROM_DATE,
+            to_publication_date=TO_DATE,
+            runs_root=tmp_path,
+            fetch_json=lambda url: {"meta": {}, "results": []},
+            sleep=lambda seconds: None,
+            request_delay_seconds=0.5,
+            started_at=STARTED_AT,
+            completed_at=COMPLETED_AT,
+        )
+
+
 def test_generates_one_initial_query_per_contract_term_in_order(tmp_path):
     seen_urls = []
 
@@ -84,7 +141,7 @@ def test_generates_one_initial_query_per_contract_term_in_order(tmp_path):
         seen_urls.append(url)
         return {"meta": {}, "results": []}
 
-    collect_openalex_raw(
+    _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -110,7 +167,7 @@ def test_multi_page_query_progresses_using_next_cursor(tmp_path):
             return {"meta": {"next_cursor": "cursor-2"}, "results": [{"id": "W1"}]}
         return {"meta": {}, "results": [{"id": "W2"}]}
 
-    collect_openalex_raw(
+    _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -136,7 +193,7 @@ def test_stop_when_next_cursor_is_missing_null_or_empty(tmp_path):
     ):
         calls = []
 
-        collect_openalex_raw(
+        _collect_openalex_raw(
             from_publication_date=FROM_DATE,
             to_publication_date=TO_DATE,
             runs_root=tmp_path / str(len(list(tmp_path.iterdir()))),
@@ -155,7 +212,7 @@ def test_stop_when_results_are_empty_even_with_next_cursor(tmp_path):
         calls.append(url)
         return {"meta": {"next_cursor": "cursor-2"}, "results": []}
 
-    collect_openalex_raw(
+    _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -180,7 +237,7 @@ def test_run_level_cap_preserves_full_page_and_stops_later_terms(tmp_path):
             "results": [{"id": f"W{len(calls)}-{index}"} for index in range(50)],
         }
 
-    result = collect_openalex_raw(
+    result = _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -208,7 +265,7 @@ def test_full_page_is_preserved_when_cap_is_crossed(tmp_path):
             "results": [{"id": f"W{index}"} for index in range(75)],
         }
 
-    collect_openalex_raw(
+    _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -238,7 +295,7 @@ def test_later_page_failure_preserves_earlier_pages_and_later_terms_continue(tmp
             raise RuntimeError("page failed")
         return {"meta": {}, "results": [{"id": "later"}]}
 
-    result = collect_openalex_raw(
+    result = _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -272,7 +329,7 @@ def test_failed_first_page_records_failure_and_later_terms_continue(tmp_path):
             raise RuntimeError("first page failed")
         return {"meta": {}, "results": [{"id": "later"}]}
 
-    result = collect_openalex_raw(
+    result = _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -296,7 +353,7 @@ def test_total_failure_writes_failed_summary_and_raw_failures(tmp_path):
     def fake_fetch(url):
         raise RuntimeError("OpenAlex unavailable")
 
-    result = collect_openalex_raw(
+    result = _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -319,7 +376,7 @@ def test_total_failure_writes_failed_summary_and_raw_failures(tmp_path):
 
 
 def test_page_and_cursor_metadata_is_written(tmp_path):
-    collect_openalex_raw(
+    _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -352,7 +409,7 @@ def test_raw_response_is_preserved_without_transformation(tmp_path):
         ],
     }
 
-    collect_openalex_raw(
+    _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -376,7 +433,7 @@ def test_existing_run_directory_is_not_overwritten_and_no_fetch_occurs(tmp_path)
         return {}
 
     with pytest.raises(FileExistsError):
-        collect_openalex_raw(
+        _collect_openalex_raw(
             from_publication_date=FROM_DATE,
             to_publication_date=TO_DATE,
             runs_root=tmp_path,
@@ -389,7 +446,7 @@ def test_existing_run_directory_is_not_overwritten_and_no_fetch_occurs(tmp_path)
 
 
 def test_collector_writes_only_raw_and_summary_outputs(tmp_path):
-    collect_openalex_raw(
+    _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path,
@@ -407,7 +464,7 @@ def test_collector_writes_only_raw_and_summary_outputs(tmp_path):
 
 
 def test_collector_uses_configured_runs_root(tmp_path):
-    result = collect_openalex_raw(
+    result = _collect_openalex_raw(
         from_publication_date=FROM_DATE,
         to_publication_date=TO_DATE,
         runs_root=tmp_path / "custom-runs",

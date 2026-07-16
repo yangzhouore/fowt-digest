@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import time
 from datetime import UTC, date, datetime
 from pathlib import Path
 from typing import Any, Callable
@@ -23,6 +24,7 @@ PARTIAL_STATUS = "partial"
 PARTIAL_SUCCESS_STATUS = "partial_success"
 FAILED_STATUS = "failed"
 RUN_RECORD_LIMIT = 200
+DEFAULT_REQUEST_DELAY_SECONDS = 1.0
 
 
 def collect_openalex_raw(
@@ -31,10 +33,15 @@ def collect_openalex_raw(
     to_publication_date: date,
     runs_root: str | Path = DEFAULT_RUNS_ROOT,
     fetch_json: Callable[[str], Any] = fetch_openalex_json,
+    sleep: Callable[[float], None] = time.sleep,
+    request_delay_seconds: float = DEFAULT_REQUEST_DELAY_SECONDS,
     started_at: datetime | None = None,
     completed_at: datetime | None = None,
 ) -> dict[str, Any]:
     """Run one raw OpenAlex collection pass and write contract output files."""
+    if request_delay_seconds < DEFAULT_REQUEST_DELAY_SECONDS:
+        raise ValueError("request_delay_seconds must be at least 1.0")
+
     started = _normalise_utc(started_at or datetime.now(UTC))
     run_id = make_run_id(started)
     run_directory = create_run_directory(run_id, runs_root=runs_root)
@@ -48,19 +55,29 @@ def collect_openalex_raw(
     errors: list[dict[str, Any]] = []
     raw_record_count = 0
     cap_reached = False
+    has_made_request = False
 
     for query_index, query in enumerate(queries):
         if cap_reached:
             break
 
-        query_record, query_errors, query_record_count, query_capped = _collect_query_pages(
+        (
+            query_record,
+            query_errors,
+            query_record_count,
+            query_capped,
+            has_made_request,
+        ) = _collect_query_pages(
             query_group=str(query["group"]),
             query_index=query_index,
             query_term=str(query["term"]),
             from_publication_date=from_publication_date,
             to_publication_date=to_publication_date,
             fetch_json=fetch_json,
+            sleep=sleep,
+            request_delay_seconds=request_delay_seconds,
             raw_record_count=raw_record_count,
+            has_made_request=has_made_request,
         )
         raw_queries.append(query_record)
         errors.extend(query_errors)
@@ -143,8 +160,11 @@ def _collect_query_pages(
     from_publication_date: date,
     to_publication_date: date,
     fetch_json: Callable[[str], Any],
+    sleep: Callable[[float], None],
+    request_delay_seconds: float,
     raw_record_count: int,
-) -> tuple[dict[str, Any], list[dict[str, Any]], int, bool]:
+    has_made_request: bool,
+) -> tuple[dict[str, Any], list[dict[str, Any]], int, bool, bool]:
     pages: list[dict[str, Any]] = []
     errors: list[dict[str, Any]] = []
     query_record_count = 0
@@ -170,6 +190,9 @@ def _collect_query_pages(
         }
 
         try:
+            if has_made_request:
+                sleep(request_delay_seconds)
+            has_made_request = True
             raw_response = fetch_json(query_url)
         except Exception as error:
             error_record = _error_record(page_record, error)
@@ -209,7 +232,7 @@ def _collect_query_pages(
         "sourceName": SOURCE_NAME,
         "status": _query_status(pages),
     }
-    return query_record, errors, query_record_count, cap_reached
+    return query_record, errors, query_record_count, cap_reached, has_made_request
 
 
 def _query_url(

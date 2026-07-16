@@ -31,7 +31,7 @@ export async function generateMetadata({
 
   return {
     title: paper.title,
-    description: paper.editorialSummary,
+    description: `Fictional mock paper detail: ${paper.editorialSummary}`,
   };
 }
 
@@ -116,8 +116,10 @@ export default async function PaperPage({ params }: PaperPageProps) {
           <h2 id="fictional-notice-heading">Fictional mock content</h2>
           <p>
             This paper, its metadata, and the analysis above are fictional mock
-            content for development only. No DOI or external publication link is
-            provided because this is not a real publication.
+            content for development only. It is included to test how a future
+            digest entry may present metadata, summaries, relevance, and
+            limitations. No DOI or external publication link is provided because
+            this is not a real publication.
           </p>
           <p className="text-link-row">
             <Link href={`/weekly/${currentEdition.slug}`}>

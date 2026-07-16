@@ -36,9 +36,9 @@ export default function AboutPage() {
         <p className="eyebrow">About</p>
         <h1 id="about-heading">A focused digest for floating wind research.</h1>
         <p>
-          FOWT Research Digest is intended to help technical readers scan recent
-          floating offshore wind literature and identify papers worth deeper
-          review.
+          FOWT Research Digest is a static MVP for an editorial publication that
+          will help technical readers scan recent floating offshore wind
+          literature and identify papers worth deeper review.
         </p>
       </section>
 
@@ -59,9 +59,10 @@ export default function AboutPage() {
       <section aria-labelledby="about-prototype-heading">
         <h2 id="about-prototype-heading">Prototype status</h2>
         <p>
-          This project is an early prototype. Current paper entries and analysis
-          are fictional mock content, and all information must be verified
-          against original publications before any research or engineering use.
+          This project is an early prototype. The current website contains one
+          fictional weekly edition and fictional paper analysis. It does not yet
+          publish real research, connect to the Python pipeline, or run AI
+          review.
         </p>
       </section>
 

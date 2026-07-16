@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "A prototype weekly digest for floating offshore wind turbine research.",
+    "A static MVP prototype for a weekly floating offshore wind turbine research digest.",
 };
 
 export default function Home() {
@@ -23,13 +23,14 @@ export default function Home() {
         <p className="eyebrow">Field notes for floating wind</p>
         <h1 id="intro-heading">Fresh FOWT literature, distilled.</h1>
         <p>
-          A weekly scan of academic and conference work for engineers who need
-          the signal without the noise.
+          A prototype editorial website for scanning floating offshore wind
+          turbine research. The current MVP publishes one fictional weekly
+          edition to test the reading flow before real pipeline integration.
         </p>
       </section>
 
       <section className="edition-meta" aria-labelledby="edition-heading">
-        <h2 id="edition-heading">Current edition</h2>
+        <h2 id="edition-heading">Current prototype edition</h2>
         <dl>
           <div>
             <dt>Date range</dt>
@@ -117,8 +118,8 @@ export default function Home() {
         <h2 id="notice-heading">Mock-data notice</h2>
         <p>
           All displayed paper information is fictional and for development only.
-          It does not describe real publications, real results, or real source
-          links.
+          The site does not yet collect real papers, run AI review, or connect
+          to external research sources.
         </p>
       </section>
 

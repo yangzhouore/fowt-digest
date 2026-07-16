@@ -1,6 +1,6 @@
 # PROJECT STATUS
 
-Last Updated: 2026-07-15
+Last Updated: 2026-07-16
 
 ---
 
@@ -23,29 +23,41 @@ The AI system should remain completely separated from the frontend.
 
 Milestone:
 
-W1 - Website Structure Review
+W4 - Deployment Readiness
 
 Status:
 
-In Progress
+Complete
 
 Completed:
 
-- Homepage exists
-- Weekly Edition page exists
-- Paper Detail pages exist
-- Archive page exists
-- Methodology page exists
-- About page exists
-- local fictional mock paper data exists
-- shared header navigation exists
+- W1 Website Structure Review
+- W2 Navigation, Layout, and Responsive Consistency
+- W3 Content Readiness
+- W4 Deployment Readiness
+- shared header navigation
+- shared footer navigation
+- route-specific metadata
+- static generation for weekly and paper pages
+- homepage copy clarified for first-time visitors
+- About, Methodology, Weekly, Paper, and Archive prototype wording clarified
+- mock-data and inactive-pipeline status made explicit
+- README documents local development, production build, and Vercel deployment assumptions
 
-Current W1 work:
+Current website status:
 
-- review existing website structure
-- complete shared layout consistency
-- add basic page metadata
-- verify internal navigation and production build
+- coherent static MVP skeleton
+- Homepage -> Weekly Edition -> Paper Detail reading flow
+- Archive, Methodology, and About pages accessible
+- production build passes
+- ready for first public prototype deployment
+- fictional local mock data only
+- no pipeline integration, backend, database, API, CMS, analytics, or AI workflow
+
+Deployment status:
+
+- deployment readiness complete
+- website has not yet been deployed
 
 Known limitations:
 
@@ -76,15 +88,15 @@ feature/web-mvp
 
 Current objective:
 
-Complete W1 Website Structure Review.
+Deploy to Vercel.
 
 Required work:
 
-- keep all existing MVP pages reachable
-- preserve Homepage -> Weekly -> Paper reading flow
-- keep Archive, Methodology, and About accessible
-- keep shared header, footer, and editorial visual language consistent
-- verify lint, production build, and public routes
+- create or select the Vercel project
+- set the Vercel root directory to `web`
+- deploy the current Web MVP branch
+- verify deployed public routes after release
+- record the deployment URL in project documentation after deployment
 
 Do not implement yet:
 
@@ -313,7 +325,7 @@ Additional navigation:
 
 Current website milestone:
 
-W1 - Website Structure Review
+W4 - Deployment Readiness complete
 
 ---
 
@@ -390,7 +402,7 @@ Current known issues:
 
 1. Archive metadata is prototype-only and fictional.
 
-2. Methodology and About content are first-pass prototype content.
+2. Website content is MVP-ready but still describes fictional mock data.
 
 3. Homepage and Weekly page share duplicated Paper List markup.
 
@@ -398,7 +410,7 @@ Current decision:
 
 DO NOT extract a reusable component yet.
 
-Wait until there are at least 3–4 real reuse locations.
+Wait until there are at least 3-4 real reuse locations.
 
 4. Global CSS is growing.
 
@@ -474,7 +486,7 @@ Done:
 
 Next frontend work:
 
-Refine archive metadata and prototype page content only when needed.
+Deploy to Vercel.
 
 ---
 
@@ -528,31 +540,31 @@ Implement AI workflow.
 
 Collector
 
-↓
+->
 
 Classifier
 
-↓
+->
 
 Scorer
 
-↓
+->
 
 Selector
 
-↓
+->
 
 Writer
 
-↓
+->
 
 Reviewer
 
-↓
+->
 
 Human Approval
 
-↓
+->
 
 Publish
 

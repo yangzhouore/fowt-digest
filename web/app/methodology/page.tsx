@@ -33,9 +33,10 @@ export default function MethodologyPage() {
         <p className="eyebrow">Methodology</p>
         <h1 id="methodology-heading">How the digest will be assembled.</h1>
         <p>
-          This page describes the intended future editorial process. The website
-          is currently a prototype, the displayed papers are fictional mock
-          content, and the automated pipeline has not yet been implemented.
+          This page describes the intended future editorial process. The current
+          website is a static prototype with fictional papers; real collection,
+          scoring, AI writing, and human review are not running on the website
+          yet.
         </p>
       </section>
 

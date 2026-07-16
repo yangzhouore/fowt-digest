@@ -28,7 +28,7 @@ export async function generateMetadata({
 
   return {
     title: currentEdition.dateRange,
-    description: currentEdition.introduction,
+    description: `Prototype weekly edition: ${currentEdition.introduction}`,
   };
 }
 
@@ -116,7 +116,8 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
         <h2 id="weekly-notice-heading">Mock-data notice</h2>
         <p>
           This edition and all listed paper information are fictional mock
-          content for development only.
+          content for development only. No automated collection, scoring, or AI
+          review has been used to produce this page.
         </p>
       </section>
 

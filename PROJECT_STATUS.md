@@ -1,6 +1,6 @@
 # PROJECT STATUS
 
-Last Updated: 2026-07-15
+Last Updated: 2026-07-16
 
 ---
 
@@ -27,7 +27,7 @@ M3B - OpenAlex Collector
 
 Status:
 
-In Progress
+Complete
 
 Completed:
 
@@ -35,31 +35,38 @@ Completed:
 - M3B-1 OpenAlex Query Builder
 - M3B-2 OpenAlex Client
 - M3B-3 Collector Orchestration
+- M3B-4 OpenAlex Cursor Pagination
 - 13 contract search terms supported
 - published-date filter construction
-- cursor pagination parameter construction
 - deterministic OpenAlex search parameter generation
 - deterministic query URL generation
-- query-builder tests
 - HTTP GET execution through urllib
-- timeout, retry, HTTP status, and JSON decoding tests
+- HTTP timeout, retry, Retry-After, status validation, and JSON decoding
 - collector writes raw_openalex.json and run_summary.json
 - full success, partial success, and total failure supported
-- raw successful OpenAlex responses preserved
+- initial cursor: `*`
+- page size: 50
+- next cursor source: `meta.next_cursor`
+- run-wide raw record cap: 200
+- successful raw pages preserved
+- later-page failure preserves earlier pages
+- later terms continue after page failure unless cap is reached
+- fixed 1-second spacing between normal OpenAlex requests
 
 Latest validation result:
 
-- 48 passed
+- 57 passed
 - 0 failed
 
 Not yet implemented:
 
-- OpenAlex pagination loop
 - metadata normalisation
 - deduplication
 - AI workflow
+- database
+- frontend integration
 
-M3B-1, M3B-2, and M3B-3 are complete. OpenAlex pagination and final collector acceptance are next.
+M3B-1, M3B-2, M3B-3, and M3B-4 are complete. The full OpenAlex Collector milestone has passed final acceptance.
 
 ---
 # Current Git Status
@@ -82,15 +89,13 @@ feature/openalex-collector
 
 Current objective:
 
-OpenAlex pagination and final collector acceptance.
+Merge completed M3B OpenAlex Collector work, then start Metadata Normalisation.
 
-Required work:
+Required work after merge:
 
-- implement the minimal pagination loop for OpenAlex collection
-- continue to preserve raw OpenAlex responses
-- keep writing raw_openalex.json and run_summary.json
-- keep full success, partial success, and total failure behaviour
-- run final collector acceptance checks
+- implement Metadata Normalisation as the next pipeline milestone
+- convert raw OpenAlex records into the contract-defined internal metadata shape
+- keep deduplication, AI workflow, database, and frontend integration out of scope until their milestones begin
 
 Do not implement yet:
 
@@ -105,7 +110,7 @@ Do not implement yet:
 - FastAPI
 - MCP
 
-OpenAlex query construction, the HTTP client, and collector orchestration are implemented. Pagination is not yet implemented. Metadata normalisation, deduplication, and AI workflow modules do not exist yet.
+OpenAlex query construction, the HTTP client, collector orchestration, raw response storage, cursor pagination, run-wide cap handling, partial/total failure handling, and fixed request spacing are implemented. Metadata normalisation, deduplication, and AI workflow modules do not exist yet.
 
 ---
 # Current Repository Snapshot
@@ -382,6 +387,9 @@ Implemented:
 - collector orchestration for one raw collection run
 - raw_openalex.json writing
 - run_summary.json writing
+- cursor pagination execution
+- run-wide 200-record cap handling
+- fixed 1-second spacing between normal OpenAlex requests
 - full success, partial success, and total failure handling
 - pytest coverage for identifier, storage, query-builder, client, and collector behaviour
 
@@ -391,19 +399,21 @@ Completed pipeline slices:
 - M3B-1 OpenAlex Query Builder
 - M3B-2 OpenAlex Client
 - M3B-3 Collector Orchestration
+- M3B-4 OpenAlex Cursor Pagination
 
 Latest validation result:
 
-- 48 passed
+- 57 passed
 - 0 failed
 
-Not yet implemented beyond M3B-3:
+Not yet implemented beyond M3B:
 
-- pagination execution
 - candidate record generation
 - metadata normalisation
 - deduplication output
 - AI workflow modules
+- database
+- frontend integration
 
 ---
 ## Git
@@ -443,9 +453,8 @@ Reorganise only when it becomes difficult to maintain.
 Dark mode is NOT part of the MVP.
 
 6. Pipeline design documents describe intended future stages, while the current
-   implementation covers Pipeline Foundation, OpenAlex query construction, the
-   OpenAlex client, and collector orchestration. Pagination, metadata
-   normalisation, deduplication, and AI workflow modules are not implemented.
+   implementation covers Pipeline Foundation and the accepted OpenAlex Collector.
+   Metadata normalisation, deduplication, and AI workflow modules are not implemented.
 
 ---
 
@@ -471,7 +480,7 @@ Unacceptable technical debt:
 
 Still missing:
 
-- OpenAlex pagination loop and final collector acceptance
+- Metadata Normalisation
 - Crossref integration
 - arXiv integration
 
@@ -575,24 +584,30 @@ Current status:
 
 Completed milestone:
 
-M3B-3 - Collector Orchestration
+M3B - OpenAlex Collector
 
 Current status:
 
-- one collection run is created
-- all contract OpenAlex queries are generated
-- queries execute through the existing OpenAlex client
-- successful raw responses are preserved
-- failed query errors are recorded
+- M3B-1 Query Builder complete
+- M3B-2 OpenAlex Client complete
+- M3B-3 Collector Orchestration complete
+- M3B-4 Cursor Pagination complete
+- 13 contract search terms supported
+- deterministic query generation implemented
+- HTTP timeout, retry, Retry-After, status validation, and JSON decoding implemented
+- cursor pagination implemented
+- page size is 50
+- run-wide 200-record cap implemented
 - raw_openalex.json is written
 - run_summary.json is written
-- full success, partial success, and total failure are supported
-- latest validation: 48 passed, 0 failed
-- no metadata normalisation, deduplication, pagination loop, or AI workflow exists yet
+- partial and total failure handling implemented
+- fixed 1-second spacing between normal OpenAlex requests implemented
+- latest validation: 57 passed, 0 failed
+- no metadata normalisation, deduplication, AI workflow, database, or frontend integration exists yet
 
-Immediate next milestone:
+Immediate next milestone after merge:
 
-OpenAlex pagination and final collector acceptance
+Metadata Normalisation
 
 Do not claim metadata normalisation, deduplication, Crossref, arXiv, or AI workflow modules are implemented. Do not start them until their milestones are explicitly started.
 

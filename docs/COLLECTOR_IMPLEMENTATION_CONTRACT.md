@@ -81,13 +81,39 @@ If OpenAlex returns extra fields, preserve them in the raw file but do not carry
 
 ### Pagination
 
-Use cursor pagination if available from OpenAlex for the chosen endpoint.
+Use OpenAlex cursor pagination for Works API requests.
 
-For the first prototype:
+For each keyword term:
 
-- request up to 50 records per page;
-- stop when OpenAlex has no next cursor;
-- also stop when the run reaches the maximum record limit below.
+- start with cursor `*`;
+- request exactly 50 records per page;
+- read the next cursor from `meta.next_cursor` in the OpenAlex response;
+- use the returned `meta.next_cursor` as the cursor for the next page of the same keyword term;
+- preserve every successful raw page response unchanged inside `raw_openalex.json`, with wrapper metadata for query term, page index, request cursor, next cursor, query URL, and status.
+
+Pagination stops when any of the following occurs:
+
+1. `meta.next_cursor` is absent, `null`, or an empty string.
+2. The current response has an empty `results` list.
+3. The run reaches the 200-record run limit defined below.
+4. The current page request fails after the OpenAlex client exhausts its retries.
+
+There is no separate maximum page count per query and no separate maximum record count per query. The 200-record limit applies across the entire run after combining all keyword terms and pages.
+
+When the 200-record run limit is reached:
+
+- preserve the complete successful page response that caused the run to reach or exceed the limit;
+- do not truncate any raw OpenAlex page response;
+- stop requesting further pages for the current keyword term;
+- stop requesting later keyword terms in the same run;
+- record the cap in `run_summary.json`.
+
+If a later page for a keyword term fails after earlier pages succeeded:
+
+- preserve all earlier successful raw page responses;
+- record the failed page with the query term, page index, request cursor, query URL, and error information;
+- mark the affected query as `partial` if earlier pages succeeded, or `failed` if no page for that term succeeded;
+- continue with later keyword terms unless the run-level record limit has already been reached.
 
 ### Rate-limit handling
 
@@ -368,12 +394,15 @@ Rejected records should be counted in `run_summary.json` with a short reason. Th
 
 ### Partial-run behaviour
 
-A run may complete partially if some keyword queries fail.
+A run may complete partially if some keyword queries or paginated page requests fail.
 
 - Successful raw responses are preserved.
-- Failed query terms are recorded in `run_summary.json`.
+- Failed query terms and failed page requests are recorded in `run_summary.json`.
+- A failed first page records the keyword term as failed and the collector continues with later keyword terms.
+- A failed later page preserves earlier successful pages for that term and the collector continues with later keyword terms.
 - Normalisation and deduplication proceed using available raw records.
-- `run_summary.json` must mark the run as `partial_success` if any query failed.
+- `run_summary.json` must mark the run as `partial_success` if any query or page request failed after at least one successful page was collected.
+- `run_summary.json` must mark the run as `failed` if every requested page failed and no successful raw page response was collected.
 
 ### Raw response preservation
 

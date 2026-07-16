@@ -1,6 +1,13 @@
 from copy import deepcopy
 
-from pipeline.normaliser import iter_successful_openalex_works, reconstruct_abstract
+import pytest
+
+from pipeline.ids import make_candidate_id
+from pipeline.normaliser import (
+    iter_successful_openalex_works,
+    map_openalex_work_to_candidate,
+    reconstruct_abstract,
+)
 
 
 def test_extracts_works_from_one_successful_page_with_provenance():
@@ -184,6 +191,213 @@ def test_malformed_abstract_index_returns_none():
     assert reconstruct_abstract({"floating": [0.5]}) is None
 
 
+def test_maps_complete_openalex_work_to_candidate():
+    extracted = _extracted(
+        {
+            "id": " https://openalex.org/W123 ",
+            "doi": " https://doi.org/10.123/example ",
+            "title": "Floating wind platform response",
+            "display_name": "Fallback title",
+            "publication_date": "2026-07-01",
+            "primary_location": {
+                "landing_page_url": " https://example.org/paper ",
+                "source": {"display_name": "Journal of Floating Wind"},
+            },
+            "authorships": [{"author": {"display_name": "Ada Example"}}],
+            "abstract_inverted_index": {"floating": [0]},
+        }
+    )
+
+    candidate = map_openalex_work_to_candidate(
+        extracted,
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="pipeline/data/runs/run_20260716_090000_openalex/raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    assert candidate == {
+        "schemaVersion": "pipeline-data-0.1",
+        "runId": "run_20260716_090000_openalex",
+        "candidateId": make_candidate_id(openalex_id="https://openalex.org/W123"),
+        "sourceName": "openalex",
+        "sourceIdentifiers": {
+            "openalexId": "https://openalex.org/W123",
+            "doi": "https://doi.org/10.123/example",
+        },
+        "queryGroup": "core_fowt",
+        "queryTerm": "floating offshore wind turbine",
+        "rawSourcePath": "pipeline/data/runs/run_20260716_090000_openalex/raw_openalex.json",
+        "rawQueryIndex": 2,
+        "rawPageIndex": 1,
+        "rawResultIndex": 4,
+        "sourceUrl": "https://example.org/paper",
+        "publishedDate": "2026-07-01",
+        "discoveryDate": "2026-07-16T09:00:00Z",
+        "processingStatus": "collected",
+    }
+    assert "abstract" not in candidate
+    assert "authors" not in candidate
+    assert "publicationSource" not in candidate
+    assert "publicationType" not in candidate
+    assert "topicTags" not in candidate
+
+
+def test_candidate_id_is_deterministic_for_identical_input():
+    extracted = _extracted({"id": "https://openalex.org/W999"})
+
+    first = map_openalex_work_to_candidate(
+        extracted,
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+    second = map_openalex_work_to_candidate(
+        deepcopy(extracted),
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    assert first == second
+    assert first["candidateId"] == make_candidate_id(
+        openalex_id="https://openalex.org/W999"
+    )
+
+
+def test_maps_candidate_with_missing_doi_as_none():
+    candidate = map_openalex_work_to_candidate(
+        _extracted({"id": "https://openalex.org/W1"}),
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    assert candidate["sourceIdentifiers"] == {
+        "openalexId": "https://openalex.org/W1",
+        "doi": None,
+    }
+
+
+def test_missing_abstract_and_authors_do_not_affect_candidate_mapping():
+    candidate = map_openalex_work_to_candidate(
+        _extracted({"id": "https://openalex.org/W2"}),
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    assert "abstract" not in candidate
+    assert "authors" not in candidate
+
+
+def test_missing_publication_date_is_allowed_when_openalex_id_exists():
+    candidate = map_openalex_work_to_candidate(
+        _extracted({"id": "https://openalex.org/W3"}),
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    assert candidate["publishedDate"] is None
+    assert candidate["candidateId"] == make_candidate_id(
+        openalex_id="https://openalex.org/W3"
+    )
+
+
+def test_publication_source_is_not_mapped_for_candidates():
+    candidate = map_openalex_work_to_candidate(
+        _extracted(
+            {
+                "id": "https://openalex.org/W4",
+                "primary_location": {
+                    "source": {"display_name": "Journal of Floating Wind"}
+                },
+            }
+        ),
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    assert "publicationSource" not in candidate
+    assert candidate["sourceUrl"] == "https://openalex.org/W4"
+
+
+def test_candidate_uses_title_and_date_when_source_ids_are_missing():
+    candidate = map_openalex_work_to_candidate(
+        _extracted(
+            {
+                "title": "Floating wind mooring review",
+                "publication_date": "2026-07-15",
+            }
+        ),
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    assert candidate["candidateId"] == make_candidate_id(
+        title="Floating wind mooring review",
+        published_date="2026-07-15",
+    )
+    assert candidate["sourceIdentifiers"]["openalexId"] is None
+    assert candidate["sourceUrl"] is None
+
+
+def test_rejects_candidate_without_any_documented_id_source():
+    with pytest.raises(ValueError, match="candidate_rejected_missing_id_source"):
+        map_openalex_work_to_candidate(
+            _extracted({"title": "Floating wind only"}),
+            run_id="run_20260716_090000_openalex",
+            raw_source_path="raw_openalex.json",
+            discovery_date="2026-07-16T09:00:00Z",
+        )
+
+
+def test_malformed_source_values_are_treated_as_missing():
+    candidate = map_openalex_work_to_candidate(
+        _extracted(
+            {
+                "id": 123,
+                "doi": ["10.123/example"],
+                "title": 456,
+                "display_name": "Fallback display name",
+                "publication_date": "2026-07-15",
+                "primary_location": {"landing_page_url": 789},
+            }
+        ),
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    assert candidate["sourceIdentifiers"] == {"openalexId": None, "doi": None}
+    assert candidate["sourceUrl"] is None
+    assert candidate["candidateId"] == make_candidate_id(
+        title="Fallback display name",
+        published_date="2026-07-15",
+    )
+
+
+def test_candidate_mapping_does_not_mutate_input():
+    extracted = _extracted(
+        {
+            "id": "https://openalex.org/W5",
+            "primary_location": {"landing_page_url": "https://example.org/W5"},
+        }
+    )
+    before = deepcopy(extracted)
+
+    map_openalex_work_to_candidate(
+        extracted,
+        run_id="run_20260716_090000_openalex",
+        raw_source_path="raw_openalex.json",
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    assert extracted == before
+
+
 def _query(status, pages):
     return {
         "status": status,
@@ -197,4 +411,17 @@ def _page(status, query_group, query_term, results):
         "queryGroup": query_group,
         "queryTerm": query_term,
         "rawResponse": {"results": results},
+    }
+
+
+def _extracted(work):
+    return {
+        "work": work,
+        "provenance": {
+            "rawQueryIndex": 2,
+            "rawPageIndex": 1,
+            "rawResultIndex": 4,
+            "queryGroup": "core_fowt",
+            "queryTerm": "floating offshore wind turbine",
+        },
     }

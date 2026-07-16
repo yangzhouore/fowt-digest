@@ -25,48 +25,200 @@ The model separates source metadata from AI-generated analysis and human-edited 
 
 Use ISO 8601 timestamps. Use `null` for known missing optional values. Avoid inventing source metadata.
 
-## 1. PaperCandidate
+## 1. M3C OpenAlex Normalisation Contract
 
-A collected source record before or during normalisation. This preserves source-specific provenance without forcing every source into the final publication shape too early.
+M3C converts successful OpenAlex work records from `raw_openalex.json` into two local JSON outputs:
+
+- `candidates.json`
+- `normalised.json`
+
+This stage reads only successful pages in `raw_openalex.json`:
+
+```text
+queries[]
+  pages[] where status == "success"
+    rawResponse.results[]
+```
+
+Failed page wrappers are ignored by the normaliser except for counts that may be recorded later by an orchestrator. The normaliser must not read failed page `error` objects as paper metadata.
+
+### M3C output file shape
+
+`candidates.json` should be an object with this shape:
+
+```json
+{
+  "runId": "run_YYYYMMDD_HHMMSS_openalex",
+  "sourceName": "openalex",
+  "candidates": [],
+  "rejectedCandidates": []
+}
+```
+
+`normalised.json` should be an object with this shape:
+
+```json
+{
+  "runId": "run_YYYYMMDD_HHMMSS_openalex",
+  "sourceName": "openalex",
+  "normalisedRecords": [],
+  "rejectedRecords": []
+}
+```
+
+Use `rejectedCandidates` only when a deterministic `candidateId` cannot be created. Use `rejectedRecords` when a candidate exists but cannot become `PaperMetadata`. Each rejection item should include raw provenance and a short deterministic `reason` string. Do not create a separate rejection file in M3C.
+
+### OpenAlex fields used in M3C
+
+The normaliser may use only these OpenAlex work fields for M3C:
+
+| OpenAlex field | Local use |
+| --- | --- |
+| `id` | OpenAlex work ID, candidate ID fallback, paper ID fallback, source URL fallback only if no better source URL exists. |
+| `doi` | DOI field and DOI-based paper ID. |
+| `title` or `display_name` | Local title; `title` is preferred when both are present. |
+| `abstract_inverted_index` | Reconstruct `abstract` when present and well-formed. |
+| `authorships[].author.display_name` | Author display names in source order. |
+| `publication_date` | `publishedDate`; controls whether a record can be normalised. |
+| `primary_location.source.display_name` | `publicationSource`. |
+| `type` | Mapped to local `publicationType`. |
+| `concepts[].display_name` and `topics[].display_name` | Source-derived `topicTags`. |
+| `open_access.oa_status` | `openAccessStatus`. |
+| `open_access.is_oa` | Supports `fullTextAvailability`. |
+| `primary_location.landing_page_url` | Preferred `sourceUrl`. |
+| `primary_location.source.host_organization_lineage` and other affiliation/source metadata | Preserve only in raw data; do not map in M3C. |
+
+If OpenAlex returns fields not listed here, preserve them only in `raw_openalex.json`. Do not add them to `candidates.json` or `normalised.json` in M3C.
+
+### Abstract reconstruction
+
+OpenAlex abstracts may arrive as `abstract_inverted_index`, an object mapping each word to one or more integer positions.
+
+M3C should reconstruct the abstract by placing each word at its listed positions and joining tokens with a single space.
+
+If `abstract_inverted_index` is missing, `null`, empty, or malformed, set `abstract` to `null`. Do not fail the record only because the abstract is missing or malformed.
+
+### Publication type mapping
+
+Map OpenAlex `type` into the local `publicationType` field as follows:
+
+| OpenAlex `type` | Local `publicationType` |
+| --- | --- |
+| `journal-article` | `journal` |
+| `proceedings-article` | `conference` |
+| `preprint` | `preprint` |
+| anything else, missing, or empty | `unknown` |
+
+Do not infer publication type from source names in M3C.
+
+### Topic tag mapping
+
+Use `topicTags` as the only topic field in M3C.
+
+Source-derived tags come from:
+
+1. `topics[].display_name`
+2. `concepts[].display_name`
+
+Preserve source order and remove exact duplicate tag strings. Do not generate AI categories, editorial categories, or inferred taxonomy labels in M3C.
+
+### Source URL mapping
+
+Use `primary_location.landing_page_url` when present and non-empty.
+
+If it is missing, use OpenAlex `id` as a fallback source URL only when it is present and URL-like. Otherwise set `sourceUrl` to `null`.
+
+### Indexed date
+
+OpenAlex does not provide a contract-defined indexed date in the current M3C field set. Set `indexedDate` to `null` unless a future contract explicitly names an OpenAlex field for this purpose. Do not map `updated_date` to `indexedDate` in M3C.
+
+### Raw source provenance
+
+Every candidate and normalised record must retain enough provenance to find the original raw work inside `raw_openalex.json`:
+
+| Field | Type | Required | Purpose |
+| --- | --- | --- | --- |
+| `rawSourcePath` | string | Yes | Path to the run's `raw_openalex.json`. |
+| `rawQueryIndex` | number | Yes | Index into `raw_openalex.json.queries`. |
+| `rawPageIndex` | number | Yes | Index into the query's `pages`. |
+| `rawResultIndex` | number | Yes | Index into `page.rawResponse.results`. |
+| `queryGroup` | string | Yes | Query group from the raw page wrapper. |
+| `queryTerm` | string | Yes | Search term from the raw page wrapper. |
+
+Do not duplicate the full raw OpenAlex work in normalised records.
+
+## 2. PaperCandidate
+
+A `PaperCandidate` is the collected OpenAlex work reference before metadata normalisation. M3C writes one candidate for each successful raw OpenAlex work that has enough information to create a deterministic `candidateId`.
 
 | Field | Type | Required | Source | Generation | Purpose |
 | --- | --- | --- | --- | --- | --- |
-| `candidateId` | string | Yes | Collector | Deterministic | Stable internal identifier for the collected record. |
-| `sourceName` | string | Yes | Collector | Deterministic | Names the source, such as `openalex`, `crossref`, or `arxiv`. |
-| `sourceIdentifiers` | object | Yes | Source API | Deterministic | Stores source IDs such as OpenAlex ID, Crossref member/work ID, or arXiv ID. |
-| `rawSourcePath` | string | Yes | Collector | Deterministic | Points to the saved raw response for audit. |
-| `collectedAt` | ISO datetime string | Yes | Collector | Deterministic | Records when the candidate was collected. |
-| `indexedDate` | date string or null | Optional | Source API | Deterministic | Supports weekly discovery windows where available. |
-| `sourceUrl` | string or null | Optional | Source API | Deterministic | Preserves the original record URL when provided. |
-| `processingStatus` | string | Yes | Collector | Deterministic | Usually starts as `collected`. |
-| `collectionRunId` | string | Yes | Orchestrator | Deterministic | Connects the record to a pipeline run. |
+| `schemaVersion` | string | Yes | Pipeline constant | Deterministic | Use a small explicit version such as `pipeline-data-0.1`. |
+| `runId` | string | Yes | `raw_openalex.json.runId` | Deterministic | Links candidate to the collection run. |
+| `candidateId` | string | Yes | Existing ID helper | Deterministic | Use `make_candidate_id(openalex_id, source_url, title, published_date)`. |
+| `sourceName` | string | Yes | Pipeline constant | Deterministic | Always `openalex` in M3C. |
+| `sourceIdentifiers` | object | Yes | OpenAlex work | Deterministic | Contains `openalexId` and `doi`, each string or `null`. |
+| `queryGroup` | string | Yes | Raw page wrapper | Deterministic | Query group that collected the work. |
+| `queryTerm` | string | Yes | Raw page wrapper | Deterministic | Search term that collected the work. |
+| `rawSourcePath` | string | Yes | Normaliser input path | Deterministic | Path to `raw_openalex.json`. |
+| `rawQueryIndex` | number | Yes | Raw output traversal | Deterministic | Index into `queries`. |
+| `rawPageIndex` | number | Yes | Raw output traversal | Deterministic | Index into `pages`. |
+| `rawResultIndex` | number | Yes | Raw output traversal | Deterministic | Index into `rawResponse.results`. |
+| `sourceUrl` | string or null | Yes | OpenAlex work | Deterministic | Preferred source URL or `null`. |
+| `publishedDate` | date string or null | Yes | OpenAlex work | Deterministic | Stored for ID fallback and auditing. |
+| `discoveryDate` | ISO datetime string | Yes | Run summary or normaliser clock | Deterministic | Use collection run `startedAt` when available. |
+| `processingStatus` | string | Yes | Normaliser | Deterministic | Always `collected` when written by M3C. |
 
-## 2. PaperMetadata
+If OpenAlex ID, source URL, and title plus published date are all missing, no deterministic `candidateId` can be created. Reject the candidate and record the reason in the normalisation result when that reporting exists.
 
-A normalised candidate record used by downstream pipeline stages.
+## 3. PaperMetadata
+
+A `PaperMetadata` record is the normalised OpenAlex work used by downstream deterministic stages. M3C writes one record for each candidate that has enough metadata to satisfy the required fields below.
 
 | Field | Type | Required | Source | Generation | Purpose |
 | --- | --- | --- | --- | --- | --- |
-| `paperId` | string | Yes | Normaliser | Deterministic | Internal ID for the deduplicated paper candidate. |
-| `candidateIds` | string[] | Yes | Normaliser/deduplicator | Deterministic | Links back to collected candidates and source provenance. |
-| `sourceIdentifiers` | object | Yes | Source APIs | Deterministic | Preserves identifiers from all known sources. |
-| `doi` | string or null | Optional | Source APIs | Deterministic | Stores DOI only if supplied by a real source. |
-| `title` | string | Yes | Source APIs | Deterministic | Primary paper title for display and matching. |
-| `authors` | string[] | Yes | Source APIs | Deterministic | Author names as provided or normalised from source metadata. |
-| `abstract` | string or null | Optional | Source APIs | Deterministic | Evidence for relevance, scoring, and writing. |
-| `keywords` | string[] | Optional | Source APIs | Deterministic | Supports classification and topic grouping. |
-| `publicationSource` | string or null | Optional | Source APIs | Deterministic | Journal, conference, repository, or proceedings name. |
-| `publicationType` | enum | Yes | Normaliser | Deterministic | One of `journal`, `conference`, `preprint`, or `unknown`. |
-| `publishedDate` | date string or null | Optional | Source APIs | Deterministic | Supports edition date ranges. |
-| `indexedDate` | date string or null | Optional | Source APIs | Deterministic | Supports discovery-based windows. |
-| `sourceUrl` | string or null | Optional | Source APIs | Deterministic | Original source page where available. |
-| `openAccessStatus` | enum or null | Optional | Source APIs | Deterministic | Indicates whether full text may be accessible. |
-| `fullTextAvailability` | enum | Yes | Normaliser | Deterministic | One of `none`, `abstract_only`, `full_text_available`, or `unknown`. |
-| `rawSources` | string[] | Yes | Normaliser | Deterministic | Paths to raw source files used to form this metadata. |
-| `categories` | string[] | Optional | Classifier/human | AI-generated or human-edited | Topic tags for selection and display. |
-| `processingStatus` | string | Yes | Current module | Deterministic | Current workflow state for the paper. |
+| `schemaVersion` | string | Yes | Pipeline constant | Deterministic | Identifies the data contract. |
+| `runId` | string | Yes | Candidate | Deterministic | Links metadata to the collection run. |
+| `paperId` | string | Yes | Existing ID helper | Deterministic | Use `make_paper_id(doi, openalex_id, title, published_date)`. |
+| `candidateIds` | string[] | Yes | Candidate | Deterministic | Single-item list in M3C. Deduplication may merge later. |
+| `sourceName` | string | Yes | Candidate | Deterministic | Always `openalex` in M3C. |
+| `sourceIdentifiers` | object | Yes | OpenAlex work | Deterministic | Contains `openalexId` and `doi`, each string or `null`. |
+| `doi` | string or null | Yes | OpenAlex work | Deterministic | Store the raw DOI string after trimming, or `null`; ID helper owns DOI normalisation. |
+| `title` | string | Yes | OpenAlex work | Deterministic | Required. Prefer `title`, fallback to `display_name`. |
+| `authors` | string[] | Yes | OpenAlex work | Deterministic | Author display names in source order; empty array if missing. |
+| `abstract` | string or null | Yes | OpenAlex work | Deterministic | Reconstructed from `abstract_inverted_index`, or `null`. |
+| `publicationSource` | string or null | Yes | OpenAlex work | Deterministic | `primary_location.source.display_name`, or `null`. |
+| `publicationType` | string | Yes | OpenAlex work | Deterministic | One of `journal`, `conference`, `preprint`, or `unknown`. |
+| `publishedDate` | date string | Yes | OpenAlex work | Deterministic | Required for M3C normalised output. |
+| `indexedDate` | date string or null | Yes | Contract | Deterministic | `null` in M3C unless a future contract names an OpenAlex source field. |
+| `sourceUrl` | string or null | Yes | OpenAlex work | Deterministic | Preferred source URL, OpenAlex ID URL fallback, or `null`. |
+| `openAccessStatus` | string or null | Yes | OpenAlex work | Deterministic | `open_access.oa_status`, or `null`. |
+| `fullTextAvailability` | string | Yes | OpenAlex work | Deterministic | `full_text_available` if `open_access.is_oa` is true; `abstract_only` if abstract exists; otherwise `none`. |
+| `topicTags` | string[] | Yes | OpenAlex work | Deterministic | Source-derived topic/concept display names; empty array if missing. |
+| `rawSources` | object[] | Yes | Candidate/raw wrapper | Deterministic | Provenance objects with `rawSourcePath`, `rawQueryIndex`, `rawPageIndex`, `rawResultIndex`, `queryGroup`, and `queryTerm`. |
+| `processingStatus` | string | Yes | Normaliser | Deterministic | Always `normalised` when written by M3C. |
 
-## 3. RelevanceAssessment
+Do not include `categories` in M3C output. `categories` are editorial or classifier output and belong to later stages.
+
+### M3C missing-field behaviour
+
+| Missing or invalid field | Candidate behaviour | PaperMetadata behaviour |
+| --- | --- | --- |
+| OpenAlex `id` | Allowed if source URL or title plus published date can create `candidateId`. | Allowed if DOI or title plus published date can create `paperId`. |
+| DOI | Allowed. Store `null`. | Allowed. `paperId` falls back to OpenAlex ID or title plus date. |
+| Title/display name | Candidate allowed only if OpenAlex ID or source URL exists. | Reject from `normalised.json`; title is required. |
+| Publication date | Candidate allowed if OpenAlex ID or source URL exists. | Reject from `normalised.json`; published date is required. |
+| Authors | Allowed. | Use empty array. |
+| Abstract | Allowed. | Use `null`; set `fullTextAvailability` from remaining evidence. |
+| Publication source | Allowed. | Use `null`. |
+| Publication type | Allowed. | Use `unknown`. |
+| Source URL | Allowed if another candidate ID source exists. | Use `null` unless OpenAlex ID URL fallback is available. |
+| Open access fields | Allowed. | Use `null` for `openAccessStatus`; derive `fullTextAvailability` from abstract if possible. |
+| Topics/concepts | Allowed. | Use empty `topicTags`. |
+
+Rejected normalised records must not be silently discarded. M3C implementation should make rejection reasons inspectable in tests and, when run-summary updating is implemented, count them with short reasons.
+
+## 4. RelevanceAssessment
 
 A semantic judgement about whether a paper is directly relevant to floating offshore wind turbines.
 
@@ -83,7 +235,7 @@ A semantic judgement about whether a paper is directly relevant to floating offs
 | `promptVersion` | string or null | Optional | AI configuration | Deterministic | Records classifier prompt version. |
 | `generatedAt` | ISO datetime string | Yes | Classifier | Deterministic | Records assessment time. |
 
-## 4. PaperScore
+## 5. PaperScore
 
 A structured editorial score and rationale for a relevant paper.
 
@@ -108,7 +260,7 @@ A structured editorial score and rationale for a relevant paper.
 
 Use a simple numeric scale, for example 0-10, but final scale and weighting remain open decisions.
 
-## 5. SelectionDecision
+## 6. SelectionDecision
 
 A record of why a paper was selected, rejected, or held for a weekly edition.
 
@@ -124,7 +276,7 @@ A record of why a paper was selected, rejected, or held for a weekly edition.
 | `humanOverride` | boolean | Yes | Human reviewer | Human-edited | Flags decisions changed manually. |
 | `decidedAt` | ISO datetime string | Yes | Selector | Deterministic | Records decision time. |
 
-## 6. EditorialSummary
+## 7. EditorialSummary
 
 Human-facing draft or approved editorial content for a selected paper.
 
@@ -145,7 +297,7 @@ Human-facing draft or approved editorial content for a selected paper.
 | `generatedAt` | ISO datetime string | Yes | Writer | Deterministic | Records draft generation time. |
 | `humanEdited` | boolean | Yes | Human approval | Human-edited | Indicates whether a human changed the draft. |
 
-## 7. ReviewResult
+## 8. ReviewResult
 
 A review record that checks draft content against available evidence.
 
@@ -168,7 +320,7 @@ A review record that checks draft content against available evidence.
 | `approvedBy` | string or null | Optional | Human approver | Human-edited | Identifies approver when approved. |
 | `approvedAt` | ISO datetime string or null | Optional | Human approver | Human-edited | Records approval time. |
 
-## 8. WeeklyEdition
+## 9. WeeklyEdition
 
 The publication unit consumed by the website after human approval.
 
@@ -244,17 +396,23 @@ This is enough for the first prototype. Do not create a separate generic version
 ```json
 {
   "schemaVersion": "pipeline-data-0.1",
-  "candidateId": "candidate_fictional_001",
+  "runId": "run_20260809_091500_openalex",
+  "candidateId": "candidate_openalex_fictional001",
   "sourceName": "openalex",
   "sourceIdentifiers": {
-    "openalexId": "fictional-openalex-record-001"
+    "openalexId": "https://openalex.org/W1234567890",
+    "doi": null
   },
-  "rawSourcePath": "pipeline/runs/2026-08-09/01_raw/openalex/fictional_001.json",
-  "collectedAt": "2026-08-09T09:10:00Z",
-  "indexedDate": "2026-08-08",
-  "sourceUrl": null,
-  "processingStatus": "collected",
-  "collectionRunId": "run_2026_08_09"
+  "queryGroup": "electrical_and_operations",
+  "queryTerm": "floating wind dynamic cable",
+  "rawSourcePath": "pipeline/data/runs/run_20260809_091500_openalex/raw_openalex.json",
+  "rawQueryIndex": 12,
+  "rawPageIndex": 0,
+  "rawResultIndex": 3,
+  "sourceUrl": "https://openalex.org/W1234567890",
+  "publishedDate": "2026-08-08",
+  "discoveryDate": "2026-08-09T09:15:00Z",
+  "processingStatus": "collected"
 }
 ```
 

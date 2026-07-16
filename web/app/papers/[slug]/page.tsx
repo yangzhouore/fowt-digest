@@ -1,5 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
+import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
 import { currentEdition, mockPapers } from "../../../data/mock-papers";
 
@@ -8,6 +10,30 @@ type PaperPageProps = {
     slug: string;
   }>;
 };
+
+export function generateStaticParams() {
+  return mockPapers.map((paper) => ({
+    slug: paper.slug,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: PaperPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const paper = mockPapers.find((item) => item.slug === slug);
+
+  if (!paper) {
+    return {
+      title: "Paper not found",
+    };
+  }
+
+  return {
+    title: paper.title,
+    description: `Fictional mock paper detail: ${paper.editorialSummary}`,
+  };
+}
 
 export default async function PaperPage({ params }: PaperPageProps) {
   const { slug } = await params;
@@ -90,8 +116,10 @@ export default async function PaperPage({ params }: PaperPageProps) {
           <h2 id="fictional-notice-heading">Fictional mock content</h2>
           <p>
             This paper, its metadata, and the analysis above are fictional mock
-            content for development only. No DOI or external publication link is
-            provided because this is not a real publication.
+            content for development only. It is included to test how a future
+            digest entry may present metadata, summaries, relevance, and
+            limitations. No DOI or external publication link is provided because
+            this is not a real publication.
           </p>
           <p className="text-link-row">
             <Link href={`/weekly/${currentEdition.slug}`}>
@@ -100,7 +128,8 @@ export default async function PaperPage({ params }: PaperPageProps) {
           </p>
         </section>
       </article>
+
+      <SiteFooter />
     </main>
   );
 }
-

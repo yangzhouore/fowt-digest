@@ -1,6 +1,6 @@
 # PROJECT STATUS
 
-Last Updated: 2026-07-15
+Last Updated: 2026-07-16
 
 ---
 
@@ -23,7 +23,7 @@ The AI system should remain completely separated from the frontend.
 
 Milestone:
 
-M3A - Pipeline Foundation
+W4 - Deployment Readiness
 
 Status:
 
@@ -31,26 +31,40 @@ Complete
 
 Completed:
 
-- pipeline package skeleton
-- deterministic run ID helper
-- deterministic candidate ID helper
-- deterministic paper ID helper
-- DOI normalisation
-- title normalisation
-- `pipeline/run_storage.py`
-- run directory creation
-- six contract JSON filenames supported
-- UTF-8 deterministic JSON writing
-- atomic file replacement
-- identifier tests
-- storage tests
+- W1 Website Structure Review
+- W2 Navigation, Layout, and Responsive Consistency
+- W3 Content Readiness
+- W4 Deployment Readiness
+- shared header navigation
+- shared footer navigation
+- route-specific metadata
+- static generation for weekly and paper pages
+- homepage copy clarified for first-time visitors
+- About, Methodology, Weekly, Paper, and Archive prototype wording clarified
+- mock-data and inactive-pipeline status made explicit
+- README documents local development, production build, and Vercel deployment assumptions
 
-Latest validation result:
+Current website status:
 
-- 17 passed
-- 0 failed
+- coherent static MVP skeleton
+- Homepage -> Weekly Edition -> Paper Detail reading flow
+- Archive, Methodology, and About pages accessible
+- production build passes
+- ready for first public prototype deployment
+- fictional local mock data only
+- no pipeline integration, backend, database, API, CMS, analytics, or AI workflow
 
-Pipeline Foundation is complete.
+Deployment status:
+
+- deployment readiness complete
+- website has not yet been deployed
+
+Known limitations:
+
+- website still uses fictional mock data
+- no pipeline integration
+- no backend, database, API, CMS, analytics, or AI workflow
+- detailed visual polishing is out of scope
 
 ---
 
@@ -62,11 +76,11 @@ master
 
 Current Development Branch:
 
-feature/pipeline-foundation
+feature/web-mvp
 
 Expected current branch:
 
-feature/pipeline-foundation
+feature/web-mvp
 
 ---
 
@@ -74,29 +88,29 @@ feature/pipeline-foundation
 
 Current objective:
 
-M3B - OpenAlex Collector.
+Deploy to Vercel.
 
 Required work:
 
-- implement OpenAlex query construction
-- implement the minimal OpenAlex client only when starting M3B
-- preserve raw OpenAlex responses in the contract-defined run files
-- keep outputs local and independent from the website
+- create or select the Vercel project
+- set the Vercel root directory to `web`
+- deploy the current Web MVP branch
+- verify deployed public routes after release
+- record the deployment URL in project documentation after deployment
 
 Do not implement yet:
 
-- metadata normalisation
-- deduplication
-- Crossref
-- arXiv
-- AI scoring
-- AI writing
-- AI reviewer
+- search
+- authentication
 - database
-- FastAPI
-- MCP
+- API routes
+- pipeline integration
+- AI workflow
+- CMS
+- analytics
+- newsletter
 
-OpenAlex is not implemented yet.
+Pipeline work remains separate and unchanged during Web MVP work.
 
 ---
 
@@ -290,7 +304,7 @@ Completed:
 
 ## Website
 
-Completed pages:
+MVP pages included:
 
 - Homepage
 - Weekly Edition
@@ -299,23 +313,19 @@ Completed pages:
 - Methodology
 - About
 
-Current navigation:
+Current reading flow:
 
-Homepage
-
-↓
-
-Weekly Edition
-
-↓
-
-Paper Detail
+Homepage -> Weekly Edition -> Paper Detail
 
 Additional navigation:
 
 - Archive
 - Methodology
 - About
+
+Current website milestone:
+
+W4 - Deployment Readiness complete
 
 ---
 
@@ -392,7 +402,7 @@ Current known issues:
 
 1. Archive metadata is prototype-only and fictional.
 
-2. Methodology and About content are first-pass prototype content.
+2. Website content is MVP-ready but still describes fictional mock data.
 
 3. Homepage and Weekly page share duplicated Paper List markup.
 
@@ -400,7 +410,7 @@ Current decision:
 
 DO NOT extract a reusable component yet.
 
-Wait until there are at least 3–4 real reuse locations.
+Wait until there are at least 3-4 real reuse locations.
 
 4. Global CSS is growing.
 
@@ -476,7 +486,7 @@ Done:
 
 Next frontend work:
 
-Refine archive metadata and prototype page content only when needed.
+Deploy to Vercel.
 
 ---
 
@@ -530,31 +540,31 @@ Implement AI workflow.
 
 Collector
 
-↓
+->
 
 Classifier
 
-↓
+->
 
 Scorer
 
-↓
+->
 
 Selector
 
-↓
+->
 
 Writer
 
-↓
+->
 
 Reviewer
 
-↓
+->
 
 Human Approval
 
-↓
+->
 
 Publish
 

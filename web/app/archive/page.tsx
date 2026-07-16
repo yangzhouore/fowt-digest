@@ -1,6 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "../site-header";
+import { SiteFooter } from "../site-footer";
 import { archiveEditions } from "../../data/mock-papers";
+
+export const metadata: Metadata = {
+  title: "Archive",
+  description:
+    "Prototype archive of weekly floating offshore wind research digest editions.",
+};
 
 export default function ArchivePage() {
   return (
@@ -11,8 +19,9 @@ export default function ArchivePage() {
         <p className="eyebrow">Archive</p>
         <h1 id="archive-heading">Weekly editions in sequence.</h1>
         <p>
-          A fictional chronological record for testing how FOWT digest editions
-          will be browsed as the publication grows.
+          A prototype chronological record for testing how weekly FOWT digest
+          editions will be browsed as the publication grows. Only the current
+          fictional edition is available in this MVP.
         </p>
       </section>
 
@@ -58,11 +67,12 @@ export default function ArchivePage() {
       <section aria-labelledby="archive-notice-heading">
         <h2 id="archive-notice-heading">Mock-data notice</h2>
         <p>
-          Archive entries are fictional mock data for development only.
-          Historical prototype editions are intentionally not linked.
+          Archive entries are fictional mock data for development only. Past
+          prototype editions are placeholders and are intentionally not linked.
         </p>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }
-

@@ -68,6 +68,46 @@ Failed page wrappers are ignored by the normaliser except for counts that may be
 
 Use `rejectedCandidates` only when a deterministic `candidateId` cannot be created. Use `rejectedRecords` when a candidate exists but cannot become `PaperMetadata`. Each rejection item should include raw provenance and a short deterministic `reason` string. Do not create a separate rejection file in M3C.
 
+Rejection items must use exact raw-location provenance and must not duplicate
+the top-level `sourceName`. Preserve rejected items in processing order. Do not
+include the complete raw OpenAlex work, partial `PaperCandidate` objects,
+partial `PaperMetadata` objects, timestamps, or free-form error messages.
+
+`rejectedCandidates[]` items must use this shape:
+
+```json
+{
+  "reason": "candidate_rejected_missing_id_source",
+  "provenance": {
+    "rawSourcePath": "pipeline/data/runs/run_YYYYMMDD_HHMMSS_openalex/raw_openalex.json",
+    "rawQueryIndex": 0,
+    "rawPageIndex": 0,
+    "rawResultIndex": 0
+  }
+}
+```
+
+`rejectedCandidates` items do not include `candidateId` because candidate
+creation failed.
+
+`rejectedRecords[]` items must use this shape:
+
+```json
+{
+  "candidateId": "candidate_openalex_example",
+  "reason": "metadata_rejected_missing_title",
+  "provenance": {
+    "rawSourcePath": "pipeline/data/runs/run_YYYYMMDD_HHMMSS_openalex/raw_openalex.json",
+    "rawQueryIndex": 0,
+    "rawPageIndex": 0,
+    "rawResultIndex": 0
+  }
+}
+```
+
+`rejectedRecords` items include `candidateId` because candidate mapping
+succeeded before metadata mapping failed.
+
 ### OpenAlex fields used in M3C
 
 The normaliser may use only these OpenAlex work fields for M3C:

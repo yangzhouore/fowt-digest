@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any
 
 from pipeline.ids import make_candidate_id, make_paper_id
+from pipeline.run_storage import write_run_json
 
 SUCCESS_STATUS = "success"
 FAILED_STATUS = "failed"
@@ -196,6 +198,82 @@ def map_openalex_work_to_metadata(
     }
 
 
+def write_normalisation_outputs(
+    raw_output: dict[str, Any],
+    *,
+    run_directory: str | Path,
+    run_id: str,
+    raw_source_path: str,
+    discovery_date: str,
+) -> dict[str, Any]:
+    """Write candidates.json and normalised.json from raw OpenAlex output."""
+    candidates: list[dict[str, Any]] = []
+    rejected_candidates: list[dict[str, Any]] = []
+    normalised_records: list[dict[str, Any]] = []
+    rejected_records: list[dict[str, Any]] = []
+
+    for extracted_record in iter_successful_openalex_works(raw_output):
+        try:
+            candidate = map_openalex_work_to_candidate(
+                extracted_record,
+                run_id=run_id,
+                raw_source_path=raw_source_path,
+                discovery_date=discovery_date,
+            )
+        except ValueError as exc:
+            rejected_candidates.append(
+                {
+                    "reason": str(exc),
+                    "provenance": _raw_location_from_extracted(
+                        extracted_record,
+                        raw_source_path=raw_source_path,
+                    ),
+                }
+            )
+            continue
+
+        candidates.append(candidate)
+
+        try:
+            metadata = map_openalex_work_to_metadata(extracted_record, candidate)
+        except ValueError as exc:
+            rejected_records.append(
+                {
+                    "candidateId": candidate.get("candidateId"),
+                    "reason": str(exc),
+                    "provenance": _raw_location_from_candidate(candidate),
+                }
+            )
+            continue
+
+        normalised_records.append(metadata)
+
+    candidates_payload = {
+        "runId": run_id,
+        "sourceName": SOURCE_NAME,
+        "candidates": candidates,
+        "rejectedCandidates": rejected_candidates,
+    }
+    normalised_payload = {
+        "runId": run_id,
+        "sourceName": SOURCE_NAME,
+        "normalisedRecords": normalised_records,
+        "rejectedRecords": rejected_records,
+    }
+
+    candidates_path = write_run_json(run_directory, "candidates.json", candidates_payload)
+    normalised_path = write_run_json(run_directory, "normalised.json", normalised_payload)
+
+    return {
+        "candidatesPath": candidates_path,
+        "normalisedPath": normalised_path,
+        "candidateCount": len(candidates),
+        "rejectedCandidateCount": len(rejected_candidates),
+        "normalisedCount": len(normalised_records),
+        "rejectedRecordCount": len(rejected_records),
+    }
+
+
 def _source_url(work: dict[str, Any]) -> str | None:
     primary_location = work.get("primary_location")
     if isinstance(primary_location, dict):
@@ -289,6 +367,31 @@ def _raw_source(candidate: dict[str, Any]) -> dict[str, Any]:
         "rawResultIndex": candidate.get("rawResultIndex"),
         "queryGroup": candidate.get("queryGroup"),
         "queryTerm": candidate.get("queryTerm"),
+    }
+
+
+def _raw_location_from_extracted(
+    extracted_record: dict[str, Any],
+    *,
+    raw_source_path: str,
+) -> dict[str, Any]:
+    provenance = extracted_record.get("provenance")
+    if not isinstance(provenance, dict):
+        provenance = {}
+    return {
+        "rawSourcePath": raw_source_path,
+        "rawQueryIndex": provenance.get("rawQueryIndex"),
+        "rawPageIndex": provenance.get("rawPageIndex"),
+        "rawResultIndex": provenance.get("rawResultIndex"),
+    }
+
+
+def _raw_location_from_candidate(candidate: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "rawSourcePath": candidate.get("rawSourcePath"),
+        "rawQueryIndex": candidate.get("rawQueryIndex"),
+        "rawPageIndex": candidate.get("rawPageIndex"),
+        "rawResultIndex": candidate.get("rawResultIndex"),
     }
 
 

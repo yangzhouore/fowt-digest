@@ -1,12 +1,16 @@
+import json
 from copy import deepcopy
 
 import pytest
+
+import pipeline.normaliser as normaliser_module
 
 from pipeline.ids import make_candidate_id, make_paper_id
 from pipeline.normaliser import (
     iter_successful_openalex_works,
     map_openalex_work_to_candidate,
     map_openalex_work_to_metadata,
+    write_normalisation_outputs,
     reconstruct_abstract,
 )
 
@@ -853,6 +857,185 @@ def test_metadata_mapping_does_not_mutate_inputs():
 
     assert extracted == before_extracted
     assert candidate == before_candidate
+def test_write_normalisation_outputs_writes_expected_payloads(tmp_path):
+    raw_output = {
+        "queries": [
+            _query(
+                "success",
+                [
+                    _page(
+                        "success",
+                        "group-a",
+                        "term-a",
+                        [
+                            {
+                                "id": "https://openalex.org/W1",
+                                "title": "Floating Wind One",
+                                "publication_date": "2026-07-01",
+                            },
+                            {"title": "No deterministic candidate source"},
+                            {
+                                "id": "https://openalex.org/W2",
+                                "publication_date": "2026-07-02",
+                            },
+                        ],
+                    ),
+                    _page(
+                        "failed",
+                        "group-a",
+                        "term-a",
+                        [
+                            {
+                                "id": "https://openalex.org/FAILED",
+                                "title": "Ignored Failed Page",
+                                "publication_date": "2026-07-03",
+                            }
+                        ],
+                    ),
+                ],
+            ),
+            _query(
+                "success",
+                [
+                    _page(
+                        "success",
+                        "group-b",
+                        "term-b",
+                        [
+                            {
+                                "id": "https://openalex.org/W3",
+                                "title": "Floating Wind Three",
+                                "publication_date": "2026-07-03",
+                            }
+                        ],
+                    )
+                ],
+            ),
+        ]
+    }
+    before = deepcopy(raw_output)
+    raw_source_path = "pipeline/data/runs/run_20260716_090000_openalex/raw_openalex.json"
+
+    result = write_normalisation_outputs(
+        raw_output,
+        run_directory=tmp_path,
+        run_id="run_20260716_090000_openalex",
+        raw_source_path=raw_source_path,
+        discovery_date="2026-07-16T09:00:00Z",
+    )
+
+    candidates_path = tmp_path / "candidates.json"
+    normalised_path = tmp_path / "normalised.json"
+    assert result == {
+        "candidatesPath": candidates_path,
+        "normalisedPath": normalised_path,
+        "candidateCount": 3,
+        "rejectedCandidateCount": 1,
+        "normalisedCount": 2,
+        "rejectedRecordCount": 1,
+    }
+    assert candidates_path.is_file()
+    assert normalised_path.is_file()
+    assert sorted(path.name for path in tmp_path.iterdir()) == [
+        "candidates.json",
+        "normalised.json",
+    ]
+
+    candidates_payload = json.loads(candidates_path.read_text(encoding="utf-8"))
+    normalised_payload = json.loads(normalised_path.read_text(encoding="utf-8"))
+
+    assert candidates_payload["runId"] == "run_20260716_090000_openalex"
+    assert candidates_payload["sourceName"] == "openalex"
+    assert [candidate["sourceIdentifiers"]["openalexId"] for candidate in candidates_payload["candidates"]] == [
+        "https://openalex.org/W1",
+        "https://openalex.org/W2",
+        "https://openalex.org/W3",
+    ]
+    assert candidates_payload["rejectedCandidates"] == [
+        {
+            "reason": "candidate_rejected_missing_id_source",
+            "provenance": {
+                "rawSourcePath": raw_source_path,
+                "rawQueryIndex": 0,
+                "rawPageIndex": 0,
+                "rawResultIndex": 1,
+            },
+        }
+    ]
+
+    assert normalised_payload["runId"] == "run_20260716_090000_openalex"
+    assert normalised_payload["sourceName"] == "openalex"
+    assert [record["sourceIdentifiers"]["openalexId"] for record in normalised_payload["normalisedRecords"]] == [
+        "https://openalex.org/W1",
+        "https://openalex.org/W3",
+    ]
+    rejected_record = normalised_payload["rejectedRecords"][0]
+    assert rejected_record == {
+        "candidateId": candidates_payload["candidates"][1]["candidateId"],
+        "reason": "metadata_rejected_missing_title",
+        "provenance": {
+            "rawSourcePath": raw_source_path,
+            "rawQueryIndex": 0,
+            "rawPageIndex": 0,
+            "rawResultIndex": 2,
+        },
+    }
+
+    assert set(candidates_payload["rejectedCandidates"][0]) == {"reason", "provenance"}
+    assert set(rejected_record) == {"candidateId", "reason", "provenance"}
+    assert set(candidates_payload["rejectedCandidates"][0]["provenance"]) == {
+        "rawSourcePath",
+        "rawQueryIndex",
+        "rawPageIndex",
+        "rawResultIndex",
+    }
+    assert set(rejected_record["provenance"]) == {
+        "rawSourcePath",
+        "rawQueryIndex",
+        "rawPageIndex",
+        "rawResultIndex",
+    }
+    assert raw_output == before
+
+
+def test_write_normalisation_outputs_propagates_unexpected_exceptions(tmp_path, monkeypatch):
+    raw_output = {
+        "queries": [
+            _query(
+                "success",
+                [
+                    _page(
+                        "success",
+                        "group-a",
+                        "term-a",
+                        [{"id": "https://openalex.org/W1"}],
+                    )
+                ],
+            )
+        ]
+    }
+
+    def raise_runtime_error(*args, **kwargs):
+        raise RuntimeError("unexpected")
+
+    monkeypatch.setattr(
+        normaliser_module,
+        "map_openalex_work_to_candidate",
+        raise_runtime_error,
+    )
+
+    with pytest.raises(RuntimeError, match="unexpected"):
+        write_normalisation_outputs(
+            raw_output,
+            run_directory=tmp_path,
+            run_id="run_20260716_090000_openalex",
+            raw_source_path="pipeline/data/runs/run_20260716_090000_openalex/raw_openalex.json",
+            discovery_date="2026-07-16T09:00:00Z",
+        )
+
+    assert list(tmp_path.iterdir()) == []
+
+
 def _query(status, pages):
     return {
         "status": status,

@@ -4,13 +4,14 @@ from __future__ import annotations
 
 from typing import Any
 
-from pipeline.ids import make_candidate_id
+from pipeline.ids import make_candidate_id, make_paper_id
 
 SUCCESS_STATUS = "success"
 FAILED_STATUS = "failed"
 SCHEMA_VERSION = "pipeline-data-0.1"
 SOURCE_NAME = "openalex"
 COLLECTED_STATUS = "collected"
+NORMALISED_STATUS = "normalised"
 
 
 def iter_successful_openalex_works(raw_output: dict[str, Any]) -> list[dict[str, Any]]:
@@ -130,6 +131,71 @@ def map_openalex_work_to_candidate(
     }
 
 
+def map_openalex_work_to_metadata(
+    extracted_record: dict[str, Any],
+    candidate: dict[str, Any],
+) -> dict[str, Any]:
+    """Map one extracted OpenAlex work and candidate into PaperMetadata."""
+    if not isinstance(extracted_record, dict):
+        raise ValueError("metadata requires extracted work")
+    work = extracted_record.get("work")
+    if not isinstance(work, dict):
+        raise ValueError("metadata requires extracted work")
+    if not isinstance(candidate, dict):
+        raise ValueError("metadata requires candidate")
+
+    source_identifiers = candidate.get("sourceIdentifiers")
+    if not isinstance(source_identifiers, dict):
+        raise ValueError("metadata requires candidate sourceIdentifiers")
+
+    title = _first_clean_string(work, "title", "display_name")
+    if not title:
+        raise ValueError("metadata_rejected_missing_title")
+
+    published_date = _clean_string(work.get("publication_date"))
+    if not published_date:
+        raise ValueError("metadata_rejected_missing_published_date")
+
+    openalex_id = _clean_string(source_identifiers.get("openalexId"))
+    doi = _clean_string(work.get("doi"))
+    if doi is None:
+        doi = _clean_string(source_identifiers.get("doi"))
+    abstract = reconstruct_abstract(work.get("abstract_inverted_index"))
+
+    paper_id = make_paper_id(
+        doi=doi,
+        openalex_id=openalex_id,
+        title=title,
+        published_date=published_date,
+    )
+
+    return {
+        "schemaVersion": SCHEMA_VERSION,
+        "runId": candidate.get("runId"),
+        "paperId": paper_id,
+        "candidateIds": [candidate.get("candidateId")],
+        "sourceName": candidate.get("sourceName"),
+        "sourceIdentifiers": {
+            "openalexId": openalex_id,
+            "doi": doi,
+        },
+        "doi": doi,
+        "title": title,
+        "authors": _authors(work),
+        "abstract": abstract,
+        "publicationSource": _publication_source(work),
+        "publicationType": _publication_type(work),
+        "publishedDate": published_date,
+        "indexedDate": None,
+        "sourceUrl": candidate.get("sourceUrl"),
+        "openAccessStatus": _open_access_status(work),
+        "fullTextAvailability": _full_text_availability(work, abstract),
+        "topicTags": _topic_tags(work),
+        "rawSources": [_raw_source(candidate)],
+        "processingStatus": NORMALISED_STATUS,
+    }
+
+
 def _source_url(work: dict[str, Any]) -> str | None:
     primary_location = work.get("primary_location")
     if isinstance(primary_location, dict):
@@ -141,6 +207,89 @@ def _source_url(work: dict[str, Any]) -> str | None:
     if openalex_id and _is_url_like(openalex_id):
         return openalex_id
     return None
+
+
+def _authors(work: dict[str, Any]) -> list[str]:
+    authorships = work.get("authorships")
+    if not isinstance(authorships, list):
+        return []
+
+    authors: list[str] = []
+    for authorship in authorships:
+        if not isinstance(authorship, dict):
+            continue
+        author = authorship.get("author")
+        if not isinstance(author, dict):
+            continue
+        name = _clean_string(author.get("display_name"))
+        if name:
+            authors.append(name)
+    return authors
+
+
+def _publication_source(work: dict[str, Any]) -> str | None:
+    primary_location = work.get("primary_location")
+    if not isinstance(primary_location, dict):
+        return None
+    source = primary_location.get("source")
+    if not isinstance(source, dict):
+        return None
+    return _clean_string(source.get("display_name"))
+
+
+def _publication_type(work: dict[str, Any]) -> str:
+    value = _clean_string(work.get("type"))
+    if value == "journal-article":
+        return "journal"
+    if value == "proceedings-article":
+        return "conference"
+    if value == "preprint":
+        return "preprint"
+    return "unknown"
+
+
+def _open_access_status(work: dict[str, Any]) -> str | None:
+    open_access = work.get("open_access")
+    if not isinstance(open_access, dict):
+        return None
+    return _clean_string(open_access.get("oa_status"))
+
+
+def _full_text_availability(work: dict[str, Any], abstract: str | None) -> str:
+    open_access = work.get("open_access")
+    if isinstance(open_access, dict) and open_access.get("is_oa") is True:
+        return "full_text_available"
+    if abstract:
+        return "abstract_only"
+    return "none"
+
+
+def _topic_tags(work: dict[str, Any]) -> list[str]:
+    tags: list[str] = []
+    seen: set[str] = set()
+    for key in ("topics", "concepts"):
+        values = work.get(key)
+        if not isinstance(values, list):
+            continue
+        for value in values:
+            if not isinstance(value, dict):
+                continue
+            tag = _clean_string(value.get("display_name"))
+            if tag and tag not in seen:
+                seen.add(tag)
+                tags.append(tag)
+    return tags
+
+
+def _raw_source(candidate: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "rawSourcePath": candidate.get("rawSourcePath"),
+        "rawQueryIndex": candidate.get("rawQueryIndex"),
+        "rawPageIndex": candidate.get("rawPageIndex"),
+        "rawResultIndex": candidate.get("rawResultIndex"),
+        "queryGroup": candidate.get("queryGroup"),
+        "queryTerm": candidate.get("queryTerm"),
+    }
 
 
 def _first_clean_string(source: dict[str, Any], *keys: str) -> str | None:

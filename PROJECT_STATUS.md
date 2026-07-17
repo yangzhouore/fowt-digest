@@ -1,6 +1,6 @@
 # PROJECT STATUS
 
-Last Updated: 2026-07-16
+Last Updated: 2026-07-17
 
 ---
 
@@ -34,11 +34,11 @@ M3C - Metadata Normalisation
 
 Status:
 
-In Progress
+Implementation Complete
 
 Current slice:
 
-M3C-3 - PaperMetadata Mapping
+Final M3C milestone acceptance
 
 Completed:
 
@@ -46,11 +46,13 @@ Completed:
 - M3B - OpenAlex Collector
 - M3C-1 - Raw OpenAlex Extraction and Abstract Reconstruction
 - M3C-2 - PaperCandidate Mapping
+- M3C-3 - PaperMetadata Mapping
+- M3C-4 - Normalisation Output Writing
 
 Latest verified validation:
 
 - Command: `python -m pytest pipeline/tests`
-- Result: 78 passed, 0 failed
+- Result: 110 passed, 0 failed
 
 ---
 
@@ -74,12 +76,14 @@ Implemented:
 - raw OpenAlex work extraction from successful pages
 - abstract reconstruction from `abstract_inverted_index`
 - PaperCandidate mapping with deterministic `candidateId`
+- PaperMetadata mapping with deterministic `paperId`
+- `candidates.json` writing
+- `normalised.json` writing
+- normalisation rejection handling
+- raw provenance preservation in candidates, metadata, and rejection records
 
 Not yet implemented:
 
-- PaperMetadata mapping
-- candidates.json writing
-- normalised.json writing
 - deduplication
 - scoring
 - AI workflow
@@ -90,14 +94,12 @@ Not yet implemented:
 
 # Immediate Next Task
 
-M3C-3 - PaperMetadata Mapping
+Final M3C milestone acceptance
 
-Map extracted OpenAlex work and PaperCandidate data into the documented
-`PaperMetadata` structure in `docs/PIPELINE_DATA_MODEL.md`.
+Perform final acceptance review for M3C - Metadata Normalisation.
 
 Do not implement yet:
 
-- output-file writing
 - deduplication
 - scoring
 - AI workflow
@@ -158,13 +160,12 @@ Architecture rules:
 
 # Known Limitations
 
-- M3C is not complete.
-- PaperMetadata mapping has not started.
-- `candidates.json` and `normalised.json` are not written yet.
+- M3C implementation work is complete, but final M3C milestone acceptance has
+  not yet been performed.
 - Deduplication does not exist.
 - AI classification, scoring, writing, and review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.
-- `PROJECT_STATUS.md` should be updated again after M3C-3 acceptance.
+- `PROJECT_STATUS.md` should be updated again after final M3C acceptance.
 
 ---
 
@@ -181,8 +182,6 @@ Current pipeline milestone:
 
 Remaining pipeline work after current slice:
 
-- finish PaperMetadata mapping
-- implement candidate and normalised output writing
 - perform final M3C acceptance
 - then move to deduplication only when explicitly requested
 

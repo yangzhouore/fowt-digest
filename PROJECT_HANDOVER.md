@@ -1,6 +1,6 @@
 # PROJECT HANDOVER
 
-Last Updated: 2026-07-16
+Last Updated: 2026-07-17
 
 ## 1. Project Purpose
 
@@ -23,10 +23,13 @@ M3C - Metadata Normalisation
 
 Current slice:
 
-M3C-3 - PaperMetadata Mapping
+Final M3C milestone acceptance
 
-M3C-3 has not started. The next step is to map extracted OpenAlex work and
-PaperCandidate data into the documented `PaperMetadata` structure.
+Latest implementation commit:
+
+51e4a5f feat: add normalisation output writing
+
+M3C implementation work is complete. The next step is to perform final M3C milestone acceptance before marking the milestone complete or starting deduplication.
 
 ## 4. Completed Milestones
 
@@ -34,6 +37,8 @@ PaperCandidate data into the documented `PaperMetadata` structure.
 - M3B - OpenAlex Collector
 - M3C-1 - Raw OpenAlex Extraction and Abstract Reconstruction
 - M3C-2 - PaperCandidate Mapping
+- M3C-3 - PaperMetadata Mapping
+- M3C-4 - Normalisation Output Writing
 - Web MVP deployment readiness is complete, but deployment has not been performed
 
 ## 5. Current Architecture and Data Flow
@@ -55,7 +60,8 @@ OpenAlex query builder
 -> raw_openalex.json and run_summary.json
 -> normaliser extraction helpers
 -> PaperCandidate mapping
--> PaperMetadata mapping (next)
+-> PaperMetadata mapping
+-> candidates.json and normalised.json writing
 ```
 
 The pipeline is not connected to the website.
@@ -80,7 +86,7 @@ Pipeline modules:
 - `pipeline/openalex_query.py`: deterministic OpenAlex query URL generation.
 - `pipeline/openalex_client.py`: standard-library HTTP client with timeout/retry handling.
 - `pipeline/openalex_collector.py`: collector orchestration, pagination, raw output writing.
-- `pipeline/normaliser.py`: raw successful work extraction, abstract reconstruction, and PaperCandidate mapping.
+- `pipeline/normaliser.py`: raw successful work extraction, abstract reconstruction, PaperCandidate mapping, PaperMetadata mapping, and normalisation output writing.
 
 Pipeline tests:
 
@@ -102,15 +108,12 @@ python -m pytest pipeline/tests
 Latest result:
 
 ```text
-78 passed, 0 failed
+110 passed, 0 failed
 ```
 
 ## 9. Known Limitations
 
-- M3C is not complete.
-- PaperMetadata mapping has not started.
-- `candidates.json` is not written yet.
-- `normalised.json` is not written yet.
+- M3C implementation work is complete, but final M3C milestone acceptance has not yet been performed.
 - Deduplication does not exist.
 - Scoring, selection, AI writing, and AI review do not exist.
 - No database exists.
@@ -119,21 +122,14 @@ Latest result:
 
 ## 10. Exact Next Task
 
-M3C-3 - PaperMetadata Mapping
+Final M3C milestone acceptance
 
-Implement a focused normaliser function that maps extracted OpenAlex work and
-PaperCandidate data into the `PaperMetadata` shape defined in
-`docs/PIPELINE_DATA_MODEL.md`.
-
-This should include only documented PaperMetadata fields and missing-field rules.
-Do not write output files in this slice unless the next task explicitly changes
-scope.
+Review M3C as a complete metadata normalisation milestone: extraction, abstract reconstruction, PaperCandidate mapping, PaperMetadata mapping, rejection handling, provenance preservation, and candidates.json / normalised.json writing.
 
 ## 11. What Must Not Be Implemented Yet
 
 Do not implement:
 
-- output-file writing
 - deduplication
 - Crossref
 - arXiv
@@ -165,6 +161,6 @@ To resume work:
 1. Confirm the branch is `feature/metadata-normalisation`.
 2. Run `git status` and ensure there are no unexpected changes.
 3. Run `python -m pytest pipeline/tests`.
-4. Read the `PaperMetadata` section and missing-field table in `docs/PIPELINE_DATA_MODEL.md`.
-5. Implement only M3C-3 PaperMetadata mapping in `pipeline/normaliser.py` and `pipeline/tests/test_normaliser.py` unless the user gives a different scope.
-6. Do not update output writing, deduplication, AI, database, or website integration during M3C-3.
+4. Read the M3C normalisation contract in `docs/PIPELINE_DATA_MODEL.md`.
+5. Perform final M3C milestone acceptance against the data model and current implementation.
+6. Do not start deduplication, scoring, AI, database, or website integration until M3C is accepted.

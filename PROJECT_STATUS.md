@@ -22,12 +22,11 @@ main
 
 Current Branch:
 
-feature/fowt-relevance-classification
+main
 
 Repository state:
 
-M3E implementation is complete, accepted, and ready for Pull Request review.
-The Pull Request has not been merged.
+M3E implementation was committed in `d75fe9a feat: add deterministic FOWT relevance classification` and merged through PR #6 in `665e9d5 Merge pull request #6 from yangzhouore/feature/fowt-relevance-classification`. M3E acceptance passed and the repository is ready for M3F.
 
 ---
 
@@ -119,9 +118,9 @@ Not yet implemented:
 
 # Immediate Next Task
 
-Open a Pull Request for M3E after release-preparation review.
+Prepare M3F - Ranking & Selection.
 
-Next recommended milestone after merge:
+Next recommended milestone:
 
 M3F - Ranking & Selection
 
@@ -190,7 +189,7 @@ Architecture rules:
 
 # Known Limitations
 
-- M3E has passed acceptance and is ready for Pull Request review, but has not been merged.
+- M3E has passed acceptance, was committed in `d75fe9a feat: add deterministic FOWT relevance classification`, and was merged through PR #6 in `665e9d5 Merge pull request #6 from yangzhouore/feature/fowt-relevance-classification`.
 - Ranking, selection, scoring, AI writing, and AI review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.
 
@@ -212,8 +211,7 @@ Next recommended pipeline milestone:
 
 Remaining pipeline work after current milestone:
 
-- open and review the M3E Pull Request
-- merge M3E only after PR review passes
+- prepare M3F - Ranking & Selection
 - keep scoring, AI writing, and website integration out of scope until separately accepted
 
 Future excluded work until separately scoped:

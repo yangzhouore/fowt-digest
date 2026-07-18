@@ -14,7 +14,7 @@ research metadata later.
 
 ## 2. Current Branch
 
-`feature/fowt-relevance-classification`
+`main`
 
 ## 3. Current Milestone and Slice
 
@@ -24,7 +24,7 @@ M3E - Deterministic FOWT Relevance Classification
 
 Current slice:
 
-M3E accepted and ready for Pull Request review.
+M3E accepted, committed in `d75fe9a feat: add deterministic FOWT relevance classification`, and merged through PR #6 in `665e9d5 Merge pull request #6 from yangzhouore/feature/fowt-relevance-classification`.
 
 Latest validation:
 
@@ -32,7 +32,7 @@ Latest validation:
 - `python -m pytest pipeline/tests` - 146 passed, 0 failed
 - `git diff --check` - passed
 
-The next recommended milestone after the M3E Pull Request is merged is M3F - Ranking & Selection. It has not started.
+The repository is ready for M3F - Ranking & Selection. It has not started.
 
 ## 4. Completed Milestones
 
@@ -129,7 +129,7 @@ Latest result:
 
 ## 9. Known Limitations
 
-- M3E has passed acceptance and is ready for Pull Request review, but has not been merged.
+- M3E has passed acceptance, was committed in `d75fe9a feat: add deterministic FOWT relevance classification`, and was merged through PR #6 in `665e9d5 Merge pull request #6 from yangzhouore/feature/fowt-relevance-classification`.
 - Ranking and selection do not exist.
 - Scoring, AI writing, and AI review do not exist.
 - No database exists.
@@ -138,9 +138,7 @@ Latest result:
 
 ## 10. Exact Next Task
 
-Open a Pull Request for M3E - Deterministic FOWT Relevance Classification.
-
-After merge, prepare M3F - Ranking & Selection.
+Prepare M3F - Ranking & Selection.
 
 ## 11. What Must Not Be Implemented Yet
 
@@ -175,9 +173,8 @@ Do not implement:
 
 To resume work:
 
-1. Confirm the branch is `feature/fowt-relevance-classification` until the M3E Pull Request is merged.
+1. Confirm the branch is `main`.
 2. Run `git status` and ensure there are no unexpected changes.
 3. Run `python -m pytest pipeline/tests`.
-4. Open the M3E Pull Request against `main` if it has not already been opened.
-5. Do not start M3F until the M3E Pull Request is reviewed and merged.
-6. Do not start scoring, AI writing, database, or website integration until separately scoped.
+4. Prepare M3F - Ranking & Selection.
+5. Do not start scoring, AI writing, database, or website integration until separately scoped.

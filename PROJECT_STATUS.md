@@ -174,7 +174,7 @@ Architecture rules:
 
 # Known Limitations
 
-- M3D has passed acceptance but has not yet been committed in this working tree.
+- M3D has passed acceptance and was committed in `d1f54d6 feat: add deterministic paper deduplication`.
 - FOWT relevance classification does not exist.
 - AI classification, scoring, writing, and review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.

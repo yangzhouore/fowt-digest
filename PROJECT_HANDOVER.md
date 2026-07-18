@@ -14,7 +14,7 @@ metadata later.
 
 ## 2. Current Branch
 
-`feature/deduplication`
+`main`
 
 ## 3. Current Milestone and Slice
 
@@ -24,7 +24,7 @@ M3D - Deterministic Deduplication
 
 Current slice:
 
-M3D accepted, committed, and pushed on `feature/deduplication`.
+M3D accepted, committed, pushed, and merged to `main`.
 
 Latest accepted implementation commit:
 
@@ -139,7 +139,7 @@ Latest result:
 
 ## 9. Known Limitations
 
-- M3D has passed acceptance and was committed in `d1f54d6 feat: add deterministic paper deduplication`.
+- M3D has passed acceptance, was committed in `d1f54d6 feat: add deterministic paper deduplication`, and was merged to `main` in `b4b8c57 Merge pull request #5 from yangzhouore/feature/deduplication`.
 - FOWT relevance classification does not exist.
 - Scoring, selection, AI writing, and AI review do not exist.
 - No database exists.
@@ -186,9 +186,9 @@ Do not implement:
 
 To resume work:
 
-1. Confirm the branch is `feature/deduplication`.
+1. Confirm the branch is `main`.
 2. Run `git status` and ensure there are no unexpected changes.
-3. Confirm latest branch commit includes `d1f54d6 feat: add deterministic paper deduplication` before starting M3E.
+3. Confirm `main` includes `b4b8c57 Merge pull request #5 from yangzhouore/feature/deduplication` before starting M3E.
 4. Run `python -m pytest pipeline/tests`.
 5. Read the relevance-classification sections in `docs/PIPELINE_DATA_MODEL.md` and `docs/PIPELINE_ARCHITECTURE.md`.
 6. Do not start scoring, selection, AI writing, database, or website integration until M3E is explicitly scoped.

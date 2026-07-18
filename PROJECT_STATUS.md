@@ -20,9 +20,9 @@ Default Branch:
 
 master
 
-Current Development Branch:
+Current Branch:
 
-feature/deduplication
+main
 
 ---
 
@@ -174,7 +174,7 @@ Architecture rules:
 
 # Known Limitations
 
-- M3D has passed acceptance and was committed in `d1f54d6 feat: add deterministic paper deduplication`.
+- M3D has passed acceptance, was committed in `d1f54d6 feat: add deterministic paper deduplication`, and was merged to `main` in `b4b8c57 Merge pull request #5 from yangzhouore/feature/deduplication`.
 - FOWT relevance classification does not exist.
 - AI classification, scoring, writing, and review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.

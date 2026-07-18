@@ -9,34 +9,30 @@ collecting and preparing weekly research digests about Floating Offshore Wind
 Turbines.
 
 The website is a static public MVP using fictional mock data. The pipeline is
-being built separately to collect, normalise, and deduplicate real research
-metadata later.
+being built separately to collect, normalise, deduplicate, and classify real
+research metadata later.
 
 ## 2. Current Branch
 
-`main`
+`feature/fowt-relevance-classification`
 
 ## 3. Current Milestone and Slice
 
 Milestone:
 
-M3D - Deterministic Deduplication
+M3E - Deterministic FOWT Relevance Classification
 
 Current slice:
 
-M3D accepted, committed, pushed, and merged to `main`.
-
-Latest accepted implementation commit:
-
-M3D deterministic deduplication in `pipeline/deduplicator.py` and
-`pipeline/tests/test_deduplicator.py`.
+M3E accepted and ready for Pull Request review.
 
 Latest validation:
 
-- `python -m pytest pipeline/tests/test_deduplicator.py` - 20 passed, 0 failed
-- `python -m pytest pipeline/tests` - 130 passed, 0 failed
+- `python -m pytest pipeline/tests/test_relevance_classifier.py` - 16 passed, 0 failed
+- `python -m pytest pipeline/tests` - 146 passed, 0 failed
+- `git diff --check` - passed
 
-The next milestone is M3E - FOWT Relevance Classification. It has not started.
+The next recommended milestone after the M3E Pull Request is merged is M3F - Ranking & Selection. It has not started.
 
 ## 4. Completed Milestones
 
@@ -48,6 +44,7 @@ The next milestone is M3E - FOWT Relevance Classification. It has not started.
 - M3C-3 - PaperMetadata Mapping
 - M3C-4 - Normalisation Output Writing
 - M3D - Deterministic Deduplication
+- M3E - Deterministic FOWT Relevance Classification
 - Web MVP deployment readiness is complete, but deployment has not been performed
 
 ## 5. Current Architecture and Data Flow
@@ -73,6 +70,8 @@ OpenAlex query builder
 -> candidates.json and normalised.json writing
 -> deterministic deduplication
 -> deduplicated_papers.json and deduplication_result.json writing
+-> deterministic FOWT relevance classification
+-> classified_papers.json and classification_result.json writing
 ```
 
 The pipeline is not connected to the website.
@@ -88,6 +87,7 @@ The pipeline is not connected to the website.
 - Do not invent missing paper metadata.
 - Preserve source provenance from raw OpenAlex output through normalisation and deduplication.
 - Deduplication uses deterministic exact rules only; fuzzy matching is not implemented.
+- M3E classification uses deterministic keyword rules only; AI, embeddings, fuzzy matching, semantic search, ranking, and scoring are not implemented.
 
 ## 7. Current Module Snapshot
 
@@ -100,6 +100,7 @@ Pipeline modules:
 - `pipeline/openalex_collector.py`: collector orchestration, pagination, raw output writing.
 - `pipeline/normaliser.py`: raw successful work extraction, abstract reconstruction, PaperCandidate mapping, PaperMetadata mapping, and normalisation output writing.
 - `pipeline/deduplicator.py`: deterministic connected-component deduplication, deduplicated metadata output, deduplication report output, and local rollback for partial write failures.
+- `pipeline/relevance_classifier.py`: deterministic three-state FOWT relevance classification, classified output writing, aggregate classification reporting, and local rollback for partial write failures.
 
 Pipeline tests:
 
@@ -110,20 +111,9 @@ Pipeline tests:
 - `pipeline/tests/test_openalex_collector.py`
 - `pipeline/tests/test_normaliser.py`
 - `pipeline/tests/test_deduplicator.py`
+- `pipeline/tests/test_relevance_classifier.py`
 
 ## 8. Latest Test Status
-
-Command:
-
-```powershell
-python -m pytest pipeline/tests/test_deduplicator.py
-```
-
-Latest result:
-
-```text
-20 passed, 0 failed
-```
 
 Command:
 
@@ -134,30 +124,29 @@ python -m pytest pipeline/tests
 Latest result:
 
 ```text
-130 passed, 0 failed
+146 passed, 0 failed
 ```
 
 ## 9. Known Limitations
 
-- M3D has passed acceptance, was committed in `d1f54d6 feat: add deterministic paper deduplication`, and was merged to `main` in `b4b8c57 Merge pull request #5 from yangzhouore/feature/deduplication`.
-- FOWT relevance classification does not exist.
-- Scoring, selection, AI writing, and AI review do not exist.
+- M3E has passed acceptance and is ready for Pull Request review, but has not been merged.
+- Ranking and selection do not exist.
+- Scoring, AI writing, and AI review do not exist.
 - No database exists.
 - The website is not integrated with the pipeline.
 - The website still uses fictional local mock data.
 
 ## 10. Exact Next Task
 
-Prepare M3E - FOWT Relevance Classification
+Open a Pull Request for M3E - Deterministic FOWT Relevance Classification.
 
-Start with documentation and design. Define the minimum deterministic or AI-assisted relevance contract before implementation.
+After merge, prepare M3F - Ranking & Selection.
 
 ## 11. What Must Not Be Implemented Yet
 
 Do not implement:
 
 - scoring
-- selection
 - AI writing
 - AI review
 - Crossref
@@ -179,16 +168,16 @@ Do not implement:
 7. `pipeline/ids.py`
 8. `pipeline/normaliser.py`
 9. `pipeline/deduplicator.py`
-10. `pipeline/tests/test_deduplicator.py`
+10. `pipeline/relevance_classifier.py`
 11. Existing pipeline tests relevant to the current task
 
 ## 13. Resume Instructions
 
 To resume work:
 
-1. Confirm the branch is `main`.
+1. Confirm the branch is `feature/fowt-relevance-classification` until the M3E Pull Request is merged.
 2. Run `git status` and ensure there are no unexpected changes.
-3. Confirm `main` includes `b4b8c57 Merge pull request #5 from yangzhouore/feature/deduplication` before starting M3E.
-4. Run `python -m pytest pipeline/tests`.
-5. Read the relevance-classification sections in `docs/PIPELINE_DATA_MODEL.md` and `docs/PIPELINE_ARCHITECTURE.md`.
-6. Do not start scoring, selection, AI writing, database, or website integration until M3E is explicitly scoped.
+3. Run `python -m pytest pipeline/tests`.
+4. Open the M3E Pull Request against `main` if it has not already been opened.
+5. Do not start M3F until the M3E Pull Request is reviewed and merged.
+6. Do not start scoring, AI writing, database, or website integration until separately scoped.

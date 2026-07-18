@@ -258,22 +258,81 @@ Do not include `categories` in M3C output. `categories` are editorial or classif
 
 Rejected normalised records must not be silently discarded. M3C implementation should make rejection reasons inspectable in tests and, when run-summary updating is implemented, count them with short reasons.
 
-## 4. RelevanceAssessment
+## 4. M3E FOWT Relevance Classification Contract
 
-A semantic judgement about whether a paper is directly relevant to floating offshore wind turbines.
+M3E reads `deduplicated_papers.json` and writes two local JSON outputs:
+
+- `classified_papers.json`
+- `classification_result.json`
+
+The first M3E implementation is deterministic and rule-based. It must use only
+the deduplicated paper `title`, `abstract`, and `topicTags`. Do not use AI,
+embeddings, semantic search, fuzzy matching, ranking, publication source, full
+text, or website data in M3E.
+
+### M3E output file shape
+
+`classified_papers.json` should be an object with this shape:
+
+```json
+{
+  "runId": "run_YYYYMMDD_HHMMSS_openalex",
+  "sourceName": "openalex",
+  "classifiedRecords": []
+}
+```
+
+Each `classifiedRecords[]` item is a deduplicated `PaperMetadata` record with
+`processingStatus` set to `classified` and one embedded `relevanceAssessment`
+object. Classification results must be stored only in
+`classified_papers.json`.
+
+`classification_result.json` should be an aggregate processing summary only:
+
+```json
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "run_YYYYMMDD_HHMMSS_openalex",
+  "sourceName": "openalex",
+  "inputCount": 0,
+  "classifiedCount": 0,
+  "classificationCounts": {
+    "Relevant": 0,
+    "Possibly Relevant": 0,
+    "Not Relevant": 0
+  }
+}
+```
+
+Do not duplicate per-paper classification results in
+`classification_result.json`.
+
+### RelevanceAssessment
+
+A deterministic judgement about whether a paper is directly relevant to
+floating offshore wind turbines.
+
+Classification must use one of exactly these values:
+
+- `Relevant`
+- `Possibly Relevant`
+- `Not Relevant`
 
 | Field | Type | Required | Source | Generation | Purpose |
 | --- | --- | --- | --- | --- | --- |
 | `assessmentId` | string | Yes | Classifier | Deterministic | Internal ID for the assessment. |
 | `paperId` | string | Yes | PaperMetadata | Deterministic | Links to the assessed paper. |
-| `isFowtRelevant` | boolean | Yes | Classifier | AI-generated or deterministic | Main inclusion signal for scoring. |
-| `confidence` | number | Yes | Classifier | AI-generated | Indicates classifier confidence from 0 to 1. |
-| `reason` | string | Yes | Classifier | AI-generated | Explains the relevance decision. |
-| `topicTags` | string[] | Yes | Classifier | AI-generated | Supports topic diversity and reader scanning. |
-| `evidenceBasis` | enum | Yes | Classifier | Deterministic | One of `title`, `abstract`, or `full_text`. |
-| `modelName` | string or null | Optional | AI configuration | Deterministic | Records the model used if AI assisted. |
-| `promptVersion` | string or null | Optional | AI configuration | Deterministic | Records classifier prompt version. |
-| `generatedAt` | ISO datetime string | Yes | Classifier | Deterministic | Records assessment time. |
+| `classification` | enum | Yes | Classifier | Deterministic | One of `Relevant`, `Possibly Relevant`, or `Not Relevant`. |
+| `confidence` | number | Yes | Classifier | Deterministic | Fixed rule confidence from 0 to 1. |
+| `reason` | string | Yes | Classifier | Deterministic | Short deterministic reason string. |
+| `topicTags` | string[] | Yes | PaperMetadata | Deterministic | Copy of existing metadata `topicTags`; do not generate new tags in M3E. |
+| `evidenceBasis` | string[] | Yes | Classifier | Deterministic | Subset of `title`, `abstract`, and `topicTags` used by the matched rule. |
+| `modelName` | string or null | Yes | Classifier | Deterministic | Always `null` in M3E. |
+| `promptVersion` | string or null | Yes | Classifier | Deterministic | Always `null` in M3E. |
+| `generatedAt` | ISO datetime string | Yes | Classifier input | Deterministic | Explicit timestamp supplied to the classifier. |
+
+Do not include `isFowtRelevant` in M3E output. The three-state
+`classification` value is the source of truth for this stage.
 
 ## 5. PaperScore
 

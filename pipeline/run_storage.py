@@ -19,6 +19,8 @@ SUPPORTED_RUN_FILENAMES = (
     "deduplicated_papers.json",
     "classified_papers.json",
     "classification_result.json",
+    "ranked_papers.json",
+    "ranking_result.json",
 )
 
 

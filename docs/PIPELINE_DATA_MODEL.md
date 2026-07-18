@@ -334,7 +334,74 @@ Classification must use one of exactly these values:
 Do not include `isFowtRelevant` in M3E output. The three-state
 `classification` value is the source of truth for this stage.
 
-## 5. PaperScore
+## 5. M3F Deterministic Ranking & Selection Contract
+
+M3F reads `classified_papers.json` and writes two local JSON outputs:
+
+- `ranked_papers.json`
+- `ranking_result.json`
+
+The first M3F implementation is deterministic and uses only existing classified
+paper metadata. Do not use citation counts, scores, weights, AI, embeddings,
+semantic search, diversity balancing, digest generation, or website data in M3F.
+
+### M3F output file shape
+
+`ranked_papers.json` should be an object with this shape:
+
+```json
+{
+  "runId": "run_YYYYMMDD_HHMMSS_openalex",
+  "sourceName": "openalex",
+  "selectionLimit": 6,
+  "rankedRecords": []
+}
+```
+
+Each `rankedRecords[]` item directly extends one classified paper record. Do
+not wrap the classified record inside a nested `paper` object. Every input paper
+must receive one unique continuous global `rank` starting at 1.
+
+Each ranked record must add:
+
+| Field | Type | Required | Source | Generation | Purpose |
+| --- | --- | --- | --- | --- | --- |
+| `rank` | integer | Yes | Ranker | Deterministic | Global rank across all input records, starting at 1. |
+| `selected` | boolean | Yes | Ranker | Deterministic | True only when the record is within `selectionLimit` and is not `Not Relevant`. |
+| `selectionReason` | enum | Yes | Ranker | Deterministic | One of `selected_within_limit`, `not_selected_below_limit`, or `not_selected_not_relevant`. |
+
+Rank records using exactly this sort order:
+
+1. `relevanceAssessment.classification` priority: `Relevant`, then `Possibly Relevant`, then `Not Relevant`.
+2. `publishedDate` descending.
+3. `paperId` ascending.
+
+Selection is separate from ranking. Select only `Relevant` and
+`Possibly Relevant` records, respect `selectionLimit`, and never select
+`Not Relevant` records.
+
+`ranking_result.json` should be an aggregate processing summary only:
+
+```json
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "run_YYYYMMDD_HHMMSS_openalex",
+  "sourceName": "openalex",
+  "inputCount": 0,
+  "rankedCount": 0,
+  "selectedCount": 0,
+  "selectionLimit": 6,
+  "classificationCounts": {
+    "Relevant": 0,
+    "Possibly Relevant": 0,
+    "Not Relevant": 0
+  }
+}
+```
+
+Do not duplicate paper records or per-paper ranking records in
+`ranking_result.json`.
+## 6. PaperScore
 
 A structured editorial score and rationale for a relevant paper.
 
@@ -359,7 +426,7 @@ A structured editorial score and rationale for a relevant paper.
 
 Use a simple numeric scale, for example 0-10, but final scale and weighting remain open decisions.
 
-## 6. SelectionDecision
+## 7. SelectionDecision
 
 A record of why a paper was selected, rejected, or held for a weekly edition.
 
@@ -375,7 +442,7 @@ A record of why a paper was selected, rejected, or held for a weekly edition.
 | `humanOverride` | boolean | Yes | Human reviewer | Human-edited | Flags decisions changed manually. |
 | `decidedAt` | ISO datetime string | Yes | Selector | Deterministic | Records decision time. |
 
-## 7. EditorialSummary
+## 8. EditorialSummary
 
 Human-facing draft or approved editorial content for a selected paper.
 
@@ -396,7 +463,7 @@ Human-facing draft or approved editorial content for a selected paper.
 | `generatedAt` | ISO datetime string | Yes | Writer | Deterministic | Records draft generation time. |
 | `humanEdited` | boolean | Yes | Human approval | Human-edited | Indicates whether a human changed the draft. |
 
-## 8. ReviewResult
+## 9. ReviewResult
 
 A review record that checks draft content against available evidence.
 
@@ -419,7 +486,7 @@ A review record that checks draft content against available evidence.
 | `approvedBy` | string or null | Optional | Human approver | Human-edited | Identifies approver when approved. |
 | `approvedAt` | ISO datetime string or null | Optional | Human approver | Human-edited | Records approval time. |
 
-## 9. WeeklyEdition
+## 10. WeeklyEdition
 
 The publication unit consumed by the website after human approval.
 

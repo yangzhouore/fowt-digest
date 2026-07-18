@@ -1,6 +1,6 @@
 # PROJECT STATUS
 
-Last Updated: 2026-07-17
+Last Updated: 2026-07-18
 
 ---
 
@@ -22,7 +22,7 @@ master
 
 Current Development Branch:
 
-feature/metadata-normalisation
+feature/deduplication
 
 ---
 
@@ -30,15 +30,15 @@ feature/metadata-normalisation
 
 Milestone:
 
-M3C - Metadata Normalisation
+M3D - Deterministic Deduplication
 
 Status:
 
-Implementation Complete
+Accepted
 
 Current slice:
 
-Final M3C milestone acceptance
+M3D deterministic deduplication acceptance passed
 
 Completed:
 
@@ -48,11 +48,15 @@ Completed:
 - M3C-2 - PaperCandidate Mapping
 - M3C-3 - PaperMetadata Mapping
 - M3C-4 - Normalisation Output Writing
+- M3C - Metadata Normalisation
+- M3D - Deterministic Deduplication
 
 Latest verified validation:
 
+- Command: `python -m pytest pipeline/tests/test_deduplicator.py`
+- Result: 20 passed, 0 failed
 - Command: `python -m pytest pipeline/tests`
-- Result: 110 passed, 0 failed
+- Result: 130 passed, 0 failed
 
 ---
 
@@ -81,10 +85,18 @@ Implemented:
 - `normalised.json` writing
 - normalisation rejection handling
 - raw provenance preservation in candidates, metadata, and rejection records
+- deterministic deduplication
+- connected-component duplicate grouping
+- DOI, OpenAlex ID, and title/date exact-match rules
+- canonical record selection
+- deduplicated metadata merging
+- `deduplicated_papers.json` writing
+- `deduplication_result.json` writing
+- rollback protection for partial deduplication output writes
 
 Not yet implemented:
 
-- deduplication
+- relevance classification
 - scoring
 - AI workflow
 - website integration
@@ -94,14 +106,14 @@ Not yet implemented:
 
 # Immediate Next Task
 
-Final M3C milestone acceptance
+Prepare M3E - FOWT Relevance Classification
 
-Perform final acceptance review for M3C - Metadata Normalisation.
+Design the next pipeline milestone after accepted deterministic deduplication.
 
 Do not implement yet:
 
-- deduplication
 - scoring
+- selection
 - AI workflow
 - website integration
 - database
@@ -118,6 +130,7 @@ Implemented pipeline modules:
 - `pipeline/openalex_client.py`
 - `pipeline/openalex_collector.py`
 - `pipeline/normaliser.py`
+- `pipeline/deduplicator.py`
 
 Implemented pipeline tests:
 
@@ -127,6 +140,7 @@ Implemented pipeline tests:
 - `pipeline/tests/test_openalex_client.py`
 - `pipeline/tests/test_openalex_collector.py`
 - `pipeline/tests/test_normaliser.py`
+- `pipeline/tests/test_deduplicator.py`
 
 Website status:
 
@@ -160,12 +174,10 @@ Architecture rules:
 
 # Known Limitations
 
-- M3C implementation work is complete, but final M3C milestone acceptance has
-  not yet been performed.
-- Deduplication does not exist.
+- M3D has passed acceptance but has not yet been committed in this working tree.
+- FOWT relevance classification does not exist.
 - AI classification, scoring, writing, and review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.
-- `PROJECT_STATUS.md` should be updated again after final M3C acceptance.
 
 ---
 
@@ -175,15 +187,17 @@ Completed pipeline milestones:
 
 - M3A - Pipeline Foundation
 - M3B - OpenAlex Collector
-
-Current pipeline milestone:
-
 - M3C - Metadata Normalisation
+- M3D - Deterministic Deduplication
+
+Next pipeline milestone:
+
+- M3E - FOWT Relevance Classification
 
 Remaining pipeline work after current slice:
 
-- perform final M3C acceptance
-- then move to deduplication only when explicitly requested
+- prepare and design M3E before implementation
+- keep scoring, selection, AI writing, and website integration out of scope until separately accepted
 
 Future excluded work until separately scoped:
 

@@ -22,11 +22,12 @@ main
 
 Current Branch:
 
-main
+feature/ranking-selection
 
 Repository state:
 
-M3E implementation was committed in `d75fe9a feat: add deterministic FOWT relevance classification` and merged through PR #6 in `665e9d5 Merge pull request #6 from yangzhouore/feature/fowt-relevance-classification`. M3E acceptance passed and the repository is ready for M3F.
+M3F implementation is complete, accepted, and ready for Pull Request review.
+The Pull Request has not been merged.
 
 ---
 
@@ -34,7 +35,7 @@ M3E implementation was committed in `d75fe9a feat: add deterministic FOWT releva
 
 Milestone:
 
-M3E - Deterministic FOWT Relevance Classification
+M3F - Deterministic Ranking & Selection
 
 Status:
 
@@ -42,7 +43,7 @@ Accepted
 
 Current slice:
 
-M3E deterministic relevance classification acceptance passed
+M3F deterministic ranking and selection acceptance passed
 
 Completed:
 
@@ -55,13 +56,14 @@ Completed:
 - M3C - Metadata Normalisation
 - M3D - Deterministic Deduplication
 - M3E - Deterministic FOWT Relevance Classification
+- M3F - Deterministic Ranking & Selection
 
 Latest verified validation:
 
-- Command: `python -m pytest pipeline/tests/test_relevance_classifier.py`
-- Result: 16 passed, 0 failed
+- Command: `python -m pytest pipeline/tests/test_ranker.py`
+- Result: 15 passed, 0 failed
 - Command: `python -m pytest pipeline/tests`
-- Result: 146 passed, 0 failed
+- Result: 161 passed, 0 failed
 - Command: `git diff --check`
 - Result: passed
 
@@ -105,10 +107,16 @@ Implemented:
 - `classified_papers.json` writing
 - `classification_result.json` aggregate summary writing
 - rollback protection for partial classification output writes
+- deterministic ranking and selection
+- continuous global ranks for all classified records
+- selection limited to `Relevant` and `Possibly Relevant` records
+- `ranked_papers.json` writing
+- `ranking_result.json` aggregate summary writing
+- rollback protection for partial ranking output writes
 
 Not yet implemented:
 
-- ranking and selection
+- weekly digest generation
 - scoring
 - AI workflow
 - website integration
@@ -118,11 +126,11 @@ Not yet implemented:
 
 # Immediate Next Task
 
-Prepare M3F - Ranking & Selection.
+Open a Pull Request for M3F after release-preparation review.
 
-Next recommended milestone:
+Next recommended milestone after merge:
 
-M3F - Ranking & Selection
+M3G - Weekly Digest Generation
 
 Do not implement yet:
 
@@ -145,6 +153,7 @@ Implemented pipeline modules:
 - `pipeline/normaliser.py`
 - `pipeline/deduplicator.py`
 - `pipeline/relevance_classifier.py`
+- `pipeline/ranker.py`
 
 Implemented pipeline tests:
 
@@ -156,6 +165,7 @@ Implemented pipeline tests:
 - `pipeline/tests/test_normaliser.py`
 - `pipeline/tests/test_deduplicator.py`
 - `pipeline/tests/test_relevance_classifier.py`
+- `pipeline/tests/test_ranker.py`
 
 Website status:
 
@@ -189,8 +199,9 @@ Architecture rules:
 
 # Known Limitations
 
-- M3E has passed acceptance, was committed in `d75fe9a feat: add deterministic FOWT relevance classification`, and was merged through PR #6 in `665e9d5 Merge pull request #6 from yangzhouore/feature/fowt-relevance-classification`.
-- Ranking, selection, scoring, AI writing, and AI review do not exist.
+- M3F has passed acceptance and is ready for Pull Request review, but has not been merged.
+- Weekly digest generation does not exist.
+- Scoring, AI writing, and AI review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.
 
 ---
@@ -204,14 +215,16 @@ Completed pipeline milestones:
 - M3C - Metadata Normalisation
 - M3D - Deterministic Deduplication
 - M3E - Deterministic FOWT Relevance Classification
+- M3F - Deterministic Ranking & Selection
 
 Next recommended pipeline milestone:
 
-- M3F - Ranking & Selection
+- M3G - Weekly Digest Generation
 
 Remaining pipeline work after current milestone:
 
-- prepare M3F - Ranking & Selection
+- open and review the M3F Pull Request
+- merge M3F only after PR review passes
 - keep scoring, AI writing, and website integration out of scope until separately accepted
 
 Future excluded work until separately scoped:
@@ -236,3 +249,4 @@ Future excluded work until separately scoped:
 - Use Python standard library only unless a milestone explicitly changes that.
 - Never invent paper metadata or research findings.
 - M3E relevance classification is deterministic and rule-based only.
+- M3F ranking and selection is deterministic and uses no scores, weights, AI, citation counts, diversity balancing, digest generation, or website behavior.

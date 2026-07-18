@@ -18,11 +18,16 @@ should remain independent from the frontend.
 
 Default Branch:
 
-master
+main
 
 Current Branch:
 
-main
+feature/fowt-relevance-classification
+
+Repository state:
+
+M3E implementation is complete, accepted, and ready for Pull Request review.
+The Pull Request has not been merged.
 
 ---
 
@@ -30,7 +35,7 @@ main
 
 Milestone:
 
-M3D - Deterministic Deduplication
+M3E - Deterministic FOWT Relevance Classification
 
 Status:
 
@@ -38,7 +43,7 @@ Accepted
 
 Current slice:
 
-M3D deterministic deduplication acceptance passed
+M3E deterministic relevance classification acceptance passed
 
 Completed:
 
@@ -50,13 +55,16 @@ Completed:
 - M3C-4 - Normalisation Output Writing
 - M3C - Metadata Normalisation
 - M3D - Deterministic Deduplication
+- M3E - Deterministic FOWT Relevance Classification
 
 Latest verified validation:
 
-- Command: `python -m pytest pipeline/tests/test_deduplicator.py`
-- Result: 20 passed, 0 failed
+- Command: `python -m pytest pipeline/tests/test_relevance_classifier.py`
+- Result: 16 passed, 0 failed
 - Command: `python -m pytest pipeline/tests`
-- Result: 130 passed, 0 failed
+- Result: 146 passed, 0 failed
+- Command: `git diff --check`
+- Result: passed
 
 ---
 
@@ -93,10 +101,15 @@ Implemented:
 - `deduplicated_papers.json` writing
 - `deduplication_result.json` writing
 - rollback protection for partial deduplication output writes
+- deterministic FOWT relevance classification
+- three-state relevance labels: `Relevant`, `Possibly Relevant`, `Not Relevant`
+- `classified_papers.json` writing
+- `classification_result.json` aggregate summary writing
+- rollback protection for partial classification output writes
 
 Not yet implemented:
 
-- relevance classification
+- ranking and selection
 - scoring
 - AI workflow
 - website integration
@@ -106,14 +119,15 @@ Not yet implemented:
 
 # Immediate Next Task
 
-Prepare M3E - FOWT Relevance Classification
+Open a Pull Request for M3E after release-preparation review.
 
-Design the next pipeline milestone after accepted deterministic deduplication.
+Next recommended milestone after merge:
+
+M3F - Ranking & Selection
 
 Do not implement yet:
 
 - scoring
-- selection
 - AI workflow
 - website integration
 - database
@@ -131,6 +145,7 @@ Implemented pipeline modules:
 - `pipeline/openalex_collector.py`
 - `pipeline/normaliser.py`
 - `pipeline/deduplicator.py`
+- `pipeline/relevance_classifier.py`
 
 Implemented pipeline tests:
 
@@ -141,6 +156,7 @@ Implemented pipeline tests:
 - `pipeline/tests/test_openalex_collector.py`
 - `pipeline/tests/test_normaliser.py`
 - `pipeline/tests/test_deduplicator.py`
+- `pipeline/tests/test_relevance_classifier.py`
 
 Website status:
 
@@ -174,9 +190,8 @@ Architecture rules:
 
 # Known Limitations
 
-- M3D has passed acceptance, was committed in `d1f54d6 feat: add deterministic paper deduplication`, and was merged to `main` in `b4b8c57 Merge pull request #5 from yangzhouore/feature/deduplication`.
-- FOWT relevance classification does not exist.
-- AI classification, scoring, writing, and review do not exist.
+- M3E has passed acceptance and is ready for Pull Request review, but has not been merged.
+- Ranking, selection, scoring, AI writing, and AI review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.
 
 ---
@@ -189,22 +204,23 @@ Completed pipeline milestones:
 - M3B - OpenAlex Collector
 - M3C - Metadata Normalisation
 - M3D - Deterministic Deduplication
+- M3E - Deterministic FOWT Relevance Classification
 
-Next pipeline milestone:
+Next recommended pipeline milestone:
 
-- M3E - FOWT Relevance Classification
+- M3F - Ranking & Selection
 
-Remaining pipeline work after current slice:
+Remaining pipeline work after current milestone:
 
-- prepare and design M3E before implementation
-- keep scoring, selection, AI writing, and website integration out of scope until separately accepted
+- open and review the M3E Pull Request
+- merge M3E only after PR review passes
+- keep scoring, AI writing, and website integration out of scope until separately accepted
 
 Future excluded work until separately scoped:
 
 - Crossref integration
 - arXiv integration
 - scoring
-- selection
 - AI writing
 - AI review
 - database
@@ -221,3 +237,4 @@ Future excluded work until separately scoped:
 - Avoid service, manager, repository, factory, or framework layers.
 - Use Python standard library only unless a milestone explicitly changes that.
 - Never invent paper metadata or research findings.
+- M3E relevance classification is deterministic and rule-based only.

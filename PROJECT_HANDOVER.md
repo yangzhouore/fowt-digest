@@ -14,7 +14,7 @@ select real research metadata later.
 
 ## 2. Current Branch
 
-`feature/ranking-selection`
+`main`
 
 ## 3. Current Milestone and Slice
 
@@ -24,7 +24,7 @@ M3F - Deterministic Ranking & Selection
 
 Current slice:
 
-M3F accepted and ready for Pull Request review.
+M3F accepted, committed in `e0d2389 feat: add deterministic ranking and selection`, and merged through PR #7 in `4796848 Merge pull request #7 from yangzhouore/feature/ranking-selection`.
 
 Latest validation:
 
@@ -32,7 +32,7 @@ Latest validation:
 - `python -m pytest pipeline/tests` - 161 passed, 0 failed
 - `git diff --check` - passed
 
-The next recommended milestone after the M3F Pull Request is merged is M3G - Weekly Digest Generation. It has not started.
+The repository is ready for M3G - Weekly Digest Generation. It has not started.
 
 ## 4. Completed Milestones
 
@@ -135,7 +135,7 @@ Latest result:
 
 ## 9. Known Limitations
 
-- M3F has passed acceptance and is ready for Pull Request review, but has not been merged.
+- M3F has passed acceptance, was committed in `e0d2389 feat: add deterministic ranking and selection`, and was merged through PR #7 in `4796848 Merge pull request #7 from yangzhouore/feature/ranking-selection`.
 - Weekly digest generation does not exist.
 - Scoring, AI writing, and AI review do not exist.
 - No database exists.
@@ -144,9 +144,7 @@ Latest result:
 
 ## 10. Exact Next Task
 
-Open a Pull Request for M3F - Deterministic Ranking & Selection.
-
-After merge, prepare M3G - Weekly Digest Generation.
+Prepare M3G - Weekly Digest Generation.
 
 ## 11. What Must Not Be Implemented Yet
 
@@ -182,9 +180,8 @@ Do not implement:
 
 To resume work:
 
-1. Confirm the branch is `feature/ranking-selection` until the M3F Pull Request is merged.
+1. Confirm the branch is `main`.
 2. Run `git status` and ensure there are no unexpected changes.
 3. Run `python -m pytest pipeline/tests`.
-4. Open the M3F Pull Request against `main` if it has not already been opened.
-5. Do not start M3G until the M3F Pull Request is reviewed and merged.
-6. Do not start scoring, AI writing, database, or website integration until separately scoped.
+4. Prepare M3G - Weekly Digest Generation.
+5. Do not start scoring, AI writing, database, or website integration until separately scoped.

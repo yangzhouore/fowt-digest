@@ -22,12 +22,11 @@ main
 
 Current Branch:
 
-feature/ranking-selection
+main
 
 Repository state:
 
-M3F implementation is complete, accepted, and ready for Pull Request review.
-The Pull Request has not been merged.
+M3F implementation was committed in `e0d2389 feat: add deterministic ranking and selection` and merged through PR #7 in `4796848 Merge pull request #7 from yangzhouore/feature/ranking-selection`. M3F acceptance passed and the repository is ready for M3G.
 
 ---
 
@@ -126,9 +125,9 @@ Not yet implemented:
 
 # Immediate Next Task
 
-Open a Pull Request for M3F after release-preparation review.
+Prepare M3G - Weekly Digest Generation.
 
-Next recommended milestone after merge:
+Next recommended milestone:
 
 M3G - Weekly Digest Generation
 
@@ -199,7 +198,7 @@ Architecture rules:
 
 # Known Limitations
 
-- M3F has passed acceptance and is ready for Pull Request review, but has not been merged.
+- M3F has passed acceptance, was committed in `e0d2389 feat: add deterministic ranking and selection`, and was merged through PR #7 in `4796848 Merge pull request #7 from yangzhouore/feature/ranking-selection`.
 - Weekly digest generation does not exist.
 - Scoring, AI writing, and AI review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.
@@ -223,8 +222,7 @@ Next recommended pipeline milestone:
 
 Remaining pipeline work after current milestone:
 
-- open and review the M3F Pull Request
-- merge M3F only after PR review passes
+- prepare M3G - Weekly Digest Generation
 - keep scoring, AI writing, and website integration out of scope until separately accepted
 
 Future excluded work until separately scoped:

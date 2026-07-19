@@ -111,6 +111,8 @@ Do not add FastAPI during the initial static MVP.
 The Python pipeline may later generate structured JSON consumed by the
 Next.js website.
 
+Each pipeline stage should validate its input contract, never silently repair it.
+
 Avoid cross-package dependencies unless they are necessary.
 
 ## Frontend Rules

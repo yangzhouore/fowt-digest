@@ -401,7 +401,67 @@ Selection is separate from ranking. Select only `Relevant` and
 
 Do not duplicate paper records or per-paper ranking records in
 `ranking_result.json`.
-## 6. PaperScore
+
+## 6. M3G Weekly Digest Assembly Contract
+
+M3G reads `ranked_papers.json` and writes two local JSON outputs:
+
+- `weekly_digest.json`
+- `weekly_digest_result.json`
+
+The first M3G implementation is deterministic assembly only. It must include
+only ranked records where `selected` is `true`. It must not inspect relevance
+classification, re-rank, re-select, sort, repair input, add summaries, add
+editorial content, generate Markdown or HTML, integrate with the website, use a
+database, or implement the broader `WeeklyEdition` publication model.
+
+### M3G input contract
+
+`rankedRecords[]` must already be ordered by ascending `rank`. Ranks must be
+integers, unique, and continuous from 1 to `inputRankedCount`. M3G must reject
+invalid input instead of sorting, re-ranking, or fixing it.
+
+### M3G output file shape
+
+`weekly_digest.json` should be an object with this shape:
+
+```json
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "run_YYYYMMDD_HHMMSS_openalex",
+  "sourceName": "openalex",
+  "weekStart": "YYYY-MM-DD",
+  "weekEnd": "YYYY-MM-DD",
+  "generatedAt": "YYYY-MM-DDTHH:MM:SSZ",
+  "selectedPapers": []
+}
+```
+
+Each `selectedPapers[]` item directly copies one selected ranked record. Do not
+wrap the record inside a nested object. Preserve the existing record order and
+rank values.
+
+`weekly_digest_result.json` should be an aggregate processing summary only:
+
+```json
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "run_YYYYMMDD_HHMMSS_openalex",
+  "sourceName": "openalex",
+  "inputRankedCount": 0,
+  "selectedCount": 0,
+  "digestPaperCount": 0,
+  "weekStart": "YYYY-MM-DD",
+  "weekEnd": "YYYY-MM-DD",
+  "generatedAt": "YYYY-MM-DDTHH:MM:SSZ",
+  "processingSummary": "assembled_selected_ranked_records"
+}
+```
+
+In M3G, `selectedCount` and `digestPaperCount` must always be equal. Do not
+duplicate paper records or per-paper digest records in `weekly_digest_result.json`.
+
+## 7. PaperScore
 
 A structured editorial score and rationale for a relevant paper.
 
@@ -426,7 +486,7 @@ A structured editorial score and rationale for a relevant paper.
 
 Use a simple numeric scale, for example 0-10, but final scale and weighting remain open decisions.
 
-## 7. SelectionDecision
+## 8. SelectionDecision
 
 A record of why a paper was selected, rejected, or held for a weekly edition.
 
@@ -442,7 +502,7 @@ A record of why a paper was selected, rejected, or held for a weekly edition.
 | `humanOverride` | boolean | Yes | Human reviewer | Human-edited | Flags decisions changed manually. |
 | `decidedAt` | ISO datetime string | Yes | Selector | Deterministic | Records decision time. |
 
-## 8. EditorialSummary
+## 9. EditorialSummary
 
 Human-facing draft or approved editorial content for a selected paper.
 
@@ -463,7 +523,7 @@ Human-facing draft or approved editorial content for a selected paper.
 | `generatedAt` | ISO datetime string | Yes | Writer | Deterministic | Records draft generation time. |
 | `humanEdited` | boolean | Yes | Human approval | Human-edited | Indicates whether a human changed the draft. |
 
-## 9. ReviewResult
+## 10. ReviewResult
 
 A review record that checks draft content against available evidence.
 
@@ -486,7 +546,7 @@ A review record that checks draft content against available evidence.
 | `approvedBy` | string or null | Optional | Human approver | Human-edited | Identifies approver when approved. |
 | `approvedAt` | ISO datetime string or null | Optional | Human approver | Human-edited | Records approval time. |
 
-## 10. WeeklyEdition
+## 11. WeeklyEdition
 
 The publication unit consumed by the website after human approval.
 

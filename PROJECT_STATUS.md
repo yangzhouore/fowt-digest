@@ -1,6 +1,6 @@
-# PROJECT STATUS
+﻿# PROJECT STATUS
 
-Last Updated: 2026-07-18
+Last Updated: 2026-07-19
 
 ---
 
@@ -26,7 +26,8 @@ main
 
 Repository state:
 
-M3F implementation was committed in `e0d2389 feat: add deterministic ranking and selection` and merged through PR #7 in `4796848 Merge pull request #7 from yangzhouore/feature/ranking-selection`. M3F acceptance passed and the repository is ready for M3G.
+M3G Weekly Digest Assembly is complete on `main`. Acceptance review passed. The
+current M3G changes are ready for release preparation.
 
 ---
 
@@ -34,7 +35,7 @@ M3F implementation was committed in `e0d2389 feat: add deterministic ranking and
 
 Milestone:
 
-M3F - Deterministic Ranking & Selection
+M3G - Weekly Digest Assembly
 
 Status:
 
@@ -42,7 +43,7 @@ Accepted
 
 Current slice:
 
-M3F deterministic ranking and selection acceptance passed
+M3G weekly digest assembly acceptance passed
 
 Completed:
 
@@ -56,13 +57,14 @@ Completed:
 - M3D - Deterministic Deduplication
 - M3E - Deterministic FOWT Relevance Classification
 - M3F - Deterministic Ranking & Selection
+- M3G - Weekly Digest Assembly
 
 Latest verified validation:
 
-- Command: `python -m pytest pipeline/tests/test_ranker.py`
+- Command: `python -m pytest pipeline/tests/test_weekly_digest.py`
 - Result: 15 passed, 0 failed
 - Command: `python -m pytest pipeline/tests`
-- Result: 161 passed, 0 failed
+- Result: 176 passed, 0 failed
 - Command: `git diff --check`
 - Result: passed
 
@@ -112,10 +114,15 @@ Implemented:
 - `ranked_papers.json` writing
 - `ranking_result.json` aggregate summary writing
 - rollback protection for partial ranking output writes
+- deterministic weekly digest assembly
+- ranked input contract validation without repair
+- `weekly_digest.json` writing
+- `weekly_digest_result.json` aggregate summary writing
+- rollback protection for partial weekly digest output writes
 
 Not yet implemented:
 
-- weekly digest generation
+- pipeline orchestration
 - scoring
 - AI workflow
 - website integration
@@ -125,11 +132,11 @@ Not yet implemented:
 
 # Immediate Next Task
 
-Prepare M3G - Weekly Digest Generation.
+Prepare M3H - Pipeline Orchestration.
 
 Next recommended milestone:
 
-M3G - Weekly Digest Generation
+M3H - Pipeline Orchestration
 
 Do not implement yet:
 
@@ -153,6 +160,7 @@ Implemented pipeline modules:
 - `pipeline/deduplicator.py`
 - `pipeline/relevance_classifier.py`
 - `pipeline/ranker.py`
+- `pipeline/weekly_digest.py`
 
 Implemented pipeline tests:
 
@@ -165,6 +173,7 @@ Implemented pipeline tests:
 - `pipeline/tests/test_deduplicator.py`
 - `pipeline/tests/test_relevance_classifier.py`
 - `pipeline/tests/test_ranker.py`
+- `pipeline/tests/test_weekly_digest.py`
 
 Website status:
 
@@ -198,8 +207,8 @@ Architecture rules:
 
 # Known Limitations
 
-- M3F has passed acceptance, was committed in `e0d2389 feat: add deterministic ranking and selection`, and was merged through PR #7 in `4796848 Merge pull request #7 from yangzhouore/feature/ranking-selection`.
-- Weekly digest generation does not exist.
+- M3G Weekly Digest Assembly is complete and acceptance passed.
+- Pipeline orchestration does not exist.
 - Scoring, AI writing, and AI review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.
 
@@ -215,14 +224,15 @@ Completed pipeline milestones:
 - M3D - Deterministic Deduplication
 - M3E - Deterministic FOWT Relevance Classification
 - M3F - Deterministic Ranking & Selection
+- M3G - Weekly Digest Assembly
 
 Next recommended pipeline milestone:
 
-- M3G - Weekly Digest Generation
+- M3H - Pipeline Orchestration
 
 Remaining pipeline work after current milestone:
 
-- prepare M3G - Weekly Digest Generation
+- prepare M3H - Pipeline Orchestration
 - keep scoring, AI writing, and website integration out of scope until separately accepted
 
 Future excluded work until separately scoped:
@@ -248,3 +258,4 @@ Future excluded work until separately scoped:
 - Never invent paper metadata or research findings.
 - M3E relevance classification is deterministic and rule-based only.
 - M3F ranking and selection is deterministic and uses no scores, weights, AI, citation counts, diversity balancing, digest generation, or website behavior.
+- M3G weekly digest assembly copies selected ranked records only and does not add AI, summaries, editorial content, Markdown, HTML, website integration, or the broader WeeklyEdition model.

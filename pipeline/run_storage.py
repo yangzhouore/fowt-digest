@@ -21,6 +21,8 @@ SUPPORTED_RUN_FILENAMES = (
     "classification_result.json",
     "ranked_papers.json",
     "ranking_result.json",
+    "weekly_digest.json",
+    "weekly_digest_result.json",
 )
 
 

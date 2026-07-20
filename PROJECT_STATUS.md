@@ -36,15 +36,15 @@ complete.
 
 Milestone:
 
-MVP v1.0 - Deterministic Pipeline Release
+Website MVP
 
 Status:
 
-Release documentation prepared
+In Progress
 
 Current slice:
 
-M3A through M3H are complete and merged to main
+Website MVP Feature 01 - Static Digest Integration complete
 
 Completed:
 
@@ -130,24 +130,24 @@ Not yet implemented:
 
 - scoring
 - AI workflow
-- website integration
+- remaining website integration beyond Feature 01
 - database
 
 ---
 
 # Immediate Next Task
 
-Prepare Website MVP.
+Prepare Website MVP Feature 02 - Paper Detail integration.
 
 Next recommended milestone:
 
-Website MVP
+Website MVP Feature 02 - Paper Detail integration
 
 Do not implement yet:
 
 - scoring
 - AI workflow
-- website integration
+- remaining website integration beyond Feature 01
 - database
 
 ---
@@ -184,6 +184,10 @@ Implemented pipeline tests:
 
 Website status:
 
+- Website MVP Feature 01 displays one real static pipeline digest on the homepage and weekly page.
+- Source run: `run_20260720_090000_openalex`.
+- `web/data/weekly_digest.json` contains 6 selected papers from that run.
+- `npm.cmd run lint` and `npm.cmd run build` pass.
 - static Next.js MVP exists under `web/`
 - website deployment readiness work is complete
 - website has not been deployed from this repository state

@@ -1,9 +1,8 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
-import { currentEdition, mockPapers } from "../../../data/mock-papers";
+import { currentDigest } from "../../../data/digest-adapter";
 
 type WeeklyPageProps = {
   params: Promise<{
@@ -12,7 +11,7 @@ type WeeklyPageProps = {
 };
 
 export function generateStaticParams() {
-  return [{ slug: currentEdition.slug }];
+  return [{ slug: currentDigest.slug }];
 }
 
 export async function generateMetadata({
@@ -20,22 +19,22 @@ export async function generateMetadata({
 }: WeeklyPageProps): Promise<Metadata> {
   const { slug } = await params;
 
-  if (slug !== currentEdition.slug) {
+  if (slug !== currentDigest.slug) {
     return {
       title: "Weekly edition not found",
     };
   }
 
   return {
-    title: currentEdition.dateRange,
-    description: `Prototype weekly edition: ${currentEdition.introduction}`,
+    title: currentDigest.dateRange,
+    description: `Pipeline weekly digest: ${currentDigest.introduction}`,
   };
 }
 
 export default async function WeeklyPage({ params }: WeeklyPageProps) {
   const { slug } = await params;
 
-  if (slug !== currentEdition.slug) {
+  if (slug !== currentDigest.slug) {
     notFound();
   }
 
@@ -44,29 +43,25 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
       <SiteHeader />
 
       <section className="intro" aria-labelledby="weekly-heading">
-        <p className="eyebrow">Weekly edition</p>
-        <h1 id="weekly-heading">{currentEdition.dateRange}</h1>
-        <p>{currentEdition.introduction}</p>
+        <p className="eyebrow">Weekly digest</p>
+        <h1 id="weekly-heading">{currentDigest.dateRange}</h1>
+        <p>{currentDigest.introduction}</p>
       </section>
 
       <section className="edition-meta" aria-labelledby="edition-meta-heading">
-        <h2 id="edition-meta-heading">Edition metadata</h2>
+        <h2 id="edition-meta-heading">Digest metadata</h2>
         <dl>
           <div>
             <dt>Date range</dt>
-            <dd>{currentEdition.dateRange}</dd>
-          </div>
-          <div>
-            <dt>Papers reviewed</dt>
-            <dd>{currentEdition.papersReviewed}</dd>
+            <dd>{currentDigest.dateRange}</dd>
           </div>
           <div>
             <dt>Selected</dt>
-            <dd>{currentEdition.papersSelected}</dd>
+            <dd>{currentDigest.selectedPaperCount}</dd>
           </div>
           <div>
-            <dt>Reading time</dt>
-            <dd>{currentEdition.readingTime}</dd>
+            <dt>Generated</dt>
+            <dd>{currentDigest.generatedAt}</dd>
           </div>
         </dl>
       </section>
@@ -74,15 +69,13 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
       <section id="papers" aria-labelledby="selected-papers-heading">
         <h2 id="selected-papers-heading">Selected papers</h2>
         <ol className="paper-list">
-          {mockPapers.map((paper) => (
+          {currentDigest.papers.map((paper) => (
             <li key={paper.id}>
               <article>
                 <p className="paper-number">
                   {String(paper.number).padStart(2, "0")}
                 </p>
-                <h3>
-                  <Link href={`/papers/${paper.slug}`}>{paper.title}</Link>
-                </h3>
+                <h3>{paper.title}</h3>
                 <dl className="paper-meta">
                   <div>
                     <dt>Authors</dt>
@@ -97,15 +90,24 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
                     <dd>{paper.publicationType}</dd>
                   </div>
                   <div>
-                    <dt>Category</dt>
-                    <dd>{paper.category}</dd>
+                    <dt>Publication date</dt>
+                    <dd>{paper.publicationDate}</dd>
                   </div>
                   <div>
-                    <dt>Score</dt>
-                    <dd className="paper-score">{paper.score}/10</dd>
+                    <dt>Classification</dt>
+                    <dd>{paper.classification ?? "Not classified"}</dd>
+                  </div>
+                  <div>
+                    <dt>Topics</dt>
+                    <dd>{paper.topicTags.join(", ") || "No topic tags"}</dd>
                   </div>
                 </dl>
-                <p>{paper.editorialSummary}</p>
+                <p>{paper.summary}</p>
+                {paper.sourceUrl ? (
+                  <p className="text-link-row">
+                    <a href={paper.sourceUrl}>View source</a>
+                  </p>
+                ) : null}
               </article>
             </li>
           ))}
@@ -113,11 +115,11 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
       </section>
 
       <section aria-labelledby="weekly-notice-heading">
-        <h2 id="weekly-notice-heading">Mock-data notice</h2>
+        <h2 id="weekly-notice-heading">Pipeline-data notice</h2>
         <p>
-          This edition and all listed paper information are fictional mock
-          content for development only. No automated collection, scoring, or AI
-          review has been used to produce this page.
+          This page displays a static local copy of one deterministic pipeline
+          output. It does not include AI-written summaries, editorial analysis,
+          or automatic publication.
         </p>
       </section>
 

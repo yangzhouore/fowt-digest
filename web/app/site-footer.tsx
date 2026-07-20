@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { currentEdition } from "../data/mock-papers";
+import { currentDigest } from "../data/digest-adapter";
 
 export function SiteFooter() {
   return (
@@ -10,12 +10,12 @@ export function SiteFooter() {
       </p>
       <nav aria-label="Footer navigation">
         <Link href="/">Home</Link>
-        <Link href={`/weekly/${currentEdition.slug}`}>Current edition</Link>
+        <Link href={`/weekly/${currentDigest.slug}`}>Current digest</Link>
         <Link href="/archive">Archive</Link>
         <Link href="/methodology">Methodology</Link>
         <Link href="/about">About</Link>
       </nav>
-      <p>Current paper data is fictional mock content for MVP development.</p>
+      <p>Current digest data is a static local copy of pipeline output.</p>
     </footer>
   );
 }

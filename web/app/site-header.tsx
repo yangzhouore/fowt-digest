@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { currentEdition } from "../data/mock-papers";
+import { currentDigest } from "../data/digest-adapter";
 
 export function SiteHeader() {
   return (
@@ -9,7 +9,7 @@ export function SiteHeader() {
       </Link>
       <div className="header-actions">
         <nav aria-label="Primary navigation">
-          <Link href={`/weekly/${currentEdition.slug}`}>Weekly</Link>
+          <Link href={`/weekly/${currentDigest.slug}`}>Weekly</Link>
           <Link href="/archive">Archive</Link>
           <Link href="/methodology">Methodology</Link>
           <Link href="/about">About</Link>

@@ -2,16 +2,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
-import {
-  archiveEditions,
-  currentEdition,
-  mockPapers,
-} from "../data/mock-papers";
+import { currentDigest } from "../data/digest-adapter";
 
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "A static MVP prototype for a weekly floating offshore wind turbine research digest.",
+    "A weekly floating offshore wind turbine research digest generated from deterministic pipeline output.",
 };
 
 export default function Home() {
@@ -24,33 +20,29 @@ export default function Home() {
         <h1 id="intro-heading">Fresh FOWT literature, distilled.</h1>
         <p>
           A prototype editorial website for scanning floating offshore wind
-          turbine research. The current MVP publishes one fictional weekly
-          edition to test the reading flow before real pipeline integration.
+          turbine research. This edition displays one static output from the
+          deterministic pipeline.
         </p>
       </section>
 
       <section className="edition-meta" aria-labelledby="edition-heading">
-        <h2 id="edition-heading">Current prototype edition</h2>
+        <h2 id="edition-heading">Current pipeline edition</h2>
         <dl>
           <div>
             <dt>Date range</dt>
             <dd>
-              <Link href={`/weekly/${currentEdition.slug}`}>
-                {currentEdition.dateRange}
+              <Link href={`/weekly/${currentDigest.slug}`}>
+                {currentDigest.dateRange}
               </Link>
             </dd>
           </div>
           <div>
-            <dt>Papers reviewed</dt>
-            <dd>{currentEdition.papersReviewed}</dd>
-          </div>
-          <div>
             <dt>Selected</dt>
-            <dd>{currentEdition.papersSelected}</dd>
+            <dd>{currentDigest.selectedPaperCount}</dd>
           </div>
           <div>
-            <dt>Reading time</dt>
-            <dd>{currentEdition.readingTime}</dd>
+            <dt>Generated</dt>
+            <dd>{currentDigest.generatedAt}</dd>
           </div>
         </dl>
       </section>
@@ -58,15 +50,13 @@ export default function Home() {
       <section id="weekly" aria-labelledby="papers-heading">
         <h2 id="papers-heading">Selected papers</h2>
         <ol className="paper-list">
-          {mockPapers.map((paper) => (
+          {currentDigest.papers.map((paper) => (
             <li key={paper.id}>
               <article>
                 <p className="paper-number">
                   {String(paper.number).padStart(2, "0")}
                 </p>
-                <h3>
-                  <Link href={`/papers/${paper.slug}`}>{paper.title}</Link>
-                </h3>
+                <h3>{paper.title}</h3>
                 <dl className="paper-meta">
                   <div>
                     <dt>Authors</dt>
@@ -81,15 +71,11 @@ export default function Home() {
                     <dd>{paper.publicationType}</dd>
                   </div>
                   <div>
-                    <dt>Category</dt>
-                    <dd>{paper.category}</dd>
-                  </div>
-                  <div>
-                    <dt>Score</dt>
-                    <dd className="paper-score">{paper.score}/10</dd>
+                    <dt>Classification</dt>
+                    <dd>{paper.classification ?? "Not classified"}</dd>
                   </div>
                 </dl>
-                <p>{paper.editorialSummary}</p>
+                <p>{paper.summary}</p>
               </article>
             </li>
           ))}
@@ -97,29 +83,22 @@ export default function Home() {
       </section>
 
       <section id="archive" aria-labelledby="recent-editions-heading">
-        <h2 id="recent-editions-heading">Recent editions</h2>
-        <ul className="edition-list">
-          {archiveEditions.slice(0, 3).map((edition) => (
-            <li key={edition.slug}>
-              {edition.available ? (
-                <Link href={`/weekly/${edition.slug}`}>{edition.dateRange}</Link>
-              ) : (
-                <span>{edition.dateRange}</span>
-              )}
-            </li>
-          ))}
-        </ul>
+        <h2 id="recent-editions-heading">Weekly digest</h2>
+        <p>
+          View the selected papers from the current deterministic pipeline
+          output.
+        </p>
         <p className="text-link-row">
-          <Link href="/archive">View archive</Link>
+          <Link href={`/weekly/${currentDigest.slug}`}>Read weekly digest</Link>
         </p>
       </section>
 
       <section aria-labelledby="notice-heading">
-        <h2 id="notice-heading">Mock-data notice</h2>
+        <h2 id="notice-heading">Pipeline-data notice</h2>
         <p>
-          All displayed paper information is fictional and for development only.
-          The site does not yet collect real papers, run AI review, or connect
-          to external research sources.
+          This page displays a static local copy of one pipeline output file.
+          The website does not run the pipeline, use AI writing, or publish
+          automatically.
         </p>
       </section>
 

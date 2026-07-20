@@ -2,13 +2,13 @@
 
 ## 1. Purpose
 
-This document defines the high-level architecture for the FOWT Research Digest paper processing pipeline. The implemented pipeline currently covers source collection through weekly digest assembly while keeping the website a simple presentation layer.
+This document defines the high-level architecture for the FOWT Research Digest paper processing pipeline. The implemented deterministic MVP pipeline currently covers source collection through weekly digest assembly and pipeline orchestration while keeping the website a simple presentation layer.
 
-M3H Pipeline Orchestration is the next planned stage. Later scoring, AI-assisted editorial writing, factual review, human approval, and publication export remain future work.
+M3H Pipeline Orchestration is complete. Later scoring, AI-assisted editorial writing, factual review, human approval, and publication export remain future work.
 
 ## 2. Scope
 
-The implemented workflow through M3G is:
+The implemented workflow through M3H is:
 
 ```text
 Paper sources
@@ -20,7 +20,7 @@ Paper sources
   -> Weekly digest assembly
 ```
 
-The implemented prototype runs locally and reads and writes structured JSON files. M3H will add pipeline orchestration. Website integration and publication-ready export remain future work.
+The implemented prototype runs locally, reads and writes structured JSON files, and includes a thin orchestrator over accepted stage contracts. Website integration and publication-ready export remain future work.
 
 ## 3. Non-goals
 

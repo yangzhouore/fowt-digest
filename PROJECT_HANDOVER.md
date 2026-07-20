@@ -13,7 +13,7 @@ pipeline MVP is complete through orchestration and weekly digest assembly.
 
 ## 2. Current Branch
 
-`feature/pipeline-orchestration`
+`main`
 
 ## 3. Current Milestone and Slice
 
@@ -23,14 +23,15 @@ M3H - Pipeline Orchestration
 
 Current slice:
 
-M3H is complete and acceptance review passed. The current feature branch is
-ready for PR review after release validation.
+M3H is complete, acceptance review passed, and the milestone has been merged
+to `main`.
 
 Latest validation:
 
 - `python -m pytest pipeline/tests/test_orchestrator.py` - 17 passed, 0 failed
 - `python -m pytest pipeline/tests` - 193 passed, 0 failed
 - `git diff --check` - passed
+- Working tree - clean after merge readiness check
 
 The next step is MVP v1.0 Final Review. It has not started.
 
@@ -194,7 +195,7 @@ Do not implement:
 
 To resume work:
 
-1. Confirm the branch is `feature/pipeline-orchestration`.
+1. Confirm the branch is `main`.
 2. Run `git status` and ensure there are no unexpected changes.
 3. Run `python -m pytest pipeline/tests`.
 4. Prepare MVP v1.0 Final Review.

@@ -22,13 +22,13 @@ main
 
 Current Branch:
 
-feature/pipeline-orchestration
+main
 
 Repository state:
 
-M3H Pipeline Orchestration is complete on `feature/pipeline-orchestration` and
-acceptance review passed. The deterministic MVP pipeline is complete and ready
-for PR review.
+M3H Pipeline Orchestration is complete and merged to `main` in merge commit
+`96c7847`. Acceptance review passed. The deterministic MVP pipeline is
+complete.
 
 ---
 

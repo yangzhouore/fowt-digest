@@ -18,6 +18,7 @@ Paper sources
   -> FOWT relevance classification
   -> Ranking and selection
   -> Weekly digest assembly
+  -> Pipeline orchestration
 ```
 
 The implemented prototype runs locally, reads and writes structured JSON files, and includes a thin orchestrator over accepted stage contracts. Website integration and publication-ready export remain future work.
@@ -45,7 +46,7 @@ The first pipeline design does not include:
 5. FOWT relevance classification applies deterministic rules to label records as `Relevant`, `Possibly Relevant`, or `Not Relevant`.
 6. Ranking and selection deterministically ranks classified records and marks selected records without scoring, AI, or website integration.
 7. Weekly digest assembly copies selected ranked records into a minimal digest data product.
-8. Pipeline orchestration is the next planned stage.
+8. Pipeline orchestration sequences the accepted deterministic stages without changing stage behavior or creating new JSON products.
 9. Scoring, AI-assisted editorial writing, factual review, human approval, and publication export remain future work.
 
 ## 5. Module responsibilities

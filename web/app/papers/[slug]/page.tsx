@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
-import { currentEdition, mockPapers } from "../../../data/mock-papers";
+import { currentDigest, getDigestPaperBySlug } from "../../../data/digest-adapter";
 
 type PaperPageProps = {
   params: Promise<{
@@ -12,7 +12,7 @@ type PaperPageProps = {
 };
 
 export function generateStaticParams() {
-  return mockPapers.map((paper) => ({
+  return currentDigest.papers.map((paper) => ({
     slug: paper.slug,
   }));
 }
@@ -21,7 +21,7 @@ export async function generateMetadata({
   params,
 }: PaperPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const paper = mockPapers.find((item) => item.slug === slug);
+  const paper = getDigestPaperBySlug(slug);
 
   if (!paper) {
     return {
@@ -31,13 +31,13 @@ export async function generateMetadata({
 
   return {
     title: paper.title,
-    description: `Fictional mock paper detail: ${paper.editorialSummary}`,
+    description: "Pipeline paper metadata from the static weekly digest snapshot.",
   };
 }
 
 export default async function PaperPage({ params }: PaperPageProps) {
   const { slug } = await params;
-  const paper = mockPapers.find((item) => item.slug === slug);
+  const paper = getDigestPaperBySlug(slug);
 
   if (!paper) {
     notFound();
@@ -49,17 +49,24 @@ export default async function PaperPage({ params }: PaperPageProps) {
 
       <article>
         <section className="intro" aria-labelledby="paper-heading">
-          <p className="eyebrow">Fictional paper detail</p>
+          <p className="eyebrow">Pipeline paper detail</p>
           <h1 id="paper-heading">{paper.title}</h1>
-          <p>{paper.editorialSummary}</p>
+          <p>
+            Rank {paper.number} selected paper from the deterministic weekly
+            digest for {currentDigest.dateRange}.
+          </p>
         </section>
 
         <section className="paper-detail-meta" aria-labelledby="paper-meta-heading">
           <h2 id="paper-meta-heading">Paper metadata</h2>
           <dl>
             <div>
+              <dt>Rank</dt>
+              <dd>{paper.number}</dd>
+            </div>
+            <div>
               <dt>Authors</dt>
-              <dd>{paper.authors.join(", ")}</dd>
+              <dd>{paper.authors.join(", ") || "No authors listed"}</dd>
             </div>
             <div>
               <dt>Source</dt>
@@ -73,57 +80,64 @@ export default async function PaperPage({ params }: PaperPageProps) {
               <dt>Publication date</dt>
               <dd>{paper.publicationDate}</dd>
             </div>
+            {paper.doi ? (
+              <div>
+                <dt>DOI</dt>
+                <dd>
+                  <a href={paper.doi}>{paper.doi}</a>
+                </dd>
+              </div>
+            ) : null}
             <div>
-              <dt>Categories</dt>
-              <dd>{paper.categories.join(", ")}</dd>
+              <dt>Topics</dt>
+              <dd>{paper.topicTags.join(", ") || "No topic tags"}</dd>
             </div>
+            {paper.classification ? (
+              <div>
+                <dt>Classification</dt>
+                <dd>{paper.classification}</dd>
+              </div>
+            ) : null}
             <div>
-              <dt>Score</dt>
-              <dd className="paper-score">{paper.score}/10</dd>
+              <dt>Selection reason</dt>
+              <dd>{paper.selectionReason}</dd>
             </div>
+            {paper.openAccessStatus ? (
+              <div>
+                <dt>Open access</dt>
+                <dd>{paper.openAccessStatus}</dd>
+              </div>
+            ) : null}
             <div>
-              <dt>Analysis level</dt>
-              <dd>{paper.analysisLevel}</dd>
+              <dt>Full text</dt>
+              <dd>{paper.fullTextAvailability}</dd>
             </div>
+            {paper.sourceUrl ? (
+              <div>
+                <dt>Source link</dt>
+                <dd>
+                  <a href={paper.sourceUrl}>View source</a>
+                </dd>
+              </div>
+            ) : null}
           </dl>
         </section>
 
-        <section className="analysis-sections" aria-labelledby="analysis-heading">
-          <h2 id="analysis-heading">Analysis</h2>
-          <section>
-            <h3>Research problem</h3>
-            <p>{paper.researchProblem}</p>
-          </section>
-          <section>
-            <h3>Methodology</h3>
-            <p>{paper.methodology}</p>
-          </section>
-          <section>
-            <h3>Key findings</h3>
-            <p>{paper.keyFindings}</p>
-          </section>
-          <section>
-            <h3>Engineering relevance</h3>
-            <p>{paper.engineeringRelevance}</p>
-          </section>
-          <section>
-            <h3>Limitations</h3>
-            <p>{paper.limitations}</p>
-          </section>
+        <section className="analysis-sections" aria-labelledby="abstract-heading">
+          <h2 id="abstract-heading">Abstract</h2>
+          <p>{paper.abstract ?? "No abstract available."}</p>
         </section>
 
-        <section aria-labelledby="fictional-notice-heading">
-          <h2 id="fictional-notice-heading">Fictional mock content</h2>
+        <section aria-labelledby="pipeline-notice-heading">
+          <h2 id="pipeline-notice-heading">Pipeline-data notice</h2>
           <p>
-            This paper, its metadata, and the analysis above are fictional mock
-            content for development only. It is included to test how a future
-            digest entry may present metadata, summaries, relevance, and
-            limitations. No DOI or external publication link is provided because
-            this is not a real publication.
+            This page uses a static local copy of one deterministic pipeline
+            digest snapshot. It does not include AI-written summaries or
+            editorial analysis.
           </p>
           <p className="text-link-row">
-            <Link href={`/weekly/${currentEdition.slug}`}>
-              Back to the weekly edition
+            <Link href={`/weekly/${currentDigest.slug}`}>
+              Back to the weekly digest
             </Link>
           </p>
         </section>

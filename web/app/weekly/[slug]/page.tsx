@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
@@ -75,7 +76,9 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
                 <p className="paper-number">
                   {String(paper.number).padStart(2, "0")}
                 </p>
-                <h3>{paper.title}</h3>
+                <h3>
+                  <Link href={`/papers/${paper.slug}`}>{paper.title}</Link>
+                </h3>
                 <dl className="paper-meta">
                   <div>
                     <dt>Authors</dt>

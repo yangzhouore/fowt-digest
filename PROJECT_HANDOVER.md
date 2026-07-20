@@ -8,11 +8,11 @@ FOWT Research Digest is an editorial website and separate Python pipeline for
 collecting and preparing weekly research digests about Floating Offshore Wind
 Turbines.
 
-The website is a static public MVP. The homepage and weekly page now display one real static pipeline digest, while remaining website pages still use prototype/mock data as separately scoped. The deterministic pipeline MVP is complete through orchestration and weekly digest assembly.
+The website is a static public MVP. The homepage, weekly page, and 6 paper detail pages now display one real static pipeline digest, while remaining website pages still use prototype/mock data as separately scoped. The deterministic pipeline MVP is complete through orchestration and weekly digest assembly.
 
 ## 2. Current Branch
 
-`main`
+`feature/website-paper-detail`
 
 ## 3. Current Milestone and Slice
 
@@ -22,7 +22,7 @@ Website MVP
 
 Current slice:
 
-Website MVP Feature 01 - Static Digest Integration is complete. Homepage and Weekly page display `web/data/weekly_digest.json` from source run `run_20260720_090000_openalex` with 6 selected papers.
+Website MVP Feature 02 - Paper Detail Integration is complete. Homepage, Weekly page, and 6 Paper Detail pages display `web/data/weekly_digest.json` from source run `run_20260720_090000_openalex` with 6 selected papers.
 
 Latest validation:
 
@@ -32,7 +32,7 @@ Latest validation:
 - `npm.cmd run lint` - passed
 - `npm.cmd run build` - passed
 
-The next step is Website MVP Feature 02 - Paper Detail integration.
+The next step is Website MVP Feature 03 - Archive Integration.
 
 ## 4. Completed Milestones
 
@@ -57,7 +57,7 @@ Repository layout:
 ```text
 docs/      design, architecture, data contracts, implementation contracts
 pipeline/  Python pipeline modules and tests
-web/       static Next.js website; homepage and weekly page use one real copied pipeline digest
+web/       static Next.js website; homepage, weekly page, and paper detail pages use one real copied pipeline digest
 ```
 
 Current pipeline flow:
@@ -82,7 +82,7 @@ OpenAlex query builder
 -> pipeline orchestration over the accepted file contracts
 ```
 
-The website does not run the pipeline. Feature 01 uses a static copied `weekly_digest.json` snapshot in `web/data/`.
+The website does not run the pipeline. Feature 01 and Feature 02 use a static copied `weekly_digest.json` snapshot in `web/data/`.
 
 ## 6. Important Design Decisions
 
@@ -151,13 +151,13 @@ Latest result:
 - The deterministic MVP pipeline is complete through orchestration and weekly digest assembly.
 - Scoring, AI writing, and AI review do not exist.
 - No database exists.
-- Homepage and Weekly page display one static copied pipeline digest.
-- Paper Detail and Archive integration have not started.
+- Homepage, Weekly page, and 6 Paper Detail pages display one static copied pipeline digest.
+- Archive integration has not started.
 - The website still does not run the pipeline.
 
 ## 10. Exact Next Task
 
-Prepare Website MVP Feature 02 - Paper Detail integration.
+Prepare Website MVP Feature 03 - Archive Integration.
 
 ## 11. What Must Not Be Implemented Yet
 
@@ -168,7 +168,7 @@ Do not implement:
 - AI review
 - Crossref
 - arXiv
-- website integration
+- additional website integration beyond scoped Website MVP features
 - database
 - API routes
 - FastAPI
@@ -195,8 +195,8 @@ Do not implement:
 
 To resume work:
 
-1. Confirm the branch is `main`.
+1. Confirm the branch is `feature/website-paper-detail`.
 2. Run `git status` and ensure there are no unexpected changes.
 3. Run `python -m pytest pipeline/tests`.
-4. Prepare Website MVP Feature 02 - Paper Detail integration.
-5. Do not start scoring, AI writing, database, or website integration until separately scoped.
+4. Prepare Website MVP Feature 03 - Archive Integration.
+5. Do not start scoring, AI writing, database, or additional website integration beyond the scoped next feature.

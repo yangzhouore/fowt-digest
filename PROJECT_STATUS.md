@@ -22,7 +22,7 @@ main
 
 Current Branch:
 
-main
+feature/website-paper-detail
 
 Repository state:
 
@@ -44,7 +44,7 @@ In Progress
 
 Current slice:
 
-Website MVP Feature 01 - Static Digest Integration complete
+Website MVP Feature 02 - Paper Detail Integration complete
 
 Completed:
 
@@ -130,24 +130,24 @@ Not yet implemented:
 
 - scoring
 - AI workflow
-- remaining website integration beyond Feature 01
+- remaining website integration beyond Feature 02
 - database
 
 ---
 
 # Immediate Next Task
 
-Prepare Website MVP Feature 02 - Paper Detail integration.
+Prepare Website MVP Feature 03 - Archive Integration.
 
 Next recommended milestone:
 
-Website MVP Feature 02 - Paper Detail integration
+Website MVP Feature 03 - Archive Integration
 
 Do not implement yet:
 
 - scoring
 - AI workflow
-- remaining website integration beyond Feature 01
+- remaining website integration beyond Feature 02
 - database
 
 ---
@@ -185,14 +185,16 @@ Implemented pipeline tests:
 Website status:
 
 - Website MVP Feature 01 displays one real static pipeline digest on the homepage and weekly page.
+- Website MVP Feature 02 displays 6 real static paper detail pages from the same digest.
+- Homepage -> Weekly -> Paper Detail reading workflow is complete.
 - Source run: `run_20260720_090000_openalex`.
 - `web/data/weekly_digest.json` contains 6 selected papers from that run.
 - `npm.cmd run lint` and `npm.cmd run build` pass.
 - static Next.js MVP exists under `web/`
 - website deployment readiness work is complete
 - website has not been deployed from this repository state
-- website still uses fictional local mock data
-- no pipeline integration exists
+- Archive, About, and Methodology still contain prototype/mock-data wording until separately scoped.
+- the website uses a static copied pipeline digest and does not run the pipeline
 
 ---
 
@@ -212,7 +214,7 @@ Architecture rules:
 - do not add FastAPI before it is needed
 - do not add a database before local JSON is insufficient
 - do not add AI workflow modules before their milestone
-- do not integrate pipeline output into the website until explicitly scoped
+- integrate pipeline output into the website only through explicitly scoped Website MVP features
 
 ---
 
@@ -221,7 +223,7 @@ Architecture rules:
 - M3H Pipeline Orchestration is complete and acceptance passed.
 - The deterministic MVP pipeline is complete through orchestration and weekly digest assembly.
 - Scoring, AI writing, and AI review do not exist.
-- The website uses fictional mock data and is not connected to the pipeline.
+- Homepage, Weekly, and Paper Detail use one real static pipeline digest. Archive, About, and Methodology still include prototype/mock-data wording until separately scoped.
 
 ---
 
@@ -250,7 +252,7 @@ Future excluded work until separately scoped:
 - AI writing
 - AI review
 - database
-- frontend integration
+- additional frontend integration beyond scoped Website MVP features
 - automatic publication
 
 ---

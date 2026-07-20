@@ -1,6 +1,6 @@
-# PROJECT HANDOVER
+﻿# PROJECT HANDOVER
 
-Last Updated: 2026-07-19
+Last Updated: 2026-07-20
 
 ## 1. Project Purpose
 
@@ -8,31 +8,31 @@ FOWT Research Digest is an editorial website and separate Python pipeline for
 collecting and preparing weekly research digests about Floating Offshore Wind
 Turbines.
 
-The website is a static public MVP using fictional mock data. The pipeline is
-being built separately to collect, normalise, deduplicate, classify, rank,
-select, and assemble real research metadata later.
+The website is a static public MVP using fictional mock data. The deterministic
+pipeline MVP is complete through orchestration and weekly digest assembly.
 
 ## 2. Current Branch
 
-`main`
+`feature/pipeline-orchestration`
 
 ## 3. Current Milestone and Slice
 
 Milestone:
 
-M3G - Weekly Digest Assembly
+M3H - Pipeline Orchestration
 
 Current slice:
 
-M3G is complete and acceptance review passed. It was committed in `e76e0ca feat: add weekly digest assembly` on `main` and pushed to `origin/main`.
+M3H is complete and acceptance review passed. The current feature branch is
+ready for PR review after release validation.
 
 Latest validation:
 
-- `python -m pytest pipeline/tests/test_weekly_digest.py` - 15 passed, 0 failed
-- `python -m pytest pipeline/tests` - 176 passed, 0 failed
+- `python -m pytest pipeline/tests/test_orchestrator.py` - 17 passed, 0 failed
+- `python -m pytest pipeline/tests` - 193 passed, 0 failed
 - `git diff --check` - passed
 
-The next recommended milestone is M3H - Pipeline Orchestration. It has not started. The M3G post-commit readiness check found `main` synchronized with `origin/main` and the working tree clean before this documentation-only cleanup.
+The next step is MVP v1.0 Final Review. It has not started.
 
 ## 4. Completed Milestones
 
@@ -47,6 +47,7 @@ The next recommended milestone is M3H - Pipeline Orchestration. It has not start
 - M3E - Deterministic FOWT Relevance Classification
 - M3F - Deterministic Ranking & Selection
 - M3G - Weekly Digest Assembly
+- M3H - Pipeline Orchestration
 - Web MVP deployment readiness is complete, but deployment has not been performed
 
 ## 5. Current Architecture and Data Flow
@@ -78,6 +79,7 @@ OpenAlex query builder
 -> ranked_papers.json and ranking_result.json writing
 -> weekly digest assembly
 -> weekly_digest.json and weekly_digest_result.json writing
+-> pipeline orchestration over the accepted file contracts
 ```
 
 The pipeline is not connected to the website.
@@ -97,6 +99,7 @@ The pipeline is not connected to the website.
 - M3E classification uses deterministic keyword rules only; AI, embeddings, fuzzy matching, semantic search, ranking, and scoring are not implemented.
 - M3F ranking and selection uses deterministic classification/date/paper ID ordering only; citation counts, scores, weights, AI, diversity balancing, digest generation, and website behavior are not implemented.
 - M3G weekly digest assembly copies selected ranked records only; it does not inspect relevance classification, sort, re-rank, re-select, add summaries, add editorial content, generate Markdown or HTML, integrate with the website, use a database, or implement the broader WeeklyEdition model.
+- M3H pipeline orchestration sequences accepted stages only; it does not alter stage behavior, retry, repair, clean up prior successful outputs, or create new JSON products.
 
 ## 7. Current Module Snapshot
 
@@ -112,6 +115,7 @@ Pipeline modules:
 - `pipeline/relevance_classifier.py`: deterministic three-state FOWT relevance classification, classified output writing, aggregate classification reporting, and local rollback for partial write failures.
 - `pipeline/ranker.py`: deterministic ranking and selection, ranked output writing, aggregate ranking reporting, and local rollback for partial write failures.
 - `pipeline/weekly_digest.py`: deterministic weekly digest assembly, selected ranked paper output writing, aggregate digest reporting, and local rollback for partial write failures.
+- `pipeline/orchestrator.py`: thin file-contract orchestration over accepted deterministic stages.
 
 Pipeline tests:
 
@@ -125,6 +129,7 @@ Pipeline tests:
 - `pipeline/tests/test_relevance_classifier.py`
 - `pipeline/tests/test_ranker.py`
 - `pipeline/tests/test_weekly_digest.py`
+- `pipeline/tests/test_orchestrator.py`
 
 ## 8. Latest Test Status
 
@@ -137,13 +142,13 @@ python -m pytest pipeline/tests
 Latest result:
 
 ```text
-176 passed, 0 failed
+193 passed, 0 failed
 ```
 
 ## 9. Known Limitations
 
-- M3G Weekly Digest Assembly is complete and acceptance passed.
-- Pipeline orchestration does not exist.
+- M3H Pipeline Orchestration is complete and acceptance passed.
+- The deterministic MVP pipeline is complete through weekly digest assembly.
 - Scoring, AI writing, and AI review do not exist.
 - No database exists.
 - The website is not integrated with the pipeline.
@@ -151,7 +156,7 @@ Latest result:
 
 ## 10. Exact Next Task
 
-Prepare M3H - Pipeline Orchestration.
+Prepare MVP v1.0 Final Review.
 
 ## 11. What Must Not Be Implemented Yet
 
@@ -182,14 +187,15 @@ Do not implement:
 10. `pipeline/relevance_classifier.py`
 11. `pipeline/ranker.py`
 12. `pipeline/weekly_digest.py`
-13. Existing pipeline tests relevant to the current task
+13. `pipeline/orchestrator.py`
+14. Existing pipeline tests relevant to the current task
 
 ## 13. Resume Instructions
 
 To resume work:
 
-1. Confirm the branch is `main`.
+1. Confirm the branch is `feature/pipeline-orchestration`.
 2. Run `git status` and ensure there are no unexpected changes.
 3. Run `python -m pytest pipeline/tests`.
-4. Prepare M3H - Pipeline Orchestration.
+4. Prepare MVP v1.0 Final Review.
 5. Do not start scoring, AI writing, database, or website integration until separately scoped.

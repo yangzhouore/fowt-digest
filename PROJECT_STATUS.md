@@ -1,6 +1,6 @@
 ﻿# PROJECT STATUS
 
-Last Updated: 2026-07-19
+Last Updated: 2026-07-20
 
 ---
 
@@ -22,13 +22,13 @@ main
 
 Current Branch:
 
-main
+feature/pipeline-orchestration
 
 Repository state:
 
-M3G Weekly Digest Assembly is complete on `main`. Acceptance review passed and
-the milestone was committed in `e76e0ca feat: add weekly digest assembly`. The
-repository is ready for M3H - Pipeline Orchestration.
+M3H Pipeline Orchestration is complete on `feature/pipeline-orchestration` and
+acceptance review passed. The deterministic MVP pipeline is complete and ready
+for PR review.
 
 ---
 
@@ -36,7 +36,7 @@ repository is ready for M3H - Pipeline Orchestration.
 
 Milestone:
 
-M3G - Weekly Digest Assembly
+M3H - Pipeline Orchestration
 
 Status:
 
@@ -44,7 +44,7 @@ Accepted
 
 Current slice:
 
-M3G weekly digest assembly acceptance passed
+M3H pipeline orchestration acceptance passed
 
 Completed:
 
@@ -59,13 +59,14 @@ Completed:
 - M3E - Deterministic FOWT Relevance Classification
 - M3F - Deterministic Ranking & Selection
 - M3G - Weekly Digest Assembly
+- M3H - Pipeline Orchestration
 
 Latest verified validation:
 
-- Command: `python -m pytest pipeline/tests/test_weekly_digest.py`
-- Result: 15 passed, 0 failed
+- Command: `python -m pytest pipeline/tests/test_orchestrator.py`
+- Result: 17 passed, 0 failed
 - Command: `python -m pytest pipeline/tests`
-- Result: 176 passed, 0 failed
+- Result: 193 passed, 0 failed
 - Command: `git diff --check`
 - Result: passed
 
@@ -120,10 +121,13 @@ Implemented:
 - `weekly_digest.json` writing
 - `weekly_digest_result.json` aggregate summary writing
 - rollback protection for partial weekly digest output writes
+- deterministic pipeline orchestration
+- file-contract handoff between accepted stages
+- `pipeline/orchestrator.py`
+- `pipeline/tests/test_orchestrator.py`
 
 Not yet implemented:
 
-- pipeline orchestration
 - scoring
 - AI workflow
 - website integration
@@ -133,11 +137,11 @@ Not yet implemented:
 
 # Immediate Next Task
 
-Prepare M3H - Pipeline Orchestration.
+Prepare MVP v1.0 Final Review.
 
 Next recommended milestone:
 
-M3H - Pipeline Orchestration
+MVP v1.0 Final Review
 
 Do not implement yet:
 
@@ -162,6 +166,7 @@ Implemented pipeline modules:
 - `pipeline/relevance_classifier.py`
 - `pipeline/ranker.py`
 - `pipeline/weekly_digest.py`
+- `pipeline/orchestrator.py`
 
 Implemented pipeline tests:
 
@@ -175,6 +180,7 @@ Implemented pipeline tests:
 - `pipeline/tests/test_relevance_classifier.py`
 - `pipeline/tests/test_ranker.py`
 - `pipeline/tests/test_weekly_digest.py`
+- `pipeline/tests/test_orchestrator.py`
 
 Website status:
 
@@ -208,8 +214,8 @@ Architecture rules:
 
 # Known Limitations
 
-- M3G Weekly Digest Assembly is complete and acceptance passed.
-- Pipeline orchestration does not exist.
+- M3H Pipeline Orchestration is complete and acceptance passed.
+- The deterministic MVP pipeline is complete through weekly digest assembly.
 - Scoring, AI writing, and AI review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.
 
@@ -226,15 +232,11 @@ Completed pipeline milestones:
 - M3E - Deterministic FOWT Relevance Classification
 - M3F - Deterministic Ranking & Selection
 - M3G - Weekly Digest Assembly
-
-Next recommended pipeline milestone:
-
 - M3H - Pipeline Orchestration
 
-Remaining pipeline work after current milestone:
+Next recommended step:
 
-- prepare M3H - Pipeline Orchestration
-- keep scoring, AI writing, and website integration out of scope until separately accepted
+- MVP v1.0 Final Review
 
 Future excluded work until separately scoped:
 
@@ -260,3 +262,4 @@ Future excluded work until separately scoped:
 - M3E relevance classification is deterministic and rule-based only.
 - M3F ranking and selection is deterministic and uses no scores, weights, AI, citation counts, diversity balancing, digest generation, or website behavior.
 - M3G weekly digest assembly copies selected ranked records only and does not add AI, summaries, editorial content, Markdown, HTML, website integration, or the broader WeeklyEdition model.
+- M3H pipeline orchestration sequences accepted stages only and does not alter stage behavior, retry, repair, or create new JSON products.

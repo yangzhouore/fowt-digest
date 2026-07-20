@@ -18,9 +18,13 @@ type PipelinePaper = {
   publicationSource: string | null;
   publicationType: string;
   publishedDate: string;
+  doi: string | null;
   sourceUrl: string | null;
+  openAccessStatus: string | null;
+  fullTextAvailability: string;
   topicTags: string[];
   rank: number;
+  selectionReason: string;
   relevanceAssessment?: {
     classification?: string;
   };
@@ -28,16 +32,22 @@ type PipelinePaper = {
 
 export type DigestPaper = {
   id: string;
+  slug: string;
   number: number;
   title: string;
   authors: string[];
   publicationSource: string;
   publicationType: string;
   publicationDate: string;
+  doi: string | null;
   topicTags: string[];
+  abstract: string | null;
   summary: string;
   sourceUrl: string | null;
+  openAccessStatus: string | null;
+  fullTextAvailability: string;
   classification: string | null;
+  selectionReason: string;
 };
 
 export type DigestEdition = {
@@ -63,19 +73,31 @@ export const currentDigest: DigestEdition = {
   papers: digest.selectedPapers.map(adaptPaper),
 };
 
+export function getDigestPaperBySlug(slug: string): DigestPaper | undefined {
+  return currentDigest.papers.find((paper) => paper.slug === slug);
+}
+
 function adaptPaper(paper: PipelinePaper): DigestPaper {
+  const abstract = paper.abstract;
+
   return {
     id: paper.paperId,
+    slug: slugFromPaperId(paper.paperId),
     number: paper.rank,
     title: paper.title,
     authors: paper.authors,
     publicationSource: paper.publicationSource ?? "Unknown source",
     publicationType: publicationTypeLabel(paper.publicationType),
     publicationDate: paper.publishedDate,
+    doi: paper.doi,
     topicTags: paper.topicTags,
-    summary: paper.abstract ?? "No abstract available from the pipeline output.",
+    abstract,
+    summary: abstract ?? "No abstract available.",
     sourceUrl: paper.sourceUrl,
+    openAccessStatus: paper.openAccessStatus,
+    fullTextAvailability: fullTextAvailabilityLabel(paper.fullTextAvailability),
     classification: paper.relevanceAssessment?.classification ?? null,
+    selectionReason: selectionReasonLabel(paper.selectionReason),
   };
 }
 
@@ -105,6 +127,8 @@ function validatePaper(value: unknown): void {
   requiredString(value.title, "selectedPapers.title");
   requiredString(value.publishedDate, "selectedPapers.publishedDate");
   requiredString(value.publicationType, "selectedPapers.publicationType");
+  requiredString(value.fullTextAvailability, "selectedPapers.fullTextAvailability");
+  requiredString(value.selectionReason, "selectedPapers.selectionReason");
   if (!Array.isArray(value.authors)) {
     throw new Error("weekly_digest.json selectedPapers.authors must be an array");
   }
@@ -127,6 +151,10 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
+function slugFromPaperId(paperId: string): string {
+  return paperId.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 function publicationTypeLabel(value: string): string {
   if (value === "journal") {
     return "Journal paper";
@@ -138,6 +166,32 @@ function publicationTypeLabel(value: string): string {
     return "Preprint";
   }
   return "Unknown type";
+}
+
+function fullTextAvailabilityLabel(value: string): string {
+  if (value === "full_text_available") {
+    return "Full text available";
+  }
+  if (value === "abstract_only") {
+    return "Abstract only";
+  }
+  if (value === "none") {
+    return "No full text or abstract available";
+  }
+  return value;
+}
+
+function selectionReasonLabel(value: string): string {
+  if (value === "selected_within_limit") {
+    return "Selected within limit";
+  }
+  if (value === "not_selected_below_limit") {
+    return "Not selected below limit";
+  }
+  if (value === "not_selected_not_relevant") {
+    return "Not selected because not relevant";
+  }
+  return value;
 }
 
 function formatDateRange(start: string, end: string): string {

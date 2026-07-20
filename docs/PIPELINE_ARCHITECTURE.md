@@ -2,13 +2,13 @@
 
 ## 1. Purpose
 
-This document defines the intended high-level architecture for the future FOWT Research Digest paper processing pipeline. The pipeline will move research from source discovery to human-approved publication data while keeping the website a simple presentation layer.
+This document defines the high-level architecture for the FOWT Research Digest paper processing pipeline. The implemented pipeline currently covers source collection through weekly digest assembly while keeping the website a simple presentation layer.
 
-The pipeline does not exist yet. This is a design document for future implementation.
+M3H Pipeline Orchestration is the next planned stage. Later scoring, AI-assisted editorial writing, factual review, human approval, and publication export remain future work.
 
 ## 2. Scope
 
-The planned workflow is:
+The implemented workflow through M3G is:
 
 ```text
 Paper sources
@@ -16,15 +16,11 @@ Paper sources
   -> Metadata normalisation
   -> Deduplication
   -> FOWT relevance classification
-  -> Scoring
-  -> Weekly selection
-  -> Editorial writing
-  -> Factual review
-  -> Human approval
-  -> Publication data
+  -> Ranking and selection
+  -> Weekly digest assembly
 ```
 
-The pipeline should be orchestrated by Python. The first prototype should run locally, read and write structured JSON files, and produce publication-ready data for the Next.js website to consume.
+The implemented prototype runs locally and reads and writes structured JSON files. M3H will add pipeline orchestration. Website integration and publication-ready export remain future work.
 
 ## 3. Non-goals
 
@@ -42,17 +38,15 @@ The first pipeline design does not include:
 
 ## 4. High-level workflow
 
-1. Paper sources provide candidate records from OpenAlex, Crossref, arXiv, and selected conference or publication APIs where available.
+1. Paper sources provide candidate records from OpenAlex first. Crossref, arXiv, and selected conference or publication APIs remain future sources.
 2. Collection retrieves raw metadata and stores source-specific records without trying to interpret them too early.
 3. Metadata normalisation converts raw records into a consistent internal format.
-4. Deduplication groups likely duplicate records across sources.
-5. FOWT relevance classification estimates whether each record is directly relevant to floating offshore wind turbines.
-6. Scoring evaluates relevant records using explicit editorial dimensions.
-7. Weekly selection chooses a balanced set of papers using score, topic diversity, and engineering significance.
-8. Editorial writing drafts structured summaries while distinguishing abstract-only analysis from full-text analysis.
-9. Factual review checks unsupported claims, incorrect numbers, missing limitations, and metadata inconsistencies.
-10. Human approval accepts, edits, rejects, or holds drafted entries.
-11. Publication data exports approved weekly editions and paper records as structured JSON for the website.
+4. Deduplication groups duplicate records using deterministic exact rules.
+5. FOWT relevance classification applies deterministic rules to label records as `Relevant`, `Possibly Relevant`, or `Not Relevant`.
+6. Ranking and selection deterministically ranks classified records and marks selected records without scoring, AI, or website integration.
+7. Weekly digest assembly copies selected ranked records into a minimal digest data product.
+8. Pipeline orchestration is the next planned stage.
+9. Scoring, AI-assisted editorial writing, factual review, human approval, and publication export remain future work.
 
 ## 5. Module responsibilities
 
@@ -94,15 +88,15 @@ Failure behaviour: keep uncertain duplicate groups for human or later review rat
 
 ### Relevance classifier
 
-Receives: deduplicated candidates with title, abstract, source, paper type, and categories where available.
+Receives: deduplicated papers with title, abstract, and topic tags.
 
 Produces: relevance decision, confidence, reason, and topic tags.
 
-Needs AI: yes, where title and abstract require semantic judgement. Deterministic keyword filters can be used as a first pass, but should not be the only classifier.
+Needs AI: no for the implemented M3E stage. It uses deterministic keyword rules only; AI-assisted classification remains future work if separately scoped.
 
 Can run independently: yes, after deduplication.
 
-Failure behaviour: mark records as `classification_pending` and exclude them from automatic selection until resolved.
+Failure behaviour: validation failures should be explicit; malformed inputs are rejected instead of silently repaired.
 
 ### Scorer
 
@@ -116,17 +110,29 @@ Can run independently: yes, for each candidate.
 
 Failure behaviour: mark scoring as incomplete and prevent the paper from being selected without manual override.
 
-### Selector
+### Ranker and selector
 
-Receives: scored candidates, weekly target size, topic tags, paper types, and editorial constraints.
+Receives: classified papers and a selection limit.
 
-Produces: selected weekly paper list plus rejected-but-relevant candidates.
+Produces: ranked papers plus an aggregate ranking result.
 
-Needs AI: optional. The first version should use deterministic ranking and diversity rules, with AI only if an editorial tie-break needs semantic reasoning.
+Needs AI: no. The implemented M3F stage uses deterministic classification/date/paper ID ordering only.
 
-Can run independently: yes, once scoring is complete.
+Can run independently: yes, once classification output exists.
 
-Failure behaviour: produce a partial selection report and identify missing score or diversity inputs.
+Failure behaviour: reject invalid classified input instead of silently repairing it.
+
+### Weekly digest assembler
+
+Receives: ranked papers with already-selected records.
+
+Produces: weekly digest output plus an aggregate digest result.
+
+Needs AI: no. The implemented M3G stage copies selected ranked records only and does not add summaries, editorial content, Markdown, HTML, or website integration.
+
+Can run independently: yes, once ranking output exists.
+
+Failure behaviour: reject invalid ranked input instead of sorting, re-ranking, re-selecting, or silently repairing it.
 
 ### Writer
 
@@ -196,7 +202,7 @@ Deterministic Python should handle:
 
 AI-assisted steps should be limited to cases requiring semantic judgement or writing:
 
-- FOWT relevance classification when keyword rules are insufficient;
+- future AI-assisted FOWT relevance classification if deterministic rules become insufficient;
 - scoring rationale;
 - topic interpretation;
 - editorial summaries;
@@ -210,10 +216,11 @@ AI outputs should be treated as draft or advisory data until reviewed by determi
 | --- | --- | --- |
 | Collection | Date range, source config, query terms | Raw source records |
 | Metadata normalisation | Raw source records | Normalised candidate records |
-| Deduplication | Normalised records | Deduplicated candidate records with provenance |
-| Relevance classification | Deduplicated candidates | Relevance labels, confidence, reasons, topic tags |
+| Deduplication | Normalised records | Deduplicated paper records with provenance |
+| Relevance classification | Deduplicated papers | Classified papers and aggregate classification result |
+| Ranking and selection | Classified papers | Ranked papers and aggregate ranking result |
+| Weekly digest assembly | Ranked papers | Weekly digest and aggregate digest result |
 | Scoring | Relevant candidates and evidence text | Score dimensions and rationale |
-| Weekly selection | Scored candidates and diversity rules | Selected papers and selection report |
 | Editorial writing | Selected papers and evidence | Draft editorial entries |
 | Factual review | Draft entries and source evidence | Review findings and required corrections |
 | Human approval | Drafts and review findings | Approved, rejected, or held entries |
@@ -226,7 +233,8 @@ Failures should be explicit and recoverable where possible.
 - Collection should retry transient API failures but not hide source outages.
 - Normalisation should quarantine malformed records.
 - Deduplication should preserve uncertain matches rather than deleting records.
-- Classification and scoring failures should mark records as pending or incomplete.
+- Classification, ranking, and weekly digest assembly should reject invalid input contracts instead of silently repairing them.
+- Scoring failures should mark records as pending or incomplete once scoring exists.
 - Writing failures should not remove selected papers from the run.
 - Review failures should block publication for affected entries.
 - Export should write to a temporary output first, validate required fields, then replace publication data only after success.

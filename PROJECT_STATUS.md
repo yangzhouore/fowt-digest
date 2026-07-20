@@ -26,8 +26,9 @@ main
 
 Repository state:
 
-M3G Weekly Digest Assembly is complete on `main`. Acceptance review passed. The
-current M3G changes are ready for release preparation.
+M3G Weekly Digest Assembly is complete on `main`. Acceptance review passed and
+the milestone was committed in `e76e0ca feat: add weekly digest assembly`. The
+repository is ready for M3H - Pipeline Orchestration.
 
 ---
 

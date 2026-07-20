@@ -1,4 +1,4 @@
-﻿# PROJECT HANDOVER
+# PROJECT HANDOVER
 
 Last Updated: 2026-07-19
 
@@ -24,8 +24,7 @@ M3G - Weekly Digest Assembly
 
 Current slice:
 
-M3G is complete and acceptance review passed. The current M3G release changes
-are ready for commit and push.
+M3G is complete and acceptance review passed. It was committed in `e76e0ca feat: add weekly digest assembly` on `main` and pushed to `origin/main`.
 
 Latest validation:
 
@@ -33,7 +32,7 @@ Latest validation:
 - `python -m pytest pipeline/tests` - 176 passed, 0 failed
 - `git diff --check` - passed
 
-The next recommended milestone is M3H - Pipeline Orchestration. It has not started.
+The next recommended milestone is M3H - Pipeline Orchestration. It has not started. The M3G post-commit readiness check found `main` synchronized with `origin/main` and the working tree clean before this documentation-only cleanup.
 
 ## 4. Completed Milestones
 

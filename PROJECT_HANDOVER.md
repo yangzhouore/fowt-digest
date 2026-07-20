@@ -19,12 +19,11 @@ pipeline MVP is complete through orchestration and weekly digest assembly.
 
 Milestone:
 
-M3H - Pipeline Orchestration
+MVP v1.0 - Deterministic Pipeline Release
 
 Current slice:
 
-M3H is complete, acceptance review passed, and the milestone has been merged
-to `main`.
+M3A through M3H are complete, accepted, merged to `main`, and prepared for MVP v1.0 release.
 
 Latest validation:
 
@@ -33,7 +32,7 @@ Latest validation:
 - `git diff --check` - passed
 - Working tree - clean after merge readiness check
 
-The next step is MVP v1.0 Final Review. It has not started.
+The next step is Website MVP.
 
 ## 4. Completed Milestones
 
@@ -149,7 +148,7 @@ Latest result:
 ## 9. Known Limitations
 
 - M3H Pipeline Orchestration is complete and acceptance passed.
-- The deterministic MVP pipeline is complete through weekly digest assembly.
+- The deterministic MVP pipeline is complete through orchestration and weekly digest assembly.
 - Scoring, AI writing, and AI review do not exist.
 - No database exists.
 - The website is not integrated with the pipeline.
@@ -157,7 +156,7 @@ Latest result:
 
 ## 10. Exact Next Task
 
-Prepare MVP v1.0 Final Review.
+Prepare Website MVP.
 
 ## 11. What Must Not Be Implemented Yet
 
@@ -198,5 +197,5 @@ To resume work:
 1. Confirm the branch is `main`.
 2. Run `git status` and ensure there are no unexpected changes.
 3. Run `python -m pytest pipeline/tests`.
-4. Prepare MVP v1.0 Final Review.
+4. Prepare Website MVP.
 5. Do not start scoring, AI writing, database, or website integration until separately scoped.

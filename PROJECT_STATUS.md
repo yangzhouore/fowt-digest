@@ -36,15 +36,15 @@ complete.
 
 Milestone:
 
-M3H - Pipeline Orchestration
+MVP v1.0 - Deterministic Pipeline Release
 
 Status:
 
-Accepted
+Release documentation prepared
 
 Current slice:
 
-M3H pipeline orchestration acceptance passed
+M3A through M3H are complete and merged to main
 
 Completed:
 
@@ -137,11 +137,11 @@ Not yet implemented:
 
 # Immediate Next Task
 
-Prepare MVP v1.0 Final Review.
+Prepare Website MVP.
 
 Next recommended milestone:
 
-MVP v1.0 Final Review
+Website MVP
 
 Do not implement yet:
 
@@ -215,7 +215,7 @@ Architecture rules:
 # Known Limitations
 
 - M3H Pipeline Orchestration is complete and acceptance passed.
-- The deterministic MVP pipeline is complete through weekly digest assembly.
+- The deterministic MVP pipeline is complete through orchestration and weekly digest assembly.
 - Scoring, AI writing, and AI review do not exist.
 - The website uses fictional mock data and is not connected to the pipeline.
 
@@ -236,7 +236,7 @@ Completed pipeline milestones:
 
 Next recommended step:
 
-- MVP v1.0 Final Review
+- Website MVP
 
 Future excluded work until separately scoped:
 

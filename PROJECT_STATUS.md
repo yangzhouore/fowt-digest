@@ -22,7 +22,7 @@ main
 
 Current Branch:
 
-feature/website-paper-detail
+feature/website-archive
 
 Repository state:
 
@@ -44,7 +44,7 @@ In Progress
 
 Current slice:
 
-Website MVP Feature 02 - Paper Detail Integration complete
+Website MVP Feature 03 - Archive Integration complete
 
 Completed:
 
@@ -130,24 +130,24 @@ Not yet implemented:
 
 - scoring
 - AI workflow
-- remaining website integration beyond Feature 02
+- remaining website polish and integration beyond Feature 03
 - database
 
 ---
 
 # Immediate Next Task
 
-Prepare Website MVP Feature 03 - Archive Integration.
+Prepare Website UX Polish.
 
 Next recommended milestone:
 
-Website MVP Feature 03 - Archive Integration
+Website UX Polish
 
 Do not implement yet:
 
 - scoring
 - AI workflow
-- remaining website integration beyond Feature 02
+- remaining website polish and integration beyond Feature 03
 - database
 
 ---
@@ -186,14 +186,16 @@ Website status:
 
 - Website MVP Feature 01 displays one real static pipeline digest on the homepage and weekly page.
 - Website MVP Feature 02 displays 6 real static paper detail pages from the same digest.
+- Website MVP Feature 03 displays one real archive entry from the same digest.
 - Homepage -> Weekly -> Paper Detail reading workflow is complete.
+- Archive -> Weekly browsing workflow is complete.
 - Source run: `run_20260720_090000_openalex`.
 - `web/data/weekly_digest.json` contains 6 selected papers from that run.
 - `npm.cmd run lint` and `npm.cmd run build` pass.
 - static Next.js MVP exists under `web/`
 - website deployment readiness work is complete
 - website has not been deployed from this repository state
-- Archive, About, and Methodology still contain prototype/mock-data wording until separately scoped.
+- About and Methodology still contain prototype/mock-data wording until separately scoped.
 - the website uses a static copied pipeline digest and does not run the pipeline
 
 ---
@@ -223,7 +225,7 @@ Architecture rules:
 - M3H Pipeline Orchestration is complete and acceptance passed.
 - The deterministic MVP pipeline is complete through orchestration and weekly digest assembly.
 - Scoring, AI writing, and AI review do not exist.
-- Homepage, Weekly, and Paper Detail use one real static pipeline digest. Archive, About, and Methodology still include prototype/mock-data wording until separately scoped.
+- Homepage, Weekly, Paper Detail, and Archive use one real static pipeline digest. About and Methodology still include prototype/mock-data wording until separately scoped.
 
 ---
 

@@ -2,15 +2,17 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "../site-header";
 import { SiteFooter } from "../site-footer";
-import { archiveEditions } from "../../data/mock-papers";
+import { getAllDigests } from "../../data/digest-adapter";
 
 export const metadata: Metadata = {
   title: "Archive",
   description:
-    "Prototype archive of weekly floating offshore wind research digest editions.",
+    "Archive of available floating offshore wind research digest editions.",
 };
 
 export default function ArchivePage() {
+  const digests = getAllDigests();
+
   return (
     <main>
       <SiteHeader />
@@ -19,45 +21,35 @@ export default function ArchivePage() {
         <p className="eyebrow">Archive</p>
         <h1 id="archive-heading">Weekly editions in sequence.</h1>
         <p>
-          A prototype chronological record for testing how weekly FOWT digest
-          editions will be browsed as the publication grows. Only the current
-          fictional edition is available in this MVP.
+          Browse available static pipeline digest snapshots. The archive
+          currently lists the single real digest copied into the website.
         </p>
       </section>
 
       <section aria-labelledby="archive-list-heading">
         <h2 id="archive-list-heading">Editions</h2>
         <ol className="archive-list">
-          {archiveEditions.map((edition) => (
-            <li key={edition.slug}>
+          {digests.map((digest) => (
+            <li key={digest.slug}>
               <article>
                 <h3>
-                  {edition.available ? (
-                    <Link href={`/weekly/${edition.slug}`}>
-                      {edition.dateRange}
-                    </Link>
-                  ) : (
-                    edition.dateRange
-                  )}
+                  <Link href={`/weekly/${digest.slug}`}>
+                    {digest.dateRange}
+                  </Link>
                 </h3>
                 <dl className="archive-meta">
                   <div>
-                    <dt>Papers reviewed</dt>
-                    <dd>{edition.papersReviewed}</dd>
+                    <dt>Selected papers</dt>
+                    <dd>{digest.selectedPaperCount}</dd>
                   </div>
                   <div>
-                    <dt>Selected</dt>
-                    <dd>{edition.papersSelected}</dd>
-                  </div>
-                  <div>
-                    <dt>Reading time</dt>
-                    <dd>{edition.readingTime}</dd>
-                  </div>
-                  <div>
-                    <dt>Status</dt>
-                    <dd>{edition.available ? "Available" : "Prototype only"}</dd>
+                    <dt>Generated</dt>
+                    <dd>{digest.generatedAt}</dd>
                   </div>
                 </dl>
+                <p className="text-link-row">
+                  <Link href={`/weekly/${digest.slug}`}>View weekly digest</Link>
+                </p>
               </article>
             </li>
           ))}
@@ -65,10 +57,11 @@ export default function ArchivePage() {
       </section>
 
       <section aria-labelledby="archive-notice-heading">
-        <h2 id="archive-notice-heading">Mock-data notice</h2>
+        <h2 id="archive-notice-heading">Pipeline-data notice</h2>
         <p>
-          Archive entries are fictional mock data for development only. Past
-          prototype editions are placeholders and are intentionally not linked.
+          Archive entries are static local copies of deterministic pipeline
+          digest outputs. The website does not run the pipeline or generate
+          historical entries automatically.
         </p>
       </section>
 

@@ -1,4 +1,4 @@
-import weeklyDigestJson from "./weekly_digest.json";
+﻿import weeklyDigestJson from "./weekly_digest.json";
 
 type PipelineDigest = {
   schemaVersion: string;
@@ -72,6 +72,10 @@ export const currentDigest: DigestEdition = {
   )}.`,
   papers: digest.selectedPapers.map(adaptPaper),
 };
+
+export function getAllDigests(): DigestEdition[] {
+  return [currentDigest];
+}
 
 export function getDigestPaperBySlug(slug: string): DigestPaper | undefined {
   return currentDigest.papers.find((paper) => paper.slug === slug);

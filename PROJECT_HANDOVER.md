@@ -1,4 +1,4 @@
-﻿# Project Handover
+# Project Handover
 
 Last updated: 2026-07-21
 
@@ -71,6 +71,8 @@ Do not add without an explicit milestone:
 ## Current Limitations
 
 - The website displays one static digest snapshot with 6 selected papers.
+- Weekly Digest scanability polish through UX-02 is complete, accepted, and
+  committed in `3f5b9d7`.
 - About and Methodology may still contain prototype wording until separately
   scoped.
 - There is no historical digest dataset beyond the one copied snapshot.

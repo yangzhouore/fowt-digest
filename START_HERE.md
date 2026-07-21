@@ -1,4 +1,4 @@
-﻿# Start Here
+# Start Here
 
 Use this file as the first entry point for a new Codex session.
 
@@ -6,19 +6,23 @@ Use this file as the first entry point for a new Codex session.
 
 - Branch: `feature/website-ux-polish`
 - Milestone: Website UX Polish
-- Current feature: UX-02 Weekly Digest Scanability
-- Current phase: design accepted; implementation not started
-- Immediate next task: implement UX-02 on the Weekly Digest page
+- Current feature: UX-03 Paper Detail Readability
+- Current phase: not started; design review is next
+- Current implementation scope: none accepted for UX-03 yet
+- Immediate next task: begin UX-03 design review for the Paper Detail page
 
 Everything before this point is complete and accepted unless
 `PROJECT_STATUS.md` says otherwise.
 
-## Accepted UX-02 Rule
+## Completed UX-02 Baseline
 
-Weekly Digest is a browsing page, not a reading page. Paper Detail remains the
-only page showing the complete abstract.
+UX-02 Weekly Digest Scanability is complete, accepted, and committed in
+`3f5b9d7` (`Implement UX-02 weekly digest scanability`).
 
-Display rule:
+The Weekly Digest page is now a browsing page. Paper Detail remains the only
+page showing the complete abstract.
+
+Implemented display rule:
 
 - If an abstract exists, display the first 280 characters of the existing
   abstract string.
@@ -27,12 +31,19 @@ Display rule:
 - If the abstract is longer than 280 characters, append `...`.
 - If no abstract exists, display `No abstract available.`
 
-Boundaries:
+## Next UX Feature
 
-- Do not modify pipeline data.
-- Do not modify `web/data/digest-adapter.ts`.
-- Do not modify Paper Detail.
-- Do not add search, filters, backend, database, AI, or new fixtures.
+UX-03 Paper Detail Readability is not started. The next action is design review
+only.
+
+Scope from `docs/UX_ROADMAP.md`:
+
+- improve one-paper reading hierarchy;
+- present the complete abstract clearly;
+- group metadata without exposing low-value internal fields;
+- handle missing fields neutrally.
+
+Do not implement UX-03 until its design has been reviewed and accepted.
 
 ## Reading Order
 

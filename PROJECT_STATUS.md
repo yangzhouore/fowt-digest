@@ -1,4 +1,4 @@
-﻿# Project Status
+# Project Status
 
 Last updated: 2026-07-21
 
@@ -6,10 +6,11 @@ Last updated: 2026-07-21
 
 - Current branch: `feature/website-ux-polish`
 - Current milestone: Website UX Polish
-- Current feature: UX-02 Weekly Digest Scanability
-- Current phase: design accepted; implementation not started
-- Immediate next task: implement UX-02 on the Weekly Digest page
-- Repository state before this documentation cleanup: UX-01 committed and pushed
+- Current feature: UX-03 Paper Detail Readability
+- Current phase: not started; design review is next
+- Current implementation scope: none accepted for UX-03 yet
+- Immediate next task: begin UX-03 design review for the Paper Detail page
+- Repository state before this documentation cleanup: UX-02 accepted and committed in `3f5b9d7`
 
 ## Latest Accepted Work
 
@@ -20,6 +21,7 @@ Last updated: 2026-07-21
 - Website Feature 03 complete: Archive lists the real static digest.
 - UX Polish design baseline complete in `docs/PRODUCT_VISION.md` and `docs/UX_ROADMAP.md`.
 - UX-01 Homepage Entry and Reader Framing complete and accepted.
+- UX-02 Weekly Digest Scanability complete, accepted, and committed.
 
 ## Latest Validation
 
@@ -27,8 +29,12 @@ Last updated: 2026-07-21
 - UX-01 website validation: `npm.cmd run lint` passed.
 - UX-01 website validation: `npm.cmd run build` passed.
 - UX-01 repository validation: `git diff --check` passed.
+- UX-02 acceptance review: local Weekly Digest route returned HTTP 200; rendered paper links matched pipeline rank order; abstract previews and missing-abstract fallback matched the accepted rule.
+- UX-02 website validation: `npm.cmd run lint` passed.
+- UX-02 website validation: `npm.cmd run build` passed.
+- UX-02 repository validation: `git diff --check` passed.
 
-## UX-02 Accepted Rule
+## UX-02 Completed Baseline
 
 Weekly Digest is a browsing page. Paper Detail remains the only page that shows
 the complete abstract.
@@ -39,18 +45,21 @@ the complete abstract.
 - Preserve original wording exactly.
 - If the abstract is longer than 280 characters, append `...`.
 - If no abstract exists, display `No abstract available.`
-- This is presentation only.
+- This is presentation only and has been implemented on the Weekly Digest page.
 - Do not modify pipeline data.
 - Do not modify `web/data/digest-adapter.ts`.
 - Do not modify Paper Detail.
 
 ## Current Boundaries
 
-Do not implement in UX-02:
+UX-03 Paper Detail Readability is next, but no UX-03 design has been accepted
+yet. Do not implement UX-03 until design review is complete.
+
+Do not add without an explicit accepted scope:
 
 - pipeline changes;
 - adapter changes;
-- Paper Detail changes;
+- Weekly Digest changes;
 - Archive changes;
 - Homepage changes;
 - search, filters, backend, database, AI, deployment, or new data fixtures.

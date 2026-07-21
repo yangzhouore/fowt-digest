@@ -1,4 +1,4 @@
-﻿# UX Roadmap
+# UX Roadmap
 
 ## Purpose
 
@@ -29,8 +29,8 @@ The current digest contains one weekly edition and 6 selected papers.
 ## Progress
 
 - UX-01 Homepage Entry And Reader Framing: complete and accepted.
-- UX-02 Weekly Digest Scanability: design accepted; implementation not started.
-- UX-03 Paper Detail Readability: not started.
+- UX-02 Weekly Digest Scanability: complete, accepted, and committed.
+- UX-03 Paper Detail Readability: not started; next UX feature.
 - UX-04 Archive Expectation Polish: not started.
 - UX-05 Global Presentation Polish: not started.
 
@@ -70,7 +70,7 @@ Scope:
 
 ## UX-02 Weekly Digest Scanability
 
-Status: design accepted; implementation not started.
+Status: complete, accepted, and committed.
 
 Scope:
 
@@ -144,10 +144,9 @@ Do not introduce backend, database, AI, search, filters, or deployment work.
 
 ## Recommended Order
 
-1. UX-02 Weekly Digest Scanability
-2. UX-03 Paper Detail Readability
-3. UX-04 Archive Expectation Polish
-4. UX-05 Global Presentation Polish
+1. UX-03 Paper Detail Readability
+2. UX-04 Archive Expectation Polish
+3. UX-05 Global Presentation Polish
 
-UX-01 is already complete. Each remaining UX feature should be one focused
-commit and independently reviewed.
+UX-01 and UX-02 are already complete. Each remaining UX feature should be one
+focused commit and independently reviewed.

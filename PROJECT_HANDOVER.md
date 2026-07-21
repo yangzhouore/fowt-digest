@@ -12,7 +12,7 @@ The website is a static public MVP. The homepage, weekly page, 6 paper detail pa
 
 ## 2. Current Branch
 
-`feature/website-archive`
+`feature/website-ux-polish`
 
 ## 3. Current Milestone and Slice
 
@@ -22,7 +22,7 @@ Website MVP
 
 Current slice:
 
-Website MVP Feature 03 - Archive Integration is complete. Homepage, Weekly page, 6 Paper Detail pages, and Archive display `web/data/weekly_digest.json` from source run `run_20260720_090000_openalex` with 6 selected papers.
+Website UX Polish design phase is complete. `docs/PRODUCT_VISION.md` and `docs/UX_ROADMAP.md` are the design baseline. No UX implementation feature has started.
 
 Latest validation:
 
@@ -32,7 +32,7 @@ Latest validation:
 - `npm.cmd run lint` - passed
 - `npm.cmd run build` - passed
 
-The next milestone is Website UX Polish.
+The next task is UX-01 Homepage Entry and Reader Framing design review.
 
 ## 4. Completed Milestones
 
@@ -153,11 +153,13 @@ Latest result:
 - No database exists.
 - Homepage, Weekly page, 6 Paper Detail pages, and Archive display one static copied pipeline digest.
 - Website MVP navigation is complete: Homepage -> Weekly -> Paper Detail and Archive -> Weekly.
+- UX Polish design baseline is documented in `docs/PRODUCT_VISION.md` and `docs/UX_ROADMAP.md`.
+- No UX implementation feature has started.
 - The website still does not run the pipeline.
 
 ## 10. Exact Next Task
 
-Prepare Website UX Polish.
+Perform UX-01 Homepage Entry and Reader Framing design review.
 
 ## 11. What Must Not Be Implemented Yet
 
@@ -195,8 +197,8 @@ Do not implement:
 
 To resume work:
 
-1. Confirm the branch is `feature/website-archive`.
+1. Confirm the branch is `feature/website-ux-polish`.
 2. Run `git status` and ensure there are no unexpected changes.
 3. Run `python -m pytest pipeline/tests`.
-4. Prepare Website UX Polish.
+4. Perform UX-01 Homepage Entry and Reader Framing design review.
 5. Do not start scoring, AI writing, database, or additional website integration beyond the scoped next feature.

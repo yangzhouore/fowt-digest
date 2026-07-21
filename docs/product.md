@@ -1,3 +1,7 @@
+# Historical Note
+
+This document is preserved as early project context. It is not the current status, roadmap, or resume source. For current work, read START_HERE.md, PROJECT_STATUS.md, PROJECT_HANDOVER.md, docs/PRODUCT_VISION.md, and docs/UX_ROADMAP.md.
+
 # Product Definition
 
 ## Purpose
@@ -17,7 +21,7 @@ The MVP includes:
 - individual paper pages;
 - an archive page;
 - a methodology page;
-- mock paper data stored locally.
+- local structured data used by the early MVP.
 
 The MVP excludes authentication, accounts, comments, payments, personalised recommendations, databases, API servers, autonomous publication, MCP servers, production AI agents, and automated ingestion.
 
@@ -37,7 +41,7 @@ Each paper entry should preserve:
 - summary;
 - limitations.
 
-Mock data must be clearly marked as mock data. Do not invent real paper metadata or research findings.
+Local data should be clearly identified by source. Do not invent real paper metadata or research findings.
 
 ## Core User Flow
 

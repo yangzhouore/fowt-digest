@@ -1,10 +1,13 @@
 ﻿# UX Roadmap
 
-## UX Polish Goal
+## Purpose
 
-Website UX Polish improves the reading experience for the current static pipeline digest without changing pipeline data, adding generated content, or expanding product scope.
+This roadmap defines Website UX Polish work only. It does not track detailed
+repository status and does not change pipeline contracts or data.
 
-The goal is to make Homepage, Weekly Digest, Paper Detail, and Archive easier to scan and understand while preserving the deterministic pipeline as the source of truth.
+The website is a reading layer over deterministic pipeline output. UX work may
+improve hierarchy, formatting, and scanability. It must not invent content,
+repair data, re-rank papers, or add product features outside the scoped UX item.
 
 ## Current Product State
 
@@ -15,198 +18,136 @@ Homepage -> Weekly Digest -> Paper Detail
 Archive -> Weekly Digest
 ```
 
-The website currently uses one static copied pipeline output:
+The website uses one static copied pipeline output:
 
 ```text
 web/data/weekly_digest.json
 ```
 
-The digest contains one weekly edition and 6 selected papers. Homepage, Weekly Digest, Paper Detail, and Archive use this real pipeline data. About and Methodology may still contain prototype wording until separately scoped.
+The current digest contains one weekly edition and 6 selected papers.
 
-## Main UX Problems
+## Progress
 
-### Presentation Issues
+- UX-01 Homepage Entry And Reader Framing: complete and accepted.
+- UX-02 Weekly Digest Scanability: design accepted; implementation not started.
+- UX-03 Paper Detail Readability: not started.
+- UX-04 Archive Expectation Polish: not started.
+- UX-05 Global Presentation Polish: not started.
 
-- Some copy still frames the site as a pipeline preview before it frames it as a digest.
-- Pipeline-data notices are repetitive and can interrupt reading.
-- Homepage duplicates too much Weekly Digest content and is not yet a strong entry point.
-- Paper Detail pages are accurate but read like metadata records rather than reader-facing paper pages.
-- Metadata density can compete with titles and abstracts.
-- Raw or low-value fields such as unknown publication type can feel incomplete when shown prominently.
-- Date display is not consistently reader-friendly.
-- Topic tag lists can be long and hard to scan.
-- Archive copy should set expectations around one available edition.
-- Header and navigation work, but should stay focused on the reading journey.
+## Presentation Issues Versus Dataset Limitations
 
-### Dataset Limitations
+Presentation issues that UX Polish can address:
 
-- Only one real digest snapshot is available.
-- Some selected papers have no abstract.
-- Current publication type values may be `unknown`.
-- Some papers have many source-derived topic tags.
-- The pipeline does not provide editorial summaries, findings, limitations, scores, or reading-time estimates.
+- reading hierarchy;
+- metadata density;
+- date formatting;
+- topic display;
+- abstract preview length;
+- repetitive notices;
+- page-level framing and call-to-action clarity.
 
-These limitations must not be solved by inventing content in the website.
+Dataset limitations that UX Polish must not hide by inventing content:
 
-## Prioritised UX Features
+- only one static digest exists;
+- some papers have no abstract;
+- some optional fields are unknown;
+- topic tags come from source metadata and may be long;
+- the pipeline does not provide editorial summaries, findings, limitations,
+  scores, reading time, or human review text.
 
 ## UX-01 Homepage Entry And Reader Framing
 
-### Scope
+Status: complete and accepted.
 
-Improve the Homepage as the main entry point to the current digest.
+Scope:
 
-Focus on:
-
-- clearer reader-facing introduction;
-- less pipeline-heavy copy;
-- removal of stale fictional wording in visible product metadata where scoped;
-- stronger current-edition call to action;
-- clickable paper titles where papers are previewed;
-- avoiding duplication of the full Weekly Digest page.
-
-### Presentation Versus Dataset
-
-Presentation improvements can clarify that the site displays one deterministic digest snapshot. Dataset limitations, such as having only one digest and no editorial summaries, should remain explicit but secondary.
-
-### Acceptance Focus
-
-- Homepage explains the product before explaining pipeline mechanics.
-- Homepage still states that data comes from a static deterministic pipeline digest.
-- Homepage links naturally to Weekly Digest and Paper Detail.
-- No generated summaries, invented claims, or new data fields are introduced.
+- frame the product as a weekly FOWT research digest before describing the
+  pipeline;
+- present the current digest as the primary entry point;
+- preview only a small number of papers;
+- keep pipeline provenance visible but secondary;
+- update root metadata so it no longer describes fictional content.
 
 ## UX-02 Weekly Digest Scanability
 
-### Scope
+Status: design accepted; implementation not started.
 
-Improve the Weekly Digest page as the primary list-reading experience.
+Scope:
 
-Focus on:
+- improve hierarchy inside the Weekly Digest list;
+- reduce metadata density;
+- make dates easier to scan;
+- improve topic tag presentation;
+- show abstract previews only;
+- preserve pipeline rank order and existing paper links.
 
-- clearer edition hierarchy;
-- compact paper list presentation;
-- readable metadata ordering;
-- concise abstract previews;
-- topic tag display that reduces overload;
-- clear paper title links to detail pages;
-- fewer repeated notices.
+Accepted abstract preview rule:
 
-### Presentation Versus Dataset
+- Weekly Digest is a browsing page, not a reading page.
+- Paper Detail remains the only page showing the complete abstract.
+- If an abstract exists, display the first 280 characters of the existing
+  abstract string.
+- Do not rewrite, summarise, or interpret the text.
+- Preserve original wording exactly.
+- If the abstract is longer than 280 characters, append `...`.
+- If no abstract exists, display `No abstract available.`
+- This is presentation only.
+- Do not modify pipeline data, the digest adapter, or Paper Detail.
 
-The page may format and limit display density, but it must preserve paper order and must not change selection, ranking, classifications, or topic data.
+Acceptance focus:
 
-### Acceptance Focus
-
-- Selected papers remain in pipeline rank order.
-- Each paper is easier to scan before opening detail.
-- Topic and abstract presentation reduce cognitive load.
-- No search, filtering, sorting, scoring, or AI content is added.
+- selected papers remain in pipeline rank order;
+- the page remains a browsing page;
+- topic and metadata presentation are easier to scan;
+- no search, filtering, sorting, scoring, AI content, or data repair is added.
 
 ## UX-03 Paper Detail Readability
 
-### Scope
+Status: not started.
 
-Improve Paper Detail pages as the complete metadata reading view for one selected paper.
+Scope:
 
-Focus on:
+- improve one-paper reading hierarchy;
+- present the complete abstract clearly;
+- group metadata without exposing low-value internal fields;
+- handle missing fields neutrally.
 
-- stronger title and source/date hierarchy;
-- abstract presentation before dense supporting metadata where appropriate;
-- cleaner metadata grouping;
-- omission or de-emphasis of unknown optional fields;
-- consistent date formatting;
-- neutral fallback for missing abstract;
-- clear source link placement.
-
-### Presentation Versus Dataset
-
-The page can improve how real fields are ordered and displayed. It must not add research problem, methodology, findings, engineering relevance, limitations, scores, or generated summaries because the current pipeline does not provide them.
-
-### Acceptance Focus
-
-- Paper Detail feels like a readable paper page, not a raw record dump.
-- Full real metadata remains accessible where useful.
-- Missing data is handled neutrally.
-- No internal identifiers or pipeline-only fields are exposed unless already accepted for reader value.
+Do not add research problem, methodology, findings, engineering relevance,
+limitations, scores, or generated summaries unless the pipeline later provides
+those fields through an accepted contract.
 
 ## UX-04 Archive Expectation Polish
 
-### Scope
+Status: not started.
 
-Improve Archive as the browsing entry point for available weekly digests.
+Scope:
 
-Focus on:
+- make the one-entry archive feel intentional;
+- avoid implying unavailable historical editions;
+- preserve Archive -> Weekly navigation.
 
-- setting expectations that only one static digest is currently available;
-- presenting the current edition clearly;
-- preserving Archive -> Weekly navigation;
-- avoiding language that implies unavailable historical depth.
-
-### Presentation Versus Dataset
-
-The one-entry archive is a dataset limitation. Do not add placeholder editions or fake history.
-
-### Acceptance Focus
-
-- Archive uses real digest data only.
-- Archive does not imply more editions exist than are available.
-- Archive remains useful as the future home for historical digests.
-- No pagination, search, filters, or new data fixtures are added.
+Do not add fake history, pagination, search, filters, or new fixtures.
 
 ## UX-05 Global Presentation Polish
 
-### Scope
+Status: not started.
 
-Address cross-page presentation issues after the page-specific improvements.
+Scope:
 
-Focus on:
+- align date formatting;
+- reduce repeated notices;
+- align metadata labels;
+- check mobile scanability;
+- address header/navigation clarity only if it directly improves reading flow.
 
-- consistent date formatting;
-- consistent notice wording;
-- metadata labels that are reader-friendly;
-- topic display conventions;
-- header/navigation clarity;
-- mobile scanability;
-- stale root metadata that still describes fictional content.
+Do not introduce backend, database, AI, search, filters, or deployment work.
 
-### Presentation Versus Dataset
+## Recommended Order
 
-Global polish should improve consistency and comprehension. It should not change pipeline contracts, add data products, or introduce broader website features.
+1. UX-02 Weekly Digest Scanability
+2. UX-03 Paper Detail Readability
+3. UX-04 Archive Expectation Polish
+4. UX-05 Global Presentation Polish
 
-### Acceptance Focus
-
-- Pages feel like one coherent reading experience.
-- Notices are factual but not repetitive.
-- Navigation remains simple and predictable.
-- No backend, database, search, filters, AI, or deployment work is introduced.
-
-## Recommended Implementation Order
-
-1. UX-01 Homepage Entry And Reader Framing
-2. UX-02 Weekly Digest Scanability
-3. UX-03 Paper Detail Readability
-4. UX-04 Archive Expectation Polish
-5. UX-05 Global Presentation Polish
-
-Each feature should be implemented as one focused commit and independently reviewed before proceeding to the next feature.
-
-## Explicit Non-goals
-
-UX Polish does not include:
-
-- pipeline changes;
-- new JSON fixtures;
-- AI summaries;
-- editorial analysis;
-- generated findings or limitations;
-- scoring;
-- search;
-- filters;
-- pagination;
-- authentication;
-- backend services;
-- API routes;
-- database work;
-- deployment configuration;
-- automated publishing.
+UX-01 is already complete. Each remaining UX feature should be one focused
+commit and independently reviewed.

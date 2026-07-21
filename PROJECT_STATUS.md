@@ -1,243 +1,61 @@
-﻿# PROJECT STATUS
+﻿# Project Status
 
-Last Updated: 2026-07-20
+Last updated: 2026-07-21
 
----
+## Current State
 
-# Project
+- Current branch: `feature/website-ux-polish`
+- Current milestone: Website UX Polish
+- Current feature: UX-02 Weekly Digest Scanability
+- Current phase: design accepted; implementation not started
+- Immediate next task: implement UX-02 on the Weekly Digest page
+- Repository state before this documentation cleanup: UX-01 committed and pushed
 
-FOWT Research Digest is a weekly editorial website and separate Python pipeline
-for curating research related to Floating Offshore Wind Turbines (FOWT).
+## Latest Accepted Work
 
-The website should remain a simple editorial publication. The Python pipeline
-should remain independent from the frontend.
+- Deterministic pipeline MVP complete through M3H Pipeline Orchestration.
+- MVP v1.0.0 tag published for the deterministic pipeline.
+- Website Feature 01 complete: Homepage and Weekly Digest display one real static pipeline digest.
+- Website Feature 02 complete: Weekly Digest links to six real Paper Detail pages.
+- Website Feature 03 complete: Archive lists the real static digest.
+- UX Polish design baseline complete in `docs/PRODUCT_VISION.md` and `docs/UX_ROADMAP.md`.
+- UX-01 Homepage Entry and Reader Framing complete and accepted.
 
----
+## Latest Validation
 
-# Current Git Status
+- Pipeline suite: `python -m pytest pipeline/tests` -> 193 passed, 0 failed.
+- UX-01 website validation: `npm.cmd run lint` passed.
+- UX-01 website validation: `npm.cmd run build` passed.
+- UX-01 repository validation: `git diff --check` passed.
 
-Default Branch:
+## UX-02 Accepted Rule
 
-main
+Weekly Digest is a browsing page. Paper Detail remains the only page that shows
+the complete abstract.
 
-Current Branch:
+- If an abstract exists, show the first 280 characters of the existing abstract
+  string.
+- Do not rewrite, summarise, or interpret the abstract.
+- Preserve original wording exactly.
+- If the abstract is longer than 280 characters, append `...`.
+- If no abstract exists, display `No abstract available.`
+- This is presentation only.
+- Do not modify pipeline data.
+- Do not modify `web/data/digest-adapter.ts`.
+- Do not modify Paper Detail.
 
-feature/website-ux-polish
+## Current Boundaries
 
-Repository state:
+Do not implement in UX-02:
 
-M3H Pipeline Orchestration is complete and merged to `main` in merge commit
-`96c7847`. Acceptance review passed. The deterministic MVP pipeline is
-complete.
+- pipeline changes;
+- adapter changes;
+- Paper Detail changes;
+- Archive changes;
+- Homepage changes;
+- search, filters, backend, database, AI, deployment, or new data fixtures.
 
----
-
-# Current Milestone
-
-Milestone:
-
-Website MVP
-
-Status:
-
-In Progress
-
-Current slice:
-
-UX-01 Homepage Entry and Reader Framing implementation complete
-
-Completed:
-
-- M3A - Pipeline Foundation
-- M3B - OpenAlex Collector
-- M3C-1 - Raw OpenAlex Extraction and Abstract Reconstruction
-- M3C-2 - PaperCandidate Mapping
-- M3C-3 - PaperMetadata Mapping
-- M3C-4 - Normalisation Output Writing
-- M3C - Metadata Normalisation
-- M3D - Deterministic Deduplication
-- M3E - Deterministic FOWT Relevance Classification
-- M3F - Deterministic Ranking & Selection
-- M3G - Weekly Digest Assembly
-- M3H - Pipeline Orchestration
-
-Latest verified validation:
-
-- Command: `python -m pytest pipeline/tests/test_orchestrator.py`
-- Result: 17 passed, 0 failed
-- Command: `python -m pytest pipeline/tests`
-- Result: 193 passed, 0 failed
-- Command: `git diff --check`
-- Result: passed
-
----
-
-# Current Pipeline Status
-
-Implemented:
-
-- deterministic run ID helper
-- deterministic candidate ID helper
-- deterministic paper ID helper
-- DOI normalisation
-- title normalisation
-- run directory creation
-- contract JSON file writing
-- OpenAlex query builder
-- OpenAlex HTTP client
-- OpenAlex collector orchestration
-- cursor pagination
-- run-wide 200-record cap
-- raw OpenAlex response storage
-- raw OpenAlex work extraction from successful pages
-- abstract reconstruction from `abstract_inverted_index`
-- PaperCandidate mapping with deterministic `candidateId`
-- PaperMetadata mapping with deterministic `paperId`
-- `candidates.json` writing
-- `normalised.json` writing
-- normalisation rejection handling
-- raw provenance preservation in candidates, metadata, and rejection records
-- deterministic deduplication
-- connected-component duplicate grouping
-- DOI, OpenAlex ID, and title/date exact-match rules
-- canonical record selection
-- deduplicated metadata merging
-- `deduplicated_papers.json` writing
-- `deduplication_result.json` writing
-- rollback protection for partial deduplication output writes
-- deterministic FOWT relevance classification
-- three-state relevance labels: `Relevant`, `Possibly Relevant`, `Not Relevant`
-- `classified_papers.json` writing
-- `classification_result.json` aggregate summary writing
-- rollback protection for partial classification output writes
-- deterministic ranking and selection
-- continuous global ranks for all classified records
-- selection limited to `Relevant` and `Possibly Relevant` records
-- `ranked_papers.json` writing
-- `ranking_result.json` aggregate summary writing
-- rollback protection for partial ranking output writes
-- deterministic weekly digest assembly
-- ranked input contract validation without repair
-- `weekly_digest.json` writing
-- `weekly_digest_result.json` aggregate summary writing
-- rollback protection for partial weekly digest output writes
-- deterministic pipeline orchestration
-- file-contract handoff between accepted stages
-- `pipeline/orchestrator.py`
-- `pipeline/tests/test_orchestrator.py`
-
-Not yet implemented:
-
-- scoring
-- AI workflow
-- UX-02 through UX-05 implementation
-- database
-
----
-
-# Immediate Next Task
-
-Perform UX-01 Homepage Entry and Reader Framing acceptance review.
-
-Next recommended milestone:
-
-Website UX Polish
-
-Do not implement yet:
-
-- scoring
-- AI workflow
-- UX-02 through UX-05 implementation
-- database
-
----
-
-# Current Repository Snapshot
-
-Implemented pipeline modules:
-
-- `pipeline/ids.py`
-- `pipeline/run_storage.py`
-- `pipeline/openalex_query.py`
-- `pipeline/openalex_client.py`
-- `pipeline/openalex_collector.py`
-- `pipeline/normaliser.py`
-- `pipeline/deduplicator.py`
-- `pipeline/relevance_classifier.py`
-- `pipeline/ranker.py`
-- `pipeline/weekly_digest.py`
-- `pipeline/orchestrator.py`
-
-Implemented pipeline tests:
-
-- `pipeline/tests/test_ids.py`
-- `pipeline/tests/test_run_storage.py`
-- `pipeline/tests/test_openalex_query.py`
-- `pipeline/tests/test_openalex_client.py`
-- `pipeline/tests/test_openalex_collector.py`
-- `pipeline/tests/test_normaliser.py`
-- `pipeline/tests/test_deduplicator.py`
-- `pipeline/tests/test_relevance_classifier.py`
-- `pipeline/tests/test_ranker.py`
-- `pipeline/tests/test_weekly_digest.py`
-- `pipeline/tests/test_orchestrator.py`
-
-Website status:
-
-- Website MVP Feature 01 displays one real static pipeline digest on the homepage and weekly page.
-- Website MVP Feature 02 displays 6 real static paper detail pages from the same digest.
-- Website MVP Feature 03 displays one real archive entry from the same digest.
-- Homepage -> Weekly -> Paper Detail reading workflow is complete.
-- Archive -> Weekly browsing workflow is complete.
-- Website UX Polish design phase is complete.
-- `docs/PRODUCT_VISION.md` and `docs/UX_ROADMAP.md` are the UX Polish design baseline.
-- UX-01 Homepage Entry and Reader Framing implementation is complete.
-- UX-01 modified `web/app/page.tsx` and `web/app/layout.tsx`.
-- Validation after UX-01 implementation: `npm.cmd run lint` passed; `npm.cmd run build` passed.
-- UX-01 has not yet passed acceptance review.
-- Source run: `run_20260720_090000_openalex`.
-- `web/data/weekly_digest.json` contains 6 selected papers from that run.
-- `npm.cmd run lint` and `npm.cmd run build` pass.
-- static Next.js MVP exists under `web/`
-- website deployment readiness work is complete
-- website has not been deployed from this repository state
-- About and Methodology still contain prototype/mock-data wording until separately scoped.
-- the website uses a static copied pipeline digest and does not run the pipeline
-
----
-
-# Architecture Direction
-
-Current repository layout:
-
-```text
-docs/
-pipeline/
-web/
-```
-
-Architecture rules:
-
-- keep the Python pipeline independent from the website
-- do not add FastAPI before it is needed
-- do not add a database before local JSON is insufficient
-- do not add AI workflow modules before their milestone
-- integrate pipeline output into the website only through explicitly scoped Website MVP features
-
----
-
-# Known Limitations
-
-- M3H Pipeline Orchestration is complete and acceptance passed.
-- The deterministic MVP pipeline is complete through orchestration and weekly digest assembly.
-- Scoring, AI writing, and AI review do not exist.
-- Homepage, Weekly, Paper Detail, and Archive use one real static pipeline digest. About and Methodology still include prototype/mock-data wording until separately scoped. UX-01 implementation is complete and awaiting acceptance review.
-
----
-
-# Development Roadmap
-
-Completed pipeline milestones:
+## Completed Pipeline Milestones
 
 - M3A - Pipeline Foundation
 - M3B - OpenAlex Collector
@@ -248,32 +66,14 @@ Completed pipeline milestones:
 - M3G - Weekly Digest Assembly
 - M3H - Pipeline Orchestration
 
-Next recommended step:
+## Website State
 
-- Website MVP
+- Static digest source: `web/data/weekly_digest.json`
+- Source run: `run_20260720_090000_openalex`
+- Selected papers in static digest: 6
+- Implemented reader paths:
+  - Homepage -> Weekly Digest -> Paper Detail
+  - Archive -> Weekly Digest
 
-Future excluded work until separately scoped:
-
-- Crossref integration
-- arXiv integration
-- scoring
-- AI writing
-- AI review
-- database
-- additional frontend integration beyond scoped Website MVP features
-- automatic publication
-
----
-
-# Important Decisions
-
-- Frontend and pipeline remain separated.
-- Use local JSON files for the first pipeline prototype.
-- Keep modules small and explicit.
-- Avoid service, manager, repository, factory, or framework layers.
-- Use Python standard library only unless a milestone explicitly changes that.
-- Never invent paper metadata or research findings.
-- M3E relevance classification is deterministic and rule-based only.
-- M3F ranking and selection is deterministic and uses no scores, weights, AI, citation counts, diversity balancing, digest generation, or website behavior.
-- M3G weekly digest assembly copies selected ranked records only and does not add AI, summaries, editorial content, Markdown, HTML, website integration, or the broader WeeklyEdition model.
-- M3H pipeline orchestration sequences accepted stages only and does not alter stage behavior, retry, repair, or create new JSON products.
+Detailed continuity notes live in `PROJECT_HANDOVER.md`. The resume entry point
+for a new session is `START_HERE.md`.

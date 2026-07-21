@@ -1,99 +1,117 @@
-# LESSONS LEARNED
+﻿# Lessons Learned
+
+This document records engineering lessons that should continue to influence how
+future work is designed and reviewed. It does not track project status,
+architecture, or roadmap progress.
 
 ## Engineering Principles
 
 - Documentation before implementation: clarify contracts before writing code.
-- Think before coding: state goal, assumptions, requirements, tradeoffs, plan, and success criteria.
-- One module, one responsibility: query building, HTTP, collection, storage, IDs, and normalisation stay separate.
-- Small pure functions: prefer explicit functions over classes or framework layers.
-- Deterministic outputs: IDs, query generation, JSON formatting, ordering, and mappings must be stable.
-- Standard library unless justified: do not add dependencies without a concrete milestone need.
-- Acceptance before commit: run tests and perform acceptance review before committing a slice.
-- Milestone acceptance before merge: complete final review before merging milestone branches.
-- Merge latest main before opening a PR: keep feature branches current with the default branch before review.
-- Keep frontend and pipeline independent: the website does not orchestrate or consume pipeline internals until explicitly scoped.
+- Think before coding: state goal, assumptions, requirements, tradeoffs, plan,
+  and success criteria before implementation.
+- One module, one responsibility: keep query building, HTTP, collection,
+  storage, IDs, normalisation, deduplication, classification, ranking, digest
+  assembly, and orchestration separate.
+- Small pure functions: prefer explicit functions over classes, managers,
+  services, repositories, factories, schemas, or framework layers.
+- Deterministic outputs: IDs, query generation, JSON formatting, ordering,
+  mappings, classification, ranking, and digest assembly must be stable.
+- Standard library unless justified: do not add dependencies without a concrete
+  milestone need.
+- Acceptance before commit: run checks and complete acceptance review before
+  committing a slice.
+- Milestone acceptance before merge: review the full milestone before merging.
+- Merge latest main before opening a PR.
+- Keep frontend and pipeline independent unless a feature explicitly scopes an
+  integration boundary.
 
-## Lessons Learned
+## Lessons
 
-### Prompt conflicted with the data model
+### Contract conflicts must stop implementation
 
-Situation: M3C-2 originally requested `topicTags` and `publicationType` tests while the data model placed those fields under `PaperMetadata`, not `PaperCandidate`.
+Situation: M3C-2 originally asked for fields that belonged to `PaperMetadata`,
+not `PaperCandidate`.
 
-Lesson: The data model is the source of truth when a prompt expands a slice beyond its documented contract.
+Lesson: Written contracts are the source of truth when a prompt expands scope.
 
-Practical rule: Stop and report scope conflict before implementing fields that belong to a later record type.
+Practical rule: Stop and resolve the scope conflict before implementing fields
+that belong to a later record type.
 
-### PaperCandidate and PaperMetadata must stay separate
+### Pipeline stage ownership must stay narrow
 
-Situation: Candidate mapping was accepted only after limiting M3C-2 to documented `PaperCandidate` fields and excluding metadata fields such as abstract, authors, publication source, publication type, and topic tags.
+Situation: M3B separated query building, HTTP retry, collector pagination, and
+storage into different modules.
 
-Lesson: Early records should not absorb downstream responsibilities.
+Lesson: Small ownership boundaries make acceptance review precise and prevent
+later stages from inheriting hidden behavior.
 
-Practical rule: Map only the fields documented for the current output shape.
+Practical rule: Put business logic in the owning stage only. Reuse helpers
+instead of duplicating query, HTTP, ID, or storage behavior.
 
-### HTTP retry belongs in the client
+### Ambiguity belongs in documentation first
 
-Situation: M3B-2 implemented timeout, HTTP status handling, Retry-After, retry policy, and JSON decoding in `openalex_client.py`.
+Situation: OpenAlex pagination rules were ambiguous until the contract defined
+cursor source, initial cursor, page size, stopping conditions, and record cap.
 
-Lesson: Network retry behavior should not leak into collector orchestration.
+Lesson: Implementation should not invent material behavior when a contract is
+incomplete.
 
-Practical rule: The collector calls the client; the client owns HTTP failure semantics.
+Practical rule: Update the relevant design contract before coding ambiguous
+behavior.
 
-### Pagination belongs in the collector
+### Acceptance review catches missing contract behavior
 
-Situation: M3B-4 added cursor iteration, page progression, run-wide cap handling, and partial-page failure behavior to the collector.
+Situation: Final M3B review found the missing fixed delay between normal
+OpenAlex requests even though tests passed.
 
-Lesson: Pagination is orchestration over repeated client requests, not HTTP transport behavior.
+Lesson: Passing tests is not enough when written contract behavior is not fully
+covered.
 
-Practical rule: Keep cursor loops in `openalex_collector.py`; keep request execution in `openalex_client.py`.
+Practical rule: Review against the contract, not only against the current test
+suite.
 
-### Storage belongs in run_storage
+### Expected failures should be explicit and deterministic
 
-Situation: M3A added run directory creation, supported filenames, deterministic JSON writing, and atomic replacement in `run_storage.py`.
+Situation: Normalisation and downstream writing stages needed deterministic
+`ValueError` handling and exact rejection payloads.
 
-Lesson: Output writing should be centralized so collectors and normalisers do not duplicate file behavior.
+Lesson: Predictable failure behavior is part of the data contract.
 
-Practical rule: Use `run_storage.py` for run files; do not write ad hoc JSON from pipeline stages.
+Practical rule: Validate input shape early, use short deterministic reasons,
+and let unexpected exceptions propagate.
 
-### Ambiguity should be resolved in docs first
+### File outputs need rollback where a stage writes pairs
 
-Situation: OpenAlex pagination rules were ambiguous until the contract explicitly defined cursor source, initial cursor, page size, stopping conditions, and the 200-record cap.
+Situation: Deduplication, classification, ranking, and weekly digest assembly
+write paired outputs.
 
-Lesson: Implementation should not invent material behavior when the contract is incomplete.
+Lesson: A failed second write must not leave a newly created one-file output set.
 
-Practical rule: Update the relevant design contract before coding ambiguous behavior.
+Practical rule: Validate first, then use local rollback around paired writes
+while preserving pre-existing files.
 
-### Acceptance review catches contract gaps
+### The website must not improve data by inventing content
 
-Situation: Final M3B review found the missing fixed delay between normal OpenAlex requests; the gap was fixed before final acceptance.
+Situation: Website integration moved from mock pages to a real static pipeline
+digest, but the digest does not include editorial summaries, findings, scores,
+or full review text.
 
-Lesson: Passing tests is necessary but not enough when the contract includes behavior not yet covered.
+Lesson: Presentation can reduce cognitive load, but it must not change the
+meaning of pipeline output.
 
-Practical rule: Run acceptance reviews against the written contract, not only against existing tests.
-
-### Finish one slice before expanding scope
-
-Situation: M3B was implemented in focused slices: query builder, client, collector orchestration, pagination, then request spacing. M3C followed the same pattern with extraction, candidate mapping, then metadata mapping next.
-
-Lesson: Small milestone slices make review and rollback easier.
-
-Practical rule: Do not start downstream work until the current slice is accepted and committed.
+Practical rule: Omit, format, or neutrally fall back for missing fields. Do not
+write generated claims into the website.
 
 ### Status documents become stale quickly
 
-Situation: `PROJECT_STATUS.md` repeatedly needed updates after accepted milestones and branch changes.
+Situation: `PROJECT_STATUS.md` and handover notes repeatedly drifted after
+branches, commits, merges, and acceptance reviews.
 
-Lesson: Continuity docs must be maintained as part of milestone closure.
+Lesson: Continuity documentation needs a single resume entry point and clear
+document responsibilities.
 
-Practical rule: After acceptance, update project status before handing work to another session.
-
-### Keep generated files out of commits
-
-Situation: Python test runs created `__pycache__` directories, which were removed and ignored.
-
-Lesson: Local generated artifacts distract from review and should not enter source control.
-
-Practical rule: Check `git status` after tests and keep generated artifacts ignored.
+Practical rule: Keep detailed current status in one place, and keep README,
+handover, roadmap, and lessons from duplicating it.
 
 ## Common Workflow
 
@@ -107,13 +125,5 @@ Design
 -> Merge
 ```
 
-Use this sequence for each meaningful slice. Do not skip acceptance before commit, and do not merge a milestone without final milestone review.
-
-## Resume Checklist
-
-1. Read `AGENTS.md`.
-2. Read `PROJECT_HANDOVER.md`.
-3. Read `PROJECT_STATUS.md`.
-4. Verify current branch.
-5. Verify latest tests.
-6. Resume only the Immediate Next Task.
+Use this sequence for each meaningful slice. Do not skip acceptance before
+commit, and do not merge a milestone without final milestone review.

@@ -22,7 +22,7 @@ Website MVP
 
 Current slice:
 
-Website UX Polish design phase is complete. `docs/PRODUCT_VISION.md` and `docs/UX_ROADMAP.md` are the design baseline. No UX implementation feature has started.
+UX-01 Homepage Entry and Reader Framing implementation is complete. It changed `web/app/page.tsx` and `web/app/layout.tsx`. UX-01 has not yet passed acceptance review.
 
 Latest validation:
 
@@ -32,7 +32,7 @@ Latest validation:
 - `npm.cmd run lint` - passed
 - `npm.cmd run build` - passed
 
-The next task is UX-01 Homepage Entry and Reader Framing design review.
+The next task is UX-01 Homepage Entry and Reader Framing acceptance review.
 
 ## 4. Completed Milestones
 
@@ -154,12 +154,14 @@ Latest result:
 - Homepage, Weekly page, 6 Paper Detail pages, and Archive display one static copied pipeline digest.
 - Website MVP navigation is complete: Homepage -> Weekly -> Paper Detail and Archive -> Weekly.
 - UX Polish design baseline is documented in `docs/PRODUCT_VISION.md` and `docs/UX_ROADMAP.md`.
-- No UX implementation feature has started.
+- UX-01 Homepage Entry and Reader Framing implementation is complete.
+- UX-01 validation: `npm.cmd run lint` passed and `npm.cmd run build` passed.
+- UX-01 has not yet passed acceptance review.
 - The website still does not run the pipeline.
 
 ## 10. Exact Next Task
 
-Perform UX-01 Homepage Entry and Reader Framing design review.
+Perform UX-01 Homepage Entry and Reader Framing acceptance review.
 
 ## 11. What Must Not Be Implemented Yet
 
@@ -200,5 +202,5 @@ To resume work:
 1. Confirm the branch is `feature/website-ux-polish`.
 2. Run `git status` and ensure there are no unexpected changes.
 3. Run `python -m pytest pipeline/tests`.
-4. Perform UX-01 Homepage Entry and Reader Framing design review.
+4. Perform UX-01 Homepage Entry and Reader Framing acceptance review.
 5. Do not start scoring, AI writing, database, or additional website integration beyond the scoped next feature.

@@ -44,7 +44,7 @@ In Progress
 
 Current slice:
 
-Website UX Polish design phase complete
+UX-01 Homepage Entry and Reader Framing implementation complete
 
 Completed:
 
@@ -130,14 +130,14 @@ Not yet implemented:
 
 - scoring
 - AI workflow
-- UX Polish implementation
+- UX-02 through UX-05 implementation
 - database
 
 ---
 
 # Immediate Next Task
 
-Perform UX-01 Homepage Entry and Reader Framing design review.
+Perform UX-01 Homepage Entry and Reader Framing acceptance review.
 
 Next recommended milestone:
 
@@ -147,7 +147,7 @@ Do not implement yet:
 
 - scoring
 - AI workflow
-- UX Polish implementation
+- UX-02 through UX-05 implementation
 - database
 
 ---
@@ -191,7 +191,10 @@ Website status:
 - Archive -> Weekly browsing workflow is complete.
 - Website UX Polish design phase is complete.
 - `docs/PRODUCT_VISION.md` and `docs/UX_ROADMAP.md` are the UX Polish design baseline.
-- No UX implementation feature has started.
+- UX-01 Homepage Entry and Reader Framing implementation is complete.
+- UX-01 modified `web/app/page.tsx` and `web/app/layout.tsx`.
+- Validation after UX-01 implementation: `npm.cmd run lint` passed; `npm.cmd run build` passed.
+- UX-01 has not yet passed acceptance review.
 - Source run: `run_20260720_090000_openalex`.
 - `web/data/weekly_digest.json` contains 6 selected papers from that run.
 - `npm.cmd run lint` and `npm.cmd run build` pass.
@@ -228,7 +231,7 @@ Architecture rules:
 - M3H Pipeline Orchestration is complete and acceptance passed.
 - The deterministic MVP pipeline is complete through orchestration and weekly digest assembly.
 - Scoring, AI writing, and AI review do not exist.
-- Homepage, Weekly, Paper Detail, and Archive use one real static pipeline digest. About and Methodology still include prototype/mock-data wording until separately scoped. UX Polish implementation has not started.
+- Homepage, Weekly, Paper Detail, and Archive use one real static pipeline digest. About and Methodology still include prototype/mock-data wording until separately scoped. UX-01 implementation is complete and awaiting acceptance review.
 
 ---
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: "%s | FOWT Research Digest",
   },
   description:
-    "A prototype weekly digest of fictional floating offshore wind turbine research for MVP development.",
+    "A deterministic weekly research digest for Floating Offshore Wind Turbines.",
 };
 
 export default function RootLayout({

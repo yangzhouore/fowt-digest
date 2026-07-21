@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
-import { currentDigest } from "../../../data/digest-adapter";
+import { getAllDigests, getDigestBySlug } from "../../../data/digest-adapter";
 
 const ABSTRACT_PREVIEW_LENGTH = 280;
 
@@ -14,30 +14,32 @@ type WeeklyPageProps = {
 };
 
 export function generateStaticParams() {
-  return [{ slug: currentDigest.slug }];
+  return getAllDigests().map((digest) => ({ slug: digest.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: WeeklyPageProps): Promise<Metadata> {
   const { slug } = await params;
+  const digest = getDigestBySlug(slug);
 
-  if (slug !== currentDigest.slug) {
+  if (!digest) {
     return {
       title: "Weekly edition not found",
     };
   }
 
   return {
-    title: currentDigest.dateRange,
-    description: `Pipeline weekly digest: ${currentDigest.introduction}`,
+    title: digest.dateRange,
+    description: `Pipeline weekly digest: ${digest.introduction}`,
   };
 }
 
 export default async function WeeklyPage({ params }: WeeklyPageProps) {
   const { slug } = await params;
+  const digest = getDigestBySlug(slug);
 
-  if (slug !== currentDigest.slug) {
+  if (!digest) {
     notFound();
   }
 
@@ -47,8 +49,8 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
 
       <section className="intro" aria-labelledby="weekly-heading">
         <p className="eyebrow">Weekly digest</p>
-        <h1 id="weekly-heading">{currentDigest.dateRange}</h1>
-        <p>{currentDigest.introduction}</p>
+        <h1 id="weekly-heading">{digest.dateRange}</h1>
+        <p>{digest.introduction}</p>
       </section>
 
       <section className="edition-meta" aria-labelledby="edition-meta-heading">
@@ -56,15 +58,15 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
         <dl>
           <div>
             <dt>Date range</dt>
-            <dd>{currentDigest.dateRange}</dd>
+            <dd>{digest.dateRange}</dd>
           </div>
           <div>
             <dt>Selected</dt>
-            <dd>{currentDigest.selectedPaperCount}</dd>
+            <dd>{digest.selectedPaperCount}</dd>
           </div>
           <div>
             <dt>Generated</dt>
-            <dd>{currentDigest.generatedAt}</dd>
+            <dd>{digest.generatedAt}</dd>
           </div>
         </dl>
       </section>
@@ -72,7 +74,7 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
       <section id="papers" aria-labelledby="selected-papers-heading">
         <h2 id="selected-papers-heading">Selected papers</h2>
         <ol className="paper-list">
-          {currentDigest.papers.map((paper) => (
+          {digest.papers.map((paper) => (
             <li key={paper.id}>
               <article>
                 <p className="paper-number">
@@ -112,9 +114,10 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
       <section aria-labelledby="weekly-notice-heading">
         <h2 id="weekly-notice-heading">Pipeline-data notice</h2>
         <p>
-          This page displays a static local copy of one deterministic pipeline
-          output. It does not include AI-written summaries, editorial analysis,
-          or automatic publication.
+          This page displays a static local copy of one selected historical
+          demonstration edition from the deterministic pipeline. It is not a
+          complete record of weekly historical coverage and does not include
+          AI-written summaries, editorial analysis, or automatic publication.
         </p>
       </section>
 

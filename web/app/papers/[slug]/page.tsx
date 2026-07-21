@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
-import { currentDigest, getDigestPaperBySlug } from "../../../data/digest-adapter";
+import {
+  getAllDigests,
+  getDigestPaperWithEditionBySlug,
+} from "../../../data/digest-adapter";
 
 type PaperPageProps = {
   params: Promise<{
@@ -12,36 +15,44 @@ type PaperPageProps = {
 };
 
 export function generateStaticParams() {
-  return currentDigest.papers.map((paper) => ({
-    slug: paper.slug,
-  }));
+  const slugs = new Set<string>();
+
+  for (const digest of getAllDigests()) {
+    for (const paper of digest.papers) {
+      slugs.add(paper.slug);
+    }
+  }
+
+  return Array.from(slugs).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PaperPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const paper = getDigestPaperBySlug(slug);
+  const result = getDigestPaperWithEditionBySlug(slug);
 
-  if (!paper) {
+  if (!result) {
     return {
       title: "Paper not found",
     };
   }
 
   return {
-    title: paper.title,
-    description: "Pipeline paper metadata from the static weekly digest snapshot.",
+    title: result.paper.title,
+    description: "Pipeline paper metadata from a static weekly digest snapshot.",
   };
 }
 
 export default async function PaperPage({ params }: PaperPageProps) {
   const { slug } = await params;
-  const paper = getDigestPaperBySlug(slug);
+  const result = getDigestPaperWithEditionBySlug(slug);
 
-  if (!paper) {
+  if (!result) {
     notFound();
   }
+
+  const { edition, paper } = result;
 
   return (
     <main>
@@ -59,8 +70,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
             {paper.publicationSource} / {paper.publicationType}
           </p>
           <p>
-            Selected from the deterministic weekly digest for{" "}
-            {currentDigest.dateRange}.
+            Selected from the deterministic weekly digest for {edition.dateRange}.
           </p>
           {paper.sourceUrl || paper.doi ? (
             <p className="paper-action-row">
@@ -138,14 +148,12 @@ export default async function PaperPage({ params }: PaperPageProps) {
         <section aria-labelledby="pipeline-notice-heading">
           <h2 id="pipeline-notice-heading">Pipeline-data notice</h2>
           <p>
-            This page uses a static local copy of one deterministic pipeline
-            digest snapshot. It does not include AI-written summaries or
-            editorial analysis.
+            This page uses a static local copy of one selected historical
+            demonstration edition from the deterministic pipeline. It does not
+            include AI-written summaries or editorial analysis.
           </p>
           <p className="text-link-row">
-            <Link href={`/weekly/${currentDigest.slug}`}>
-              Back to the weekly digest
-            </Link>
+            <Link href={`/weekly/${edition.slug}`}>Back to the weekly digest</Link>
           </p>
         </section>
       </article>

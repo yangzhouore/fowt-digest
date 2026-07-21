@@ -1,0 +1,685 @@
+{
+  "generatedAt": "2025-01-19T09:00:00Z",
+  "runId": "run_20250119_090000_openalex",
+  "schemaVersion": "pipeline-data-0.1",
+  "selectedPapers": [
+    {
+      "abstract": null,
+      "authors": [
+        "Qiyun Pan",
+        "Xiaodong Wang",
+        "Shixuan Li",
+        "Lijie Zhang",
+        "Zhou Xia"
+      ],
+      "candidateIds": [
+        "candidate_openalex_0cce433a9f53e8fa"
+      ],
+      "doi": "https://doi.org/10.1016/j.oceaneng.2025.120350",
+      "fullTextAvailability": "none",
+      "indexedDate": null,
+      "openAccessStatus": "closed",
+      "paperId": "paper_doi_112f89f2bf64c835",
+      "processingStatus": "classified",
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "unknown",
+      "publishedDate": "2025-01-18",
+      "rank": 1,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 7,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 7,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 5,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_112f89f2bf64c835",
+        "classification": "Relevant",
+        "confidence": 0.84,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-01-19T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_112f89f2bf64c835",
+        "promptVersion": null,
+        "reason": "relevant_title_combined_fowt_signals",
+        "topicTags": [
+          "Aerospace engineering",
+          "Cavitation Phenomena in Pumps",
+          "Computer science",
+          "Engineering",
+          "Environmental science",
+          "Machine learning",
+          "Marine engineering",
+          "Mathematical optimization",
+          "Mathematics",
+          "Multi-objective optimization",
+          "Stability (learning theory)",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development"
+        ]
+      },
+      "runId": "run_20250119_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2025.120350",
+        "openalexId": "https://openalex.org/W4406570041"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2025.120350",
+      "title": "Multi-objective design and optimization method for semi-submersible wind turbine considering stability constraints",
+      "topicTags": [
+        "Aerospace engineering",
+        "Cavitation Phenomena in Pumps",
+        "Computer science",
+        "Engineering",
+        "Environmental science",
+        "Machine learning",
+        "Marine engineering",
+        "Mathematical optimization",
+        "Mathematics",
+        "Multi-objective optimization",
+        "Stability (learning theory)",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development"
+      ]
+    },
+    {
+      "abstract": "This paper proposes an innovative algorithm for forecasting the motion response of floating offshore wind turbines by employing force-to-motion transfer functions and state-space models. Traditional numerical integration techniques, such as the Newmark-β method, frequently struggle with inefficiencies due to the heavy computational demands of convolution integrals in the Cummins equation. Our new method tackles these challenges by converting the problem into a system output calculation, thereby eliminating convolutions and potentially enhancing computational efficiency. The procedure begins with the estimation of force-to-motion transfer functions derived from the hydrostatic and hydrodynamic characteristics of the wind turbine. These transfer functions are then utilized to construct state-space models, which compactly represent the system dynamics. Motion responses resulting from initial conditions and wave forces are calculated using these state-space models, leveraging their poles and residues. We validated the proposed method by comparing its calculated responses to those obtained via the Newmark-β method. Initial tests on a single-degree-of-freedom (SDOF) system demonstrated that our algorithm accurately predicts motion responses. Further validation involved a numerical model of a spar-type floating offshore wind turbine, showing high accuracy in predicting responses to both regular and irregular wave conditions, closely aligning with results from conventional methods. Additionally, we assessed the efficiency of our algorithm over various simulation durations, confirming its superior performance compared to traditional time-domain methods. This efficiency is particularly advantageous for long-duration simulations. The proposed approach provides a robust and efficient alternative for predicting motion responses in floating offshore wind turbines, combining high accuracy with improved computational performance. It represents a promising tool for enhancing the development and evaluation of offshore wind energy systems.",
+      "authors": [
+        "Jie Xu",
+        "Changjie Li",
+        "Wei Jiang",
+        "Fei Lin",
+        "Shi Liu",
+        "Hongchao Lu",
+        "Hongbo Wang"
+      ],
+      "candidateIds": [
+        "candidate_openalex_25b4ff0a58605040"
+      ],
+      "doi": "https://doi.org/10.3390/jmse13010160",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_c800cdf8cd4cae9e",
+      "processingStatus": "classified",
+      "publicationSource": "Journal of Marine Science and Engineering",
+      "publicationType": "unknown",
+      "publishedDate": "2025-01-18",
+      "rank": 2,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 21,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 28,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 18,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_c800cdf8cd4cae9e",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-01-19T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_c800cdf8cd4cae9e",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aerospace engineering",
+          "Classical mechanics",
+          "Computer science",
+          "Electrical engineering",
+          "Engineering",
+          "Environmental science",
+          "Fluid Dynamics and Vibration Analysis",
+          "Geology",
+          "Marine engineering",
+          "Mathematics",
+          "Mechanics",
+          "Meteorology",
+          "Motion (physics)",
+          "Oceanography",
+          "Offshore wind power",
+          "Operating system",
+          "Physics",
+          "Space (punctuation)",
+          "State space",
+          "Statistics",
+          "Submarine pipeline",
+          "Transfer function",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind force"
+        ]
+      },
+      "runId": "run_20250119_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/jmse13010160",
+        "openalexId": "https://openalex.org/W4406624287"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.3390/jmse13010160",
+      "title": "Structural Response Prediction of Floating Offshore Wind Turbines Based on Force-to-Motion Transfer Functions and State-Space Models",
+      "topicTags": [
+        "Aerospace engineering",
+        "Classical mechanics",
+        "Computer science",
+        "Electrical engineering",
+        "Engineering",
+        "Environmental science",
+        "Fluid Dynamics and Vibration Analysis",
+        "Geology",
+        "Marine engineering",
+        "Mathematics",
+        "Mechanics",
+        "Meteorology",
+        "Motion (physics)",
+        "Oceanography",
+        "Offshore wind power",
+        "Operating system",
+        "Physics",
+        "Space (punctuation)",
+        "State space",
+        "Statistics",
+        "Submarine pipeline",
+        "Transfer function",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind force"
+      ]
+    },
+    {
+      "abstract": null,
+      "authors": [
+        "Shuangyi Xie",
+        "Yongran Li",
+        "Jiao He",
+        "Yingzhe Kan",
+        "Yuxin Li"
+      ],
+      "candidateIds": [
+        "candidate_openalex_b6f4256e9b54a096"
+      ],
+      "doi": "https://doi.org/10.1007/s11804-025-00636-1",
+      "fullTextAvailability": "none",
+      "indexedDate": null,
+      "openAccessStatus": "closed",
+      "paperId": "paper_doi_296cbbd5d8417568",
+      "processingStatus": "classified",
+      "publicationSource": "Journal of Marine Science and Application",
+      "publicationType": "unknown",
+      "publishedDate": "2025-01-17",
+      "rank": 3,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 3,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 3,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 2,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_296cbbd5d8417568",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-01-19T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_296cbbd5d8417568",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aerospace engineering",
+          "Automotive engineering",
+          "Drivetrain",
+          "Electrical engineering",
+          "Engineering",
+          "Fluid Dynamics and Vibration Analysis",
+          "Marine engineering",
+          "Mechanical engineering",
+          "Nacelle",
+          "Offshore wind power",
+          "Physics",
+          "Rotor (electric)",
+          "Thermodynamics",
+          "Torque",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20250119_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1007/s11804-025-00636-1",
+        "openalexId": "https://openalex.org/W4406533500"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1007/s11804-025-00636-1",
+      "title": "Effect of Nacelle Motions on Rotor Performance and Drivetrain Dynamics in Floating Offshore Wind Turbines Using Fully Coupled Simulations",
+      "topicTags": [
+        "Aerospace engineering",
+        "Automotive engineering",
+        "Drivetrain",
+        "Electrical engineering",
+        "Engineering",
+        "Fluid Dynamics and Vibration Analysis",
+        "Marine engineering",
+        "Mechanical engineering",
+        "Nacelle",
+        "Offshore wind power",
+        "Physics",
+        "Rotor (electric)",
+        "Thermodynamics",
+        "Torque",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind power"
+      ]
+    },
+    {
+      "abstract": "Abstract Accurate estimation of the dynamic response of Floating Offshore Wind Turbines (FOWTs) are essential for the design and development of FOWTs to ensure their safety and reliability. Up to now, extensive efforts for the development of design tools for FOWTs have been made, and nowadays several design tools are available. The simulation tools have been validated using water tank experimental data and comparisons between codes. Although validation using full-scale FOWT has been performed, there are few published literatures publicly available. In this paper, we describe a simulation of the dynamic response of a 2-MW spar-type FOWT during power production in an actual sea area. Simulation of the dynamic response of FOWT in a power production state is described using Adams with SparDyn which has already been validated by simulations and measurements during typhoon in actual sea areas. Five cases were selected from low to high wind speed range during power production. Numerical simulations were performed using time-series data of wind speed, wind direction, wave height, wave direction, current speed and current direction obtained during power production. Comparisons have shown good agreement between the simulated and the measured values. The effect of tower shadows was also examined.",
+      "authors": [
+        "Koji Tanaka",
+        "Atsuhiro Iwamoto",
+        "Tomoaki Utsunomiya"
+      ],
+      "candidateIds": [
+        "candidate_openalex_c62883f0d7d0dc46"
+      ],
+      "doi": "https://doi.org/10.1007/s00773-025-01049-z",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "hybrid",
+      "paperId": "paper_doi_5bf73bbd8ad79876",
+      "processingStatus": "classified",
+      "publicationSource": "Journal of Marine Science and Technology",
+      "publicationType": "unknown",
+      "publishedDate": "2025-01-17",
+      "rank": 4,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 39,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 18,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 34,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_5bf73bbd8ad79876",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-01-19T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_5bf73bbd8ad79876",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Economics",
+          "Electrical engineering",
+          "Engineering",
+          "Environmental science",
+          "Geotechnical engineering",
+          "Macroeconomics",
+          "Marine engineering",
+          "Mechanical engineering",
+          "Offshore geotechnical engineering",
+          "Offshore wind power",
+          "Physics",
+          "Power (physics)",
+          "Production (economics)",
+          "Quantum mechanics",
+          "Spar",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20250119_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1007/s00773-025-01049-z",
+        "openalexId": "https://openalex.org/W4406493948"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1007/s00773-025-01049-z",
+      "title": "Validation of dynamic response of a 2-MW hybrid-spar floating wind turbine during power production",
+      "topicTags": [
+        "Economics",
+        "Electrical engineering",
+        "Engineering",
+        "Environmental science",
+        "Geotechnical engineering",
+        "Macroeconomics",
+        "Marine engineering",
+        "Mechanical engineering",
+        "Offshore geotechnical engineering",
+        "Offshore wind power",
+        "Physics",
+        "Power (physics)",
+        "Production (economics)",
+        "Quantum mechanics",
+        "Spar",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind power"
+      ]
+    },
+    {
+      "abstract": "This study examined the impact of wind–wave misalignment on floating offshore wind turbines (FOWTs) in Irish waters, analysing average weather and extreme events, including hurricane conditions. Using the ERA5 reanalysis dataset validated against Irish Marine Data Buoy Observation Network measurements, the results showed a satisfactory accuracy with an average wind speed error of −0.54 m/s and a strong correlation coefficient of 0.92. Wind–wave misalignment was found to be inversely correlated with wind speed (correlation coefficient: −0.41), with minimum misalignment occurring approximately seven hours after a change in wind direction. The study revealed that misalignment could exceed 30∘ during hurricanes, contradicting standard assumptions of alignment under extreme conditions. The investigation highlighted that in western coastal areas, average misalignment could reach 57.95∘, while sheltered Irish Sea regions experienced lower values, such as 23.06∘. Numerical simulations confirmed that these misalignment events amplified side-to-side turbine deflections significantly. This research underscores the need to incorporate misalignment effects into industry testing standards and suggests that current methodologies may underestimate fatigue loads by up to 50%. This work emphasizes improved design and testing protocols for FOWTs in complex marine environments and highlights the suitability of ERA5 for climate analysis in Ireland.",
+      "authors": [
+        "Thomas Shanahan",
+        "Breiffni Fitzgerald"
+      ],
+      "candidateIds": [
+        "candidate_openalex_6cc7dedee72f3b48"
+      ],
+      "doi": "https://doi.org/10.3390/en18020372",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_d25b06942948293b",
+      "processingStatus": "classified",
+      "publicationSource": "Energies",
+      "publicationType": "unknown",
+      "publishedDate": "2025-01-16",
+      "rank": 5,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 0,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 2,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 0,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_d25b06942948293b",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-01-19T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_d25b06942948293b",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Coastal and Marine Dynamics",
+          "Electrical engineering",
+          "Engineering",
+          "Environmental science",
+          "Geology",
+          "Marine engineering",
+          "Oceanography",
+          "Offshore wind power",
+          "Submarine pipeline",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20250119_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/en18020372",
+        "openalexId": "https://openalex.org/W4406439126"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.3390/en18020372",
+      "title": "Wind–Wave Misalignment in Irish Waters and Its Impact on Floating Offshore Wind Turbines",
+      "topicTags": [
+        "Coastal and Marine Dynamics",
+        "Electrical engineering",
+        "Engineering",
+        "Environmental science",
+        "Geology",
+        "Marine engineering",
+        "Oceanography",
+        "Offshore wind power",
+        "Submarine pipeline",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind power"
+      ]
+    },
+    {
+      "abstract": "Abstract. This study introduces a comparison between a kurtosis-analysis and a deep learning-based approaches for detecting anomalies of a floating offshore wind turbine. The study uses in-situ measurements from a 2.3 MW floating offshore wind turbine named Zefyros and deployed approximately 11 kilometers off the coast of Norway. The first method employs the statistical metric of kurtosis to detect anomalies within a signal by identifying variations in the signal distribution. The second method employs a deep-learning procedure based on an auto-encoder approach, which transforms inputs into a reduced-dimensional latent space and then uses the encoded information to produce outputs identical to the inputs. One month of SCADA and high frequency measurements obtained thanks to S-Morpho sensors were used in the study. Due to limitations in the accessible SCADA information, the anomaly scenario was simplified to detecting whether the turbine rotor was rotating or not. Both tested methodologies can accurately detect anomalies, with the ground truth based on rotor rotations per minute (rpm) measurements. The auto-encoder method shows promising results, delivering more accurate outcomes than the kurtosis analysis on this in-situ measurement dataset. This study is a first step toward a more general use of auto-encoders for wind turbine anomaly detection. The latent space build by the auto-encoder can be leveraged to detect other types of anomalies, with a few labeled data.",
+      "authors": [
+        "Adrien Hirvoas",
+        "César Aguilera",
+        "Matthieu Perrault",
+        "Damien Desbordes",
+        "Romain Ribault"
+      ],
+      "candidateIds": [
+        "candidate_openalex_a20e1efb8b94143c"
+      ],
+      "doi": "https://doi.org/10.5194/wes-2024-189",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_feea070091bff3d3",
+      "processingStatus": "classified",
+      "publicationSource": null,
+      "publicationType": "preprint",
+      "publishedDate": "2025-01-15",
+      "rank": 6,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 17,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 26,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 13,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250119_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_feea070091bff3d3",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-01-19T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_feea070091bff3d3",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Anomaly (physics)",
+          "Anomaly detection",
+          "Computer science",
+          "Condensed matter physics",
+          "Data mining",
+          "Electrical engineering",
+          "Engineering",
+          "Environmental science",
+          "Geography",
+          "Geology",
+          "In situ",
+          "Marine engineering",
+          "Meteorology",
+          "Oceanography",
+          "Offshore wind power",
+          "Physics",
+          "Structural Integrity and Reliability Analysis",
+          "Submarine pipeline",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20250119_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5194/wes-2024-189",
+        "openalexId": "https://openalex.org/W4406424287"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5194/wes-2024-189",
+      "title": "Comparative anomaly detection for floating offshore wind turbines using in-situ data",
+      "topicTags": [
+        "Anomaly (physics)",
+        "Anomaly detection",
+        "Computer science",
+        "Condensed matter physics",
+        "Data mining",
+        "Electrical engineering",
+        "Engineering",
+        "Environmental science",
+        "Geography",
+        "Geology",
+        "In situ",
+        "Marine engineering",
+        "Meteorology",
+        "Oceanography",
+        "Offshore wind power",
+        "Physics",
+        "Structural Integrity and Reliability Analysis",
+        "Submarine pipeline",
+        "Wind power"
+      ]
+    }
+  ],
+  "sourceName": "openalex",
+  "weekEnd": "2025-01-19",
+  "weekStart": "2025-01-13"
+}

@@ -1,4 +1,19 @@
 import digest20260719Json from "./digests/2026-07-19.json";
+import digest20260621Json from "./digests/2026-06-21.json";
+import digest20260517Json from "./digests/2026-05-17.json";
+import digest20260315Json from "./digests/2026-03-15.json";
+import digest20260118Json from "./digests/2026-01-18.json";
+import digest20251221Json from "./digests/2025-12-21.json";
+import digest20251116Json from "./digests/2025-11-16.json";
+import digest20250921Json from "./digests/2025-09-21.json";
+import digest20250720Json from "./digests/2025-07-20.json";
+import digest20250615Json from "./digests/2025-06-15.json";
+import digest20250518Json from "./digests/2025-05-18.json";
+import digest20250420Json from "./digests/2025-04-20.json";
+import digest20250316Json from "./digests/2025-03-16.json";
+import digest20250216Json from "./digests/2025-02-16.json";
+import digest20250119Json from "./digests/2025-01-19.json";
+
 
 type PipelineDigest = {
   schemaVersion: string;
@@ -64,7 +79,23 @@ export type DigestPaperResult = {
   paper: DigestPaper;
 };
 
-const digestJsonFiles = [digest20260719Json];
+const digestJsonFiles = [
+  digest20260719Json,
+  digest20260621Json,
+  digest20260517Json,
+  digest20260315Json,
+  digest20260118Json,
+  digest20251221Json,
+  digest20251116Json,
+  digest20250921Json,
+  digest20250720Json,
+  digest20250615Json,
+  digest20250518Json,
+  digest20250420Json,
+  digest20250316Json,
+  digest20250216Json,
+  digest20250119Json,
+];
 
 const digests = digestJsonFiles
   .map(validateDigest)

@@ -1,0 +1,717 @@
+{
+  "generatedAt": "2025-07-20T09:00:00Z",
+  "runId": "run_20250720_090000_openalex",
+  "schemaVersion": "pipeline-data-0.1",
+  "selectedPapers": [
+    {
+      "abstract": "Floating photovoltaics are rapidly scaling up solar power beyond on-land PV. Although offshore floating PV is still in pilot-phase, its combination with offshore wind could enable an efficient common use of costly transmission infrastructure. This work introduces a steady-state optimization-based methodology to determine the capacity and connection points of offshore floating PV generators in offshore wind farms. The methodology maximizes the economic efficiency of the hybrid solar-wind farm by minimizing power curtailment, with the wake effect and physical constraints of the collection grid being embedded in the model. A detailed case study illustrates the methodology for a wind farm in the North Sea, which is connected to a test case including time series of the Central-Western European grid. The results reveal that a significant amount of PV can be integrated in a modern offshore wind farm without hindering the transmission of wind power. Efficient integration of both technologies requires temporal complementarity of solar and wind resources, which is present in the North Sea. Finally, guidelines are provided for the placement of PV within offshore wind farms and cost targets are derived for which the integrated offshore solar system would break even in the analyzed case. The work demonstrates the significant technical potential of hybrid offshore solar-wind farms and identifies key technical and economic challenges to be addressed.",
+      "authors": [
+        "Oscar Delbeke",
+        "Giacomo Bastianel",
+        "Hakan Ergun",
+        "J. Moschner",
+        "Johan Driesen"
+      ],
+      "candidateIds": [
+        "candidate_openalex_8d0d51fbc2768789"
+      ],
+      "doi": "https://doi.org/10.36227/techrxiv.175303839.96533943/v1",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_d0596ed960797697",
+      "processingStatus": "classified",
+      "publicationSource": null,
+      "publicationType": "preprint",
+      "publishedDate": "2025-07-20",
+      "rank": 1,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 24,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 32,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 27,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 18,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_d0596ed960797697",
+        "classification": "Relevant",
+        "confidence": 0.84,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-07-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_d0596ed960797697",
+        "promptVersion": null,
+        "reason": "relevant_title_combined_fowt_signals",
+        "topicTags": [
+          "Coastal and Marine Management",
+          "Electrical engineering",
+          "Engineering",
+          "Environmental science",
+          "Geology",
+          "Marine and Offshore Engineering Studies",
+          "Marine engineering",
+          "Oceanography",
+          "Offshore wind power",
+          "Photovoltaic Systems and Sustainability",
+          "Photovoltaic system",
+          "Photovoltaics",
+          "Submarine pipeline",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20250720_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.36227/techrxiv.175303839.96533943/v1",
+        "openalexId": "https://openalex.org/W4412497033"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.36227/techrxiv.175303839.96533943/v1",
+      "title": "The Integration of Floating Photovoltaics with Offshore Wind: Assessing the Potential of Hybrid Offshore Solar-Wind Farms",
+      "topicTags": [
+        "Coastal and Marine Management",
+        "Electrical engineering",
+        "Engineering",
+        "Environmental science",
+        "Geology",
+        "Marine and Offshore Engineering Studies",
+        "Marine engineering",
+        "Oceanography",
+        "Offshore wind power",
+        "Photovoltaic Systems and Sustainability",
+        "Photovoltaic system",
+        "Photovoltaics",
+        "Submarine pipeline",
+        "Wind power"
+      ]
+    },
+    {
+      "abstract": "This paper proposes a novel integrated foundation structure of floating wind turbine and net cage by combining large capacity semi-submersible wind turbines with aquaculture cages. The research mainly focuses on the effect of biological fouling on net cage structures and safety performance of mooring systems. The study firstly validates the simplified model of net cage through comparing with results of existing scaled experimental models. Then, a hydrodynamic analysis is conducted on the net cage model to obtain the RAOs of motion response of the structure under frequency-domain analysis, and damping correction is also carried out on the structure. Finally, time-domain analyses under irregular wave conditions are conducted to evaluate the effects of biofouling fouling on motion responses of net cage foundation and tensions of mooring lines.",
+      "authors": [
+        "Yu Hu",
+        "Hao Liu",
+        "Yingyao Cheng",
+        "Jichao Lei",
+        "J.M. Liu"
+      ],
+      "candidateIds": [
+        "candidate_openalex_e38e3484440b49bf"
+      ],
+      "doi": "https://doi.org/10.3390/jmse13071372",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_49292aa042db1d63",
+      "processingStatus": "classified",
+      "publicationSource": "Journal of Marine Science and Engineering",
+      "publicationType": "unknown",
+      "publishedDate": "2025-07-18",
+      "rank": 2,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 22,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 1,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 16,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 11,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_49292aa042db1d63",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-07-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_49292aa042db1d63",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Archaeology",
+          "Cage",
+          "Engineering",
+          "Environmental science",
+          "Foundation (evidence)",
+          "Geometry",
+          "History",
+          "Marine engineering",
+          "Mathematics",
+          "Mechanical engineering",
+          "Mooring",
+          "Net (polyhedron)",
+          "Oceanographic and Atmospheric Processes",
+          "Spar",
+          "Structural engineering",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development"
+        ]
+      },
+      "runId": "run_20250720_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/jmse13071372",
+        "openalexId": "https://openalex.org/W4413057235"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.3390/jmse13071372",
+      "title": "Effect of Biological Fouling on the Dynamic Responses of Integrated Foundation Structure of Floating Wind Turbine and Net Cage",
+      "topicTags": [
+        "Archaeology",
+        "Cage",
+        "Engineering",
+        "Environmental science",
+        "Foundation (evidence)",
+        "Geometry",
+        "History",
+        "Marine engineering",
+        "Mathematics",
+        "Mechanical engineering",
+        "Mooring",
+        "Net (polyhedron)",
+        "Oceanographic and Atmospheric Processes",
+        "Spar",
+        "Structural engineering",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development"
+      ]
+    },
+    {
+      "abstract": "The paper discusses the dynamic responses of a SPAR floating offshore wind turbine system under varying sea states. The performance of slack and taut mooring arrangements in restraining the motions of the system is also looked upon. A coupled aero-hydrodynamic analysis is conducted using a potential flow theory-based model and the dynamic motion response of the platform in surge, heave and pitch; power generation in these mooring arrangements are checked. The load cases consider random sea states under steady wind fields for below, rated and above-rated wind speeds. The manuscript aims to examine the effect due to wind-wave misalignment for SPAR FOWTs with taut moorings, which is still unexplored. The manuscript entails systematic studies focussed to understand the performance based on responses and power generation of the SPAR FOWTs. It is observed that the dynamic motions in surge and pitch are relatively lower for the taut mooring arrangement whereas, heave shows comparatively higher values in taut arrangement due to the distribution of loads and lower mooring line restoring force. The generated power shows less variation in accordance with the load cases irrespective of the mooring arrangements. Both wind-wave loads affect the wind turbine operating cases in 0°/180° headings, whereas in 90° wave, power generation is primarily altered by wind loads. There is a reduction in power generation in a 90° sea condition as compared to 0°/180° sea conditions. This is attributed to the prominent platform responses that are noticed in the sway and roll. Thus, it is observed that by adopting a taut mooring arrangement in deeper waters for SPAR FOWT not only improves the system responses, power generation, but also reduces the mooring line footprint and related costs.",
+      "authors": [
+        "Thomas Arya",
+        "V. K. Srineash",
+        "Manasa Ranjan Behera"
+      ],
+      "candidateIds": [
+        "candidate_openalex_3c95674b6f4aace2"
+      ],
+      "doi": "https://doi.org/10.1177/14750902251345045",
+      "fullTextAvailability": "abstract_only",
+      "indexedDate": null,
+      "openAccessStatus": "closed",
+      "paperId": "paper_doi_96e22dbd1d2a158f",
+      "processingStatus": "classified",
+      "publicationSource": "Proceedings of the Institution of Mechanical Engineers Part M Journal of Engineering for the Maritime Environment",
+      "publicationType": "unknown",
+      "publishedDate": "2025-07-18",
+      "rank": 3,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 14,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 12,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 12,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 10,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_96e22dbd1d2a158f",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-07-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_96e22dbd1d2a158f",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aerospace engineering",
+          "Coastal and Marine Dynamics",
+          "Electrical engineering",
+          "Engineering",
+          "Geology",
+          "Geotechnical engineering",
+          "Marine engineering",
+          "Mooring",
+          "Ocean Waves and Remote Sensing",
+          "Oceanography",
+          "Offshore wind power",
+          "Physics",
+          "Power (physics)",
+          "Quantum mechanics",
+          "Sea state",
+          "Spar",
+          "Structural engineering",
+          "Submarine pipeline",
+          "Surge",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind power",
+          "Wind wave"
+        ]
+      },
+      "runId": "run_20250720_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1177/14750902251345045",
+        "openalexId": "https://openalex.org/W4412966771"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1177/14750902251345045",
+      "title": "Effect of wind-wave interaction on the performance of SPAR type FOWT for varying mooring arrangements",
+      "topicTags": [
+        "Aerospace engineering",
+        "Coastal and Marine Dynamics",
+        "Electrical engineering",
+        "Engineering",
+        "Geology",
+        "Geotechnical engineering",
+        "Marine engineering",
+        "Mooring",
+        "Ocean Waves and Remote Sensing",
+        "Oceanography",
+        "Offshore wind power",
+        "Physics",
+        "Power (physics)",
+        "Quantum mechanics",
+        "Sea state",
+        "Spar",
+        "Structural engineering",
+        "Submarine pipeline",
+        "Surge",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind power",
+        "Wind wave"
+      ]
+    },
+    {
+      "abstract": "Abstract. Floating offshore wind turbines represent a promising advancement in renewable energy, yet they remain in early development stages with limited performance data. As part of the NETTUNO research project, this study investigates how platform motion affects the aerodynamics of a floating wind turbine rotor and connects its load response to the wake evolution. Wind tunnel experiments were conducted using a 1:75-scale wind turbine model subjected to platform motions in various directions. Measurements include rotor loads and wake velocities at downstream distances from 3 to 5 rotor diameters. The results show that surge and pitch motions induce periodic thrust fluctuations, leading to significant variations in near-wake velocity, that have maximum amplitude at a reduced frequency of 0.6. Yaw motion causes oscillations in yaw moment and lateral wake meandering, while combined surge and sway motions result in skewed apparent wind, causing both wake velocity fluctuations and lateral meandering. Increased turbulence intensity near the wake center suggests enhanced mixing and potentially faster wake recovery beyond 5 rotor diameters, which is the furthest distance examined in the experiment. This new experimental dataset serves as a foundation for validating numerical simulation tools and provides valuable insights for optimizing the design and layout of future large-scale floating wind farms.",
+      "authors": [
+        "Alessandro Fontanella",
+        "Alberto Fusetti",
+        "Stefano Cioni",
+        "Francesco Papi",
+        "Sara Muggiasca",
+        "Giacomo Persico",
+        "Vincenzo Dossena",
+        "Alessandro Bianchini",
+        "Marco Belloli"
+      ],
+      "candidateIds": [
+        "candidate_openalex_917389d1c1c8cf9e"
+      ],
+      "doi": "https://doi.org/10.5194/wes-10-1369-2025",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_b52e1c52d6d68d5c",
+      "processingStatus": "classified",
+      "publicationSource": "Wind energy science",
+      "publicationType": "unknown",
+      "publishedDate": "2025-07-17",
+      "rank": 4,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 5,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 0,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 5,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 0,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_b52e1c52d6d68d5c",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-07-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_b52e1c52d6d68d5c",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aerodynamics",
+          "Aerospace engineering",
+          "Electrical engineering",
+          "Engineering",
+          "Environmental science",
+          "Fluid Dynamics and Vibration Analysis",
+          "Geology",
+          "Marine engineering",
+          "Mechanical engineering",
+          "Meteorology",
+          "Offshore wind power",
+          "Physics",
+          "Rotor (electric)",
+          "Thrust",
+          "Turbine",
+          "Wake",
+          "Wake turbulence",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind power",
+          "Wind tunnel"
+        ]
+      },
+      "runId": "run_20250720_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5194/wes-10-1369-2025",
+        "openalexId": "https://openalex.org/W4413079605"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5194/wes-10-1369-2025",
+      "title": "Wake development in floating wind turbines: new insights and an open dataset from wind tunnel experiments",
+      "topicTags": [
+        "Aerodynamics",
+        "Aerospace engineering",
+        "Electrical engineering",
+        "Engineering",
+        "Environmental science",
+        "Fluid Dynamics and Vibration Analysis",
+        "Geology",
+        "Marine engineering",
+        "Mechanical engineering",
+        "Meteorology",
+        "Offshore wind power",
+        "Physics",
+        "Rotor (electric)",
+        "Thrust",
+        "Turbine",
+        "Wake",
+        "Wake turbulence",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind power",
+        "Wind tunnel"
+      ]
+    },
+    {
+      "abstract": "The rapid development of offshore wind energy has resulted in the saturation of suitable sites for fixed offshore wind turbines in shallow waters, necessitating the adoption of floating offshore wind turbines (FOWTs) for deeper locations. To ensure the safety of FOWTs in the event of the complete failure of all the moorings, this study investigates the stability of FOWTs without considering the restoring effects from the moorings. However, existing commercial software is unable to identify the angle at which the FOWTs exhibit the worst stability under different external wind force directions. Additionally, it cannot determine the critical wind speed considering the operational condition of FOWTs. Moreover, commercial software tends to be inflexible, and its computational methods lack transparency. To overcome these issues, this study establishes an analytical procedure and a self-developed program that requires only Stereolithography (STL) for a 3D model and predefined parameters, thereby overcoming the limitations of modeling numerical models in specific commercial software. The critical wind speed is determined by the operational thrust force of the FOWT and the wind pressure acting on it, using an optimization theorem. For the numerical case study, the IEA 15[Formula: see text]MW FOWT is used to evaluate its hydrostatic stability. The righting moment across multiple direction is analyzed, identifying geometric characteristics through contour plots. Additionally, the critical wind heeling moments in multiple directions are determined using an optimization theorem, with a clear focus on external forces that pose the highest risk. Finally, the performance index in multi-directional evaluation is proposed to enhance FOWT hydrostatic stability assessment by identifying critical angles and guiding targeted structural improvements.",
+      "authors": [
+        "Guan-Yu Sung",
+        "Yu Chi Sung",
+        "Zhiyuan Chen",
+        "I-Ting Chang",
+        "Chin‐Kuo Su"
+      ],
+      "candidateIds": [
+        "candidate_openalex_44cc667d217e5431"
+      ],
+      "doi": "https://doi.org/10.1142/s021945542650389x",
+      "fullTextAvailability": "abstract_only",
+      "indexedDate": null,
+      "openAccessStatus": "closed",
+      "paperId": "paper_doi_cd283bb85b77bce5",
+      "processingStatus": "classified",
+      "publicationSource": "International Journal of Structural Stability and Dynamics",
+      "publicationType": "unknown",
+      "publishedDate": "2025-07-17",
+      "rank": 5,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 12,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 18,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 9,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_cd283bb85b77bce5",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-07-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_cd283bb85b77bce5",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Computer science",
+          "Electrical engineering",
+          "Engineering",
+          "Environmental science",
+          "Geology",
+          "Geotechnical engineering",
+          "Machine learning",
+          "Marine engineering",
+          "Offshore wind power",
+          "Stability (learning theory)",
+          "Submarine pipeline",
+          "Wave and Wind Energy Systems",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20250720_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1142/s021945542650389x",
+        "openalexId": "https://openalex.org/W4413087308"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1142/s021945542650389x",
+      "title": "Comprehensive Stability Assessment Approach of Floating Offshore Wind Turbines for Multi-Directional Evaluation",
+      "topicTags": [
+        "Computer science",
+        "Electrical engineering",
+        "Engineering",
+        "Environmental science",
+        "Geology",
+        "Geotechnical engineering",
+        "Machine learning",
+        "Marine engineering",
+        "Offshore wind power",
+        "Stability (learning theory)",
+        "Submarine pipeline",
+        "Wave and Wind Energy Systems",
+        "Wind power"
+      ]
+    },
+    {
+      "abstract": "This paper presents a method to model and optimize the supply chain processes for floating offshore wind turbines using a network model based on Generalized Multi-Commodity Network Flows (GMCNF). The proposed method represents production bases, base ports, installation sites, component transfer areas, and transportation routes as nodes and arcs within the network. The installation process is modeled using three transport concepts: assembling components at the base port, direct assembly and installation at the installation site, and transferring components to the installation vessel at a nearby port. These processes are expressed as a linear network model, with the objective function set to minimize total transportation and assembly costs. The optimal transportation network is derived by solving the network problem while incorporating constraints such as supply, demand, and transportation capacity. Case studies demonstrate the method’s effectiveness in optimizing the supply chain and evaluating potential new production site locations for floating foundations, considering overall supply chain optimization.",
+      "authors": [
+        "Taiga Mitsuyuki",
+        "Takahiro Shimozawa",
+        "Itsuki Mizokami",
+        "Shinnosuke Wanaka"
+      ],
+      "candidateIds": [
+        "candidate_openalex_10ca330bd27cdfd6"
+      ],
+      "doi": "https://doi.org/10.3390/systems13070598",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_f931ffa8ae0f03ae",
+      "processingStatus": "classified",
+      "publicationSource": "Systems",
+      "publicationType": "unknown",
+      "publishedDate": "2025-07-17",
+      "rank": 6,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 15,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 21,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 13,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250720_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_f931ffa8ae0f03ae",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-07-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_f931ffa8ae0f03ae",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Astronomy",
+          "Business",
+          "Chain (unit)",
+          "Computer science",
+          "Electrical engineering",
+          "Engineering",
+          "Environmental science",
+          "Geology",
+          "Marine and Offshore Engineering Studies",
+          "Marine engineering",
+          "Marketing",
+          "Oceanography",
+          "Offshore wind power",
+          "Physics",
+          "Submarine pipeline",
+          "Supply chain",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20250720_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/systems13070598",
+        "openalexId": "https://openalex.org/W4412650987"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.3390/systems13070598",
+      "title": "Supply Chain Design Method for Introducing Floating Offshore Wind Turbines Using Network Optimization Model",
+      "topicTags": [
+        "Astronomy",
+        "Business",
+        "Chain (unit)",
+        "Computer science",
+        "Electrical engineering",
+        "Engineering",
+        "Environmental science",
+        "Geology",
+        "Marine and Offshore Engineering Studies",
+        "Marine engineering",
+        "Marketing",
+        "Oceanography",
+        "Offshore wind power",
+        "Physics",
+        "Submarine pipeline",
+        "Supply chain",
+        "Wind power"
+      ]
+    }
+  ],
+  "sourceName": "openalex",
+  "weekEnd": "2025-07-20",
+  "weekStart": "2025-07-14"
+}

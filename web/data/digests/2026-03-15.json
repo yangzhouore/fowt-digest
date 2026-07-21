@@ -1,0 +1,698 @@
+{
+  "generatedAt": "2026-03-15T09:00:00Z",
+  "runId": "run_20260315_090000_openalex",
+  "schemaVersion": "pipeline-data-0.1",
+  "selectedPapers": [
+    {
+      "abstract": null,
+      "authors": [
+        "Zhiyi Lu",
+        "Zhengnong Li",
+        "Chao Wang",
+        "Shujin Li"
+      ],
+      "candidateIds": [
+        "candidate_openalex_8282997ac39051ad"
+      ],
+      "doi": "https://doi.org/10.1016/j.energy.2026.140735",
+      "fullTextAvailability": "none",
+      "indexedDate": null,
+      "openAccessStatus": "closed",
+      "paperId": "paper_doi_4ddd91feb184b1d2",
+      "processingStatus": "classified",
+      "publicationSource": "Energy",
+      "publicationType": "unknown",
+      "publishedDate": "2026-03-15",
+      "rank": 1,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 14,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_4ddd91feb184b1d2",
+        "classification": "Relevant",
+        "confidence": 0.84,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-03-15T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_4ddd91feb184b1d2",
+        "promptVersion": null,
+        "reason": "relevant_title_combined_fowt_signals",
+        "topicTags": [
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Vibration and Dynamic Analysis",
+          "Vertical axis",
+          "Wind power",
+          "Stability (learning theory)",
+          "Marine engineering",
+          "Environmental science",
+          "Gyroscope",
+          "Mechanics",
+          "Geology",
+          "Horizontal axis",
+          "Control theory (sociology)",
+          "Engineering",
+          "Longitudinal static stability",
+          "Structural engineering",
+          "Turbine",
+          "Physics",
+          "Wind gradient"
+        ]
+      },
+      "runId": "run_20260315_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.energy.2026.140735",
+        "openalexId": "https://openalex.org/W7136092165"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1016/j.energy.2026.140735",
+      "title": "Analysis of the influence of gyroscopic effect on the stability of floating vertical axis wind turbines",
+      "topicTags": [
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Vibration and Dynamic Analysis",
+        "Vertical axis",
+        "Wind power",
+        "Stability (learning theory)",
+        "Marine engineering",
+        "Environmental science",
+        "Gyroscope",
+        "Mechanics",
+        "Geology",
+        "Horizontal axis",
+        "Control theory (sociology)",
+        "Engineering",
+        "Longitudinal static stability",
+        "Structural engineering",
+        "Turbine",
+        "Physics",
+        "Wind gradient"
+      ]
+    },
+    {
+      "abstract": "This study investigates the floating wind turbine (FWT)–Net cage integrated platform, where the net cage is rigidly connected to the FWT foundation. The platform is numerically modeled using time-domain simulations in OrcaFlex V11.1, based on representative environmental conditions of the South China Sea. The operational performance of two layouts of the platform is evaluated and compared, considering both power generation efficiency and residual volume ratio as key indicators. The results show that the FWT–Net cage integrated platform exhibits superior hydrodynamic stability, characterized by reduced surge and pitch motions, lower mooring force fluctuations, and a higher residual cage volume. Additionally, the platform achieves better power generation efficiency and a higher residual volume ratio, indicating more effective use of the aquaculture space. Based on these findings, an improved integrated design incorporating additional outer net cages is proposed. This design demonstrates enhanced aquaculture capacity while maintaining power generation. The results provide valuable insights for the design of FWT–Net cage integration, promoting the efficient and sustainable utilization of marine space.",
+      "authors": [
+        "Xing Hua Shi",
+        "Qiang Ang",
+        "Jing Zhang",
+        "Honglong Li",
+        "Chunhan Wu",
+        "Shan Wang"
+      ],
+      "candidateIds": [
+        "candidate_openalex_9849721e4c5429eb"
+      ],
+      "doi": "https://doi.org/10.3390/jmse14060548",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_783ad8be47a3e2f7",
+      "processingStatus": "classified",
+      "publicationSource": "Journal of Marine Science and Engineering",
+      "publicationType": "unknown",
+      "publishedDate": "2026-03-15",
+      "rank": 2,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 27,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 6,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 18,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_783ad8be47a3e2f7",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-03-15T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_783ad8be47a3e2f7",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Automotive engineering",
+          "Cage",
+          "Computer science",
+          "Electricity generation",
+          "Engineering",
+          "Environmental science",
+          "Integrated design",
+          "Key (lock)",
+          "Marine Bivalve and Aquaculture Studies",
+          "Marine engineering",
+          "Mooring",
+          "Net (polyhedron)",
+          "Optimal design",
+          "Power (physics)",
+          "Renewable energy",
+          "Residual",
+          "Turbine",
+          "Volume (thermodynamics)",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20260315_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/jmse14060548",
+        "openalexId": "https://openalex.org/W7136560506"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.3390/jmse14060548",
+      "title": "Dynamic Response and Operational Performance of an Integrated Floating Wind Turbine–Net Cage Platform",
+      "topicTags": [
+        "Automotive engineering",
+        "Cage",
+        "Computer science",
+        "Electricity generation",
+        "Engineering",
+        "Environmental science",
+        "Integrated design",
+        "Key (lock)",
+        "Marine Bivalve and Aquaculture Studies",
+        "Marine engineering",
+        "Mooring",
+        "Net (polyhedron)",
+        "Optimal design",
+        "Power (physics)",
+        "Renewable energy",
+        "Residual",
+        "Turbine",
+        "Volume (thermodynamics)",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind power"
+      ]
+    },
+    {
+      "abstract": "This study investigates the role of grid-integrated offshore wind (OSW) in coastal regions of an archipelagic country, focusing on the implications for system stability and inertia constraints. Conventional energy modeling frameworks often neglect the temporal and spatial complexities that characterize archipelagic nations such as the Philippines, where fragmented grids and limited inter-island connectivity create significant operational constraints. To address these challenges, several scenarios were developed to assess the integration of floating and fixed OSW technologies within the Philippine power grid under varying inertia conditions. The results reveal the growing advantage of floating platforms, with capacities expanding from 430 MW in low-growth conditions to nearly 4,500 MW in high-growth cases when supported by Battery Energy Storage Systems (BESS). The inclusion of decarbonization measures further enhances OSW deployment potential. Findings present an optimization-based approach for supporting national climate objectives and advancing the global transition toward low-carbon, resilient, and sustainable energy systems. The results indicate that floating offshore wind leads in capacity expansion, particularly under high-growth conditions, reaching 1,262 MW. In contrast, fixed offshore wind plays a smaller role due to limitations related to depth and site accessibility. High-growth scenario with and without CO₂ mitigation and BESS shows that both the addition of BESS and CO₂ reduction policies substantially increase offshore wind deployment. In this case, floating offshore wind capacity reaches 11,258 MW, while fixed offshore wind rises to 1,837 MW. This highlights the significance of energy storage and climate policies in enhancing offshore wind energy production. We also compared the levelized cost of electricity (LCOE). Without CO₂ constraints, fixed offshore wind often proves to be unviable. However, when BESS and CO₂ reduction measures are implemented, the LCOE decreases significantly. In the most favorable scenario, the LCOE drops to 0.18 USD/kWh for fixed offshore wind and 0.15 USD/kWh for floating offshore wind.",
+      "authors": [
+        "Ruth Anne Gonocruz-Abe",
+        "Nathanael E. Silava",
+        "Edward Joseph Maguindayao",
+        "Akito Ozawa",
+        "Rodolfo A. Aguirre"
+      ],
+      "candidateIds": [
+        "candidate_openalex_5c50925a91ac326f"
+      ],
+      "doi": "https://doi.org/10.5194/egusphere-egu26-2353",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_218bc0ec3d404e10",
+      "processingStatus": "classified",
+      "publicationSource": null,
+      "publicationType": "unknown",
+      "publishedDate": "2026-03-13",
+      "rank": 3,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 11,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_218bc0ec3d404e10",
+        "classification": "Relevant",
+        "confidence": 0.84,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-03-15T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_218bc0ec3d404e10",
+        "promptVersion": null,
+        "reason": "relevant_title_combined_fowt_signals",
+        "topicTags": [
+          "Hybrid Renewable Energy Systems",
+          "Integrated Energy Systems Optimization",
+          "Wave and Wind Energy Systems",
+          "Offshore wind power",
+          "Wind power",
+          "Environmental science",
+          "Submarine pipeline",
+          "Archipelagic state",
+          "Cost of electricity by source",
+          "Renewable energy",
+          "Marine engineering",
+          "Energy transition",
+          "Climate change",
+          "Meteorology",
+          "Electricity",
+          "Pumped-storage hydroelectricity",
+          "Software deployment",
+          "Grid",
+          "Electricity generation",
+          "Engineering",
+          "Environmental resource management",
+          "Typhoon",
+          "Electrification",
+          "Natural resource economics",
+          "Efficient energy use"
+        ]
+      },
+      "runId": "run_20260315_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5194/egusphere-egu26-2353",
+        "openalexId": "https://openalex.org/W7135234151"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5194/egusphere-egu26-2353",
+      "title": "The inertia transition of grid-integrated floating and fixed offshore wind energy in the Philippines",
+      "topicTags": [
+        "Hybrid Renewable Energy Systems",
+        "Integrated Energy Systems Optimization",
+        "Wave and Wind Energy Systems",
+        "Offshore wind power",
+        "Wind power",
+        "Environmental science",
+        "Submarine pipeline",
+        "Archipelagic state",
+        "Cost of electricity by source",
+        "Renewable energy",
+        "Marine engineering",
+        "Energy transition",
+        "Climate change",
+        "Meteorology",
+        "Electricity",
+        "Pumped-storage hydroelectricity",
+        "Software deployment",
+        "Grid",
+        "Electricity generation",
+        "Engineering",
+        "Environmental resource management",
+        "Typhoon",
+        "Electrification",
+        "Natural resource economics",
+        "Efficient energy use"
+      ]
+    },
+    {
+      "abstract": "This dataset, collected as part of the NETTUNO research project, include numerical simulation results on a 1:75 scale model wind turbine. The primary focus of the endeavor was to analyze how platform motion in different directions affects the aerodynamics of the wind turbine rotor and the development of its wake. The dataset consists of two components:• Measurements of the aerodynamic forces and moments experienced by the rotor under various platform motion conditions.• Wind speed measurements collected at multiple downstream distances from the rotor, capturing the velocity profiles and turbulence characteristics within the turbine's wake.As described more in detail in the companion deocuments, results consist of two \"parts\". The first consists of results obtained with setups that inclode on rotor only. The second contains results of simulations with two tandem rotors, where the first rotor undergoes armonic motions and the second is kept still. The contents are organized as follows: P1_ALM: Results from simulations on one rotor using the Actuator Line Model P1_LLFVW: Results from simulation on one rotor using the Lifting Line Free Vortex Wake model P2_LLFVW: Results from simulations on two tandem rotors using the Lifting Line Free Vortex Wake mode The dataset is designed to serve as a comprehensive benchmark for researchers and engineers working on floating wind turbine aerodynamics, offering valuable insights for optimizing wind farm layouts and for developing simulation tools. More results may be added in the future as they are quality controlled and checked. If you find this data useful please cite the following paper (included in the dataset) : Cioni, S., Papi, F., Melani, P. F., Fontanella, A., Firpo, A., Sanvito, A. G., Persico, G., Dossena, V., Muggiasca, S., Belloli, M., and Bianchini, A.: How accurately do engineering methods capture floating wind turbine performance and wake? A critical perspective using multi-fidelity simulations, Wind Energ. Sci., 11, 795–824, https://doi.org/10.5194/wes-11-795-2026, 2026.Other useful resources from the NETTUNO Project: Datasets in the NETTUNO community: https://zenodo.org/communities/nettuno-project-it/records?q=&l=list&p=1&s=10&sort=newest Pagamonci, L., Papi, F., Cojocaru, G., Belloli, M., and Bianchini, A.: How does turbulence affect wake development in floating wind turbines? Some insights from comparative large-eddy simulations and wind tunnel experiments, Wind Energ. Sci., 10, 1707–1736, https://doi.org/10.5194/wes-10-1707-2025, 2025. Cioni, S., Papi, F., Balduzzi, F., Fontanella, A., and Bianchini, A.: Blade-resolved CFD analysis of a floating wind turbine: new insights on unsteady aerodynamics, loads, and wake, Ocean Engineering, 341, 122746, https://doi.org/10.1016/j.oceaneng.2025.122746, 2025Fontanella, A., Fusetti, A., Cioni, S., Papi, F., Muggiasca, S., Persico, G., Dossena, V., Bianchini, A., and Belloli, M.: Wake development in floating wind turbines: new insights and an open dataset from wind tunnel experiments, Wind Energy Science, 10, 1369–1387, 2025.",
+      "authors": [
+        "Francesco Papi",
+        "Alessandro Bianchini",
+        "STEFANO CIONI"
+      ],
+      "candidateIds": [
+        "candidate_openalex_57b030ccbd0ae76c",
+        "candidate_openalex_03e24722de1e8e26"
+      ],
+      "doi": "https://doi.org/10.5281/zenodo.19002759",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "green",
+      "paperId": "paper_doi_6b2ba4937486b875",
+      "processingStatus": "classified",
+      "publicationSource": "Zenodo (CERN European Organization for Nuclear Research)",
+      "publicationType": "unknown",
+      "publishedDate": "2026-03-13",
+      "rank": 4,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 4,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 5,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_6b2ba4937486b875",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-03-15T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_6b2ba4937486b875",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Actuator",
+          "Aerodynamic force",
+          "Aerodynamics",
+          "Aerospace engineering",
+          "Benchmark (surveying)",
+          "Computational fluid dynamics",
+          "Computer science",
+          "Computer simulation",
+          "Engineering",
+          "Focus (optics)",
+          "Line (geometry)",
+          "Marine engineering",
+          "Mechanical engineering",
+          "Mode (computer interface)",
+          "Rotor (electric)",
+          "Scale (ratio)",
+          "Simulation",
+          "Tandem",
+          "Turbine",
+          "Turbulence",
+          "Upstream (networking)",
+          "Vortex",
+          "Wake",
+          "Wake turbulence",
+          "Wind power",
+          "Wind speed",
+          "Wind tunnel"
+        ]
+      },
+      "runId": "run_20260315_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5281/zenodo.19002759",
+        "openalexId": "https://openalex.org/W7148605622"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.19002759",
+      "title": "NETTUNO Numerical results - Multi-Fidelity simulation of single and tandem floating wind turbines",
+      "topicTags": [
+        "Actuator",
+        "Aerodynamic force",
+        "Aerodynamics",
+        "Aerospace engineering",
+        "Benchmark (surveying)",
+        "Computational fluid dynamics",
+        "Computer science",
+        "Computer simulation",
+        "Engineering",
+        "Focus (optics)",
+        "Line (geometry)",
+        "Marine engineering",
+        "Mechanical engineering",
+        "Mode (computer interface)",
+        "Rotor (electric)",
+        "Scale (ratio)",
+        "Simulation",
+        "Tandem",
+        "Turbine",
+        "Turbulence",
+        "Upstream (networking)",
+        "Vortex",
+        "Wake",
+        "Wake turbulence",
+        "Wind power",
+        "Wind speed",
+        "Wind tunnel"
+      ]
+    },
+    {
+      "abstract": "Floating offshore wind holds immense promise for nations with deep coastal waters and robust wind resources. Taiwan, with 90% of its territorial waters deeper than 50 m and consistently strong wind speeds, is well-positioned to lead in this domain. However, recent project withdrawals by major developers have raised concerns over the sector’s viability. This paper investigates the stagnation of Taiwan’s floating wind industry by comparing its development framework with that of France, now a global frontrunner in floating offshore wind. Through a mixed-method approach combining literature review, techno-economic benchmarking, and thematic analysis of interviews with industry leaders, the research identifies key barriers in Taiwan, including insufficient port infrastructure, unclear regulatory frameworks, fragmented supply chains, and a lack of financial incentives. Drawing on lessons from France’s structured tendering system and phased industrial strategy, the paper outlines actionable recommendations for revitalizing Taiwan’s floating wind sector. These include policy reforms, supply chain enhancements, and demonstration-scale deployments. The findings aim to inform both policymakers and industry stakeholders in shaping a more viable future for floating offshore wind in Taiwan.",
+      "authors": [
+        "Karl Gebrael",
+        "Glib Ivanov",
+        "Leon van Jaarsveldt"
+      ],
+      "candidateIds": [
+        "candidate_openalex_c40acfe58fbb9e76"
+      ],
+      "doi": "https://doi.org/10.3390/wind6010012",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "diamond",
+      "paperId": "paper_doi_5b2e796373bd5f44",
+      "processingStatus": "classified",
+      "publicationSource": "Wind",
+      "publicationType": "unknown",
+      "publishedDate": "2026-03-12",
+      "rank": 5,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 3,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 25,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 20,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_5b2e796373bd5f44",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-03-15T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_5b2e796373bd5f44",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Boom",
+          "Business",
+          "Engineering",
+          "Environmental planning",
+          "Environmental resource management",
+          "Environmental science",
+          "Government (linguistics)",
+          "Key (lock)",
+          "Marine and Offshore Engineering Studies",
+          "Offshore wind power",
+          "Port (circuit theory)",
+          "Procurement",
+          "Shore",
+          "Submarine pipeline",
+          "Supply chain",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20260315_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/wind6010012",
+        "openalexId": "https://openalex.org/W7135018150"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.3390/wind6010012",
+      "title": "The Fate of Floating Offshore Wind in Taiwan—Buried in the Cradle? A Comparative Study with France and Strategies for Revitalization",
+      "topicTags": [
+        "Boom",
+        "Business",
+        "Engineering",
+        "Environmental planning",
+        "Environmental resource management",
+        "Environmental science",
+        "Government (linguistics)",
+        "Key (lock)",
+        "Marine and Offshore Engineering Studies",
+        "Offshore wind power",
+        "Port (circuit theory)",
+        "Procurement",
+        "Shore",
+        "Submarine pipeline",
+        "Supply chain",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind power"
+      ]
+    },
+    {
+      "abstract": "Advancements in floating wind turbine (FOWT) technology—spanning spar-buoy, semisubmersible, and tension-leg platform (TLP) designs—have enabled deep-water deployment, including in seismically active zones near subduction boundaries. This raises the need for robust seismic assessment. Existing numerical tools often neglect soil–fluid–structure interaction, as most Computational Fluid Dynamics (CFD) platforms lack integrated soil modelling. This study presents a simplified Finite Element (FE) framework combining aero-hydrodynamic load modelling with seismic excitation using continuum-based soil models in Abaqus. Mode shapes for all six bending modes are estimated and validated with reported values in literature. Seismic responses of spar, semisubmersible, and TLP platforms are also compared. The validated framework provides a computationally efficient approach for evaluating FOWT behaviour under combined environmental and seismic loading conditions.",
+      "authors": [
+        "M. James",
+        "S. Haldar"
+      ],
+      "candidateIds": [
+        "candidate_openalex_e089812321f57d28"
+      ],
+      "doi": "https://doi.org/10.1201/9781003645955-24",
+      "fullTextAvailability": "abstract_only",
+      "indexedDate": null,
+      "openAccessStatus": "closed",
+      "paperId": "paper_doi_65e915db3c7a8051",
+      "processingStatus": "classified",
+      "publicationSource": null,
+      "publicationType": "unknown",
+      "publishedDate": "2026-03-12",
+      "rank": 6,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 4,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 9,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 2,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20260315_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_65e915db3c7a8051",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-03-15T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_65e915db3c7a8051",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Acceleration",
+          "Bending",
+          "Computer simulation",
+          "Earthquake engineering",
+          "Earthquake simulation",
+          "Engineering",
+          "Finite element method",
+          "Geology",
+          "Geotechnical Engineering and Soil Mechanics",
+          "Geotechnical engineering",
+          "Marine engineering",
+          "Mode (computer interface)",
+          "Numerical modeling",
+          "Numerical models",
+          "Offshore wind power",
+          "Pile",
+          "Seismic loading",
+          "Seismology",
+          "Structural engineering",
+          "Subduction",
+          "Submarine pipeline",
+          "Turbine",
+          "Underwater",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20260315_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1201/9781003645955-24",
+        "openalexId": "https://openalex.org/W7135097222"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1201/9781003645955-24",
+      "title": "Numerical simulation of floating offshore wind turbines under environmental and seismic loading",
+      "topicTags": [
+        "Acceleration",
+        "Bending",
+        "Computer simulation",
+        "Earthquake engineering",
+        "Earthquake simulation",
+        "Engineering",
+        "Finite element method",
+        "Geology",
+        "Geotechnical Engineering and Soil Mechanics",
+        "Geotechnical engineering",
+        "Marine engineering",
+        "Mode (computer interface)",
+        "Numerical modeling",
+        "Numerical models",
+        "Offshore wind power",
+        "Pile",
+        "Seismic loading",
+        "Seismology",
+        "Structural engineering",
+        "Subduction",
+        "Submarine pipeline",
+        "Turbine",
+        "Underwater",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind power"
+      ]
+    }
+  ],
+  "sourceName": "openalex",
+  "weekEnd": "2026-03-15",
+  "weekStart": "2026-03-09"
+}

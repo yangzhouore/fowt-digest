@@ -254,6 +254,20 @@ p {
   border: 1px solid var(--border);
   line-height: 1.35;
 }
+.paper-action-row {
+  margin-top: 18px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.paper-abstract p {
+  max-width: 760px;
+  font-size: 1.04rem;
+  line-height: 1.68;
+}
+
+.paper-detail-meta .topic-list {
+  margin-top: 18px;
+}
 
 dt {
   margin-bottom: 3px;

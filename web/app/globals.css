@@ -221,6 +221,40 @@ p {
   font-size: 0.88rem;
 }
 
+.paper-authors,
+.paper-source-line,
+.topic-list {
+  max-width: 760px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+.paper-authors {
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.paper-source-line {
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+
+.topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  margin: 0 0 16px;
+  padding-left: 0;
+  color: var(--muted);
+  list-style: none;
+}
+
+.topic-list li {
+  padding: 3px 7px;
+  border: 1px solid var(--border);
+  line-height: 1.35;
+}
+
 dt {
   margin-bottom: 3px;
   color: var(--muted);

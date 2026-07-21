@@ -5,6 +5,8 @@ import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
 import { currentDigest } from "../../../data/digest-adapter";
 
+const ABSTRACT_PREVIEW_LENGTH = 280;
+
 type WeeklyPageProps = {
   params: Promise<{
     slug: string;
@@ -79,33 +81,23 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
                 <h3>
                   <Link href={`/papers/${paper.slug}`}>{paper.title}</Link>
                 </h3>
-                <dl className="paper-meta">
-                  <div>
-                    <dt>Authors</dt>
-                    <dd>{paper.authors.join(", ")}</dd>
-                  </div>
-                  <div>
-                    <dt>Source</dt>
-                    <dd>{paper.publicationSource}</dd>
-                  </div>
-                  <div>
-                    <dt>Type</dt>
-                    <dd>{paper.publicationType}</dd>
-                  </div>
-                  <div>
-                    <dt>Publication date</dt>
-                    <dd>{paper.publicationDate}</dd>
-                  </div>
-                  <div>
-                    <dt>Classification</dt>
-                    <dd>{paper.classification ?? "Not classified"}</dd>
-                  </div>
-                  <div>
-                    <dt>Topics</dt>
-                    <dd>{paper.topicTags.join(", ") || "No topic tags"}</dd>
-                  </div>
-                </dl>
-                <p>{paper.summary}</p>
+                <p className="paper-authors">
+                  {paper.authors.join(", ") || "No authors listed"}
+                </p>
+                <p className="paper-source-line">
+                  {formatPublicationDate(paper.publicationDate)} /{" "}
+                  {paper.publicationSource} / {paper.publicationType}
+                </p>
+                {paper.topicTags.length > 0 ? (
+                  <ul className="topic-list" aria-label="Topic tags">
+                    {paper.topicTags.map((topic) => (
+                      <li key={topic}>{topic}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="paper-source-line">No topic tags</p>
+                )}
+                <p>{abstractPreview(paper.abstract)}</p>
                 {paper.sourceUrl ? (
                   <p className="text-link-row">
                     <a href={paper.sourceUrl}>View source</a>
@@ -129,4 +121,25 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
       <SiteFooter />
     </main>
   );
+}
+
+function abstractPreview(abstract: string | null): string {
+  if (!abstract) {
+    return "No abstract available.";
+  }
+
+  if (abstract.length <= ABSTRACT_PREVIEW_LENGTH) {
+    return abstract;
+  }
+
+  return `${abstract.slice(0, ABSTRACT_PREVIEW_LENGTH)}...`;
+}
+
+function formatPublicationDate(value: string): string {
+  return new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${value}T00:00:00Z`));
 }

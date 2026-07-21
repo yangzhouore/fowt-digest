@@ -480,7 +480,7 @@ dd {
 }
 
 .pipeline-diagram li::after {
-  content: "¡ý";
+  content: "v";
   position: absolute;
   left: 0;
   bottom: 4px;

@@ -4,13 +4,16 @@ Last updated: 2026-07-23
 
 ## Current State
 
-- Current branch: `feature/ux-05-site-trust-copy`
-- Current milestone: UX-05 Site Trust Copy Alignment
-- Current feature: UX-05 Site Trust Copy Alignment
-- Current phase: implementation complete, accepted, and committed; documentation baseline complete and accepted
+- Current branch: `main`
+- Current milestone: stable post-merge baseline
+- Current feature: none active
+- Current phase: stable post-merge baseline
+- UX-05 Site Trust Copy Alignment complete, accepted, and merged through PR #11.
+- Merge commit: `12a47b8`
 - Accepted implementation commit: `e8ed0b0`
-- Immediate next task: final branch review, then push and pull request
-- Do not begin another feature before UX-05 is merged.
+- Immediate next task: Design Review for the next milestone
+- Do not begin implementation until the next milestone scope is explicitly
+  reviewed and accepted.
 
 ## Latest Accepted Work
 
@@ -27,7 +30,8 @@ Last updated: 2026-07-23
 - DD-02 Historical demonstration dataset complete, accepted, and committed.
 - UX-04 Website Presentation Refinement complete, accepted, and committed.
 - PR #9 merged into `main` in merge commit `eb7c2d5`.
-- UX-05 Site Trust Copy Alignment complete, accepted, and committed in `e8ed0b0`.
+- UX-05 Site Trust Copy Alignment complete, accepted, and merged through PR #11
+  in merge commit `12a47b8`.
 
 ## Latest Validation
 
@@ -53,8 +57,8 @@ wording without changing implementation behavior.
 - `docs/PIPELINE_ARCHITECTURE.md` now describes selected static digest JSON files
   under `web/data/digests/`, rather than one copied snapshot.
 
-UX-05 is not merged yet. The next workflow stage is final branch review, then
-push and pull request.
+UX-05 is merged. The current workflow stage is a stable post-merge baseline; the
+next task is Design Review for the next milestone.
 
 ## Website Baseline
 

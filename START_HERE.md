@@ -4,15 +4,12 @@ Use this file as the first entry point for a new Codex session.
 
 ## Resume Point
 
-- Branch: `main`
-- Milestone: stable post-merge baseline
-- Current feature: none active
-- Current phase: stable post-merge baseline
-- UX-05 Site Trust Copy Alignment: complete, accepted, and merged
-- Merged PR: #11 (`Align site trust copy with current dataset baseline`)
-- Merge commit: `12a47b8`
-- Accepted implementation commit: `e8ed0b0`
-- Immediate next task: Design Review for the next milestone
+- Branch: `feature/dd-03-static-digest-guardrails`
+- Milestone: DD-03 Static Digest Data Guardrails
+- Current feature: DD-03 Static Digest Data Guardrails
+- Current phase: implementation complete, accepted, and committed; documentation baseline complete and accepted
+- Accepted implementation commit: `5b558ed`
+- Immediate next task: final branch review, then push and PR
 
 Everything before this point is complete, accepted, and merged unless
 `PROJECT_STATUS.md` says otherwise.
@@ -44,9 +41,10 @@ not complete weekly historical coverage.
 
 ## Current Boundary
 
-There is no active feature implementation. Do not begin implementation until the
-next milestone scope is explicitly reviewed and accepted through a Design
-Review.
+DD-03 implementation is complete, accepted, and committed in `5b558ed`.
+Documentation baseline is complete and accepted. DD-03 is not merged yet.
+The next workflow step is final branch review, then push and PR. Do not begin
+another milestone before DD-03 is merged.
 
 The website remains a presentation layer only. It does not run the pipeline,
 refresh data automatically, or add AI-written summaries, findings, limitations,

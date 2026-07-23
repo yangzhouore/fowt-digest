@@ -4,16 +4,13 @@ Last updated: 2026-07-23
 
 ## Current State
 
-- Current branch: `main`
-- Current milestone: stable post-merge baseline
-- Current feature: none active
-- Current phase: stable post-merge baseline
-- UX-05 Site Trust Copy Alignment complete, accepted, and merged through PR #11.
-- Merge commit: `12a47b8`
-- Accepted implementation commit: `e8ed0b0`
-- Immediate next task: Design Review for the next milestone
-- Do not begin implementation until the next milestone scope is explicitly
-  reviewed and accepted.
+- Current branch: `feature/dd-03-static-digest-guardrails`
+- Current milestone: DD-03 Static Digest Data Guardrails
+- Current feature: DD-03 Static Digest Data Guardrails
+- Current phase: implementation complete, accepted, and committed; documentation baseline complete and accepted
+- Accepted implementation commit: `5b558ed`
+- Immediate next task: final branch review, then push and PR
+- Do not begin another milestone before DD-03 is merged.
 
 ## Latest Accepted Work
 
@@ -32,6 +29,8 @@ Last updated: 2026-07-23
 - PR #9 merged into `main` in merge commit `eb7c2d5`.
 - UX-05 Site Trust Copy Alignment complete, accepted, and merged through PR #11
   in merge commit `12a47b8`.
+- DD-03 Static Digest Data Guardrails complete, accepted, and committed in
+  `5b558ed`.
 
 ## Latest Validation
 
@@ -41,6 +40,11 @@ Last updated: 2026-07-23
 - UX-05 validation: `npm.cmd run build` passed and generated 111 static pages.
 - UX-05 repository validation: `git diff --check` passed.
 - UX-05 manual `/about` acceptance passed.
+- DD-03 validation: `npm.cmd run validate:data` passed.
+- DD-03 validation: `npm.cmd run test:data` passed with 26 tests.
+- DD-03 validation: `npm.cmd run lint` passed.
+- DD-03 validation: `npm.cmd run build` passed and generated 111 static pages.
+- DD-03 repository validation: `git diff --check` passed.
 
 ## UX-05 Baseline
 
@@ -57,8 +61,9 @@ wording without changing implementation behavior.
 - `docs/PIPELINE_ARCHITECTURE.md` now describes selected static digest JSON files
   under `web/data/digests/`, rather than one copied snapshot.
 
-UX-05 is merged. The current workflow stage is a stable post-merge baseline; the
-next task is Design Review for the next milestone.
+UX-05 is merged. DD-03 Static Digest Data Guardrails is complete, accepted,
+and committed in `5b558ed`. Documentation baseline is complete and accepted.
+DD-03 is not merged yet; final branch review, then push and PR are next.
 
 ## Website Baseline
 
@@ -78,6 +83,10 @@ represent complete weekly historical coverage.
 - Weekly Digest remains a browsing page with abstract previews.
 - Paper Detail displays the complete `paper.abstract` when available and
   neutrally displays `No abstract available.` when missing.
+- DD-03 adds local static digest guardrails through `npm.cmd run validate:data`
+  and focused Node tests through `npm.cmd run test:data`.
+- DD-03 changed no website routes, presentation components, pipeline code, digest
+  JSON, dependencies, or lockfiles.
 
 ## Current Boundaries
 

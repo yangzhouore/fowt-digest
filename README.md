@@ -81,6 +81,17 @@ npm.cmd run lint
 npm.cmd run build
 ```
 
+Validate static website digest data and adapter registration from `web/`:
+
+```powershell
+npm.cmd run validate:data
+npm.cmd run test:data
+```
+
+These commands check the committed static digest JSON files and their explicit
+registration in `web/data/digest-adapter.ts` without modifying data or using the
+network.
+
 Run the local website from `web/`:
 
 ```powershell

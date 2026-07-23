@@ -4,15 +4,13 @@ Last updated: 2026-07-23
 
 ## Current State
 
-- Current branch: `main`
-- Current milestone: Website UX Polish / Website Demo Dataset is complete, accepted, and merged.
-- Current feature: none active
-- Current phase: stable post-merge baseline
-- Merged PR: #9 (`Complete website UX polish and static demo dataset`)
-- Merge commit: `eb7c2d5`
-- Immediate next task: Design Review for the next milestone
-- Do not begin implementation until the next milestone scope is explicitly
-  reviewed and accepted.
+- Current branch: `feature/ux-05-site-trust-copy`
+- Current milestone: UX-05 Site Trust Copy Alignment
+- Current feature: UX-05 Site Trust Copy Alignment
+- Current phase: implementation complete, accepted, and committed; documentation baseline complete and accepted
+- Accepted implementation commit: `e8ed0b0`
+- Immediate next task: final branch review, then push and pull request
+- Do not begin another feature before UX-05 is merged.
 
 ## Latest Accepted Work
 
@@ -29,15 +27,34 @@ Last updated: 2026-07-23
 - DD-02 Historical demonstration dataset complete, accepted, and committed.
 - UX-04 Website Presentation Refinement complete, accepted, and committed.
 - PR #9 merged into `main` in merge commit `eb7c2d5`.
+- UX-05 Site Trust Copy Alignment complete, accepted, and committed in `e8ed0b0`.
 
 ## Latest Validation
 
 - Pipeline suite: `python -m pytest pipeline/tests` -> 193 passed, 0 failed.
 - UX-02 acceptance review: local Weekly Digest route returned HTTP 200; rendered paper links matched pipeline rank order; abstract previews and missing-abstract fallback matched the accepted rule.
-- Current baseline validation: `npm.cmd run lint` passed.
-- Current baseline validation: `npm.cmd run build` passed.
-- Current baseline pipeline validation: `python -m pytest pipeline/tests` -> 193 passed.
-- Current baseline repository validation: `git diff --check` passed.
+- UX-05 validation: `npm.cmd run lint` passed.
+- UX-05 validation: `npm.cmd run build` passed and generated 111 static pages.
+- UX-05 repository validation: `git diff --check` passed.
+- UX-05 manual `/about` acceptance passed.
+
+## UX-05 Baseline
+
+UX-05 Site Trust Copy Alignment updated the About page and pipeline architecture
+wording without changing implementation behavior.
+
+- About page now describes FOWT Research Digest as a static MVP.
+- About page states that the website presents 15 selected historical
+  demonstration editions generated from deterministic pipeline output.
+- About page states that the editions are not complete weekly historical
+  coverage.
+- About page states that the website does not run the pipeline or provide
+  AI-generated paper analysis.
+- `docs/PIPELINE_ARCHITECTURE.md` now describes selected static digest JSON files
+  under `web/data/digests/`, rather than one copied snapshot.
+
+UX-05 is not merged yet. The next workflow stage is final branch review, then
+push and pull request.
 
 ## Website Baseline
 

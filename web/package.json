@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "validate:data": "node scripts/validate-static-digests.js",
+    "test:data": "node --test scripts/validate-static-digests.test.js"
   },
   "dependencies": {
     "next": "16.2.10",

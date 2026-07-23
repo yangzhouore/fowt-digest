@@ -68,7 +68,7 @@ The pipeline owns data production and validation. The website owns presentation 
 
 The website may adapt pipeline output for display, such as formatting dates, creating URL-safe slugs, or choosing how much metadata to show on a page. It must not sort, re-rank, repair, reinterpret, summarize, or generate new paper content beyond neutral display fallbacks for missing fields.
 
-Current Website MVP pages use a static copied `weekly_digest.json` snapshot. The website does not run the pipeline.
+Current Website MVP pages use static copied digest JSON files under `web/data/digests/`. The archive contains selected historical demonstration editions, not complete weekly historical coverage. The website does not run the pipeline.
 
 ## Explicit Non-goals
 
@@ -85,5 +85,5 @@ The current milestone does not include:
 - CMS integration;
 - scheduler or automation;
 - pipeline algorithm changes;
-- new digest data fixtures;
+- automatic historical backfill;
 - deployment configuration changes.

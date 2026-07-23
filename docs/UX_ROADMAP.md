@@ -16,23 +16,31 @@ Implemented reader paths:
 ```text
 Homepage -> Weekly Digest -> Paper Detail
 Archive -> Weekly Digest
+Paper Detail -> originating Weekly Digest
 ```
 
-The website uses one static copied pipeline output:
+The website uses static copied pipeline output from:
 
 ```text
-web/data/weekly_digest.json
+web/data/digests/
 ```
 
-The current digest contains one weekly edition and 6 selected papers.
+The current archive contains 15 selected historical demonstration editions.
+These editions are static demonstration data, not complete weekly historical
+coverage.
 
 ## Progress
 
 - UX-01 Homepage Entry And Reader Framing: complete and accepted.
 - UX-02 Weekly Digest Scanability: complete, accepted, and committed.
-- UX-03 Paper Detail Readability: not started; next UX feature.
-- UX-04 Archive Expectation Polish: not started.
-- UX-05 Global Presentation Polish: not started.
+- UX-03 Paper Detail Readability: complete, accepted, and committed.
+- DD-01 Support Multiple Weekly Digests: complete, accepted, and committed.
+- DD-02 Generate Historical Demo Dataset: complete, accepted, and committed.
+- UX-04 Website Presentation Refinement: complete, accepted, and committed.
+
+The current branch is ready for final branch/PR review. Do not begin another UX
+implementation before this milestone is merged and the next feature receives a
+Design Review.
 
 ## Presentation Issues Versus Dataset Limitations
 
@@ -48,7 +56,8 @@ Presentation issues that UX Polish can address:
 
 Dataset limitations that UX Polish must not hide by inventing content:
 
-- only one static digest exists;
+- historical editions are selected demonstration editions, not complete weekly
+  historical coverage;
 - some papers have no abstract;
 - some optional fields are unknown;
 - topic tags come from source metadata and may be long;
@@ -92,7 +101,7 @@ Accepted abstract preview rule:
 - If the abstract is longer than 280 characters, append `...`.
 - If no abstract exists, display `No abstract available.`
 - This is presentation only.
-- Do not modify pipeline data, the digest adapter, or Paper Detail.
+- Do not modify pipeline data.
 
 Acceptance focus:
 
@@ -103,7 +112,7 @@ Acceptance focus:
 
 ## UX-03 Paper Detail Readability
 
-Status: not started.
+Status: complete and accepted.
 
 Scope:
 
@@ -116,37 +125,55 @@ Do not add research problem, methodology, findings, engineering relevance,
 limitations, scores, or generated summaries unless the pipeline later provides
 those fields through an accepted contract.
 
-## UX-04 Archive Expectation Polish
+## DD-01 Support Multiple Weekly Digests
 
-Status: not started.
-
-Scope:
-
-- make the one-entry archive feel intentional;
-- avoid implying unavailable historical editions;
-- preserve Archive -> Weekly navigation.
-
-Do not add fake history, pagination, search, filters, or new fixtures.
-
-## UX-05 Global Presentation Polish
-
-Status: not started.
+Status: complete and accepted.
 
 Scope:
 
-- align date formatting;
-- reduce repeated notices;
-- align metadata labels;
-- check mobile scanability;
-- address header/navigation clarity only if it directly improves reading flow.
+- load multiple static digest JSON files through an explicit import list;
+- return editions newest first;
+- resolve Weekly Digest routes by edition slug;
+- resolve Paper Detail pages across loaded editions with the owning edition
+  context;
+- list all loaded editions in Archive.
+
+Do not add filesystem runtime discovery, backend services, APIs, databases,
+automation, search, filters, or pipeline changes.
+
+## DD-02 Generate Historical Demo Dataset
+
+Status: complete and accepted.
+
+Scope:
+
+- generate approximately 15 selected historical weekly editions with the
+  existing deterministic pipeline;
+- copy only website-ready digest JSON into `web/data/digests/`;
+- preserve deterministic ranking and source metadata;
+- disclose that the archive is selected demonstration data, not complete weekly
+  historical coverage.
+
+Do not add automation, schedulers, a historical backfill system, backend
+services, or data claims beyond the generated pipeline output.
+
+## UX-04 Website Presentation Refinement
+
+Status: complete and accepted.
+
+Scope:
+
+- lighten topic presentation without changing topic values or order;
+- improve Methodology so readers can understand the project and pipeline path
+  within one minute;
+- present the pipeline as OpenAlex -> Collection -> Normalisation ->
+  Deduplication -> Classification -> Ranking -> Weekly Digest -> Website;
+- include restrained project links to GitHub and repository documentation.
 
 Do not introduce backend, database, AI, search, filters, or deployment work.
 
 ## Recommended Order
 
-1. UX-03 Paper Detail Readability
-2. UX-04 Archive Expectation Polish
-3. UX-05 Global Presentation Polish
-
-UX-01 and UX-02 are already complete. Each remaining UX feature should be one
-focused commit and independently reviewed.
+The Website UX Polish and Website Demo Dataset work on this branch is complete.
+The next step is final branch/PR review before merge. The next feature should
+start with a Design Review after this milestone is merged.

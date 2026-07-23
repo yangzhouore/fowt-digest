@@ -1,6 +1,6 @@
 # Project Handover
 
-Last updated: 2026-07-21
+Last updated: 2026-07-23
 
 This document gives continuity context. It intentionally avoids duplicating the
 full current-status checklist in `PROJECT_STATUS.md`.
@@ -37,7 +37,7 @@ Website data flow:
 
 ```text
 pipeline run output
--> copied weekly_digest.json snapshot
+-> selected static digest JSON files under web/data/digests/
 -> web/data/digest-adapter.ts
 -> Homepage, Weekly Digest, Paper Detail, Archive
 ```
@@ -54,7 +54,7 @@ code.
 - Runtime pipeline code uses the Python standard library unless a milestone
   explicitly changes that.
 - Stage outputs are local JSON files written through `pipeline/run_storage.py`.
-- Website integration currently uses one static copied digest snapshot.
+- Website integration uses explicitly imported static digest JSON files.
 - The website may format fields for display, but must not sort, re-rank, repair,
   summarize, reinterpret, or invent paper content.
 
@@ -65,19 +65,17 @@ Do not add without an explicit milestone:
 - backend, API routes, database, CMS, scheduler, or deployment automation;
 - AI writing, AI review, generated summaries, scoring, or semantic search;
 - new pipeline data products;
-- additional JSON fixtures;
 - direct website access to pipeline run directories.
 
 ## Current Limitations
 
-- The website displays one static digest snapshot with 6 selected papers.
-- Weekly Digest scanability polish through UX-02 is complete, accepted, and
-  committed in `3f5b9d7`.
-- About and Methodology may still contain prototype wording until separately
-  scoped.
-- There is no historical digest dataset beyond the one copied snapshot.
+- The website displays 15 selected historical demonstration editions, not
+  complete weekly historical coverage.
+- Historical digest data is static and committed under `web/data/digests/`.
 - The website does not execute the pipeline or refresh data automatically.
 - No database, search, filters, or publication workflow exists.
+- No AI-written summaries, findings, limitations, scores, or editorial analysis
+  exist in the website.
 
 ## Module Snapshot
 
@@ -97,7 +95,7 @@ Pipeline modules:
 
 Website data integration:
 
-- `web/data/weekly_digest.json`
+- `web/data/digests/*.json`
 - `web/data/digest-adapter.ts`
 - `web/app/page.tsx`
 - `web/app/weekly/[slug]/page.tsx`

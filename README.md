@@ -5,8 +5,8 @@ Wind Turbines. It has two deliberately separate parts:
 
 - `pipeline/`: a completed deterministic Python pipeline that produces weekly
   digest JSON data products.
-- `web/`: a static Next.js reading experience that currently displays one real
-  copied pipeline digest snapshot.
+- `web/`: a static Next.js reading experience that displays selected
+  demonstration weekly digest editions copied from pipeline output.
 
 For the current resume point, read `START_HERE.md` first. This README describes
 what the repository contains; it does not track detailed milestone status.
@@ -30,15 +30,18 @@ The website currently supports this real-data reading flow:
 ```text
 Homepage -> Weekly Digest -> Paper Detail
 Archive -> Weekly Digest
+Paper Detail -> originating Weekly Digest
 ```
 
 The website uses:
 
 ```text
-web/data/weekly_digest.json
+web/data/digests/
 ```
 
-as a static copied pipeline output. It does not run the pipeline.
+as static copied pipeline output. The current archive contains 15 selected
+historical demonstration editions, not complete weekly historical coverage. The
+website does not run the pipeline.
 
 ## Repository Structure
 
@@ -101,9 +104,9 @@ Generated run directories are runtime artifacts and should not be committed.
 
 ## Current Development Direction
 
-The pipeline MVP v1.0.0 is complete. Current work is Website UX Polish:
-improving readability, scanability, and reader framing while keeping the
-pipeline as the source of truth.
+The pipeline MVP v1.0.0 is complete. Current branch work has completed Website
+UX Polish and the Website Demo Dataset baseline. See `PROJECT_STATUS.md` for
+the current resume point.
 
 The website must not invent, rewrite, summarize, re-rank, or repair pipeline
 data. Presentation can format and selectively display fields, but pipeline

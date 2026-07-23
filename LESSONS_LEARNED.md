@@ -113,6 +113,31 @@ document responsibilities.
 Practical rule: Keep detailed current status in one place, and keep README,
 handover, roadmap, and lessons from duplicating it.
 
+### Static website data still needs explicit boundaries
+
+Situation: The website moved from one copied digest to multiple committed
+static digest files for demonstration.
+
+Lesson: A static demonstration dataset can improve product review without
+turning the website into an automated publication system.
+
+Practical rule: Document where committed digest files live, disclose that
+selected historical editions are not complete coverage, and keep the website
+from running pipeline code.
+
+### CSS parser failures can remove the whole presentation layer
+
+Situation: A malformed generated CSS marker made the compiled global stylesheet
+unparsable, so the site rendered with browser defaults even though the stylesheet
+link returned HTTP 200.
+
+Lesson: Visual regressions can be caused by stylesheet compilation failure, not
+only missing imports or component changes.
+
+Practical rule: When global styling disappears, inspect the served CSS asset for
+parser placeholders and prefer ASCII-only CSS markers unless non-ASCII is
+required.
+
 ## Common Workflow
 
 ```text

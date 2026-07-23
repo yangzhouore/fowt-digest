@@ -5,45 +5,47 @@ Use this file as the first entry point for a new Codex session.
 ## Resume Point
 
 - Branch: `feature/website-ux-polish`
-- Milestone: Website UX Polish
-- Current feature: UX-03 Paper Detail Readability
-- Current phase: not started; design review is next
-- Current implementation scope: none accepted for UX-03 yet
-- Immediate next task: begin UX-03 design review for the Paper Detail page
+- Milestone: Website UX Polish / Website Demo Dataset
+- Current feature: final branch review
+- Current phase: implementation baseline complete, accepted, committed, and pushed
+- Latest accepted implementation baseline: `28815e0`
+- Immediate next task: final branch/PR review before merging this milestone
 
 Everything before this point is complete and accepted unless
 `PROJECT_STATUS.md` says otherwise.
 
-## Completed UX-02 Baseline
+## Completed Website Baseline
 
-UX-02 Weekly Digest Scanability is complete, accepted, and committed in
-`3f5b9d7` (`Implement UX-02 weekly digest scanability`).
+Completed and accepted work on this branch includes:
 
-The Weekly Digest page is now a browsing page. Paper Detail remains the only
-page showing the complete abstract.
+- UX-02 Weekly Digest Scanability;
+- UX-03 Paper Detail Readability;
+- multiple static weekly digest support;
+- historical demonstration dataset with 15 selected weekly editions;
+- UX-04 Website Presentation Refinement.
 
-Implemented display rule:
+The website currently loads static digest JSON files from:
 
-- If an abstract exists, display the first 280 characters of the existing
-  abstract string.
-- Do not rewrite, summarise, or interpret the text.
-- Preserve the original wording exactly.
-- If the abstract is longer than 280 characters, append `...`.
-- If no abstract exists, display `No abstract available.`
+```text
+web/data/digests/
+```
 
-## Next UX Feature
+The adapter validates the imported digest files, returns editions newest first,
+uses the newest digest as the current homepage digest, and resolves Paper Detail
+pages with the correct originating Weekly Digest context.
 
-UX-03 Paper Detail Readability is not started. The next action is design review
-only.
+The archive contains 15 selected historical demonstration editions. These are
+not complete weekly historical coverage.
 
-Scope from `docs/UX_ROADMAP.md`:
+## Current Boundary
 
-- improve one-paper reading hierarchy;
-- present the complete abstract clearly;
-- group metadata without exposing low-value internal fields;
-- handle missing fields neutrally.
+The current branch is ready for final branch/PR review. Do not begin another UX
+implementation before this milestone is merged and the next feature receives a
+Design Review.
 
-Do not implement UX-03 until its design has been reviewed and accepted.
+The website remains a presentation layer only. It does not run the pipeline,
+refresh data automatically, or add AI-written summaries, findings, limitations,
+scores, or editorial analysis.
 
 ## Reading Order
 

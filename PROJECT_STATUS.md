@@ -4,14 +4,15 @@ Last updated: 2026-07-23
 
 ## Current State
 
-- Current branch: `feature/website-ux-polish`
-- Current milestone: Website UX Polish / Website Demo Dataset
-- Current feature: final branch review
-- Current phase: implementation baseline complete, accepted, committed, and pushed
-- Latest accepted implementation baseline: `28815e0`
-- Immediate next task: final branch/PR review before merging this milestone
-- Do not begin new UX implementation until this milestone is merged and the next
-  feature receives a Design Review.
+- Current branch: `main`
+- Current milestone: Website UX Polish / Website Demo Dataset is complete, accepted, and merged.
+- Current feature: none active
+- Current phase: stable post-merge baseline
+- Merged PR: #9 (`Complete website UX polish and static demo dataset`)
+- Merge commit: `eb7c2d5`
+- Immediate next task: Design Review for the next milestone
+- Do not begin implementation until the next milestone scope is explicitly
+  reviewed and accepted.
 
 ## Latest Accepted Work
 
@@ -24,18 +25,19 @@ Last updated: 2026-07-23
 - UX-01 Homepage Entry and Reader Framing complete and accepted.
 - UX-02 Weekly Digest Scanability complete, accepted, and committed.
 - UX-03 Paper Detail Readability complete, accepted, and committed.
-- Multiple static weekly digest support complete, accepted, and committed.
-- Historical demonstration dataset complete, accepted, and committed.
+- DD-01 Multiple static weekly digest support complete, accepted, and committed.
+- DD-02 Historical demonstration dataset complete, accepted, and committed.
 - UX-04 Website Presentation Refinement complete, accepted, and committed.
+- PR #9 merged into `main` in merge commit `eb7c2d5`.
 
 ## Latest Validation
 
 - Pipeline suite: `python -m pytest pipeline/tests` -> 193 passed, 0 failed.
 - UX-02 acceptance review: local Weekly Digest route returned HTTP 200; rendered paper links matched pipeline rank order; abstract previews and missing-abstract fallback matched the accepted rule.
-- Current branch validation: `npm.cmd run lint` passed.
-- Current branch validation: `npm.cmd run build` passed.
-- Current branch pipeline validation: `python -m pytest pipeline/tests` -> 193 passed.
-- Current branch repository validation: `git diff --check` passed.
+- Current baseline validation: `npm.cmd run lint` passed.
+- Current baseline validation: `npm.cmd run build` passed.
+- Current baseline pipeline validation: `python -m pytest pipeline/tests` -> 193 passed.
+- Current baseline repository validation: `git diff --check` passed.
 
 ## Website Baseline
 

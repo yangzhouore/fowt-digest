@@ -4,24 +4,26 @@ Use this file as the first entry point for a new Codex session.
 
 ## Resume Point
 
-- Branch: `feature/website-ux-polish`
+- Branch: `main`
 - Milestone: Website UX Polish / Website Demo Dataset
-- Current feature: final branch review
-- Current phase: implementation baseline complete, accepted, committed, and pushed
-- Latest accepted implementation baseline: `28815e0`
-- Immediate next task: final branch/PR review before merging this milestone
+- Current feature: none active
+- Current phase: stable post-merge baseline
+- Merged PR: #9 (`Complete website UX polish and static demo dataset`)
+- Merge commit: `eb7c2d5`
+- Immediate next task: Design Review for the next milestone
 
-Everything before this point is complete and accepted unless
+Everything before this point is complete, accepted, and merged unless
 `PROJECT_STATUS.md` says otherwise.
 
 ## Completed Website Baseline
 
-Completed and accepted work on this branch includes:
+Completed and accepted work now merged into `main` includes:
 
+- UX-01 Homepage Entry and Reader Framing;
 - UX-02 Weekly Digest Scanability;
 - UX-03 Paper Detail Readability;
-- multiple static weekly digest support;
-- historical demonstration dataset with 15 selected weekly editions;
+- DD-01 multiple static weekly digest support;
+- DD-02 historical demonstration dataset with 15 selected weekly editions;
 - UX-04 Website Presentation Refinement.
 
 The website currently loads static digest JSON files from:
@@ -39,9 +41,9 @@ not complete weekly historical coverage.
 
 ## Current Boundary
 
-The current branch is ready for final branch/PR review. Do not begin another UX
-implementation before this milestone is merged and the next feature receives a
-Design Review.
+There is no active feature implementation. Do not begin implementation until the
+next milestone scope is explicitly reviewed and accepted through a Design
+Review.
 
 The website remains a presentation layer only. It does not run the pipeline,
 refresh data automatically, or add AI-written summaries, findings, limitations,

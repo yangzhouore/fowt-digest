@@ -21,8 +21,9 @@ export default function ArchivePage() {
         <p className="eyebrow">Archive</p>
         <h1 id="archive-heading">Weekly editions in sequence.</h1>
         <p>
-          Browse available static pipeline digest snapshots. The archive
-          currently lists the single real digest copied into the website.
+          Browse selected historical demonstration editions generated from static
+          deterministic pipeline outputs. This archive is not complete weekly
+          historical coverage.
         </p>
       </section>
 
@@ -59,9 +60,10 @@ export default function ArchivePage() {
       <section aria-labelledby="archive-notice-heading">
         <h2 id="archive-notice-heading">Pipeline-data notice</h2>
         <p>
-          Archive entries are static local copies of deterministic pipeline
-          digest outputs. The website does not run the pipeline or generate
-          historical entries automatically.
+          Archive entries are static local copies of selected deterministic pipeline
+          digest outputs prepared for demonstration. The website does not run
+          the pipeline, generate historical entries automatically, or claim
+          complete weekly historical coverage.
         </p>
       </section>
 

@@ -221,6 +221,58 @@ p {
   font-size: 0.88rem;
 }
 
+.paper-authors,
+.paper-source-line,
+.topic-list {
+  max-width: 760px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+.paper-authors {
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.paper-source-line {
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+
+.topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin: 0 0 16px;
+  padding-left: 0;
+  color: var(--muted);
+  list-style: none;
+}
+
+.topic-list li {
+  line-height: 1.45;
+}
+
+.topic-list li:not(:last-child)::after {
+  content: "/";
+  margin-left: 10px;
+  color: var(--border);
+}
+.paper-action-row {
+  margin-top: 18px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.paper-abstract p {
+  max-width: 760px;
+  font-size: 1.04rem;
+  line-height: 1.68;
+}
+
+.paper-detail-meta .topic-list {
+  margin-top: 18px;
+}
+
 dt {
   margin-bottom: 3px;
   color: var(--muted);
@@ -408,4 +460,49 @@ dd {
   .text-list {
     columns: 1;
   }
+}
+.pipeline-diagram {
+  display: grid;
+  gap: 0;
+  max-width: 520px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.pipeline-diagram li {
+  position: relative;
+  padding: 12px 0 26px;
+  border-top: 1px solid var(--border);
+  color: var(--ink);
+  font-size: 0.96rem;
+}
+
+.pipeline-diagram li::after {
+  content: "v";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.pipeline-diagram li:last-child {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pipeline-diagram li:last-child::after {
+  content: none;
+}
+
+.project-link-list {
+  display: grid;
+  gap: 10px;
+  max-width: 520px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  font-family: ui-sans-serif, system-ui, sans-serif;
 }

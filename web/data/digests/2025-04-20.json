@@ -1,0 +1,685 @@
+{
+  "generatedAt": "2025-04-20T09:00:00Z",
+  "runId": "run_20250420_090000_openalex",
+  "schemaVersion": "pipeline-data-0.1",
+  "selectedPapers": [
+    {
+      "abstract": "The mooring system plays a crucial role in maintaining the position of a floating offshore wind turbine, which significantly influences floater motion. This study investigates the impact of seabed contact and the distribution of the clump weight (CW) along the mooring line on line tension and dynamic response of the floater. Numerical simulations using a floater–mooring coupled dynamic model were conducted to evaluate mooring system performance. Under environmental load conditions, cases were analyzed based on whether the CW was in contact with the seabed. Additionally, for contact cases, further analyses were conducted by distributing the weight of the CW along the mooring line. The results indicate that the repeated seabed contact of the CW increases tension fluctuations, which thereby accelerates fatigue damage and shortens the design life of the mooring system. However, distributing the CW along the mooring line effectively reduces tension fluctuations while maintaining the motion response of the floater. To enhance the stability and lifespan of the mooring system, careful consideration of the CW–seabed interaction and the implementation of an optimized CW distribution strategy are essential.",
+      "authors": [
+        "Dongmyung Im",
+        "Dongeun Kim",
+        "Yoon Hyeok Bae"
+      ],
+      "candidateIds": [
+        "candidate_openalex_2ccfc0e5b52ab59f"
+      ],
+      "doi": "https://doi.org/10.26748/ksoe.2024.102",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_15a57af5a091b890",
+      "processingStatus": "classified",
+      "publicationSource": "Journal of Ocean Engineering and Technology",
+      "publicationType": "unknown",
+      "publishedDate": "2025-04-20",
+      "rank": 1,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 5,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 14,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 8,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 6,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_15a57af5a091b890",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-04-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_15a57af5a091b890",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aerospace engineering",
+          "Biology",
+          "Engineering",
+          "Environmental science",
+          "Fishery",
+          "Geology",
+          "Marine engineering",
+          "Mooring",
+          "Oceanography",
+          "Offshore wind power",
+          "Seabed",
+          "Submarine pipeline",
+          "Turbine",
+          "Wave and Wind Energy Systems"
+        ]
+      },
+      "runId": "run_20250420_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.26748/ksoe.2024.102",
+        "openalexId": "https://openalex.org/W4409605565"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.26748/ksoe.2024.102",
+      "title": "Analysis of the Seabed Contact Effects of Clump Weights on a Floating Offshore Wind Mooring System",
+      "topicTags": [
+        "Aerospace engineering",
+        "Biology",
+        "Engineering",
+        "Environmental science",
+        "Fishery",
+        "Geology",
+        "Marine engineering",
+        "Mooring",
+        "Oceanography",
+        "Offshore wind power",
+        "Seabed",
+        "Submarine pipeline",
+        "Turbine",
+        "Wave and Wind Energy Systems"
+      ]
+    },
+    {
+      "abstract": null,
+      "authors": [
+        "Ananay Thakur",
+        "Rohit Kumar",
+        "O. A. Shereena",
+        "S D Sharma",
+        "Dongsheng Li",
+        "Subhamoy Sen"
+      ],
+      "candidateIds": [
+        "candidate_openalex_4e1c6a7f4b46ed7c"
+      ],
+      "doi": "https://doi.org/10.1016/j.oceaneng.2025.121223",
+      "fullTextAvailability": "none",
+      "indexedDate": null,
+      "openAccessStatus": "closed",
+      "paperId": "paper_doi_b59f51c2e654a2ce",
+      "processingStatus": "classified",
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "unknown",
+      "publishedDate": "2025-04-19",
+      "rank": 2,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 17,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 16,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 13,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 11,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_b59f51c2e654a2ce",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-04-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_b59f51c2e654a2ce",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Artificial intelligence",
+          "Computer science",
+          "Engineering",
+          "Geology",
+          "Kalman filter",
+          "Machine learning",
+          "Marine engineering",
+          "Oceanography",
+          "Particle (ecology)",
+          "Particle filter",
+          "Seismic Waves and Analysis",
+          "Structural Health Monitoring Techniques",
+          "Surrogate model",
+          "Underwater Acoustics Research"
+        ]
+      },
+      "runId": "run_20250420_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2025.121223",
+        "openalexId": "https://openalex.org/W4409597276"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2025.121223",
+      "title": "Integrating DL-based surrogate within an Interacting Particle Ensemble Kalman Filtering framework for computationally efficient condition monitoring of FOWT moorings",
+      "topicTags": [
+        "Artificial intelligence",
+        "Computer science",
+        "Engineering",
+        "Geology",
+        "Kalman filter",
+        "Machine learning",
+        "Marine engineering",
+        "Oceanography",
+        "Particle (ecology)",
+        "Particle filter",
+        "Seismic Waves and Analysis",
+        "Structural Health Monitoring Techniques",
+        "Surrogate model",
+        "Underwater Acoustics Research"
+      ]
+    },
+    {
+      "abstract": "For column-type floating structures operating in current flow, significant oscillatory responses known as vortex-induced motions (VIM) can be excited, greatly impacting structure stability and safety of mooring lines. In this work, three-degree-of-freedom (DoF) VIM, including in-line, transverse and yaw motions, of a 1:72.72 scaled OC4 semi-submersible floating offshore wind turbine platform is investigated numerically across a wide flow velocity range, using a Computational Fluid Dynamics approach together with a Detached-Eddy Simulation model for turbulent flows. To analyze the impacts of current incidence on platform VIM responses, three representative current incidence angles of 0°, 60°, and 90° are examined. Results reveal that the “lock-in” phenomenon appears for the transverse motion within the reduced velocity ( V r ) range of 8–12 at 0° and 90°, but the “lock-in” range narrows down to 8 ≤ V r ≤ 10 at 60° incidence with smaller response amplitudes, suggesting that three-column platforms can be installed with two columns placed upstream to minimize VIM impacts. Meanwhile, comparing results between two models with and without the yaw motion demonstrates that the yaw DoF can induce significant in-line and transverse motions even at V r ≥ 18 and thus must be taken into consideration in VIM simulations to accurately capture the platform motion characteristics at high flow velocity. Additionally, for the yaw motion V r should be redefined with its natural period to yield a “lock-in” range similar to that of the transverse motion. Furthermore, connecting structures can apply substantial negative work upon the platform, demonstrating their important role in VIM suppression, and therefore should not be neglected in geometrical models. Additionally, the downstream column experiences significantly smaller mean drag due to the shielding effect exerted by the upstream column.",
+      "authors": [
+        "Yuxin Yang",
+        "Yuanchuan Liu"
+      ],
+      "candidateIds": [
+        "candidate_openalex_493873102cc32915"
+      ],
+      "doi": "https://doi.org/10.1016/j.oceaneng.2025.121240",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "hybrid",
+      "paperId": "paper_doi_96fee37557028c3c",
+      "processingStatus": "classified",
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "unknown",
+      "publishedDate": "2025-04-18",
+      "rank": 3,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 6,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 7,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 4,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 1,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_96fee37557028c3c",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-04-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_96fee37557028c3c",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Acoustics",
+          "Aerospace engineering",
+          "Current (fluid)",
+          "Degree (music)",
+          "Engineering",
+          "Fluid Dynamics and Vibration Analysis",
+          "Marine engineering",
+          "Mechanics",
+          "Physics",
+          "Thermodynamics",
+          "Turbine",
+          "Vibration and Dynamic Analysis",
+          "Vortex",
+          "Wind and Air Flow Studies"
+        ]
+      },
+      "runId": "run_20250420_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2025.121240",
+        "openalexId": "https://openalex.org/W4409578291"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2025.121240",
+      "title": "Three-degree-of-freedom vortex-induced motions of an OC4 floating offshore wind turbine platform under different current incidences",
+      "topicTags": [
+        "Acoustics",
+        "Aerospace engineering",
+        "Current (fluid)",
+        "Degree (music)",
+        "Engineering",
+        "Fluid Dynamics and Vibration Analysis",
+        "Marine engineering",
+        "Mechanics",
+        "Physics",
+        "Thermodynamics",
+        "Turbine",
+        "Vibration and Dynamic Analysis",
+        "Vortex",
+        "Wind and Air Flow Studies"
+      ]
+    },
+    {
+      "abstract": "This paper presents a numerical study on the structural vibrations of a TLP-supported NREL 5MW wind turbine equipped with a tuned vibration absorber (TVA) in the nacelle. The analysis was focused on tower bending deflections and was conducted using a reference OpenFAST V3.5.3 dedicated wind turbine modelling software and a finite element simulation framework based on Comsol Multiphysics V6.3 which was newly developed for this study. The obtained four-degree-of-freedom (4-DOF) tower bending model was transferred using modal decomposition to the MATLAB/Simulink R2020b environment, where a 2-DOF TLP surge/sway model and a bidirectional (2-DOF) TVA model were embedded. The wind field was approximated by a Weibull distribution of velocities (8.86 m/s mean, 4.63 m/s standard deviation). It was combined with the wave actions simulated using a Bretschneider spectrum with a significant height of 2.5 m and a peak period of 8.1 s. The TVA model used was either the standard NREL reference 20-ton passive TVA, a 10-ton passive, or a 10-ton controlled TVA (the latter two tuned to the tower’s first bending mode). The controlled TVA utilised a magnetorheological (MR) damper, either operating independently (forming a semi-active MR-TVA) or simultaneously with a force actuator, forming, in this case, a hybrid H-MR-TVA. Both aligned and 45°/90° misaligned wind–wave excitations were examined to investigate the performance of a 10-ton real-time controlled (H-)MR-TVA operating with less working space. In aligned conditions, the semi-active and hybrid MR-TVA solutions demonstrated superior tower vibration mitigation, reducing maximum tower deflections by 11.2% compared to the reference TVA and by 14.9% with regard to the structure without TVA. The reduction in root-mean-square deflection reached up to 4.2%/2.9%, respectively, for the critical along-the-waves direction, while the TVA stroke reduction reached 18.6%. For misaligned excitations, the tower deflection was reduced by 4.3%/4.8% concerning the reference 20-ton TVA, while the stroke was reduced by 22.2%/34.4% (for 45°/90° misalignment, respectively). It is concluded that the implementation of the 10-ton real-time controlled (H-)MR-TVA is a promising alternative to the reference 20-ton passive TVA regarding tower deflection minimisation and TVA stroke reduction for the critical along-the-waves direction. The current research results may be used to design a full-scale semi-active or hybrid TVA system serving a TLP-supported floating offshore wind turbine structure.",
+      "authors": [
+        "Paweł Martynowicz",
+        "Piotr Ślimak",
+        "Georgios M. Katsaounis"
+      ],
+      "candidateIds": [
+        "candidate_openalex_4623ac24967e80ed"
+      ],
+      "doi": "https://doi.org/10.3390/en18082092",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_a9000572767a7be0",
+      "processingStatus": "classified",
+      "publicationSource": "Energies",
+      "publicationType": "unknown",
+      "publishedDate": "2025-04-18",
+      "rank": 4,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 4,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 6,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 3,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_a9000572767a7be0",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-04-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_a9000572767a7be0",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Acoustics",
+          "Aerospace engineering",
+          "Engineering",
+          "Environmental science",
+          "Geology",
+          "Geometry",
+          "Geotechnical engineering",
+          "Marine engineering",
+          "Mathematics",
+          "Offshore wind power",
+          "Physics",
+          "Reduction (mathematics)",
+          "Structural engineering",
+          "Submarine pipeline",
+          "Tower",
+          "Turbine",
+          "Vibration",
+          "Wave and Wind Energy Systems"
+        ]
+      },
+      "runId": "run_20250420_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/en18082092",
+        "openalexId": "https://openalex.org/W4409565312"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.3390/en18082092",
+      "title": "TLP-Supported NREL 5MW Floating Offshore Wind Turbine Tower Vibration Reduction Under Aligned and Misaligned Wind-Wave Excitations",
+      "topicTags": [
+        "Acoustics",
+        "Aerospace engineering",
+        "Engineering",
+        "Environmental science",
+        "Geology",
+        "Geometry",
+        "Geotechnical engineering",
+        "Marine engineering",
+        "Mathematics",
+        "Offshore wind power",
+        "Physics",
+        "Reduction (mathematics)",
+        "Structural engineering",
+        "Submarine pipeline",
+        "Tower",
+        "Turbine",
+        "Vibration",
+        "Wave and Wind Energy Systems"
+      ]
+    },
+    {
+      "abstract": null,
+      "authors": [
+        "Emma C. Edwards",
+        "Edward Barbour",
+        "Tom Tosdevin",
+        "Edward Ransley",
+        "Kieran Monk",
+        "Alastair Reynolds",
+        "Anna Holcombe",
+        "Scott Brown",
+        "Deborah Greaves",
+        "Martyn Hann"
+      ],
+      "candidateIds": [
+        "candidate_openalex_1efccc31c1f66bcf"
+      ],
+      "doi": "https://doi.org/10.1002/we.70052/v2/response1",
+      "fullTextAvailability": "none",
+      "indexedDate": null,
+      "openAccessStatus": "closed",
+      "paperId": "paper_doi_055ea98ea6652efe",
+      "processingStatus": "classified",
+      "publicationSource": null,
+      "publicationType": "unknown",
+      "publishedDate": "2025-04-17",
+      "rank": 5,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 19,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 24,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 17,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_055ea98ea6652efe",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-04-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_055ea98ea6652efe",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aerodynamics",
+          "Artificial neural network",
+          "Computational fluid dynamics",
+          "Current (fluid)",
+          "Energy Load and Power Forecasting",
+          "Engineering",
+          "Environmental science",
+          "Geology",
+          "Marine engineering",
+          "Meteorology",
+          "Offshore geotechnical engineering",
+          "Offshore wind power",
+          "Physical modelling",
+          "Relative wind",
+          "Submarine pipeline",
+          "Surrogate model",
+          "Wind Energy Research and Development",
+          "Wind power",
+          "Wind speed"
+        ]
+      },
+      "runId": "run_20250420_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1002/we.70052/v2/response1",
+        "openalexId": "https://openalex.org/W4414732272"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1002/we.70052/v2/response1",
+      "title": "Author response for \"Scaled Physical Modelling of Floating Offshore Wind Turbines Using a Neural Network‐Based Surrogate Model for Aerodynamic Emulation\"",
+      "topicTags": [
+        "Aerodynamics",
+        "Artificial neural network",
+        "Computational fluid dynamics",
+        "Current (fluid)",
+        "Energy Load and Power Forecasting",
+        "Engineering",
+        "Environmental science",
+        "Geology",
+        "Marine engineering",
+        "Meteorology",
+        "Offshore geotechnical engineering",
+        "Offshore wind power",
+        "Physical modelling",
+        "Relative wind",
+        "Submarine pipeline",
+        "Surrogate model",
+        "Wind Energy Research and Development",
+        "Wind power",
+        "Wind speed"
+      ]
+    },
+    {
+      "abstract": "Introduction This study investigates the hydrodynamic and aerodynamic performance of a barge-type floating offshore wind turbine (FOWT) equipped with four moonpools and horizontal springs as mooring lines. The integration of moonpools enhances the platform’s hydrodynamic performance by increasing the moment of inertia, recovery torque, and damping effects, while the horizontal springs mitigate the tilt angle caused by wind-induced thrust moments. Methods Numerical simulations are conducted using viscous flow theory, the Finite Volume Method (FVM), and the Volume of Fluid (VOF) method to model the fluid domain under varying wind and wave conditions. Results The motion responses and the wind thrust at different wave periods and wind speeds are provided. Discussion The results demonstrate that the springs effectively reduce the tilt angle and restrain heave motion across different wind speeds and waves.",
+      "authors": [
+        "Yueyang Li",
+        "Shiyan Sun",
+        "Jie Cui"
+      ],
+      "candidateIds": [
+        "candidate_openalex_21361f7478f63e72"
+      ],
+      "doi": "https://doi.org/10.3389/fenrg.2025.1581732",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_ed9913bd7be6ce85",
+      "processingStatus": "classified",
+      "publicationSource": "Frontiers in Energy Research",
+      "publicationType": "unknown",
+      "publishedDate": "2025-04-17",
+      "rank": 6,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 2,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 5,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 2,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 5,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20250420_090000_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_ed9913bd7be6ce85",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2025-04-20T09:00:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_ed9913bd7be6ce85",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aerodynamics",
+          "Aerospace engineering",
+          "BARGE",
+          "Engineering",
+          "Environmental science",
+          "Geotechnical engineering",
+          "Marine engineering",
+          "Offshore wind power",
+          "Ship Hydrodynamics and Maneuverability",
+          "Submarine pipeline",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development"
+        ]
+      },
+      "runId": "run_20250420_090000_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3389/fenrg.2025.1581732",
+        "openalexId": "https://openalex.org/W4409557267"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.3389/fenrg.2025.1581732",
+      "title": "Hydrodynamic-aerodynamic performance of a barge-type floating offshore wind turbine with four moonpools and moorings",
+      "topicTags": [
+        "Aerodynamics",
+        "Aerospace engineering",
+        "BARGE",
+        "Engineering",
+        "Environmental science",
+        "Geotechnical engineering",
+        "Marine engineering",
+        "Offshore wind power",
+        "Ship Hydrodynamics and Maneuverability",
+        "Submarine pipeline",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development"
+      ]
+    }
+  ],
+  "sourceName": "openalex",
+  "weekEnd": "2025-04-20",
+  "weekStart": "2025-04-14"
+}

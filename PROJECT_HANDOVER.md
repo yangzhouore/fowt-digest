@@ -1,202 +1,108 @@
-﻿# PROJECT HANDOVER
+# Project Handover
 
-Last Updated: 2026-07-20
+Last updated: 2026-07-23
 
-## 1. Project Purpose
+This document gives continuity context. It intentionally avoids duplicating the
+full current-status checklist in `PROJECT_STATUS.md`.
 
-FOWT Research Digest is an editorial website and separate Python pipeline for
-collecting and preparing weekly research digests about Floating Offshore Wind
-Turbines.
+## Project Purpose
 
-The website is a static public MVP. The homepage, weekly page, 6 paper detail pages, and archive page now display one real static pipeline digest, while remaining website pages still use prototype/mock data as separately scoped. The deterministic pipeline MVP is complete through orchestration and weekly digest assembly.
+FOWT Research Digest is a deterministic research digest for Floating Offshore
+Wind Turbines. The pipeline produces auditable weekly digest data. The website
+presents that data as a reading experience.
 
-## 2. Current Branch
-
-`feature/website-archive`
-
-## 3. Current Milestone and Slice
-
-Milestone:
-
-Website MVP
-
-Current slice:
-
-Website MVP Feature 03 - Archive Integration is complete. Homepage, Weekly page, 6 Paper Detail pages, and Archive display `web/data/weekly_digest.json` from source run `run_20260720_090000_openalex` with 6 selected papers.
-
-Latest validation:
-
-- `python -m pytest pipeline/tests/test_orchestrator.py` - 17 passed, 0 failed
-- `python -m pytest pipeline/tests` - 193 passed, 0 failed
-- `git diff --check` - passed
-- `npm.cmd run lint` - passed
-- `npm.cmd run build` - passed
-
-The next milestone is Website UX Polish.
-
-## 4. Completed Milestones
-
-- M3A - Pipeline Foundation
-- M3B - OpenAlex Collector
-- M3C - Metadata Normalisation
-- M3C-1 - Raw OpenAlex Extraction and Abstract Reconstruction
-- M3C-2 - PaperCandidate Mapping
-- M3C-3 - PaperMetadata Mapping
-- M3C-4 - Normalisation Output Writing
-- M3D - Deterministic Deduplication
-- M3E - Deterministic FOWT Relevance Classification
-- M3F - Deterministic Ranking & Selection
-- M3G - Weekly Digest Assembly
-- M3H - Pipeline Orchestration
-- Web MVP deployment readiness is complete, but deployment has not been performed
-
-## 5. Current Architecture and Data Flow
+## Architecture
 
 Repository layout:
 
 ```text
-docs/      design, architecture, data contracts, implementation contracts
-pipeline/  Python pipeline modules and tests
-web/       static Next.js website; homepage, weekly page, paper detail pages, and archive use one real copied pipeline digest
+docs/      product direction, roadmap, architecture, and data contracts
+pipeline/  deterministic Python pipeline and tests
+web/       static Next.js website
 ```
 
-Current pipeline flow:
+Implemented pipeline flow:
 
 ```text
-OpenAlex query builder
--> OpenAlex HTTP client
--> OpenAlex collector
--> raw_openalex.json and run_summary.json
--> normaliser extraction helpers
--> PaperCandidate mapping
--> PaperMetadata mapping
--> candidates.json and normalised.json writing
--> deterministic deduplication
--> deduplicated_papers.json and deduplication_result.json writing
--> deterministic FOWT relevance classification
--> classified_papers.json and classification_result.json writing
--> deterministic ranking and selection
--> ranked_papers.json and ranking_result.json writing
--> weekly digest assembly
--> weekly_digest.json and weekly_digest_result.json writing
--> pipeline orchestration over the accepted file contracts
+Collection
+-> Metadata normalisation
+-> Deduplication
+-> FOWT relevance classification
+-> Ranking and selection
+-> Weekly digest assembly
+-> Pipeline orchestration
 ```
 
-The website does not run the pipeline. Feature 01, Feature 02, and Feature 03 use a static copied `weekly_digest.json` snapshot in `web/data/`.
+Website data flow:
 
-## 6. Important Design Decisions
+```text
+pipeline run output
+-> selected static digest JSON files under web/data/digests/
+-> web/data/digest-adapter.ts
+-> Homepage, Weekly Digest, Paper Detail, Archive
+```
 
-- Keep `web/` and `pipeline/` separate.
-- Do not add FastAPI, a database, a CMS, or an API until explicitly scoped.
-- Use local JSON files for the first pipeline prototype.
-- Use Python standard library only for the pipeline unless a milestone changes it.
-- Keep implementation explicit and small.
-- Do not create service, manager, repository, factory, schema, or framework layers.
+The website does not run the pipeline. The pipeline does not import website
+code.
+
+## Important Design Decisions
+
+- The pipeline is the source of truth for paper data.
+- The website is a presentation layer only.
 - Each pipeline stage validates its input contract and never silently repairs it.
-- Do not invent missing paper metadata.
-- Preserve source provenance from raw OpenAlex output through normalisation and deduplication.
-- Deduplication uses deterministic exact rules only; fuzzy matching is not implemented.
-- M3E classification uses deterministic keyword rules only; AI, embeddings, fuzzy matching, semantic search, ranking, and scoring are not implemented.
-- M3F ranking and selection uses deterministic classification/date/paper ID ordering only; citation counts, scores, weights, AI, diversity balancing, digest generation, and website behavior are not implemented.
-- M3G weekly digest assembly copies selected ranked records only; it does not inspect relevance classification, sort, re-rank, re-select, add summaries, add editorial content, generate Markdown or HTML, integrate with the website, use a database, or implement the broader WeeklyEdition model.
-- M3H pipeline orchestration sequences accepted stages only; it does not alter stage behavior, retry, repair, clean up prior successful outputs, or create new JSON products.
+- Pipeline stages are small modules with explicit public functions.
+- Runtime pipeline code uses the Python standard library unless a milestone
+  explicitly changes that.
+- Stage outputs are local JSON files written through `pipeline/run_storage.py`.
+- Website integration uses explicitly imported static digest JSON files.
+- The website may format fields for display, but must not sort, re-rank, repair,
+  summarize, reinterpret, or invent paper content.
 
-## 7. Current Module Snapshot
+## Current Implementation Boundaries
+
+Do not add without an explicit milestone:
+
+- backend, API routes, database, CMS, scheduler, or deployment automation;
+- AI writing, AI review, generated summaries, scoring, or semantic search;
+- new pipeline data products;
+- direct website access to pipeline run directories.
+
+## Current Limitations
+
+- The website displays 15 selected historical demonstration editions, not
+  complete weekly historical coverage.
+- Historical digest data is static and committed under `web/data/digests/`.
+- The website does not execute the pipeline or refresh data automatically.
+- No database, search, filters, or publication workflow exists.
+- No AI-written summaries, findings, limitations, scores, or editorial analysis
+  exist in the website.
+
+## Module Snapshot
 
 Pipeline modules:
 
-- `pipeline/ids.py`: deterministic run, candidate, and paper ID helpers plus DOI/title normalisation.
-- `pipeline/run_storage.py`: run directory and JSON writing helpers.
-- `pipeline/openalex_query.py`: deterministic OpenAlex query URL generation.
-- `pipeline/openalex_client.py`: standard-library HTTP client with timeout/retry handling.
-- `pipeline/openalex_collector.py`: collector orchestration, pagination, raw output writing.
-- `pipeline/normaliser.py`: raw successful work extraction, abstract reconstruction, PaperCandidate mapping, PaperMetadata mapping, and normalisation output writing.
-- `pipeline/deduplicator.py`: deterministic connected-component deduplication, deduplicated metadata output, deduplication report output, and local rollback for partial write failures.
-- `pipeline/relevance_classifier.py`: deterministic three-state FOWT relevance classification, classified output writing, aggregate classification reporting, and local rollback for partial write failures.
-- `pipeline/ranker.py`: deterministic ranking and selection, ranked output writing, aggregate ranking reporting, and local rollback for partial write failures.
-- `pipeline/weekly_digest.py`: deterministic weekly digest assembly, selected ranked paper output writing, aggregate digest reporting, and local rollback for partial write failures.
-- `pipeline/orchestrator.py`: thin file-contract orchestration over accepted deterministic stages.
+- `pipeline/ids.py`
+- `pipeline/run_storage.py`
+- `pipeline/openalex_query.py`
+- `pipeline/openalex_client.py`
+- `pipeline/openalex_collector.py`
+- `pipeline/normaliser.py`
+- `pipeline/deduplicator.py`
+- `pipeline/relevance_classifier.py`
+- `pipeline/ranker.py`
+- `pipeline/weekly_digest.py`
+- `pipeline/orchestrator.py`
 
-Pipeline tests:
+Website data integration:
 
-- `pipeline/tests/test_ids.py`
-- `pipeline/tests/test_run_storage.py`
-- `pipeline/tests/test_openalex_query.py`
-- `pipeline/tests/test_openalex_client.py`
-- `pipeline/tests/test_openalex_collector.py`
-- `pipeline/tests/test_normaliser.py`
-- `pipeline/tests/test_deduplicator.py`
-- `pipeline/tests/test_relevance_classifier.py`
-- `pipeline/tests/test_ranker.py`
-- `pipeline/tests/test_weekly_digest.py`
-- `pipeline/tests/test_orchestrator.py`
+- `web/data/digests/*.json`
+- `web/data/digest-adapter.ts`
+- `web/app/page.tsx`
+- `web/app/weekly/[slug]/page.tsx`
+- `web/app/papers/[slug]/page.tsx`
+- `web/app/archive/page.tsx`
 
-## 8. Latest Test Status
+## Resume Guidance
 
-Command:
-
-```powershell
-python -m pytest pipeline/tests
-```
-
-Latest result:
-
-```text
-193 passed, 0 failed
-```
-
-## 9. Known Limitations
-
-- M3H Pipeline Orchestration is complete and acceptance passed.
-- The deterministic MVP pipeline is complete through orchestration and weekly digest assembly.
-- Scoring, AI writing, and AI review do not exist.
-- No database exists.
-- Homepage, Weekly page, 6 Paper Detail pages, and Archive display one static copied pipeline digest.
-- Website MVP navigation is complete: Homepage -> Weekly -> Paper Detail and Archive -> Weekly.
-- The website still does not run the pipeline.
-
-## 10. Exact Next Task
-
-Prepare Website UX Polish.
-
-## 11. What Must Not Be Implemented Yet
-
-Do not implement:
-
-- scoring
-- AI writing
-- AI review
-- Crossref
-- arXiv
-- additional website integration beyond scoped Website MVP features
-- database
-- API routes
-- FastAPI
-- MCP
-
-## 12. Recommended Reading Order
-
-1. `AGENTS.md`
-2. `PROJECT_STATUS.md`
-3. `PROJECT_HANDOVER.md`
-4. `LESSONS_LEARNED.md`
-5. `docs/PIPELINE_DATA_MODEL.md`
-6. `docs/PIPELINE_ARCHITECTURE.md`
-7. `pipeline/ids.py`
-8. `pipeline/normaliser.py`
-9. `pipeline/deduplicator.py`
-10. `pipeline/relevance_classifier.py`
-11. `pipeline/ranker.py`
-12. `pipeline/weekly_digest.py`
-13. `pipeline/orchestrator.py`
-14. Existing pipeline tests relevant to the current task
-
-## 13. Resume Instructions
-
-To resume work:
-
-1. Confirm the branch is `feature/website-archive`.
-2. Run `git status` and ensure there are no unexpected changes.
-3. Run `python -m pytest pipeline/tests`.
-4. Prepare Website UX Polish.
-5. Do not start scoring, AI writing, database, or additional website integration beyond the scoped next feature.
+Start with `START_HERE.md`, then read `PROJECT_STATUS.md` for the exact current
+task. Read this document only for architecture, boundaries, and continuity.

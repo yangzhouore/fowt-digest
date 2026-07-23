@@ -1,48 +1,19 @@
-# FOWT Research Digest
+﻿# FOWT Research Digest
 
-FOWT Research Digest is a project for collecting, processing, and presenting research related to Floating Offshore Wind Turbines (FOWT).
+FOWT Research Digest is a deterministic research digest for Floating Offshore
+Wind Turbines. It has two deliberately separate parts:
 
-The repository currently contains two independent parts:
+- `pipeline/`: a completed deterministic Python pipeline that produces weekly
+  digest JSON data products.
+- `web/`: a static Next.js reading experience that displays selected
+  demonstration weekly digest editions copied from pipeline output.
 
-- `pipeline/`: a completed deterministic MVP pipeline for producing weekly digest data products.
-- `web/`: a static Next.js website prototype that still uses fictional local mock data.
+For the current resume point, read `START_HERE.md` first. This README describes
+what the repository contains; it does not track detailed milestone status.
 
-The Python pipeline and the website are intentionally separate. The pipeline does not publish to the website yet, and the website does not read pipeline run outputs yet.
+## Current Capabilities
 
-## Current Repository Status
-
-- Active branch: `main`
-- MVP pipeline milestone: complete through M3H Pipeline Orchestration
-- Completed pipeline milestones: M3A through M3H
-- Latest verified pipeline validation: `193 passed, 0 failed`
-- Current next phase: Website MVP
-
-MVP v1.0 delivers the deterministic pipeline data flow. It does not include website integration, database storage, AI writing, AI review, scheduling, or automated publication.
-
-## Completed MVP Capabilities
-
-The completed deterministic MVP pipeline includes:
-
-- Deterministic run, candidate, and paper ID helpers
-- Run-directory creation and supported JSON output writing
-- OpenAlex query generation
-- OpenAlex HTTP client with timeout and retry handling
-- OpenAlex collection with cursor pagination and raw response preservation
-- Metadata normalisation from raw OpenAlex works
-- `candidates.json` and `normalised.json` writing
-- Deterministic deduplication
-- `deduplicated_papers.json` and `deduplication_result.json` writing
-- Rule-based FOWT relevance classification
-- `classified_papers.json` and `classification_result.json` writing
-- Deterministic ranking and selection
-- `ranked_papers.json` and `ranking_result.json` writing
-- Weekly digest assembly
-- `weekly_digest.json` and `weekly_digest_result.json` writing
-- Thin pipeline orchestration across accepted file contracts
-
-## Pipeline Architecture
-
-The implemented pipeline sequence is:
+The deterministic pipeline MVP is complete through M3H:
 
 ```text
 Collection
@@ -54,63 +25,74 @@ Collection
 -> Pipeline orchestration
 ```
 
-Each stage validates its input contract and does not silently repair invalid upstream data. Stage outputs are local JSON files written under a run directory such as:
+The website currently supports this real-data reading flow:
 
 ```text
-pipeline/data/runs/<runId>/
+Homepage -> Weekly Digest -> Paper Detail
+Archive -> Weekly Digest
+Paper Detail -> originating Weekly Digest
 ```
 
-The orchestrator coordinates the accepted stage APIs and reads each documented output file before passing it to the next stage. It does not add new JSON products, retry failed stages, repair intermediate payloads, or change stage behavior.
+The website uses:
+
+```text
+web/data/digests/
+```
+
+as static copied pipeline output. The current archive contains 15 selected
+historical demonstration editions, not complete weekly historical coverage. The
+website does not run the pipeline.
 
 ## Repository Structure
 
 ```text
 fowt-digest/
-  AGENTS.md                         # Contributor and engineering rules
-  DIRECTIONS.md                     # Project direction notes
-  LESSONS_LEARNED.md                # Project workflow and engineering lessons
-  PROJECT_HANDOVER.md               # Continuity notes for future sessions
-  PROJECT_STATUS.md                 # Current milestone and repository status
-  README.md
+  START_HERE.md                     # Resume entry point for new sessions
+  AGENTS.md                         # Engineering and collaboration rules
+  PROJECT_STATUS.md                 # Concise current status
+  PROJECT_HANDOVER.md               # Architecture and continuity notes
+  LESSONS_LEARNED.md                # Engineering lessons only
   docs/
+    PRODUCT_VISION.md               # Stable product direction
+    UX_ROADMAP.md                   # Website UX Polish roadmap
+    PIPELINE_ARCHITECTURE.md        # Implemented pipeline architecture
+    PIPELINE_DATA_MODEL.md          # Pipeline data contracts
     COLLECTOR_IMPLEMENTATION_CONTRACT.md
-    PIPELINE_ARCHITECTURE.md
-    PIPELINE_DATA_MODEL.md
     RELEASE_NOTES_v1.0.md
-    architecture.md
-    design.md
-    MILESTONES.md
-    product.md
-  pipeline/
-    ids.py
-    run_storage.py
-    openalex_query.py
-    openalex_client.py
-    openalex_collector.py
-    normaliser.py
-    deduplicator.py
-    relevance_classifier.py
-    ranker.py
-    weekly_digest.py
-    orchestrator.py
-    tests/
-  web/
-    app/
-    data/
-    package.json
+  pipeline/                         # Python pipeline and tests
+  web/                              # Next.js website
 ```
 
-## How To Run The Pipeline Locally
+Some older documents in `docs/` are preserved as historical early-MVP notes.
+Use `START_HERE.md` for the canonical reading order.
 
-The pipeline uses the Python standard library for runtime code. Tests require `pytest`.
+## Running Checks
 
-Run the full pipeline through the orchestrator from the repository root:
+Run the full pipeline test suite from the repository root:
 
 ```powershell
-python -c "from datetime import date; from pipeline.orchestrator import run_weekly_pipeline; print(run_weekly_pipeline(from_publication_date=date(2026, 7, 13), to_publication_date=date(2026, 7, 19), discovery_date='2026-07-20T00:00:00Z', classified_at='2026-07-20T00:00:00Z', selection_limit=10, week_start='2026-07-13', week_end='2026-07-19', generated_at='2026-07-20T00:00:00Z'))"
+python -m pytest pipeline/tests
 ```
 
-That command performs real OpenAlex HTTP requests through the standard-library client. For tests and development, inject mocked `fetch_json` and `sleep` functions into `run_weekly_pipeline` to avoid network access and real waiting.
+Run website checks from `web/`:
+
+```powershell
+npm.cmd run lint
+npm.cmd run build
+```
+
+Run the local website from `web/`:
+
+```powershell
+npm.cmd run dev
+```
+
+## Running The Pipeline
+
+The pipeline can be run through `pipeline.orchestrator.run_weekly_pipeline`.
+That path performs real OpenAlex HTTP requests unless test doubles are injected.
+For development and tests, use mocked `fetch_json` and `sleep` inputs where
+available so work remains deterministic and does not depend on the network.
 
 Pipeline run outputs are written under:
 
@@ -118,66 +100,14 @@ Pipeline run outputs are written under:
 pipeline/data/runs/<runId>/
 ```
 
-## Test Command
+Generated run directories are runtime artifacts and should not be committed.
 
-Run all pipeline tests from the repository root:
+## Current Development Direction
 
-```powershell
-python -m pytest pipeline/tests
-```
+The pipeline MVP v1.0.0 is complete. Current branch work has completed Website
+UX Polish and the Website Demo Dataset baseline. See `PROJECT_STATUS.md` for
+the current resume point.
 
-Latest verified result:
-
-```text
-193 passed, 0 failed
-```
-
-## Website Prototype
-
-The website under `web/` is a static Next.js prototype using fictional mock data. It includes homepage, weekly edition, paper detail, archive, methodology, and about pages.
-
-Run the website locally:
-
-```powershell
-cd web
-npm install
-npm run dev
-```
-
-Run website checks:
-
-```powershell
-cd web
-npm run lint
-npm run build
-```
-
-The website is not connected to the pipeline in MVP v1.0.
-
-## Current Milestone
-
-MVP v1.0 pipeline work is complete. M3A through M3H have been implemented, accepted, merged to `main`, and documented.
-
-## Next Milestone
-
-Website MVP.
-
-The next phase should focus on the public website experience and deployment path while keeping the pipeline and frontend boundaries explicit until integration is separately scoped.
-
-## Known Limitations
-
-MVP v1.0 intentionally does not include:
-
-- Website integration with pipeline outputs
-- Database storage
-- AI writing
-- AI review
-- Scoring
-- Automated publication
-- Scheduling or cron
-- Crossref or arXiv collection
-- CI/CD workflow automation
-
-## Engineering Philosophy
-
-The project follows the rules in `AGENTS.md`: document before implementation, keep stages small and deterministic, validate input contracts, avoid speculative abstractions, and keep the frontend independent from pipeline internals until integration is explicitly scoped.
+The website must not invent, rewrite, summarize, re-rank, or repair pipeline
+data. Presentation can format and selectively display fields, but pipeline
+contracts remain authoritative.

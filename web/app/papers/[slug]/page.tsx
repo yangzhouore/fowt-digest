@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
-import { currentDigest, getDigestPaperBySlug } from "../../../data/digest-adapter";
+import {
+  getAllDigests,
+  getDigestPaperWithEditionBySlug,
+} from "../../../data/digest-adapter";
 
 type PaperPageProps = {
   params: Promise<{
@@ -12,36 +15,44 @@ type PaperPageProps = {
 };
 
 export function generateStaticParams() {
-  return currentDigest.papers.map((paper) => ({
-    slug: paper.slug,
-  }));
+  const slugs = new Set<string>();
+
+  for (const digest of getAllDigests()) {
+    for (const paper of digest.papers) {
+      slugs.add(paper.slug);
+    }
+  }
+
+  return Array.from(slugs).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PaperPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const paper = getDigestPaperBySlug(slug);
+  const result = getDigestPaperWithEditionBySlug(slug);
 
-  if (!paper) {
+  if (!result) {
     return {
       title: "Paper not found",
     };
   }
 
   return {
-    title: paper.title,
-    description: "Pipeline paper metadata from the static weekly digest snapshot.",
+    title: result.paper.title,
+    description: "Pipeline paper metadata from a static weekly digest snapshot.",
   };
 }
 
 export default async function PaperPage({ params }: PaperPageProps) {
   const { slug } = await params;
-  const paper = getDigestPaperBySlug(slug);
+  const result = getDigestPaperWithEditionBySlug(slug);
 
-  if (!paper) {
+  if (!result) {
     notFound();
   }
+
+  const { edition, paper } = result;
 
   return (
     <main>
@@ -51,22 +62,40 @@ export default async function PaperPage({ params }: PaperPageProps) {
         <section className="intro" aria-labelledby="paper-heading">
           <p className="eyebrow">Pipeline paper detail</p>
           <h1 id="paper-heading">{paper.title}</h1>
-          <p>
-            Rank {paper.number} selected paper from the deterministic weekly
-            digest for {currentDigest.dateRange}.
+          <p className="paper-authors">
+            {paper.authors.join(", ") || "No authors listed"}
           </p>
+          <p className="paper-source-line">
+            Rank {paper.number} / {formatPublicationDate(paper.publicationDate)} /{" "}
+            {paper.publicationSource} / {paper.publicationType}
+          </p>
+          <p>
+            Selected from the deterministic weekly digest for {edition.dateRange}.
+          </p>
+          {paper.sourceUrl || paper.doi ? (
+            <p className="paper-action-row">
+              {paper.sourceUrl ? <a href={paper.sourceUrl}>View source</a> : null}
+              {paper.sourceUrl && paper.doi ? " / " : null}
+              {paper.doi ? <a href={paper.doi}>Open DOI</a> : null}
+            </p>
+          ) : null}
+        </section>
+
+        <section className="paper-abstract" aria-labelledby="abstract-heading">
+          <h2 id="abstract-heading">Abstract</h2>
+          <p>{paper.abstract ?? "No abstract available."}</p>
         </section>
 
         <section className="paper-detail-meta" aria-labelledby="paper-meta-heading">
-          <h2 id="paper-meta-heading">Paper metadata</h2>
+          <h2 id="paper-meta-heading">Supporting metadata</h2>
           <dl>
             <div>
               <dt>Rank</dt>
               <dd>{paper.number}</dd>
             </div>
             <div>
-              <dt>Authors</dt>
-              <dd>{paper.authors.join(", ") || "No authors listed"}</dd>
+              <dt>Publication date</dt>
+              <dd>{formatPublicationDate(paper.publicationDate)}</dd>
             </div>
             <div>
               <dt>Source</dt>
@@ -76,10 +105,6 @@ export default async function PaperPage({ params }: PaperPageProps) {
               <dt>Type</dt>
               <dd>{paper.publicationType}</dd>
             </div>
-            <div>
-              <dt>Publication date</dt>
-              <dd>{paper.publicationDate}</dd>
-            </div>
             {paper.doi ? (
               <div>
                 <dt>DOI</dt>
@@ -88,10 +113,6 @@ export default async function PaperPage({ params }: PaperPageProps) {
                 </dd>
               </div>
             ) : null}
-            <div>
-              <dt>Topics</dt>
-              <dd>{paper.topicTags.join(", ") || "No topic tags"}</dd>
-            </div>
             {paper.classification ? (
               <div>
                 <dt>Classification</dt>
@@ -112,33 +133,27 @@ export default async function PaperPage({ params }: PaperPageProps) {
               <dt>Full text</dt>
               <dd>{paper.fullTextAvailability}</dd>
             </div>
-            {paper.sourceUrl ? (
-              <div>
-                <dt>Source link</dt>
-                <dd>
-                  <a href={paper.sourceUrl}>View source</a>
-                </dd>
-              </div>
-            ) : null}
           </dl>
-        </section>
-
-        <section className="analysis-sections" aria-labelledby="abstract-heading">
-          <h2 id="abstract-heading">Abstract</h2>
-          <p>{paper.abstract ?? "No abstract available."}</p>
+          {paper.topicTags.length > 0 ? (
+            <ul className="topic-list" aria-label="Topic tags">
+              {paper.topicTags.map((topic) => (
+                <li key={topic}>{topic}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className="paper-source-line">No topic tags</p>
+          )}
         </section>
 
         <section aria-labelledby="pipeline-notice-heading">
           <h2 id="pipeline-notice-heading">Pipeline-data notice</h2>
           <p>
-            This page uses a static local copy of one deterministic pipeline
-            digest snapshot. It does not include AI-written summaries or
-            editorial analysis.
+            This page uses a static local copy of one selected historical
+            demonstration edition from the deterministic pipeline. It does not
+            include AI-written summaries or editorial analysis.
           </p>
           <p className="text-link-row">
-            <Link href={`/weekly/${currentDigest.slug}`}>
-              Back to the weekly digest
-            </Link>
+            <Link href={`/weekly/${edition.slug}`}>Back to the weekly digest</Link>
           </p>
         </section>
       </article>
@@ -146,4 +161,13 @@ export default async function PaperPage({ params }: PaperPageProps) {
       <SiteFooter />
     </main>
   );
+}
+
+function formatPublicationDate(value: string): string {
+  return new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${value}T00:00:00Z`));
 }

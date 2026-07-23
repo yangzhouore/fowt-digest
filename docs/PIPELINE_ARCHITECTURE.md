@@ -21,7 +21,7 @@ Paper sources
   -> Pipeline orchestration
 ```
 
-The implemented prototype runs locally, reads and writes structured JSON files, and includes a thin orchestrator over accepted stage contracts. Static website display of one copied `weekly_digest.json` snapshot now exists. Automated publication export, website-driven pipeline execution, and post-MVP publication workflows remain future work.
+The implemented prototype runs locally, reads and writes structured JSON files, and includes a thin orchestrator over accepted stage contracts. Static website display now uses selected static digest JSON files under `web/data/digests/`, copied from deterministic pipeline output for presentation. Automated publication export, website-driven pipeline execution, and post-MVP publication workflows remain future work.
 
 ## 3. Non-goals
 
@@ -276,7 +276,7 @@ pipeline/
       10_publication/
 ```
 
-The website should not read the pipeline run directory directly. The current Website MVP uses a stable copied `weekly_digest.json` snapshot under `web/data/`.
+The website should not read the pipeline run directory directly or execute the pipeline. The current Website MVP uses selected static digest JSON files under `web/data/digests/` as presentation inputs copied from deterministic pipeline output.
 
 This keeps the frontend independent from collection, scoring, writing, and review logic.
 

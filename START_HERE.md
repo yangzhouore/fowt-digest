@@ -4,12 +4,15 @@ Use this file as the first entry point for a new Codex session.
 
 ## Resume Point
 
-- Branch: `feature/ux-05-site-trust-copy`
-- Milestone: UX-05 Site Trust Copy Alignment
-- Current feature: UX-05 Site Trust Copy Alignment
-- Current phase: implementation complete, accepted, and committed; documentation baseline complete and accepted
+- Branch: `main`
+- Milestone: stable post-merge baseline
+- Current feature: none active
+- Current phase: stable post-merge baseline
+- UX-05 Site Trust Copy Alignment: complete, accepted, and merged
+- Merged PR: #11 (`Align site trust copy with current dataset baseline`)
+- Merge commit: `12a47b8`
 - Accepted implementation commit: `e8ed0b0`
-- Immediate next task: final branch review, then push and pull request
+- Immediate next task: Design Review for the next milestone
 
 Everything before this point is complete, accepted, and merged unless
 `PROJECT_STATUS.md` says otherwise.
@@ -23,10 +26,8 @@ Completed and accepted work now merged into `main` includes:
 - UX-03 Paper Detail Readability;
 - DD-01 multiple static weekly digest support;
 - DD-02 historical demonstration dataset with 15 selected weekly editions;
-- UX-04 Website Presentation Refinement.
-
-UX-05 Site Trust Copy Alignment is accepted and committed on the feature branch
-in `e8ed0b0`, but it is not merged yet.
+- UX-04 Website Presentation Refinement;
+- UX-05 Site Trust Copy Alignment.
 
 The website currently loads static digest JSON files from:
 
@@ -43,8 +44,9 @@ not complete weekly historical coverage.
 
 ## Current Boundary
 
-Do not begin another feature before UX-05 is merged. The next workflow stage is
-final branch review, then push and pull request for UX-05.
+There is no active feature implementation. Do not begin implementation until the
+next milestone scope is explicitly reviewed and accepted through a Design
+Review.
 
 The website remains a presentation layer only. It does not run the pipeline,
 refresh data automatically, or add AI-written summaries, findings, limitations,

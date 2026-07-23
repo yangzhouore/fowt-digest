@@ -4,18 +4,20 @@ Last updated: 2026-07-23
 
 ## Current State
 
-- Current branch: `feature/dd-03-static-digest-guardrails`
-- Current milestone: DD-03 Static Digest Data Guardrails
-- Current feature: DD-03 Static Digest Data Guardrails
-- Current phase: implementation complete, accepted, and committed; documentation baseline complete and accepted
-- Accepted implementation commit: `5b558ed`
-- Immediate next task: final branch review, then push and PR
-- Do not begin another milestone before DD-03 is merged.
+- Current branch: `main`
+- Current milestone: FOWT Research Digest v1.1.0 public website release
+- Current feature: none active
+- Current phase: release preparation complete; stable release baseline
+- Release tag: `v1.1.0`
+- Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
+- Immediate next task: Design Review for the next post-v1.1 milestone
+- Do not begin implementation until the next milestone scope is explicitly
+  reviewed and accepted.
 
 ## Latest Accepted Work
 
 - Deterministic pipeline MVP complete through M3H Pipeline Orchestration.
-- MVP v1.0.0 tag published for the deterministic pipeline.
+- Existing `v1.0.0` tag marks the deterministic pipeline MVP release.
 - Website Feature 01 complete: Homepage and Weekly Digest display real static pipeline digest data.
 - Website Feature 02 complete: Weekly Digest links to real Paper Detail pages.
 - Website Feature 03 complete: Archive lists available static digest editions.
@@ -26,46 +28,28 @@ Last updated: 2026-07-23
 - DD-01 Multiple static weekly digest support complete, accepted, and committed.
 - DD-02 Historical demonstration dataset complete, accepted, and committed.
 - UX-04 Website Presentation Refinement complete, accepted, and committed.
-- PR #9 merged into `main` in merge commit `eb7c2d5`.
 - UX-05 Site Trust Copy Alignment complete, accepted, and merged through PR #11
   in merge commit `12a47b8`.
-- DD-03 Static Digest Data Guardrails complete, accepted, and committed in
-  `5b558ed`.
+- DD-03 Static Digest Data Guardrails complete, accepted, and merged through PR #13
+  in merge commit `6026063`.
+- v1.1.0 release preparation complete.
 
 ## Latest Validation
 
 - Pipeline suite: `python -m pytest pipeline/tests` -> 193 passed, 0 failed.
-- UX-02 acceptance review: local Weekly Digest route returned HTTP 200; rendered paper links matched pipeline rank order; abstract previews and missing-abstract fallback matched the accepted rule.
-- UX-05 validation: `npm.cmd run lint` passed.
-- UX-05 validation: `npm.cmd run build` passed and generated 111 static pages.
-- UX-05 repository validation: `git diff --check` passed.
-- UX-05 manual `/about` acceptance passed.
 - DD-03 validation: `npm.cmd run validate:data` passed.
 - DD-03 validation: `npm.cmd run test:data` passed with 26 tests.
-- DD-03 validation: `npm.cmd run lint` passed.
-- DD-03 validation: `npm.cmd run build` passed and generated 111 static pages.
-- DD-03 repository validation: `git diff --check` passed.
-
-## UX-05 Baseline
-
-UX-05 Site Trust Copy Alignment updated the About page and pipeline architecture
-wording without changing implementation behavior.
-
-- About page now describes FOWT Research Digest as a static MVP.
-- About page states that the website presents 15 selected historical
-  demonstration editions generated from deterministic pipeline output.
-- About page states that the editions are not complete weekly historical
-  coverage.
-- About page states that the website does not run the pipeline or provide
-  AI-generated paper analysis.
-- `docs/PIPELINE_ARCHITECTURE.md` now describes selected static digest JSON files
-  under `web/data/digests/`, rather than one copied snapshot.
-
-UX-05 is merged. DD-03 Static Digest Data Guardrails is complete, accepted,
-and committed in `5b558ed`. Documentation baseline is complete and accepted.
-DD-03 is not merged yet; final branch review, then push and PR are next.
+- Release validation: `npm.cmd run lint` passed.
+- Release validation: `npm.cmd run build` passed and generated 111 static pages.
+- Release repository validation: `git diff --check` passed.
 
 ## Website Baseline
+
+The website is publicly deployed at:
+
+```text
+https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
+```
 
 The website currently contains 15 selected historical demonstration editions.
 They are representative static weekly editions for demonstration and do not
@@ -85,8 +69,6 @@ represent complete weekly historical coverage.
   neutrally displays `No abstract available.` when missing.
 - DD-03 adds local static digest guardrails through `npm.cmd run validate:data`
   and focused Node tests through `npm.cmd run test:data`.
-- DD-03 changed no website routes, presentation components, pipeline code, digest
-  JSON, dependencies, or lockfiles.
 
 ## Current Boundaries
 

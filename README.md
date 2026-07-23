@@ -1,47 +1,56 @@
-﻿# FOWT Research Digest
+﻿﻿# FOWT Research Digest
 
 FOWT Research Digest is a deterministic research digest for Floating Offshore
-Wind Turbines. It has two deliberately separate parts:
+Wind Turbines. It combines a local Python pipeline for producing auditable weekly
+digest data with a static Next.js website for reading selected digest editions.
 
-- `pipeline/`: a completed deterministic Python pipeline that produces weekly
-  digest JSON data products.
-- `web/`: a static Next.js reading experience that displays selected
-  demonstration weekly digest editions copied from pipeline output.
+Live website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
 
-For the current resume point, read `START_HERE.md` first. This README describes
-what the repository contains; it does not track detailed milestone status.
+Repository: https://github.com/yangzhouore/fowt-digest
 
-## Current Capabilities
+## What It Provides
 
-The deterministic pipeline MVP is complete through M3H:
+- A deterministic pipeline from OpenAlex collection through weekly digest assembly.
+- A static website that presents selected historical demonstration editions.
+- Archive, Weekly Digest, and Paper Detail reading paths.
+- Paper metadata, abstracts where available, source links, DOI links, topic tags,
+  and deterministic selection context.
+- Local guardrails that validate committed static digest JSON files and their
+  explicit website adapter registration.
+
+The website does not run the pipeline. It displays selected static digest JSON
+files copied from deterministic pipeline output.
+
+## How The Digest Works
+
+The implemented pipeline flow is:
 
 ```text
-Collection
+OpenAlex
+-> Collection
 -> Metadata normalisation
 -> Deduplication
 -> FOWT relevance classification
 -> Ranking and selection
 -> Weekly digest assembly
--> Pipeline orchestration
+-> Static website data
 ```
 
-The website currently supports this real-data reading flow:
-
-```text
-Homepage -> Weekly Digest -> Paper Detail
-Archive -> Weekly Digest
-Paper Detail -> originating Weekly Digest
-```
-
-The website uses:
+Website-ready digest files are committed under:
 
 ```text
 web/data/digests/
 ```
 
-as static copied pipeline output. The current archive contains 15 selected
-historical demonstration editions, not complete weekly historical coverage. The
-website does not run the pipeline.
+The current archive contains 15 selected historical demonstration editions. They
+are not complete weekly historical coverage.
+
+## Technology Stack
+
+- Python standard-library pipeline modules with pytest coverage.
+- Next.js, React, and TypeScript for the static website.
+- Dependency-free Node scripts for static digest data validation.
+- Vercel for website deployment.
 
 ## Repository Structure
 
@@ -51,74 +60,59 @@ fowt-digest/
   AGENTS.md                         # Engineering and collaboration rules
   PROJECT_STATUS.md                 # Concise current status
   PROJECT_HANDOVER.md               # Architecture and continuity notes
-  LESSONS_LEARNED.md                # Engineering lessons only
-  docs/
-    PRODUCT_VISION.md               # Stable product direction
-    UX_ROADMAP.md                   # Website UX Polish roadmap
-    PIPELINE_ARCHITECTURE.md        # Implemented pipeline architecture
-    PIPELINE_DATA_MODEL.md          # Pipeline data contracts
-    COLLECTOR_IMPLEMENTATION_CONTRACT.md
-    RELEASE_NOTES_v1.0.md
-  pipeline/                         # Python pipeline and tests
-  web/                              # Next.js website
+  docs/                             # Product, roadmap, architecture, and contracts
+  pipeline/                         # Deterministic Python pipeline and tests
+  web/                              # Static Next.js website and digest data
 ```
 
-Some older documents in `docs/` are preserved as historical early-MVP notes.
-Use `START_HERE.md` for the canonical reading order.
+## Local Development
 
-## Running Checks
-
-Run the full pipeline test suite from the repository root:
+Run the pipeline tests from the repository root:
 
 ```powershell
 python -m pytest pipeline/tests
 ```
 
-Run website checks from `web/`:
+Run website commands from `web/`:
 
 ```powershell
 npm.cmd run lint
 npm.cmd run build
-```
-
-Validate static website digest data and adapter registration from `web/`:
-
-```powershell
 npm.cmd run validate:data
 npm.cmd run test:data
-```
-
-These commands check the committed static digest JSON files and their explicit
-registration in `web/data/digest-adapter.ts` without modifying data or using the
-network.
-
-Run the local website from `web/`:
-
-```powershell
 npm.cmd run dev
 ```
 
-## Running The Pipeline
+`validate:data` checks the committed static digest JSON files and their explicit
+registration in `web/data/digest-adapter.ts`. `test:data` runs focused invalid-fixture
+tests for those guardrails. Neither command modifies data or uses the network.
 
-The pipeline can be run through `pipeline.orchestrator.run_weekly_pipeline`.
-That path performs real OpenAlex HTTP requests unless test doubles are injected.
-For development and tests, use mocked `fetch_json` and `sleep` inputs where
-available so work remains deterministic and does not depend on the network.
+## Deployment
 
-Pipeline run outputs are written under:
+The website is deployed on Vercel as a static Next.js application. Deployment
+serves the committed website data; it does not collect papers, run OpenAlex
+requests, regenerate digests, or publish automatically.
 
-```text
-pipeline/data/runs/<runId>/
-```
+## Current Limitations
 
-Generated run directories are runtime artifacts and should not be committed.
+- The archive is a selected demonstration dataset, not complete weekly coverage.
+- Static website data must be regenerated and committed manually when updated.
+- The website has no backend, database, CMS, search, filters, scheduler, or API.
+- The website does not provide AI-generated summaries, findings, limitations,
+  scores, or editorial analysis.
+- Paper content is displayed from deterministic pipeline output and is not
+  rewritten or repaired by the website.
 
-## Current Development Direction
+## Roadmap
 
-The pipeline MVP v1.0.0 is complete. `main` includes the completed Website UX
-Polish and Website Demo Dataset baseline. See `PROJECT_STATUS.md` for the
-current resume point.
+Post-release work should begin with a Design Review before implementation. Likely
+future areas include stronger data operations, publication workflow decisions, or
+additional reader experience improvements, but no post-v1.1 feature is active.
 
-The website must not invent, rewrite, summarize, re-rank, or repair pipeline
-data. Presentation can format and selectively display fields, but pipeline
-contracts remain authoritative.
+## Project Status
+
+`v1.1.0` is the first public website release candidate. It includes the completed
+deterministic pipeline MVP, static multi-edition website, historical demonstration
+dataset, site trust copy alignment, and static digest data guardrails.
+
+The existing `v1.0.0` tag marks the earlier deterministic pipeline MVP release.

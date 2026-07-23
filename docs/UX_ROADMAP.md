@@ -38,9 +38,10 @@ coverage.
 - DD-02 Generate Historical Demo Dataset: complete, accepted, and committed.
 - UX-04 Website Presentation Refinement: complete, accepted, and committed.
 
-The current branch is ready for final branch/PR review. Do not begin another UX
-implementation before this milestone is merged and the next feature receives a
-Design Review.
+The Website UX Polish / Website Demo Dataset milestone is complete, accepted,
+and merged into `main` via PR #9 (`eb7c2d5`). Do not begin another UX
+implementation until the next milestone scope is explicitly reviewed and
+accepted through a Design Review.
 
 ## Presentation Issues Versus Dataset Limitations
 
@@ -174,6 +175,6 @@ Do not introduce backend, database, AI, search, filters, or deployment work.
 
 ## Recommended Order
 
-The Website UX Polish and Website Demo Dataset work on this branch is complete.
-The next step is final branch/PR review before merge. The next feature should
-start with a Design Review after this milestone is merged.
+The Website UX Polish and Website Demo Dataset milestone is complete, accepted,
+and merged. No new milestone has been selected yet. The next feature should
+start with a Design Review before implementation begins.

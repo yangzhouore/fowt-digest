@@ -104,9 +104,9 @@ Generated run directories are runtime artifacts and should not be committed.
 
 ## Current Development Direction
 
-The pipeline MVP v1.0.0 is complete. Current branch work has completed Website
-UX Polish and the Website Demo Dataset baseline. See `PROJECT_STATUS.md` for
-the current resume point.
+The pipeline MVP v1.0.0 is complete. `main` includes the completed Website UX
+Polish and Website Demo Dataset baseline. See `PROJECT_STATUS.md` for the
+current resume point.
 
 The website must not invent, rewrite, summarize, re-rank, or repair pipeline
 data. Presentation can format and selectively display fields, but pipeline

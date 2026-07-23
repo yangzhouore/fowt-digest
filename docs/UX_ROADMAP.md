@@ -37,6 +37,7 @@ coverage.
 - DD-01 Support Multiple Weekly Digests: complete, accepted, and committed.
 - DD-02 Generate Historical Demo Dataset: complete, accepted, and committed.
 - UX-04 Website Presentation Refinement: complete, accepted, and committed.
+- UX-05 Site Trust Copy Alignment: complete, accepted, and committed.
 
 The Website UX Polish / Website Demo Dataset milestone is complete, accepted,
 and merged into `main` via PR #9 (`eb7c2d5`). Do not begin another UX
@@ -172,6 +173,22 @@ Scope:
 - include restrained project links to GitHub and repository documentation.
 
 Do not introduce backend, database, AI, search, filters, or deployment work.
+
+
+## UX-05 Site Trust Copy Alignment
+
+Status: complete, accepted, and committed.
+
+Scope:
+
+- align About-page trust copy with the real static multi-digest baseline;
+- align pipeline architecture wording with `web/data/digests/`;
+- remove fictional and single-digest claims.
+
+Non-goals:
+
+- no layout, styling, routing, data, pipeline, backend, search, filters, AI, or
+  general copy redesign.
 
 ## Recommended Order
 

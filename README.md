@@ -19,6 +19,8 @@ Repository: https://github.com/yangzhouore/fowt-digest
   explicit website adapter registration.
 - Deterministic publishing tooling that copies a pipeline weekly digest into the
   website data directory and refreshes static adapter registration.
+- A repository workflow command that publishes an existing digest run and runs
+  the accepted validation suite in order.
 
 The website does not run the pipeline. It displays selected static digest JSON
 files published from deterministic pipeline output.
@@ -63,6 +65,16 @@ updates the explicit digest imports in `web/data/digest-adapter.ts`. Use
 The full publishing workflow is documented in
 `docs/WEBSITE_PUBLISHING_WORKFLOW.md`.
 
+Run the complete local publication workflow from the repository root:
+
+```powershell
+python -m tools.publication_workflow pipeline\data\runs\<run_id>
+```
+
+This command publishes an existing `weekly_digest.json`, runs repository and
+website validation, and prints a summary report. It does not run the pipeline,
+commit, push, deploy, or choose whether a digest should be published.
+
 ## Technology Stack
 
 - Python standard-library pipeline modules with pytest coverage.
@@ -106,6 +118,13 @@ registration in `web/data/digest-adapter.ts`. `test:data` runs focused
 invalid-fixture tests for those guardrails. Neither command modifies data or
 uses the network.
 
+Run the full repository validation workflow from the repository root after
+publishing an edition:
+
+```powershell
+python -m tools.publication_workflow pipeline\data\runs\<run_id>
+```
+
 ## Deployment
 
 The website is deployed on Vercel as a static Next.js application. Deployment
@@ -125,14 +144,16 @@ requests, regenerate digests, or publish automatically.
 
 ## Roadmap
 
-The repository is at a stable post-M4 baseline. The next milestone should begin
-with a Design Review before implementation. No new feature is active.
+M5 Repository Automation adds deterministic local workflow orchestration for
+publication validation. Future milestones should begin with a Design Review
+before implementation.
 
 ## Project Status
 
 `v1.1.0` marks the public website release baseline. The current post-M4 baseline
 includes the completed deterministic pipeline MVP, static multi-edition website,
 historical demonstration dataset, site trust copy alignment, static digest data
-guardrails, and deterministic website publishing workflow.
+guardrails, deterministic website publishing workflow, and M5 repository
+workflow automation.
 
 The existing `v1.0.0` tag marks the earlier deterministic pipeline MVP release.

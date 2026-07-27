@@ -2,8 +2,9 @@
 
 ## Status
 
-Design review complete and accepted. No repository automation has been
-implemented in this document.
+Design review complete and accepted. M5 implementation adds
+`python -m tools.publication_workflow` as a deterministic repository workflow
+command without changing pipeline or website behavior.
 
 M4 Website Publishing Workflow is complete and accepted. The current baseline is:
 
@@ -160,8 +161,9 @@ cd ..
 git diff --check
 ```
 
-If M5 adds a root validation command, acceptance validation should also run that
-new command and confirm it invokes the same checks in the documented order.
+M5 implementation validation should also run
+`python -m tools.publication_workflow pipeline\data\runs\<run_id>` and confirm
+it invokes the same checks in the documented order.
 
 ## Acceptance Criteria
 

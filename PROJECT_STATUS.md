@@ -6,11 +6,11 @@ Last updated: 2026-07-27
 
 - Current branch: `feature/m5-design-review`
 - Current milestone: M5 - Repository Automation
-- Current feature: M5 design accepted; implementation not started
-- Current phase: design review complete and accepted; implementation not started
+- Current feature: M5 repository workflow automation implemented
+- Current phase: implementation complete; acceptance review pending
 - Release tag: `v1.1.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: implement accepted M5 repository validation automation.
+- Immediate next task: M5 acceptance review.
 
 ## Latest Accepted Work
 
@@ -39,19 +39,24 @@ Last updated: 2026-07-27
   - Documented the publishing path in `docs/WEBSITE_PUBLISHING_WORKFLOW.md`.
 - M5 Repository Automation Design Review complete and accepted.
   - Accepted scope is deterministic repository validation automation only.
-  - M5 implementation has not started.
   - Added design review at `docs/M5_REPOSITORY_AUTOMATION_DESIGN_REVIEW.md`.
+- M5 Repository Workflow Automation implemented.
+  - Added `python -m tools.publication_workflow` as the single deterministic workflow entry point.
+  - The command publishes an existing pipeline run through `pipeline.website_publisher`.
+  - The command runs existing repository and website validation and prints a summary report.
+  - It does not run the pipeline, commit, push, deploy, schedule jobs, or call GitHub Actions.
 
 ## Latest Validation
 
-- Pipeline suite: `python -m pytest pipeline/tests` -> 200 passed, 0 failed.
+- Pipeline suite: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
 - M4 publishing command: `python -m pipeline.website_publisher pipeline\data\runs\run_20260727_072439_openalex` -> digest already published and adapter already up to date.
 - Website data validation: `npm.cmd run validate:data` -> passed.
 - Website data tests: `npm.cmd run test:data` -> 26 passed, 0 failed.
 - Website lint: `npm.cmd run lint` -> passed.
 - Website build: `npm.cmd run build` -> passed and generated 118 static pages.
 - Repository validation: `git diff --check` -> passed.
-- M5 design acceptance validation: `git diff --check` -> passed.
+- M5 workflow validation: `python -m tools.publication_workflow pipeline\data\runs\run_20260727_072439_openalex` -> passed; digest and adapter already up to date.
+- M5 repository validation: `git diff --check` -> passed.
 
 ## Website Baseline
 

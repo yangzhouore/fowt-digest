@@ -4,13 +4,13 @@ Last updated: 2026-07-27
 
 ## Current State
 
-- Current branch: `main`
-- Current milestone: stable post-M4 baseline
-- Current feature: none active
-- Current phase: M4 complete and accepted; stable post-M4 baseline
+- Current branch: `feature/m5-design-review`
+- Current milestone: M5 - Repository Automation
+- Current feature: M5 repository workflow automation accepted
+- Current phase: M5 complete and accepted on feature branch; not merged to main
 - Release tag: `v1.1.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: Design Review for the next milestone.
+- Immediate next task: merge accepted M5 branch into main.
 
 ## Latest Accepted Work
 
@@ -37,16 +37,31 @@ Last updated: 2026-07-27
   - Publisher regenerates explicit static digest imports and `digestJsonFiles` registration from committed digest files.
   - Added focused pytest coverage for publish, overwrite, idempotency, and adapter regeneration behavior.
   - Documented the publishing path in `docs/WEBSITE_PUBLISHING_WORKFLOW.md`.
+- M5 Repository Automation Design Review complete and accepted.
+  - Accepted scope is deterministic repository validation automation only.
+  - Added design review at `docs/M5_REPOSITORY_AUTOMATION_DESIGN_REVIEW.md`.
+- M5 Repository Workflow Automation complete and accepted on `feature/m5-design-review`.
+  - Added `python -m tools.publication_workflow` as the single deterministic workflow entry point.
+  - The command publishes an existing pipeline run through `pipeline.website_publisher`.
+  - The command runs existing repository and website validation and prints a summary report.
+  - It does not run the pipeline, commit, push, deploy, schedule jobs, or call GitHub Actions.
+  - The accepted M5 branch has not been merged into `main`.
+  - M6 has not started.
 
 ## Latest Validation
 
-- Pipeline suite: `python -m pytest pipeline/tests` -> 200 passed, 0 failed.
+- Pipeline suite: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
 - M4 publishing command: `python -m pipeline.website_publisher pipeline\data\runs\run_20260727_072439_openalex` -> digest already published and adapter already up to date.
 - Website data validation: `npm.cmd run validate:data` -> passed.
 - Website data tests: `npm.cmd run test:data` -> 26 passed, 0 failed.
 - Website lint: `npm.cmd run lint` -> passed.
 - Website build: `npm.cmd run build` -> passed and generated 118 static pages.
 - Repository validation: `git diff --check` -> passed.
+- M5 workflow validation: `python -m tools.publication_workflow pipeline\data\runs\run_20260727_072439_openalex` -> passed; digest and adapter already up to date.
+- M5 repository validation: `git diff --check` -> passed.
+- M5 acceptance validation: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
+- M5 acceptance validation: `npm.cmd run validate:data`, `npm.cmd run test:data`, `npm.cmd run lint`, and `npm.cmd run build` -> passed.
+- M5 acceptance validation: `git diff --check` -> passed.
 
 ## Website Baseline
 

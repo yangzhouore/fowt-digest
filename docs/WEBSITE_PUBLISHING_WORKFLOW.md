@@ -68,9 +68,28 @@ To intentionally replace an existing edition for the same `weekEnd`:
 python -m pipeline.website_publisher pipeline\data\runs\<run_id> --overwrite
 ```
 
+## Publication Workflow Command
+
+M5 adds one deterministic entry point that runs the accepted local publication
+workflow from the repository root:
+
+```powershell
+python -m tools.publication_workflow pipeline\data\runs\<run_id>
+```
+
+The workflow command:
+
+- publishes the existing run with `pipeline.website_publisher`;
+- runs the repository validation commands in order;
+- stops at the first failed validation command;
+- prints a summary report.
+
+It does not run the pipeline, select a run, commit, push, deploy, schedule
+publication, or call external services beyond the local validation commands.
+
 ## Validation
 
-After publishing, run:
+After publishing directly with `pipeline.website_publisher`, run:
 
 ```powershell
 python -m pytest pipeline/tests
@@ -94,8 +113,10 @@ The publishing tool is deterministic repository tooling. It does not:
 
 - run the website;
 - run the pipeline;
+- select a pipeline run;
 - fetch new data;
 - deploy the website;
+- commit or push changes;
 - generate editorial text;
 - add reader-facing behavior.
 

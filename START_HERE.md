@@ -4,13 +4,13 @@ Use this file as the first entry point for a new Codex session.
 
 ## Resume Point
 
-- Branch: `main`
-- Milestone: stable post-M4 baseline
-- Current feature: none active
-- Current phase: M4 complete and accepted; stable post-M4 baseline
+- Branch: `feature/m5-design-review`
+- Milestone: M5 - Repository Automation
+- Current feature: M5 repository workflow automation accepted
+- Current phase: M5 complete and accepted on feature branch; not merged to main
 - Release tag: `v1.1.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: Design Review for the next milestone
+- Immediate next task: merge accepted M5 branch into main
 
 Everything before this point is complete, accepted, and merged unless
 `PROJECT_STATUS.md` says otherwise.
@@ -27,7 +27,9 @@ Completed and accepted work now merged into `main` includes:
 - UX-04 Website Presentation Refinement;
 - UX-05 Site Trust Copy Alignment;
 - DD-03 Static Digest Data Guardrails;
-- M4 Website Publishing Workflow.
+- M4 Website Publishing Workflow;
+- M5 Repository Automation Design Review;
+- M5 Repository Workflow Automation implementation and acceptance review.
 
 The website currently loads static digest JSON files from:
 
@@ -46,8 +48,13 @@ representative static editions and not complete weekly historical coverage.
 
 ## Current Boundary
 
-There is no active feature implementation. Do not begin the next milestone until
-its scope is explicitly reviewed and accepted through a Design Review.
+M5 implementation is accepted on `feature/m5-design-review` and has not been
+merged to `main`. It adds `python -m tools.publication_workflow` as the single
+deterministic publication workflow entry point. It publishes an existing
+pipeline run through the M4 publisher, runs repository and website validation,
+and prints a summary. Do not expand it into pipeline execution, GitHub Actions,
+deployment automation, schedulers, backend, database, CMS, automatic commits,
+automatic pushes, or website behavior changes. M6 has not started.
 
 The website remains a presentation layer only. It does not run the pipeline,
 refresh data automatically, or add AI-written summaries, findings, limitations,
@@ -68,6 +75,7 @@ Read only if needed for the task:
 - `docs/PIPELINE_ARCHITECTURE.md`
 - `docs/PIPELINE_DATA_MODEL.md`
 - `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
+- `docs/M5_REPOSITORY_AUTOMATION_DESIGN_REVIEW.md`
 - relevant files under `web/`
 - relevant tests or package scripts under `web/`
 

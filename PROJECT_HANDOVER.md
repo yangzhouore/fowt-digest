@@ -37,6 +37,7 @@ Website data flow:
 
 ```text
 pipeline run output (`weekly_digest.json`)
+-> `tools.publication_workflow` local workflow command
 -> `pipeline.website_publisher` local publishing command
 -> selected static digest JSON files under web/data/digests/
 -> web/data/digest-adapter.ts
@@ -45,7 +46,8 @@ pipeline run output (`weekly_digest.json`)
 
 The website does not run the pipeline. The pipeline does not import website
 code. The publishing workflow is explicit local tooling that moves accepted
-pipeline output into the website static data structure.
+pipeline output into the website static data structure, runs validation, and
+prints a summary report.
 
 ## Important Design Decisions
 
@@ -59,6 +61,9 @@ pipeline output into the website static data structure.
 - Website integration uses explicitly imported static digest JSON files.
 - Website publishing copies `weekly_digest.json` without transformation and
   refreshes adapter registration deterministically.
+- Repository workflow automation coordinates the existing publisher and validation
+  commands without running the pipeline, committing, pushing, deploying, or
+  scheduling work.
 - The website may format fields for display, but must not sort, re-rank, repair,
   summarize, reinterpret, or invent paper content.
 
@@ -98,6 +103,7 @@ Pipeline modules:
 - `pipeline/weekly_digest.py`
 - `pipeline/orchestrator.py`
 - `pipeline/website_publisher.py`
+- `tools/publication_workflow.py`
 
 Website data integration:
 

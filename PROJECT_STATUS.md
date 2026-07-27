@@ -4,13 +4,13 @@ Last updated: 2026-07-27
 
 ## Current State
 
-- Current branch: `main`
-- Current milestone: stable post-M4 baseline
-- Current feature: none active
-- Current phase: M4 complete and accepted; stable post-M4 baseline
+- Current branch: `feature/m5-design-review`
+- Current milestone: M5 - Repository Automation
+- Current feature: M5 design accepted; implementation not started
+- Current phase: design review complete and accepted; implementation not started
 - Release tag: `v1.1.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: Design Review for the next milestone.
+- Immediate next task: implement accepted M5 repository validation automation.
 
 ## Latest Accepted Work
 
@@ -37,6 +37,10 @@ Last updated: 2026-07-27
   - Publisher regenerates explicit static digest imports and `digestJsonFiles` registration from committed digest files.
   - Added focused pytest coverage for publish, overwrite, idempotency, and adapter regeneration behavior.
   - Documented the publishing path in `docs/WEBSITE_PUBLISHING_WORKFLOW.md`.
+- M5 Repository Automation Design Review complete and accepted.
+  - Accepted scope is deterministic repository validation automation only.
+  - M5 implementation has not started.
+  - Added design review at `docs/M5_REPOSITORY_AUTOMATION_DESIGN_REVIEW.md`.
 
 ## Latest Validation
 
@@ -47,6 +51,7 @@ Last updated: 2026-07-27
 - Website lint: `npm.cmd run lint` -> passed.
 - Website build: `npm.cmd run build` -> passed and generated 118 static pages.
 - Repository validation: `git diff --check` -> passed.
+- M5 design acceptance validation: `git diff --check` -> passed.
 
 ## Website Baseline
 

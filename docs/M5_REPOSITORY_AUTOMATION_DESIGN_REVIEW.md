@@ -2,8 +2,8 @@
 
 ## Status
 
-Design review only. No repository automation has been implemented in this
-document.
+Design review complete and accepted. No repository automation has been
+implemented in this document.
 
 M4 Website Publishing Workflow is complete and accepted. The current baseline is:
 
@@ -71,8 +71,7 @@ M5 should automate only deterministic repository checks. Suitable candidates:
 - one local validation entry point from the repository root;
 - a pre-commit readiness script that runs existing pipeline and website checks
   without changing data;
-- a concise validation summary that reports command pass/fail state;
-- optional CI documentation or design for a later GitHub Actions baseline.
+- a concise validation summary that reports command pass/fail state.
 
 M5 should not automate publication decisions, pipeline execution, deployment, or
 scheduled refreshes.
@@ -88,6 +87,16 @@ scheduled refreshes.
 - Over-broad automation could hide which digest data changed.
 - Auto-formatting or broad repository cleanup could create noisy diffs unrelated
   to digest publication.
+
+## Acceptance Review
+
+Accepted. The proposed M5 scope is technically coherent, appropriately
+incremental, and consistent with the post-M4 architecture. It automates only
+deterministic repository validation, keeps data-changing publication decisions
+manual, and preserves the separation between pipeline, publishing, and website.
+
+No architectural inconsistencies were identified after keeping GitHub Actions,
+deployment automation, scheduled publication, and pipeline execution out of M5.
 
 ## Recommended M5 Objective
 

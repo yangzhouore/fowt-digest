@@ -6,11 +6,11 @@ Last updated: 2026-07-27
 
 - Current branch: `feature/m5-design-review`
 - Current milestone: M5 - Repository Automation
-- Current feature: M5 repository workflow automation implemented
-- Current phase: implementation complete; acceptance review pending
+- Current feature: M5 repository workflow automation accepted
+- Current phase: M5 complete and accepted on feature branch; not merged to main
 - Release tag: `v1.1.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: M5 acceptance review.
+- Immediate next task: merge accepted M5 branch into main.
 
 ## Latest Accepted Work
 
@@ -40,11 +40,13 @@ Last updated: 2026-07-27
 - M5 Repository Automation Design Review complete and accepted.
   - Accepted scope is deterministic repository validation automation only.
   - Added design review at `docs/M5_REPOSITORY_AUTOMATION_DESIGN_REVIEW.md`.
-- M5 Repository Workflow Automation implemented.
+- M5 Repository Workflow Automation complete and accepted on `feature/m5-design-review`.
   - Added `python -m tools.publication_workflow` as the single deterministic workflow entry point.
   - The command publishes an existing pipeline run through `pipeline.website_publisher`.
   - The command runs existing repository and website validation and prints a summary report.
   - It does not run the pipeline, commit, push, deploy, schedule jobs, or call GitHub Actions.
+  - The accepted M5 branch has not been merged into `main`.
+  - M6 has not started.
 
 ## Latest Validation
 
@@ -57,6 +59,9 @@ Last updated: 2026-07-27
 - Repository validation: `git diff --check` -> passed.
 - M5 workflow validation: `python -m tools.publication_workflow pipeline\data\runs\run_20260727_072439_openalex` -> passed; digest and adapter already up to date.
 - M5 repository validation: `git diff --check` -> passed.
+- M5 acceptance validation: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
+- M5 acceptance validation: `npm.cmd run validate:data`, `npm.cmd run test:data`, `npm.cmd run lint`, and `npm.cmd run build` -> passed.
+- M5 acceptance validation: `git diff --check` -> passed.
 
 ## Website Baseline
 

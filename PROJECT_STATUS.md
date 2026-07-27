@@ -5,12 +5,12 @@ Last updated: 2026-07-27
 ## Current State
 
 - Current branch: `main`
-- Current milestone: M4 - Website Publishing Workflow
-- Current feature: deterministic website publishing workflow
-- Current phase: complete
+- Current milestone: stable post-M4 baseline
+- Current feature: none active
+- Current phase: M4 complete and accepted; stable post-M4 baseline
 - Release tag: `v1.1.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: begin the next milestone with design review.
+- Immediate next task: Design Review for the next milestone.
 
 ## Latest Accepted Work
 
@@ -31,7 +31,7 @@ Last updated: 2026-07-27
 - DD-03 Static Digest Data Guardrails complete, accepted, and merged through PR #13
   in merge commit `6026063`.
 - v1.1.0 release preparation complete.
-- M4 Website Publishing Workflow complete.
+- M4 Website Publishing Workflow complete and accepted.
   - Added deterministic pipeline-side publisher `pipeline.website_publisher`.
   - Publisher copies `weekly_digest.json` to `web/data/digests/<weekEnd>.json` without transformation.
   - Publisher regenerates explicit static digest imports and `digestJsonFiles` registration from committed digest files.

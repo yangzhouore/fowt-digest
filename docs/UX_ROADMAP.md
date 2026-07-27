@@ -19,14 +19,14 @@ Archive -> Weekly Digest
 Paper Detail -> originating Weekly Digest
 ```
 
-The website uses static copied pipeline output from:
+The website uses static published pipeline output from:
 
 ```text
 web/data/digests/
 ```
 
-The current archive contains 15 selected historical demonstration editions.
-These editions are static demonstration data, not complete weekly historical
+The current archive contains 16 selected static digest editions. These
+editions are representative static data, not complete weekly historical
 coverage.
 
 ## Progress

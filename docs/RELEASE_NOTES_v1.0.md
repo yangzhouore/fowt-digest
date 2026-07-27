@@ -1,6 +1,6 @@
 # Release Context
 
-These notes describe the deterministic pipeline MVP v1.0.0 release. Later website work has since integrated one static copied pipeline digest snapshot. For current repository status, read START_HERE.md and PROJECT_STATUS.md.
+These notes describe the deterministic pipeline MVP v1.0.0 release. Later website work has since integrated static digest data and deterministic website publishing. For current repository status, read START_HERE.md and PROJECT_STATUS.md.
 
 # FOWT Digest MVP v1.0
 

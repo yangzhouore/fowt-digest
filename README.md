@@ -11,7 +11,7 @@ Repository: https://github.com/yangzhouore/fowt-digest
 ## What It Provides
 
 - A deterministic pipeline from OpenAlex collection through weekly digest assembly.
-- A static website that presents selected historical demonstration editions.
+- A static website that presents selected static digest editions.
 - Archive, Weekly Digest, and Paper Detail reading paths.
 - Paper metadata, abstracts where available, source links, DOI links, topic tags,
   and deterministic selection context.
@@ -125,14 +125,14 @@ requests, regenerate digests, or publish automatically.
 
 ## Roadmap
 
-Post-release work should begin with a Design Review before implementation. Likely
-future areas include stronger data operations, publication workflow decisions, or
-additional reader experience improvements, but no post-v1.1 feature is active.
+The repository is at a stable post-M4 baseline. The next milestone should begin
+with a Design Review before implementation. No new feature is active.
 
 ## Project Status
 
-`v1.1.0` is the first public website release candidate. It includes the completed
-deterministic pipeline MVP, static multi-edition website, historical demonstration
-dataset, site trust copy alignment, and static digest data guardrails.
+`v1.1.0` marks the public website release baseline. The current post-M4 baseline
+includes the completed deterministic pipeline MVP, static multi-edition website,
+historical demonstration dataset, site trust copy alignment, static digest data
+guardrails, and deterministic website publishing workflow.
 
 The existing `v1.0.0` tag marks the earlier deterministic pipeline MVP release.

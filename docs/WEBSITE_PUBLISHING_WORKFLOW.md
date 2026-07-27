@@ -2,8 +2,9 @@
 
 ## Purpose
 
-M4 connects deterministic pipeline output to the existing static website data
-structure. It does not add website features, backend services, databases, CMS
+M4 is complete and accepted. It connects deterministic pipeline output to the
+existing static website data structure. It does not add website features,
+backend services, databases, CMS
 integration, schedulers, APIs, or deployment automation.
 
 The pipeline remains the source of truth. The website remains a static

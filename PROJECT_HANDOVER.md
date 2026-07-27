@@ -1,6 +1,6 @@
 # Project Handover
 
-Last updated: 2026-07-23
+Last updated: 2026-07-27
 
 This document gives continuity context. It intentionally avoids duplicating the
 full current-status checklist in `PROJECT_STATUS.md`.
@@ -36,14 +36,16 @@ Collection
 Website data flow:
 
 ```text
-pipeline run output
+pipeline run output (`weekly_digest.json`)
+-> `pipeline.website_publisher` local publishing command
 -> selected static digest JSON files under web/data/digests/
 -> web/data/digest-adapter.ts
 -> Homepage, Weekly Digest, Paper Detail, Archive
 ```
 
 The website does not run the pipeline. The pipeline does not import website
-code.
+code. The publishing workflow is explicit local tooling that moves accepted
+pipeline output into the website static data structure.
 
 ## Important Design Decisions
 
@@ -55,6 +57,8 @@ code.
   explicitly changes that.
 - Stage outputs are local JSON files written through `pipeline/run_storage.py`.
 - Website integration uses explicitly imported static digest JSON files.
+- Website publishing copies `weekly_digest.json` without transformation and
+  refreshes adapter registration deterministically.
 - The website may format fields for display, but must not sort, re-rank, repair,
   summarize, reinterpret, or invent paper content.
 
@@ -69,11 +73,12 @@ Do not add without an explicit milestone:
 
 ## Current Limitations
 
-- The website displays 15 selected historical demonstration editions, not
-  complete weekly historical coverage.
-- Historical digest data is static and committed under `web/data/digests/`.
+- The website displays 16 selected static digest editions, not complete weekly
+  historical coverage.
+- Digest data is static and committed under `web/data/digests/`.
 - The website does not execute the pipeline or refresh data automatically.
-- No database, search, filters, or publication workflow exists.
+- No database, search, filters, scheduler, deployment automation, or automatic
+  publication exists.
 - No AI-written summaries, findings, limitations, scores, or editorial analysis
   exist in the website.
 
@@ -92,11 +97,13 @@ Pipeline modules:
 - `pipeline/ranker.py`
 - `pipeline/weekly_digest.py`
 - `pipeline/orchestrator.py`
+- `pipeline/website_publisher.py`
 
 Website data integration:
 
 - `web/data/digests/*.json`
 - `web/data/digest-adapter.ts`
+- `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
 - `web/app/page.tsx`
 - `web/app/weekly/[slug]/page.tsx`
 - `web/app/papers/[slug]/page.tsx`

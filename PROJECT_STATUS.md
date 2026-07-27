@@ -1,18 +1,16 @@
 # Project Status
 
-Last updated: 2026-07-23
+Last updated: 2026-07-27
 
 ## Current State
 
 - Current branch: `main`
-- Current milestone: FOWT Research Digest v1.1.0 public website release
-- Current feature: none active
-- Current phase: release preparation complete; stable release baseline
+- Current milestone: M4 - Website Publishing Workflow
+- Current feature: deterministic website publishing workflow
+- Current phase: complete
 - Release tag: `v1.1.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: Design Review for the next post-v1.1 milestone
-- Do not begin implementation until the next milestone scope is explicitly
-  reviewed and accepted.
+- Immediate next task: begin the next milestone with design review.
 
 ## Latest Accepted Work
 
@@ -33,15 +31,22 @@ Last updated: 2026-07-23
 - DD-03 Static Digest Data Guardrails complete, accepted, and merged through PR #13
   in merge commit `6026063`.
 - v1.1.0 release preparation complete.
+- M4 Website Publishing Workflow complete.
+  - Added deterministic pipeline-side publisher `pipeline.website_publisher`.
+  - Publisher copies `weekly_digest.json` to `web/data/digests/<weekEnd>.json` without transformation.
+  - Publisher regenerates explicit static digest imports and `digestJsonFiles` registration from committed digest files.
+  - Added focused pytest coverage for publish, overwrite, idempotency, and adapter regeneration behavior.
+  - Documented the publishing path in `docs/WEBSITE_PUBLISHING_WORKFLOW.md`.
 
 ## Latest Validation
 
-- Pipeline suite: `python -m pytest pipeline/tests` -> 193 passed, 0 failed.
-- DD-03 validation: `npm.cmd run validate:data` passed.
-- DD-03 validation: `npm.cmd run test:data` passed with 26 tests.
-- Release validation: `npm.cmd run lint` passed.
-- Release validation: `npm.cmd run build` passed and generated 111 static pages.
-- Release repository validation: `git diff --check` passed.
+- Pipeline suite: `python -m pytest pipeline/tests` -> 200 passed, 0 failed.
+- M4 publishing command: `python -m pipeline.website_publisher pipeline\data\runs\run_20260727_072439_openalex` -> digest already published and adapter already up to date.
+- Website data validation: `npm.cmd run validate:data` -> passed.
+- Website data tests: `npm.cmd run test:data` -> 26 passed, 0 failed.
+- Website lint: `npm.cmd run lint` -> passed.
+- Website build: `npm.cmd run build` -> passed and generated 118 static pages.
+- Repository validation: `git diff --check` -> passed.
 
 ## Website Baseline
 
@@ -51,7 +56,7 @@ The website is publicly deployed at:
 https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
 ```
 
-The website currently contains 15 selected historical demonstration editions.
+The website currently contains 16 selected static digest editions.
 They are representative static weekly editions for demonstration and do not
 represent complete weekly historical coverage.
 
@@ -78,7 +83,6 @@ or claim complete weekly historical coverage.
 
 Do not add without an explicit accepted scope:
 
-- pipeline changes;
 - backend, database, CMS, API routes, scheduler, or deployment automation;
 - search, filters, AI summaries, editorial analysis, or automatic publication;
 - generated summaries, findings, limitations, scores, or invented paper content.
@@ -97,7 +101,9 @@ Do not add without an explicit accepted scope:
 ## Website State
 
 - Static digest source directory: `web/data/digests/`
-- Available editions: 15 selected historical demonstration editions
+- Publishing command: `python -m pipeline.website_publisher pipeline\data\runs\<run_id>`
+- Publishing workflow documentation: `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
+- Available editions: 16 selected static digest editions
 - Papers per edition: up to 6 selected papers
 - Implemented reader paths:
   - Homepage -> Weekly Digest -> Paper Detail

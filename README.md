@@ -1,4 +1,4 @@
-﻿﻿# FOWT Research Digest
+# FOWT Research Digest
 
 FOWT Research Digest is a deterministic research digest for Floating Offshore
 Wind Turbines. It combines a local Python pipeline for producing auditable weekly
@@ -17,9 +17,11 @@ Repository: https://github.com/yangzhouore/fowt-digest
   and deterministic selection context.
 - Local guardrails that validate committed static digest JSON files and their
   explicit website adapter registration.
+- Deterministic publishing tooling that copies a pipeline weekly digest into the
+  website data directory and refreshes static adapter registration.
 
 The website does not run the pipeline. It displays selected static digest JSON
-files copied from deterministic pipeline output.
+files published from deterministic pipeline output.
 
 ## How The Digest Works
 
@@ -33,6 +35,7 @@ OpenAlex
 -> FOWT relevance classification
 -> Ranking and selection
 -> Weekly digest assembly
+-> Website publishing tool
 -> Static website data
 ```
 
@@ -42,8 +45,23 @@ Website-ready digest files are committed under:
 web/data/digests/
 ```
 
-The current archive contains 15 selected historical demonstration editions. They
+The current archive contains 16 selected static digest editions. They
 are not complete weekly historical coverage.
+
+Publish a completed pipeline run into the static website data structure from the
+repository root:
+
+```powershell
+python -m pipeline.website_publisher pipeline\data\runs\<run_id>
+```
+
+The command copies `weekly_digest.json` to `web/data/digests/<weekEnd>.json` and
+updates the explicit digest imports in `web/data/digest-adapter.ts`. Use
+`--overwrite` only when intentionally replacing an existing edition for the same
+`weekEnd`.
+
+The full publishing workflow is documented in
+`docs/WEBSITE_PUBLISHING_WORKFLOW.md`.
 
 ## Technology Stack
 
@@ -84,8 +102,9 @@ npm.cmd run dev
 ```
 
 `validate:data` checks the committed static digest JSON files and their explicit
-registration in `web/data/digest-adapter.ts`. `test:data` runs focused invalid-fixture
-tests for those guardrails. Neither command modifies data or uses the network.
+registration in `web/data/digest-adapter.ts`. `test:data` runs focused
+invalid-fixture tests for those guardrails. Neither command modifies data or
+uses the network.
 
 ## Deployment
 
@@ -96,7 +115,8 @@ requests, regenerate digests, or publish automatically.
 ## Current Limitations
 
 - The archive is a selected demonstration dataset, not complete weekly coverage.
-- Static website data must be regenerated and committed manually when updated.
+- Static website data is still committed manually, but the digest copy and
+  adapter registration steps are reproducible through local publishing tooling.
 - The website has no backend, database, CMS, search, filters, scheduler, or API.
 - The website does not provide AI-generated summaries, findings, limitations,
   scores, or editorial analysis.

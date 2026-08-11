@@ -304,8 +304,8 @@ dd {
 }
 .homepage-paper-list {
   display: grid;
-  gap: 14px;
-  margin: 22px 0 0;
+  gap: 10px;
+  margin: 18px 0 0;
   padding-left: 0;
   list-style: none;
 }
@@ -318,8 +318,8 @@ dd {
   min-width: 0;
   display: grid;
   grid-template-columns: 54px minmax(0, 1fr);
-  gap: 8px 22px;
-  padding: 20px 20px 22px;
+  gap: 6px 20px;
+  padding: 16px 18px 17px;
   border: 1px solid var(--border);
   background: color-mix(in srgb, var(--paper) 72%, transparent);
 }
@@ -335,8 +335,8 @@ dd {
 
 .homepage-paper-card h3 {
   margin-bottom: 0;
-  font-size: 1.14rem;
-  line-height: 1.28;
+  font-size: 1.04rem;
+  line-height: 1.24;
 }
 
 .homepage-keywords,
@@ -346,20 +346,20 @@ dd {
 
 .homepage-keywords {
   color: var(--muted);
-  font-size: 0.84rem;
-  line-height: 1.45;
+  font-size: 0.8rem;
+  line-height: 1.35;
 }
 
 .homepage-preview {
   max-width: 720px;
   color: var(--ink);
-  font-size: 1rem;
-  line-height: 1.55;
+  font-size: 0.94rem;
+  line-height: 1.42;
 }
 
 .homepage-paper-action {
-  margin-top: 4px;
-  font-size: 0.9rem;
+  margin-top: 2px;
+  font-size: 0.86rem;
 }
 
 .paper-list article {
@@ -441,7 +441,7 @@ dd {
 
   .homepage-paper-card {
     display: block;
-    padding: 18px 16px 20px;
+    padding: 14px 14px 15px;
   }
 
   .paper-number {

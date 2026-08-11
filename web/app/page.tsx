@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 };
 
 const HOMEPAGE_PAPER_LIMIT = 5;
-const PREVIEW_CHARACTER_LIMIT = 170;
+const TITLE_CHARACTER_LIMIT = 100;
+const PREVIEW_CHARACTER_LIMIT = 90;
 const BROAD_TOPIC_TAGS = new Set([
   "computer science",
   "engineering",
@@ -21,6 +22,28 @@ const BROAD_TOPIC_TAGS = new Set([
   "mechanics",
   "physics",
 ]);
+const PREFERRED_TOPIC_TERMS = [
+  "aerodynamic",
+  "cable",
+  "cfd",
+  "computational fluid dynamics",
+  "control",
+  "dynamic",
+  "floating",
+  "fluid dynamics",
+  "hydrodynamic",
+  "moor",
+  "offshore wind",
+  "openfast",
+  "platform",
+  "simulation",
+  "structural",
+  "turbine",
+  "wake",
+  "wave",
+  "wind power",
+  "wind speed",
+];
 
 const previewPapers = currentDigest.papers.slice(0, HOMEPAGE_PAPER_LIMIT);
 
@@ -66,6 +89,7 @@ export default function Home() {
         <ol className="homepage-paper-list">
           {previewPapers.map((paper) => {
             const keywords = homepageKeywords(paper.topicTags);
+            const preview = homepagePreview(paper.abstract);
 
             return (
               <li key={paper.id}>
@@ -74,18 +98,16 @@ export default function Home() {
                     {String(paper.number).padStart(2, "0")}
                   </p>
                   <h3>
-                    <Link href={`/papers/${paper.slug}`}>{paper.title}</Link>
+                    <Link href={`/papers/${paper.slug}`} title={paper.title}>
+                      {homepageTitle(paper.title)}
+                    </Link>
                   </h3>
                   {keywords.length > 0 ? (
-                    <p className="homepage-keywords">{keywords.join(" · ")}</p>
-                  ) : (
-                    <p className="homepage-keywords">No concise source topic tags</p>
-                  )}
-                  <p className="homepage-preview">
-                    {homepagePreview(paper.abstract)}
-                  </p>
+                    <p className="homepage-keywords">{keywords.join(" / ")}</p>
+                  ) : null}
+                  {preview ? <p className="homepage-preview">{preview}</p> : null}
                   <p className="homepage-paper-action">
-                    <Link href={`/papers/${paper.slug}`}>Read paper →</Link>
+                    <Link href={`/papers/${paper.slug}`}>Read paper -&gt;</Link>
                   </p>
                 </article>
               </li>
@@ -113,29 +135,43 @@ export default function Home() {
   );
 }
 
-// Keep source topic tags in pipeline order; omit broad/noisy taxonomy labels for Homepage scanning only.
+function homepageTitle(title: string): string {
+  return truncateText(title.replace(/\s+/g, " ").trim(), TITLE_CHARACTER_LIMIT);
+}
+
+// Keep source topic tags in pipeline order; prefer concise FOWT-relevant source tags for Homepage scanning only.
 function homepageKeywords(topicTags: string[]): string[] {
+  const candidates = topicTags.map(normaliseTopicTag).filter(isDisplayTopicTag);
+  const preferred = candidates.filter(isPreferredTopicTag);
+  return uniqueFirst(preferred.length > 0 ? preferred : candidates, 3);
+}
+
+function normaliseTopicTag(tag: string): string {
+  return tag.trim();
+}
+
+function isDisplayTopicTag(tag: string): boolean {
+  const key = tag.toLowerCase();
+  return Boolean(tag) && !BROAD_TOPIC_TAGS.has(key) && tag.length <= 34;
+}
+
+function isPreferredTopicTag(tag: string): boolean {
+  const key = tag.toLowerCase();
+  return PREFERRED_TOPIC_TERMS.some((term) => key.includes(term));
+}
+
+function uniqueFirst(values: string[], limit: number): string[] {
   const selected: string[] = [];
   const seen = new Set<string>();
 
-  for (const tag of topicTags) {
-    const keyword = tag.trim();
-    const key = keyword.toLowerCase();
-
-    if (
-      !keyword ||
-      seen.has(key) ||
-      BROAD_TOPIC_TAGS.has(key) ||
-      keyword.includes("(") ||
-      keyword.length > 34
-    ) {
+  for (const value of values) {
+    const key = value.toLowerCase();
+    if (seen.has(key)) {
       continue;
     }
-
-    selected.push(keyword);
+    selected.push(value);
     seen.add(key);
-
-    if (selected.length === 3) {
+    if (selected.length === limit) {
       break;
     }
   }
@@ -143,22 +179,23 @@ function homepageKeywords(topicTags: string[]): string[] {
   return selected;
 }
 
-function homepagePreview(abstract: string | null): string {
+function homepagePreview(abstract: string | null): string | null {
   if (!abstract) {
-    return "No abstract available from the source metadata.";
+    return null;
   }
 
   const normalised = abstract.replace(/\s+/g, " ").trim();
-  const firstSentence = normalised.match(/.*?[.!?](?:\s|$)/)?.[0]?.trim();
-  const sourceText = firstSentence || normalised;
+  return truncateText(normalised, PREVIEW_CHARACTER_LIMIT);
+}
 
-  if (sourceText.length <= PREVIEW_CHARACTER_LIMIT) {
-    return sourceText;
+function truncateText(value: string, limit: number): string {
+  if (value.length <= limit) {
+    return value;
   }
 
-  const shortened = sourceText.slice(0, PREVIEW_CHARACTER_LIMIT + 1);
+  const shortened = value.slice(0, limit + 1);
   const lastSpace = shortened.lastIndexOf(" ");
-  const cutAt = lastSpace > 120 ? lastSpace : PREVIEW_CHARACTER_LIMIT;
+  const cutAt = lastSpace > Math.floor(limit * 0.7) ? lastSpace : limit;
 
-  return `${sourceText.slice(0, cutAt).trim()}...`;
+  return `${value.slice(0, cutAt).trim()}...`;
 }

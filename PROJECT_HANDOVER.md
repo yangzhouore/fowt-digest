@@ -49,6 +49,10 @@ code. The publishing workflow is explicit local tooling that moves accepted
 pipeline output into the website static data structure, runs validation, and
 prints a summary report.
 
+GitHub Actions now runs the accepted validation baseline for pull requests to
+main, pushes to main, and manual runs. Vercel remains the production CD
+mechanism through its Git integration after a manual merge to main.
+
 ## Important Design Decisions
 
 - The pipeline is the source of truth for paper data.
@@ -64,6 +68,8 @@ prints a summary report.
 - Repository workflow automation coordinates the existing publisher and validation
   commands without running the pipeline, committing, pushing, deploying, or
   scheduling work.
+- GitHub CI validates repository changes but does not publish data, deploy the
+  website, or mutate the repository.
 - The website may format fields for display, but must not sort, re-rank, repair,
   summarize, reinterpret, or invent paper content.
 
@@ -109,6 +115,8 @@ Website data integration:
 
 - `web/data/digests/*.json`
 - `web/data/digest-adapter.ts`
+- `.github/workflows/ci.yml`
+- `docs/M6_CICD_FOUNDATION.md`
 - `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
 - `web/app/page.tsx`
 - `web/app/weekly/[slug]/page.tsx`

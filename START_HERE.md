@@ -4,13 +4,13 @@ Use this file as the first entry point for a new Codex session.
 
 ## Resume Point
 
-- Branch: `main`
-- Milestone: M5 - Repository Automation complete
-- Current feature: M5 repository workflow automation accepted and merged
-- Current phase: M5 complete on `main`; 2026-08-09 digest published
+- Branch: `feature/m6-cicd`
+- Milestone: M6 - CI/CD Foundation
+- Current feature: M6 CI/CD Foundation accepted
+- Current phase: M6 complete and accepted on feature branch; not merged to main
 - Release tag: `v1.2.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: define and review the next milestone scope before starting M6
+- Immediate next task: merge accepted M6 branch into main
 
 Everything before this point is complete, accepted, and merged unless
 `PROJECT_STATUS.md` says otherwise.
@@ -29,7 +29,8 @@ Completed and accepted work now merged into `main` includes:
 - DD-03 Static Digest Data Guardrails;
 - M4 Website Publishing Workflow;
 - M5 Repository Automation Design Review;
-- M5 Repository Workflow Automation implementation and acceptance review.
+- M5 Repository Workflow Automation implementation and acceptance review;
+- M6 CI/CD Foundation implementation and acceptance review.
 
 The website currently loads static digest JSON files from:
 
@@ -48,13 +49,15 @@ representative static editions and not complete weekly historical coverage.
 
 ## Current Boundary
 
-M5 implementation is accepted and merged to `main`. It adds
-`python -m tools.publication_workflow` as the single deterministic publication
-workflow entry point. It publishes an existing pipeline run through the M4
-publisher, runs repository and website validation, and prints a summary. Do not
-expand it into pipeline execution, GitHub Actions, deployment automation,
-schedulers, backend, database, CMS, automatic commits, automatic pushes, or
-website behavior changes. M6 has not started.
+M6 implementation is accepted on `feature/m6-cicd` and has not been
+merged to `main`. It adds `.github/workflows/ci.yml` as the GitHub Actions
+validation workflow for pull requests to `main`, pushes to `main`, and manual
+`workflow_dispatch` runs. It keeps pipeline and website validation in separate
+jobs and leaves production deployment to the existing Vercel Git integration.
+Do not expand it into scheduled OpenAlex execution, automatic digest generation,
+automatic publication, automatic commits, automatic pushes, automatic PRs,
+automatic merging, Vercel CLI deployment, backend, database, CMS, API routes,
+or website behavior changes. M7 has not started.
 
 The website remains a presentation layer only. It does not run the pipeline,
 refresh data automatically, or add AI-written summaries, findings, limitations,
@@ -76,6 +79,7 @@ Read only if needed for the task:
 - `docs/PIPELINE_DATA_MODEL.md`
 - `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
 - `docs/M5_REPOSITORY_AUTOMATION_DESIGN_REVIEW.md`
+- `docs/M6_CICD_FOUNDATION.md`
 - relevant files under `web/`
 - relevant tests or package scripts under `web/`
 

@@ -5,12 +5,12 @@ Last updated: 2026-08-11
 ## Current State
 
 - Current branch: `main`
-- Current milestone: none selected
-- Current feature: none in progress
-- Current phase: stable post-Archive Search baseline on `main`
+- Current milestone: M7 Engineering Briefing
+- Current feature: none in progress after M7 merge
+- Current phase: M7 complete, accepted, and ready for main release
 - Release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Immediate next task: select the next milestone before opening a feature branch.
+- Immediate next task: complete final M7 merge after validation.
 
 ## Latest Accepted Work
 
@@ -64,14 +64,21 @@ Last updated: 2026-08-11
 - 2026-08-02 digest publication complete on `main`.
   - Added `web/data/digests/2026-08-02.json`.
   - Refreshed `web/data/digest-adapter.ts` registration.
+- M7 Engineering Briefing complete, accepted, and merge-ready.
+  - M7 Design Review documented the independent Engineering Briefing pipeline concept.
+  - M7A defined the engineering source policy and static data contracts.
+  - M7B added one manual source-backed Engineering Briefing prototype and website route.
+  - M7C expanded the independent static Engineering Briefing archive to 20 representative editions.
+  - Homepage now presents Engineering Briefing and Research Digest with equal editorial weight.
+  - Engineering data remains independent from the deterministic OpenAlex Research Pipeline.
 
 ## Latest Validation
 
 - Pipeline suite: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
 - Website data validation: `npm.cmd run validate:data` -> passed.
-- Website data tests: `npm.cmd run test:data` -> 26 passed, 0 failed.
+- Website data tests: `npm.cmd run test:data` -> 31 passed, 0 failed.
 - Website lint: `npm.cmd run lint` -> passed.
-- Website build: `npm.cmd run build` -> passed and generated 132 static pages.
+- Website build: `npm.cmd run build` -> passed and generated 153 static pages.
 - Repository validation: `git diff --check` -> passed.
 - GitHub CI: latest `main` push for Archive Search merge passed pipeline and website validation.
 
@@ -83,7 +90,7 @@ The website is publicly deployed at:
 https://fowt-digest-oegd.vercel.app/
 ```
 
-The website currently contains 18 selected static digest editions.
+The website currently contains 18 selected static Research Digest editions and 20 selected static Engineering Briefing editions.
 They are representative static weekly editions for demonstration and do not
 represent complete weekly historical coverage.
 
@@ -92,11 +99,12 @@ represent complete weekly historical coverage.
   JSON files.
 - Editions are returned newest first.
 - The newest digest remains the current homepage digest.
-- Homepage shows compact editorial previews for the current digest.
+- Homepage shows Engineering Briefing highlights and Research Digest previews as separate editorial sections.
 - Weekly Digest pages resolve by edition slug.
 - Paper Detail pages resolve papers across loaded editions and link back to the
   correct originating Weekly Digest.
-- Archive lists all loaded editions and provides static client-side paper search.
+- Research Archive lists all loaded research editions and provides static client-side paper search.
+- Engineering Archive lists all loaded engineering briefing editions under `/engineering`.
 - Weekly Digest remains a browsing page with abstract previews.
 - Paper Detail displays the complete `paper.abstract` when available and
   neutrally displays `No abstract available.` when missing.
@@ -132,12 +140,14 @@ Do not add without an explicit accepted scope:
 
 ## Website State
 
-- Static digest source directory: `web/data/digests/`
+- Static Research Digest source directory: `web/data/digests/`
 - Publishing command: `python -m pipeline.website_publisher pipeline\data\runs\<run_id>`
 - Publishing workflow documentation: `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
-- Available editions: 18 selected static digest editions
+- Available research editions: 18 selected static digest editions
+- Available engineering editions: 20 selected static briefing editions under `web/data/briefings/`
 - Papers per edition: up to 6 selected papers
 - Implemented reader paths:
+  - Homepage -> Engineering Briefing
   - Homepage -> Weekly Digest -> Paper Detail
   - Archive -> Weekly Digest
   - Archive Search -> Paper Detail

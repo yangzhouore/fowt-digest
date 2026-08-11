@@ -2,7 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "../site-header";
 import { SiteFooter } from "../site-footer";
-import { getAllDigests } from "../../data/digest-adapter";
+import {
+  getAllDigestPaperResults,
+  getAllDigests,
+} from "../../data/digest-adapter";
+import { ArchiveSearch, type ArchiveSearchPaper } from "./archive-search";
 
 export const metadata: Metadata = {
   title: "Archive",
@@ -12,6 +16,17 @@ export const metadata: Metadata = {
 
 export default function ArchivePage() {
   const digests = getAllDigests();
+  const searchPapers: ArchiveSearchPaper[] = getAllDigestPaperResults().map(
+    ({ edition, paper }) => ({
+      editionSlug: edition.slug,
+      editionDateRange: edition.dateRange,
+      paperSlug: paper.slug,
+      title: paper.title,
+      authors: paper.authors,
+      publicationSource: paper.publicationSource,
+      topicTags: paper.topicTags,
+    }),
+  );
 
   return (
     <main>
@@ -26,6 +41,8 @@ export default function ArchivePage() {
           historical coverage.
         </p>
       </section>
+
+      <ArchiveSearch papers={searchPapers} />
 
       <section aria-labelledby="archive-list-heading">
         <h2 id="archive-list-heading">Editions</h2>

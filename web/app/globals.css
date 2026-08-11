@@ -633,3 +633,170 @@ dd {
   list-style: none;
   font-family: ui-sans-serif, system-ui, sans-serif;
 }
+
+.section-heading-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.section-heading-row h2 {
+  margin-bottom: 0;
+}
+
+.section-heading-row p {
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.88rem;
+}
+
+.engineering-highlight-list,
+.engineering-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.engineering-highlight-card,
+.engineering-item {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 6px 20px;
+  padding: 16px 18px 17px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
+}
+
+.engineering-highlight-card > :not(.paper-number),
+.engineering-item > :not(.paper-number) {
+  grid-column: 2;
+}
+
+.engineering-highlight-card .paper-number,
+.engineering-item .paper-number {
+  grid-column: 1;
+  grid-row: 1 / span 5;
+}
+
+.engineering-highlight-card h3,
+.engineering-item h3 {
+  margin-bottom: 0;
+  font-size: 1.04rem;
+  line-height: 1.24;
+}
+
+.engineering-summary {
+  max-width: 760px;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.engineering-note {
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.engineering-note h4 {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.engineering-source-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px 22px;
+  margin: 4px 0 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .section-heading-row {
+    display: block;
+  }
+
+  .engineering-highlight-card,
+  .engineering-item {
+    display: block;
+    padding: 14px 14px 15px;
+  }
+}
+
+.homepage-masthead {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+.homepage-masthead h1 {
+  max-width: 760px;
+  margin-bottom: 10px;
+}
+
+.homepage-week {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.94rem;
+}
+
+.homepage-front {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+  padding-top: 26px;
+}
+
+.homepage-front > section {
+  min-width: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.homepage-front .section-heading-row {
+  gap: 14px;
+}
+
+.homepage-front .homepage-paper-list,
+.homepage-front .engineering-highlight-list {
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.homepage-front .homepage-paper-card,
+.homepage-front .engineering-highlight-card {
+  gap: 5px 16px;
+  padding: 14px 15px 15px;
+}
+
+.homepage-front .homepage-paper-card h3,
+.homepage-front .engineering-highlight-card h3 {
+  font-size: 1rem;
+}
+
+@media (max-width: 720px) {
+  .homepage-front {
+    display: block;
+  }
+
+  .homepage-front > section + section {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+  }
+
+  .homepage-masthead {
+    padding-top: 26px;
+    padding-bottom: 22px;
+  }
+}

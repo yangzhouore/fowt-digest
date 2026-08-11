@@ -7,9 +7,9 @@ full current-status checklist in `PROJECT_STATUS.md`.
 
 ## Project Purpose
 
-FOWT Research Digest is a deterministic research digest for Floating Offshore
-Wind Turbines. The pipeline produces auditable weekly digest data. The website
-presents that data as a reading experience.
+FOWT Research Digest presents two independent static content tracks for Floating Offshore
+Wind Turbines: a deterministic Research Digest from OpenAlex pipeline output
+and a source-backed Engineering Briefing archive. The website presents both as a reading experience.
 
 ## Architecture
 
@@ -33,7 +33,7 @@ Collection
 -> Pipeline orchestration
 ```
 
-Website data flow:
+Research website data flow:
 
 ```text
 pipeline run output (`weekly_digest.json`)
@@ -41,9 +41,18 @@ pipeline run output (`weekly_digest.json`)
 -> `pipeline.website_publisher` local publishing command
 -> selected static digest JSON files under web/data/digests/
 -> web/data/digest-adapter.ts
--> Homepage, Weekly Digest, Paper Detail, Archive, Archive Search
+-> Homepage, Weekly Digest, Paper Detail, Research Archive, Archive Search
 ```
 
+
+Engineering website data flow:
+
+```text
+manual source-backed briefing JSON
+-> selected static briefing JSON files under web/data/briefings/
+-> web/data/engineering-briefing-adapter.ts
+-> Homepage, Engineering Briefing pages, Engineering Archive
+```
 The website does not run the pipeline. The pipeline does not import website
 code. The publishing workflow is explicit local tooling that moves accepted
 pipeline output into the website static data structure, runs validation, and
@@ -73,7 +82,10 @@ mechanism through its Git integration after a manual merge to main.
 - The website may format fields for display, but must not sort, re-rank, repair,
   summarize, reinterpret, or invent paper content.
 - Archive Search is deterministic, client-side only, and searches committed
-  static website data without querying OpenAlex or any backend.
+  static Research Digest data without querying OpenAlex or any backend.
+- Engineering Briefing is independent from the Research Pipeline and uses
+  separate static source-backed JSON files.
+- M7 Engineering Briefing is complete, accepted, and merge-ready.
 
 ## Current Implementation Boundaries
 
@@ -86,9 +98,11 @@ Do not add without an explicit milestone:
 
 ## Current Limitations
 
-- The website displays 18 selected static digest editions, not complete weekly
+- The website displays 18 selected static research digest editions and 20
+  selected static engineering briefing editions, not complete weekly
   historical coverage.
-- Digest data is static and committed under `web/data/digests/`.
+- Research Digest data is static and committed under `web/data/digests/`.
+- Engineering Briefing data is static and committed under `web/data/briefings/`.
 - The website does not execute the pipeline or refresh data automatically.
 - No database, filters, scheduler, deployment automation, or automatic
   publication exists.
@@ -125,6 +139,10 @@ Website data integration:
 - `web/app/papers/[slug]/page.tsx`
 - `web/app/archive/page.tsx`
 - `web/app/archive/archive-search.tsx`
+- `web/data/briefings/*.json`
+- `web/data/engineering-briefing-adapter.ts`
+- `web/app/engineering/page.tsx`
+- `web/app/engineering/[slug]/page.tsx`
 
 ## Resume Guidance
 

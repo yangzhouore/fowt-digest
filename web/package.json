@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "lint": "eslint .",
-    "validate:data": "node scripts/validate-static-digests.js",
-    "test:data": "node --test scripts/validate-static-digests.test.js"
+    "validate:data": "node scripts/validate-static-digests.js && node scripts/validate-static-briefings.js",
+    "test:data": "node --test scripts/validate-static-digests.test.js scripts/validate-static-briefings.test.js"
   },
   "dependencies": {
     "next": "16.2.10",

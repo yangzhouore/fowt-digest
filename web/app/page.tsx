@@ -3,11 +3,12 @@ import type { Metadata } from "next";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { currentDigest } from "../data/digest-adapter";
+import { currentEngineeringBriefing } from "../data/engineering-briefing-adapter";
 
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "A weekly floating offshore wind turbine research digest built from deterministic pipeline output.",
+    "A weekly floating offshore wind briefing and research digest built from static source-backed data.",
 };
 
 const HOMEPAGE_PAPER_LIMIT = 5;
@@ -46,90 +47,82 @@ const PREFERRED_TOPIC_TERMS = [
 ];
 
 const previewPapers = currentDigest.papers.slice(0, HOMEPAGE_PAPER_LIMIT);
+const engineeringHighlights = currentEngineeringBriefing.items.slice(0, 5);
+const homepageHighlightCount = engineeringHighlights.length + previewPapers.length;
 
 export default function Home() {
   return (
     <main>
       <SiteHeader />
 
-      <section className="intro" aria-labelledby="intro-heading">
-        <p className="eyebrow">FOWT research digest</p>
-        <h1 id="intro-heading">A weekly reading path through floating wind research.</h1>
-        <p>
-          Scan selected Floating Offshore Wind Turbine papers from the current
-          weekly digest, then open the full edition or a paper detail page for
-          source metadata and available abstracts.
-        </p>
+      <section className="homepage-masthead" aria-labelledby="intro-heading">
+        <p className="eyebrow">FOWT Weekly Briefing</p>
+        <h1 id="intro-heading">Engineering &amp; Research Highlights</h1>
+        <p className="homepage-week">Week of {currentEngineeringBriefing.dateRange}</p>
+        <p>{homepageHighlightCount} curated highlights. Read in under 5 minutes.</p>
       </section>
 
-      <section className="edition-meta" aria-labelledby="edition-heading">
-        <h2 id="edition-heading">Current weekly digest</h2>
-        <dl>
-          <div>
-            <dt>Date range</dt>
-            <dd>{currentDigest.dateRange}</dd>
+      <section className="homepage-front" aria-label="This week's highlights">
+        <section aria-labelledby="engineering-briefing-heading">
+          <div className="section-heading-row">
+            <h2 id="engineering-briefing-heading">Engineering Briefing</h2>
+            <p>{currentEngineeringBriefing.dateRange}</p>
           </div>
-          <div>
-            <dt>Selected papers</dt>
-            <dd>{currentDigest.selectedPaperCount}</dd>
-          </div>
-        </dl>
-        <p className="text-link-row">
-          <Link href={`/weekly/${currentDigest.slug}`}>Read the weekly digest</Link>
-        </p>
-      </section>
-
-      <section id="weekly" aria-labelledby="papers-heading">
-        <h2 id="papers-heading">Editorial scan</h2>
-        <p>
-          Start with up to five selected papers from the current edition, shown in
-          pipeline rank order with source-backed keywords and short abstract
-          previews.
-        </p>
-        <ol className="homepage-paper-list">
-          {previewPapers.map((paper) => {
-            const keywords = homepageKeywords(paper.topicTags);
-            const preview = homepagePreview(paper.abstract);
-
-            return (
-              <li key={paper.id}>
-                <article className="homepage-paper-card">
+          <ol className="engineering-highlight-list">
+            {engineeringHighlights.map((item) => (
+              <li key={item.id}>
+                <article className="engineering-highlight-card">
                   <p className="paper-number">
-                    {String(paper.number).padStart(2, "0")}
+                    {String(item.number).padStart(2, "0")}
                   </p>
-                  <h3>
-                    <Link href={`/papers/${paper.slug}`} title={paper.title}>
-                      {homepageTitle(paper.title)}
-                    </Link>
-                  </h3>
-                  {keywords.length > 0 ? (
-                    <p className="homepage-keywords">{keywords.join(" / ")}</p>
-                  ) : null}
-                  {preview ? <p className="homepage-preview">{preview}</p> : null}
-                  <p className="homepage-paper-action">
-                    <Link href={`/papers/${paper.slug}`}>Read paper -&gt;</Link>
-                  </p>
+                  <h3>{item.title}</h3>
+                  <p className="homepage-preview">{item.oneLineSummary}</p>
                 </article>
               </li>
-            );
-          })}
-        </ol>
-        <p className="text-link-row">
-          <Link href={`/weekly/${currentDigest.slug}`}>
-            View all {currentDigest.selectedPaperCount} selected papers
-          </Link>
-        </p>
-      </section>
+            ))}
+          </ol>
+          <p className="text-link-row">
+            <Link href={`/engineering/${currentEngineeringBriefing.slug}`}>
+              View all -&gt;
+            </Link>
+          </p>
+        </section>
 
-      <section aria-labelledby="notice-heading">
-        <h2 id="notice-heading">Data notice</h2>
-        <p>
-          This edition is a static website copy of deterministic pipeline
-          output. The website does not run the pipeline or add AI-written
-          summaries.
-        </p>
-      </section>
+        <section id="weekly" aria-labelledby="papers-heading">
+          <div className="section-heading-row">
+            <h2 id="papers-heading">Research Digest</h2>
+            <p>{currentDigest.dateRange}</p>
+          </div>
+          <ol className="homepage-paper-list">
+            {previewPapers.map((paper) => {
+              const keywords = homepageKeywords(paper.topicTags);
+              const preview = homepagePreview(paper.abstract);
 
+              return (
+                <li key={paper.id}>
+                  <article className="homepage-paper-card">
+                    <p className="paper-number">
+                      {String(paper.number).padStart(2, "0")}
+                    </p>
+                    <h3>
+                      <Link href={`/papers/${paper.slug}`} title={paper.title}>
+                        {homepageTitle(paper.title)}
+                      </Link>
+                    </h3>
+                    {keywords.length > 0 ? (
+                      <p className="homepage-keywords">{keywords.join(" / ")}</p>
+                    ) : null}
+                    {preview ? <p className="homepage-preview">{preview}</p> : null}
+                  </article>
+                </li>
+              );
+            })}
+          </ol>
+          <p className="text-link-row">
+            <Link href={`/weekly/${currentDigest.slug}`}>View all -&gt;</Link>
+          </p>
+        </section>
+      </section>
       <SiteFooter />
     </main>
   );

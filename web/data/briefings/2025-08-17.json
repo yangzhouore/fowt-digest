@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2025-08-11",
+    "weekEnd":  "2025-08-17",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2025-08-17-aikido-rfi",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "US Floating Wind Platform Developer Issues RFI to Fabricators Worldwide",
+                              "sourceUrl":  "https://www.offshorewind.biz/2025/08/12/us-floating-wind-platform-developer-issues-rfi-to-fabricators-worldwide/",
+                              "publishedDate":  "2025-08-12",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that Aikido Technologies released an RFI for its 15 MW AO60 floating wind platform to more than ten offshore wind fabricators. The RFI was split into packages for standard offshore steel shops, tubular or jacket yards, and monopile or tower facilities.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2025-08-17-01",
+                              "title":  "Aikido opens AO60 fabrication RFI",
+                              "oneLineSummary":  "Aikido issued an RFI to global fabricators for its 15 MW AO60 floating wind platform.",
+                              "category":  "supply_chain",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2025-08-17-aikido-rfi"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2025/08/12/us-floating-wind-platform-developer-issues-rfi-to-fabricators-worldwide/",
+                              "explanation":  "The source states that Aikido structured the RFI around existing fabrication facility types and that AO60 uses modular steel components for final assembly near the Norwegian test centre.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "Floating foundations",
+                                                        "Fabrication",
+                                                        "Modular assembly"
+                                                    ]
+                          }
+                      ]
+}

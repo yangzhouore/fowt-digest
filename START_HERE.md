@@ -5,12 +5,12 @@ Use this file as the first entry point for a new Codex session.
 ## Resume Point
 
 - Branch: `main`
-- Current milestone: none selected
-- Current feature: none in progress
-- Current phase: stable post-Archive Search baseline on `main`
+- Current milestone: M7 Engineering Briefing
+- Current feature: none in progress after M7 merge
+- Current phase: M7 complete, accepted, and ready for main release
 - Release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Immediate next task: select the next milestone before opening a feature branch
+- Immediate next task: complete final M7 merge after validation
 
 Everything before this point is complete, accepted, merged to `main`, pushed,
 and passing GitHub CI unless `PROJECT_STATUS.md` says otherwise.
@@ -32,30 +32,43 @@ Completed and accepted work now merged into `main` includes:
 - M5 Repository Workflow Automation implementation and acceptance review;
 - M6 CI/CD Foundation implementation and acceptance review;
 - Homepage Editorial UX;
-- Archive Search.
+- Archive Search;
+- M7 Engineering Briefing design review;
+- M7A Engineering source policy and data contracts;
+- M7B Manual Engineering Briefing Prototype;
+- M7C Historical Engineering Briefing Archive;
+- Homepage editorial refinement for Engineering and Research.
 
-The website currently loads static digest JSON files from:
+The website currently loads static Research Digest JSON files from:
 
 ```text
 web/data/digests/
 ```
 
-The adapter validates the imported digest files, returns editions newest first,
+The research adapter validates the imported digest files, returns editions newest first,
 uses the newest digest as the current homepage digest, exposes static paper data
 for Archive Search, and resolves Paper Detail pages with the correct originating
 Weekly Digest context. The local publishing workflow copies pipeline
 `weekly_digest.json` output into this static data structure and refreshes
 adapter registration.
 
-The archive contains 18 selected static digest editions. These are
+The research archive contains 18 selected static digest editions. These are
 representative static editions and not complete weekly historical coverage.
 Archive Search is immediate, deterministic, static, and client-side only. It
 uses committed website data and does not query OpenAlex or any backend.
 
+Engineering Briefing data is independent static website data under:
+
+```text
+web/data/briefings/
+```
+
+The Engineering Briefing archive contains 20 representative source-backed editions. It is independent from the deterministic OpenAlex Research Pipeline and does not use scraping automation, source APIs, a backend, a database, a CMS, or AI generation.
+
 ## Current Boundary
 
-`main` is the current stable branch. No feature branch is active and the next
-milestone has not been selected.
+`main` is the current stable branch after M7 merge. No feature branch is active
+and the next milestone has not been selected.
 
 GitHub CI is operational for pull requests to `main`, pushes to `main`, and
 manual `workflow_dispatch` runs. It validates the pipeline and website baseline.

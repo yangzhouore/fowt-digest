@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2026-07-06",
+    "weekEnd":  "2026-07-12",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2026-07-12-plemcat-eia",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "Floating Wind Test Site Offshore Spain Gets Regulatory Nod",
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/07/08/floating-wind-test-site-offshore-spain-gets-regulatory-nod/",
+                              "publishedDate":  "2026-07-08",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that the PlemCat test site for floating offshore wind projects in the Spanish Mediterranean received favourable Environmental Impact Assessment approval. The source states that the milestone clears the path for the NextFloat project using X1 Wind X100 8.5 MW platform.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2026-07-12-01",
+                              "title":  "PlemCat floating wind test site clears EIA",
+                              "oneLineSummary":  "Spain PlemCat test site received favourable Environmental Impact Assessment approval.",
+                              "category":  "project",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2026-07-12-plemcat-eia"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/07/08/floating-wind-test-site-offshore-spain-gets-regulatory-nod/",
+                              "explanation":  "The source links environmental approval with a specific commercial-scale floating platform pilot.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "Test site",
+                                                        "EIA",
+                                                        "TLP platform"
+                                                    ]
+                          }
+                      ]
+}

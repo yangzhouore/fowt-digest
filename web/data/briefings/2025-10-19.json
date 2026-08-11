@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2025-10-13",
+    "weekEnd":  "2025-10-19",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2025-10-19-boa-brest-launching",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "Heavy-Lift Marine Operator, French Port Team Up on Floating Wind Launching Solutions",
+                              "sourceUrl":  "https://www.offshorewind.biz/2025/10/14/heavy-lift-marine-operator-french-port-team-up-on-floating-wind-launching-solutions/",
+                              "publishedDate":  "2025-10-14",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that BOA and BrestPort agreed to collaborate on floating offshore wind turbine launching methods from port facilities into open water and related port infrastructure. The source states that the work will use BrestPort marine renewable energy terminal facilities and BOA semi-submersible barges and offshore engineering resources.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2025-10-19-01",
+                              "title":  "BOA and BrestPort study floating wind launch methods",
+                              "oneLineSummary":  "BOA and BrestPort agreed to study floating turbine launching methods from port facilities.",
+                              "category":  "supply_chain",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2025-10-19-boa-brest-launching"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2025/10/14/heavy-lift-marine-operator-french-port-team-up-on-floating-wind-launching-solutions/",
+                              "explanation":  "The source ties port infrastructure and heavy-lift marine assets to floating wind launch operations.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "Port infrastructure",
+                                                        "Launch methods",
+                                                        "Heavy-lift barges"
+                                                    ]
+                          }
+                      ]
+}

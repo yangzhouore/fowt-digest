@@ -4,7 +4,7 @@ FOWT Research Digest is a deterministic research digest for Floating Offshore
 Wind Turbines. It combines a local Python pipeline for producing auditable weekly
 digest data with a static Next.js website for reading selected digest editions.
 
-Live website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
+Live website: https://fowt-digest-oegd.vercel.app/
 
 Repository: https://github.com/yangzhouore/fowt-digest
 

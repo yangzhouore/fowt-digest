@@ -4,13 +4,13 @@ Use this file as the first entry point for a new Codex session.
 
 ## Resume Point
 
-- Branch: `feature/m5-design-review`
-- Milestone: M5 - Repository Automation
-- Current feature: M5 repository workflow automation accepted
-- Current phase: M5 complete and accepted on feature branch; not merged to main
-- Release tag: `v1.1.0`
+- Branch: `main`
+- Milestone: M5 - Repository Automation complete
+- Current feature: M5 repository workflow automation accepted and merged
+- Current phase: M5 complete on `main`; 2026-08-09 digest published
+- Release tag: `v1.2.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: merge accepted M5 branch into main
+- Immediate next task: define and review the next milestone scope before starting M6
 
 Everything before this point is complete, accepted, and merged unless
 `PROJECT_STATUS.md` says otherwise.
@@ -43,18 +43,18 @@ pages with the correct originating Weekly Digest context. The local publishing
 workflow now copies pipeline `weekly_digest.json` output into this static data
 structure and refreshes adapter registration.
 
-The archive contains 16 selected static digest editions. These are
+The archive contains 18 selected static digest editions. These are
 representative static editions and not complete weekly historical coverage.
 
 ## Current Boundary
 
-M5 implementation is accepted on `feature/m5-design-review` and has not been
-merged to `main`. It adds `python -m tools.publication_workflow` as the single
-deterministic publication workflow entry point. It publishes an existing
-pipeline run through the M4 publisher, runs repository and website validation,
-and prints a summary. Do not expand it into pipeline execution, GitHub Actions,
-deployment automation, schedulers, backend, database, CMS, automatic commits,
-automatic pushes, or website behavior changes. M6 has not started.
+M5 implementation is accepted and merged to `main`. It adds
+`python -m tools.publication_workflow` as the single deterministic publication
+workflow entry point. It publishes an existing pipeline run through the M4
+publisher, runs repository and website validation, and prints a summary. Do not
+expand it into pipeline execution, GitHub Actions, deployment automation,
+schedulers, backend, database, CMS, automatic commits, automatic pushes, or
+website behavior changes. M6 has not started.
 
 The website remains a presentation layer only. It does not run the pipeline,
 refresh data automatically, or add AI-written summaries, findings, limitations,

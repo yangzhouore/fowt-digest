@@ -1,16 +1,16 @@
 # Project Status
 
-Last updated: 2026-07-27
+Last updated: 2026-08-11
 
 ## Current State
 
-- Current branch: `feature/m5-design-review`
-- Current milestone: M5 - Repository Automation
-- Current feature: M5 repository workflow automation accepted
-- Current phase: M5 complete and accepted on feature branch; not merged to main
-- Release tag: `v1.1.0`
+- Current branch: `main`
+- Current milestone: M5 - Repository Automation complete
+- Current feature: M5 repository workflow automation accepted and merged
+- Current phase: M5 complete on `main`; 2026-08-09 digest published
+- Release tag: `v1.2.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: merge accepted M5 branch into main.
+- Immediate next task: define and review the next milestone scope before starting M6.
 
 ## Latest Accepted Work
 
@@ -40,13 +40,18 @@ Last updated: 2026-07-27
 - M5 Repository Automation Design Review complete and accepted.
   - Accepted scope is deterministic repository validation automation only.
   - Added design review at `docs/M5_REPOSITORY_AUTOMATION_DESIGN_REVIEW.md`.
-- M5 Repository Workflow Automation complete and accepted on `feature/m5-design-review`.
+- M5 Repository Workflow Automation complete, accepted, and merged to `main`.
   - Added `python -m tools.publication_workflow` as the single deterministic workflow entry point.
   - The command publishes an existing pipeline run through `pipeline.website_publisher`.
   - The command runs existing repository and website validation and prints a summary report.
   - It does not run the pipeline, commit, push, deploy, schedule jobs, or call GitHub Actions.
-  - The accepted M5 branch has not been merged into `main`.
   - M6 has not started.
+- 2026-08-09 digest publication complete on `main`.
+  - Added `web/data/digests/2026-08-09.json`.
+  - Refreshed `web/data/digest-adapter.ts` registration.
+- 2026-08-02 digest publication complete on `main`.
+  - Added `web/data/digests/2026-08-02.json`.
+  - Refreshed `web/data/digest-adapter.ts` registration.
 
 ## Latest Validation
 
@@ -71,7 +76,7 @@ The website is publicly deployed at:
 https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
 ```
 
-The website currently contains 16 selected static digest editions.
+The website currently contains 18 selected static digest editions.
 They are representative static weekly editions for demonstration and do not
 represent complete weekly historical coverage.
 
@@ -118,7 +123,7 @@ Do not add without an explicit accepted scope:
 - Static digest source directory: `web/data/digests/`
 - Publishing command: `python -m pipeline.website_publisher pipeline\data\runs\<run_id>`
 - Publishing workflow documentation: `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
-- Available editions: 16 selected static digest editions
+- Available editions: 18 selected static digest editions
 - Papers per edition: up to 6 selected papers
 - Implemented reader paths:
   - Homepage -> Weekly Digest -> Paper Detail

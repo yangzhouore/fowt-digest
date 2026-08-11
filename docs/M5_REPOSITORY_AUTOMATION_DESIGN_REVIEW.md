@@ -2,10 +2,10 @@
 
 ## Status
 
-Design review complete and accepted. M5 implementation is complete and accepted
-on `feature/m5-design-review`. It adds `python -m tools.publication_workflow`
+Design review complete and accepted. M5 implementation is complete, accepted,
+and merged to `main`. It adds `python -m tools.publication_workflow`
 as a deterministic repository workflow command without changing pipeline or
-website behavior. It has not been merged into `main`, and M6 has not started.
+website behavior. It has been merged into `main`, and M6 has not started.
 
 M4 Website Publishing Workflow is complete and accepted. The current baseline is:
 

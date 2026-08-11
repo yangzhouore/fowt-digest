@@ -1,6 +1,6 @@
 # Project Handover
 
-Last updated: 2026-07-27
+Last updated: 2026-08-11
 
 This document gives continuity context. It intentionally avoids duplicating the
 full current-status checklist in `PROJECT_STATUS.md`.
@@ -78,7 +78,7 @@ Do not add without an explicit milestone:
 
 ## Current Limitations
 
-- The website displays 16 selected static digest editions, not complete weekly
+- The website displays 18 selected static digest editions, not complete weekly
   historical coverage.
 - Digest data is static and committed under `web/data/digests/`.
 - The website does not execute the pipeline or refresh data automatically.

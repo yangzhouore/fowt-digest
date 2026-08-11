@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2026-01-26",
+    "weekEnd":  "2026-02-01",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2026-02-01-marramwind-consent",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "ScottishPower Renewables Files for Planning Consent for 3 GW Floating Wind Farm",
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/01/26/scottishpower-renewables-files-for-planning-consent-for-3-gw-floating-wind-farm/",
+                              "publishedDate":  "2026-01-26",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that ScottishPower Renewables submitted offshore and onshore consent applications for the 3 GW MarramWind floating wind project in Scotland. The source states that the offshore application, including the Environmental Impact Assessment, went to the Scottish Government Marine Directorate.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2026-02-01-01",
+                              "title":  "MarramWind consent applications submitted",
+                              "oneLineSummary":  "ScottishPower Renewables submitted onshore and offshore consent applications for the 3 GW MarramWind project.",
+                              "category":  "project",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2026-02-01-marramwind-consent"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/01/26/scottishpower-renewables-files-for-planning-consent-for-3-gw-floating-wind-farm/",
+                              "explanation":  "The source identifies a consenting step for a large floating wind project located about 75 kilometres off northeast Scotland.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "Planning consent",
+                                                        "Environmental assessment",
+                                                        "Scotland"
+                                                    ]
+                          }
+                      ]
+}

@@ -1,4 +1,23 @@
+import briefing20260809Json from "./briefings/2026-08-09.json";
 import briefing20260726Json from "./briefings/2026-07-26.json";
+import briefing20260719Json from "./briefings/2026-07-19.json";
+import briefing20260712Json from "./briefings/2026-07-12.json";
+import briefing20260628Json from "./briefings/2026-06-28.json";
+import briefing20260621Json from "./briefings/2026-06-21.json";
+import briefing20260531Json from "./briefings/2026-05-31.json";
+import briefing20260510Json from "./briefings/2026-05-10.json";
+import briefing20260308Json from "./briefings/2026-03-08.json";
+import briefing20260201Json from "./briefings/2026-02-01.json";
+import briefing20260111Json from "./briefings/2026-01-11.json";
+import briefing20251214Json from "./briefings/2025-12-14.json";
+import briefing20251130Json from "./briefings/2025-11-30.json";
+import briefing20251123Json from "./briefings/2025-11-23.json";
+import briefing20251026Json from "./briefings/2025-10-26.json";
+import briefing20251019Json from "./briefings/2025-10-19.json";
+import briefing20250921Json from "./briefings/2025-09-21.json";
+import briefing20250907Json from "./briefings/2025-09-07.json";
+import briefing20250831Json from "./briefings/2025-08-31.json";
+import briefing20250817Json from "./briefings/2025-08-17.json";
 
 type SourceType =
   | "government_announcement"
@@ -92,7 +111,28 @@ export type EngineeringBriefing = {
   items: EngineeringBriefingItem[];
 };
 
-const engineeringBriefingJsonFiles = [briefing20260726Json];
+const engineeringBriefingJsonFiles = [
+  briefing20260809Json,
+  briefing20260726Json,
+  briefing20260719Json,
+  briefing20260712Json,
+  briefing20260628Json,
+  briefing20260621Json,
+  briefing20260531Json,
+  briefing20260510Json,
+  briefing20260308Json,
+  briefing20260201Json,
+  briefing20260111Json,
+  briefing20251214Json,
+  briefing20251130Json,
+  briefing20251123Json,
+  briefing20251026Json,
+  briefing20251019Json,
+  briefing20250921Json,
+  briefing20250907Json,
+  briefing20250831Json,
+  briefing20250817Json,
+];
 
 const engineeringBriefings = engineeringBriefingJsonFiles
   .map(validateEngineeringBriefing)

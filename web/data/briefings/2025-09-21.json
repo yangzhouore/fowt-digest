@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2025-09-15",
+    "weekEnd":  "2025-09-21",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2025-09-21-flowra-emec-test-site",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "FLOWRA, EMEC to Develop Floating Offshore Wind Test and Demo Site",
+                              "sourceUrl":  "https://www.offshorewind.biz/2025/09/17/flowra-emec-to-develop-floating-offshore-wind-test-and-demo-site/",
+                              "publishedDate":  "2025-09-17",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that FLOWRA and EMEC signed an MoU to explore establishing and managing an offshore test and demonstration site for floating wind technology development. The source states that EMEC has designed a floating offshore wind test and demonstration site.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2025-09-21-01",
+                              "title":  "FLOWRA and EMEC explore floating wind test site",
+                              "oneLineSummary":  "FLOWRA and EMEC signed an MoU to explore a floating wind test and demonstration site.",
+                              "category":  "technology",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2025-09-21-flowra-emec-test-site"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2025/09/17/flowra-emec-to-develop-floating-offshore-wind-test-and-demo-site/",
+                              "explanation":  "The source identifies test-site development as a technology de-risking pathway for floating wind developers.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "Test site",
+                                                        "Technology demonstration",
+                                                        "Floating wind"
+                                                    ]
+                          }
+                      ]
+}

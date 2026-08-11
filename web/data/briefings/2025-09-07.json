@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2025-09-01",
+    "weekEnd":  "2025-09-07",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2025-09-07-modec-abs-aip",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "MODEC New Floating Wind Platform Design Gets ABS Approval in Principle",
+                              "sourceUrl":  "https://www.offshorewind.biz/2025/09/04/modecs-new-floating-wind-platform-gets-abs-approval-in-principle/",
+                              "publishedDate":  "2025-09-04",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that MODEC received Approval in Principle from ABS for its iTLP2-FOWT concept, a tension-leg platform floating offshore wind foundation. The source states that the design aims to minimise floater motions and seabed footprint and supports land-based turbine integration.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2025-09-07-01",
+                              "title":  "MODEC iTLP2 receives ABS AiP",
+                              "oneLineSummary":  "ABS issued Approval in Principle for MODEC iTLP2 floating wind tension-leg platform concept.",
+                              "category":  "technology",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2025-09-07-modec-abs-aip"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2025/09/04/modecs-new-floating-wind-platform-gets-abs-approval-in-principle/",
+                              "explanation":  "The source identifies a formal design approval step for a floating TLP concept and describes targeted motion, footprint, and integration characteristics.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "TLP foundation",
+                                                        "Design approval",
+                                                        "Turbine integration"
+                                                    ]
+                          }
+                      ]
+}

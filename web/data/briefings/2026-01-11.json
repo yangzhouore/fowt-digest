@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2026-01-05",
+    "weekEnd":  "2026-01-11",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2026-01-11-goto-operation",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "Japan First Commercial Floating Wind Farm Enters Operation",
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/01/05/japans-first-commercial-floating-wind-farm-enters-operation/",
+                              "publishedDate":  "2026-01-05",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that the Goto floating wind farm entered full operation on 5 January 2026. The source states that the 16.8 MW project uses eight Hitachi 2.1 MW turbines installed on hybrid SPAR-type floating foundations with steel upper sections and concrete lower sections.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2026-01-11-01",
+                              "title":  "Goto floating wind farm enters operation",
+                              "oneLineSummary":  "The 16.8 MW Goto project entered full operation as Japan first commercial floating wind farm.",
+                              "category":  "project",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2026-01-11-goto-operation"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/01/05/japans-first-commercial-floating-wind-farm-enters-operation/",
+                              "explanation":  "The source records commercial operation of a floating wind farm using hybrid SPAR-type foundations.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "Commercial operation",
+                                                        "SPAR foundation",
+                                                        "Japan"
+                                                    ]
+                          }
+                      ]
+}

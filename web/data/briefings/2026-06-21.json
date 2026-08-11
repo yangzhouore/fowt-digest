@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2026-06-15",
+    "weekEnd":  "2026-06-21",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2026-06-21-encomara-abs-pda",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "Encomara Floating Wind Installation Technology Gets ABS Design Approval",
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/06/17/encomaras-floating-wind-installation-technology-gets-abs-design-approval/",
+                              "publishedDate":  "2026-06-17",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that Encomara Squid floating wind installation technology received Product Design Assessment certification from ABS. The source states that Squid integrates pre-installed mooring lines and electrical connections into a single subsea unit for plug-and-play connection.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2026-06-21-01",
+                              "title":  "Encomara Squid gets ABS product design approval",
+                              "oneLineSummary":  "ABS issued Product Design Assessment certification for Encomara Squid connection system.",
+                              "category":  "technology",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2026-06-21-encomara-abs-pda"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/06/17/encomaras-floating-wind-installation-technology-gets-abs-design-approval/",
+                              "explanation":  "The source identifies a design-certification step for a pre-installed floating wind connection system.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "Mooring connection",
+                                                        "Subsea connectors",
+                                                        "Design approval"
+                                                    ]
+                          }
+                      ]
+}

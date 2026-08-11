@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2026-08-03",
+    "weekEnd":  "2026-08-09",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2026-08-09-llyr-consent",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "Wales Grants Section 36 Consent to Llyr Floating Wind Project",
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/08/07/wales-grants-section-36-consent-to-llyr-floating-wind-project/",
+                              "publishedDate":  "2026-08-07",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that the Welsh government granted Section 36 consent to the Llyr Wind Farm, a floating wind test and demonstration project in the Celtic Sea off Pembrokeshire. The source states that Llyr consists of two 100 MW wind farms, Llyr 1 and Llyr 2, and already had a marine licence from Natural Resources Wales.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2026-08-09-01",
+                              "title":  "Llyr floating wind project gets Section 36 consent",
+                              "oneLineSummary":  "Welsh ministers granted Section 36 consent to the Llyr floating wind test and demonstration project.",
+                              "category":  "project",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2026-08-09-llyr-consent"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/08/07/wales-grants-section-36-consent-to-llyr-floating-wind-project/",
+                              "explanation":  "The source identifies the consent status and scale of the Celtic Sea demonstration project.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "Planning consent",
+                                                        "Celtic Sea",
+                                                        "Demonstration project"
+                                                    ]
+                          }
+                      ]
+}

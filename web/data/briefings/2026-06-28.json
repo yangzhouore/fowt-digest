@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  "engineering-briefing.v1",
+    "weekStart":  "2026-06-22",
+    "weekEnd":  "2026-06-28",
+    "generatedAt":  "2026-08-11T17:00:00Z",
+    "sourceRecords":  [
+                          {
+                              "sourceRecordId":  "eng-src-2026-06-28-orient-66kv-dynamic",
+                              "sourceType":  "industry_news",
+                              "publisher":  "offshoreWIND.biz",
+                              "title":  "Orient Cable Installs China First 66 kV Dynamic Line for Floating Wind",
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/06/26/orient-cable-installs-chinas-first-66-kv-dynamic-line-for-floating-wind/",
+                              "publishedDate":  "2026-06-26",
+                              "retrievedAt":  "2026-08-11T17:00:00Z",
+                              "collectionMethod":  "manual",
+                              "sourceText":  "OffshoreWIND.biz reported that Orient Cable installed the subsea cable for CTG 16 MW floating wind demonstration platform. The source states this was China first 66 kV dynamic cable for floating wind and that NBO scope included design, supply and installation.",
+                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+                          }
+                      ],
+    "briefingItems":  [
+                          {
+                              "briefingItemId":  "eng-item-2026-06-28-01",
+                              "title":  "Orient Cable installs 66 kV dynamic cable",
+                              "oneLineSummary":  "NBO installed the 66 kV dynamic cable for CTG 16 MW floating wind platform.",
+                              "category":  "technology",
+                              "sourceRecordIds":  [
+                                                      "eng-src-2026-06-28-orient-66kv-dynamic"
+                                                  ],
+                              "sourceUrl":  "https://www.offshorewind.biz/2026/06/26/orient-cable-installs-chinas-first-66-kv-dynamic-line-for-floating-wind/",
+                              "explanation":  "The source documents dynamic export cable installation for a floating wind demonstrator.",
+                              "whyItMatters":  null,
+                              "engineeringTopics":  [
+                                                        "Dynamic cable",
+                                                        "66 kV",
+                                                        "Floating demonstrator"
+                                                    ]
+                          }
+                      ]
+}

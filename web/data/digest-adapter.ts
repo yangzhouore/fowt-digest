@@ -1,3 +1,4 @@
+import digest20260809Json from "./digests/2026-08-09.json";
 import digest20260802Json from "./digests/2026-08-02.json";
 import digest20260726Json from "./digests/2026-07-26.json";
 import digest20260719Json from "./digests/2026-07-19.json";
@@ -82,6 +83,7 @@ export type DigestPaperResult = {
 };
 
 const digestJsonFiles = [
+  digest20260809Json,
   digest20260802Json,
   digest20260726Json,
   digest20260719Json,

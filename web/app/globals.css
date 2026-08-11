@@ -302,6 +302,65 @@ dd {
   padding: 26px 0 30px;
   border-top: 1px solid var(--border);
 }
+.homepage-paper-list {
+  display: grid;
+  gap: 14px;
+  margin: 22px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.homepage-paper-list li {
+  margin: 0;
+}
+
+.homepage-paper-card {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 8px 22px;
+  padding: 20px 20px 22px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
+}
+
+.homepage-paper-card > :not(.paper-number) {
+  grid-column: 2;
+}
+
+.homepage-paper-card .paper-number {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+}
+
+.homepage-paper-card h3 {
+  margin-bottom: 0;
+  font-size: 1.14rem;
+  line-height: 1.28;
+}
+
+.homepage-keywords,
+.homepage-paper-action {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.homepage-keywords {
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.homepage-preview {
+  max-width: 720px;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.homepage-paper-action {
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
 
 .paper-list article {
   min-width: 0;
@@ -378,6 +437,11 @@ dd {
 
   .paper-list article {
     display: block;
+  }
+
+  .homepage-paper-card {
+    display: block;
+    padding: 18px 16px 20px;
   }
 
   .paper-number {

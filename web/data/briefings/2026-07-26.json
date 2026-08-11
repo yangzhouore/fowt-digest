@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-07-20",
+  "weekEnd": "2026-07-26",
+  "generatedAt": "2026-08-11T17:00:00Z",
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-07-26-caledonia-consent",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Scottish Government Greenlights 2 GW Caledonia Offshore Wind Farm",
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/20/scottish-government-greenlights-2-gw-caledonia-offshore-wind-farm/",
+      "publishedDate": "2026-07-20",
+      "retrievedAt": "2026-08-11T17:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "OffshoreWIND.biz reported that Ocean Winds secured offshore consent from the Scottish government for the 2 GW Caledonia offshore wind farm in the Moray Firth. The source states that the project includes Caledonia North and Caledonia South, will not exceed 140 turbines, and that Caledonia South is planned with a combination of fixed-bottom and floating foundations.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-26-bellrock-survey",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Geophysical Survey to Begin Along Potential Export Cable Corridor for Bellrock Floating Wind Farm",
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/21/geophysical-survey-to-begin-along-potential-export-cable-corridor-for-bellrock-floating-wind-farm/",
+      "publishedDate": "2026-07-21",
+      "retrievedAt": "2026-08-11T17:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "OffshoreWIND.biz reported that XOCEAN was set to begin a geophysical survey of a potential offshore export cable corridor for the Bellrock floating offshore wind farm. The source states that the campaign was scheduled to start no earlier than 26 July 2026 and would use a geophysical survey vessel, up to four uncrewed surface vessels, and a support vessel.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-26-vattenfall-enki-data-centres",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Vattenfall, Dutch AI Infrastructure Company Explore Wind-Powered Offshore Data Centres",
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/22/vattenfall-dutch-ai-infrastructure-company-explore-wind-powered-offshore-data-centres/",
+      "publishedDate": "2026-07-22",
+      "retrievedAt": "2026-08-11T17:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "OffshoreWIND.biz reported that Vattenfall and Project Enki are studying offshore AI data centres connected directly to North Sea offshore wind farms, with ABB also involved. The source states that the feasibility phase is assessing technical, economic, and societal aspects, and that the concept would use seawater cooling and flexible computing demand near offshore generation.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-26-bw-ideol-nge-fos3f",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "BW Ideol, NGE Partner on Floating Wind Foundation Manufacturing Facility in Southern France",
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/23/bw-ideol-nge-partner-on-floating-wind-foundation-manufacturing-facility-in-southern-france/",
+      "publishedDate": "2026-07-23",
+      "retrievedAt": "2026-08-11T17:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "OffshoreWIND.biz reported that BW Ideol and NGE signed an exclusive 50-50 partnership to develop the Fos3F floating wind foundation manufacturing project in Fos-sur-Mer. The source states that the planned facility targets serial production of around 30 concrete floating foundations per year, equivalent to supporting approximately 500 MW of offshore wind capacity annually.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-07-26-01",
+      "title": "Caledonia clears offshore consent",
+      "oneLineSummary": "Ocean Winds secured offshore consent for the 2 GW Caledonia project in the Moray Firth.",
+      "category": "project",
+      "sourceRecordIds": ["eng-src-2026-07-26-caledonia-consent"],
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/20/scottish-government-greenlights-2-gw-caledonia-offshore-wind-farm/",
+      "explanation": "The consent covers the proposed Caledonia North and Caledonia South offshore wind farms, with the total turbine count capped at 140. The source states that Caledonia South is planned with a combination of fixed-bottom and floating foundations.",
+      "whyItMatters": "The source states that the project is eligible for a future CfD allocation round and remains subject to final investment decision before construction.",
+      "engineeringTopics": ["Planning consent", "Floating foundations", "Project delivery"]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-26-02",
+      "title": "Bellrock export corridor survey set to begin",
+      "oneLineSummary": "XOCEAN was set to survey a potential offshore export cable corridor for Bellrock.",
+      "category": "project",
+      "sourceRecordIds": ["eng-src-2026-07-26-bellrock-survey"],
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/21/geophysical-survey-to-begin-along-potential-export-cable-corridor-for-bellrock-floating-wind-farm/",
+      "explanation": "The source says the campaign would use a survey vessel, up to four uncrewed surface vessels, and a support vessel to investigate a potential offshore export cable corridor for the proposed Bellrock floating wind farm.",
+      "whyItMatters": "The source identifies the work as a survey of a potential offshore export cable corridor, making it directly relevant to transmission route evidence for the project.",
+      "engineeringTopics": ["Export cables", "Geophysical survey", "Floating wind"]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-26-03",
+      "title": "Offshore wind-powered data centres enter feasibility study",
+      "oneLineSummary": "Vattenfall and Project Enki are studying offshore AI data centres tied to North Sea wind farms.",
+      "category": "technology",
+      "sourceRecordIds": ["eng-src-2026-07-26-vattenfall-enki-data-centres"],
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/22/vattenfall-dutch-ai-infrastructure-company-explore-wind-powered-offshore-data-centres/",
+      "explanation": "The feasibility work is assessing offshore data centres connected directly to offshore wind farms. The source states that the concept would use seawater cooling and flexible computing demand rather than a direct national grid connection.",
+      "whyItMatters": "The concept links offshore wind generation, grid constraints, cooling, and flexible electrical load into one engineering feasibility problem.",
+      "engineeringTopics": ["Power-to-X", "Grid congestion", "Seawater cooling"]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-26-04",
+      "title": "Fos3F partners target serial floating foundation production",
+      "oneLineSummary": "BW Ideol and NGE formed a 50-50 partnership for a floating foundation factory in Fos-sur-Mer.",
+      "category": "supply_chain",
+      "sourceRecordIds": ["eng-src-2026-07-26-bw-ideol-nge-fos3f"],
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/23/bw-ideol-nge-partner-on-floating-wind-foundation-manufacturing-facility-in-southern-france/",
+      "explanation": "The proposed Fos3F facility is intended for serial production of BW Ideol concrete floating foundations at the DEOS platform in the Grand Port Maritime de Marseille. The source states a target of around 30 foundations per year.",
+      "whyItMatters": "The source states that the facility is intended for serial production of floating foundations at around 30 units per year.",
+      "engineeringTopics": ["Foundation manufacturing", "Concrete floaters", "Supply chain"]
+    }
+  ]
+}

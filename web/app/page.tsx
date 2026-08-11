@@ -3,11 +3,12 @@ import type { Metadata } from "next";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { currentDigest } from "../data/digest-adapter";
+import { currentEngineeringBriefing } from "../data/engineering-briefing-adapter";
 
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "A weekly floating offshore wind turbine research digest built from deterministic pipeline output.",
+    "A weekly floating offshore wind briefing and research digest built from static source-backed data.",
 };
 
 const HOMEPAGE_PAPER_LIMIT = 5;
@@ -46,6 +47,7 @@ const PREFERRED_TOPIC_TERMS = [
 ];
 
 const previewPapers = currentDigest.papers.slice(0, HOMEPAGE_PAPER_LIMIT);
+const engineeringHighlights = currentEngineeringBriefing.items.slice(0, 5);
 
 export default function Home() {
   return (
@@ -53,8 +55,8 @@ export default function Home() {
       <SiteHeader />
 
       <section className="intro" aria-labelledby="intro-heading">
-        <p className="eyebrow">FOWT research digest</p>
-        <h1 id="intro-heading">A weekly reading path through floating wind research.</h1>
+        <p className="eyebrow">FOWT weekly briefing</p>
+        <h1 id="intro-heading">A weekly reading path through floating wind engineering and research.</h1>
         <p>
           Scan selected Floating Offshore Wind Turbine papers from the current
           weekly digest, then open the full edition or a paper detail page for
@@ -62,8 +64,37 @@ export default function Home() {
         </p>
       </section>
 
+      <section aria-labelledby="engineering-briefing-heading">
+        <div className="section-heading-row">
+          <h2 id="engineering-briefing-heading">Engineering Briefing</h2>
+          <p>{currentEngineeringBriefing.dateRange}</p>
+        </div>
+        <p>
+          Weekly source-backed engineering highlights for floating offshore wind,
+          prepared independently from the Research Digest.
+        </p>
+        <ol className="engineering-highlight-list">
+          {engineeringHighlights.map((item) => (
+            <li key={item.id}>
+              <article className="engineering-highlight-card">
+                <p className="paper-number">
+                  {String(item.number).padStart(2, "0")}
+                </p>
+                <h3>{item.title}</h3>
+                <p className="homepage-preview">{item.oneLineSummary}</p>
+              </article>
+            </li>
+          ))}
+        </ol>
+        <p className="text-link-row">
+          <Link href={`/engineering/${currentEngineeringBriefing.slug}`}>
+            Read the engineering briefing
+          </Link>
+        </p>
+      </section>
+
       <section className="edition-meta" aria-labelledby="edition-heading">
-        <h2 id="edition-heading">Current weekly digest</h2>
+        <h2 id="edition-heading">Research Digest</h2>
         <dl>
           <div>
             <dt>Date range</dt>
@@ -75,7 +106,7 @@ export default function Home() {
           </div>
         </dl>
         <p className="text-link-row">
-          <Link href={`/weekly/${currentDigest.slug}`}>Read the weekly digest</Link>
+          <Link href={`/weekly/${currentDigest.slug}`}>Read the research digest</Link>
         </p>
       </section>
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { currentDigest } from "../data/digest-adapter";
+import { currentEngineeringBriefing } from "../data/engineering-briefing-adapter";
 
 export function SiteHeader() {
   return (
@@ -9,6 +10,7 @@ export function SiteHeader() {
       </Link>
       <div className="header-actions">
         <nav aria-label="Primary navigation">
+          <Link href={`/engineering/${currentEngineeringBriefing.slug}`}>Engineering</Link>
           <Link href={`/weekly/${currentDigest.slug}`}>Weekly</Link>
           <Link href="/archive">Archive</Link>
           <Link href="/methodology">Methodology</Link>

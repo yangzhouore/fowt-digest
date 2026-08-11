@@ -4,13 +4,13 @@ Last updated: 2026-08-11
 
 ## Current State
 
-- Current branch: `main`
-- Current milestone: M5 - Repository Automation complete
-- Current feature: M5 repository workflow automation accepted and merged
-- Current phase: M5 complete on `main`; 2026-08-09 digest published
+- Current branch: `feature/m6-cicd`
+- Current milestone: M6 - CI/CD Foundation
+- Current feature: M6 CI/CD Foundation accepted
+- Current phase: M6 complete and accepted on feature branch; not merged to main
 - Release tag: `v1.2.0`
 - Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: define and review the next milestone scope before starting M6.
+- Immediate next task: merge accepted M6 branch into main.
 
 ## Latest Accepted Work
 
@@ -45,7 +45,13 @@ Last updated: 2026-08-11
   - The command publishes an existing pipeline run through `pipeline.website_publisher`.
   - The command runs existing repository and website validation and prints a summary report.
   - It does not run the pipeline, commit, push, deploy, schedule jobs, or call GitHub Actions.
-  - M6 has not started.
+- M6 CI/CD Foundation complete and accepted on `feature/m6-cicd`.
+  - Added `.github/workflows/ci.yml` for GitHub Actions validation.
+  - CI runs on pull requests to `main`, pushes to `main`, and manual `workflow_dispatch` runs.
+  - Pipeline validation sets up Python 3.14, explicitly installs `pytest`, runs `python -m pytest pipeline/tests`, and runs `git diff --check`.
+  - Website validation sets up Node 24 with npm cache from `web/package-lock.json`, runs `npm ci`, then runs data validation, data tests, lint, and build.
+  - Vercel remains the production CD mechanism through its Git integration; no deployment commands or secrets were added.
+  - M7 has not started.
 - 2026-08-09 digest publication complete on `main`.
   - Added `web/data/digests/2026-08-09.json`.
   - Refreshed `web/data/digest-adapter.ts` registration.
@@ -67,6 +73,13 @@ Last updated: 2026-08-11
 - M5 acceptance validation: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
 - M5 acceptance validation: `npm.cmd run validate:data`, `npm.cmd run test:data`, `npm.cmd run lint`, and `npm.cmd run build` -> passed.
 - M5 acceptance validation: `git diff --check` -> passed.
+- M6 acceptance validation: `.github/workflows/ci.yml` and `docs/M6_CICD_FOUNDATION.md` inspected against accepted design.
+- M6 acceptance validation: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
+- M6 acceptance validation: `npm.cmd run validate:data` -> passed.
+- M6 acceptance validation: `npm.cmd run test:data` -> 26 passed, 0 failed.
+- M6 acceptance validation: `npm.cmd run lint` -> passed.
+- M6 acceptance validation: `npm.cmd run build` -> passed and generated 132 static pages.
+- M6 acceptance validation: `git diff --check` -> passed.
 
 ## Website Baseline
 

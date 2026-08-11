@@ -731,3 +731,72 @@ dd {
     padding: 14px 14px 15px;
   }
 }
+
+.homepage-masthead {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+.homepage-masthead h1 {
+  max-width: 760px;
+  margin-bottom: 10px;
+}
+
+.homepage-week {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.94rem;
+}
+
+.homepage-front {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+  padding-top: 26px;
+}
+
+.homepage-front > section {
+  min-width: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.homepage-front .section-heading-row {
+  gap: 14px;
+}
+
+.homepage-front .homepage-paper-list,
+.homepage-front .engineering-highlight-list {
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.homepage-front .homepage-paper-card,
+.homepage-front .engineering-highlight-card {
+  gap: 5px 16px;
+  padding: 14px 15px 15px;
+}
+
+.homepage-front .homepage-paper-card h3,
+.homepage-front .engineering-highlight-card h3 {
+  font-size: 1rem;
+}
+
+@media (max-width: 720px) {
+  .homepage-front {
+    display: block;
+  }
+
+  .homepage-front > section + section {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+  }
+
+  .homepage-masthead {
+    padding-top: 26px;
+    padding-bottom: 22px;
+  }
+}

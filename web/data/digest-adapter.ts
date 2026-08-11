@@ -114,6 +114,12 @@ export function getAllDigests(): DigestEdition[] {
   return digests;
 }
 
+export function getAllDigestPaperResults(): DigestPaperResult[] {
+  return digests.flatMap((edition) =>
+    edition.papers.map((paper) => ({ edition, paper })),
+  );
+}
+
 function firstDigest(values: DigestEdition[]): DigestEdition {
   const digest = values[0];
   if (!digest) {

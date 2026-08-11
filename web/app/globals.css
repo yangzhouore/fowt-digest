@@ -488,6 +488,69 @@ dd {
   border-top: 1px solid var(--border);
 }
 
+.archive-search {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 0 28px;
+}
+
+.archive-search-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.archive-search-heading h2 {
+  margin-bottom: 0;
+}
+
+.archive-search-heading p,
+.archive-search label {
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.88rem;
+}
+
+.archive-search label {
+  display: block;
+  margin-top: 18px;
+}
+
+.archive-search input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  border: 1px solid var(--strong-border);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+.archive-search-results {
+  margin: 20px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.archive-search-results li {
+  padding: 18px 0 20px;
+  border-top: 1px solid var(--border);
+}
+
+.archive-search-results h3 {
+  margin-bottom: 6px;
+  font-size: 1.08rem;
+}
+
+.archive-search-context,
+.archive-search-empty {
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 .archive-meta {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

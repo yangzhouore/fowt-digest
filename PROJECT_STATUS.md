@@ -4,13 +4,13 @@ Last updated: 2026-08-11
 
 ## Current State
 
-- Current branch: `feature/m6-cicd`
-- Current milestone: M6 - CI/CD Foundation
-- Current feature: M6 CI/CD Foundation accepted
-- Current phase: M6 complete and accepted on feature branch; not merged to main
-- Release tag: `v1.2.0`
-- Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: merge accepted M6 branch into main.
+- Current branch: `main`
+- Current milestone: none selected
+- Current feature: none in progress
+- Current phase: stable post-Archive Search baseline on `main`
+- Release tag: `v1.3.0`
+- Production website: https://fowt-digest-oegd.vercel.app/
+- Immediate next task: select the next milestone before opening a feature branch.
 
 ## Latest Accepted Work
 
@@ -45,13 +45,19 @@ Last updated: 2026-08-11
   - The command publishes an existing pipeline run through `pipeline.website_publisher`.
   - The command runs existing repository and website validation and prints a summary report.
   - It does not run the pipeline, commit, push, deploy, schedule jobs, or call GitHub Actions.
-- M6 CI/CD Foundation complete and accepted on `feature/m6-cicd`.
+- M6 CI/CD Foundation complete, accepted, and merged to `main`.
   - Added `.github/workflows/ci.yml` for GitHub Actions validation.
   - CI runs on pull requests to `main`, pushes to `main`, and manual `workflow_dispatch` runs.
   - Pipeline validation sets up Python 3.14, explicitly installs `pytest`, runs `python -m pytest pipeline/tests`, and runs `git diff --check`.
   - Website validation sets up Node 24 with npm cache from `web/package-lock.json`, runs `npm ci`, then runs data validation, data tests, lint, and build.
   - Vercel remains the production CD mechanism through its Git integration; no deployment commands or secrets were added.
-  - M7 has not started.
+- Homepage Editorial UX complete, accepted, and merged to `main`.
+  - Homepage now shows compact editorial previews for up to five current-digest papers in pipeline rank order.
+  - Homepage previews use deterministic title truncation, source-backed topic tags, and short abstract-derived preview text only.
+- Archive Search complete, accepted, and merged to `main`.
+  - Archive now includes immediate deterministic client-side search over committed static digest data.
+  - Search covers paper title, authors, publication source, topic tags, and edition date/year.
+  - It does not query OpenAlex and does not add a backend, API route, database, semantic search, embeddings, or AI.
 - 2026-08-09 digest publication complete on `main`.
   - Added `web/data/digests/2026-08-09.json`.
   - Refreshed `web/data/digest-adapter.ts` registration.
@@ -62,31 +68,19 @@ Last updated: 2026-08-11
 ## Latest Validation
 
 - Pipeline suite: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
-- M4 publishing command: `python -m pipeline.website_publisher pipeline\data\runs\run_20260727_072439_openalex` -> digest already published and adapter already up to date.
 - Website data validation: `npm.cmd run validate:data` -> passed.
 - Website data tests: `npm.cmd run test:data` -> 26 passed, 0 failed.
 - Website lint: `npm.cmd run lint` -> passed.
-- Website build: `npm.cmd run build` -> passed and generated 118 static pages.
+- Website build: `npm.cmd run build` -> passed and generated 132 static pages.
 - Repository validation: `git diff --check` -> passed.
-- M5 workflow validation: `python -m tools.publication_workflow pipeline\data\runs\run_20260727_072439_openalex` -> passed; digest and adapter already up to date.
-- M5 repository validation: `git diff --check` -> passed.
-- M5 acceptance validation: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
-- M5 acceptance validation: `npm.cmd run validate:data`, `npm.cmd run test:data`, `npm.cmd run lint`, and `npm.cmd run build` -> passed.
-- M5 acceptance validation: `git diff --check` -> passed.
-- M6 acceptance validation: `.github/workflows/ci.yml` and `docs/M6_CICD_FOUNDATION.md` inspected against accepted design.
-- M6 acceptance validation: `python -m pytest pipeline/tests` -> 204 passed, 0 failed.
-- M6 acceptance validation: `npm.cmd run validate:data` -> passed.
-- M6 acceptance validation: `npm.cmd run test:data` -> 26 passed, 0 failed.
-- M6 acceptance validation: `npm.cmd run lint` -> passed.
-- M6 acceptance validation: `npm.cmd run build` -> passed and generated 132 static pages.
-- M6 acceptance validation: `git diff --check` -> passed.
+- GitHub CI: latest `main` push for Archive Search merge passed pipeline and website validation.
 
 ## Website Baseline
 
 The website is publicly deployed at:
 
 ```text
-https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
+https://fowt-digest-oegd.vercel.app/
 ```
 
 The website currently contains 18 selected static digest editions.
@@ -98,10 +92,11 @@ represent complete weekly historical coverage.
   JSON files.
 - Editions are returned newest first.
 - The newest digest remains the current homepage digest.
+- Homepage shows compact editorial previews for the current digest.
 - Weekly Digest pages resolve by edition slug.
 - Paper Detail pages resolve papers across loaded editions and link back to the
   correct originating Weekly Digest.
-- Archive lists all loaded editions.
+- Archive lists all loaded editions and provides static client-side paper search.
 - Weekly Digest remains a browsing page with abstract previews.
 - Paper Detail displays the complete `paper.abstract` when available and
   neutrally displays `No abstract available.` when missing.
@@ -110,14 +105,18 @@ represent complete weekly historical coverage.
 
 ## Current Boundaries
 
-The website is a presentation layer only. The pipeline remains the source of
-truth for paper data. The website does not run the pipeline, refresh static data,
-or claim complete weekly historical coverage.
+The website is a static presentation layer only. The pipeline remains the source
+of truth for paper data. The website does not run the pipeline, refresh static
+data, query OpenAlex, or claim complete weekly historical coverage.
+
+GitHub CI validates pull requests to `main`, pushes to `main`, and manual runs.
+Vercel remains the production CD mechanism through its Git integration after
+accepted changes are merged to `main`.
 
 Do not add without an explicit accepted scope:
 
 - backend, database, CMS, API routes, scheduler, or deployment automation;
-- search, filters, AI summaries, editorial analysis, or automatic publication;
+- AI summaries, editorial analysis, semantic search, embeddings, or automatic publication;
 - generated summaries, findings, limitations, scores, or invented paper content.
 
 ## Completed Pipeline Milestones
@@ -141,6 +140,8 @@ Do not add without an explicit accepted scope:
 - Implemented reader paths:
   - Homepage -> Weekly Digest -> Paper Detail
   - Archive -> Weekly Digest
+  - Archive Search -> Paper Detail
+  - Archive Search -> originating Weekly Digest
   - Paper Detail -> originating Weekly Digest
 
 Detailed continuity notes live in `PROJECT_HANDOVER.md`. The resume entry point

@@ -41,7 +41,7 @@ pipeline run output (`weekly_digest.json`)
 -> `pipeline.website_publisher` local publishing command
 -> selected static digest JSON files under web/data/digests/
 -> web/data/digest-adapter.ts
--> Homepage, Weekly Digest, Paper Detail, Archive
+-> Homepage, Weekly Digest, Paper Detail, Archive, Archive Search
 ```
 
 The website does not run the pipeline. The pipeline does not import website
@@ -72,6 +72,8 @@ mechanism through its Git integration after a manual merge to main.
   website, or mutate the repository.
 - The website may format fields for display, but must not sort, re-rank, repair,
   summarize, reinterpret, or invent paper content.
+- Archive Search is deterministic, client-side only, and searches committed
+  static website data without querying OpenAlex or any backend.
 
 ## Current Implementation Boundaries
 
@@ -88,7 +90,7 @@ Do not add without an explicit milestone:
   historical coverage.
 - Digest data is static and committed under `web/data/digests/`.
 - The website does not execute the pipeline or refresh data automatically.
-- No database, search, filters, scheduler, deployment automation, or automatic
+- No database, filters, scheduler, deployment automation, or automatic
   publication exists.
 - No AI-written summaries, findings, limitations, scores, or editorial analysis
   exist in the website.
@@ -122,6 +124,7 @@ Website data integration:
 - `web/app/weekly/[slug]/page.tsx`
 - `web/app/papers/[slug]/page.tsx`
 - `web/app/archive/page.tsx`
+- `web/app/archive/archive-search.tsx`
 
 ## Resume Guidance
 

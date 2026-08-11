@@ -4,16 +4,16 @@ Use this file as the first entry point for a new Codex session.
 
 ## Resume Point
 
-- Branch: `feature/m6-cicd`
-- Milestone: M6 - CI/CD Foundation
-- Current feature: M6 CI/CD Foundation accepted
-- Current phase: M6 complete and accepted on feature branch; not merged to main
-- Release tag: `v1.2.0`
-- Production website: https://fowt-digest-oegd-cs33ynefc-dudu-yang.vercel.app
-- Immediate next task: merge accepted M6 branch into main
+- Branch: `main`
+- Current milestone: none selected
+- Current feature: none in progress
+- Current phase: stable post-Archive Search baseline on `main`
+- Release tag: `v1.3.0`
+- Production website: https://fowt-digest-oegd.vercel.app/
+- Immediate next task: select the next milestone before opening a feature branch
 
-Everything before this point is complete, accepted, and merged unless
-`PROJECT_STATUS.md` says otherwise.
+Everything before this point is complete, accepted, merged to `main`, pushed,
+and passing GitHub CI unless `PROJECT_STATUS.md` says otherwise.
 
 ## Completed Website Baseline
 
@@ -30,7 +30,9 @@ Completed and accepted work now merged into `main` includes:
 - M4 Website Publishing Workflow;
 - M5 Repository Automation Design Review;
 - M5 Repository Workflow Automation implementation and acceptance review;
-- M6 CI/CD Foundation implementation and acceptance review.
+- M6 CI/CD Foundation implementation and acceptance review;
+- Homepage Editorial UX;
+- Archive Search.
 
 The website currently loads static digest JSON files from:
 
@@ -39,29 +41,31 @@ web/data/digests/
 ```
 
 The adapter validates the imported digest files, returns editions newest first,
-uses the newest digest as the current homepage digest, and resolves Paper Detail
-pages with the correct originating Weekly Digest context. The local publishing
-workflow now copies pipeline `weekly_digest.json` output into this static data
-structure and refreshes adapter registration.
+uses the newest digest as the current homepage digest, exposes static paper data
+for Archive Search, and resolves Paper Detail pages with the correct originating
+Weekly Digest context. The local publishing workflow copies pipeline
+`weekly_digest.json` output into this static data structure and refreshes
+adapter registration.
 
 The archive contains 18 selected static digest editions. These are
 representative static editions and not complete weekly historical coverage.
+Archive Search is immediate, deterministic, static, and client-side only. It
+uses committed website data and does not query OpenAlex or any backend.
 
 ## Current Boundary
 
-M6 implementation is accepted on `feature/m6-cicd` and has not been
-merged to `main`. It adds `.github/workflows/ci.yml` as the GitHub Actions
-validation workflow for pull requests to `main`, pushes to `main`, and manual
-`workflow_dispatch` runs. It keeps pipeline and website validation in separate
-jobs and leaves production deployment to the existing Vercel Git integration.
-Do not expand it into scheduled OpenAlex execution, automatic digest generation,
-automatic publication, automatic commits, automatic pushes, automatic PRs,
-automatic merging, Vercel CLI deployment, backend, database, CMS, API routes,
-or website behavior changes. M7 has not started.
+`main` is the current stable branch. No feature branch is active and the next
+milestone has not been selected.
 
-The website remains a presentation layer only. It does not run the pipeline,
-refresh data automatically, or add AI-written summaries, findings, limitations,
-scores, or editorial analysis.
+GitHub CI is operational for pull requests to `main`, pushes to `main`, and
+manual `workflow_dispatch` runs. It validates the pipeline and website baseline.
+Vercel remains the production CD mechanism through its Git integration after
+accepted changes are merged to `main`; the repository does not use Vercel CLI,
+deployment tokens, or a second deployment system.
+
+The website remains a static presentation layer only. It does not run the
+pipeline, refresh data automatically, or add AI-written summaries, findings,
+limitations, scores, or editorial analysis.
 
 ## Reading Order
 

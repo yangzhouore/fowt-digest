@@ -10,6 +10,7 @@ export function SiteHeader() {
       <div className="header-actions">
         <nav aria-label="Primary navigation">
           <Link href="/engineering">Engineering</Link>
+          <Link href="/industry">Industry</Link>
           <Link href={`/weekly/${currentDigest.slug}`}>Research</Link>
           <Link href="/archive">Archive</Link>
           <Link href="/methodology">Methodology</Link>

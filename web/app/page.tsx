@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 
 const HOMEPAGE_PAPER_LIMIT = 5;
 const TITLE_CHARACTER_LIMIT = 100;
-const PREVIEW_CHARACTER_LIMIT = 90;
 const BROAD_TOPIC_TAGS = new Set([
   "computer science",
   "engineering",
@@ -23,27 +22,38 @@ const BROAD_TOPIC_TAGS = new Set([
   "mechanics",
   "physics",
 ]);
-const PREFERRED_TOPIC_TERMS = [
-  "aerodynamic",
-  "cable",
-  "cfd",
-  "computational fluid dynamics",
-  "control",
-  "dynamic",
-  "floating",
-  "fluid dynamics",
-  "hydrodynamic",
-  "moor",
-  "offshore wind",
-  "openfast",
-  "platform",
-  "simulation",
-  "structural",
-  "turbine",
-  "wake",
-  "wave",
-  "wind power",
-  "wind speed",
+const RESEARCH_CONCEPTS = [
+  { label: "OpenFAST", terms: ["openfast"] },
+  { label: "Mooring", terms: ["mooring", "moorings", "moored"] },
+  { label: "Control", terms: ["control", "controller"] },
+  {
+    label: "Hydrodynamics",
+    terms: ["hydrodynamic", "hydroelastic", "wave", "waves"],
+  },
+  { label: "CFD", terms: ["cfd", "computational fluid dynamics"] },
+  {
+    label: "Floating platform",
+    terms: [
+      "floating platform",
+      "floating wind turbine",
+      "semisubmersible",
+      "semi-submersible",
+      "tension-leg",
+    ],
+  },
+  { label: "Dynamic cable", terms: ["dynamic cable", "cable"] },
+  {
+    label: "Structural dynamics",
+    terms: [
+      "structural dynamics",
+      "dynamic response",
+      "vibration",
+      "structural engineering",
+    ],
+  },
+  { label: "Wake", terms: ["wake", "wake loss"] },
+  { label: "Wind farm layout", terms: ["wind farm layout", "array layout", "layout"] },
+  { label: "Simulation", terms: ["simulation", "benchmark", "dataset"] },
 ];
 
 const previewPapers = currentDigest.papers.slice(0, HOMEPAGE_PAPER_LIMIT);
@@ -75,6 +85,10 @@ export default function Home() {
                   <p className="paper-number">
                     {String(item.number).padStart(2, "0")}
                   </p>
+                  <p className="homepage-item-kicker">
+                    {item.region ? `${item.region.toUpperCase()} - ` : ""}
+                    {item.category.toUpperCase()}
+                  </p>
                   <h3>{item.title}</h3>
                   <p className="homepage-preview">{item.oneLineSummary}</p>
                 </article>
@@ -95,8 +109,8 @@ export default function Home() {
           </div>
           <ol className="homepage-paper-list">
             {previewPapers.map((paper) => {
-              const keywords = homepageKeywords(paper.topicTags);
-              const preview = homepagePreview(paper.abstract);
+              const keywords = homepageKeywords(paper.title, paper.topicTags);
+              const focus = homepageResearchFocus(keywords);
 
               return (
                 <li key={paper.id}>
@@ -112,7 +126,9 @@ export default function Home() {
                     {keywords.length > 0 ? (
                       <p className="homepage-keywords">{keywords.join(" / ")}</p>
                     ) : null}
-                    {preview ? <p className="homepage-preview">{preview}</p> : null}
+                    {focus ? (
+                      <p className="homepage-research-focus">Research focus: {focus}</p>
+                    ) : null}
                   </article>
                 </li>
               );
@@ -132,11 +148,18 @@ function homepageTitle(title: string): string {
   return truncateText(title.replace(/\s+/g, " ").trim(), TITLE_CHARACTER_LIMIT);
 }
 
-// Keep source topic tags in pipeline order; prefer concise FOWT-relevant source tags for Homepage scanning only.
-function homepageKeywords(topicTags: string[]): string[] {
-  const candidates = topicTags.map(normaliseTopicTag).filter(isDisplayTopicTag);
-  const preferred = candidates.filter(isPreferredTopicTag);
-  return uniqueFirst(preferred.length > 0 ? preferred : candidates, 3);
+// Prefer deterministic FOWT concepts for Homepage scanning; fall back to concise source topic tags.
+function homepageKeywords(title: string, topicTags: string[]): string[] {
+  const sourceText = `${title} ${topicTags.join(" ")}`.toLowerCase();
+  const concepts = RESEARCH_CONCEPTS
+    .filter((concept) => concept.terms.some((term) => sourceText.includes(term)))
+    .map((concept) => concept.label);
+
+  if (concepts.length > 0) {
+    return uniqueFirst(concepts, 3);
+  }
+
+  return uniqueFirst(topicTags.map(normaliseTopicTag).filter(isDisplayTopicTag), 3);
 }
 
 function normaliseTopicTag(tag: string): string {
@@ -148,9 +171,12 @@ function isDisplayTopicTag(tag: string): boolean {
   return Boolean(tag) && !BROAD_TOPIC_TAGS.has(key) && tag.length <= 34;
 }
 
-function isPreferredTopicTag(tag: string): boolean {
-  const key = tag.toLowerCase();
-  return PREFERRED_TOPIC_TERMS.some((term) => key.includes(term));
+function homepageResearchFocus(keywords: string[]): string | null {
+  if (keywords.length === 0) {
+    return null;
+  }
+
+  return keywords.slice(0, 2).join(" / ");
 }
 
 function uniqueFirst(values: string[], limit: number): string[] {
@@ -170,15 +196,6 @@ function uniqueFirst(values: string[], limit: number): string[] {
   }
 
   return selected;
-}
-
-function homepagePreview(abstract: string | null): string | null {
-  if (!abstract) {
-    return null;
-  }
-
-  const normalised = abstract.replace(/\s+/g, " ").trim();
-  return truncateText(normalised, PREVIEW_CHARACTER_LIMIT);
 }
 
 function truncateText(value: string, limit: number): string {

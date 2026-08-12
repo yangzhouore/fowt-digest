@@ -5,12 +5,12 @@ Use this file as the first entry point for a new Codex session.
 ## Resume Point
 
 - Branch: `main`
-- Current milestone: M7 Engineering Briefing
+- Current milestone: M8 Homepage Content Value Refinement
 - Current feature: none in progress after M7 merge
-- Current phase: M7 complete, accepted, and ready for main release
+- Current phase: M8 complete, accepted, merged to main, and pushed
 - Release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Immediate next task: complete final M7 merge after validation
+- Immediate next task: select the next milestone
 
 Everything before this point is complete, accepted, merged to `main`, pushed,
 and passing GitHub CI unless `PROJECT_STATUS.md` says otherwise.
@@ -37,7 +37,8 @@ Completed and accepted work now merged into `main` includes:
 - M7A Engineering source policy and data contracts;
 - M7B Manual Engineering Briefing Prototype;
 - M7C Historical Engineering Briefing Archive;
-- Homepage editorial refinement for Engineering and Research.
+- Homepage editorial refinement for Engineering and Research;
+- M8 Homepage Content Value Refinement.
 
 The website currently loads static Research Digest JSON files from:
 

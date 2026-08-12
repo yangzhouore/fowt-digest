@@ -83,6 +83,7 @@ Required fields:
   "title": "Brief item title",
   "oneLineSummary": "Concise source-backed briefing sentence.",
   "category": "project",
+  "region": "Europe",
   "sourceRecordIds": ["eng-src-2026-08-09-example"],
   "sourceUrl": "https://example.com/source"
 }
@@ -98,12 +99,23 @@ Allowed `category` values for the initial contract:
 - `supply_chain`
 - `event`
 
+Optional `region` values for Homepage presentation:
+
+- `Europe`
+- `Asia-Pacific`
+- `North America`
+- `Africa`
+- `Global`
+
+Use `Global` only for genuinely cross-regional standards, software releases, or corporate technical developments.
+
 Rules:
 
 - `title` and `oneLineSummary` are briefing/editorial copy, not source text.
 - `oneLineSummary` must be supported by the referenced source records.
 - `sourceRecordIds` must contain at least one existing source record ID.
 - `sourceUrl` should point to the primary source used for reader follow-through.
+- `region`, when present, must be supported by the project, company, or event location in the source-backed record.
 - Ordering inside a weekly briefing is editorial, not Research Digest ranking.
 
 ## Weekly Engineering Briefing
@@ -145,7 +157,7 @@ A future validator must block publication when:
 - a source record has an invalid URL or missing publisher/title/date;
 - `sourceText` is empty;
 - `oneLineSummary` is empty or has no source references;
-- an item uses unsupported `sourceType`, `collectionMethod`, or `category`;
+- an item uses unsupported `sourceType`, `collectionMethod`, `category`, or `region`;
 - Engineering Briefing data references Research Digest paper IDs as source
   records;
 - briefing copy claims cannot be traced to stored source records during review.

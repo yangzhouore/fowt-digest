@@ -1,6 +1,6 @@
 # Project Handover
 
-Last updated: 2026-08-11
+Last updated: 2026-08-12
 
 This document gives continuity context. It intentionally avoids duplicating the
 full current-status checklist in `PROJECT_STATUS.md`.
@@ -85,7 +85,8 @@ mechanism through its Git integration after a manual merge to main.
   static Research Digest data without querying OpenAlex or any backend.
 - Engineering Briefing is independent from the Research Pipeline and uses
   separate static source-backed JSON files.
-- M7 Engineering Briefing is complete, accepted, and merge-ready.
+- M7 Engineering Briefing is complete, accepted, and merged.
+- M8 Homepage Content Value Refinement is complete, accepted, and merged.
 
 ## Current Implementation Boundaries
 
@@ -103,6 +104,7 @@ Do not add without an explicit milestone:
   historical coverage.
 - Research Digest data is static and committed under `web/data/digests/`.
 - Engineering Briefing data is static and committed under `web/data/briefings/`.
+- Current Engineering Homepage items may include controlled region labels for reader scanning.
 - The website does not execute the pipeline or refresh data automatically.
 - No database, filters, scheduler, deployment automation, or automatic
   publication exists.

@@ -1,16 +1,16 @@
 # Project Status
 
-Last updated: 2026-08-11
+Last updated: 2026-08-12
 
 ## Current State
 
 - Current branch: `main`
-- Current milestone: M7 Engineering Briefing
+- Current milestone: M8 Homepage Content Value Refinement
 - Current feature: none in progress after M7 merge
-- Current phase: M7 complete, accepted, and ready for main release
+- Current phase: M8 complete, accepted, merged to main, and pushed
 - Release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Immediate next task: complete final M7 merge after validation.
+- Immediate next task: select the next milestone.
 
 ## Latest Accepted Work
 
@@ -99,7 +99,7 @@ represent complete weekly historical coverage.
   JSON files.
 - Editions are returned newest first.
 - The newest digest remains the current homepage digest.
-- Homepage shows Engineering Briefing highlights and Research Digest previews as separate editorial sections.
+- Homepage shows Engineering Briefing highlights and Research Digest cards as separate editorial sections.
 - Weekly Digest pages resolve by edition slug.
 - Paper Detail pages resolve papers across loaded editions and link back to the
   correct originating Weekly Digest.

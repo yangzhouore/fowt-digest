@@ -43,6 +43,13 @@ type BriefingCategory =
   | "supply_chain"
   | "event";
 
+type EngineeringRegion =
+  | "Europe"
+  | "Asia-Pacific"
+  | "North America"
+  | "Africa"
+  | "Global";
+
 type PipelineEngineeringSourceRecord = {
   sourceRecordId: string;
   sourceType: SourceType;
@@ -61,6 +68,7 @@ type PipelineEngineeringBriefingItem = {
   title: string;
   oneLineSummary: string;
   category: BriefingCategory;
+  region?: EngineeringRegion;
   sourceRecordIds: string[];
   sourceUrl: string;
   explanation: string;
@@ -95,6 +103,7 @@ export type EngineeringBriefingItem = {
   title: string;
   oneLineSummary: string;
   category: BriefingCategory;
+  region: EngineeringRegion | null;
   sourceUrl: string;
   explanation: string;
   whyItMatters: string | null;
@@ -179,6 +188,7 @@ function adaptEngineeringBriefing(
       title: item.title,
       oneLineSummary: item.oneLineSummary,
       category: item.category,
+      region: item.region ?? null,
       sourceUrl: item.sourceUrl,
       explanation: item.explanation,
       whyItMatters: item.whyItMatters,

@@ -1,185 +1,84 @@
-﻿# FOWT Research Digest
+# FOWT Research Digest Agent Rules
 
-## Project Goal
+## Default Reading Order
 
-Build a simple and reliable website and deterministic pipeline that publish a
-weekly digest of academic and conference papers related to Floating Offshore
-Wind Turbines.
+For normal milestone work, read only:
 
-The product should help researchers and engineers quickly identify:
+1. `AGENTS.md`
+2. `START_HERE.md`
+3. `PROJECT_STATUS.md`
+4. the current milestone document, if one exists
 
-- what was published during the week;
-- which papers were selected by the deterministic pipeline;
-- what metadata and abstract evidence is available;
-- where the original source can be opened;
-- what is known from pipeline output and what remains unavailable.
+Open other reference documents only when the task requires them. Do not read
+`docs/archive/` unless historical context is specifically requested or needed to
+resolve an ambiguity. Current milestone scope and current status override older
+historical notes.
 
-For the current repository state and resume task, read `START_HERE.md` and
-`PROJECT_STATUS.md`. This file defines durable engineering rules, not milestone
-status.
+## Project Boundary
 
-## Working Principles
+FOWT Research Digest is a static website plus deterministic local pipeline for
+Floating Offshore Wind Turbine research and engineering briefing data.
 
-### 1. Think Before Coding
+Keep boundaries explicit:
 
-Before implementing:
+- `pipeline/` owns deterministic research data production.
+- `web/` owns static website presentation and committed JSON consumption.
+- Engineering Briefing data is independent static source-backed website data.
+- The website must not run collection, scoring, summarisation, scheduling, or
+  publication automation.
 
-1. Restate the requested outcome.
-2. State relevant assumptions.
-3. Identify unclear requirements.
-4. Present meaningful tradeoffs when they exist.
-5. Prefer the simpler interpretation.
-6. Define verifiable success criteria.
-7. Provide a short implementation plan.
+Do not add backend services, databases, CMS, API routes, schedulers, AI writing,
+semantic search, deployment automation, or new pipeline stages unless an
+accepted milestone explicitly scopes them.
 
-Do not silently make product or architecture decisions.
+## Working Rules
 
-### 2. Simplicity First
-
-Write the minimum code required to solve the current task.
-
-- Do not add speculative features.
-- Do not create abstractions for one-time use.
-- Do not add configuration that has not been requested.
-- Do not introduce a library when the platform already provides the feature.
-- Do not create generic component systems prematurely.
-- Do not add an API before the website requires one.
-- Do not add a database while local structured data is sufficient.
-- Do not install a UI component library.
-- Prefer readable code over clever code.
-
-If an implementation can be substantially shorter without losing clarity,
-rewrite it.
-
-### 3. Surgical Changes
-
-When editing existing code:
-
-- Touch only files required by the task.
-- Do not refactor unrelated code.
-- Do not reformat unrelated files.
-- Match the existing style.
-- Mention unrelated issues instead of fixing them.
-- Remove only unused code created by the current change.
-
-Every changed line should be traceable to the requested task.
-
-### 4. Goal-Driven Execution
-
-For every implementation task:
-
-1. Define success criteria.
-2. Add or update the smallest useful tests.
-3. Implement the change.
-4. Run the relevant checks.
-5. Inspect the final diff.
-6. Report what was verified.
-
-Do not claim completion when checks have not been run.
-
-## Architecture Rules
-
-Use the repository layout intentionally:
-
-- `web/`: Next.js and TypeScript website.
-- `pipeline/`: Python research-processing pipeline.
-- `docs/`: product, architecture, roadmap, and data-contract documents.
-
-Keep the Python pipeline independent from the frontend.
-
-Each pipeline stage should validate its input contract, never silently repair it.
-
-Do not add FastAPI, a database, CMS, scheduler, API routes, MCP servers, or AI
-workflow modules unless a milestone explicitly scopes that work.
-
-Avoid cross-package dependencies unless they are necessary.
-
-## Frontend Rules
-
-The website is content-first and typography-first.
-
-Use:
-
-- semantic HTML;
-- straightforward CSS;
-- clear typography;
-- generous whitespace;
-- thin borders;
-- numbered sections where they help scanning;
-- restrained colours;
-- accessible links;
-- responsive layouts.
-
-Avoid:
-
-- rounded content cards;
-- gradients;
-- glassmorphism;
-- decorative shadows;
-- dashboard-style layouts;
-- unnecessary animations;
-- carousels;
-- excessive icons;
-- visual effects that reduce readability.
-
-Do not install Tailwind or a component library unless explicitly requested.
-
-Components should be created only when:
-
-- the same structure is genuinely reused; or
-- extracting it materially improves readability.
-
-Do not turn every page section into a component.
-
-## Content Rules
-
-The pipeline is the source of truth for paper data. The website may format data
-for presentation, but it must not invent, rewrite, summarise, re-rank, repair,
-or reinterpret paper content.
-
-Preserve source metadata where it is displayed:
-
-- title;
-- authors;
-- publication source;
-- publication date;
-- DOI or original source URL;
-- publication type where available;
-- topic tags where useful;
-- abstract text where available.
-
-Missing fields should be omitted or handled with neutral wording. Never invent
-paper metadata, research results, findings, limitations, scores, or editorial
-analysis.
-
-## Git Rules
-
-Before making changes:
+Before changing files:
 
 - inspect `git status`;
-- inspect relevant existing files.
+- start from the expected branch and create a feature/chore branch when asked;
+- read the relevant source files and reference docs for the task;
+- define the requested outcome, assumptions, tradeoffs, plan, and success
+  criteria when implementation work begins.
 
-After making changes:
+While changing files:
 
-- run relevant tests and checks;
-- inspect `git diff`;
-- summarise changed files;
-- do not commit unless explicitly requested.
+- make the smallest change that satisfies the accepted scope;
+- touch only files required by the task;
+- preserve existing architecture, visual language, and data contracts;
+- do not refactor, reformat, or clean unrelated code;
+- do not invent paper metadata, research findings, engineering claims,
+  summaries, limitations, scores, or editorial analysis;
+- keep source facts traceable to accepted source records.
 
-## Communication Format
+After changing files:
 
-Before coding, respond with:
+- run the relevant accepted validation baseline;
+- inspect `git diff` and `git status`;
+- report what changed, what was verified, and any remaining risk;
+- commit only when explicitly requested.
 
-1. Goal
-2. Assumptions
-3. Tradeoffs
-4. Plan
-5. Success criteria
+## Validation Baseline
 
-After coding, respond with:
+Full accepted validation is:
 
-1. What changed
-2. Files changed
-3. Verification performed
-4. Known limitations
-5. Suggested next step
+```powershell
+python -m pytest pipeline/tests
+cd web
+npm.cmd run validate:data
+npm.cmd run test:data
+npm.cmd run lint
+npm.cmd run build
+cd ..
+git diff --check
+```
+
+Use narrower checks only when the task explicitly does not affect the full
+surface, and state what was not run.
+
+## Git Discipline
+
+Never work directly on `main` for feature or maintenance work unless the user
+explicitly asks. Do not revert user changes. Do not use destructive git commands
+unless explicitly requested and approved. Merge to `main` only after acceptance
+passes and the user requests the merge.

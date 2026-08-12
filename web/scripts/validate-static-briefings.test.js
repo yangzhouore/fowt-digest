@@ -154,6 +154,7 @@ function validBriefingItem() {
     title: "Example engineering highlight",
     oneLineSummary: "Example source-backed engineering summary.",
     category: "project",
+    region: "Europe",
     sourceRecordIds: ["eng-src-2026-01-04-example"],
     sourceUrl: "https://example.com/source",
     explanation: "Example source-backed explanation.",

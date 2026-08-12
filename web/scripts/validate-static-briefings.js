@@ -29,6 +29,14 @@ const CATEGORIES = new Set([
   "event",
 ]);
 
+const REGIONS = new Set([
+  "Europe",
+  "Asia-Pacific",
+  "North America",
+  "Africa",
+  "Global",
+]);
+
 function validateRepository(rootDir = process.cwd()) {
   return validateStaticBriefings({
     briefingDir: path.join(rootDir, "data", "briefings"),
@@ -243,6 +251,9 @@ function validateBriefingItems(items, sourceIds, fileName, errors) {
     requiredString(item.title, label, "title", errors);
     requiredString(item.oneLineSummary, label, "oneLineSummary", errors);
     enumString(item.category, CATEGORIES, label, "category", errors);
+    if (item.region !== undefined) {
+      enumString(item.region, REGIONS, label, "region", errors);
+    }
     requiredUrl(item.sourceUrl, label, "sourceUrl", errors);
     requiredString(item.explanation, label, "explanation", errors);
     nullableString(item.whyItMatters, label, "whyItMatters", errors);

@@ -340,14 +340,23 @@ dd {
 }
 
 .homepage-keywords,
+.homepage-research-focus,
+.homepage-item-kicker,
 .homepage-paper-action {
   font-family: ui-sans-serif, system-ui, sans-serif;
 }
 
-.homepage-keywords {
+.homepage-keywords,
+.homepage-research-focus,
+.homepage-item-kicker {
   color: var(--muted);
   font-size: 0.8rem;
   line-height: 1.35;
+}
+
+.homepage-item-kicker {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .homepage-preview {
@@ -721,6 +730,15 @@ dd {
 }
 
 @media (max-width: 720px) {
+  .site-header {
+    display: block;
+  }
+
+  .header-actions {
+    justify-content: flex-start;
+    margin-top: 14px;
+  }
+
   .section-heading-row {
     display: block;
   }
@@ -787,6 +805,21 @@ dd {
 @media (max-width: 720px) {
   .homepage-front {
     display: block;
+  }
+
+  .homepage-front .homepage-paper-card,
+  .homepage-front .engineering-highlight-card {
+    display: block;
+  }
+
+  .homepage-front h3,
+  .homepage-front p,
+  .homepage-item-kicker,
+  .homepage-keywords,
+  .homepage-research-focus {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .homepage-front > section + section {

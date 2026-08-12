@@ -1,8 +1,9 @@
 # FOWT Research Digest
 
-FOWT Research Digest is a deterministic research digest for Floating Offshore
-Wind Turbines. It combines a local Python pipeline for producing auditable weekly
-digest data with a static Next.js website for reading selected digest editions.
+FOWT Research Digest is a deterministic research and engineering briefing site
+for Floating Offshore Wind Turbines. It combines a local Python pipeline for
+producing auditable Research Digest data with a static Next.js website for
+reading selected Research Digest and Engineering Briefing editions.
 
 Live website: https://fowt-digest-oegd.vercel.app/
 
@@ -10,24 +11,25 @@ Repository: https://github.com/yangzhouore/fowt-digest
 
 ## What It Provides
 
-- A deterministic pipeline from OpenAlex collection through weekly digest assembly.
-- A static website that presents selected static digest editions.
-- Archive, Weekly Digest, and Paper Detail reading paths.
-- Paper metadata, abstracts where available, source links, DOI links, topic tags,
-  and deterministic selection context.
-- Local guardrails that validate committed static digest JSON files and their
-  explicit website adapter registration.
-- Deterministic publishing tooling that copies a pipeline weekly digest into the
-  website data directory and refreshes static adapter registration.
-- A repository workflow command that publishes an existing digest run and runs
-  the accepted validation suite in order.
+- A deterministic OpenAlex research pipeline from collection through weekly
+  digest assembly.
+- Static Research Digest editions committed under `web/data/digests/`.
+- Static source-backed Engineering Briefing editions committed under
+  `web/data/briefings/`.
+- Homepage, Research Digest, Paper Detail, Research Archive, Archive Search,
+  Engineering archive, and Engineering Briefing reading paths.
+- Local validation guardrails for committed static digest and briefing JSON.
+- Deterministic publishing tooling that copies an accepted pipeline
+  `weekly_digest.json` into the website data directory and refreshes adapter
+  registration.
+- GitHub CI for pull requests and pushes to `main`.
 
-The website does not run the pipeline. It displays selected static digest JSON
-files published from deterministic pipeline output.
+The website does not run the pipeline, collect sources, query OpenAlex, generate
+summaries, or deploy itself. It displays committed static JSON data.
 
-## How The Digest Works
+## How The Research Digest Works
 
-The implemented pipeline flow is:
+Implemented research flow:
 
 ```text
 OpenAlex
@@ -41,15 +43,6 @@ OpenAlex
 -> Static website data
 ```
 
-Website-ready digest files are committed under:
-
-```text
-web/data/digests/
-```
-
-The current archive contains 16 selected static digest editions. They
-are not complete weekly historical coverage.
-
 Publish a completed pipeline run into the static website data structure from the
 repository root:
 
@@ -57,21 +50,13 @@ repository root:
 python -m pipeline.website_publisher pipeline\data\runs\<run_id>
 ```
 
-The command copies `weekly_digest.json` to `web/data/digests/<weekEnd>.json` and
-updates the explicit digest imports in `web/data/digest-adapter.ts`. Use
-`--overwrite` only when intentionally replacing an existing edition for the same
-`weekEnd`.
-
-The full publishing workflow is documented in
-`docs/WEBSITE_PUBLISHING_WORKFLOW.md`.
-
-Run the complete local publication workflow from the repository root:
+Run the full local publication workflow from the repository root:
 
 ```powershell
 python -m tools.publication_workflow pipeline\data\runs\<run_id>
 ```
 
-This command publishes an existing `weekly_digest.json`, runs repository and
+The workflow publishes an existing `weekly_digest.json`, runs repository and
 website validation, and prints a summary report. It does not run the pipeline,
 commit, push, deploy, or choose whether a digest should be published.
 
@@ -79,81 +64,69 @@ commit, push, deploy, or choose whether a digest should be published.
 
 - Python standard-library pipeline modules with pytest coverage.
 - Next.js, React, and TypeScript for the static website.
-- Dependency-free Node scripts for static digest data validation.
-- Vercel for website deployment.
+- Dependency-free Node scripts for static data validation.
+- GitHub Actions for validation.
+- Vercel Git integration for production deployment.
 
 ## Repository Structure
 
 ```text
 fowt-digest/
-  START_HERE.md                     # Resume entry point for new sessions
-  AGENTS.md                         # Engineering and collaboration rules
-  PROJECT_STATUS.md                 # Concise current status
-  PROJECT_HANDOVER.md               # Architecture and continuity notes
-  docs/                             # Product, roadmap, architecture, and contracts
-  pipeline/                         # Deterministic Python pipeline and tests
-  web/                              # Static Next.js website and digest data
+  AGENTS.md            # Codex rules and default reading order
+  START_HERE.md        # Short resume entry point
+  PROJECT_STATUS.md    # Current capabilities, boundaries, and validation
+  PROJECT_HANDOVER.md  # Optional module/reference map
+  docs/                # Durable references and docs/archive history
+  pipeline/            # Deterministic Python pipeline and tests
+  tools/               # Repository workflow helpers
+  web/                 # Static Next.js website and committed data
 ```
 
 ## Local Development
 
-Run the pipeline tests from the repository root:
+Run pipeline tests from the repository root:
 
 ```powershell
 python -m pytest pipeline/tests
 ```
 
-Run website commands from `web/`:
+Run website checks from `web/`:
 
 ```powershell
-npm.cmd run lint
-npm.cmd run build
 npm.cmd run validate:data
 npm.cmd run test:data
+npm.cmd run lint
+npm.cmd run build
 npm.cmd run dev
 ```
 
-`validate:data` checks the committed static digest JSON files and their explicit
-registration in `web/data/digest-adapter.ts`. `test:data` runs focused
-invalid-fixture tests for those guardrails. Neither command modifies data or
-uses the network.
-
-Run the full repository validation workflow from the repository root after
-publishing an edition:
+Full accepted validation baseline:
 
 ```powershell
-python -m tools.publication_workflow pipeline\data\runs\<run_id>
+python -m pytest pipeline/tests
+cd web
+npm.cmd run validate:data
+npm.cmd run test:data
+npm.cmd run lint
+npm.cmd run build
+cd ..
+git diff --check
 ```
 
 ## Deployment
 
-The website is deployed on Vercel as a static Next.js application. Deployment
-serves the committed website data; it does not collect papers, run OpenAlex
-requests, regenerate digests, or publish automatically.
+Production is deployed by Vercel from committed `main` through Git integration.
+The repository does not use Vercel CLI, deployment tokens, scheduled jobs, or a
+second deployment system.
 
 ## Current Limitations
 
-- The archive is a selected demonstration dataset, not complete weekly coverage.
-- Static website data is still committed manually, but the digest copy and
-  adapter registration steps are reproducible through local publishing tooling.
-- The website has no backend, database, CMS, search, filters, scheduler, or API.
-- The website does not provide AI-generated summaries, findings, limitations,
+- Research and Engineering archives are selected representative static editions,
+  not complete historical coverage.
+- New data publication is a manual accepted-change workflow.
+- There is no backend, database, CMS, API, scheduler, semantic search, or
+  automatic source collection.
+- The site does not provide AI-generated summaries, findings, limitations,
   scores, or editorial analysis.
 - Paper content is displayed from deterministic pipeline output and is not
   rewritten or repaired by the website.
-
-## Roadmap
-
-M5 Repository Automation adds deterministic local workflow orchestration for
-publication validation. Future milestones should begin with a Design Review
-before implementation.
-
-## Project Status
-
-`v1.1.0` marks the public website release baseline. The current post-M4 baseline
-includes the completed deterministic pipeline MVP, static multi-edition website,
-historical demonstration dataset, site trust copy alignment, static digest data
-guardrails, deterministic website publishing workflow, and M5 repository
-workflow automation.
-
-The existing `v1.0.0` tag marks the earlier deterministic pipeline MVP release.

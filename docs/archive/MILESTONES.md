@@ -1,6 +1,6 @@
 ﻿# Historical Note
 
-This document is preserved as early project context. It is not the current status, roadmap, or resume source. For current work, read START_HERE.md, PROJECT_STATUS.md, PROJECT_HANDOVER.md, docs/PRODUCT_VISION.md, and docs/UX_ROADMAP.md.
+This document is preserved as early project context. It is not the current status, roadmap, or resume source. For current work, read START_HERE.md and PROJECT_STATUS.md; open docs/PRODUCT_VISION.md only when product context is relevant.
 
 # M2 — Pipeline Design Approved
 

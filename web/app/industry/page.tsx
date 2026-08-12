@@ -6,6 +6,7 @@ import {
   getIndustryCompanies,
   getIndustryMap,
   industryCompanyCount,
+  type IndustryCompany,
 } from "../../data/industry/industry-map";
 
 export const metadata: Metadata = {
@@ -17,6 +18,43 @@ export const metadata: Metadata = {
 const industryMap = getIndustryMap();
 const companies = getIndustryCompanies();
 const roleCount = companies.reduce((total, company) => total + company.roles.length, 0);
+
+const roleLabels: Record<string, string> = {
+  "developer-owner": "Developer / Project Owner",
+  utility: "Utility",
+  "turbine-oem": "Wind Turbine OEM",
+  "floating-platform": "Floating Platform",
+  "platform-engineering": "Platform Engineering",
+  "mooring-anchoring": "Mooring & Anchoring",
+  "cable-systems": "Cable Systems",
+  "offshore-electrical": "Offshore Electrical",
+  "grid-technology": "Grid Technology",
+  "epci-subsea": "EPCI / Subsea",
+  "marine-installation": "Marine Installation",
+  "certification-assurance": "Certification / Assurance",
+  "engineering-consulting": "Engineering Consulting",
+  "simulation-software": "Simulation Software",
+};
+
+function companyInitials(name: string) {
+  return name
+    .replace(/\/.*/, "")
+    .replace(/[^A-Za-z0-9 ]/g, " ")
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase();
+}
+
+function conciseRegion(countryRegion: string) {
+  return countryRegion.split("/")[0].trim();
+}
+
+function conciseRole(company: IndustryCompany) {
+  return roleLabels[company.roles[0]] ?? company.companyType;
+}
 
 export default function IndustryPage() {
   return (
@@ -46,6 +84,46 @@ export default function IndustryPage() {
             <dd>{roleCount}</dd>
           </div>
         </dl>
+      </section>
+
+      <section className="industry-system" aria-labelledby="industry-system-heading">
+        <div className="industry-system-copy">
+          <p className="eyebrow">FOWT System</p>
+          <h2 id="industry-system-heading">From project owner to grid connection.</h2>
+          <p>
+            The physical system is not a straight supplier chain: the floating
+            platform carries the turbine, moorings hold station, dynamic cables
+            move with the asset, and assurance and engineering roles surround
+            the delivery path.
+          </p>
+        </div>
+
+        <div className="industry-schematic" aria-label="Floating offshore wind system schematic">
+          <div className="schematic-node schematic-owner">Project Owner / Developer</div>
+          <div className="schematic-arrow">v</div>
+          <div className="schematic-node schematic-turbine">Wind Turbine</div>
+          <div className="schematic-arrow">v</div>
+          <div className="schematic-node schematic-platform">Floating Platform</div>
+          <div className="schematic-branch">
+            <div className="schematic-node">Mooring</div>
+            <div className="schematic-node">Dynamic / Export Cable</div>
+          </div>
+          <div className="schematic-arrow">v</div>
+          <div className="schematic-node schematic-electrical">
+            Offshore Electrical / Substation
+          </div>
+          <div className="schematic-arrow">v</div>
+          <div className="schematic-node schematic-grid">Grid</div>
+          <div className="schematic-support schematic-support-left">
+            EPCI / Subsea Engineering
+          </div>
+          <div className="schematic-support schematic-support-right">
+            Marine Installation / Vessels
+          </div>
+          <div className="schematic-support schematic-support-bottom">
+            Certification / Assurance + Engineering / Simulation
+          </div>
+        </div>
       </section>
 
       <section className="industry-orientation" aria-label="How to read the map">
@@ -90,21 +168,41 @@ export default function IndustryPage() {
                   <ul className="industry-company-list">
                     {category.companies.map((company) => (
                       <li className="industry-company" key={`${category.id}-${company.id}`}>
-                        <div>
-                          <h4>
-                            <Link href={company.website}>{company.name}</Link>
-                          </h4>
-                          <p className="industry-company-meta">
-                            {company.countryRegion} - {company.companyType}
-                          </p>
-                        </div>
-                        <p>{company.description}</p>
-                        <p className="industry-company-involvement">
-                          {company.representativeInvolvement}
-                        </p>
-                        <Link className="industry-source-link" href={company.sourceUrl}>
-                          Source
-                        </Link>
+                        <details>
+                          <summary>
+                            <span className="industry-company-mark" aria-hidden="true">
+                              {companyInitials(company.name)}
+                            </span>
+                            <span className="industry-company-summary-copy">
+                              <span className="industry-company-name">
+                                <Link href={company.website}>{company.name}</Link>
+                              </span>
+                              <span className="industry-company-meta">
+                                {conciseRegion(company.countryRegion)} - {conciseRole(company)}
+                              </span>
+                            </span>
+                          </summary>
+                          <div className="industry-company-detail">
+                            <p>{company.description}</p>
+                            <dl>
+                              <div>
+                                <dt>Region</dt>
+                                <dd>{company.countryRegion}</dd>
+                              </div>
+                              <div>
+                                <dt>Type</dt>
+                                <dd>{company.companyType}</dd>
+                              </div>
+                              <div>
+                                <dt>Involvement</dt>
+                                <dd>{company.representativeInvolvement}</dd>
+                              </div>
+                            </dl>
+                            <Link className="industry-source-link" href={company.sourceUrl}>
+                              Source
+                            </Link>
+                          </div>
+                        </details>
                       </li>
                     ))}
                   </ul>

@@ -1112,3 +1112,287 @@ dd {
     font-size: 1.25rem;
   }
 }
+
+/* M9 readability refinement */
+.industry-system {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1.2fr);
+  gap: 42px;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 24px 0;
+}
+
+.industry-system-copy h2 {
+  margin: 8px 0 14px;
+  font-size: 2rem;
+  line-height: 1.08;
+}
+
+.industry-system-copy p:not(.eyebrow) {
+  color: var(--muted-text);
+  line-height: 1.65;
+}
+
+.industry-schematic {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 28px 34px 34px;
+  border-top: 1px solid var(--strong-border);
+  border-bottom: 1px solid var(--border);
+}
+
+.schematic-node,
+.schematic-support {
+  width: min(100%, 310px);
+  min-width: 0;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--paper) 76%, var(--page));
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.schematic-owner,
+.schematic-grid {
+  border-color: var(--strong-border);
+}
+
+.schematic-turbine,
+.schematic-platform {
+  background: color-mix(in srgb, var(--accent) 10%, var(--paper));
+}
+
+.schematic-branch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: min(100%, 520px);
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.schematic-branch .schematic-node {
+  width: 100%;
+}
+
+.schematic-arrow {
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.schematic-support {
+  position: absolute;
+  width: 170px;
+  border-style: dashed;
+  color: var(--muted-text);
+  font-size: 0.66rem;
+}
+
+.schematic-support-left {
+  top: 42%;
+  left: 0;
+}
+
+.schematic-support-right {
+  top: 42%;
+  right: 0;
+}
+
+.schematic-support-bottom {
+  right: 34px;
+  bottom: -18px;
+  width: 260px;
+  background: var(--page);
+}
+
+.industry-company-list {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.industry-company {
+  padding: 0;
+  border-top: 0;
+}
+
+.industry-company details {
+  min-width: 0;
+  border-top: 1px solid var(--border);
+}
+
+.industry-company summary {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 58px;
+  padding: 10px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.industry-company summary::-webkit-details-marker {
+  display: none;
+}
+
+.industry-company summary::after {
+  content: "+";
+  color: var(--accent);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.industry-company details[open] summary::after {
+  content: "-";
+}
+
+.industry-company-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--accent);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.industry-company-summary-copy {
+  min-width: 0;
+  padding-right: 20px;
+}
+
+.industry-company-name {
+  display: block;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.industry-company-name a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.industry-company-name a:hover,
+.industry-source-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.industry-company .industry-company-meta {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.66rem;
+  line-height: 1.35;
+}
+
+.industry-company-detail {
+  padding: 0 0 14px 44px;
+}
+
+.industry-company-detail p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.industry-company-detail dl {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+
+.industry-company-detail div {
+  min-width: 0;
+}
+
+.industry-company-detail dt {
+  color: var(--muted-text);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.industry-company-detail dd {
+  margin: 3px 0 0;
+  color: var(--ink);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.industry-company-detail .industry-source-link {
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .industry-system {
+    grid-template-columns: 1fr;
+  }
+
+  .schematic-support {
+    position: static;
+    width: min(100%, 310px);
+  }
+
+  .schematic-support-bottom {
+    width: min(100%, 310px);
+    background: color-mix(in srgb, var(--paper) 76%, var(--page));
+  }
+}
+
+@media (max-width: 760px) {
+  .industry-system {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .industry-schematic {
+    padding: 24px 0 0;
+  }
+
+  .schematic-branch {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    border-top: 0;
+  }
+
+  .industry-company-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.industry-company summary {
+  grid-template-columns: 34px minmax(0, 1fr) 18px;
+}
+
+.industry-company summary::after {
+  grid-column: 3;
+}
+
+.industry-company-summary-copy {
+  grid-column: 2;
+  width: 100%;
+}

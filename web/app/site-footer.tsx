@@ -5,8 +5,8 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <p>
-        FOWT Research Digest is a prototype editorial reference for floating
-        offshore wind turbine literature.
+        FOWT Digest is a prototype editorial reference for floating offshore
+        wind engineering, research, and industry context.
       </p>
       <nav aria-label="Footer navigation">
         <Link href="/">Home</Link>

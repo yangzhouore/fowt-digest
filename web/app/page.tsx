@@ -4,6 +4,7 @@ import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { currentDigest } from "../data/digest-adapter";
 import { currentEngineeringBriefing } from "../data/engineering-briefing-adapter";
+import { industryCompanyCount, industryStages } from "../data/industry/industry-map";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -58,7 +59,13 @@ const RESEARCH_CONCEPTS = [
 
 const previewPapers = currentDigest.papers.slice(0, HOMEPAGE_PAPER_LIMIT);
 const engineeringHighlights = currentEngineeringBriefing.items.slice(0, 5);
-const homepageHighlightCount = engineeringHighlights.length + previewPapers.length;
+const homepageMetrics = [
+  `${engineeringHighlights.length} News`,
+  `${previewPapers.length} Papers`,
+  "Every Week",
+].join(" - ");
+const homepageTimeLine = "5 minutes to stay current";
+const homepageDateLine = compactDateRange(currentEngineeringBriefing.dateRange);
 
 export default function Home() {
   return (
@@ -66,46 +73,49 @@ export default function Home() {
       <SiteHeader />
 
       <section className="homepage-masthead" aria-labelledby="intro-heading">
-        <p className="eyebrow">FOWT Weekly Briefing</p>
-        <h1 id="intro-heading">Engineering &amp; Research Highlights</h1>
-        <p className="homepage-week">Week of {currentEngineeringBriefing.dateRange}</p>
-        <p>{homepageHighlightCount} curated highlights. Read in under 5 minutes.</p>
+        <h1 id="intro-heading">Floating Wind, Curated.</h1>
+        <p className="homepage-metrics">{homepageMetrics}</p>
+        <p className="homepage-time">{homepageTimeLine}</p>
+        <p className="homepage-week">{homepageDateLine}</p>
       </section>
 
-      <section className="homepage-front" aria-label="This week's highlights">
+      <section className="homepage-front" aria-label="This week's briefing">
         <section aria-labelledby="engineering-briefing-heading">
           <div className="section-heading-row">
-            <h2 id="engineering-briefing-heading">Engineering Briefing</h2>
-            <p>{currentEngineeringBriefing.dateRange}</p>
+            <h2 id="engineering-briefing-heading">Engineering</h2>
           </div>
           <ol className="engineering-highlight-list">
             {engineeringHighlights.map((item) => (
               <li key={item.id}>
-                <article className="engineering-highlight-card">
-                  <p className="paper-number">
-                    {String(item.number).padStart(2, "0")}
-                  </p>
-                  <p className="homepage-item-kicker">
-                    {item.region ? `${item.region.toUpperCase()} - ` : ""}
-                    {item.category.toUpperCase()}
-                  </p>
-                  <h3>{item.title}</h3>
-                  <p className="homepage-preview">{item.oneLineSummary}</p>
-                </article>
+                <Link
+                  className="homepage-card-link"
+                  href={`/engineering/${currentEngineeringBriefing.slug}`}
+                >
+                  <article className="engineering-highlight-card">
+                    <p className="paper-number">
+                      {String(item.number).padStart(2, "0")}
+                    </p>
+                    <p className="homepage-item-kicker">
+                      {item.region ? `${item.region.toUpperCase()} - ` : ""}
+                      {item.category.toUpperCase()}
+                    </p>
+                    <h3>{item.title}</h3>
+                    <p className="homepage-preview">{item.oneLineSummary}</p>
+                  </article>
+                </Link>
               </li>
             ))}
           </ol>
           <p className="text-link-row">
             <Link href={`/engineering/${currentEngineeringBriefing.slug}`}>
-              View all -&gt;
+              Explore Engineering -&gt;
             </Link>
           </p>
         </section>
 
         <section id="weekly" aria-labelledby="papers-heading">
           <div className="section-heading-row">
-            <h2 id="papers-heading">Research Digest</h2>
-            <p>{currentDigest.dateRange}</p>
+            <h2 id="papers-heading">Research</h2>
           </div>
           <ol className="homepage-paper-list">
             {previewPapers.map((paper) => {
@@ -114,31 +124,39 @@ export default function Home() {
 
               return (
                 <li key={paper.id}>
-                  <article className="homepage-paper-card">
-                    <p className="paper-number">
-                      {String(paper.number).padStart(2, "0")}
-                    </p>
-                    <h3>
-                      <Link href={`/papers/${paper.slug}`} title={paper.title}>
-                        {homepageTitle(paper.title)}
-                      </Link>
-                    </h3>
-                    {keywords.length > 0 ? (
-                      <p className="homepage-keywords">{keywords.join(" / ")}</p>
-                    ) : null}
-                    {focus ? (
-                      <p className="homepage-research-focus">Research focus: {focus}</p>
-                    ) : null}
-                  </article>
+                  <Link className="homepage-card-link" href={`/papers/${paper.slug}`}>
+                    <article className="homepage-paper-card">
+                      <p className="paper-number">
+                        {String(paper.number).padStart(2, "0")}
+                      </p>
+                      {keywords.length > 0 ? (
+                        <p className="homepage-keywords">{keywords.join(" / ")}</p>
+                      ) : null}
+                      <h3>{homepageTitle(paper.title)}</h3>
+                      {focus ? (
+                        <p className="homepage-research-focus">Research focus: {focus}</p>
+                      ) : null}
+                    </article>
+                  </Link>
                 </li>
               );
             })}
           </ol>
           <p className="text-link-row">
-            <Link href={`/weekly/${currentDigest.slug}`}>View all -&gt;</Link>
+            <Link href={`/weekly/${currentDigest.slug}`}>Explore Research -&gt;</Link>
           </p>
         </section>
       </section>
+
+      <section className="homepage-industry" aria-labelledby="industry-heading">
+        <div>
+          <p className="eyebrow">Industry</p>
+          <h2 id="industry-heading">Who builds floating wind?</h2>
+          <p>{industryCompanyCount} companies - {industryStages.length} value-chain stages</p>
+        </div>
+        <Link href="/industry">Explore Industry Map -&gt;</Link>
+      </section>
+
       <SiteFooter />
     </main>
   );
@@ -177,6 +195,25 @@ function homepageResearchFocus(keywords: string[]): string | null {
   }
 
   return keywords.slice(0, 2).join(" / ");
+}
+
+function compactDateRange(dateRange: string): string {
+  const [start, end] = dateRange.split(" - ");
+  if (!start || !end) {
+    return dateRange;
+  }
+
+  const startParts = start.split(" ");
+  const endParts = end.split(" ");
+  if (startParts.length === 3 && endParts.length === 3) {
+    const [startDay, startMonth, startYear] = startParts;
+    const [endDay, endMonth, endYear] = endParts;
+    if (startMonth === endMonth && startYear === endYear) {
+      return `${startDay}-${endDay} ${endMonth} ${endYear}`;
+    }
+  }
+
+  return dateRange;
 }
 
 function uniqueFirst(values: string[], limit: number): string[] {

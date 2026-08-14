@@ -7,7 +7,7 @@ Use this file as the resume entry point for a new Codex session.
 - Current stable branch: `main`
 - Active feature branch: none
 - Active milestone: none
-- Latest completed work: M9 FOWT Industry Map
+- Latest completed work: Homepage Weekly Briefing refinement
 - Release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Immediate next action: select or define the next milestone before starting
@@ -47,9 +47,12 @@ Open only when relevant:
 - Research adapter: `web/data/digest-adapter.ts`
 - Engineering adapter: `web/data/engineering-briefing-adapter.ts`
 
-The website is a static presentation layer over committed JSON and TypeScript
-fixtures. It does not run the pipeline, query OpenAlex, collect engineering
-sources, deploy itself, or use AI-generated summaries.
+The Homepage now presents the three product dimensions clearly: Engineering
+shows what happened, Research shows what is being studied, and Industry shows
+who builds floating wind. The website is a static presentation layer over
+committed JSON and TypeScript fixtures. It does not run the pipeline, query
+OpenAlex, collect engineering sources, deploy itself, or use AI-generated
+summaries.
 
 ## Standard Workflow
 

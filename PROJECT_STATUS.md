@@ -1,13 +1,13 @@
 # Project Status
 
-Last updated: 2026-08-12
+Last updated: 2026-08-14
 
 ## Current State
 
 - Current stable branch: `main`
 - Active milestone: none
 - Active feature branch: none
-- Latest completed work: M9 FOWT Industry Map
+- Latest completed work: Homepage Weekly Briefing refinement
 - Release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Immediate next task: select or define the next milestone.
@@ -25,7 +25,8 @@ The repository contains three independent static content areas:
 
 The website supports:
 
-- Homepage with Engineering and Research highlights;
+- Homepage with a concise weekly editorial briefing across Engineering,
+  Research, and Industry;
 - current and archived Research Digest pages;
 - Paper Detail pages;
 - Research Archive with static client-side search;

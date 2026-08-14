@@ -5,7 +5,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="site-name" href="/">
-        FOWT Digest
+        <span className="site-name-accent">FOWT</span> <span>Digest</span>
       </Link>
       <div className="header-actions">
         <nav aria-label="Primary navigation">

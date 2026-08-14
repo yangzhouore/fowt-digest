@@ -62,9 +62,10 @@ const engineeringHighlights = currentEngineeringBriefing.items.slice(0, 5);
 const homepageMetrics = [
   `${engineeringHighlights.length} News`,
   `${previewPapers.length} Papers`,
-  `${industryCompanyCount} Companies`,
+  "Every Week",
 ].join(" - ");
-const homepageDateLine = `${compactDateRange(currentEngineeringBriefing.dateRange)} - 5 min`;
+const homepageTimeLine = "5 minutes to stay current";
+const homepageDateLine = compactDateRange(currentEngineeringBriefing.dateRange);
 
 export default function Home() {
   return (
@@ -74,6 +75,7 @@ export default function Home() {
       <section className="homepage-masthead" aria-labelledby="intro-heading">
         <h1 id="intro-heading">Floating Wind, Curated.</h1>
         <p className="homepage-metrics">{homepageMetrics}</p>
+        <p className="homepage-time">{homepageTimeLine}</p>
         <p className="homepage-week">{homepageDateLine}</p>
       </section>
 

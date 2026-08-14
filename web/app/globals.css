@@ -1557,3 +1557,131 @@ dd {
     white-space: normal;
   }
 }
+
+/* Homepage final alignment correction */
+.site-name {
+  letter-spacing: 0.02em;
+}
+
+.site-name-accent {
+  color: var(--accent);
+  letter-spacing: 0.12em;
+}
+
+.homepage-time {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.homepage-metrics,
+.homepage-time,
+.homepage-week {
+  overflow-wrap: anywhere;
+}
+
+.homepage-front {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+
+
+.homepage-week {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .homepage-front {
+    display: block;
+  }
+
+
+}
+
+@media (min-width: 721px) {
+  .homepage-front {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: none;
+    grid-auto-rows: auto;
+    column-gap: 32px;
+    row-gap: 8px;
+  }
+
+  .homepage-front .homepage-card-link {
+    display: flex;
+    align-self: stretch;
+  }
+
+  .homepage-front .homepage-paper-card,
+  .homepage-front .engineering-highlight-card {
+    flex: 1;
+    height: auto;
+    min-height: 0;
+  }
+
+  .homepage-front > section,
+  .homepage-front .engineering-highlight-list,
+  .homepage-front .homepage-paper-list,
+  .homepage-front .engineering-highlight-list li,
+  .homepage-front .homepage-paper-list li {
+    display: contents;
+  }
+
+  .homepage-front > section:first-child .section-heading-row {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .homepage-front > section:last-child .section-heading-row {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .homepage-front .engineering-highlight-list li:nth-child(1) .homepage-card-link,
+  .homepage-front .homepage-paper-list li:nth-child(1) .homepage-card-link {
+    grid-row: 2;
+  }
+
+  .homepage-front .engineering-highlight-list li:nth-child(2) .homepage-card-link,
+  .homepage-front .homepage-paper-list li:nth-child(2) .homepage-card-link {
+    grid-row: 3;
+  }
+
+  .homepage-front .engineering-highlight-list li:nth-child(3) .homepage-card-link,
+  .homepage-front .homepage-paper-list li:nth-child(3) .homepage-card-link {
+    grid-row: 4;
+  }
+
+  .homepage-front .engineering-highlight-list li:nth-child(4) .homepage-card-link,
+  .homepage-front .homepage-paper-list li:nth-child(4) .homepage-card-link {
+    grid-row: 5;
+  }
+
+  .homepage-front .engineering-highlight-list li:nth-child(5) .homepage-card-link,
+  .homepage-front .homepage-paper-list li:nth-child(5) .homepage-card-link {
+    grid-row: 6;
+  }
+
+  .homepage-front .engineering-highlight-list .homepage-card-link {
+    grid-column: 1;
+  }
+
+  .homepage-front .homepage-paper-list .homepage-card-link {
+    grid-column: 2;
+  }
+
+  .homepage-front > section:first-child .text-link-row {
+    grid-column: 1;
+    grid-row: 7;
+  }
+
+  .homepage-front > section:last-child .text-link-row {
+    grid-column: 2;
+    grid-row: 7;
+  }
+}

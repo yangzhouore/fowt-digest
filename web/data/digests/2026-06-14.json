@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260614_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-06-08",
+  "weekEnd": "2026-06-14",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 33,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_1016_j_apor_2026_105103",
+      "title": "Corrosion estimation in floating offshore wind turbine mooring with particle filter coupled with DeepONet predictor",
+      "authors": [
+        "Rohit Kumar",
+        "Arvind Keprate",
+        "Subhamoy Sen"
+      ],
+      "abstract": "Mooring lines of floating offshore wind turbines (FOWTs) are continuously subjected to harsh environmental loading, making them highly susceptible to fatigue damage, while corrosion further accelerates degradation and may cause premature failure. Conventional monitoring methods rely on underwater sensors, which are costly to deploy and maintain, and more prone to failure than sensors mounted above the floating platform. Alternatively, platform motion responses can be exploited to infer underlying corrosion states; however, existing approaches often depend on complex finite element models that are computationally prohibitive for real-time applications. This study introduces a novel Bayesian filtering framework that integrates a data-efficient Deep Operator Network (DeepONet) surrogate for corrosion estimation in FOWT mooring systems. Instead of direct finite element simulations, DeepONet parameterizes mooring health through physically interpretable corrosion descriptors (diameter loss) and maps them to platform motion responses. Unlike conventional black-box neural networks, DeepONet learns nonlinear operators acting on time-series inputs, enabling the capture of complex spatiotemporal dependencies with reduced training data requirements. Within this framework, DeepONet serves as a high-fidelity surrogate for real-time inference inside a particle filter, which assimilates observed platform motions to recursively estimate latent corrosion parameters. DeepONet is trained on synthetic time-series data generated from OpenFAST simulations of the NREL 5MW OC4 platform with systematic corrosion scenarios. The proposed PF-DeepONet framework enables robust, rapid, and computationally efficient inverse estimation of mooring line health under realistic offshore excitations, offering a cost-effective alternative to traditional sensor-based monitoring.",
+      "publicationSource": "Applied Ocean Research",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-11",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.apor.2026.105103",
+      "sourceUrl": "https://doi.org/10.1016/j.apor.2026.105103",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Mooring",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_apor_2026_105103",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_apor_2026_105103",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Mooring",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.apor.2026.105103",
+        "openalexId": "https://openalex.org/W7164383741"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260614_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_126419",
+      "title": "A modular multibody aeroelastic framework for offshore wind turbines",
+      "authors": [
+        "N. Aryan",
+        "Claudio Testa",
+        "L. Greco"
+      ],
+      "abstract": "This work presents a modular two-way multibody-based aeroelastic formulation for offshore horizontal-axis wind turbines. An extended Blade Element Momentum Theory aerodynamics, able to capture inflow-angle variations, wake skewing and platform-motion-induced effects, is interfaced to a structural solver that represents each blade as a chain of spanwise-discretized generalized beam elements. Within the Simulink/Simscape-Multibody™ framework, beam elements are connected by rotational joints describing flapwise, lagwise, and torsional motions, yielding an efficient, dynamically consistent representation of blade flexibility. The resulting body-chain dynamics is governed by the Maggi equations expressed in an inertial frame, where small relative rotations at each joint accumulate to reproduce potentially large global deformations (if any). Drawbacks and advantages of the proposed approach are evaluated using two wind turbines of increasing size – the NREL 5 MW and the IEA 15 MW – in both bottom-fixed configurations under various operating conditions, and floating configurations with prescribed platform motion. Detailed comparisons with established aeroelastic solvers, largely used in the wind-energy community, highlight capabilities and boundaries of the formulation, with particular attention to the role of Blade Element Momentum aerodynamics for aeroelastic purposes, which remains widely adopted in industrial applications. Numerical results show a greater influence of the aerodynamic modeling on simulation accuracy than the specific structural representation used, and the very good agreement with aerodynamic and aeroelastic predictions coming from higher-fidelity solvers, whenever design and weakly off-design conditions are encountered. For both bottom-fixed and floating turbines, a dedicated discussion of performance and elastic blade displacements is provided throughout the paper, linking the numerical behavior to the underlying physical phenomena associated with each operating condition to enhance understanding of the system response. Validation studies herein addressed make the paper a robust benchmark suitable for industrial use in early-stage wind turbine design.",
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-13",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.126419",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.126419",
+      "openAccessStatus": "hybrid",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Wind turbine"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_126419",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_126419",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.126419",
+        "openalexId": "https://openalex.org/W7164686938"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260614_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1109_joe_2026_3683216",
+      "title": "Structural Health Monitoring for Floating Offshore Wind Turbines Based on the Hilbert–Huang Transform and Random Forest Classification",
+      "authors": [
+        "Yinde Qiao",
+        "Zefan Lin",
+        "Chenziyu Sun",
+        "Xizheng Zhao",
+        "Jinbin Liang"
+      ],
+      "abstract": null,
+      "publicationSource": "IEEE Journal of Oceanic Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-08",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1109/joe.2026.3683216",
+      "sourceUrl": "https://doi.org/10.1109/joe.2026.3683216",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1109_joe_2026_3683216",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1109_joe_2026_3683216",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1109/joe.2026.3683216",
+        "openalexId": "https://openalex.org/W7163882527"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260614_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_3390_machines14060665",
+      "title": "Advanced Fault Detection of Permanent Magnet Faults in Offshore Wind Turbine Generators Using Finite Element Analysis and Deep Transfer Learning",
+      "authors": [
+        "Hüseyin Tayyer Canseven",
+        "Mustafa Ercire",
+        "Merve Cömert",
+        "Abdurrahman Ünsal",
+        "Nur Sarma"
+      ],
+      "abstract": "As the offshore wind industry scales toward 15 MW capacity, the reliability of Direct-Drive Permanent Magnet Synchronous Generators (DD-PMSGs) becomes critical. However, real-world run-to-failure data for these massive, multi-pole machines is virtually non-existent, creating a barrier for developing effective data-driven diagnostic systems. This study proposes a high-fidelity framework for detecting permanent magnet faults in the International Energy Agency (IEA) 15 MW Reference Wind Turbine. Using Finite Element Analysis (FEA), a dataset (magnetic flux and back electromotive-force (EMF)) capturing the electromagnetic signatures of healthy and faulty states of a PMSG under varying severities is generated. To improve the power of computer vision, 1D time-series signals were transformed into 2D images. Specifically, Gramian Angular Fields (GAFs) and Recurrence Plots (RPs) were applied to magnetic flux density signals, while Markov Transition Fields (MTFs) were applied to back-EMF signals. These representations were then fused into multi-channel Red-Green-Blue (RGB) images and processed via a ResNet-18 Deep Transfer Learning model using a strictly non-overlapping, leakage-free dataset partitioning strategy. The proposed framework achieved a classification accuracy of 99.45% on noise-free data. Furthermore, robustness testing under varying levels of Additive White Gaussian Noise (AWGN) (30 dB, 40 dB, and 50 dB Signal-to-Noise Ratio (SNR)) demonstrated sustained high performance, maintaining over 90% accuracy even under severe 30 dB noise conditions. Comparative analysis proved that this multi-channel fusion significantly outperforms single-channel encoding methods, which collapse under heavy noise, validating the scalability of the framework and applicability for next-generation condition monitoring in harsh offshore environments.",
+      "publicationSource": "Machines",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-08",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.3390/machines14060665",
+      "sourceUrl": "https://doi.org/10.3390/machines14060665",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Wind turbine"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_3390_machines14060665",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_3390_machines14060665",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/machines14060665",
+        "openalexId": "https://openalex.org/W7163916917"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260614_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_126404",
+      "title": "Hybrid vibration mitigation of floating wind turbines using coordinated tower and platform inerters",
+      "authors": [
+        "S. Wang",
+        "Jianhua Zhang",
+        "Chunxiao Zhang",
+        "Tianxue Sun",
+        "Hongwen Liu",
+        "Hua Ouyang"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-09",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.126404",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.126404",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_126404",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_126404",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.126404",
+        "openalexId": "https://openalex.org/W7164019739"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260614_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1007_s41660_026_00799_6",
+      "title": "Techno-Economic Layout Optimization of Floating Offshore Wind Farms in Emerging Archipelagic Markets: A Philippine Case Study",
+      "authors": [
+        "Chiara Jo Mari G. Cimeni",
+        "Winona Angela M. Ong",
+        "Louis Angelo M. Danao"
+      ],
+      "abstract": null,
+      "publicationSource": "Process Integration and Optimization for Sustainability",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-11",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1007/s41660-026-00799-6",
+      "sourceUrl": "https://doi.org/10.1007/s41660-026-00799-6",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Wake",
+        "Floating platform"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1007_s41660_026_00799_6",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1007_s41660_026_00799_6",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Wake",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1007/s41660-026-00799-6",
+        "openalexId": "https://openalex.org/W7164373792"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260614_006"
+      ],
+      "selected": true
+    }
+  ]
+}

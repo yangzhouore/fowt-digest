@@ -18,6 +18,7 @@ export default function EngineeringArchivePage() {
     slug: briefing.slug,
     dateRange: briefing.dateRange,
     sourceCount: briefing.sourceRecords.length,
+    checkedResultCount: briefing.checkedResultCount,
     items: briefing.items.map((item) => ({
       id: item.id,
       title: item.title,

@@ -2,6 +2,7 @@
   "generatedAt": "2026-06-21T09:00:00Z",
   "runId": "run_20260621_090000_openalex",
   "schemaVersion": "pipeline-data-0.1",
+  "checkedResultCount": 51,
   "selectedPapers": [
     {
       "abstract": "This dataset contains the simulation results for the twin-rotor floating offshore wind turbine model under various tower inclination angles. Refer to the associated manuscript Ships and Offshore Structures for detailed methodology.”",

@@ -1,39 +1,160 @@
 {
-    "schemaVersion":  "engineering-briefing.v1",
-    "weekStart":  "2026-06-15",
-    "weekEnd":  "2026-06-21",
-    "generatedAt":  "2026-08-11T17:00:00Z",
-    "sourceRecords":  [
-                          {
-                              "sourceRecordId":  "eng-src-2026-06-21-encomara-abs-pda",
-                              "sourceType":  "industry_news",
-                              "publisher":  "offshoreWIND.biz",
-                              "title":  "Encomara Floating Wind Installation Technology Gets ABS Design Approval",
-                              "sourceUrl":  "https://www.offshorewind.biz/2026/06/17/encomaras-floating-wind-installation-technology-gets-abs-design-approval/",
-                              "publishedDate":  "2026-06-17",
-                              "retrievedAt":  "2026-08-11T17:00:00Z",
-                              "collectionMethod":  "manual",
-                              "sourceText":  "OffshoreWIND.biz reported that Encomara Squid floating wind installation technology received Product Design Assessment certification from ABS. The source states that Squid integrates pre-installed mooring lines and electrical connections into a single subsea unit for plug-and-play connection.",
-                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
-                          }
-                      ],
-    "briefingItems":  [
-                          {
-                              "briefingItemId":  "eng-item-2026-06-21-01",
-                              "title":  "Encomara Squid gets ABS product design approval",
-                              "oneLineSummary":  "ABS issued Product Design Assessment certification for Encomara Squid connection system.",
-                              "category":  "technology",
-                              "sourceRecordIds":  [
-                                                      "eng-src-2026-06-21-encomara-abs-pda"
-                                                  ],
-                              "sourceUrl":  "https://www.offshorewind.biz/2026/06/17/encomaras-floating-wind-installation-technology-gets-abs-design-approval/",
-                              "explanation":  "The source identifies a design-certification step for a pre-installed floating wind connection system.",
-                              "whyItMatters":  null,
-                              "engineeringTopics":  [
-                                                        "Mooring connection",
-                                                        "Subsea connectors",
-                                                        "Design approval"
-                                                    ]
-                          }
-                      ]
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-06-15",
+  "weekEnd": "2026-06-21",
+  "generatedAt": "2026-08-11T17:00:00Z",
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-06-21-encomara-abs-pda",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Encomara Floating Wind Installation Technology Gets ABS Design Approval",
+      "sourceUrl": "https://www.offshorewind.biz/2026/06/17/encomaras-floating-wind-installation-technology-gets-abs-design-approval/",
+      "publishedDate": "2026-06-17",
+      "retrievedAt": "2026-08-11T17:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "OffshoreWIND.biz reported that Encomara Squid floating wind installation technology received Product Design Assessment certification from ABS. The source states that Squid integrates pre-installed mooring lines and electrical connections into a single subsea unit for plug-and-play connection.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-21-uk-japan-compact",
+      "sourceType": "industry_news",
+      "publisher": "S&P Global Commodity Insights",
+      "title": "UK, Japan agree on offshore wind investment pact worth up to GBP9 billion",
+      "sourceUrl": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/061526-uk-japan-agree-on-offshore-wind-investment-pact-worth-up-to-gbp9-billion",
+      "publishedDate": "2026-06-15",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "S&P Global reported that the UK-Japan Offshore Wind Compact includes Japanese support for 5.9 GW of UK floating wind developments including Ossian, Green Volt, and Erebus.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-21-canary-floating-wind",
+      "sourceType": "industry_news",
+      "publisher": "Vivi Le Canarie",
+      "title": "The Atlantic of the Future Starts in the Canary Islands: The Decisive Month for Floating Offshore Wind Energy",
+      "sourceUrl": "https://www.vivilecanarie.net/en/2026/06/17/the-atlantic-of-the-future-starts-in-the-canary-islands-the-decisive-month-for-floating-offshore-wind-energy/",
+      "publishedDate": "2026-06-17",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Vivi Le Canarie reported that the Canary Islands are being positioned as a natural laboratory for floating offshore wind, with attention on port infrastructure in Gran Canaria and Tenerife.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-21-gow26-floating-sessions",
+      "sourceType": "conference_announcement",
+      "publisher": "RenewableUK",
+      "title": "Global Offshore Wind 2026 programme floating wind sessions",
+      "sourceUrl": "https://www.renewableuk.com/events/global-offshore-wind-2026?tab=overview",
+      "publishedDate": "2026-06-16",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "RenewableUK listed Global Offshore Wind 2026 sessions on dynamic cable installation risks, floating wind moorings and cables maintenance, subsea power, and AI-enabled assurance for floating offshore wind.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-21-aikido-ai-platform",
+      "sourceType": "industry_news",
+      "publisher": "Vozpopuli",
+      "title": "Wind turbines were built for electricity, but engineers now see their towers as cooling machines for AI data centers",
+      "sourceUrl": "https://www.vozpopuli.com/indux/en/wind-turbines-were-built-for-electricity-but-engineers-now-see-their-towers-as-cooling-machines-for-ai-data-centers/6088/",
+      "publishedDate": "2026-06-17",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Vozpopuli reported on Aikido Technologies AO60DC concept, a floating offshore wind platform designed to combine AI computing, wind generation, battery storage, and seawater cooling.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-06-21-01",
+      "title": "Encomara Squid gets ABS product design approval",
+      "oneLineSummary": "ABS issued Product Design Assessment certification for Encomara Squid connection system.",
+      "category": "technology",
+      "sourceRecordIds": [
+        "eng-src-2026-06-21-encomara-abs-pda"
+      ],
+      "sourceUrl": "https://www.offshorewind.biz/2026/06/17/encomaras-floating-wind-installation-technology-gets-abs-design-approval/",
+      "explanation": "The source identifies a design-certification step for a pre-installed floating wind connection system.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Mooring connection",
+        "Subsea connectors",
+        "Design approval"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-21-02",
+      "title": "UK-Japan compact backs UK floating wind projects",
+      "oneLineSummary": "The UK-Japan Offshore Wind Compact includes support for 5.9 GW of UK floating wind developments including Ossian, Green Volt, and Erebus.",
+      "category": "policy",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-21-uk-japan-compact"
+      ],
+      "sourceUrl": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/061526-uk-japan-agree-on-offshore-wind-investment-pact-worth-up-to-gbp9-billion",
+      "explanation": "The source connects project finance and international industrial participation to named UK floating wind projects.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Project finance",
+        "UK floating wind",
+        "International partnership"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-21-03",
+      "title": "Canary Islands position ports for floating wind pilots",
+      "oneLineSummary": "The Canary Islands are being discussed as an Atlantic floating offshore wind hub with pilot projects tied to Gran Canaria and Tenerife port infrastructure.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-21-canary-floating-wind"
+      ],
+      "sourceUrl": "https://www.vivilecanarie.net/en/2026/06/17/the-atlantic-of-the-future-starts-in-the-canary-islands-the-decisive-month-for-floating-offshore-wind-energy/",
+      "explanation": "The source identifies deep-water resource conditions, port infrastructure, and pilot-project attention around floating wind deployment.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Port infrastructure",
+        "Pilot projects",
+        "Island energy"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-21-04",
+      "title": "Global Offshore Wind highlights floating cable risks",
+      "oneLineSummary": "RenewableUK listed sessions on dynamic cable installation risk, mooring and cable maintenance, subsea power, and floating wind assurance.",
+      "category": "event",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-21-gow26-floating-sessions"
+      ],
+      "sourceUrl": "https://www.renewableuk.com/events/global-offshore-wind-2026?tab=overview",
+      "explanation": "The source identifies engineering themes that matter for floating wind delivery, especially cable installation, station keeping, and assurance.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Dynamic cable",
+        "Mooring maintenance",
+        "Assurance"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-21-05",
+      "title": "Aikido proposes floating wind AI data-center platform",
+      "oneLineSummary": "Aikido Technologies proposed a floating offshore wind platform combining AI compute, battery storage, wind generation, and seawater cooling.",
+      "category": "technology",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-06-21-aikido-ai-platform"
+      ],
+      "sourceUrl": "https://www.vozpopuli.com/indux/en/wind-turbines-were-built-for-electricity-but-engineers-now-see-their-towers-as-cooling-machines-for-ai-data-centers/6088/",
+      "explanation": "The source describes a system-level floating platform concept linking offshore power generation, cooling, batteries, and data-center loads.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating platform",
+        "Offshore data centers",
+        "Hybrid energy system"
+      ]
+    }
+  ],
+  "checkedResultCount": 11
 }

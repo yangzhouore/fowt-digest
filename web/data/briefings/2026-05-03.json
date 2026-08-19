@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-04-27",
+  "weekEnd": "2026-05-03",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-05-03-oceanwinds-emyn",
+      "sourceType": "company_announcement",
+      "publisher": "Ocean Winds",
+      "title": "Ocean Winds completes final turbine installation in France",
+      "sourceUrl": "https://www.oceanwinds.com/news-articles/#emyn-final-turbine-installation",
+      "publishedDate": "2026-04-29",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Ocean Winds completed final turbine installation at its first offshore wind farm in France.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-03-windfloat-first-power",
+      "sourceType": "company_announcement",
+      "publisher": "Ocean Winds",
+      "title": "Ocean Winds delivers first power from floating offshore wind project in France",
+      "sourceUrl": "https://www.oceanwinds.com/news-articles/#efgl-first-power",
+      "publishedDate": "2026-05-04",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Ocean Winds delivered first power from the EFGL floating offshore wind project in France.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-03-tgs-outlook",
+      "sourceType": "industry_news",
+      "publisher": "Offshore Magazine",
+      "title": "TGS 4C delivers offshore wind market predictions",
+      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55368214/tgs-tgs-4c-delivers-offshore-wind-market-predictions#floating-awards",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "TGS 4C expected 2026 confirmations for floating offshore wind projects despite wider market pressure.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-03-teesside-cluster",
+      "sourceType": "industry_news",
+      "publisher": "Cyprus Shipping News",
+      "title": "Teesport Offshore Gateway can support UK offshore wind acceleration",
+      "sourceUrl": "https://cyprusshippingnews.com/2026/04/02/teesport-offshore-gateway-can-be-ready-by-2028-to-support-uk-offshore-wind-acceleration-and-generate-270m-per-year-for-teesside-economy/#cluster",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "PD Ports highlighted Teesport and Hartlepool links to subsea cable and offshore wind fabrication capacity.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-03-oregon-pilot",
+      "sourceType": "industry_news",
+      "publisher": "Oregon Capital Chronicle",
+      "title": "Oregon weighs pilot path for floating offshore wind",
+      "sourceUrl": "https://oregoncapitalchronicle.com/2026/04/02/public-comment-extended-on-future-of-offshore-wind-in-oregon-including-none-at-all/#pilot",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Oregon roadmap coverage identified a pilot offshore wind path before possible larger floating wind decisions.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-05-03-01",
+      "title": "Ocean Winds completes final EMYN turbine installation",
+      "oneLineSummary": "Ocean Winds completed final turbine installation at its first offshore wind farm in France.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-03-oceanwinds-emyn"
+      ],
+      "sourceUrl": "https://www.oceanwinds.com/news-articles/#emyn-final-turbine-installation",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Project delivery"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-03-02",
+      "title": "EFGL delivers first floating wind power",
+      "oneLineSummary": "Ocean Winds delivered first power from the EFGL floating offshore wind project in France.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-03-windfloat-first-power"
+      ],
+      "sourceUrl": "https://www.oceanwinds.com/news-articles/#efgl-first-power",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating wind farm"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-03-03",
+      "title": "TGS 4C expects floating project awards",
+      "oneLineSummary": "TGS 4C expected 2026 confirmations for floating offshore wind projects despite wider market pressure.",
+      "category": "policy",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-05-03-tgs-outlook"
+      ],
+      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55368214/tgs-tgs-4c-delivers-offshore-wind-market-predictions#floating-awards",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating pipeline"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-03-04",
+      "title": "Teesport points to cable and fabrication cluster",
+      "oneLineSummary": "PD Ports highlighted Teesport and Hartlepool links to subsea cable and offshore wind fabrication capacity.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-03-teesside-cluster"
+      ],
+      "sourceUrl": "https://cyprusshippingnews.com/2026/04/02/teesport-offshore-gateway-can-be-ready-by-2028-to-support-uk-offshore-wind-acceleration-and-generate-270m-per-year-for-teesside-economy/#cluster",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Cable infrastructure"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-03-05",
+      "title": "Oregon roadmap includes pilot option",
+      "oneLineSummary": "Oregon roadmap coverage identified a pilot offshore wind path before possible larger floating wind decisions.",
+      "category": "policy",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-05-03-oregon-pilot"
+      ],
+      "sourceUrl": "https://oregoncapitalchronicle.com/2026/04/02/public-comment-extended-on-future-of-offshore-wind-in-oregon-including-none-at-all/#pilot",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Regional planning"
+      ]
+    }
+  ]
+}

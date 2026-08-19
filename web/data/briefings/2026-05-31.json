@@ -1,39 +1,160 @@
 {
-    "schemaVersion":  "engineering-briefing.v1",
-    "weekStart":  "2026-05-25",
-    "weekEnd":  "2026-05-31",
-    "generatedAt":  "2026-08-11T17:00:00Z",
-    "sourceRecords":  [
-                          {
-                              "sourceRecordId":  "eng-src-2026-05-31-touchwind-testing",
-                              "sourceType":  "industry_news",
-                              "publisher":  "offshoreWIND.biz",
-                              "title":  "Dutch Company Deploys Floating Wind Turbine Prototype for Testing",
-                              "sourceUrl":  "https://www.offshorewind.biz/2026/05/28/dutch-company-deploys-floating-wind-turbine-prototype-for-testing/",
-                              "publishedDate":  "2026-05-28",
-                              "retrievedAt":  "2026-08-11T17:00:00Z",
-                              "collectionMethod":  "manual",
-                              "sourceText":  "OffshoreWIND.biz reported that TouchWind installed a floating wind turbine prototype at Fieldlab Green Economy Westvoorne, starting in-water testing for the POWER project. The source states the test campaign will run through 2026 and collect data on turbine performance, platform behaviour and mooring loads.",
-                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
-                          }
-                      ],
-    "briefingItems":  [
-                          {
-                              "briefingItemId":  "eng-item-2026-05-31-01",
-                              "title":  "TouchWind prototype enters in-water testing",
-                              "oneLineSummary":  "TouchWind installed a floating turbine prototype for POWER demonstration testing in the Netherlands.",
-                              "category":  "technology",
-                              "sourceRecordIds":  [
-                                                      "eng-src-2026-05-31-touchwind-testing"
-                                                  ],
-                              "sourceUrl":  "https://www.offshorewind.biz/2026/05/28/dutch-company-deploys-floating-wind-turbine-prototype-for-testing/",
-                              "explanation":  "The source links prototype deployment with measured performance, platform and mooring-load data collection.",
-                              "whyItMatters":  null,
-                              "engineeringTopics":  [
-                                                        "Prototype testing",
-                                                        "Mooring loads",
-                                                        "Wake research"
-                                                    ]
-                          }
-                      ]
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-05-25",
+  "weekEnd": "2026-05-31",
+  "generatedAt": "2026-08-11T17:00:00Z",
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-05-31-touchwind-testing",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Dutch Company Deploys Floating Wind Turbine Prototype for Testing",
+      "sourceUrl": "https://www.offshorewind.biz/2026/05/28/dutch-company-deploys-floating-wind-turbine-prototype-for-testing/",
+      "publishedDate": "2026-05-28",
+      "retrievedAt": "2026-08-11T17:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "OffshoreWIND.biz reported that TouchWind installed a floating wind turbine prototype at Fieldlab Green Economy Westvoorne, starting in-water testing for the POWER project. The source states the test campaign will run through 2026 and collect data on turbine performance, platform behaviour and mooring loads.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-31-seatwirl-mooreast",
+      "sourceType": "industry_news",
+      "publisher": "Offshore Engineer",
+      "title": "SeaTwirl, Mooreast Team Up on Southeast Asia Floating Wind Push",
+      "sourceUrl": "https://www.oedigital.com/floating%20wind",
+      "publishedDate": "2026-05-28",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Offshore Engineer reported that SeaTwirl and Mooreast Asia entered a strategic collaboration to pursue floating offshore wind opportunities across Southeast Asia, combining SeaTwirl's floating wind technology with Mooreast's offshore mooring expertise.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-31-obayashi-tlp-aip",
+      "sourceType": "industry_news",
+      "publisher": "DeepWind",
+      "title": "Obayashi Secures World-First AiP for Hybrid TLP Floating Wind",
+      "sourceUrl": "https://deepwind.jp/en/technology-innovations/obayashi-tlp-hybrid-floating-wind-aip/",
+      "publishedDate": "2026-05-28",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "DeepWind reported that Obayashi received Approval in Principle from ClassNK for a steel-concrete hybrid TLP support structure for floating offshore wind.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-31-open-c-rhode",
+      "sourceType": "company_announcement",
+      "publisher": "Fondation OPEN-C",
+      "title": "The RHODE consortium launches a major R&D project for a floating HVDC electrical connection for deep-water offshore wind farms",
+      "sourceUrl": "https://fondation-open-c.org/en/news/",
+      "publishedDate": "2026-05-26",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Fondation OPEN-C reported that the RHODE consortium launched an R&D project focused on floating HVDC electrical connection for deep-water offshore wind farms.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-31-floating-wind-days",
+      "sourceType": "industry_news",
+      "publisher": "Offshore Wind Greece",
+      "title": "Floating Wind Days 2026",
+      "sourceUrl": "https://offshorewind.gr/",
+      "publishedDate": "2026-05-27",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Offshore Wind Greece listed Floating Wind Days 2026 in Haugesund, Norway, as a two-day industry event focused on international floating wind development, site visits, technology discussion, and commercial delivery.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-05-31-01",
+      "title": "TouchWind prototype enters in-water testing",
+      "oneLineSummary": "TouchWind installed a floating turbine prototype for POWER demonstration testing in the Netherlands.",
+      "category": "technology",
+      "sourceRecordIds": [
+        "eng-src-2026-05-31-touchwind-testing"
+      ],
+      "sourceUrl": "https://www.offshorewind.biz/2026/05/28/dutch-company-deploys-floating-wind-turbine-prototype-for-testing/",
+      "explanation": "The source links prototype deployment with measured performance, platform and mooring-load data collection.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Prototype testing",
+        "Mooring loads",
+        "Wake research"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-31-02",
+      "title": "SeaTwirl and Mooreast target Southeast Asia floating wind",
+      "oneLineSummary": "SeaTwirl and Mooreast Asia formed a collaboration combining floating wind technology with offshore mooring expertise for Southeast Asia.",
+      "category": "supply_chain",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-05-31-seatwirl-mooreast"
+      ],
+      "sourceUrl": "https://www.oedigital.com/floating%20wind",
+      "explanation": "The source identifies technology and mooring capability alignment for regional floating wind project development.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Mooring",
+        "Technology partnership",
+        "Southeast Asia"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-31-03",
+      "title": "Obayashi hybrid TLP design receives ClassNK AiP",
+      "oneLineSummary": "Obayashi received ClassNK Approval in Principle for a steel-concrete hybrid TLP support structure for floating offshore wind.",
+      "category": "standards",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-05-31-obayashi-tlp-aip"
+      ],
+      "sourceUrl": "https://deepwind.jp/en/technology-innovations/obayashi-tlp-hybrid-floating-wind-aip/",
+      "explanation": "The source identifies a certification milestone for a hybrid TLP floater concept aimed at mass production and cost reduction.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "TLP foundation",
+        "Hybrid structure",
+        "Certification"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-31-04",
+      "title": "OPEN-C launches floating HVDC R&D project",
+      "oneLineSummary": "The RHODE consortium launched R&D work on floating HVDC electrical connections for deep-water offshore wind farms.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-31-open-c-rhode"
+      ],
+      "sourceUrl": "https://fondation-open-c.org/en/news/",
+      "explanation": "The source links deep-water floating wind to high-power electrical export and HVDC connection development.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "HVDC connection",
+        "Dynamic cable",
+        "Deep-water wind"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-31-05",
+      "title": "Floating Wind Days 2026 convenes in Norway",
+      "oneLineSummary": "Floating Wind Days 2026 brought international floating wind stakeholders to Haugesund for technology, site-visit, and delivery discussions.",
+      "category": "event",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-31-floating-wind-days"
+      ],
+      "sourceUrl": "https://offshorewind.gr/",
+      "explanation": "The event listing identifies a dedicated floating wind industry forum covering project delivery, technology exchange, and commercial collaboration.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Industry forum",
+        "Technology exchange",
+        "Floating wind delivery"
+      ]
+    }
+  ],
+  "checkedResultCount": 12
 }

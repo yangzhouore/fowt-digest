@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-04-06",
+  "weekEnd": "2026-04-12",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-04-12-gazelle-tupem",
+      "sourceType": "company_announcement",
+      "publisher": "Business Wire",
+      "title": "Gazelle Wind Power Secures TUPEM Authorization to Launch its 2 MW Floating Wind Demonstrator",
+      "sourceUrl": "https://www.businesswire.com/news/home/20250410415289/en/Gazelle-Wind-Power-Secures-TUPEM-Authorization-to-Launch-its-2-MW-Floating-Wind-Demonstrator-off-the-Coast-of-Aguadoura-Portugal",
+      "publishedDate": "2026-04-10",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Gazelle secured a 10-year authorization for its 2 MW Nau Azul floating wind demonstrator off Aguçadoura, Portugal.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-12-hexicon-twinhub",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Hexicon divests TwinHub floating wind project in the UK",
+      "sourceUrl": "https://windtech-international.com/projects-and-contracts/hexicon-divests-twinhub-floating-wind-project-in-the-uk",
+      "publishedDate": "2026-04-10",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Hexicon completed divestment of the TwinHub project company, transferring the floating wind site and liabilities to a new buyer.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-12-port-talbot-follow",
+      "sourceType": "industry_news",
+      "publisher": "Cyprus Shipping News",
+      "title": "UK Government agrees support for major Floating Offshore Wind port hub in Port Talbot",
+      "sourceUrl": "https://cyprusshippingnews.com/2026/04/02/uk-government-agrees-support-for-major-floating-offshore-wind-port-hub-in-port-talbot/#developers",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Celtic Sea developers welcomed Port Talbot infrastructure plans as a route to future assembly and deployment capacity.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-12-portugal-auction",
+      "sourceType": "industry_news",
+      "publisher": "NorthSouth HQ",
+      "title": "Portugal 1.5 GW Floating Offshore Wind Auction Draws Nordic Energy Heavyweights",
+      "sourceUrl": "https://www.northsouthhq.com/articles/portugal-floating-offshore-wind-nordic-energy.html",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Portugal prepared a 1.5 GW floating offshore wind auction framework for Atlantic sites off Viana do Castelo.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-12-noviocean-hybrid",
+      "sourceType": "industry_news",
+      "publisher": "Intelligent Living",
+      "title": "NoviOcean hybrid generator puts wave wind and solar power on combined ocean platform",
+      "sourceUrl": "https://www.intelligentliving.co/noviocean-hybrid-wave-wind-solar-power/",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "NoviOcean described a floating ocean-energy platform concept combining wave, wind, and solar generation.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-04-12-01",
+      "title": "Gazelle secures Portugal demonstrator authorization",
+      "oneLineSummary": "Gazelle secured a 10-year authorization for its 2 MW Nau Azul floating wind demonstrator off Aguçadoura, Portugal.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-12-gazelle-tupem"
+      ],
+      "sourceUrl": "https://www.businesswire.com/news/home/20250410415289/en/Gazelle-Wind-Power-Secures-TUPEM-Authorization-to-Launch-its-2-MW-Floating-Wind-Demonstrator-off-the-Coast-of-Aguadoura-Portugal",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating platform"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-12-02",
+      "title": "Hexicon divests TwinHub project",
+      "oneLineSummary": "Hexicon completed divestment of the TwinHub project company, transferring the floating wind site and liabilities to a new buyer.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-12-hexicon-twinhub"
+      ],
+      "sourceUrl": "https://windtech-international.com/projects-and-contracts/hexicon-divests-twinhub-floating-wind-project-in-the-uk",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Cost pressure"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-12-03",
+      "title": "Celtic Sea developers welcome Port Talbot plan",
+      "oneLineSummary": "Celtic Sea developers welcomed Port Talbot infrastructure plans as a route to future assembly and deployment capacity.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-12-port-talbot-follow"
+      ],
+      "sourceUrl": "https://cyprusshippingnews.com/2026/04/02/uk-government-agrees-support-for-major-floating-offshore-wind-port-hub-in-port-talbot/#developers",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Port readiness"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-12-04",
+      "title": "Portugal floating wind auction draws interest",
+      "oneLineSummary": "Portugal prepared a 1.5 GW floating offshore wind auction framework for Atlantic sites off Viana do Castelo.",
+      "category": "policy",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-12-portugal-auction"
+      ],
+      "sourceUrl": "https://www.northsouthhq.com/articles/portugal-floating-offshore-wind-nordic-energy.html",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Market entry"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-12-05",
+      "title": "NoviOcean promotes hybrid ocean platform",
+      "oneLineSummary": "NoviOcean described a floating ocean-energy platform concept combining wave, wind, and solar generation.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-12-noviocean-hybrid"
+      ],
+      "sourceUrl": "https://www.intelligentliving.co/noviocean-hybrid-wave-wind-solar-power/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Marine energy"
+      ]
+    }
+  ]
+}

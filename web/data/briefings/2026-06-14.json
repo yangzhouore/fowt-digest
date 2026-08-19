@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-06-08",
+  "weekEnd": "2026-06-14",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-06-14-france-ao10",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "France prepares AO10 offshore wind tender under 10 GW programme",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#france-ao10",
+      "publishedDate": "2026-06-15",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "France prepared AO10 tender activity covering fixed and floating offshore wind projects across multiple sea areas.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-14-germany-reform",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Germany advances offshore wind reform plans under Federal Council resolution",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#germany-offshore-reform",
+      "publishedDate": "2026-06-15",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Germany advanced offshore wind auction and regulatory reform discussions through a Federal Council resolution.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-14-mps-award",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Marine Power Systems wins 2026 Xiongan International Green Energy Technology Award",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#marine-power-systems-award",
+      "publishedDate": "2026-06-15",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Marine Power Systems won a green energy technology award for its PelaFlex GS deep-water floating wind platform.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-14-uk-japan",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "UK and Japan target 5.9 GW of floating offshore wind development",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#uk-japan-floating",
+      "publishedDate": "2026-06-16",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "The UK and Japan prepared cooperation covering 5.9 GW of floating offshore wind projects including Ossian, Green Volt, and Erebus.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-14-acoustiscan",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Acoustiscan system enables early detection of electrical faults in offshore wind equipment",
+      "sourceUrl": "https://test.windtech-international.com/product-news/products-news/blog#acoustiscan",
+      "publishedDate": "2026-06-17",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Omexom and Seven Bel developed Acoustiscan to detect partial discharges in offshore wind electrical equipment.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-06-14-01",
+      "title": "France prepares AO10 tender with floating sites",
+      "oneLineSummary": "France prepared AO10 tender activity covering fixed and floating offshore wind projects across multiple sea areas.",
+      "category": "policy",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-14-france-ao10"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#france-ao10",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating pipeline"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-14-02",
+      "title": "Germany advances offshore wind reform",
+      "oneLineSummary": "Germany advanced offshore wind auction and regulatory reform discussions through a Federal Council resolution.",
+      "category": "policy",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-14-germany-reform"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#germany-offshore-reform",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Auction design"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-14-03",
+      "title": "Marine Power Systems wins platform award",
+      "oneLineSummary": "Marine Power Systems won a green energy technology award for its PelaFlex GS deep-water floating wind platform.",
+      "category": "technology",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-06-14-mps-award"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#marine-power-systems-award",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Deep-water wind"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-14-04",
+      "title": "UK and Japan target 5.9 GW floating wind",
+      "oneLineSummary": "The UK and Japan prepared cooperation covering 5.9 GW of floating offshore wind projects including Ossian, Green Volt, and Erebus.",
+      "category": "policy",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-14-uk-japan"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#uk-japan-floating",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Project pipeline"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-14-05",
+      "title": "Acoustiscan targets offshore electrical faults",
+      "oneLineSummary": "Omexom and Seven Bel developed Acoustiscan to detect partial discharges in offshore wind electrical equipment.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-14-acoustiscan"
+      ],
+      "sourceUrl": "https://test.windtech-international.com/product-news/products-news/blog#acoustiscan",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Condition monitoring"
+      ]
+    }
+  ]
+}

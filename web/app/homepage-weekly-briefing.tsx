@@ -6,7 +6,6 @@ import type { DigestEdition } from "../data/digest-adapter";
 import type { EngineeringBriefing } from "../data/engineering-briefing-adapter";
 
 const HOMEPAGE_PAPER_LIMIT = 5;
-const TITLE_CHARACTER_LIMIT = 100;
 const BROAD_TOPIC_TAGS = new Set([
   "computer science",
   "engineering",
@@ -141,7 +140,6 @@ export function HomepageWeeklyBriefing({
           <ol className="homepage-paper-list">
             {previewPapers.map((paper) => {
               const keywords = homepageKeywords(paper.title, paper.topicTags);
-              const focus = homepageResearchFocus(keywords);
 
               return (
                 <li key={paper.id}>
@@ -153,10 +151,10 @@ export function HomepageWeeklyBriefing({
                       {keywords.length > 0 ? (
                         <p className="homepage-keywords">{keywords.join(" / ")}</p>
                       ) : null}
-                      <h3>{homepageTitle(paper.title)}</h3>
-                      {focus ? (
-                        <p className="homepage-research-focus">Research focus: {focus}</p>
-                      ) : null}
+                      <h3>{paper.title}</h3>
+                      <p className="homepage-paper-source">
+                        {paper.publicationSource}
+                      </p>
                     </article>
                   </Link>
                 </li>
@@ -185,10 +183,6 @@ export function HomepageWeeklyBriefing({
   );
 }
 
-function homepageTitle(title: string): string {
-  return truncateText(title.replace(/\s+/g, " ").trim(), TITLE_CHARACTER_LIMIT);
-}
-
 // Prefer deterministic FOWT concepts for Homepage scanning; fall back to concise source topic tags.
 function homepageKeywords(title: string, topicTags: string[]): string[] {
   const sourceText = `${title} ${topicTags.join(" ")}`.toLowerCase();
@@ -210,14 +204,6 @@ function normaliseTopicTag(tag: string): string {
 function isDisplayTopicTag(tag: string): boolean {
   const key = tag.toLowerCase();
   return Boolean(tag) && !BROAD_TOPIC_TAGS.has(key) && tag.length <= 34;
-}
-
-function homepageResearchFocus(keywords: string[]): string | null {
-  if (keywords.length === 0) {
-    return null;
-  }
-
-  return keywords.slice(0, 2).join(" / ");
 }
 
 function compactDateRange(dateRange: string): string {
@@ -256,16 +242,4 @@ function uniqueFirst(values: string[], limit: number): string[] {
   }
 
   return selected;
-}
-
-function truncateText(value: string, limit: number): string {
-  if (value.length <= limit) {
-    return value;
-  }
-
-  const shortened = value.slice(0, limit + 1);
-  const lastSpace = shortened.lastIndexOf(" ");
-  const cutAt = lastSpace > Math.floor(limit * 0.7) ? lastSpace : limit;
-
-  return `${value.slice(0, cutAt).trim()}...`;
 }

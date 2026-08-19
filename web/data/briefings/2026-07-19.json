@@ -1,39 +1,160 @@
 {
-    "schemaVersion":  "engineering-briefing.v1",
-    "weekStart":  "2026-07-13",
-    "weekEnd":  "2026-07-19",
-    "generatedAt":  "2026-08-11T17:00:00Z",
-    "sourceRecords":  [
-                          {
-                              "sourceRecordId":  "eng-src-2026-07-19-principle-power-om",
-                              "sourceType":  "industry_news",
-                              "publisher":  "offshoreWIND.biz",
-                              "title":  "Principle Power Wins O\u0026M Contract for EFGL Floating Foundations",
-                              "sourceUrl":  "https://www.offshorewind.biz/2026/07/15/principle-power-wins-om-contract-for-efgl-floating-foundations/",
-                              "publishedDate":  "2026-07-15",
-                              "retrievedAt":  "2026-08-11T17:00:00Z",
-                              "collectionMethod":  "manual",
-                              "sourceText":  "OffshoreWIND.biz reported that Principle Power was awarded the O\u0026M support contract for the 30 MW EFGL project in the French Mediterranean. The source states the scope covers integrated O\u0026M services for three WindFloat foundations, including inspection, maintenance and repair, remote monitoring, data analytics and engineering support.",
-                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
-                          }
-                      ],
-    "briefingItems":  [
-                          {
-                              "briefingItemId":  "eng-item-2026-07-19-01",
-                              "title":  "Principle Power wins EFGL foundation O\u0026M work",
-                              "oneLineSummary":  "Principle Power was awarded O\u0026M support for the three WindFloat foundations at EFGL.",
-                              "category":  "project",
-                              "sourceRecordIds":  [
-                                                      "eng-src-2026-07-19-principle-power-om"
-                                                  ],
-                              "sourceUrl":  "https://www.offshorewind.biz/2026/07/15/principle-power-wins-om-contract-for-efgl-floating-foundations/",
-                              "explanation":  "The source identifies the O\u0026M scope for operating floating foundations at a live pilot project.",
-                              "whyItMatters":  null,
-                              "engineeringTopics":  [
-                                                        "O\u0026M",
-                                                        "WindFloat",
-                                                        "Remote monitoring"
-                                                    ]
-                          }
-                      ]
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-07-13",
+  "weekEnd": "2026-07-19",
+  "generatedAt": "2026-08-11T17:00:00Z",
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-07-19-principle-power-om",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Principle Power Wins O&M Contract for EFGL Floating Foundations",
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/15/principle-power-wins-om-contract-for-efgl-floating-foundations/",
+      "publishedDate": "2026-07-15",
+      "retrievedAt": "2026-08-11T17:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "OffshoreWIND.biz reported that Principle Power was awarded the O&M support contract for the 30 MW EFGL project in the French Mediterranean. The source states the scope covers integrated O&M services for three WindFloat foundations, including inspection, maintenance and repair, remote monitoring, data analytics and engineering support.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-19-shi-fawt",
+      "sourceType": "company_announcement",
+      "publisher": "Sumitomo Heavy Industries",
+      "title": "Experimental Floating Axis Wind Turbine installed in a bay of Iki City, Nagasaki",
+      "sourceUrl": "https://www.shi.co.jp/english/info/2026/6kgpsq00000043cd.html",
+      "publishedDate": "2026-07-15",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Sumitomo Heavy Industries announced that the FAWT Consortium installed an experimental Floating Axis Wind Turbine in Iki City, Nagasaki, with offshore demonstration beginning in July 2026.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-19-efgl-full-power",
+      "sourceType": "company_announcement",
+      "publisher": "Ocean Winds",
+      "title": "Ocean Winds reaches full power from its first floating offshore wind project in France",
+      "sourceUrl": "https://www.webwire.com/ViewPressRel.asp?aId=357618",
+      "publishedDate": "2026-07-14",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Ocean Winds announced that the 30 MW EFGL floating wind farm reached full power, with three 10 MW turbines on semi-submersible floaters off the Occitanie coast.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-19-flylogix-moray-flowpark",
+      "sourceType": "industry_news",
+      "publisher": "Wind Systems Magazine",
+      "title": "Flylogix to conduct surveys for planned Scotland wind facility",
+      "sourceUrl": "https://www.windsystemsmag.com/flylogix-to-conduct-surveys-for-planned-scotland-wind-facility/",
+      "publishedDate": "2026-07-14",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Wind Systems Magazine reported that Flylogix will carry out digital aerial surveys for the proposed Moray FLOW-Park, a temporary wet storage facility for floating offshore wind foundations.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-19-celtic-sea-forum",
+      "sourceType": "industry_news",
+      "publisher": "Offshore Engineer",
+      "title": "Celtic Sea Developers Form Floating Wind Forum",
+      "sourceUrl": "https://www.oedigital.com/amp/news/541194-celtic-sea-developers-form-floating-wind-forum",
+      "publishedDate": "2026-07-14",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Offshore Engineer reported that Celtic Sea floating wind developers formed a forum to coordinate skills, supply chain, investment, environmental protection, and social value across projects.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-07-19-01",
+      "title": "Principle Power wins EFGL foundation O&M work",
+      "oneLineSummary": "Principle Power was awarded O&M support for the three WindFloat foundations at EFGL.",
+      "category": "project",
+      "sourceRecordIds": [
+        "eng-src-2026-07-19-principle-power-om"
+      ],
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/15/principle-power-wins-om-contract-for-efgl-floating-foundations/",
+      "explanation": "The source identifies the O&M scope for operating floating foundations at a live pilot project.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "O&M",
+        "WindFloat",
+        "Remote monitoring"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-19-02",
+      "title": "Japanese FAWT demonstrator begins offshore test phase",
+      "oneLineSummary": "A Japanese consortium installed an experimental Floating Axis Wind Turbine in Iki City, Nagasaki, with offshore demonstration starting in July.",
+      "category": "technology",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-07-19-shi-fawt"
+      ],
+      "sourceUrl": "https://www.shi.co.jp/english/info/2026/6kgpsq00000043cd.html",
+      "explanation": "The source identifies a floating-axis turbine demonstrator aimed at low-cost domestic offshore wind technology.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating Axis Wind Turbine",
+        "Demonstrator",
+        "Japan"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-19-03",
+      "title": "EFGL floating wind farm reaches full power",
+      "oneLineSummary": "Ocean Winds announced that the 30 MW EFGL floating wind farm reached full power off France.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-07-19-efgl-full-power"
+      ],
+      "sourceUrl": "https://www.webwire.com/ViewPressRel.asp?aId=357618",
+      "explanation": "The source identifies full-power operation for three 10 MW turbines on semi-submersible floaters in France.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Semi-submersible floater",
+        "Operations",
+        "France"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-19-04",
+      "title": "Flylogix surveys Moray FLOW-Park wet storage site",
+      "oneLineSummary": "Flylogix will conduct aerial surveys for Moray FLOW-Park, a proposed temporary wet storage facility for floating wind foundations.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-07-19-flylogix-moray-flowpark"
+      ],
+      "sourceUrl": "https://www.windsystemsmag.com/flylogix-to-conduct-surveys-for-planned-scotland-wind-facility/",
+      "explanation": "The source connects environmental consenting and digital survey work to floating foundation wet storage and assembly logistics.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Wet storage",
+        "Aerial survey",
+        "Foundation logistics"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-19-05",
+      "title": "Celtic Sea developers form floating wind forum",
+      "oneLineSummary": "Celtic Sea floating wind developers formed a forum to coordinate supply chain, skills, investment, environmental protection, and social value.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-07-19-celtic-sea-forum"
+      ],
+      "sourceUrl": "https://www.oedigital.com/amp/news/541194-celtic-sea-developers-form-floating-wind-forum",
+      "explanation": "The source identifies a coordination mechanism across multiple floating wind projects in the Celtic Sea.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Celtic Sea",
+        "Supply chain",
+        "Developer coordination"
+      ]
+    }
+  ],
+  "checkedResultCount": 11
 }

@@ -1,11 +1,23 @@
+import briefing20260816Json from "./briefings/2026-08-16.json";
 import briefing20260809Json from "./briefings/2026-08-09.json";
+import briefing20260802Json from "./briefings/2026-08-02.json";
 import briefing20260726Json from "./briefings/2026-07-26.json";
 import briefing20260719Json from "./briefings/2026-07-19.json";
 import briefing20260712Json from "./briefings/2026-07-12.json";
+import briefing20260705Json from "./briefings/2026-07-05.json";
 import briefing20260628Json from "./briefings/2026-06-28.json";
 import briefing20260621Json from "./briefings/2026-06-21.json";
+import briefing20260614Json from "./briefings/2026-06-14.json";
+import briefing20260607Json from "./briefings/2026-06-07.json";
 import briefing20260531Json from "./briefings/2026-05-31.json";
+import briefing20260524Json from "./briefings/2026-05-24.json";
+import briefing20260517Json from "./briefings/2026-05-17.json";
 import briefing20260510Json from "./briefings/2026-05-10.json";
+import briefing20260503Json from "./briefings/2026-05-03.json";
+import briefing20260426Json from "./briefings/2026-04-26.json";
+import briefing20260419Json from "./briefings/2026-04-19.json";
+import briefing20260412Json from "./briefings/2026-04-12.json";
+import briefing20260405Json from "./briefings/2026-04-05.json";
 import briefing20260308Json from "./briefings/2026-03-08.json";
 import briefing20260201Json from "./briefings/2026-02-01.json";
 import briefing20260111Json from "./briefings/2026-01-11.json";
@@ -48,7 +60,7 @@ type EngineeringRegion =
   | "Asia-Pacific"
   | "North America"
   | "Africa"
-  | "Global";
+  | "Unspecified";
 
 type PipelineEngineeringSourceRecord = {
   sourceRecordId: string;
@@ -81,6 +93,7 @@ type PipelineEngineeringBriefing = {
   weekStart: string;
   weekEnd: string;
   generatedAt: string;
+  checkedResultCount?: number;
   sourceRecords: PipelineEngineeringSourceRecord[];
   briefingItems: PipelineEngineeringBriefingItem[];
 };
@@ -115,20 +128,33 @@ export type EngineeringBriefing = {
   slug: string;
   dateRange: string;
   itemCount: number;
+  checkedResultCount: number;
   generatedAt: string;
   sourceRecords: EngineeringSourceRecord[];
   items: EngineeringBriefingItem[];
 };
 
 const engineeringBriefingJsonFiles = [
+  briefing20260816Json,
   briefing20260809Json,
+  briefing20260802Json,
   briefing20260726Json,
   briefing20260719Json,
   briefing20260712Json,
+  briefing20260705Json,
   briefing20260628Json,
   briefing20260621Json,
+  briefing20260614Json,
+  briefing20260607Json,
   briefing20260531Json,
+  briefing20260524Json,
+  briefing20260517Json,
   briefing20260510Json,
+  briefing20260503Json,
+  briefing20260426Json,
+  briefing20260419Json,
+  briefing20260412Json,
+  briefing20260405Json,
   briefing20260308Json,
   briefing20260201Json,
   briefing20260111Json,
@@ -180,6 +206,8 @@ function adaptEngineeringBriefing(
     slug: briefing.weekEnd,
     dateRange: formatDateRange(briefing.weekStart, briefing.weekEnd),
     itemCount: briefing.briefingItems.length,
+    checkedResultCount:
+      briefing.checkedResultCount ?? briefing.sourceRecords.length,
     generatedAt: briefing.generatedAt,
     sourceRecords,
     items: briefing.briefingItems.map((item, index) => ({

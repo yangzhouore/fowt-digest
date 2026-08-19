@@ -74,6 +74,10 @@ export default async function EngineeringBriefingPage({
             <dt>Source records</dt>
             <dd>{briefing.sourceRecords.length}</dd>
           </div>
+          <div>
+            <dt>Checked results</dt>
+            <dd>{briefing.checkedResultCount}</dd>
+          </div>
         </dl>
       </section>
 

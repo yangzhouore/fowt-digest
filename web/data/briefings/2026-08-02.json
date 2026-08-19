@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-07-27",
+  "weekEnd": "2026-08-02",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-08-02-california-investigates",
+      "sourceType": "industry_news",
+      "publisher": "Associated Press",
+      "title": "California investigates Trump administration deal to end an offshore wind project",
+      "sourceUrl": "https://apnews.com/article/be65157a407733658be97a9de8978a02",
+      "publishedDate": "2026-08-01",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "California investigated federal agreements that paid offshore wind developers to relinquish offshore wind leases.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-02-bluepoint-goldenstate",
+      "sourceType": "industry_news",
+      "publisher": "Associated Press",
+      "title": "Trump administration to pay 2 more companies to walk away from US offshore wind leases",
+      "sourceUrl": "https://apnews.com/article/02a1fa04b750809bbe035a70256c734d",
+      "publishedDate": "2026-07-31",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "The US administration agreed payments with Bluepoint Wind and Golden State Wind to terminate offshore wind leases.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-02-tgs-report-outlook",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "TGS 4C report points to improving long-term outlook for offshore wind despite near-term challenges",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#tgs-4c-outlook",
+      "publishedDate": "2026-07-30",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "TGS 4C reported a more positive long-term offshore wind outlook despite near-term project and supply-chain challenges.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-02-us-dod-freeze",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "US renewable groups sue Department of Defense over wind project review freeze",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#dod-review-freeze",
+      "publishedDate": "2026-07-30",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Renewable energy groups challenged a US Department of Defense wind project review freeze.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-02-offshore-vessel-pressure",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "TGS 4C reports highlight offshore wind vessel and cable supply chain pressures",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-8#vessel-cable-pressure",
+      "publishedDate": "2026-07-30",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "TGS 4C highlighted offshore wind vessel and cable supply-chain constraints as delivery risks.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-08-02-01",
+      "title": "California probes offshore wind lease exit deal",
+      "oneLineSummary": "California investigated federal agreements that paid offshore wind developers to relinquish offshore wind leases.",
+      "category": "policy",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-08-02-california-investigates"
+      ],
+      "sourceUrl": "https://apnews.com/article/be65157a407733658be97a9de8978a02",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "US offshore wind"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-02-02",
+      "title": "US pays two developers to exit offshore leases",
+      "oneLineSummary": "The US administration agreed payments with Bluepoint Wind and Golden State Wind to terminate offshore wind leases.",
+      "category": "policy",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-08-02-bluepoint-goldenstate"
+      ],
+      "sourceUrl": "https://apnews.com/article/02a1fa04b750809bbe035a70256c734d",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Project pipeline"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-02-03",
+      "title": "TGS 4C notes long-term offshore wind outlook",
+      "oneLineSummary": "TGS 4C reported a more positive long-term offshore wind outlook despite near-term project and supply-chain challenges.",
+      "category": "policy",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-08-02-tgs-report-outlook"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#tgs-4c-outlook",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Supply chain"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-02-04",
+      "title": "Renewables groups challenge US wind review freeze",
+      "oneLineSummary": "Renewable energy groups challenged a US Department of Defense wind project review freeze.",
+      "category": "policy",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-08-02-us-dod-freeze"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#dod-review-freeze",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Policy risk"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-02-05",
+      "title": "TGS 4C highlights vessel and cable pressure",
+      "oneLineSummary": "TGS 4C highlighted offshore wind vessel and cable supply-chain constraints as delivery risks.",
+      "category": "supply_chain",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-08-02-offshore-vessel-pressure"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-8#vessel-cable-pressure",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Cable supply"
+      ]
+    }
+  ]
+}

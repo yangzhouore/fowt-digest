@@ -1,0 +1,322 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260531_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-05-25",
+  "weekEnd": "2026-05-31",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 46,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_1016_j_energy_2026_141528",
+      "title": "Wave-dependent predictability of floating offshore wind turbine responses: A BiLSTM study based on fully coupled CFD simulations",
+      "authors": [
+        "Rizwan Haider",
+        "Wei Shi",
+        "Zaibin Lin",
+        "Tien  Anh Tran",
+        "Ji Wu",
+        "Xin Li"
+      ],
+      "abstract": null,
+      "publicationSource": "Energy",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-30",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.energy.2026.141528",
+      "sourceUrl": "https://doi.org/10.1016/j.energy.2026.141528",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_energy_2026_141528",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_energy_2026_141528",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.energy.2026.141528",
+        "openalexId": "https://openalex.org/W7162855832"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260531_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_ijmecsci_2026_111766",
+      "title": "Tuned liquid dampers for vibration control of floating wind turbines",
+      "authors": [
+        "Hongyun Zou",
+        "Christian Elkjær Høeg",
+        "Zili Zhang"
+      ],
+      "abstract": null,
+      "publicationSource": "International Journal of Mechanical Sciences",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-25",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.ijmecsci.2026.111766",
+      "sourceUrl": "https://doi.org/10.1016/j.ijmecsci.2026.111766",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Control",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_ijmecsci_2026_111766",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_ijmecsci_2026_111766",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Control",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.ijmecsci.2026.111766",
+        "openalexId": "https://openalex.org/W7162287188"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260531_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1201_9781042001194_154",
+      "title": "Dynamic characteristics of floating offshore wind turbines",
+      "authors": [
+        "P. Tahmasebi",
+        "C. Guedes Soares",
+        "H. Zhang"
+      ],
+      "abstract": "Floating offshore wind turbines enable energy harvesting at deep-water sites but exhibit complex coupled responses driven by platform hydrodynamics, mooring behaviour, and aeroelastic loading under combined wind-wave excitation. This study presents a comparative time-domain simulation study of semi-submersible, spar-type, and barge-type floating offshore wind turbines supporting the NREL 5-MW reference turbine. Six representative operational load cases are analysed, covering variations in wind speed, wave height, and peak period. Platform motions are examined in both the time and frequency domains, followed by an assessment of tower-base bending moments obtained from fully coupled aero-hydro-servo-elastic simulations. An equivalent bending-moment metric (M eq ) is used to evaluate damage equivalent loads (DELs) and relate fatigue demand to platform motion characteristics. The results demonstrate clear differences in global motion response, structural loading, and damage-equivalent load behaviour between the three concepts, highlighting the influence of platform stability mechanisms and hydrodynamic characteristics under realistic offshore operating conditions.",
+      "publicationSource": null,
+      "publicationType": "journal",
+      "publishedDate": "2026-05-26",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1201/9781042001194-154",
+      "sourceUrl": "https://doi.org/10.1201/9781042001194-154",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1201_9781042001194_154",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1201_9781042001194_154",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1201/9781042001194-154",
+        "openalexId": "https://openalex.org/W7164511057"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260531_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1201_9781042001194_149",
+      "title": "Learning to control floating offshore wind turbines with ANFIS",
+      "authors": [
+        "E. Muñoz-Palomeque",
+        "M. Santos",
+        "E. Sierra-García"
+      ],
+      "abstract": "This paper describes the feasibility of using an Adaptive Neuro-Fuzzy Inference System (ANFIS) to model the controlled dynamic response of a Floating Offshore Wind Turbine (FOWT) for Maximum Power Point Tracking (MPPT). The ANFIS is trained with data generated from turbine operation under a realistic scenario using a traditional control scheme combining Direct Speed Control logic and a PID controller. The goal is to evaluate ANFIS’s ability to reproduce the reference controller’s actions with limited information. Performance is validated by comparing energy capture and precision response under ANFIS with the baseline controller. Accuracy is quantified using Mean Absolute Error and Root Mean Square Error. Results show that ANFIS can replicate conventional controller behavior in MPPT operation with high fidelity in energy production. This demonstrates the potential of neuro-fuzzy approaches for controlling complex, nonlinear systems like FOWTs and lays the groundwork for future online-learning or hybrid adaptive control strategies.",
+      "publicationSource": null,
+      "publicationType": "journal",
+      "publishedDate": "2026-05-26",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1201/9781042001194-149",
+      "sourceUrl": "https://doi.org/10.1201/9781042001194-149",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Control",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1201_9781042001194_149",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1201_9781042001194_149",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Control",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1201/9781042001194-149",
+        "openalexId": "https://openalex.org/W7164488790"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260531_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_openalex_w7162605502",
+      "title": "FLOATBench: A Dataset and Benchmark for Floating Offshore Wind Turbine Tower Fatigue",
+      "authors": [
+        "João Alves Ribeiro",
+        "Bruno Alves Ribeiro",
+        "Francisco Pimenta",
+        "Sérgio M. O. Tavares",
+        "Faez Ahmed"
+      ],
+      "abstract": "Most of the world's offshore wind resource lies in waters too deep for fixed-bottom foundations, making floating offshore wind turbines (FOWTs) essential for deep-water deployment. As the industry scales toward $22$ MW class designs, tower fatigue becomes increasingly critical because larger structures amplify the coupled aero-hydro-servo-elastic loads induced by continuous wind and wave excitation. Accurate fatigue-damage prediction is therefore central to certification, design optimization, and cost reduction. Yet the field lacks a shared surrogate benchmark: studies report different simulations, splits, and metrics, making methods difficult to compare. We present FLOATBench, a public tabular benchmark with $582{,}120$ per-section fatigue-damage labels across three $22$ MW FOWT tower geometries, derived from $19{,}404$ high-fidelity OpenFAST simulations across the three towers ($6{,}468$ per tower: $1{,}078$ aligned wind/wave operating points $\\times$ six turbulence seeds), labeled at $30$ cross-sections per tower. FLOATBench includes a regime-aware alpha-shape partition of the joint wind/wave operating envelope, stratifying test points into in-train, interpolation, and extrapolation regimes. It is paired with a reproducible evaluation harness covering three protocol levels: random validation (E1), within-tower regime-aware evaluation (E2), and cross-tower transfer (E3). The regime-aware protocol reveals rank shifts between global and extrapolation performance that random-split leaderboards cannot detect. To the authors' knowledge, FLOATBench is the first FOWT fatigue benchmark for tabular surrogate modeling, and offers an evaluation protocol that generalizes to engineering surrogates defined over physical operating envelopes. Dataset and code available at: https://github.com/Joao97ribeiro/FLOATBench.",
+      "publicationSource": "arXiv (Cornell University)",
+      "publicationType": "preprint",
+      "publishedDate": "2026-05-25",
+      "indexedDate": null,
+      "doi": null,
+      "sourceUrl": "https://arxiv.org/abs/2605.25717",
+      "openAccessStatus": "green",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_openalex_w7162605502",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_openalex_w7162605502",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": null,
+        "openalexId": "https://openalex.org/W7162605502"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260531_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_48550_arxiv_2605_25717",
+      "title": "FLOATBench: A Dataset and Benchmark for Floating Offshore Wind Turbine Tower Fatigue",
+      "authors": [
+        "João Henrique Ribeiro",
+        "Bruno Alves Ribeiro",
+        "Francisco Pimenta",
+        "Sérgio M. O. Tavares",
+        "Faez Ahmed"
+      ],
+      "abstract": "Most of the world's offshore wind resource lies in waters too deep for fixed-bottom foundations, making floating offshore wind turbines (FOWTs) essential for deep-water deployment. As the industry scales toward $22$ MW class designs, tower fatigue becomes increasingly critical because larger structures amplify the coupled aero-hydro-servo-elastic loads induced by continuous wind and wave excitation. Accurate fatigue-damage prediction is therefore central to certification, design optimization, and cost reduction. Yet the field lacks a shared surrogate benchmark: studies report different simulations, splits, and metrics, making methods difficult to compare. We present FLOATBench, a public tabular benchmark with $582{,}120$ per-section fatigue-damage labels across three $22$ MW FOWT tower geometries, derived from $19{,}404$ high-fidelity OpenFAST simulations across the three towers ($6{,}468$ per tower: $1{,}078$ aligned wind/wave operating points $\\times$ six turbulence seeds), labeled at $30$ cross-sections per tower. FLOATBench includes a regime-aware alpha-shape partition of the joint wind/wave operating envelope, stratifying test points into in-train, interpolation, and extrapolation regimes. It is paired with a reproducible evaluation harness covering three protocol levels: random validation (E1), within-tower regime-aware evaluation (E2), and cross-tower transfer (E3). The regime-aware protocol reveals rank shifts between global and extrapolation performance that random-split leaderboards cannot detect. To the authors' knowledge, FLOATBench is the first FOWT fatigue benchmark for tabular surrogate modeling, and offers an evaluation protocol that generalizes to engineering surrogates defined over physical operating envelopes. Dataset and code available at: https://github.com/Joao97ribeiro/FLOATBench.",
+      "publicationSource": "arXiv (Cornell University)",
+      "publicationType": "preprint",
+      "publishedDate": "2026-05-25",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.48550/arxiv.2605.25717",
+      "sourceUrl": "https://doi.org/10.48550/arxiv.2605.25717",
+      "openAccessStatus": "green",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_48550_arxiv_2605_25717",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_48550_arxiv_2605_25717",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.48550/arxiv.2605.25717",
+        "openalexId": "https://openalex.org/W7162407136"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260531_006"
+      ],
+      "selected": true
+    }
+  ]
+}

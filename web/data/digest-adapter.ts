@@ -1,9 +1,23 @@
+import digest20260816Json from "./digests/2026-08-16.json";
 import digest20260809Json from "./digests/2026-08-09.json";
 import digest20260802Json from "./digests/2026-08-02.json";
 import digest20260726Json from "./digests/2026-07-26.json";
 import digest20260719Json from "./digests/2026-07-19.json";
+import digest20260712Json from "./digests/2026-07-12.json";
+import digest20260705Json from "./digests/2026-07-05.json";
+import digest20260628Json from "./digests/2026-06-28.json";
 import digest20260621Json from "./digests/2026-06-21.json";
+import digest20260614Json from "./digests/2026-06-14.json";
+import digest20260607Json from "./digests/2026-06-07.json";
+import digest20260531Json from "./digests/2026-05-31.json";
+import digest20260524Json from "./digests/2026-05-24.json";
 import digest20260517Json from "./digests/2026-05-17.json";
+import digest20260510Json from "./digests/2026-05-10.json";
+import digest20260503Json from "./digests/2026-05-03.json";
+import digest20260426Json from "./digests/2026-04-26.json";
+import digest20260419Json from "./digests/2026-04-19.json";
+import digest20260412Json from "./digests/2026-04-12.json";
+import digest20260405Json from "./digests/2026-04-05.json";
 import digest20260315Json from "./digests/2026-03-15.json";
 import digest20260118Json from "./digests/2026-01-18.json";
 import digest20251221Json from "./digests/2025-12-21.json";
@@ -25,6 +39,7 @@ type PipelineDigest = {
   weekStart: string;
   weekEnd: string;
   generatedAt: string;
+  checkedResultCount?: number;
   selectedPapers: PipelinePaper[];
 };
 
@@ -72,6 +87,7 @@ export type DigestEdition = {
   slug: string;
   dateRange: string;
   selectedPaperCount: number;
+  checkedResultCount: number;
   generatedAt: string;
   introduction: string;
   papers: DigestPaper[];
@@ -83,12 +99,26 @@ export type DigestPaperResult = {
 };
 
 const digestJsonFiles = [
+  digest20260816Json,
   digest20260809Json,
   digest20260802Json,
   digest20260726Json,
   digest20260719Json,
+  digest20260712Json,
+  digest20260705Json,
+  digest20260628Json,
   digest20260621Json,
+  digest20260614Json,
+  digest20260607Json,
+  digest20260531Json,
+  digest20260524Json,
   digest20260517Json,
+  digest20260510Json,
+  digest20260503Json,
+  digest20260426Json,
+  digest20260419Json,
+  digest20260412Json,
+  digest20260405Json,
   digest20260315Json,
   digest20260118Json,
   digest20251221Json,
@@ -156,6 +186,7 @@ function adaptDigest(digest: PipelineDigest): DigestEdition {
     slug: digest.weekEnd,
     dateRange,
     selectedPaperCount: digest.selectedPapers.length,
+    checkedResultCount: digest.checkedResultCount ?? digest.selectedPapers.length,
     generatedAt: digest.generatedAt,
     introduction: `Selected papers from the deterministic FOWT pipeline for ${dateRange}.`,
     papers: digest.selectedPapers.map(adaptPaper),

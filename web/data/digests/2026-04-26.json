@@ -1,0 +1,316 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260426_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-04-20",
+  "weekEnd": "2026-04-26",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 45,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_125634",
+      "title": "Blade shape optimization of floating offshore vertical axis wind turbines for maximum power coefficient under platform pitch motion",
+      "authors": [
+        "Jin Jiang",
+        "Weijie Zhang",
+        "Zhengyang Wang",
+        "Xiongbo Zheng"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-20",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.125634",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.125634",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Dynamic cable",
+        "Floating platform"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_125634",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_125634",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Dynamic cable",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.125634",
+        "openalexId": "https://openalex.org/W7154964659"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260426_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_4108_ew_12726",
+      "title": "Data-driven Predictive Individual Pitch Control for Floating Offshore Wind Turbines",
+      "authors": [
+        "Xiaosuo Luo",
+        "Sergey Gorbachev"
+      ],
+      "abstract": "A method of data-driven predictive individual pitch control is proposed for floating offshore wind turbine.It can reduce platform motion and asymmetric aerodynamic loads effectively. The method is designed, which includes model predictive controller with feedforward compensation, to generate the voltage control signal component required by the pitch mechanism. Firstly, the models of floating offshore wind turbines and wind turbine loads are presented. Then, a model predictive controller utilizes a data-driven methodology grounded in subspace identification for the nonlinear wind turbines. The feedforward compensation with observing past system responses and control experience reduces the external turbulence and enhances the accuracy of the control signal. The simulations indicate that the proposed strategy performs better in terms of reducing fatigue loads and improving the system's stability and reliability.",
+      "publicationSource": "EAI Endorsed Transactions on Energy Web",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-22",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.4108/ew.12726",
+      "sourceUrl": "https://doi.org/10.4108/ew.12726",
+      "openAccessStatus": "diamond",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Control",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_4108_ew_12726",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_4108_ew_12726",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Control",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.4108/ew.12726",
+        "openalexId": "https://openalex.org/W4413909019"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260426_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_openalex_w7158423283",
+      "title": "Surrogate-Based Co-Design Coupling Analysis for Floating Offshore Wind Turbines",
+      "authors": [
+        "Elena Fernández Bravo",
+        "Sunil Tamang",
+        "Yong Hoon Lee",
+        "James T. Allison"
+      ],
+      "abstract": "This work presents a design coupling analysis (DCA) framework to investigate the interactions among control and plant design variables in floating offshore wind turbine (FOWT) and to support the formulation of tractable control co-design (CCD) optimization strategies. DCA provides quantitative information that reveals the relationships and dependencies among design variables and to objective function, enabling improved design variable selection, identification of dominant variables that drive system interactions, and informed selection of optimization solution strategies. However, applying DCA to complex systems is challenging because the models used to describe their dynamics are computationally expensive, and constructing DCA information requires exhaustive model evaluations and optimizations. Here, a surrogate model of the FOWT system is employed to make the repeated model evaluations required for DCA computationally feasible. Using this framework, the bidirectional couplings between control and plant design variables, as well as the couplings among plant design variables, are estimated. The results reveal strong interactions among various design variables, and identify the most influential plant design variables affecting system performance. These insights guide the development of two DCA-based optimization strategies for large CCD problems: a sequential decomposition approach that preserves dominant design variable couplings while reducing problem size at each stage, and a reduced dimensional optimization approach that focuses on collectively the most influential variables. The results demonstrate that these strategies significantly reduce computational complexity while achieving solutions comparable to those obtained through full simultaneous optimization, demonstrating the value of DCA for understanding and solving complex design problems.",
+      "publicationSource": "arXiv (Cornell University)",
+      "publicationType": "preprint",
+      "publishedDate": "2026-04-24",
+      "indexedDate": null,
+      "doi": null,
+      "sourceUrl": "https://arxiv.org/abs/2604.22969",
+      "openAccessStatus": "green",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_openalex_w7158423283",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_openalex_w7158423283",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": null,
+        "openalexId": "https://openalex.org/W7158423283"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260426_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_48550_arxiv_2604_22969",
+      "title": "Surrogate-Based Co-Design Coupling Analysis for Floating Offshore Wind Turbines",
+      "authors": [
+        "Elena Fernández Bravo",
+        "Sunil Tamang",
+        "Yong Hoon Lee",
+        "James T. Allison"
+      ],
+      "abstract": "This work presents a design coupling analysis (DCA) framework to investigate the interactions among control and plant design variables in floating offshore wind turbine (FOWT) and to support the formulation of tractable control co-design (CCD) optimization strategies. DCA provides quantitative information that reveals the relationships and dependencies among design variables and to objective function, enabling improved design variable selection, identification of dominant variables that drive system interactions, and informed selection of optimization solution strategies. However, applying DCA to complex systems is challenging because the models used to describe their dynamics are computationally expensive, and constructing DCA information requires exhaustive model evaluations and optimizations. Here, a surrogate model of the FOWT system is employed to make the repeated model evaluations required for DCA computationally feasible. Using this framework, the bidirectional couplings between control and plant design variables, as well as the couplings among plant design variables, are estimated. The results reveal strong interactions among various design variables, and identify the most influential plant design variables affecting system performance. These insights guide the development of two DCA-based optimization strategies for large CCD problems: a sequential decomposition approach that preserves dominant design variable couplings while reducing problem size at each stage, and a reduced dimensional optimization approach that focuses on collectively the most influential variables. The results demonstrate that these strategies significantly reduce computational complexity while achieving solutions comparable to those obtained through full simultaneous optimization, demonstrating the value of DCA for understanding and solving complex design problems.",
+      "publicationSource": "arXiv (Cornell University)",
+      "publicationType": "preprint",
+      "publishedDate": "2026-04-24",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.48550/arxiv.2604.22969",
+      "sourceUrl": "https://doi.org/10.48550/arxiv.2604.22969",
+      "openAccessStatus": "green",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_48550_arxiv_2604_22969",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_48550_arxiv_2604_22969",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.48550/arxiv.2604.22969",
+        "openalexId": "https://openalex.org/W7157357249"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260426_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_awe_2026_100123",
+      "title": "Aeroelastic instability of ultra-long flexible blades in floating offshore wind turbines: A state-of-the-art review",
+      "authors": [
+        "Xintao Li",
+        "Yezan Cui",
+        "Lihe Shi",
+        "Yujiao Li",
+        "Bingshen Wang",
+        "Mingwei Ge",
+        "Weiwei Zhang"
+      ],
+      "abstract": "Large-scale floating offshore wind turbines (FOWTs) represent the core equipment for deep-sea wind energy exploitation. Under the combined influence of wind, waves and currents, the ultra-long flexible blades face significant aeroelastic challenges. The blade dynamic response is highly coupled with the floating platform’s motion, resulting in prominent three-dimensional unsteady flow and complex modal coupling, which pose substantial difficulties for stability analysis and system design. This paper provides a systematic review on the progress in aeroelastic analysis methods, instability mechanisms and suppression strategies for ultra-long flexible blades of FOWTs. First, the unsteady flow features near the wind turbine and their evolution under the influence of platform motion are elucidated. Second, the aero-structural-hydrodynamic coupled modeling methods are summarized, comparing the advantages and limitations of Blade Element Momentum (BEM) theory, Free Vortex Method (FVM), and Computational Fluid Dynamics (CFD). Furthermore, the induced mechanisms of typical aeroelastic phenomena, such as classical flutter, stall flutter, vortex-induced vibration (VIV), and turbulent buffeting, are analyzed with a focus on their unique characteristics within floating systems. Finally, strategies for suppressing the aeroelastic instability of blades based on structural or flow control are summarized, and future research directions, such as high-fidelity coupled simulation methods and intelligent vibration suppression technologies, are proposed.",
+      "publicationSource": "Advances in wind engineering.",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-24",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.awe.2026.100123",
+      "sourceUrl": "https://doi.org/10.1016/j.awe.2026.100123",
+      "openAccessStatus": "diamond",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_awe_2026_100123",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_awe_2026_100123",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.awe.2026.100123",
+        "openalexId": "https://openalex.org/W7155537664"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260426_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1007_s40722_026_00498_x",
+      "title": "Integrated framework for the analysis and application of chaotic characteristics in the dynamic response of a 15 MW floating wind turbine semi-submersible platform",
+      "authors": [
+        "Bo Qin",
+        "Ying Zhang"
+      ],
+      "abstract": null,
+      "publicationSource": "Journal of Ocean Engineering and Marine Energy",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-25",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1007/s40722-026-00498-x",
+      "sourceUrl": "https://doi.org/10.1007/s40722-026-00498-x",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1007_s40722_026_00498_x",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1007_s40722_026_00498_x",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1007/s40722-026-00498-x",
+        "openalexId": "https://openalex.org/W7155626105"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260426_006"
+      ],
+      "selected": true
+    }
+  ]
+}

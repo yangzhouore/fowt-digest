@@ -2,6 +2,7 @@
   "generatedAt": "2026-07-27T00:00:00Z",
   "runId": "run_20260727_072439_openalex",
   "schemaVersion": "pipeline-data-0.1",
+  "checkedResultCount": 42,
   "selectedPapers": [
     {
       "abstract": "This paper analyzes the fatigue loads of wind turbines in a floating offshore wind farm (FOWF) whose layout can be reconfigured. Such wind farm reconfiguration will be useful for wake effect mitigation in varying wind conditions. As an example FOWF, a farm with three 5 MW floating offshore wind turbine (FOWT) models on semi-submersible platforms, developed by the National Laboratory of the Rockies (NLR) (formerly the National Renewable Energy Laboratory (NREL)), is considered. Simulations for the example FOWF are conducted with various realistic turbulent wind and irregular wave conditions in the medium-fidelity wind farm simulator FAST.Farm. Using the simulation data, fatigue analysis is conducted by calculating the damage equivalent loads (DELs) using the computational tool MLife at critical components of the three FOWTs. The analysis results demonstrate the potential of reconfigurable FOWFs in not only increasing power outputs but also reducing fatigue loads for many critical components of turbines.",

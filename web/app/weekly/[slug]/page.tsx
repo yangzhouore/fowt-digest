@@ -65,6 +65,10 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
             <dd>{digest.selectedPaperCount}</dd>
           </div>
           <div>
+            <dt>Checked results</dt>
+            <dd>{digest.checkedResultCount}</dd>
+          </div>
+          <div>
             <dt>Generated</dt>
             <dd>{digest.generatedAt}</dd>
           </div>

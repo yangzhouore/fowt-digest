@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260628_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-06-22",
+  "weekEnd": "2026-06-28",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 59,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_1680_jmaen_25_00038",
+      "title": "From shallow to deep water: a review of scour and its impacts on floating wind turbines",
+      "authors": [
+        "Jingming Qi",
+        "Pengpeng He",
+        "Chen Wang",
+        "Wengang Qi",
+        "Xianda Shen",
+        "Fayun Liang"
+      ],
+      "abstract": "Due to the growing demand for renewable energy, offshore wind turbines are attracting increasing attention. Owing to limited space in nearshore waters, expansion into deep-sea areas has become an inevitable trend. However, offshore fixed-bottom wind turbines and deep-sea floating offshore wind turbines (FOWTs) differ fundamentally in their foundation systems. Existing insights indicate that the wind turbines are highly susceptible to scour induced by waves and currents. While substantial progress has been made in understanding scour and its impact on offshore wind turbines with monopile, jacket, and bucket foundations, scour mechanisms in deep-sea environments remain poorly understood due to the lack of field data and operational experience. FOWTs represent a key technology in harnessing deep-sea wind energy; however, their anchor foundations may face significant challenges from scour induced by undercurrents, including gravity currents and contour currents. This review systematically examines the potential scour mechanisms and performance evolution of FOWT anchors. Through integrated analysis of scour processes, sedimentary system interactions, and flume experiments, this study highlights the susceptibility of various anchor types to undercurrent-induced scour. This research highlights potential scour-related risks and emphasises the need for innovative design optimisations to improve anchor stability in dynamic deep-sea environments.",
+      "publicationSource": "Proceedings of the Institution of Civil Engineers - Maritime Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-22",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1680/jmaen.25.00038",
+      "sourceUrl": "https://doi.org/10.1680/jmaen.25.00038",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1680_jmaen_25_00038",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1680_jmaen_25_00038",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1680/jmaen.25.00038",
+        "openalexId": "https://openalex.org/W7165548715"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260628_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_126650",
+      "title": "Efficient dynamic response prediction of floating offshore wind turbines using harmonic balance constrained deep learning",
+      "authors": [
+        "Xinmeng Yang",
+        "Liqiang An"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-23",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.126650",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.126650",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_126650",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_126650",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.126650",
+        "openalexId": "https://openalex.org/W7165615552"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260628_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1007_978_981_95_7904_4_21",
+      "title": "Control Co-Design of the Floating Offshore Wind Turbine for the Lightweight Platform by a Classification Model-Enhanced Bayesian Optimization Framework",
+      "authors": [
+        "Jinbin Liang",
+        "Xianping Du",
+        "Xizheng Zhao"
+      ],
+      "abstract": null,
+      "publicationSource": "Mechanisms and machine science",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-24",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1007/978-981-95-7904-4_21",
+      "sourceUrl": "https://doi.org/10.1007/978-981-95-7904-4_21",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Control",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1007_978_981_95_7904_4_21",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1007_978_981_95_7904_4_21",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Control",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1007/978-981-95-7904-4_21",
+        "openalexId": "https://openalex.org/W7165756650"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260628_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_126654",
+      "title": "Dynamic modelling and response analysis of variable-length mooring cables for floating offshore wind turbines within the ALE-ANCF framework",
+      "authors": [
+        "Fei Chen",
+        "Jihua Fan",
+        "Junjie Huang",
+        "Yi Zhao",
+        "Sihan Jiang"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-26",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.126654",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.126654",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Mooring",
+        "Dynamic cable",
+        "Floating platform"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_126654",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_126654",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Mooring",
+          "Dynamic cable",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.126654",
+        "openalexId": "https://openalex.org/W7166082681"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260628_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_126744",
+      "title": "A hybrid VMD-TimesNet framework for short-term forecasting of mooring line tension in floating offshore wind turbines",
+      "authors": [
+        "Yulin Deng",
+        "Longbin Tao"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-27",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.126744",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.126744",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Mooring",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_126744",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_126744",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Mooring",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.126744",
+        "openalexId": "https://openalex.org/W7166097995"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260628_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_rineng_2026_111730",
+      "title": "Machine-learning-accelerated design exploration of floating offshore wind turbine mooring systems using OpenFAST-based parametric simulations",
+      "authors": [
+        "Sheikh Saimon Ahamed Abir",
+        "Md Refaiath Hossain",
+        "Sohanur Rahman",
+        "Tanvir Anam Tipu"
+      ],
+      "abstract": null,
+      "publicationSource": "Results in Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-26",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.rineng.2026.111730",
+      "sourceUrl": "https://doi.org/10.1016/j.rineng.2026.111730",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "OpenFAST",
+        "Mooring",
+        "Floating platform"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_rineng_2026_111730",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_rineng_2026_111730",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "OpenFAST",
+          "Mooring",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.rineng.2026.111730",
+        "openalexId": "https://openalex.org/W7166144941"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260628_006"
+      ],
+      "selected": true
+    }
+  ]
+}

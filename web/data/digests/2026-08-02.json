@@ -2,6 +2,7 @@
   "generatedAt": "2026-08-06T00:00:00Z",
   "runId": "run_20260806_090141_openalex",
   "schemaVersion": "pipeline-data-0.1",
+  "checkedResultCount": 48,
   "selectedPapers": [
     {
       "abstract": null,

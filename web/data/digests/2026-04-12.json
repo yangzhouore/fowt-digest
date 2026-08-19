@@ -1,0 +1,336 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260412_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-04-06",
+  "weekEnd": "2026-04-12",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 35,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_3390_jmse14080692",
+      "title": "A Time-Domain Methodology for Nominal Stress-Based Fatigue Assessment of Semi-Submersible Floating Wind Turbine Hulls at Different Offshore Sites",
+      "authors": [
+        "S. Gao",
+        "Shuaishuai Wang",
+        "Torgeir Moan",
+        "Zhen Gao"
+      ],
+      "abstract": "This paper deals with a time-domain methodology for nominal stress-based, screening-level fatigue assessment of semi-submersible FWT hulls, using a 10-MW semi-submersible FWT as a case study. A comprehensive procedure is outlined for both short- and long-term fatigue analysis, emphasizing the influence of wind and wave loads, as well as the probability distributions of environmental conditions. A fully coupled dynamic analysis of the FWT, employing a multibody floater, is conducted to compute internal global loads and time-domain nominal stresses on the hull structure. Short-term fatigue damage is evaluated across various wind-wave directions, environmental conditions, and random wind and wave samples, identifying critical loading scenarios. For long-term assessment, 10,182 one-hour time-domain simulations are conducted across three wind-wave directions for five offshore sites in the North Sea and one site in the China Sea. Fatigue damage at different locations of the hull structure is estimated for each offshore site, with results discussed in the context of screening-level nominal fatigue assessment and identification of fatigue-critical regions. The insights gained from this study form a basis for validating simplified and computationally efficient fatigue analysis procedures in an accompanying paper. Additionally, the findings support the design optimization of hull structures. Limitations of the present study are identified, pointing to future research directions aimed at mitigating fatigue risks.",
+      "publicationSource": "Journal of Marine Science and Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-08",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.3390/jmse14080692",
+      "sourceUrl": "https://doi.org/10.3390/jmse14080692",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_3390_jmse14080692",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_3390_jmse14080692",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/jmse14080692",
+        "openalexId": "https://openalex.org/W7151949985"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260412_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1002_we_70115",
+      "title": "Modeling, Validation, and Control of the IEA‐15 MW Reference Wind Turbine and VolturnUS‐S Platform",
+      "authors": [
+        "Dung Tran",
+        "Doyal Sarker",
+        "Kazi Mohsin",
+        "Saad Rahman",
+        "Md Sakif",
+        "Tri Ngo",
+        "Roger Bergua",
+        "Daniel Zalkind"
+      ],
+      "abstract": "ABSTRACT This paper presents the acausal modeling, validation, and control of floating offshore wind turbines (FOWTs). The model simulates the IEA‐15 MW reference turbine and the semi‐submersible VolturnUS‐S platform utilizing a Control‐oriented, Reconfigurable, and Acausal Floating Turbine Simulator (CRAFTS), which integrates the key coupled aero‐hydro‐elasto‐servo dynamics and is being developed by authors at the University of Central Florida. Verification and validation are conducted using numerical data from the industry‐standard simulation platform OpenFAST and experimental data from the Floating Offshore‐wind and Controls Advanced Laboratory (FOCAL) project, in which the authors were involved. Numerical results demonstrate the model's ability to qualitatively capture loads and responses across various load cases, highlighting the impact of the control system under different wind and wave conditions and opening new opportunities for optimizing FOWT designs. This paper provides wind turbine researchers with valuable insights into system characteristics, system frequencies, damping effects, and internal reaction forces, serving as a reference for future studies in FOWT modeling and control.",
+      "publicationSource": "Wind Energy",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-06",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1002/we.70115",
+      "sourceUrl": "https://doi.org/10.1002/we.70115",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Control",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1002_we_70115",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1002_we_70115",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Control",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1002/we.70115",
+        "openalexId": "https://openalex.org/W7150893182"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260412_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_weer_2026_100033",
+      "title": "LQG control of a 10 MW mass-optimized floating wind turbine",
+      "authors": [
+        "Ian Ammerman",
+        "Joseph Habib Dagher",
+        "Richard Kimball",
+        "Kimberly Huguenard",
+        "Andrew J. Goupee",
+        "Anthony Michael Viselli",
+        "Babak Hejrati"
+      ],
+      "abstract": "Designing effective control strategies for floating offshore wind turbines (FOWTs) requires holistic consideration of aerodynamics, structural dynamics, and platform design and performance. As floating systems increase in size and complexity, optimization plays a key role in the design and operation of these systems. In this paper, we demonstrate the role of optimization in the design and operation of a floating wind turbine through the design of a reference floating platform for the IEA 10 MW reference wind turbine and an accompanying optimal controller. First, a concrete semi-submersible floating platform for the IEA 10 MW reference turbine is designed via a previously presented optimization tool, meeting key performance criteria while satisfying structural requirements and minimizing structural mass. The system was then simulated in OpenFAST with a state-of-the-art gain-scheduled PI controller from the literature. To further enhance the system performance, a Linear Quadratic Gaussian (LQG) regulator was designed and implemented in OpenFAST. Two different tunings of the LQG controller were investigated to demonstrate how optimization can improve global system performance. The results showed that the optimal controller greatly improved power regulation with minimal to no impact on platform dynamics. Furthermore, it was shown that for a collective pitch control system, limited platform motion regulation can be achieved in extreme conditions at the expense of power regulation.",
+      "publicationSource": "Wind energy and engineering research.",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-06",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.weer.2026.100033",
+      "sourceUrl": "https://doi.org/10.1016/j.weer.2026.100033",
+      "openAccessStatus": "diamond",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Control",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_weer_2026_100033",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_weer_2026_100033",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Control",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.weer.2026.100033",
+        "openalexId": "https://openalex.org/W7150094070"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260412_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_ijmecsci_2026_111611",
+      "title": "Dynamic response of novel offshore wind turbine with shear-thickening-fluid damper",
+      "authors": [
+        "YJ Cui",
+        "C Liu",
+        "J Zhou",
+        "B.L. Wang",
+        "B.L. Wang",
+        "K.F. Wang",
+        "B Wang",
+        "B Wang"
+      ],
+      "abstract": null,
+      "publicationSource": "International Journal of Mechanical Sciences",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-11",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.ijmecsci.2026.111611",
+      "sourceUrl": "https://doi.org/10.1016/j.ijmecsci.2026.111611",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Wind turbine",
+        "Simulation"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_ijmecsci_2026_111611",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_ijmecsci_2026_111611",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Wind turbine",
+          "Simulation"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.ijmecsci.2026.111611",
+        "openalexId": "https://openalex.org/W7153438949"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260412_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1142_s0219455427503676",
+      "title": "An Energy-Based Equivalent Linearization Method for Non-Smooth Hydrodynamic Damping in Floating Offshore Wind Turbines",
+      "authors": [
+        "Xinmeng Yang",
+        "Lun He",
+        "Guangyu Liang",
+        "Zhihong Weng",
+        "Liqiang An",
+        "Zenghao Huang"
+      ],
+      "abstract": "Under the combined action of wind and waves, the hydrodynamic loads on a semi-submersible floating offshore wind turbine (FOWT) typically exhibit nonlinear damping characteristics, particularly non-smooth damping at zero velocity. This introduces significant challenges in steady-state response analysis, frequency-domain modeling, and parametric studies. To address this, this paper proposes an energy equivalent linearization method for non-smooth damping based on averaging and energy equivalence principles. Specifically, it equates the nonlinear drag terms in the Morrison equation to a linear damping form that depends on the amplitude, while maintaining the energy dissipation characteristics and amplitude dependence. First, a dynamic model of the semi-submersible FOWT is constructed, and the non-smooth damping form is derived. Next, the equivalent linearization method is introduced and validated under free and forced vibration conditions. Finally, the harmonic balance method is used to analytically solve the equivalent system equations, obtaining the steady-state response of the system. This study attempts to introduce analytical methods into the multi-physics coupled system of FOWT, aiming to provide simple and effective modeling tools for its dynamic analysis, frequency-domain modeling, and engineering applications.",
+      "publicationSource": "International Journal of Structural Stability and Dynamics",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-06",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1142/s0219455427503676",
+      "sourceUrl": "https://doi.org/10.1142/s0219455427503676",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1142_s0219455427503676",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1142_s0219455427503676",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1142/s0219455427503676",
+        "openalexId": "https://openalex.org/W7150843933"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260412_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_125458",
+      "title": "Numerical investigation on the structural response of a novel 10 MW tension-leg floating offshore wind turbine",
+      "authors": [
+        "Alessandro Cameli",
+        "Giulio Ferri",
+        "Enzo Marino",
+        "Michèle Serpilli"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-10",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.125458",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.125458",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_125458",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_125458",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.125458",
+        "openalexId": "https://openalex.org/W7153126698"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260412_006"
+      ],
+      "selected": true
+    }
+  ]
+}

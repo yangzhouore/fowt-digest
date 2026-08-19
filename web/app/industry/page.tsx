@@ -56,6 +56,11 @@ function conciseRole(company: IndustryCompany) {
   return roleLabels[company.roles[0]] ?? company.companyType;
 }
 
+function companyLogoUrl(company: IndustryCompany) {
+  const domain = new URL(company.website).hostname;
+  return `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
+}
+
 export default function IndustryPage() {
   return (
     <main>
@@ -89,41 +94,117 @@ export default function IndustryPage() {
       <section className="industry-system" aria-labelledby="industry-system-heading">
         <div className="industry-system-copy">
           <p className="eyebrow">FOWT System</p>
-          <h2 id="industry-system-heading">From project owner to grid connection.</h2>
+          <h2 id="industry-system-heading">Components first, supply chain second.</h2>
           <p>
-            The physical system is not a straight supplier chain: the floating
-            platform carries the turbine, moorings hold station, dynamic cables
-            move with the asset, and assurance and engineering roles surround
-            the delivery path.
+            The physical floating wind asset and the organisations that deliver
+            it are related, but they are easier to read as two separate sectors:
+            one for the offshore system components, and one for the delivery
+            chain behind those components.
           </p>
         </div>
 
-        <div className="industry-schematic" aria-label="Floating offshore wind system schematic">
-          <div className="schematic-node schematic-owner">Project Owner / Developer</div>
-          <div className="schematic-arrow">v</div>
-          <div className="schematic-node schematic-turbine">Wind Turbine</div>
-          <div className="schematic-arrow">v</div>
-          <div className="schematic-node schematic-platform">Floating Platform</div>
-          <div className="schematic-branch">
-            <div className="schematic-node">Mooring</div>
-            <div className="schematic-node">Dynamic / Export Cable</div>
+        <div className="industry-system-maps">
+          <div className="industry-map-panel" aria-label="Floating offshore wind system component sector">
+            <div className="industry-map-panel-copy">
+              <h3>Floating offshore wind system components</h3>
+              <p>
+                The platform is the offshore interface. It carries the turbine,
+                connects to station-keeping hardware, and routes electrical
+                export through dynamic cable and grid connection subsystems.
+              </p>
+            </div>
+            <div className="fowt-component-map">
+              <div className="industry-map-node industry-chain-owner">
+                Wind Turbine
+                <span>Turbine aerodynamics / control</span>
+              </div>
+              <div className="industry-map-arrow" aria-hidden="true">v</div>
+              <div className="industry-map-node industry-platform-node">
+                Floating Platform
+                <span>Floater hydrodynamics / stability</span>
+              </div>
+              <div className="industry-subsystem-row" aria-label="Floating platform subsystems">
+                <div className="industry-subsystem">
+                  <p>Station Keeping Subsystem</p>
+                  <div className="industry-map-node">
+                    Mooring & Anchoring
+                    <span>Mooring dynamics / soil interaction</span>
+                  </div>
+                </div>
+                <div className="industry-subsystem">
+                  <p>Electrical Export Subsystem</p>
+                  <div className="industry-map-node">
+                    Dynamic Cable
+                    <span>Cable fatigue / motion response</span>
+                  </div>
+                  <div className="industry-map-arrow" aria-hidden="true">v</div>
+                  <div className="industry-map-node">
+                    Offshore Electrical / Grid
+                    <span>Grid integration / power systems</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="schematic-arrow">v</div>
-          <div className="schematic-node schematic-electrical">
-            Offshore Electrical / Substation
-          </div>
-          <div className="schematic-arrow">v</div>
-          <div className="schematic-node schematic-grid">Grid</div>
-          <div className="schematic-support schematic-support-left">
-            EPCI / Subsea Engineering
-          </div>
-          <div className="schematic-support schematic-support-right">
-            Marine Installation / Vessels
-          </div>
-          <div className="schematic-support schematic-support-bottom">
-            Certification / Assurance + Engineering / Simulation
+
+          <div className="industry-map-panel" aria-label="Floating offshore wind supply chain sector">
+            <div className="industry-map-panel-copy">
+              <h3>Supply chain and industry roles</h3>
+              <p>
+                The delivery chain starts with project ownership and major
+                equipment, then moves through platform-led subsystems,
+                installation, grid connection, and assurance support.
+              </p>
+            </div>
+            <div className="industry-chain-map">
+              <div className="industry-map-node industry-chain-owner">
+                Project Owner / Developer
+              </div>
+              <div className="industry-map-arrow" aria-hidden="true">v</div>
+              <div className="industry-chain-row">
+                <div className="industry-map-node">Wind Turbine OEM</div>
+                <div className="industry-map-node industry-platform-node">
+                  Floating Platform
+                </div>
+              </div>
+              <div className="industry-map-arrow" aria-hidden="true">v</div>
+              <div className="industry-subsystem-row" aria-label="Platform-led supply chain subsystems">
+                <div className="industry-subsystem">
+                  <p>Station Keeping Subsystem</p>
+                  <div className="industry-map-node">Mooring & Anchoring</div>
+                  <div className="industry-map-node">Marine Installation</div>
+                </div>
+                <div className="industry-subsystem">
+                  <p>Electrical Export Subsystem</p>
+                  <div className="industry-map-node">Cable Systems</div>
+                  <div className="industry-map-arrow" aria-hidden="true">v</div>
+                  <div className="industry-map-node">Grid Technology</div>
+                </div>
+              </div>
+              <div className="industry-map-arrow" aria-hidden="true">v</div>
+              <div className="industry-chain-row">
+                <div className="industry-map-node">EPCI / Subsea</div>
+                <div className="industry-map-node">Offshore Electrical</div>
+                <div className="industry-map-node">Certification / Assurance</div>
+                <div className="industry-map-node">Engineering / Simulation</div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section className="industry-world-map" aria-labelledby="industry-world-map-heading">
+        <p className="eyebrow">Offshore Wind Map</p>
+        <h2 id="industry-world-map-heading">Offshore wind around the world</h2>
+        <p>
+          Scan global offshore wind project locations and market geography.
+        </p>
+        <p className="text-link-row">
+          <Link href="https://map.tgs4c.com/offshorewind/">
+            Open TGS4C offshore wind map -&gt;
+          </Link>
+        </p>
+        <p className="industry-source-note">Source: TGS4C.</p>
       </section>
 
       <section className="industry-orientation" aria-label="How to read the map">
@@ -173,6 +254,12 @@ export default function IndustryPage() {
                             <span className="industry-company-mark" aria-hidden="true">
                               {companyInitials(company.name)}
                             </span>
+                            <img
+                              className="industry-company-logo"
+                              src={companyLogoUrl(company)}
+                              alt=""
+                              aria-hidden="true"
+                            />
                             <span className="industry-company-summary-copy">
                               <span className="industry-company-name">
                                 <Link href={company.website}>{company.name}</Link>
@@ -215,16 +302,6 @@ export default function IndustryPage() {
             ) : null}
           </section>
         ))}
-      </section>
-
-      <section className="industry-note" aria-label="Industry map notes">
-        <h2>Static map, not a market page</h2>
-        <p>
-          This first version is a curated editorial model. It keeps Industry
-          data separate from Engineering Briefing and Research Digest data, and
-          does not include share prices, market capitalisation, financial APIs,
-          automated company discovery, or company detail pages.
-        </p>
       </section>
 
       <SiteFooter />

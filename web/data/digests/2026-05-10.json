@@ -1,0 +1,327 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260510_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-05-04",
+  "weekEnd": "2026-05-10",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 44,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_1002_we_70124",
+      "title": "Comparison of Power and Thrust Performance for a Fixed and Floating Offshore Wind Turbine",
+      "authors": [
+        "Jackson P. Hardin",
+        "Federico Zilic de Arcos",
+        "Thomas A. A. Adcock",
+        "Emma C. Edwards"
+      ],
+      "abstract": "ABSTRACT Floating offshore wind turbines have been identified as a critical technology for sustainable electricity generation. Wind resource assessment is used to determine optimal locations for floating wind farms. However, current methodologies do not account for performance differences between fixed and floating turbines due to wind‐ and wave‐induced motion. Furthermore, there has been no study which systematically investigates the influence of environmental conditions on turbine performance. We compare average and fluctuating power and thrust between a floating and fixed offshore wind turbine using a numeric, in‐house blade element momentum model coupled with potential flow‐based solver. We investigate these performance indicators, first in regular waves and then at four case study locations at water depths near the transition between fixed and floating technologies. We find that, at below‐rated wind speeds, floating turbines experience an increase in power capture due to motion‐induced wind on the turbine, while at near‐rated wind speeds power capture is decreased. This trend is consistent across both regular and irregular wave conditions for all case study locations. Consequently, we find that floating turbines can outperform the annual energy production of a fixed‐bottom turbine by 2%–5% under representative operational wind and wave conditions. However, this increase in power is accompanied by higher fluctuating loads. The 10th–90th percentile range of thrust for a floating turbine is increased by 50% relative to a static turbine. We also show that wind–wave misalignment can decrease floating turbine annual energy production and increase thrust fluctuation. The methodology presented can be used to improve site selection for floating turbines, because our results suggest that currently power capture is underpredicted by not adjusting for platform motion. Furthermore, the results may inform the design and optimization of turbines, platforms, and controllers, to further advance floating wind technologies.",
+      "publicationSource": "Wind Energy",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-09",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1002/we.70124",
+      "sourceUrl": "https://doi.org/10.1002/we.70124",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Dynamic cable",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1002_we_70124",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1002_we_70124",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Dynamic cable",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1002/we.70124",
+        "openalexId": "https://openalex.org/W7160712025"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260510_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1080_17445302_2026_2663031",
+      "title": "Coupled dynamic response analysis of a novel steel-concrete hybrid semi-submersible platform for floating offshore wind turbines",
+      "authors": [
+        "Hao Zhou",
+        "Xuhong Zhou",
+        "Yue Wang",
+        "Chenyu Hou",
+        "Yintao Luo",
+        "Lixian Zhang",
+        "Changsheng Shao"
+      ],
+      "abstract": "The utilization of concrete structural materials demonstrates significant potential for cost reduction in floating offshore wind turbine platforms owing to their inherent cost-effectiveness. This study proposes a novel steel-concrete hybrid (SCH) semi-submersible platform with a three-column configuration for floating offshore wind turbines. A detailed numerical model integrating aero, hydro, servo, elastic, and mooring dynamics was created to thoroughly examine the platform's dynamic responses in intermediate water depths (65 m). A comparative analysis was performed to evaluate the hydrodynamic performance between the steel-concrete hybrid platform and a geometrically equivalent all-steel semi-submersible platform. Results reveal that the proposed SCH platform exhibits enhanced hydrodynamic characteristics. Specifically, the SCH platform demonstrates superior performance in surge, mooring line tension, and nacelle acceleration when compared to its steel counterpart.",
+      "publicationSource": "Ships and Offshore Structures",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-06",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1080/17445302.2026.2663031",
+      "sourceUrl": "https://doi.org/10.1080/17445302.2026.2663031",
+      "openAccessStatus": "hybrid",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1080_17445302_2026_2663031",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1080_17445302_2026_2663031",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1080/17445302.2026.2663031",
+        "openalexId": "https://openalex.org/W7160397013"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260510_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_5194_wes_11_1569_2026",
+      "title": "Impact of floater flexibility on tower eigenfrequencies of a spar-type floating offshore wind turbine: measurement-based assessment and model calibration",
+      "authors": [
+        "César Aguilera",
+        "Romain Ribault",
+        "J. De-Lauzon",
+        "Adrien Hirvoas"
+      ],
+      "abstract": "Abstract. Designing floating wind turbine systems requires integrated load assessments (ILA) using fully coupled hydro-servo-aero-elastic models. In most cases, floater hydrodynamics are represented using potential-flow models for mooring system design and motion estimation, while the floater itself is typically assumed to behave as a rigid body. However, this assumption can significantly affect tower eigenfrequency calculations, especially for large floaters. In this study, we investigate these effects using in situ sensor data from the Zefyros 2.3 MW spar wind turbine. We present a methodology to accurately determine the tower's eigenfrequencies. A rigid-floater model without added mass leads to an average error of 65 % for the first tower mode relative to measurements. Including hydrostatic added mass reduces the error to 40 %. Further incorporating floater flexibility decreases the error to 4.3 %, and accounting for blade flexibility lowers it to just 2.8 %. These discrepancies highlight the importance of refining the hydro-servo-aero-elastic model to align with eigenfrequencies derived from finite-element hydro-structural analyses. We present potential model adjustments, assess their impacts, and demonstrate the updated validation process.",
+      "publicationSource": "Wind energy science",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-04",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.5194/wes-11-1569-2026",
+      "sourceUrl": "https://doi.org/10.5194/wes-11-1569-2026",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine",
+        "Simulation"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_5194_wes_11_1569_2026",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_5194_wes_11_1569_2026",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine",
+          "Simulation"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5194/wes-11-1569-2026",
+        "openalexId": "https://openalex.org/W7160156527"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260510_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_125780",
+      "title": "Attention-based machine learning for short-term motion prediction of a floating offshore wind turbine",
+      "authors": [
+        "Jialun Chen",
+        "David Gunawan",
+        "Paul H. Taylor",
+        "Guy McCauley",
+        "Wenhua Zhao"
+      ],
+      "abstract": "For over half a century, the forward prediction of random wave series and their induced float motions has remained a challenging problem, hindered by the intricate dynamics of wave–wave and wave–structure interactions. Recent advances in artificial intelligence (AI) and computational power have reignited efforts to transcend the limitations of conventional methodologies. Here, we present a data-driven framework to predict the heave motion of a floating offshore wind turbine using machine learning models trained on full-scale field measurements from the TetraSpar demonstrator. Four machine learning models are evaluated, among which the attention-based encoder–decoder Long Short-Term Memory model provides the best overall performance, achieving reliable predictions for up to two-thirds of a characteristic heave motion period under typical sea states. These results highlight the potential of machine learning methods for short-term motion forecasting and support the development of active control strategies in renewable energy systems, with potential benefits for the economic viability of offshore renewable energy development.",
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-06",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.125780",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.125780",
+      "openAccessStatus": "hybrid",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_125780",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_125780",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.125780",
+        "openalexId": "https://openalex.org/W7160446713"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260510_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_rineng_2026_110909",
+      "title": "Hydrodynamic response investigation of hybrid floating offshore wind turbine and oscillating water column systems",
+      "authors": [
+        "Tahereh Bagheri-Rouch",
+        "Payam Aboutalebi",
+        "Aitor J. Garrido",
+        "Izaskun Garrido"
+      ],
+      "abstract": "This article proposes an analytical method to suppress dynamic fluctuations in floating offshore wind turbines (FOWTs), which can negatively affect efficiency, longevity, and energy capture. To minimize undesirable oscillations, specifically in pitch and tower-top fore-aft displacement, a rectangular barge structure with a matrix of oscillating water columns (OWCs) is proposed. The OWCs are equipped with air flux valves that manage airflow, regulating the platform’s motion caused by wave-induced oscillations. Response amplitude operators (RAOs) were employed to analyze behavior over a spectrum of wave frequencies, supporting the development of a dynamic valve control strategy. Compared with the uncontrolled rectangular platform, results show that the controlled OWCs matrix significantly improves the platform’s dynamic performance. The system dampened oscillations in a case study with a 7.5-s wave period, reducing the pitch angle by 48.08% and fore-aft displacement by 47.8%. These findings highlight the impact of the regulated OWCs in reducing the motion response and improving the hydrodynamic performance of the FOWT.",
+      "publicationSource": "Results in Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-09",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.rineng.2026.110909",
+      "sourceUrl": "https://doi.org/10.1016/j.rineng.2026.110909",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_rineng_2026_110909",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_rineng_2026_110909",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.rineng.2026.110909",
+        "openalexId": "https://openalex.org/W7160710846"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260510_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_renene_2026_125884",
+      "title": "Coupling aerodynamic wake effects with corrosion-fatigue degradation for system-level reliability assessment of floating offshore wind farms",
+      "authors": [
+        "J X Zhang",
+        "Hongyuan Guo",
+        "You Dong",
+        "Emilio Bastidas‐Arteaga"
+      ],
+      "abstract": "The aerodynamic wake effect serves as a governing mechanism in wind farm operation, influencing both the energy harvest and the structural loading of downstream assets through altered flow dynamics. This interaction becomes particularly complex for large-scale floating offshore wind turbines, where wake deficits are coupled with stochastic wind–wave loading and long-term marine corrosion. In such systems, wakes modify the fatigue loading history of turbines, while seawater exposure progressively weakens structural resistance, together leading to highly nonlinear deterioration and failure trajectories that remain poorly understood at the system level. To bridge this gap, this study proposes a multi-physics reliability framework synthesizing aero-hydro-servo-elastic simulations and the Probability density function-informed method. The framework evaluates spatiotemporal reliability under varying climate-change scenarios and spatial correlation assumptions. Results indicate a non-monotonic spatial evolution of asset reliability with a clear mid-array optimum. Wake-induced reduction in mean aerodynamic loading extends the fatigue life of mid-field units by approximately 80%, but farther downstream this benefit becomes limited because reduced aerodynamic damping and continued marine deterioration progressively offset the mechanical relief. Furthermore, the study shows that assuming statistical independence among turbines can significantly distort system-level risk estimates in spatially correlated environments. The findings support a shift beyond energy-centric design paradigms toward reliability-informed asset management for floating offshore wind farms. • Multi-physics framework couples wake with corrosion-fatigue for farm reliability. • Wind farm modelled as a stochastic dynamical system for spatiotemporal reliability. • Reveals a non-monotonic mid-array optimum bounded by degradation penalties. • Quantifies the energy capture and structural longevity trade-off at system level.",
+      "publicationSource": "Renewable Energy",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-05",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.renene.2026.125884",
+      "sourceUrl": "https://doi.org/10.1016/j.renene.2026.125884",
+      "openAccessStatus": "hybrid",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Wake",
+        "Structural dynamics",
+        "Floating platform"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_renene_2026_125884",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_renene_2026_125884",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Wake",
+          "Structural dynamics",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.renene.2026.125884",
+        "openalexId": "https://openalex.org/W7160334759"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260510_006"
+      ],
+      "selected": true
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260819_20260816_review",
+  "sourceName": "openalex",
+  "weekStart": "2026-08-10",
+  "weekEnd": "2026-08-16",
+  "generatedAt": "2026-08-19T13:50:00Z",
+  "checkedResultCount": 40,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_1064119x_2026_2716236",
+      "title": "Uplift capacity of suction anchor groups for floating offshore wind turbines: Loading-angle and mooring-position effects",
+      "authors": [
+        "Yancheng Yu",
+        "Xuanming Ding",
+        "Yu Peng",
+        "Jinchuan Wang",
+        "Gen Xiong",
+        "Ben He",
+        "Yiwen Xin"
+      ],
+      "abstract": "To address the limitations of single suction anchors in deep-water environments, this study investigates mooring-loaded suction anchor groups as an innovative anchoring solution for high-power Floating Offshore Wind Turbines (FOWTs). The uplift capacity and failure mechanisms of suction anchor groups were systematically evaluated via 1 g physical model tests and 3D Finite Element Method (FEM) simulations. Results reveal a fundamental transition in the pullout resistance-displacement curves: unlike the strain-hardening behavior of single anchors, anchor groups exhibit pronounced strain-softening characteristics owing to the increased overall stiffness of the soil-anchor system. The bearing performance of the anchor group is further influenced by loading angle, while the effect of mooring-point position depends on the loading condition. With increasing loading angle, the dominant resistance mechanism gradually shifts from passive soil resistance to skirt friction-controlled vertical uplift. The sensitivity of bearing capacity to mooring position is governed by the dominant failure mechanism and decreases with increasing loading angle. At larger loading angles, the influence of mooring position becomes limited due to the transition toward a vertical uplift mode. These findings are expected to provide valuable guidance for optimizing the design of suction anchor group mooring systems under complex loading conditions.",
+      "publicationSource": "Marine Georesources and Geotechnology",
+      "publicationType": "journal",
+      "publishedDate": "2026-08-16",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1080/1064119x.2026.2716236",
+      "sourceUrl": "https://doi.org/10.1080/1064119x.2026.2716236",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Mooring",
+        "Anchoring",
+        "Geotechnical engineering"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_1064119x_2026_2716236",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T13:50:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_1064119x_2026_2716236",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Mooring",
+          "Anchoring",
+          "Geotechnical engineering"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1080/1064119x.2026.2716236",
+        "openalexId": "https://openalex.org/W7203571815"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260816_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_jmse_14161515",
+      "title": "Full-Field Hull Fatigue Mapping Across Environmental Bins for a Semi-Submersible Floating Offshore Wind Turbine",
+      "authors": [
+        "Glib Ivanov",
+        "Guan Chang",
+        "Ding Peng Liu",
+        "Kai-Tung Ma"
+      ],
+      "abstract": "Fatigue assessment of floating offshore wind turbines (FOWTs) remains challenging because fatigue-sensitive regions may occur outside conventional predefined hotspots. This study applies a previously numerically verified full-field fatigue-screening workflow combining Unit Load Response, submodeling, and Virtual Test Rig concepts to the TaidaFloat semi-submersible FOWT under Taiwan Strait environmental conditions. Reconstructed nodal stress histories are used to map hull fatigue and evaluate occurrence-weighted contributions from 182 environmental bins, including operational and typhoon conditions. The results identify fatigue-sensitive regions not only at conventional column–bracing and column–pontoon connections but also in the upper main column and along the turbine–hull load path. Upper column fatigue is mainly associated with turbine-induced bending, whereas lower column and waterline-adjacent regions are more sensitive to wave-induced global hull bending. Frequently occurring near-rated operational conditions dominate the occurrence-weighted hull fatigue contribution, while selected typhoon conditions produce high short-term damage but limited long-term contributions within the four-year dataset. Approximately 94.6% of hull fatigue damage is captured by 28% of the bins, and a common hull–mooring set captures 97.0% of both contributions using 62% of the bins. These findings support hotspot screening and environmental-bin prioritization rather than detailed or certification-level fatigue life prediction.",
+      "publicationSource": "Journal of Marine Science and Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-08-16",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.3390/jmse14161515",
+      "sourceUrl": "https://doi.org/10.3390/jmse14161515",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "full_text_available",
+      "topicTags": [
+        "Fatigue",
+        "Structural integrity",
+        "Floating platform"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_jmse_14161515",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T13:50:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_jmse_14161515",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Fatigue",
+          "Structural integrity",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/jmse14161515",
+        "openalexId": "https://openalex.org/W7203651968"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260816_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_jmse_14161516",
+      "title": "Innovative Mooring Line Tension Reduction Technique for FOWTs",
+      "authors": [
+        "Ying Luo",
+        "Kevin Huang"
+      ],
+      "abstract": "The high cost of mooring systems, driven by extreme peak tensions during storm conditions, remains a significant barrier to the commercialization of floating offshore wind turbines (FOWTs). This paper proposes an innovative active tension-regulating joint (TRJ) for FOWT mooring lines. The TRJ consists of nested cylinders and an actively controlled accumulator, designed to release additional line length under high tension and to recover it under low tension, thereby reducing extreme dynamic peaks. A finite element scheme is also developed for efficient line dynamics analysis. The TRJ concept is applied to a benchmark IEA 15-MW semi-submersible FOWT in 100 m water depth under 50-year return period environmental conditions. The simulation results demonstrate that the TRJ reduces the maximum mooring line tension by approximately 53% and the maximum suspended line length by over 23%. This active control technique enables the downsizing of mooring components and a significant cost reduction.",
+      "publicationSource": "Journal of Marine Science and Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-08-16",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.3390/jmse14161516",
+      "sourceUrl": "https://doi.org/10.3390/jmse14161516",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "full_text_available",
+      "topicTags": [
+        "Mooring",
+        "Dynamic response",
+        "Hydrodynamics"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_jmse_14161516",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T13:50:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_jmse_14161516",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Mooring",
+          "Dynamic response",
+          "Hydrodynamics"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/jmse14161516",
+        "openalexId": "https://openalex.org/W7203604452"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260816_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_enconman_2026_122059",
+      "title": "An integrated modelling framework of a two-bladed floating VAWT based on two-way fluid-structure interaction",
+      "authors": [
+        "Haoda Huang",
+        "Qingsong Liu",
+        "Chun Li",
+        "Wanfu Zhang",
+        "Gregorio Iglesias"
+      ],
+      "abstract": "Vertical-axis wind turbines (VAWTs) are increasingly regarded as promising alternatives for horizontal-axis configurations in large-scale floating wind systems. However, existing coupled modeling tools for floating VAWTs still present several limitations: simplified aerodynamic formulations, inviscid hydrodynamics, quasi-static mooring representations, and limited consideration of composite blade aeroelasticity, hindering accurate multi-physics prediction. To overcome these shortcomings, a comprehensive aero-hydro-elastic-mooring coupling framework is established in this study. The proposed approach integrates the finite element method (FEM) and the computational fluid dynamics (CFD) to resolve fluid–structure interaction considering turbulence, waves, and the integral floating VAWT system. The results show that platform motion intensifies the periodic development of leading-edge vortices and dynamic stall by altering the blade relative inflow velocity and effective angle of attack. Although this aggravates the fluctuations of instantaneous torque and power output, it also provides a positive compensating effect on the overall aerodynamic work, resulting in an approximately 6.46 % increase in the mean power coefficient of the floating configuration compared with bottom-fixed one. These platform-motion-induced wake deflection and enhanced turbulent mixing also accelerate recovery, potentially improving array efficiency. Furthermore, the coupled dynamic analysis investigates the nonlinear stress concentrations near the blade-strut, strut-tower, and platform main-column regions, and further reveals the bending-torsional coupled deformation characteristics of the flexible blades. Meanwhile, the mooring system undergoes periodic contact and separation from the seabed, which may induce local scour and fatigue accumulation. Overall, the proposed CFD-FEM framework provides a robust tool for aero-hydro-elastic performance evaluation and structural safety assessment of floating VAWTs, offering valuable guidance for aerodynamic design, integrated load management, and cost-effective offshore deployment.",
+      "publicationSource": "Energy Conversion and Management",
+      "publicationType": "journal",
+      "publishedDate": "2026-08-15",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.enconman.2026.122059",
+      "sourceUrl": "https://doi.org/10.1016/j.enconman.2026.122059",
+      "openAccessStatus": "hybrid",
+      "fullTextAvailability": "full_text_available",
+      "topicTags": [
+        "Fluid-structure interaction",
+        "VAWT",
+        "Simulation"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_enconman_2026_122059",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T13:50:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_enconman_2026_122059",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Fluid-structure interaction",
+          "VAWT",
+          "Simulation"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.enconman.2026.122059",
+        "openalexId": "https://openalex.org/W7203540083"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260816_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_oceaneng_2026_127598",
+      "title": "An incremental methodological development for extreme dynamic analysis of a floating offshore wind turbine",
+      "authors": [
+        "Yingguang Wang"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-08-14",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.127598",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.127598",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Extreme response",
+        "Dynamic analysis",
+        "Hydrodynamics"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_oceaneng_2026_127598",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T13:50:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_oceaneng_2026_127598",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Extreme response",
+          "Dynamic analysis",
+          "Hydrodynamics"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.127598",
+        "openalexId": "https://openalex.org/W7203503924"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260816_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_oceaneng_2026_127499",
+      "title": "Global design and dynamic analysis of floating offshore wind turbines with actively ballasted concrete floater",
+      "authors": [
+        "Guanfeng Lin",
+        "Hongyun Zou",
+        "Jing Li",
+        "Bing Liu",
+        "Zili Zhang"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-08-14",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.127499",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.127499",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Floating platform",
+        "Concrete floater",
+        "Dynamic analysis"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_oceaneng_2026_127499",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T13:50:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_oceaneng_2026_127499",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Concrete floater",
+          "Dynamic analysis"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.127499",
+        "openalexId": "https://openalex.org/W7203469920"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260816_006"
+      ],
+      "selected": true
+    }
+  ]
+}

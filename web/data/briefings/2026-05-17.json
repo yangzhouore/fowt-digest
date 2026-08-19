@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-05-11",
+  "weekEnd": "2026-05-17",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-05-17-esteyco-wheel",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Esteyco presents 6 MW floating offshore wind demonstrator project in Canarias",
+      "sourceUrl": "https://www.windtech-international.com/product-news/esteyco-presents-6-mw-floating-offshore-wind-demonstrator-project-in-canarias",
+      "publishedDate": "2026-05-14",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Esteyco presented the WHEEL floating offshore wind project in Canarias, with the 6 MW foundation under construction.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-17-enercon-blades",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Enercon to establish rotor blade facility in Turkiye",
+      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#enercon-blade-facility",
+      "publishedDate": "2026-05-14",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Enercon announced rotor-blade production in Turkiye, adding regional wind manufacturing capacity.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-17-deme-norse",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Deme names Norse Energi jack-up vessel",
+      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#deme-norse-energi",
+      "publishedDate": "2026-05-13",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "DEME named its Norse Energi offshore transport and installation vessel ahead of Baltic and North Sea deployment.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-17-rwe-q1",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "RWE reports higher offshore and onshore wind earnings in first quarter 2026",
+      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#rwe-q1",
+      "publishedDate": "2026-05-13",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "RWE reported higher wind earnings and continued renewable construction activity in the first quarter of 2026.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-05-17-fullcircle-gds",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Full Circle Wind Services expands UK supply chain network with GDS partnership",
+      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#full-circle-gds",
+      "publishedDate": "2026-05-13",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Full Circle Wind Services expanded its UK-centred service and supply-chain network through a GDS partnership.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-05-17-01",
+      "title": "Esteyco presents 6 MW WHEEL demonstrator",
+      "oneLineSummary": "Esteyco presented the WHEEL floating offshore wind project in Canarias, with the 6 MW foundation under construction.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-17-esteyco-wheel"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/product-news/esteyco-presents-6-mw-floating-offshore-wind-demonstrator-project-in-canarias",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Demonstrator"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-17-02",
+      "title": "Enercon plans Turkish blade facility",
+      "oneLineSummary": "Enercon announced rotor-blade production in Turkiye, adding regional wind manufacturing capacity.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-17-enercon-blades"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#enercon-blade-facility",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Supply chain"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-17-03",
+      "title": "DEME names Norse Energi installation vessel",
+      "oneLineSummary": "DEME named its Norse Energi offshore transport and installation vessel ahead of Baltic and North Sea deployment.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-17-deme-norse"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#deme-norse-energi",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Marine operations"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-17-04",
+      "title": "RWE reports stronger wind earnings",
+      "oneLineSummary": "RWE reported higher wind earnings and continued renewable construction activity in the first quarter of 2026.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-17-rwe-q1"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#rwe-q1",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Financial signal"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-17-05",
+      "title": "Full Circle expands UK service network",
+      "oneLineSummary": "Full Circle Wind Services expanded its UK-centred service and supply-chain network through a GDS partnership.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-17-fullcircle-gds"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#full-circle-gds",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Supply chain"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-06-01",
+  "weekEnd": "2026-06-07",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-06-07-sonardyne-amog",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Sonardyne and AMOG sign floating offshore wind monitoring agreement",
+      "sourceUrl": "https://ftp.windtech-international.com/projects-and-contracts/sonardyne-and-amog-sign-floating-offshore-wind-monitoring-agreement",
+      "publishedDate": "2026-06-04",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Sonardyne and AMOG agreed to develop subsea asset monitoring services for floating offshore wind mooring systems.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-07-floating-data-centre",
+      "sourceType": "company_announcement",
+      "publisher": "Capital Clean Energy Carriers",
+      "title": "Capital Clean Energy Carriers Lloyds Register and Samsung Heavy Industries to move forward on floating data centre designs",
+      "sourceUrl": "https://ir.capitalcleanenergycarriers.com/news-releases/news-release-details/capital-clean-energy-carriers-corp-lloyds-register-and-samsung",
+      "publishedDate": "2026-06-03",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Capital Clean Energy Carriers, Lloyds Register, and Samsung Heavy Industries signed an MoU for floating data-centre design.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-07-venterra-vdata",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Venterra launches V-Data platform for offshore wind metocean data",
+      "sourceUrl": "https://test.windtech-international.com/product-news/products-news/blog#venterra-v-data",
+      "publishedDate": "2026-06-17",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Venterra launched V-Data to give offshore wind teams direct access to metocean measurement data.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-07-hitachi-mtdc",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Hitachi Energy launches AxoniQ MTDC solutions for multi-terminal DC grids",
+      "sourceUrl": "https://test.windtech-international.com/product-news/products-news/blog#hitachi-axoniq",
+      "publishedDate": "2026-06-10",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Hitachi Energy launched multi-terminal DC grid tools relevant to offshore wind transmission development.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-07-ow-northeast",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Offshore Wind Arrives in the Northeastern USA",
+      "sourceUrl": "https://www.windtech-international.com/previous-issues/may-june-2026#offshore-wind-northeastern-usa",
+      "publishedDate": "2026-05-18",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Windtech covered offshore wind development in the Northeastern USA as a regional market and delivery topic.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-06-07-01",
+      "title": "Sonardyne and AMOG target mooring monitoring",
+      "oneLineSummary": "Sonardyne and AMOG agreed to develop subsea asset monitoring services for floating offshore wind mooring systems.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-07-sonardyne-amog"
+      ],
+      "sourceUrl": "https://ftp.windtech-international.com/projects-and-contracts/sonardyne-and-amog-sign-floating-offshore-wind-monitoring-agreement",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Subsea data"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-07-02",
+      "title": "LR and SHI advance floating data-centre design",
+      "oneLineSummary": "Capital Clean Energy Carriers, Lloyds Register, and Samsung Heavy Industries signed an MoU for floating data-centre design.",
+      "category": "technology",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-06-07-floating-data-centre"
+      ],
+      "sourceUrl": "https://ir.capitalcleanenergycarriers.com/news-releases/news-release-details/capital-clean-energy-carriers-corp-lloyds-register-and-samsung",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Certification"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-07-03",
+      "title": "Venterra launches metocean data platform",
+      "oneLineSummary": "Venterra launched V-Data to give offshore wind teams direct access to metocean measurement data.",
+      "category": "technology",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-06-07-venterra-vdata"
+      ],
+      "sourceUrl": "https://test.windtech-international.com/product-news/products-news/blog#venterra-v-data",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Digital platform"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-07-04",
+      "title": "Hitachi Energy launches MTDC grid tools",
+      "oneLineSummary": "Hitachi Energy launched multi-terminal DC grid tools relevant to offshore wind transmission development.",
+      "category": "technology",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-06-07-hitachi-mtdc"
+      ],
+      "sourceUrl": "https://test.windtech-international.com/product-news/products-news/blog#hitachi-axoniq",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "HVDC"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-07-05",
+      "title": "Windtech covers Northeast US offshore wind",
+      "oneLineSummary": "Windtech covered offshore wind development in the Northeastern USA as a regional market and delivery topic.",
+      "category": "policy",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-06-07-ow-northeast"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/previous-issues/may-june-2026#offshore-wind-northeastern-usa",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Policy"
+      ]
+    }
+  ]
+}

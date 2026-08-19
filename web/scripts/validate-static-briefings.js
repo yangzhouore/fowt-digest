@@ -34,7 +34,7 @@ const REGIONS = new Set([
   "Asia-Pacific",
   "North America",
   "Africa",
-  "Global",
+  "Unspecified",
 ]);
 
 function validateRepository(rootDir = process.cwd()) {

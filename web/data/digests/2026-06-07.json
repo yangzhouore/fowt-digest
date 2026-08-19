@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260607_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-06-01",
+  "weekEnd": "2026-06-07",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 56,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_1016_j_engstruct_2026_123120",
+      "title": "Damping enhancement and vibration mitigation of tuned mass dampers with movement amplification function for floating offshore wind turbines",
+      "authors": [
+        "Zhenbo Lei",
+        "Qingshan Yang",
+        "Jianxin Zhang",
+        "Gang Liu",
+        "Chengyu Hou",
+        "Hao Zhou",
+        "Bolin Chen"
+      ],
+      "abstract": null,
+      "publicationSource": "Engineering Structures",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-07",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.engstruct.2026.123120",
+      "sourceUrl": "https://doi.org/10.1016/j.engstruct.2026.123120",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_engstruct_2026_123120",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_engstruct_2026_123120",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.engstruct.2026.123120",
+        "openalexId": "https://openalex.org/W7163828098"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260607_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_126316",
+      "title": "Assessment of ultimate and fatigue limit states for 15-MW floating offshore wind turbines under wind–wave misalignment: An enhanced environmental contour approach",
+      "authors": [
+        "Yuan Hu",
+        "Deshun Li",
+        "Rennian Li",
+        "Zhizhao Zang",
+        "Yanbin Dong",
+        "Qing Wang",
+        "Yinran Li",
+        "Z K Li"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-05",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.126316",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.126316",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Structural dynamics",
+        "Floating platform"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_126316",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_126316",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Structural dynamics",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.126316",
+        "openalexId": "https://openalex.org/W7163674354"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260607_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_ijmecsci_2026_111775",
+      "title": "Substructure flexibility effects on semi-submersible floating wind turbine fatigue",
+      "authors": [
+        "Osunna Paul Dike",
+        "Vahid Vaziri",
+        "Marcin Kapitaniak"
+      ],
+      "abstract": "Fatigue, driven by long-term stress concentrations arising from continuous dynamic loading, is a key cause of damage and potential failure in offshore structural connections. This issue is further amplified in floating offshore wind turbines (FOWTs) due to their dynamic sensitivity and exposure to coupled aero- and hydro-dynamic loading, emphasising the need for reliable fatigue assessment methodologies. This study investigates the influence of global member flexibility and local joint flexibility on the dynamic and fatigue response of the OC4 semi-submersible FOWT, with fatigue assessments focused on representative critical hotspots including the tower base, brace connections, and mooring lines. Local joint flexibility is modelled using the Buitrago parametric formulation, enabling representation of inter-member deformation mechanisms not captured in conventional rigid-body or beam-only flexible models. The fatigue evaluation framework integrates stress concentration factor formulations, rainflow cycle counting, S–N and T–N methodologies, and Palmgren–Miner linear damage accumulation with sensitivity checks for Goodman, Soderberg, and Gerber mean stress corrections. Environmental loading conditions are derived from joint probabilistic wind–wave representations for the North Sea, complemented by Norwegian Sea conditions, with coupled aero–hydro–moor–servo–elastic simulations performed in Orcina’s OrcaFlex in accordance with IEC 61400 standards using stochastic time-domain wind and wave loading. Diffraction-based inertia loads combined with Morison-type drag formulations are employed to capture both global and local hydrodynamic effects. Results show that rigid-body floater models can overestimate tower-base fatigue damage, predicting a fatigue life of 62 years compared to over 300 years for flexible configurations, while flexibility-induced axial loading reduces brace fatigue life from thousands of years to only a few hundred. Structural flexibility lowers mooring line tension by approximately 6% and extends fatigue life, with studded chains exhibiting up to 68% longer lifetimes than studless configurations. The findings demonstrate that structural flexibility and local joint compliance can significantly influence fatigue-sensitive regions within semi-submersible floating wind platforms, highlighting the importance of modelling fidelity when assessing long-term structural response.",
+      "publicationSource": "International Journal of Mechanical Sciences",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-04",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.ijmecsci.2026.111775",
+      "sourceUrl": "https://doi.org/10.1016/j.ijmecsci.2026.111775",
+      "openAccessStatus": "hybrid",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_ijmecsci_2026_111775",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_ijmecsci_2026_111775",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.ijmecsci.2026.111775",
+        "openalexId": "https://openalex.org/W7163580038"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260607_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_7638_kqdlxxb_2025_0163",
+      "title": "Wake model of a floating offshore wind turbine under surge motion",
+      "authors": [
+        "Wenfeng Li",
+        "Zhenzhou Zhao",
+        "Shangshang Wei",
+        "Guodan Dong",
+        "Huiwen Liu"
+      ],
+      "abstract": "Surge motion significantly affects the thrust coefficient variation and wake development characteristics of floating offshore wind turbines (FOWTs). Based on the high-order Gaussian model, this paper proposes a FOWT wake model, designated as HG-DFOWT (high-order Gaussian dynamic floating offshore wind turbine model), which incorporates the additional wind speed induced by FOWT surge motion, to predict the wake distribution and thrust coefficient variation of the wind turbine. The model first corrects the variation in hub position during FOWT surge. Then, it modifies the relative inflow velocity at the rotor plane using the additional velocity induced by surge. Subsequently, a dynamic thrust coefficient model is established based on the first-order sinusoidal surge motion of the FOWT. Finally, the model predictions are compared with wind tunnel experimental results and CFD numerical simulation results to validate the reliability of the model. The results indicate that, under upwind motion, the root mean square error between the model's predicted vertical wake profiles and the wind tunnel experimental results is 4.04%, while under downwind motion, the error is 1.47%. The corrected thrust coefficient shows good consistency with the CFD calculation results, with an average relative error of less than 1% under high-frequency surge conditions (f ≥ 0.072 Hz). In addition, the wake distribution characteristics at different time within a surge cycle are analyzed. It is found that the wake deficit at the same downstream position of the FOWT exhibits periodic fluctuations around the time-averaged value, and the wake center velocity is significantly influenced by the surge frequency, with a fluctuation amplitude reaching 7.1% under high-frequency motion (f = 0.09 Hz). The proposed model provides a reference for layout optimization of floating wind farms.",
+      "publicationSource": "DOAJ (DOAJ: Directory of Open Access Journals)",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-01",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.7638/kqdlxxb-2025.0163",
+      "sourceUrl": "https://doi.org/10.7638/kqdlxxb-2025.0163",
+      "openAccessStatus": "green",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Hydrodynamics",
+        "Wake",
+        "Floating platform"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_7638_kqdlxxb_2025_0163",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_7638_kqdlxxb_2025_0163",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Wake",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.7638/kqdlxxb-2025.0163",
+        "openalexId": "https://openalex.org/W7140221966"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260607_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_7638_kqdlxxb_2025_0133",
+      "title": "A study on the wake model for floating offshore wind turbines based on CFD simulation",
+      "authors": [
+        "Weicheng Hu",
+        "Zhenqing Liu"
+      ],
+      "abstract": "To address the challenge of wake prediction caused by complex motions of floating offshore wind turbines, this paper presents a high-precision CFD numerical model based on an improved actuator disk model. A UDF (user-defined function) program is developed to accurately compute body forces under multiple motion states. The proposed method, together with four other turbulence models, is systematically compared against wind tunnel measurements. The simulation results are validated against wind tunnel tests. The Realizable k-ε model with the improved actuator disk model accurately captures the velocity and turbulence intensity distributions in the turbine wake. A Sobol sensitivity analysis is conducted on 80 single-motion cases. Results show that inflow turbulence and thrust coefficient dominate the wake characteristics. Their influence is significantly greater than that of motion parameters. The motion period has a negligible effect. Pitch, surge, and roll are identified as the dominant motion forms. A Jensen-Gaussian wake model is then proposed. This model introduces motion amplitude parameters into the traditional Gaussian distribution framework. For single-motion cases, the average prediction error is only 2.0%. This error is 3.8% to 6.6% lower than that of the conventional Jensen and BPA models. For coupled motion cases, five wake superposition models are compared. The maximum loss (ML) model achieves the highest prediction accuracy. Its average error is only 1.9%. This approach enables efficient and accurate wake simulation under multi-motion synergistic effects. This study provides a high-precision, low-cost wake prediction toolchain for the layout optimization and operational control of deep-sea offshore wind farms.",
+      "publicationSource": "DOAJ (DOAJ: Directory of Open Access Journals)",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-01",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.7638/kqdlxxb-2025.0133",
+      "sourceUrl": "https://doi.org/10.7638/kqdlxxb-2025.0133",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Wake",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_7638_kqdlxxb_2025_0133",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_7638_kqdlxxb_2025_0133",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Wake",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.7638/kqdlxxb-2025.0133",
+        "openalexId": "https://openalex.org/W7168353805"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260607_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_conengprac_2026_107092",
+      "title": "Coupled aero-hydro-elastic modeling and adaptive coordinated control of floating offshore wind turbines",
+      "authors": [
+        "Shuzhen Li",
+        "Xian Li",
+        "Keum‐Shik Hong"
+      ],
+      "abstract": null,
+      "publicationSource": "Control Engineering Practice",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-01",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.conengprac.2026.107092",
+      "sourceUrl": "https://doi.org/10.1016/j.conengprac.2026.107092",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Control",
+        "Floating platform"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_conengprac_2026_107092",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_conengprac_2026_107092",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Control",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.conengprac.2026.107092",
+        "openalexId": "https://openalex.org/W7163026604"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260607_006"
+      ],
+      "selected": true
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260705_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-06-29",
+  "weekEnd": "2026-07-05",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 85,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_36001_phme_2026_v9i1_4989",
+      "title": "Toward Intelligent Prognostics and Health Management for Floating Offshore Wind Turbines",
+      "authors": [
+        "Son Hai Nguyen",
+        "Thi Phuong Khanh Nguyen",
+        "Kamal Medjaher"
+      ],
+      "abstract": "Floating offshore wind turbines (FOWTs) enable the exploitation of deep-water wind resources where conventional fixed-bottom foundations become technically or economically infeasible. While this technology significantly expands the potential of offshore renewable energy, it also introduces new challenges for reliable operation and maintenance due to harsh marine environments, complex aero–hydro–servo–elastic dynamics, and limited operational data availability. Although AI-driven Prognostics and Health Management (PHM) has achieved substantial progress for conventional wind turbines, its application to FOWTs remains relatively limited. This doctoral research proposes an intelligent PHM framework specifically developed for floating wind systems, addressing key challenges related to limited operational data and domain knowledge, heterogeneous and unreliable monitoring data, and dynamic environmental complexity. Domain adaptation combined with knowledge graph construction, multimodal learning for heterogeneous data integration, and physics-informed machine learning for structural dynamic modeling are investigated as complementary methodological contributions. These components are progressively integrated into a unified PHM lifecycle pipeline supporting fault detection, remaining useful life prediction, and maintenance decision support for FOWTs.",
+      "publicationSource": "PHM Society European Conference",
+      "publicationType": "journal",
+      "publishedDate": "2026-07-03",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.36001/phme.2026.v9i1.4989",
+      "sourceUrl": "https://doi.org/10.36001/phme.2026.v9i1.4989",
+      "openAccessStatus": "diamond",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_36001_phme_2026_v9i1_4989",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_36001_phme_2026_v9i1_4989",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.36001/phme.2026.v9i1.4989",
+        "openalexId": "https://openalex.org/W7171299025"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260705_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_15625_0866_7136_23355",
+      "title": "Improving stability and fatigue life evaluation of floating offshore wind turbines",
+      "authors": [
+        "Dat Thanh Ta",
+        "Thuc Tri Dang",
+        "Thien Tich Truong"
+      ],
+      "abstract": "Offshore platforms serve various functions, including oil and gas production, renewable energy generation, navigation, and ship loading and unloading. Among these, the stability and fatigue life of Floating Offshore Wind Turbine (FOWT) platforms are critical for efficiency, safety, and long-term performance. With the increasing focus on renewable energy, there is a growing need for robust structural designs that can effectively fulfill these functions. This study introduces a semi-submersible platform with a small-diameter float design aimed at enhancing system stability while evaluating its fatigue performance under various operational conditions. A comprehensive frequency-domain response analysis was conducted, comparing the proposed platform with the OC4-DeepCwind model developed by the National Renewable Energy Laboratory (NREL), USA. The results demonstrated superior hydrodynamic performance, improved resonance avoidance, reduced Response Amplitude Operators (RAOs), and enhanced stability by mitigating wave-induced instabilities. Additionally, the fatigue life of critical structural components, specifically the pontoons and cross braces, was evaluated using Finite Element Analysis (FEA), considering wind, wave, current, and operational loads. Stress Concentration Factors (SCFs) were determined for three load cases, revealing that the highest SCF occurred in the cross-bracing components. This member was then subjected to cyclic loading to assess its fatigue life based on peak stress values. The findings offer valuable insights into optimizing floating wind turbine structures by enhancing stability, reducing fatigue damage, and improving overall structural reliability.",
+      "publicationSource": "Vietnam Journal of Mechanics",
+      "publicationType": "journal",
+      "publishedDate": "2026-07-03",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.15625/0866-7136/23355",
+      "sourceUrl": "https://doi.org/10.15625/0866-7136/23355",
+      "openAccessStatus": "diamond",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_15625_0866_7136_23355",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_15625_0866_7136_23355",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.15625/0866-7136/23355",
+        "openalexId": "https://openalex.org/W7167035464"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260705_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_55092_sc20260013",
+      "title": "A probabilistic digital twin framework for corrosion-fatigue prognosis of floating offshore wind turbines",
+      "authors": [
+        "Yasmin Ali",
+        "Ahmed Elgammal",
+        "Chengjun Li",
+        "Junlin Heng",
+        "Kaoshan Dai"
+      ],
+      "abstract": "Floating offshore wind turbines face growing integrity-management challenges caused by coupled corrosion and fatigue in harsh marine environments. Existing digital-twin frameworks are not yet well suited to combine multi-phase degradation physics with dynamic uncertainty quantification for this problem. To address this gap, this paper proposes a probabilistic digital twin framework that integrates sensor data acquisition, multi-physics simulation, and Bayesian inference for corrosion-fatigue prognosis. A three-phase damage evolution model is formulated to represent the transition from corrosion pitting to short-crack growth and long-crack propagation. Operational observations are assimilated recursively to update fatigue parameters and remaining useful life estimates. The framework is demonstrated using the IEA 15 MW reference wind turbine. The updated model identifies the onset of accelerated crack propagation at year 20 and reduces the 95% remaining-useful-life confidence interval from 40.4 years to 3.4 years. A maintenance strategy based on the updated failure probability reduces operational downtime by 58% and lifecycle cost by approximately 64.9% compared with a fixed-interval strategy. The results indicate that probabilistic updating can support more transparent inspection and maintenance decisions for floating offshore wind turbine structures under corrosion-fatigue degradation.",
+      "publicationSource": "Smart Construction",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-29",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.55092/sc20260013",
+      "sourceUrl": "https://doi.org/10.55092/sc20260013",
+      "openAccessStatus": "bronze",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_55092_sc20260013",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_55092_sc20260013",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.55092/sc20260013",
+        "openalexId": "https://openalex.org/W7166541062"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260705_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_36001_phme_2026_v9i1_4876",
+      "title": "AI-Driven PHM for Floating Offshore Wind Turbines: Review and Main Challenges",
+      "authors": [
+        "Son Hai Nguyen",
+        "T. P. Khanh Nguyen",
+        "Kamal Medjaher"
+      ],
+      "abstract": "Floating Offshore Wind Turbines (FOWTs) offer a transformative solution for capturing wind energy in deep waters, where fixed-bottom installations become economically unfeasible. However, Operations and Maintenance (O&amp;M) costs, which represent up to 30% of total energy costs, remain a major barrier to widespread deployment. The harsh marine environment and limited accessibility demand intelligent and autonomous monitoring systems, making prognostics and health management (PHM) essential for cost-effective FOWTs operations. This paper presents a review of AI-based PHM studies specifically for FOWTs, addressing a significant gap in the existing literature. Particularly, most of existing reviews predominantly focus on offshore operations, digital twin concepts, structural dynamics, or control strategies, none have comprehensively analyzed AI applications tailored to the unique PHM challenges of FOWTs systems. Through a literature review of AI-based PHM studies using the Web of Science and Google Scholar databases, we identify a FOWT-specific monitoring emphasis on structural and station-keeping assets. In addition, we propose a comprehensive end-to-end PHM lifecycle for FOWTs, integrating a hierarchical taxonomy of critical components with a systematic mapping of AI methods to key PHM tasks. By synthesizing the state of the art and identifying critical technological gaps, this work outlines priority research directions essential for enabling reliable, scalable, and autonomous offshore operations.",
+      "publicationSource": "PHM Society European Conference",
+      "publicationType": "journal",
+      "publishedDate": "2026-07-03",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.36001/phme.2026.v9i1.4876",
+      "sourceUrl": "https://doi.org/10.36001/phme.2026.v9i1.4876",
+      "openAccessStatus": "diamond",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_36001_phme_2026_v9i1_4876",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_36001_phme_2026_v9i1_4876",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.36001/phme.2026.v9i1.4876",
+        "openalexId": "https://openalex.org/W7171284148"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260705_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_rser_2026_117223",
+      "title": "A review of fluid–structure interaction modelling for integrated analysis of floating offshore wind turbine substructures",
+      "authors": [
+        "Xiaoming Ran",
+        "Claudio A. Rodríguez",
+        "Shengjie Rui",
+        "Xintong Wang",
+        "Feargal Brennan",
+        "Maurizio Collu"
+      ],
+      "abstract": "Floating offshore wind turbines (FOWTs) are advancing toward larger-capacity with novel structural designs aiming at lowering the levelized cost of energy (LCOE). FOWTs are required to withstand a large and diverse set of dynamic loads throughout their operational lifetime. Consequently, a rigorous assessment of their performance via a physics-based coupled engineering model is essential during their design stage. Despite continued advances in modelling tools, challenges in modelling hydro-structural interaction in coupled aero-hydro-servo-elastic simulations for large FOWTs remain. This paper provides a state-of-the-art review of the recent advancements in modelling techniques for coupled hydrodynamic and structural analyses of floating wind turbines considering mid-fidelity engineering models using aero-hydro-servo-elastic tools (e.g., OpenFAST). Key focal point is numerical treatment of hydro-structural interactions, highlighting rigid multibody and flexible-body approaches, together with experimental advancements for validating these numerical models. This review demonstrates that both rigid multibody and flexible-body substructure approaches have been implemented and validated within a few time-domain coupled engineering models. Broader expansion to various hydro-aero-servo-elastic tools, particularly with standardized procedures, is essential to meet the demands of future-generation floating offshore wind turbines.",
+      "publicationSource": "Renewable and Sustainable Energy Reviews",
+      "publicationType": "journal",
+      "publishedDate": "2026-06-29",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.rser.2026.117223",
+      "sourceUrl": "https://doi.org/10.1016/j.rser.2026.117223",
+      "openAccessStatus": "hybrid",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine",
+        "Simulation"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_rser_2026_117223",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_rser_2026_117223",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine",
+          "Simulation"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.rser.2026.117223",
+        "openalexId": "https://openalex.org/W7166504068"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260705_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1007_s40722_026_00515_z",
+      "title": "Design and hybrid modeling of a spar-type floating offshore wind turbine for shallower water depths",
+      "authors": [
+        "Kadir Aktaş",
+        "Elif Türkarslan",
+        "Yuksel Rudy Alkarem",
+        "Ali Arıdıcı",
+        "Berguzar Oztunali Ozbahceci",
+        "Ünver Özkol"
+      ],
+      "abstract": null,
+      "publicationSource": "Journal of Ocean Engineering and Marine Energy",
+      "publicationType": "journal",
+      "publishedDate": "2026-07-03",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1007/s40722-026-00515-z",
+      "sourceUrl": "https://doi.org/10.1007/s40722-026-00515-z",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine",
+        "Simulation"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1007_s40722_026_00515_z",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1007_s40722_026_00515_z",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine",
+          "Simulation"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1007/s40722-026-00515-z",
+        "openalexId": "https://openalex.org/W7167214144"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260705_006"
+      ],
+      "selected": true
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-04-13",
+  "weekEnd": "2026-04-19",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-04-19-integria-ai",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "AI Transforming Floating Offshore Wind",
+      "sourceUrl": "https://test.windtech-international.com/articles/ai-transforming-floating-offshore-wind",
+      "publishedDate": "2026-04-19",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "The INTEGRIA project presented AI-based digital modelling for structural integrity management of floating wind turbines.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-19-outer-dowsing",
+      "sourceType": "industry_news",
+      "publisher": "AgentZero Energy",
+      "title": "Outer Dowsing cable project regulatory update",
+      "sourceUrl": "https://agentzero.energy/projects/outer-dowsing",
+      "publishedDate": "2026-04-15",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Outer Dowsing records showed April regulatory activity around the NSIP process and consent implementation.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-19-qenergy-pennavel",
+      "sourceType": "industry_news",
+      "publisher": "Global Legal Chronicle",
+      "title": "Q Energy Acquires Stake in Pennavel Offshore Wind Farm",
+      "sourceUrl": "https://globallegalchronicle.com/post-231607/",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Q Energy acquired a stake in the Pennavel floating offshore wind farm in southern Brittany.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-19-msp-siting",
+      "sourceType": "industry_news",
+      "publisher": "Tethys",
+      "title": "Marine Spatial Planning-Based Siting Methodology for Co-Located Offshore Wind and Wave Energy",
+      "sourceUrl": "https://tethys.pnnl.gov/publications/marine-spatial-planning-based-siting-methodology-co-located-offshore-wind-wave-energy",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Tethys listed a marine spatial planning method for co-located offshore wind and wave energy projects.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-19-pembrokeshire-fow",
+      "sourceType": "industry_news",
+      "publisher": "Pembrokeshire Herald",
+      "title": "Welsh floating wind policy debate continues",
+      "sourceUrl": "https://pembrokeshire-herald.com/135729/lib-dems-criticise-reform-over-coal-and-fracking-comments/",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Welsh political coverage framed Celtic Sea floating offshore wind as part of the region’s industrial and clean-energy direction.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-04-19-01",
+      "title": "INTEGRIA applies AI to FOWT integrity",
+      "oneLineSummary": "The INTEGRIA project presented AI-based digital modelling for structural integrity management of floating wind turbines.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-19-integria-ai"
+      ],
+      "sourceUrl": "https://test.windtech-international.com/articles/ai-transforming-floating-offshore-wind",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "AI monitoring"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-19-02",
+      "title": "Outer Dowsing regulatory process advances",
+      "oneLineSummary": "Outer Dowsing records showed April regulatory activity around the NSIP process and consent implementation.",
+      "category": "policy",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-19-outer-dowsing"
+      ],
+      "sourceUrl": "https://agentzero.energy/projects/outer-dowsing",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Transmission"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-19-03",
+      "title": "Q Energy takes Pennavel stake",
+      "oneLineSummary": "Q Energy acquired a stake in the Pennavel floating offshore wind farm in southern Brittany.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-19-qenergy-pennavel"
+      ],
+      "sourceUrl": "https://globallegalchronicle.com/post-231607/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating wind farm"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-19-04",
+      "title": "Tethys tracks co-located wind-wave siting work",
+      "oneLineSummary": "Tethys listed a marine spatial planning method for co-located offshore wind and wave energy projects.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-19-msp-siting"
+      ],
+      "sourceUrl": "https://tethys.pnnl.gov/publications/marine-spatial-planning-based-siting-methodology-co-located-offshore-wind-wave-energy",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Marine spatial planning"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-19-05",
+      "title": "Welsh political debate points to Celtic Sea floating wind",
+      "oneLineSummary": "Welsh political coverage framed Celtic Sea floating offshore wind as part of the region’s industrial and clean-energy direction.",
+      "category": "policy",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-19-pembrokeshire-fow"
+      ],
+      "sourceUrl": "https://pembrokeshire-herald.com/135729/lib-dems-criticise-reform-over-coal-and-fracking-comments/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Celtic Sea"
+      ]
+    }
+  ]
+}

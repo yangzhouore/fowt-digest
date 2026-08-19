@@ -1,0 +1,326 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260524_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-05-18",
+  "weekEnd": "2026-05-24",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 40,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_1016_j_conengprac_2026_107062",
+      "title": "Benchmark model and dynamic analysis for floating offshore wind turbines",
+      "authors": [
+        "Shifeng Jia",
+        "Zhi-Wei Gao"
+      ],
+      "abstract": null,
+      "publicationSource": "Control Engineering Practice",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-20",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.conengprac.2026.107062",
+      "sourceUrl": "https://doi.org/10.1016/j.conengprac.2026.107062",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine",
+        "Simulation"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_conengprac_2026_107062",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_conengprac_2026_107062",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine",
+          "Simulation"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.conengprac.2026.107062",
+        "openalexId": "https://openalex.org/W7161724209"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260524_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_126125",
+      "title": "Design of a shared suction anchor for 22 MW floating offshore wind turbine",
+      "authors": [
+        "Hojin Yoon",
+        "Kyung-Tae Bae",
+        "Joonmo Choung"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-21",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.126125",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.126125",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Mooring",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_126125",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_126125",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Mooring",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.126125",
+        "openalexId": "https://openalex.org/W7161939796"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260524_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1115_1_4071979",
+      "title": "Mooring Actuation for Stabilization of Floating Offshore Wind Turbines",
+      "authors": [
+        "Tajnuba Hasan",
+        "Doyal Sarker",
+        "Tri Ngo",
+        "Tuhin Das"
+      ],
+      "abstract": "Abstract The oscillatory motion of floating offshore wind turbines (FOWTs) under erratic sea conditions negatively impacts power generation efficiency, increases structural fatigue loading, and reduces system longevity. While individual blade pitch control can be used to regulate rotor speed and stabilize platform dynamics, it imposes significant mechanical loads on the pitch actuators. To alleviate this burden, mooring line actuation (MLA) offers a promising complementary strategy. This paper investigates the potential and challenges of mooring line actuation for dynamic stabilization of FOWTs. Two platform configurations-a spar-buoy and a tension-leg platform (TLP)-are modeled and validated. For TLP, a tuned mass damper (TMD) strategy is examined as a benchmark for comparative stabilization performance. A comprehensive controllability investigation is conducted to evaluate the effectiveness of MLA in influencing platform degrees-of-freedom (DOFs). Based on these insights, a linear quadratic regulator (LQR) controller is designed to modulate mooring line lengths and associated tensions for active stabilization. Numerical simulations reveal that MLA provides significantly greater stabilization benefits for the TLP configuration compared to the spar-buoy. This underscores the importance of integrated control co-design (CCD) to improve MLA performance, especially for platforms with lower inherent controllability. Across a range of operational scenarios, the proposed MLA strategy demonstrates effective simultaneous surge and pitch suppression with minimal mooring line actuation, offering a viable path toward load-reducing, performance-enhancing control architectures in next-generation FOWTs.",
+      "publicationSource": "Journal of Dynamic Systems Measurement and Control",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-20",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1115/1.4071979",
+      "sourceUrl": "https://doi.org/10.1115/1.4071979",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Mooring",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1115_1_4071979",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1115_1_4071979",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Mooring",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1115/1.4071979",
+        "openalexId": "https://openalex.org/W7161795604"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260524_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_4271_2026_99_1715",
+      "title": "Aerodynamic Performance and Wake Characteristics of Floating Offshore Wind Turbine under Pitch Motion",
+      "authors": [
+        "Wei Chen",
+        "Jian Chen",
+        "Yuehua Chen",
+        "Haiying Sun"
+      ],
+      "abstract": "&lt;div class=\"section abstract\"&gt; &lt;div class=\"htmlview paragraph\"&gt;In actual marine environments, the aerodynamic behavior and wake properties of floating offshore wind turbines (FOWTs) are largely shaped by the pitching movement of their supporting platforms. The present study examines the aerodynamic performance and wake characteristics of a complete wind turbine system, encompassing its blades, nacelle, and tower, through the application of computational fluid dynamics (CFD) and the overset mesh method. This paper conducts an in-depth examination of how the amplitude and period of pitching motion influence the aerodynamic loads and flow field associated with wind turbines. The power and wake velocity results calculated in the study are compared with those obtained from numerical simulations by other researchers. The results indicate that the mesh and simulation parameters employed in this research precisely capture the aerodynamic characteristics and flow field surrounding the turbine. This work deliberates on how the amplitude and period of pitch motion impact the turbine aerodynamic behavior, while also conducting a quantitative analysis of the influence on the wake velocity recovery and wake range of the turbine. Findings from this research reveal that both the amplitude and period of pitching motion exert a significant impact on power output, thrust force, and wake-related properties.&lt;/div&gt; &lt;/div&gt;",
+      "publicationSource": "SAE technical papers on CD-ROM/SAE technical paper series",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-22",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.4271/2026-99-1715",
+      "sourceUrl": "https://doi.org/10.4271/2026-99-1715",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Hydrodynamics",
+        "Wake",
+        "Floating platform"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_4271_2026_99_1715",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_4271_2026_99_1715",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Wake",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.4271/2026-99-1715",
+        "openalexId": "https://openalex.org/W7161945770"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260524_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_energy_2026_141430",
+      "title": "Real-time hybrid model tests of a 17 MW ultra-large floating wind turbine using multi-rotor aerodynamic loading",
+      "authors": [
+        "Linyang Cao",
+        "Wei Shi",
+        "Haoxiang Ding",
+        "Wei Chai",
+        "Wenhua Wang",
+        "Madjid Karimirad",
+        "Yiming Zhou",
+        "Xin Li"
+      ],
+      "abstract": null,
+      "publicationSource": "Energy",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-20",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.energy.2026.141430",
+      "sourceUrl": "https://doi.org/10.1016/j.energy.2026.141430",
+      "openAccessStatus": "green",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_energy_2026_141430",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_energy_2026_141430",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.energy.2026.141430",
+        "openalexId": "https://openalex.org/W7161769733"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260524_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1109_joe_2026_3679232",
+      "title": "Robust Pitch Control for Floating Offshore Wind Turbines Using LLF-Based Aerodynamic Modeling and Nonsingular Terminal Sliding Mode With Prescribed Performance",
+      "authors": [
+        "Hao Chen",
+        "Zijian Luo",
+        "Youming Cai",
+        "Jingang Han",
+        "Nadia Ait-Ahmed",
+        "Mohamed Benbouzid"
+      ],
+      "abstract": "Floating offshore wind turbines exhibit complex and highly nonlinear dynamics, making the development of accurate mathematical models particularly challenging. Under substantial external disturbances, conventional control strategies often fall short in delivering fast and precise responses. To address the difficulties associated with modeling aerodynamic characteristics, this study employs extensive simulation data from the standalone AeroDyn module to construct a representative aerodynamic response surface. A locally linear fitting technique is adopted to approximate this surface, resulting in an accurate aerodynamic model. To further mitigate the influence of modeling errors and improve system robustness, a novel pitch control scheme is developed by integrating prescribed performance control (PPC) with nonsingular terminal sliding mode (NTSM) control, referred to as the NTSM-PPC controller. This approach not only enhances tracking accuracy but also circumvents the singularity problems inherent in traditional sliding mode controllers. The effectiveness of the proposed method is validated through cosimulations on MATLAB/Simulink and OpenFAST platforms. Simulation results confirm that the NTSM-PPC controller significantly enhances output power stability and suppresses fluctuations. Specifically, the controller’s root mean square value of 5.00001236 MW is closest to the rated power, with a power variation coefficient of only 0.01%, outperforming the gain scheduled proportional integral (GSPI) (0.57%) and other controllers such as${{\\bm{C}}_{\\bm{p}}^{\\rm{exp}}}$-SMC,${{{\\bm{\\hat{C}}}}_{\\bm{p}}}$-SMC, and${{{\\bm{\\hat{C}}}}_{\\bm{p}}}$-PPC-SMC.",
+      "publicationSource": "IEEE Journal of Oceanic Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-05-18",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1109/joe.2026.3679232",
+      "sourceUrl": "https://doi.org/10.1109/joe.2026.3679232",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Control",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1109_joe_2026_3679232",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1109_joe_2026_3679232",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Control",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1109/joe.2026.3679232",
+        "openalexId": "https://openalex.org/W7161547262"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260524_006"
+      ],
+      "selected": true
+    }
+  ]
+}

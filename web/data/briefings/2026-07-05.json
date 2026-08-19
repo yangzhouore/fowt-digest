@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-06-29",
+  "weekEnd": "2026-07-05",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-07-05-llyr-marine",
+      "sourceType": "government_announcement",
+      "publisher": "Natural Resources Wales",
+      "title": "Marine Licence granted for Pembrokeshire floating offshore wind demonstration project",
+      "sourceUrl": "https://naturalresources.wales/about-us/news-and-blogs/news/marine-licence-granted-for-pembrokeshire-floating-offshore-wind-demonstration-project/?lang=en",
+      "publishedDate": "2026-07-03",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Natural Resources Wales granted a marine licence for the Llyr floating offshore wind demonstration project off Pembrokeshire.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-05-fawt-longyuan",
+      "sourceType": "company_announcement",
+      "publisher": "China Energy Investment Corporation",
+      "title": "Longyuan Power advances offshore wind and marine innovation",
+      "sourceUrl": "https://www.ceic.com/gjnyjtwwEn/xwzx/202607/17d5b12e324d42988b484838d7f115f9.shtml",
+      "publishedDate": "2026-07-01",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Longyuan described offshore wind and marine innovation work, including floating platform integration with marine ranching.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-05-tgs-4c-jobs",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "European offshore wind supported 180000 jobs in 2025 study finds",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#european-offshore-wind-jobs",
+      "publishedDate": "2026-06-17",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Windtech reported analysis estimating 180,000 offshore wind jobs across Europe in 2025.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-05-us-court",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "US appeals court dismisses administration challenge over wind permitting freeze",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#us-permitting-freeze",
+      "publishedDate": "2026-06-17",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "A US appeals court dismissed a challenge related to a federal wind permitting pause, leaving a lower-court ruling in place.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-07-05-spain-ai-lab",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Spain launches wind energy artificial intelligence laboratory",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-8#spain-ai-lab",
+      "publishedDate": "2026-05-22",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "The Spanish wind sector launched an AI laboratory for wind operations and value-chain applications.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-07-05-01",
+      "title": "Llyr receives marine licence",
+      "oneLineSummary": "Natural Resources Wales granted a marine licence for the Llyr floating offshore wind demonstration project off Pembrokeshire.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-07-05-llyr-marine"
+      ],
+      "sourceUrl": "https://naturalresources.wales/about-us/news-and-blogs/news/marine-licence-granted-for-pembrokeshire-floating-offshore-wind-demonstration-project/?lang=en",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Demonstration project"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-05-02",
+      "title": "Longyuan links offshore wind and marine ranching",
+      "oneLineSummary": "Longyuan described offshore wind and marine innovation work, including floating platform integration with marine ranching.",
+      "category": "technology",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-07-05-fawt-longyuan"
+      ],
+      "sourceUrl": "https://www.ceic.com/gjnyjtwwEn/xwzx/202607/17d5b12e324d42988b484838d7f115f9.shtml",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Marine ranching"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-05-03",
+      "title": "TGS 4C study estimates offshore wind jobs",
+      "oneLineSummary": "Windtech reported analysis estimating 180,000 offshore wind jobs across Europe in 2025.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-07-05-tgs-4c-jobs"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#european-offshore-wind-jobs",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Supply chain"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-05-04",
+      "title": "US appeals court leaves wind permitting ruling in place",
+      "oneLineSummary": "A US appeals court dismissed a challenge related to a federal wind permitting pause, leaving a lower-court ruling in place.",
+      "category": "policy",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-07-05-us-court"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#us-permitting-freeze",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Policy risk"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-05-05",
+      "title": "Spain launches wind AI laboratory",
+      "oneLineSummary": "The Spanish wind sector launched an AI laboratory for wind operations and value-chain applications.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-07-05-spain-ai-lab"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-8#spain-ai-lab",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Operations"
+      ]
+    }
+  ]
+}

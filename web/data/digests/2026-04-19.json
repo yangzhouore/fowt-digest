@@ -1,0 +1,320 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260419_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-04-13",
+  "weekEnd": "2026-04-19",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 52,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_1016_j_energy_2026_141021",
+      "title": "A full-coupled free vortex solver for floating offshore wind turbine: Aerodynamic performance and motion response analysis",
+      "authors": [
+        "Zedong Wang",
+        "Yu-Ying Xiao",
+        "Jianjian Hu",
+        "Yuming Yuan",
+        "Peng Jin",
+        "Tao Wang",
+        "Zhanli Xie",
+        "Yifeng Yang"
+      ],
+      "abstract": null,
+      "publicationSource": "Energy",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-18",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.energy.2026.141021",
+      "sourceUrl": "https://doi.org/10.1016/j.energy.2026.141021",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_energy_2026_141021",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_energy_2026_141021",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.energy.2026.141021",
+        "openalexId": "https://openalex.org/W7154831341"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260419_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_marstruc_2026_104096",
+      "title": "Design life fatigue assessment of floating offshore wind turbine mooring cables via an adaptive sampling kriging approach",
+      "authors": [
+        "Hongyu Wu",
+        "Vikram Pakrashi",
+        "Rui Teixeira"
+      ],
+      "abstract": null,
+      "publicationSource": "Marine Structures",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-14",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.marstruc.2026.104096",
+      "sourceUrl": "https://doi.org/10.1016/j.marstruc.2026.104096",
+      "openAccessStatus": "hybrid",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Mooring",
+        "Dynamic cable",
+        "Structural dynamics"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_marstruc_2026_104096",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_marstruc_2026_104096",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Mooring",
+          "Dynamic cable",
+          "Structural dynamics"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.marstruc.2026.104096",
+        "openalexId": "https://openalex.org/W7154373229"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260419_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_3390_en19081893",
+      "title": "Comparative Study on Continuous and Discrete Design Optimization for the Fairlead Chain Stopper of Large-Scale Floating Offshore Wind Turbines",
+      "authors": [
+        "Min-Seok Cheong",
+        "Chang Yong Song"
+      ],
+      "abstract": "This study presents a comparative investigation of continuous and discrete design optimization for the fairlead chain stopper of large-scale 10 MW floating offshore wind turbines. The fairlead chain stopper plays a key role in ensuring mooring integrity, rapid port evacuation, and efficient maintenance under extreme weather conditions driven by global warming. The objective is to minimize structural weight while maintaining safety in accordance with the international classification rules of Det Norske Veritas. Three representative design load scenarios covering mooring and towing conditions are defined, and finite element analysis confirmed that the baseline design satisfies allowable stress limits. In the optimization stage, the thicknesses of nine principal components are selected as design variables. Continuous and discrete formulations are solved using particle swarm optimization, a non-dominated sorting genetic algorithm, and an evolutionary algorithm, and their convergence behavior and computational efficiency are compared. The results show that discrete optimization, which reflects actual manufacturing plate thicknesses, achieves nearly the same weight reduction as the continuous approach while offering superior practical applicability. Among the three techniques, the evolutionary algorithm provided the best convergence characteristics and attained up to 3.73 percent weight reduction. The proposed comparative methodology offers a useful guideline for rational weight-efficient design of core mooring equipment on large floating offshore wind power platforms.",
+      "publicationSource": "Energies",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-14",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.3390/en19081893",
+      "sourceUrl": "https://doi.org/10.3390/en19081893",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_3390_en19081893",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_3390_en19081893",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/en19081893",
+        "openalexId": "https://openalex.org/W7154364943"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260419_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_3390_jmse14080723",
+      "title": "Assessment of Allowable Operational Limits for Floating Spar Wind Turbine Installations",
+      "authors": [
+        "Mohamed Hassan",
+        "C Soares"
+      ],
+      "abstract": "The installation of floating offshore wind turbines presents significant operational challenges due to coupled vessel platform dynamics and sensitivity to environmental conditions. This study proposes a response-based methodology for defining allowable operational limits and assessing operability for floating wind turbine generator (WTG) installation using the Nordic Wind concept. The approach integrates hydrodynamic modelling, time-domain simulations, and probabilistic weather-window analysis to evaluate installation feasibility under realistic offshore conditions. The methodology explicitly accounts for coupled vessel spar interactions, heading-dependent system response, and response-based failure criteria, including relative motion, gripper forces, and impact velocity. Allowable sea-state limits are derived for key installation phases and applied to multiple case studies representing different geographical locations and project scales. The results show that installation operability is governed primarily by system response rather than environmental parameters alone. Peak wave period and wave heading are identified as dominant factors, with longer wave periods leading to reduced operability due to response amplification. Across all case studies, the mating phase is found to be the most restrictive operation, controlling overall installation feasibility. Head sea conditions generally provide improved operability, while following seas lead to increased relative motion and reduced performance. The comparative analysis further demonstrates that environmental severity and project scale jointly influence installation duration. Milder environments result in higher operability, whereas harsher conditions, particularly those characterised by long-period swell, significantly reduce feasible weather windows. Larger installation campaigns increase cumulative exposure to weather downtime, even under favourable conditions. The proposed framework extends existing operability assessment methods by incorporating coupled multi-body dynamics and response-based criteria specific to floating wind installations. The results provide a quantitative basis for defining operational limits and support improved planning and decision making for offshore wind turbine installation.",
+      "publicationSource": "Journal of Marine Science and Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-14",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.3390/jmse14080723",
+      "sourceUrl": "https://doi.org/10.3390/jmse14080723",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_3390_jmse14080723",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_3390_jmse14080723",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/jmse14080723",
+        "openalexId": "https://openalex.org/W7154348548"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260419_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_125212",
+      "title": "A frequency-domain method for efficient and accurate fatigue analysis of floating offshore wind turbine tower base",
+      "authors": [
+        "Ruibo Wang",
+        "Yuan Zhao",
+        "Yunting Sun",
+        "Shujin Li"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-14",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.125212",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.125212",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Structural dynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_125212",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_125212",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Structural dynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.125212",
+        "openalexId": "https://openalex.org/W7154217075"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260419_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_125502",
+      "title": "High-fidelity coupling framework for floating offshore wind turbine dynamics under turbulent wind loading and wave forcing",
+      "authors": [
+        "Esma Uzar",
+        "Yi Zhang",
+        "Mina Ghobrial",
+        "Peter Stansby",
+        "Tim Stallard",
+        "Pablo Ouro"
+      ],
+      "abstract": "A novel, computationally efficient, high-fidelity two-way coupling framework for floating offshore wind turbines is presented. The framework couples a large-eddy simulation (LES) solver for atmospheric flow and wake dynamics ( DOFAS ) with a time-domain Cummins-based hydrodynamic–mooring solver ( OREGEN_X ), accounting for linear and non-linear wave forcing and six-degree-of-freedom platform motion. In the two-way coupling strategy only net aerodynamic rotor loads and platform kinematics are exchanged iteratively between the Eulerian flow module and Lagrangian rigid-body dynamics module implemented within a single framework. This avoids explicit resolution of the air–water interface and the use of multiphase in the CFD solver, while retaining the essential aero–hydro–mooring interactions. The framework is validated for the NREL 5 MW turbine mounted on the OC4 DeepCwind platform under uniform and fully developed turbulent inflow conditions combined with regular waves. Rotor loads and acceleration, platform motion are analysed with several grid resolutions using actuator disc (ADM) and actuator line (ALM) methods. The ADM yields predictions comparable to Blade Element Momentum Theory (BEMT) and to the ALM with relatively finer grids in terms of global turbine response, indicating its suitability for wind farm modelling. Adopting the ALM provides an improved representation of blade-scale loading, providing significantly lower thrust amplitudes under low-turbulence conditions compared with BEMT/ADM. The proposed framework provides a scalable and computationally efficient numerical approach for fully-coupled simulations of floating wind turbines under realistic environmental forcing, readily applicable for wind farm scale, offering a practical alternative to fully resolved multiphase CFD approaches that explicitly model the air–water interface at a high computational cost.",
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-16",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.125502",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.125502",
+      "openAccessStatus": "hybrid",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Hydrodynamics",
+        "Structural dynamics",
+        "Floating platform"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_125502",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_125502",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Structural dynamics",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.125502",
+        "openalexId": "https://openalex.org/W7154581808"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260419_006"
+      ],
+      "selected": true
+    }
+  ]
+}

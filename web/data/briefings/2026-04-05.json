@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-03-30",
+  "weekEnd": "2026-04-05",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-04-05-oregon-roadmap",
+      "sourceType": "industry_news",
+      "publisher": "Oregon Capital Chronicle",
+      "title": "Public comment extended on future of offshore wind in Oregon, including none at all",
+      "sourceUrl": "https://oregoncapitalchronicle.com/2026/04/02/public-comment-extended-on-future-of-offshore-wind-in-oregon-including-none-at-all/",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Oregon extended public comment on offshore wind roadmap options, including pilot-scale floating wind and a no-build pathway.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-05-tgs-market",
+      "sourceType": "industry_news",
+      "publisher": "Offshore Magazine",
+      "title": "TGS 4C delivers offshore wind market predictions",
+      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55368214/tgs-tgs-4c-delivers-offshore-wind-market-predictions",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "TGS 4C forecast offshore wind offtake and site-award activity, including floating offshore wind projects expected in 2026.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-05-port-talbot",
+      "sourceType": "industry_news",
+      "publisher": "Cyprus Shipping News",
+      "title": "UK Government agrees support for major Floating Offshore Wind port hub in Port Talbot",
+      "sourceUrl": "https://cyprusshippingnews.com/2026/04/02/uk-government-agrees-support-for-major-floating-offshore-wind-port-hub-in-port-talbot/",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "The UK Government and ABP agreed funding terms to support Port Talbot manufacturing, assembly, and marshalling capacity for floating wind.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-05-teesport",
+      "sourceType": "industry_news",
+      "publisher": "Cyprus Shipping News",
+      "title": "Teesport Offshore Gateway can be ready by 2028 to support UK offshore wind acceleration",
+      "sourceUrl": "https://cyprusshippingnews.com/2026/04/02/teesport-offshore-gateway-can-be-ready-by-2028-to-support-uk-offshore-wind-acceleration-and-generate-270m-per-year-for-teesside-economy/",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "PD Ports outlined a Teesport offshore wind gateway intended to support fixed and floating wind manufacturing and assembly.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-05-flowra-lr",
+      "sourceType": "industry_news",
+      "publisher": "Energies Media",
+      "title": "FLOWRA partners with Lloyds Register to advance floating offshore wind project development",
+      "sourceUrl": "https://energiesmedia.com/flowra-lloyds-register-floating-offshore-wind/",
+      "publishedDate": "2026-04-02",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "FLOWRA and Lloyds Register announced a partnership to support floating offshore wind project development and risk sharing.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-04-05-01",
+      "title": "Oregon extends offshore wind roadmap comment period",
+      "oneLineSummary": "Oregon extended public comment on offshore wind roadmap options, including pilot-scale floating wind and a no-build pathway.",
+      "category": "policy",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-04-05-oregon-roadmap"
+      ],
+      "sourceUrl": "https://oregoncapitalchronicle.com/2026/04/02/public-comment-extended-on-future-of-offshore-wind-in-oregon-including-none-at-all/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Regional planning"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-05-02",
+      "title": "TGS 4C flags floating wind award outlook",
+      "oneLineSummary": "TGS 4C forecast offshore wind offtake and site-award activity, including floating offshore wind projects expected in 2026.",
+      "category": "project",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-04-05-tgs-market"
+      ],
+      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55368214/tgs-tgs-4c-delivers-offshore-wind-market-predictions",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Project pipeline"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-05-03",
+      "title": "UK backs Port Talbot floating wind hub",
+      "oneLineSummary": "The UK Government and ABP agreed funding terms to support Port Talbot manufacturing, assembly, and marshalling capacity for floating wind.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-05-port-talbot"
+      ],
+      "sourceUrl": "https://cyprusshippingnews.com/2026/04/02/uk-government-agrees-support-for-major-floating-offshore-wind-port-hub-in-port-talbot/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Celtic Sea"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-05-04",
+      "title": "Teesport pitches offshore wind gateway",
+      "oneLineSummary": "PD Ports outlined a Teesport offshore wind gateway intended to support fixed and floating wind manufacturing and assembly.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-05-teesport"
+      ],
+      "sourceUrl": "https://cyprusshippingnews.com/2026/04/02/teesport-offshore-gateway-can-be-ready-by-2028-to-support-uk-offshore-wind-acceleration-and-generate-270m-per-year-for-teesside-economy/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Manufacturing"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-05-05",
+      "title": "FLOWRA partners with Lloyds Register",
+      "oneLineSummary": "FLOWRA and Lloyds Register announced a partnership to support floating offshore wind project development and risk sharing.",
+      "category": "standards",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-04-05-flowra-lr"
+      ],
+      "sourceUrl": "https://energiesmedia.com/flowra-lloyds-register-floating-offshore-wind/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Project development"
+      ]
+    }
+  ]
+}

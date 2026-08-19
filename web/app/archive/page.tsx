@@ -79,7 +79,7 @@ export default function ArchivePage() {
               <article className="engineering-briefing-card">
                 <div className="engineering-briefing-card-meta">
                   <p>{digest.dateRange}</p>
-                  <p>Curated from {digest.selectedPaperCount} selected papers</p>
+                  <p>Curated from {digest.checkedResultCount} results</p>
                 </div>
                 <ol className="engineering-top-news">
                   {digest.papers

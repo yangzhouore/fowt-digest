@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-08-10",
+  "weekEnd": "2026-08-16",
+  "generatedAt": "2026-08-19T13:50:00Z",
+  "checkedResultCount": 17,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-08-16-haiyou-anlan",
+      "sourceType": "industry_news",
+      "publisher": "Switchgear Magazine",
+      "title": "16 MW floating wind goes live",
+      "sourceUrl": "https://switchgear-magazine.com/news/technology/16-mw-floating-wind-goes-live/",
+      "publishedDate": "2026-08-10",
+      "retrievedAt": "2026-08-19T13:50:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Switchgear Magazine reported that CNOOC's Haiyou Anlan, described as a 16 MW tension-leg-platform floating wind unit, began operations and supplies offshore oil and gas facilities through a 4.3 km subsea cable.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-16-gwynt-glas-sumitomo",
+      "sourceType": "industry_news",
+      "publisher": "Energy Global",
+      "title": "Sumitomo Corp. acquires stake in Gwynt Glas offshore wind farm",
+      "sourceUrl": "https://www.energyglobal.com/wind/",
+      "publishedDate": "2026-08-10",
+      "retrievedAt": "2026-08-19T13:50:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Energy Global reported that Sumitomo acquired a 33.3 percent equity interest in Gwynt Glas, a floating offshore wind project being developed by EDF power solutions UK and Ireland and ESB in the Celtic Sea.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-16-encomara-squid",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Encomara prepares Squid connection system for floating wind trials",
+      "sourceUrl": "https://www.windtech-international.com/product-news/encomara-prepares-squid-connection-system-for-floating-wind-trials",
+      "publishedDate": "2026-08-10",
+      "retrievedAt": "2026-08-19T13:50:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Windtech International reported that Encomara was preparing inshore trials at Ardersier for Squid, a 40-tonne floating wind connection system supporting mooring lines, power cables, and subsea connectors.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-16-windeed-enova",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "Enova funds Windeed floating wind demonstrator study",
+      "sourceUrl": "https://windtech-international.com/product-news/enova-funds-windeed-floating-wind-demonstrator-study",
+      "publishedDate": "2026-08-11",
+      "retrievedAt": "2026-08-19T13:50:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Windtech International reported that Enova awarded funding to Windeed for a feasibility study for a full-scale floating offshore wind demonstrator in Norway with Aibel and AF Gruppen.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-16-france-ports",
+      "sourceType": "industry_news",
+      "publisher": "Windtech International",
+      "title": "France selects five ports for floating wind infrastructure",
+      "sourceUrl": "https://www.windtech-international.com/industry-news/france-selects-five-ports-for-floating-wind-infrastructure",
+      "publishedDate": "2026-08-10",
+      "retrievedAt": "2026-08-19T13:50:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Windtech International reported that France selected Cherbourg, Brest, Nantes-Saint-Nazaire, Port-la-Nouvelle, and Marseille-Fos for France 2030 funding to support floating wind manufacturing, assembly, and turbine integration.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-08-16-01",
+      "title": "Haiyou Anlan 16 MW floating wind unit starts operations",
+      "oneLineSummary": "CNOOC's Haiyou Anlan 16 MW TLP floating wind unit began supplying offshore oilfield operations through a 4.3 km subsea cable.",
+      "category": "technology",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-08-16-haiyou-anlan"
+      ],
+      "sourceUrl": "https://switchgear-magazine.com/news/technology/16-mw-floating-wind-goes-live/",
+      "explanation": "The source identifies the operating floating unit, platform type, cable connection, and use case in an offshore multi-energy system.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "TLP floating platform",
+        "Subsea cable",
+        "Offshore energy system"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-16-02",
+      "title": "Sumitomo joins Gwynt Glas floating offshore wind project",
+      "oneLineSummary": "Sumitomo acquired a 33.3 percent stake in the Gwynt Glas floating offshore wind project in the Celtic Sea.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-08-16-gwynt-glas-sumitomo"
+      ],
+      "sourceUrl": "https://www.energyglobal.com/wind/",
+      "explanation": "The source identifies the new project shareholder and the floating wind project location, marking a project-ownership update for Celtic Sea development.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Project ownership",
+        "Celtic Sea",
+        "Floating wind development"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-16-03",
+      "title": "Encomara prepares Squid connection trials at Ardersier",
+      "oneLineSummary": "Encomara is preparing inshore trials for a pre-installed connection system that supports floating wind mooring and power-cable interfaces.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-08-16-encomara-squid"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/product-news/encomara-prepares-squid-connection-system-for-floating-wind-trials",
+      "explanation": "The source identifies the trial location and the hardware function across mooring lines, power cables, and subsea connectors.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Mooring connection",
+        "Dynamic cable interface",
+        "Technology qualification"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-16-04",
+      "title": "Enova funds Windeed floating wind demonstrator study",
+      "oneLineSummary": "Enova funded Windeed's feasibility work for a Norwegian full-scale floating offshore wind demonstrator with Aibel and AF Gruppen.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-08-16-windeed-enova"
+      ],
+      "sourceUrl": "https://windtech-international.com/product-news/enova-funds-windeed-floating-wind-demonstrator-study",
+      "explanation": "The source connects the demonstrator study to foundation design, delivery planning, logistics, lifecycle assessment, risk analysis, and operations.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating foundation",
+        "Demonstrator study",
+        "Delivery chain"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-16-05",
+      "title": "France selects five ports for floating wind infrastructure",
+      "oneLineSummary": "France selected five ports for funding support tied to floating wind manufacturing, assembly, and turbine integration capacity.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-08-16-france-ports"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/industry-news/france-selects-five-ports-for-floating-wind-infrastructure",
+      "explanation": "The source identifies the port locations and the infrastructure scope needed to support floating offshore wind serial delivery.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Port infrastructure",
+        "Floating wind assembly",
+        "Supply chain"
+      ]
+    }
+  ]
+}

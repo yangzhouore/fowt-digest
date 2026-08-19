@@ -342,12 +342,14 @@ dd {
 .homepage-keywords,
 .homepage-research-focus,
 .homepage-item-kicker,
+.homepage-paper-source,
 .homepage-paper-action {
   font-family: ui-sans-serif, system-ui, sans-serif;
 }
 
 .homepage-keywords,
 .homepage-research-focus,
+.homepage-paper-source,
 .homepage-item-kicker {
   color: var(--muted);
   font-size: 0.8rem;
@@ -1784,6 +1786,7 @@ dd {
 
 .homepage-front .homepage-keywords,
 .homepage-front .homepage-research-focus,
+.homepage-front .homepage-paper-source,
 .homepage-front .homepage-item-kicker {
   margin: 0;
 }
@@ -1802,6 +1805,13 @@ dd {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.homepage-front .homepage-paper-source {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.35;
 }
 
 .homepage-front .section-heading-row h2 {

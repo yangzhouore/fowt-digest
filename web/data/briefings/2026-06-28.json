@@ -1,39 +1,160 @@
 {
-    "schemaVersion":  "engineering-briefing.v1",
-    "weekStart":  "2026-06-22",
-    "weekEnd":  "2026-06-28",
-    "generatedAt":  "2026-08-11T17:00:00Z",
-    "sourceRecords":  [
-                          {
-                              "sourceRecordId":  "eng-src-2026-06-28-orient-66kv-dynamic",
-                              "sourceType":  "industry_news",
-                              "publisher":  "offshoreWIND.biz",
-                              "title":  "Orient Cable Installs China First 66 kV Dynamic Line for Floating Wind",
-                              "sourceUrl":  "https://www.offshorewind.biz/2026/06/26/orient-cable-installs-chinas-first-66-kv-dynamic-line-for-floating-wind/",
-                              "publishedDate":  "2026-06-26",
-                              "retrievedAt":  "2026-08-11T17:00:00Z",
-                              "collectionMethod":  "manual",
-                              "sourceText":  "OffshoreWIND.biz reported that Orient Cable installed the subsea cable for CTG 16 MW floating wind demonstration platform. The source states this was China first 66 kV dynamic cable for floating wind and that NBO scope included design, supply and installation.",
-                              "licenseNote":  "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
-                          }
-                      ],
-    "briefingItems":  [
-                          {
-                              "briefingItemId":  "eng-item-2026-06-28-01",
-                              "title":  "Orient Cable installs 66 kV dynamic cable",
-                              "oneLineSummary":  "NBO installed the 66 kV dynamic cable for CTG 16 MW floating wind platform.",
-                              "category":  "technology",
-                              "sourceRecordIds":  [
-                                                      "eng-src-2026-06-28-orient-66kv-dynamic"
-                                                  ],
-                              "sourceUrl":  "https://www.offshorewind.biz/2026/06/26/orient-cable-installs-chinas-first-66-kv-dynamic-line-for-floating-wind/",
-                              "explanation":  "The source documents dynamic export cable installation for a floating wind demonstrator.",
-                              "whyItMatters":  null,
-                              "engineeringTopics":  [
-                                                        "Dynamic cable",
-                                                        "66 kV",
-                                                        "Floating demonstrator"
-                                                    ]
-                          }
-                      ]
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-06-22",
+  "weekEnd": "2026-06-28",
+  "generatedAt": "2026-08-11T17:00:00Z",
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-06-28-orient-66kv-dynamic",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Orient Cable Installs China First 66 kV Dynamic Line for Floating Wind",
+      "sourceUrl": "https://www.offshorewind.biz/2026/06/26/orient-cable-installs-chinas-first-66-kv-dynamic-line-for-floating-wind/",
+      "publishedDate": "2026-06-26",
+      "retrievedAt": "2026-08-11T17:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "OffshoreWIND.biz reported that Orient Cable installed the subsea cable for CTG 16 MW floating wind demonstration platform. The source states this was China first 66 kV dynamic cable for floating wind and that NBO scope included design, supply and installation.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-28-windeed-bvga-lcoe",
+      "sourceType": "company_announcement",
+      "publisher": "Windeed",
+      "title": "Independent Review Confirms Windeed's Floating Wind Cost Advantage",
+      "sourceUrl": "https://www.windeed.se/independent-review-confirms-windeed-s-floating-wind-cost-advantage",
+      "publishedDate": "2026-06-22",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Windeed reported that BVG Associates independently assessed its floating foundation and mooring system and found its LCOE materially lower than typical second-generation floating wind designs on a like-for-like basis.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-28-westwood-floating-europe",
+      "sourceType": "conference_announcement",
+      "publisher": "Westwood Global Energy Group",
+      "title": "6th Annual Floating Wind Europe",
+      "sourceUrl": "https://www.westwoodenergy.com/event/6th-annual-floating-wind-europe",
+      "publishedDate": "2026-06-23",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Westwood listed the 6th Annual Floating Wind Europe event on 23-24 June 2026, focused on floating offshore wind and its role in Europe energy transition.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-28-offshore-roundup",
+      "sourceType": "industry_news",
+      "publisher": "Offshore Magazine",
+      "title": "Offshore wind projects, grid links and floating technologies advance across key markets",
+      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55386161/offshore-wind-projects-grid-links-and-floating-technologies-advance-across-key-markets",
+      "publishedDate": "2026-06-23",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Offshore Magazine reported that floating wind and connection-system innovations are advancing as developers and suppliers address scale, cost, and complexity across offshore wind markets.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-06-28-power-marine-energy",
+      "sourceType": "industry_news",
+      "publisher": "POWER Magazine",
+      "title": "Blending Marine and Energy Technologies for Floating Offshore Wind",
+      "sourceUrl": "https://www.powermag.com/blending-marine-and-energy-technologies-for-floating-offshore-wind/",
+      "publishedDate": "2026-06-22",
+      "retrievedAt": "2026-08-19T15:30:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "POWER Magazine reported on marine and energy technology convergence in floating offshore wind, noting EFGL electricity delivery and floating wind deployment in Japan.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-06-28-01",
+      "title": "Orient Cable installs 66 kV dynamic cable",
+      "oneLineSummary": "NBO installed the 66 kV dynamic cable for CTG 16 MW floating wind platform.",
+      "category": "technology",
+      "sourceRecordIds": [
+        "eng-src-2026-06-28-orient-66kv-dynamic"
+      ],
+      "sourceUrl": "https://www.offshorewind.biz/2026/06/26/orient-cable-installs-chinas-first-66-kv-dynamic-line-for-floating-wind/",
+      "explanation": "The source documents dynamic export cable installation for a floating wind demonstrator.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Dynamic cable",
+        "66 kV",
+        "Floating demonstrator"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-28-02",
+      "title": "Windeed review claims lower-cost floating wind system",
+      "oneLineSummary": "An independent BVG Associates review found Windeed floating foundation and mooring system cost materially lower than typical second-generation designs.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-28-windeed-bvga-lcoe"
+      ],
+      "sourceUrl": "https://www.windeed.se/independent-review-confirms-windeed-s-floating-wind-cost-advantage",
+      "explanation": "The source connects floating foundation architecture, mooring design, CAPEX, lifecycle cost, and commercial deployment readiness.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating foundation",
+        "Mooring system",
+        "LCOE"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-28-03",
+      "title": "Floating Wind Europe gathers supply-chain debate",
+      "oneLineSummary": "Westwood listed the 6th Annual Floating Wind Europe event focused on floating offshore wind and Europe energy transition.",
+      "category": "event",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-28-westwood-floating-europe"
+      ],
+      "sourceUrl": "https://www.westwoodenergy.com/event/6th-annual-floating-wind-europe",
+      "explanation": "The source identifies a dedicated floating wind industry forum for commercial and technical scale-up discussion.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Industry forum",
+        "Europe",
+        "Commercial scale-up"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-28-04",
+      "title": "Offshore roundup flags floating connection systems",
+      "oneLineSummary": "Offshore Magazine highlighted floating wind and connection-system innovation as part of wider offshore wind project and grid progress.",
+      "category": "technology",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-06-28-offshore-roundup"
+      ],
+      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55386161/offshore-wind-projects-grid-links-and-floating-technologies-advance-across-key-markets",
+      "explanation": "The source identifies connection-system innovation as a practical route to reduce installation time and cost for floating wind.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Connection systems",
+        "Installation cost",
+        "Floating technology"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-28-05",
+      "title": "Marine energy tools converge with floating wind",
+      "oneLineSummary": "POWER Magazine described how marine technologies are being adapted for floating offshore wind deployment and oil-and-gas electrification links.",
+      "category": "technology",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-06-28-power-marine-energy"
+      ],
+      "sourceUrl": "https://www.powermag.com/blending-marine-and-energy-technologies-for-floating-offshore-wind/",
+      "explanation": "The source frames floating wind as a systems integration challenge across marine structures, electrical delivery, and offshore operations.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Marine technology",
+        "Offshore operations",
+        "Energy integration"
+      ]
+    }
+  ],
+  "checkedResultCount": 12
 }

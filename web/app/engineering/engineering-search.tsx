@@ -7,6 +7,7 @@ export type EngineeringArchiveBriefing = {
   slug: string;
   dateRange: string;
   sourceCount: number;
+  checkedResultCount: number;
   items: EngineeringArchiveNews[];
 };
 
@@ -180,7 +181,7 @@ export function EngineeringSearch({
                 <article className="engineering-briefing-card">
                   <div className="engineering-briefing-card-meta">
                     <p>{briefing.dateRange}</p>
-                    <p>Curated from {briefing.sourceCount} sources</p>
+                    <p>Curated from {briefing.checkedResultCount} results</p>
                   </div>
                   <ol className="engineering-top-news">
                     {briefing.visibleItems.map((item, index) => (

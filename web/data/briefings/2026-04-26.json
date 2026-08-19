@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-04-20",
+  "weekEnd": "2026-04-26",
+  "generatedAt": "2026-08-19T17:05:00Z",
+  "checkedResultCount": 8,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-04-26-bellrock-consent",
+      "sourceType": "company_announcement",
+      "publisher": "Bellrock Wind",
+      "title": "Consent Applications Submitted for 1.8 GW Bellrock Floating Offshore Wind Project",
+      "sourceUrl": "https://bellrockwind.co.uk/consent-applications-submitted-for-1-8-gw-bellrock-floating-offshore-wind-project/",
+      "publishedDate": "2026-04-21",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Bellrock submitted consent and marine licence applications for a proposed 1.8 GW floating offshore wind project in Scotland.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-26-oceanwinds-biodiversity",
+      "sourceType": "company_announcement",
+      "publisher": "Ocean Winds",
+      "title": "Ocean Winds unveils Floating Offshore Wind and Biodiversity Coexistence report",
+      "sourceUrl": "https://www.oceanwinds.com/news-articles/#floating-offshore-wind-biodiversity-coexistence",
+      "publishedDate": "2026-04-22",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Ocean Winds published a WindFloat Atlantic report on floating offshore wind and biodiversity coexistence.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-26-oceanwinds-momentum",
+      "sourceType": "company_announcement",
+      "publisher": "Ocean Winds",
+      "title": "Ocean Winds highlights European offshore wind momentum at WindEurope 2026",
+      "sourceUrl": "https://www.oceanwinds.com/news-articles/#european-offshore-wind-momentum",
+      "publishedDate": "2026-04-21",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Ocean Winds used WindEurope 2026 to highlight offshore wind project momentum across European markets.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-26-globalotec-platform",
+      "sourceType": "company_announcement",
+      "publisher": "Global OTEC",
+      "title": "Installation of worlds first purpose-built offshore platform for ocean heat energy completed",
+      "sourceUrl": "https://globalotec.co/installation-of-worlds-first-purpose-built-offshore-platform-for-ocean-heat-energy-completed/",
+      "publishedDate": "2026-04-22",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Global OTEC completed installation of a purpose-built floating offshore platform prototype in the Canary Islands.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-04-26-muir-mhor-sale",
+      "sourceType": "industry_news",
+      "publisher": "Offshore Magazine",
+      "title": "Fred Olsen Seawind set for full ownership of Muir Mhor wind project",
+      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55376292/offshore-wind-consents-contracts-and-projects-advance-across-europe#muir-mhor",
+      "publishedDate": "2026-04-22",
+      "retrievedAt": "2026-08-19T17:05:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Fred Olsen Seawind moved toward full ownership of Muir Mhor after Vattenfall agreed to sell its project share.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-04-26-01",
+      "title": "Bellrock submits 1.8 GW floating wind consent",
+      "oneLineSummary": "Bellrock submitted consent and marine licence applications for a proposed 1.8 GW floating offshore wind project in Scotland.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-26-bellrock-consent"
+      ],
+      "sourceUrl": "https://bellrockwind.co.uk/consent-applications-submitted-for-1-8-gw-bellrock-floating-offshore-wind-project/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating platform"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-26-02",
+      "title": "Ocean Winds publishes floating wind biodiversity report",
+      "oneLineSummary": "Ocean Winds published a WindFloat Atlantic report on floating offshore wind and biodiversity coexistence.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-26-oceanwinds-biodiversity"
+      ],
+      "sourceUrl": "https://www.oceanwinds.com/news-articles/#floating-offshore-wind-biodiversity-coexistence",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "WindFloat Atlantic"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-26-03",
+      "title": "Ocean Winds highlights WindEurope momentum",
+      "oneLineSummary": "Ocean Winds used WindEurope 2026 to highlight offshore wind project momentum across European markets.",
+      "category": "event",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-26-oceanwinds-momentum"
+      ],
+      "sourceUrl": "https://www.oceanwinds.com/news-articles/#european-offshore-wind-momentum",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "European pipeline"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-26-04",
+      "title": "Global OTEC installs floating offshore platform",
+      "oneLineSummary": "Global OTEC completed installation of a purpose-built floating offshore platform prototype in the Canary Islands.",
+      "category": "technology",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-04-26-globalotec-platform"
+      ],
+      "sourceUrl": "https://globalotec.co/installation-of-worlds-first-purpose-built-offshore-platform-for-ocean-heat-energy-completed/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Marine operations"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-26-05",
+      "title": "Fred Olsen moves to full Muir Mhor ownership",
+      "oneLineSummary": "Fred Olsen Seawind moved toward full ownership of Muir Mhor after Vattenfall agreed to sell its project share.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-04-26-muir-mhor-sale"
+      ],
+      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55376292/offshore-wind-consents-contracts-and-projects-advance-across-europe#muir-mhor",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "ScotWind"
+      ]
+    }
+  ]
+}

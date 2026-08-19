@@ -1,0 +1,326 @@
+{
+  "schemaVersion": "pipeline-data-0.1",
+  "runId": "manual_openalex_20260405_gap_fill",
+  "sourceName": "openalex",
+  "weekStart": "2026-03-30",
+  "weekEnd": "2026-04-05",
+  "generatedAt": "2026-08-19T16:45:00Z",
+  "checkedResultCount": 56,
+  "selectedPapers": [
+    {
+      "paperId": "paper_doi_10_1016_j_ijmecsci_2026_111539",
+      "title": "Nonlinear oscillations of floating offshore wind turbines under wave excitation",
+      "authors": [
+        "Marco Luciani",
+        "Stefano Lenci"
+      ],
+      "abstract": null,
+      "publicationSource": "International Journal of Mechanical Sciences",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-02",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.ijmecsci.2026.111539",
+      "sourceUrl": "https://doi.org/10.1016/j.ijmecsci.2026.111539",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 1,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_ijmecsci_2026_111539",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_ijmecsci_2026_111539",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.ijmecsci.2026.111539",
+        "openalexId": "https://openalex.org/W7148268923"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260405_001"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_3390_jmse14070634",
+      "title": "Multi-Degree-of-Freedom Tuned Mass Damper for Vibration Suppression of Floating Offshore Wind Turbine",
+      "authors": [
+        "Zhendong Yang",
+        "Haoran He",
+        "Faxiang Zhang",
+        "Jing Na"
+      ],
+      "abstract": "Stable wind resources in far-reaching sea areas are important direction for the development of renewable energy, making floating offshore wind turbine (FOWT) a focus of current research. However, the working environment of FOWT is severe. Under the condition of changeable wind and waves, the floating platform exhibits various motion responses, which may reduce power generation efficiency and even lead to structural damage with unpredictable consequences. In this paper, the National Renewable Energy Laboratory (NREL) 5 MW OC4-DeepCwind semi-submersible wind turbine is considered, and a multi-degree-of-freedom (M-DOF) tuned mass damper (TMD) system is designed to simultaneously suppress its roll and pitch motion responses. A multi-objective optimization problem is formulated to unify the frequency tuning accuracy, damping ratio constraints, and mass ratio limits through penalty functions. Then an improved Particle Swarm Optimization algorithm with time-varying acceleration coefficients (TVAC-PSO) is employed to determine the optimal TMD parameters, which dynamically adjusts exploration and exploitation capabilities to overcome the limitations of standard PSO in handling the strongly coupled parameter space. A high-fidelity aero-hydro-servo-elastic simulation model is established using OpenFAST to verify the vibration suppression performance under various sea state conditions. Simulation results demonstrate that the proposed M-DOF TMD system can effectively reduce the roll and pitch motion responses and significantly suppress the resonant peak energy, substantially improving the dynamic performance of FOWT.",
+      "publicationSource": "Journal of Marine Science and Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-03-30",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.3390/jmse14070634",
+      "sourceUrl": "https://doi.org/10.3390/jmse14070634",
+      "openAccessStatus": "gold",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 2,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_3390_jmse14070634",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_3390_jmse14070634",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/jmse14070634",
+        "openalexId": "https://openalex.org/W7143378068"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260405_002"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_enconman_2026_121372",
+      "title": "Vortex-induced damping of heave plates used for floating offshore wind turbines: Effects of free surface and seabed boundaries",
+      "authors": [
+        "Lixian Zhang",
+        "Yuhang Wang",
+        "Yajun Ren",
+        "Xiaogang Huang",
+        "Zaibin Lin",
+        "Wei Shi"
+      ],
+      "abstract": null,
+      "publicationSource": "Energy Conversion and Management",
+      "publicationType": "journal",
+      "publishedDate": "2026-03-31",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.enconman.2026.121372",
+      "sourceUrl": "https://doi.org/10.1016/j.enconman.2026.121372",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 3,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_enconman_2026_121372",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_enconman_2026_121372",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.enconman.2026.121372",
+        "openalexId": "https://openalex.org/W7143901748"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260405_003"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_oceaneng_2026_125321",
+      "title": "Coupled aero-hydro-servo-elastic analysis of advanced wet-towing schemes for the IEA 15MW floating wind turbine",
+      "authors": [
+        "Yichang Tang",
+        "Mingsheng Chen",
+        "Yingjie Chen",
+        "Ning Yu",
+        "Jiaxi Wu",
+        "Xingyu Jiang",
+        "Suqian Liu",
+        "Zhi-Ming Yuan"
+      ],
+      "abstract": null,
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-03-31",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.125321",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.125321",
+      "openAccessStatus": "green",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Floating platform",
+        "Wind turbine"
+      ],
+      "rank": 4,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_oceaneng_2026_125321",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_oceaneng_2026_125321",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Floating platform",
+          "Wind turbine"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.125321",
+        "openalexId": "https://openalex.org/W7147467903"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260405_004"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1016_j_joes_2026_04_015",
+      "title": "Development of an analytical model for nonlinear stability analysis of floating offshore wind turbine platforms",
+      "authors": [
+        "Zahid Ullah",
+        "Pu Xu",
+        "Zhipeng Lin",
+        "Naeem Muhammad"
+      ],
+      "abstract": "Floating platform is the core subsystem of the floating offshore wind turbine system, and is the key source of stability besides mooring lines. Hydrostatic stability analysis is the primary step in preliminary design of a floating platform. The stability analysis of platforms is commonly performed using software packages which utilizes panel-based numerical methods. In this study, we have developed an analytical model for nonlinear stability analysis of floating wind turbine platforms. The analytical formulation takes into consideration the nonlinear co-relation between platform degrees of freedoms and its hydrostatic properties. For each prescribed rotation the equilibrium state of platform is determined and the stability parameters are analytically computed. The model also computes the nonlinear hydrostatic restoring forces and thus can also be easily integrated with other floating wind turbine simulation tools. The numerical accuracy of the analytical model is validated against DNV HydroD. Furthermore, a parametric stability analysis is also performed to evaluate the effect of platform draft, member center-to-center span and KG. The draft of the platform primarily influences large angle stability while having negligible effect on initial stability. The members center-to-center span and KG both have significant influence on stability. However, KG inversely influence stability margin as opposed to center-to-center span which has direct relationship with stability. The proposed formulation eliminates the discretization of the platform surface into panels thus significantly simplify the computation. It is computationally efficient, and can be of useful to researcher in the preliminary design of the floating platform.",
+      "publicationSource": "Journal of Ocean Engineering and Science",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-01",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1016/j.joes.2026.04.015",
+      "sourceUrl": "https://doi.org/10.1016/j.joes.2026.04.015",
+      "openAccessStatus": "diamond",
+      "fullTextAvailability": "abstract_only",
+      "topicTags": [
+        "Floating platform",
+        "Wind turbine",
+        "Simulation"
+      ],
+      "rank": 5,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1016_j_joes_2026_04_015",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1016_j_joes_2026_04_015",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Floating platform",
+          "Wind turbine",
+          "Simulation"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.joes.2026.04.015",
+        "openalexId": "https://openalex.org/W7155224315"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260405_005"
+      ],
+      "selected": true
+    },
+    {
+      "paperId": "paper_doi_10_1007_s13369_026_11222_0",
+      "title": "Coupled Surge-Pitch Motion Effects on Aerodynamic Performance and Wake Dynamics of Floating Offshore Wind Turbines",
+      "authors": [
+        "Hongpeng Liu",
+        "Song Wu",
+        "Xiaowan Wang",
+        "Zejia Hua",
+        "Jingshuai Zhao",
+        "P. Li",
+        "Q. C. Wang"
+      ],
+      "abstract": null,
+      "publicationSource": "Arabian Journal for Science and Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-04-03",
+      "indexedDate": null,
+      "doi": "https://doi.org/10.1007/s13369-026-11222-0",
+      "sourceUrl": "https://doi.org/10.1007/s13369-026-11222-0",
+      "openAccessStatus": "closed",
+      "fullTextAvailability": "none",
+      "topicTags": [
+        "Hydrodynamics",
+        "Wake",
+        "Floating platform"
+      ],
+      "rank": 6,
+      "selectionReason": "selected_within_limit",
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10_1007_s13369_026_11222_0",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-08-19T16:45:00Z",
+        "modelName": null,
+        "paperId": "paper_doi_10_1007_s13369_026_11222_0",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Hydrodynamics",
+          "Wake",
+          "Floating platform"
+        ]
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1007/s13369-026-11222-0",
+        "openalexId": "https://openalex.org/W7148681329"
+      },
+      "candidateIds": [
+        "candidate_openalex_checked_20260405_006"
+      ],
+      "selected": true
+    }
+  ]
+}

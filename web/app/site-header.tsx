@@ -1,20 +1,16 @@
 import Link from "next/link";
-import { currentDigest } from "../data/digest-adapter";
-
 export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="site-name" href="/">
-        <span className="site-name-accent">FOWT</span> <span>Digest</span>
+        <span>Floating Wind Digest</span>
       </Link>
       <div className="header-actions">
         <nav aria-label="Primary navigation">
           <Link href="/engineering">Engineering</Link>
-          <Link href="/industry">Industry</Link>
-          <Link href={`/weekly/${currentDigest.slug}`}>Research</Link>
-          <Link href="/archive">Archive</Link>
+          <Link href="/industry">Industry Map</Link>
+          <Link href="/archive">Research</Link>
           <Link href="/methodology">Methodology</Link>
-          <Link href="/about">About</Link>
         </nav>
         <fieldset className="theme-toggle" aria-label="Theme mode">
           <legend>Theme</legend>

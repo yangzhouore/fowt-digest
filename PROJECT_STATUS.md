@@ -1,13 +1,13 @@
 # Project Status
 
-Last updated: 2026-08-14
+Last updated: 2026-08-19
 
 ## Current State
 
 - Current stable branch: `main`
 - Active milestone: none
 - Active feature branch: none
-- Latest completed work: Homepage Weekly Briefing refinement
+- Latest completed work: Website layout refinements and April-August 2026 archive expansion
 - Release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Immediate next task: select or define the next milestone.
@@ -25,12 +25,12 @@ The repository contains three independent static content areas:
 
 The website supports:
 
-- Homepage with a concise weekly editorial briefing across Engineering,
-  Research, and Industry;
+- Homepage with a concise weekly briefing across Engineering and Research, plus
+  a static week selector;
 - current and archived Research Digest pages;
 - Paper Detail pages;
 - Research Archive with static client-side search;
-- Engineering archive and briefing pages;
+- Engineering archive and briefing pages with static search and region filters;
 - Industry Map page explaining the FOWT value chain and curated companies;
 - Methodology and About pages.
 
@@ -56,14 +56,15 @@ committed `main` through Git integration.
 
 ## Current Data Baseline
 
-- Static Research Digest editions: 18 selected representative editions.
-- Static Engineering Briefing editions: 20 selected representative editions.
+- Static Research Digest editions: 32 selected representative editions.
+- Static Engineering Briefing editions: 32 selected representative editions.
 - Static Industry Map companies: 47 curated organisations.
 - These archives are demonstration coverage, not complete historical coverage.
 - Weekly Digest pages may show abstract previews.
 - Paper Detail pages show complete abstracts when available.
 - Homepage Research cards do not show abstract previews.
-- Current Engineering Homepage items may include controlled region labels.
+- Current Engineering Homepage items use controlled region labels, with
+  global/non-specific items classified as `Unspecified`.
 
 ## Latest Accepted Validation Baseline
 
@@ -73,8 +74,8 @@ Latest local accepted baseline:
 python -m pytest pipeline/tests -> 204 passed
 npm.cmd run validate:data -> passed
 npm.cmd run test:data -> 31 passed
-npm.cmd run lint -> passed
-npm.cmd run build -> passed, 154 static pages
+npm.cmd run lint -> passed with one existing `<img>` optimisation warning
+npm.cmd run build -> passed, 264 static pages
 git diff --check -> passed
 ```
 

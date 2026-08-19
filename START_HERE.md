@@ -7,7 +7,7 @@ Use this file as the resume entry point for a new Codex session.
 - Current stable branch: `main`
 - Active feature branch: none
 - Active milestone: none
-- Latest completed work: Homepage Weekly Briefing refinement
+- Latest completed work: Website layout refinements and April-August 2026 archive expansion
 - Release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Immediate next action: select or define the next milestone before starting
@@ -47,12 +47,11 @@ Open only when relevant:
 - Research adapter: `web/data/digest-adapter.ts`
 - Engineering adapter: `web/data/engineering-briefing-adapter.ts`
 
-The Homepage now presents the three product dimensions clearly: Engineering
-shows what happened, Research shows what is being studied, and Industry shows
-who builds floating wind. The website is a static presentation layer over
-committed JSON and TypeScript fixtures. It does not run the pipeline, query
-OpenAlex, collect engineering sources, deploy itself, or use AI-generated
-summaries.
+The Homepage now presents the weekly Engineering and Research selections with a
+week selector. Engineering and Research archive pages support static search over
+committed records. The website is a static presentation layer over committed
+JSON and TypeScript fixtures. It does not run the pipeline, query OpenAlex,
+collect engineering sources, deploy itself, or use AI-generated summaries.
 
 ## Standard Workflow
 

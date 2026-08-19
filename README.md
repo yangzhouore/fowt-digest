@@ -17,7 +17,8 @@ Repository: https://github.com/yangzhouore/fowt-digest
 - Static source-backed Engineering Briefing editions committed under
   `web/data/briefings/`.
 - Homepage, Research Digest, Paper Detail, Research Archive, Archive Search,
-  Engineering archive, and Engineering Briefing reading paths.
+  Engineering archive, Engineering search, and Engineering Briefing reading
+  paths.
 - Local validation guardrails for committed static digest and briefing JSON.
 - Deterministic publishing tooling that copies an accepted pipeline
   `weekly_digest.json` into the website data directory and refreshes adapter

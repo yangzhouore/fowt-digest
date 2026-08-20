@@ -1,0 +1,3065 @@
+{
+  "schemaVersion": "fowt-projects.v1",
+  "generatedDate": "2026-08-20",
+  "sources": [
+    {
+      "sourceId": "src-equinor-hywind-scotland",
+      "title": "Hywind Scotland",
+      "publisher": "Equinor",
+      "url": "https://www.equinor.com/energy/hywind-scotland",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public developer webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-siemens-hywind-scotland-turbines",
+      "title": "Siemens to supply offshore wind turbines to world's largest floating wind farm",
+      "publisher": "Siemens",
+      "url": "https://news.siemens.co.uk/news/siemens-to-supply-offshore-wind-turbines-to-world-s-largest-floating-wind-farm",
+      "sourceTier": 3,
+      "publishedDate": "2015-12-07",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public supplier announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-equinor-hywind-tampen",
+      "title": "Hywind Tampen",
+      "publisher": "Equinor",
+      "url": "https://www.equinor.com/energy/hywind-tampen",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public developer webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-equinor-hywind-tampen-contracts",
+      "title": "Equinor awarding Hywind Tampen contracts worth NOK 3.3 billion",
+      "publisher": "Equinor",
+      "url": "https://www.equinor.com/news/archive/2019-10-31-hywind-tampen",
+      "sourceTier": 2,
+      "publishedDate": "2019-10-31",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public developer announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-principle-kincardine",
+      "title": "Kincardine Offshore Wind Farm",
+      "publisher": "Principle Power",
+      "url": "https://www.principlepower.com/projects/kincardine-offshore-wind-farm",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public technology provider project page; factual extraction only."
+    },
+    {
+      "sourceId": "src-vestas-kincardine",
+      "title": "MHI Vestas To Supply Five V164-9.5 MW Turbines for Kincardine Floating Offshore Wind Park in Scotland",
+      "publisher": "Vestas",
+      "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/kincarde-floating-offshore-v164-9-5-mw",
+      "sourceTier": 3,
+      "publishedDate": "2019-04-01",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public supplier announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-bourbon-kincardine",
+      "title": "Support to the development of wind farm",
+      "publisher": "Bourbon",
+      "url": "https://www.bourbonoffshore.com/en/services/subsea/our-solutions/Support-to-the-development-of-wind-farm",
+      "sourceTier": 3,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public contractor webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-principle-windfloat-atlantic",
+      "title": "WindFloat Atlantic",
+      "publisher": "Principle Power",
+      "url": "https://www.principlepower.com/projects/windfloat-atlantic",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public technology provider project page; factual extraction only."
+    },
+    {
+      "sourceId": "src-windfloat-atlantic-official",
+      "title": "The wind farm",
+      "publisher": "WindFloat Atlantic",
+      "url": "https://windfloat-atlantic.com/the-wind-farm/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public project webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-vestas-windfloat-atlantic",
+      "title": "WindPlus Tabs MHI Vestas for WindFloat Atlantic Offshore Wind Park",
+      "publisher": "Vestas",
+      "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Windplus-windfloat-atlantic-offshore-wind-park",
+      "sourceTier": 3,
+      "publishedDate": "2018-09-10",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public supplier announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-bourbon-windfloat-atlantic",
+      "title": "Bourbon Subsea Services collaborates in the installation of the third floating wind turbine for the Windfloat Atlantic project",
+      "publisher": "Bourbon",
+      "url": "https://www.bourbonoffshore.com/en/press-releases/bourbon-subsea-services-collaborates-installation-third-floating-wind-turbine",
+      "sourceTier": 3,
+      "publishedDate": "2020-05-29",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public contractor announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-pgl-official",
+      "title": "Discover the floating offshore wind farm",
+      "publisher": "Provence Grand Large",
+      "url": "https://provencegrandlarge.fr/en/the-floating-offshore-park/discover-the-park/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public project webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-pgl-stakeholders",
+      "title": "Project stakeholders",
+      "publisher": "Provence Grand Large",
+      "url": "https://provencegrandlarge.fr/en/the-floating-offshore-park/project-stakeholders/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public project webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-edf-pgl-commissioning",
+      "title": "Provence Grand Large: Full Commissioning of the first french floating offshore wind farm",
+      "publisher": "EDF",
+      "url": "https://www.edf.fr/en/the-edf-group/dedicated-sections/journalists/all-press-releases/provence-grand-large-full-commissioning-of-the-first-french-floating-offshore-wind-farm",
+      "sourceTier": 2,
+      "publishedDate": "2025-06-05",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public developer announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-prysmian-pgl",
+      "title": "Provence Grand Large",
+      "publisher": "Prysmian",
+      "url": "https://www.prysmian.com/en/insight/projects/provence-grand-large",
+      "sourceTier": 3,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public supplier project page; factual extraction only."
+    },
+    {
+      "sourceId": "src-sbm-pgl",
+      "title": "SBM Offshore announces the successful installation of the 3 floating wind units for Provence Grand Large",
+      "publisher": "SBM Offshore",
+      "url": "https://www.sbmoffshore.com/newsroom/sbm-offshore-announces-successful-installation-3-floating-wind-units/",
+      "sourceTier": 3,
+      "publishedDate": "2023-10-12",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public supplier announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-eolmed-qair",
+      "title": "Eolmed, France",
+      "publisher": "Qair",
+      "url": "https://www.qair.energy/realisations/eolmed/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public developer webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-eolmed-bw-ideol",
+      "title": "EOLMED Project",
+      "publisher": "BW Ideol",
+      "url": "https://bw-ideol.com/en/eolmed-project",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public project page; factual extraction only."
+    },
+    {
+      "sourceId": "src-totalenergies-eolmed-construction",
+      "title": "TotalEnergies pursues its development in floating offshore wind with the start of construction of a first farm in France",
+      "publisher": "TotalEnergies",
+      "url": "https://totalenergies.com/newsroom/totalenergies-pursues-its-development-floating-offshore-wind-start-construction/?lang=eng",
+      "sourceTier": 2,
+      "publishedDate": "2022-05-10",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public developer announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-demosath-rwe",
+      "title": "DemoSATH",
+      "publisher": "RWE",
+      "url": "https://www.rwe.com/en/our-energy/discover-renewables/floating-offshore-wind/demosath/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public developer/project webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-demosath-saitec",
+      "title": "DemoSATH: Two years of floating offshore wind in Spain",
+      "publisher": "Saitec Offshore Technologies",
+      "url": "https://saitec-offshore.com/en/demosath-two-years-of-floating-offshore-wind-in-spain/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public technology provider webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-pentland-consents",
+      "title": "Environment, Community, Consents",
+      "publisher": "Pentland Floating Offshore Wind Farm",
+      "url": "https://pentlandfloatingwind.com/environment/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public project webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-pentland-home",
+      "title": "Pentland Floating Offshore Windfarm",
+      "publisher": "Pentland Floating Offshore Wind Farm",
+      "url": "https://pentlandfloatingwind.com/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public project webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-stiesdal-pentland",
+      "title": "Pentland Floating Offshore Wind Farm has been awarded a CfD, with the Stiesdal Offshore TetraSub selected",
+      "publisher": "Stiesdal Offshore",
+      "url": "https://stiesdaloffshore.com/news/pentland-floating-offshore-wind-farm-has-been-awarded-a-cfd-with-the-stiesdal-offshore-tetrasub-selected-as-the-foundation-technology-to-deliver-this-frontrunner-project/",
+      "sourceTier": 3,
+      "publishedDate": "2026-01-14",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public supplier announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-govwales-erebus-consent",
+      "title": "Consent granted for Wales' first floating windfarm",
+      "publisher": "Welsh Government",
+      "url": "https://www.gov.wales/consent-granted-for-wales-first-floating-windfarm",
+      "sourceTier": 1,
+      "publishedDate": "2023-03-13",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public government webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-principle-erebus",
+      "title": "Erebus Floating Wind Farm",
+      "publisher": "Principle Power",
+      "url": "https://www.principlepower.com/projects/erebus-floating-wind",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public technology provider project page; factual extraction only."
+    },
+    {
+      "sourceId": "src-boem-maine-research-lease",
+      "title": "State of Maine Research Lease",
+      "publisher": "Bureau of Ocean Energy Management",
+      "url": "https://www.boem.gov/renewable-energy/state-activities/state-maine-research-lease",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public U.S. government webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-maine-research-array",
+      "title": "Gulf of Maine Floating Offshore Wind Research Array",
+      "publisher": "Maine Department of Energy Resources",
+      "url": "https://www.maine.gov/energy/initiatives/offshorewind/researcharray",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public state government webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-inpex-goto",
+      "title": "Goto City Offshore Wind Power Project",
+      "publisher": "INPEX",
+      "url": "https://www.inpex.com/english/business/project/goto-city.html",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public owner webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-chubu-goto-operation",
+      "title": "Goto Offshore Wind Farm Begins Commercial Operation",
+      "publisher": "Chubu Electric Power",
+      "url": "https://www.chuden.co.jp/english/corporate/releases/pressreleases/1217247_5163.html",
+      "sourceTier": 2,
+      "publishedDate": "2026-01-05",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public owner announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-cnooc-guanlan-grid",
+      "title": "CNOOC Limited Announces the World's First Semi-submersible Double Hundred Deep-sea Floating Wind Turbine Connected to the Grid",
+      "publisher": "CNOOC Limited",
+      "url": "https://www.cnoocltd.com/english/presscenter/pressreleases/2023/202409/t20240925_96696.html",
+      "sourceTier": 2,
+      "publishedDate": "2023-05-20",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public company announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-cnooc-engineering-guanlan",
+      "title": "CNOOC GUANLAN",
+      "publisher": "Offshore Oil Engineering Co., Ltd.",
+      "url": "https://www.cnoocengineering.com/english/ProjectsTop/CleanEnergyTwo/202411/t20241105_100451.html",
+      "sourceTier": 3,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public contractor project page; factual extraction only."
+    },
+    {
+      "sourceId": "src-principle-windfloat-pacific",
+      "title": "WindFloat Pacific",
+      "publisher": "Principle Power",
+      "url": "https://www.principlepower.com/en/projects/windfloat-pacific",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public technology provider project page; factual extraction only."
+    },
+    {
+      "sourceId": "src-boem-oregon-windfloat-pacific",
+      "title": "Oregon Activities",
+      "publisher": "Bureau of Ocean Energy Management",
+      "url": "https://www.boem.gov/renewable-energy/state-activities/oregon-activities",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public U.S. government webpage; factual extraction only."
+    }
+  ],
+  "projects": [
+    {
+      "id": "hywind-scotland",
+      "slug": "hywind-scotland",
+      "name": "Hywind Scotland",
+      "aliases": [
+        "Hywind Scotland Pilot Park"
+      ],
+      "country": "United Kingdom",
+      "region": "Europe",
+      "seaArea": "North Sea",
+      "locationDescription": "Offshore Peterhead, Scotland",
+      "sourceStatus": "In operation since 2017",
+      "normalizedStatus": "operational",
+      "capacityMw": 30,
+      "turbineCount": 5,
+      "turbineRatingMw": 6,
+      "waterDepthM": "95-120",
+      "distanceOffshore": "25 km",
+      "expectedCod": null,
+      "actualCod": "2017",
+      "floatingTechnology": "Hywind",
+      "platformType": "spar",
+      "developerOwnerText": "Equinor and Masdar",
+      "sourceIds": [
+        "src-equinor-hywind-scotland",
+        "src-siemens-hywind-scotland-turbines"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 30,
+          "sourceId": "src-equinor-hywind-scotland",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 5,
+          "sourceId": "src-equinor-hywind-scotland",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "platformType",
+          "value": "spar",
+          "sourceId": "src-equinor-hywind-scotland",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "95-120",
+          "sourceId": "src-equinor-hywind-scotland",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2017",
+          "sourceId": "src-equinor-hywind-scotland",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen",
+      "slug": "hywind-tampen",
+      "name": "Hywind Tampen",
+      "aliases": [],
+      "country": "Norway",
+      "region": "Europe",
+      "seaArea": "North Sea",
+      "locationDescription": "Between the Snorre and Gullfaks platforms",
+      "sourceStatus": "Full operation as of summer 2023",
+      "normalizedStatus": "operational",
+      "capacityMw": 94.6,
+      "turbineCount": 11,
+      "turbineRatingMw": 8.6,
+      "waterDepthM": "260-300",
+      "distanceOffshore": "about 140 km",
+      "expectedCod": null,
+      "actualCod": "2023",
+      "floatingTechnology": "Hywind",
+      "platformType": "spar",
+      "developerOwnerText": "Equinor, Petoro, OMV, Var Energi, Wintershall Dea and INPEX Idemitsu Norge",
+      "sourceIds": [
+        "src-equinor-hywind-tampen",
+        "src-equinor-hywind-tampen-contracts"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 94.6,
+          "sourceId": "src-equinor-hywind-tampen",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 11,
+          "sourceId": "src-equinor-hywind-tampen",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "260-300",
+          "sourceId": "src-equinor-hywind-tampen",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "about 140 km",
+          "sourceId": "src-equinor-hywind-tampen",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2023",
+          "sourceId": "src-equinor-hywind-tampen",
+          "note": "Source states full operation as of summer 2023.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-offshore-wind-farm",
+      "slug": "kincardine-offshore-wind-farm",
+      "name": "Kincardine Offshore Wind Farm",
+      "aliases": [
+        "Kincardine"
+      ],
+      "country": "United Kingdom",
+      "region": "Europe",
+      "seaArea": "North Sea",
+      "locationDescription": "Offshore Aberdeen, Scotland",
+      "sourceStatus": "Installed capacity achieved by fall 2021",
+      "normalizedStatus": "operational",
+      "capacityMw": 50,
+      "turbineCount": 6,
+      "turbineRatingMw": null,
+      "waterDepthM": "60-80",
+      "distanceOffshore": "15 km",
+      "expectedCod": null,
+      "actualCod": "2021",
+      "floatingTechnology": "WindFloat",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "Cobra / Dragados project sponsorship in source record",
+      "sourceIds": [
+        "src-principle-kincardine",
+        "src-vestas-kincardine",
+        "src-bourbon-kincardine"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 50,
+          "sourceId": "src-principle-kincardine",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "60-80",
+          "sourceId": "src-principle-kincardine",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "15 km",
+          "sourceId": "src-principle-kincardine",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "platformType",
+          "value": "semi_submersible",
+          "sourceId": "src-principle-kincardine",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2021",
+          "sourceId": "src-principle-kincardine",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic",
+      "slug": "windfloat-atlantic",
+      "name": "WindFloat Atlantic",
+      "aliases": [],
+      "country": "Portugal",
+      "region": "Europe",
+      "seaArea": "Atlantic Ocean",
+      "locationDescription": "Offshore Viana do Castelo, Portugal",
+      "sourceStatus": "Fully operational in 2020",
+      "normalizedStatus": "operational",
+      "capacityMw": 25,
+      "turbineCount": 3,
+      "turbineRatingMw": 8.4,
+      "waterDepthM": "100",
+      "distanceOffshore": "20 km",
+      "expectedCod": null,
+      "actualCod": "2020",
+      "floatingTechnology": "WindFloat",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "WindPlus / Ocean Winds, Tokyo Gas, Repsol",
+      "sourceIds": [
+        "src-principle-windfloat-atlantic",
+        "src-windfloat-atlantic-official",
+        "src-vestas-windfloat-atlantic",
+        "src-bourbon-windfloat-atlantic"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 25,
+          "sourceId": "src-principle-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 3,
+          "sourceId": "src-principle-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "100",
+          "sourceId": "src-principle-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "20 km",
+          "sourceId": "src-principle-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2020",
+          "sourceId": "src-windfloat-atlantic-official",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "provence-grand-large",
+      "slug": "provence-grand-large",
+      "name": "Provence Grand Large",
+      "aliases": [
+        "PGL"
+      ],
+      "country": "France",
+      "region": "Europe",
+      "seaArea": "Mediterranean Sea",
+      "locationDescription": "Gulf of Fos, offshore Port-Saint-Louis-du-Rhone",
+      "sourceStatus": "Commissioned June 2025",
+      "normalizedStatus": "operational",
+      "capacityMw": 25,
+      "turbineCount": 3,
+      "turbineRatingMw": 8.4,
+      "waterDepthM": null,
+      "distanceOffshore": "17 km",
+      "expectedCod": null,
+      "actualCod": "2025-06",
+      "floatingTechnology": "SBM Offshore / IFP Energies Nouvelles tension-leg floater",
+      "platformType": "tension_leg_platform",
+      "developerOwnerText": "EDF power solutions with Enbridge",
+      "sourceIds": [
+        "src-pgl-official",
+        "src-pgl-stakeholders",
+        "src-edf-pgl-commissioning",
+        "src-prysmian-pgl",
+        "src-sbm-pgl"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 25,
+          "sourceId": "src-pgl-official",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 3,
+          "sourceId": "src-pgl-official",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "17 km",
+          "sourceId": "src-pgl-official",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "platformType",
+          "value": "tension_leg_platform",
+          "sourceId": "src-pgl-official",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2025-06",
+          "sourceId": "src-edf-pgl-commissioning",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed",
+      "slug": "eolmed",
+      "name": "Eolmed",
+      "aliases": [
+        "EOLMED"
+      ],
+      "country": "France",
+      "region": "Europe",
+      "seaArea": "Mediterranean Sea",
+      "locationDescription": "Offshore Gruissan and Port-La Nouvelle",
+      "sourceStatus": "In operation since May 2026",
+      "normalizedStatus": "operational",
+      "capacityMw": 30,
+      "turbineCount": 3,
+      "turbineRatingMw": 10,
+      "waterDepthM": "55-62",
+      "distanceOffshore": "15-18 km",
+      "expectedCod": null,
+      "actualCod": "2026-05",
+      "floatingTechnology": "Damping Pool",
+      "platformType": "barge",
+      "developerOwnerText": "Qair, TotalEnergies and BW Ideol consortium",
+      "sourceIds": [
+        "src-eolmed-qair",
+        "src-eolmed-bw-ideol",
+        "src-totalenergies-eolmed-construction"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 30,
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 3,
+          "sourceId": "src-eolmed-qair",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineRatingMw",
+          "value": 10,
+          "sourceId": "src-eolmed-qair",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "platformType",
+          "value": "barge",
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": "BW Ideol identifies Damping Pool barge technology.",
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2026-05",
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": "Source states operation since May 2026.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "demosath",
+      "slug": "demosath",
+      "name": "DemoSATH",
+      "aliases": [],
+      "country": "Spain",
+      "region": "Europe",
+      "seaArea": "Bay of Biscay",
+      "locationDescription": "BiMEP test site off the Basque coast",
+      "sourceStatus": "In operation since September 2023",
+      "normalizedStatus": "operational",
+      "capacityMw": 2,
+      "turbineCount": 1,
+      "turbineRatingMw": 2,
+      "waterDepthM": "85",
+      "distanceOffshore": "2 miles",
+      "expectedCod": null,
+      "actualCod": "2023-09",
+      "floatingTechnology": "SATH",
+      "platformType": "twin_hull",
+      "developerOwnerText": "Saitec Offshore Technologies, RWE and Kansai Electric Power project partnership",
+      "sourceIds": [
+        "src-demosath-rwe",
+        "src-demosath-saitec"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 2,
+          "sourceId": "src-demosath-rwe",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "platformType",
+          "value": "twin_hull",
+          "sourceId": "src-demosath-rwe",
+          "note": "Source describes SATH as a concrete twin-hull barge structure.",
+          "confidence": "high"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "85",
+          "sourceId": "src-demosath-rwe",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "2 miles",
+          "sourceId": "src-demosath-rwe",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2023-09",
+          "sourceId": "src-demosath-rwe",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pentland-floating-offshore-wind-farm",
+      "slug": "pentland-floating-offshore-wind-farm",
+      "name": "Pentland Floating Offshore Wind Farm",
+      "aliases": [
+        "PFOWF"
+      ],
+      "country": "United Kingdom",
+      "region": "Europe",
+      "seaArea": "Pentland Firth",
+      "locationDescription": "North of Scotland",
+      "sourceStatus": "Offshore consents approved and CfD secured",
+      "normalizedStatus": "pre_construction",
+      "capacityMw": 92.5,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "TetraSub",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "Highland Wind Limited / Copenhagen Infrastructure Partners",
+      "sourceIds": [
+        "src-pentland-consents",
+        "src-pentland-home",
+        "src-stiesdal-pentland"
+      ],
+      "factClaims": [
+        {
+          "path": "normalizedStatus",
+          "value": "pre_construction",
+          "sourceId": "src-pentland-consents",
+          "note": "Consents are approved and project has a CfD; construction start is not recorded in this dataset.",
+          "confidence": "medium"
+        },
+        {
+          "path": "capacityMw",
+          "value": 92.5,
+          "sourceId": "src-stiesdal-pentland",
+          "note": "Supplier page states project size after AR7 CfD.",
+          "confidence": "medium"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "TetraSub",
+          "sourceId": "src-stiesdal-pentland",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "sourceStatus",
+          "value": "Offshore consents approved and CfD secured",
+          "sourceId": "src-pentland-consents",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "erebus-floating-wind-farm",
+      "slug": "erebus-floating-wind-farm",
+      "name": "Erebus Floating Wind Farm",
+      "aliases": [
+        "Project Erebus"
+      ],
+      "country": "United Kingdom",
+      "region": "Europe",
+      "seaArea": "Celtic Sea",
+      "locationDescription": "Offshore Pembrokeshire, Wales",
+      "sourceStatus": "Consented and awarded a Contract for Difference",
+      "normalizedStatus": "pre_construction",
+      "capacityMw": 100,
+      "turbineCount": 7,
+      "turbineRatingMw": 14,
+      "waterDepthM": "up to 75",
+      "distanceOffshore": "40-44 km",
+      "expectedCod": "2030",
+      "actualCod": null,
+      "floatingTechnology": "WindFloat",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "Blue Gem Wind, a joint venture between TotalEnergies and Simply Blue Energy",
+      "sourceIds": [
+        "src-govwales-erebus-consent",
+        "src-principle-erebus"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 100,
+          "sourceId": "src-govwales-erebus-consent",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 7,
+          "sourceId": "src-govwales-erebus-consent",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "40-44 km",
+          "sourceId": "src-govwales-erebus-consent",
+          "note": "Welsh Government states 40 km; Principle Power states approximately 44 km.",
+          "confidence": "medium"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "WindFloat",
+          "sourceId": "src-principle-erebus",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "expectedCod",
+          "value": "2030",
+          "sourceId": "src-principle-erebus",
+          "note": "Source indicates current delivery expected in 2029/30 and first power 2030.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "gulf-of-maine-research-array",
+      "slug": "gulf-of-maine-research-array",
+      "name": "Gulf of Maine Floating Offshore Wind Research Array",
+      "aliases": [
+        "Maine Research Lease",
+        "OCS-A 0553"
+      ],
+      "country": "United States",
+      "region": "North America",
+      "seaArea": "Gulf of Maine",
+      "locationDescription": "U.S. Outer Continental Shelf offshore Maine",
+      "sourceStatus": "Research lease executed",
+      "normalizedStatus": "lease_or_area_awarded",
+      "capacityMw": 144,
+      "turbineCount": 12,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": "28 nautical miles",
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "VolturnUS",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "State of Maine with Pine Tree Offshore Wind as BOEM-designated operator",
+      "sourceIds": [
+        "src-boem-maine-research-lease",
+        "src-maine-research-array"
+      ],
+      "factClaims": [
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-boem-maine-research-lease",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 144,
+          "sourceId": "src-boem-maine-research-lease",
+          "note": "Maximum possible deployment described by BOEM.",
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 12,
+          "sourceId": "src-boem-maine-research-lease",
+          "note": "Maximum possible deployment described by BOEM.",
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "28 nautical miles",
+          "sourceId": "src-boem-maine-research-lease",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "VolturnUS",
+          "sourceId": "src-maine-research-array",
+          "note": "State source identifies UMaine platform technology for the proposed research array.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "goto-offshore-wind-farm",
+      "slug": "goto-offshore-wind-farm",
+      "name": "Goto Offshore Wind Farm",
+      "aliases": [
+        "Goto City Offshore Wind Power Project"
+      ],
+      "country": "Japan",
+      "region": "Asia-Pacific",
+      "seaArea": null,
+      "locationDescription": "Offshore Goto City, Nagasaki Prefecture",
+      "sourceStatus": "In commercial operation",
+      "normalizedStatus": "operational",
+      "capacityMw": 16.8,
+      "turbineCount": 8,
+      "turbineRatingMw": 2.1,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": "2026-01-05",
+      "floatingTechnology": "Hybrid spar-type floater",
+      "platformType": "spar",
+      "developerOwnerText": "Goto Floating Wind Farm LLC investors include INPEX, Toda, ENEOS Renewable Energy, Osaka Gas, Kansai Electric Power and Chubu Electric Power",
+      "sourceIds": [
+        "src-inpex-goto",
+        "src-chubu-goto-operation"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 16.8,
+          "sourceId": "src-inpex-goto",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 8,
+          "sourceId": "src-chubu-goto-operation",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineRatingMw",
+          "value": 2.1,
+          "sourceId": "src-chubu-goto-operation",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2026-01-05",
+          "sourceId": "src-chubu-goto-operation",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "platformType",
+          "value": "spar",
+          "sourceId": "src-chubu-goto-operation",
+          "note": "Source describes a hybrid spar-type floater.",
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "operational",
+          "sourceId": "src-inpex-goto",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "haiyou-guanlan",
+      "slug": "haiyou-guanlan",
+      "name": "Haiyou Guanlan",
+      "aliases": [
+        "CNOOC Guanlan",
+        "Wenchang deep-sea floating wind demonstration project"
+      ],
+      "country": "China",
+      "region": "Asia-Pacific",
+      "seaArea": "South China Sea",
+      "locationDescription": "Near the Wenchang oilfields",
+      "sourceStatus": "Connected to the grid for power generation",
+      "normalizedStatus": "operational",
+      "capacityMw": 7.25,
+      "turbineCount": 1,
+      "turbineRatingMw": 7.25,
+      "waterDepthM": "120",
+      "distanceOffshore": "136 km",
+      "expectedCod": null,
+      "actualCod": "2023-05-20",
+      "floatingTechnology": "semi-submersible deep-sea floating platform",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "CNOOC",
+      "sourceIds": [
+        "src-cnooc-guanlan-grid",
+        "src-cnooc-engineering-guanlan"
+      ],
+      "factClaims": [
+        {
+          "path": "capacityMw",
+          "value": 7.25,
+          "sourceId": "src-cnooc-guanlan-grid",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "120",
+          "sourceId": "src-cnooc-guanlan-grid",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "136 km",
+          "sourceId": "src-cnooc-guanlan-grid",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2023-05-20",
+          "sourceId": "src-cnooc-guanlan-grid",
+          "note": "Source date is the grid-connection announcement date.",
+          "confidence": "high"
+        },
+        {
+          "path": "platformType",
+          "value": "semi_submersible",
+          "sourceId": "src-cnooc-guanlan-grid",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-pacific",
+      "slug": "windfloat-pacific",
+      "name": "WindFloat Pacific",
+      "aliases": [
+        "Principle Power Offshore Wind Pilot Project"
+      ],
+      "country": "United States",
+      "region": "North America",
+      "seaArea": "Pacific Ocean",
+      "locationDescription": "Proposed offshore Oregon",
+      "sourceStatus": "No longer processed by BOEM / discontinued",
+      "normalizedStatus": "cancelled",
+      "capacityMw": 24,
+      "turbineCount": null,
+      "turbineRatingMw": 8,
+      "waterDepthM": "350-550",
+      "distanceOffshore": "30 km",
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "WindFloat",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "Principle Power",
+      "sourceIds": [
+        "src-principle-windfloat-pacific",
+        "src-boem-oregon-windfloat-pacific"
+      ],
+      "factClaims": [
+        {
+          "path": "normalizedStatus",
+          "value": "cancelled",
+          "sourceId": "src-boem-oregon-windfloat-pacific",
+          "note": "BOEM states it is no longer processing the lease request.",
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 24,
+          "sourceId": "src-principle-windfloat-pacific",
+          "note": "Narrative source describes a 24 MW project; source table has a different project-capacity figure, so use this with caution.",
+          "confidence": "medium"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "350-550",
+          "sourceId": "src-principle-windfloat-pacific",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "30 km",
+          "sourceId": "src-principle-windfloat-pacific",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "WindFloat",
+          "sourceId": "src-principle-windfloat-pacific",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "projectCompanyRelationships": [
+    {
+      "id": "hywind-scotland-equinor-developer",
+      "projectId": "hywind-scotland",
+      "industryCompanyId": "equinor",
+      "companyName": "Equinor",
+      "role": "developer_owner",
+      "roleDetail": "Developer and operator",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-equinor-hywind-scotland"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-equinor-hywind-scotland",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-scotland-masdar-owner",
+      "projectId": "hywind-scotland",
+      "industryCompanyId": null,
+      "companyName": "Masdar",
+      "role": "developer_owner",
+      "roleDetail": "Project partner",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-equinor-hywind-scotland"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-equinor-hywind-scotland",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-scotland-siemens-turbine",
+      "projectId": "hywind-scotland",
+      "industryCompanyId": "siemens-gamesa",
+      "companyName": "Siemens Gamesa",
+      "role": "wind_turbine_oem",
+      "roleDetail": "Five SWT-6.0-154 turbines",
+      "startDate": "2015-12-07",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-siemens-hywind-scotland-turbines"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "wind_turbine_oem",
+          "sourceId": "src-siemens-hywind-scotland-turbines",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-equinor-developer",
+      "projectId": "hywind-tampen",
+      "industryCompanyId": "equinor",
+      "companyName": "Equinor",
+      "role": "developer_owner",
+      "roleDetail": "Operator and partner",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-equinor-hywind-tampen"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-equinor-hywind-tampen",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-siemens-turbine",
+      "projectId": "hywind-tampen",
+      "industryCompanyId": "siemens-gamesa",
+      "companyName": "Siemens Gamesa",
+      "role": "wind_turbine_oem",
+      "roleDetail": "Turbine supply and service",
+      "startDate": "2019-10-31",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-equinor-hywind-tampen-contracts"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "wind_turbine_oem",
+          "sourceId": "src-equinor-hywind-tampen-contracts",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-aker-substructures",
+      "projectId": "hywind-tampen",
+      "industryCompanyId": null,
+      "companyName": "Kvaerner / Aker Solutions",
+      "role": "fabrication",
+      "roleDetail": "Design, procurement and fabrication of concrete substructures",
+      "startDate": "2019-10-31",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-equinor-hywind-tampen-contracts"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "fabrication",
+          "sourceId": "src-equinor-hywind-tampen-contracts",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-jdr-cables",
+      "projectId": "hywind-tampen",
+      "industryCompanyId": "jdr-cables",
+      "companyName": "JDR Cable Systems",
+      "role": "inter_array_cable",
+      "roleDetail": "Export and inter-array cable design, procurement and fabrication",
+      "startDate": "2019-10-31",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-equinor-hywind-tampen-contracts"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "inter_array_cable",
+          "sourceId": "src-equinor-hywind-tampen-contracts",
+          "note": "Same source also states export cable scope.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-subsea7-installation",
+      "projectId": "hywind-tampen",
+      "industryCompanyId": "subsea7-seaway7",
+      "companyName": "Subsea 7",
+      "role": "marine_installation",
+      "roleDetail": "Cable installation and connection to Snorre and Gullfaks platforms",
+      "startDate": "2019-10-31",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-equinor-hywind-tampen-contracts"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "marine_installation",
+          "sourceId": "src-equinor-hywind-tampen-contracts",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-principle-platform",
+      "projectId": "kincardine-offshore-wind-farm",
+      "industryCompanyId": "principle-power",
+      "companyName": "Principle Power",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "WindFloat semi-submersible platform design and O&M services",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-principle-kincardine"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-principle-kincardine",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-vestas-turbines",
+      "projectId": "kincardine-offshore-wind-farm",
+      "industryCompanyId": "vestas",
+      "companyName": "MHI Vestas",
+      "role": "wind_turbine_oem",
+      "roleDetail": "Five V164-9.5 MW turbines",
+      "startDate": "2019-04-01",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-vestas-kincardine"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "wind_turbine_oem",
+          "sourceId": "src-vestas-kincardine",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-bourbon-installation",
+      "projectId": "kincardine-offshore-wind-farm",
+      "industryCompanyId": null,
+      "companyName": "Bourbon Subsea Services",
+      "role": "marine_installation",
+      "roleDetail": "Engineering, towing, mooring pre-installation and installation for first floating turbine",
+      "startDate": "2018-05",
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-bourbon-kincardine"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "marine_installation",
+          "sourceId": "src-bourbon-kincardine",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-vryhof-anchoring",
+      "projectId": "kincardine-offshore-wind-farm",
+      "industryCompanyId": "vryhof",
+      "companyName": "Vryhof",
+      "role": "anchoring",
+      "roleDetail": "Anchoring system supplier for the first installation scope",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-bourbon-kincardine"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "anchoring",
+          "sourceId": "src-bourbon-kincardine",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-ocean-winds-developer",
+      "projectId": "windfloat-atlantic",
+      "industryCompanyId": "ocean-winds",
+      "companyName": "Ocean Winds",
+      "role": "developer_owner",
+      "roleDetail": "Project sponsor through WindPlus",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-principle-windfloat-atlantic"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-principle-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-principle-platform",
+      "projectId": "windfloat-atlantic",
+      "industryCompanyId": "principle-power",
+      "companyName": "Principle Power",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "WindFloat T design, TEAM execution support and O&M services",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-principle-windfloat-atlantic"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-principle-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-vestas-turbines",
+      "projectId": "windfloat-atlantic",
+      "industryCompanyId": "vestas",
+      "companyName": "MHI Vestas",
+      "role": "wind_turbine_oem",
+      "roleDetail": "Three V164-8.4 MW turbines",
+      "startDate": "2018-09-10",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-vestas-windfloat-atlantic"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "wind_turbine_oem",
+          "sourceId": "src-vestas-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-bourbon-installation",
+      "projectId": "windfloat-atlantic",
+      "industryCompanyId": null,
+      "companyName": "Bourbon Subsea Services",
+      "role": "marine_installation",
+      "roleDetail": "Mooring-line supply and installation, towing and connection offshore",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-bourbon-windfloat-atlantic"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "marine_installation",
+          "sourceId": "src-bourbon-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-jdr-dynamic-cables",
+      "projectId": "windfloat-atlantic",
+      "industryCompanyId": "jdr-cables",
+      "companyName": "JDR Cables",
+      "role": "dynamic_cable",
+      "roleDetail": "Dynamic cables manufacturer",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-bourbon-windfloat-atlantic"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "dynamic_cable",
+          "sourceId": "src-bourbon-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-vryhof-anchoring",
+      "projectId": "windfloat-atlantic",
+      "industryCompanyId": "vryhof",
+      "companyName": "Vryhof",
+      "role": "anchoring",
+      "roleDetail": "Anchoring system supplier",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-bourbon-windfloat-atlantic"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "anchoring",
+          "sourceId": "src-bourbon-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pgl-edf-developer",
+      "projectId": "provence-grand-large",
+      "industryCompanyId": "edf-renewables",
+      "companyName": "EDF power solutions / EDF Renewables",
+      "role": "developer_owner",
+      "roleDetail": "Project lead",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-pgl-stakeholders",
+        "src-edf-pgl-commissioning"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-pgl-stakeholders",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pgl-siemens-turbines",
+      "projectId": "provence-grand-large",
+      "industryCompanyId": "siemens-gamesa",
+      "companyName": "Siemens Gamesa",
+      "role": "wind_turbine_oem",
+      "roleDetail": "Three 8.4 MW turbines",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-pgl-stakeholders",
+        "src-edf-pgl-commissioning"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "wind_turbine_oem",
+          "sourceId": "src-edf-pgl-commissioning",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pgl-sbm-platform",
+      "projectId": "provence-grand-large",
+      "industryCompanyId": "sbm-offshore",
+      "companyName": "SBM Offshore",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "Tension-leg floater developed with IFP Energies Nouvelles; EPCI scope for floating units",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-pgl-official",
+        "src-sbm-pgl"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-sbm-pgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pgl-prysmian-dynamic-cable",
+      "projectId": "provence-grand-large",
+      "industryCompanyId": "prysmian",
+      "companyName": "Prysmian",
+      "role": "dynamic_cable",
+      "roleDetail": "Dynamic cable system design, manufacturing, installation and commissioning",
+      "startDate": "2020-12-18",
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-prysmian-pgl"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "dynamic_cable",
+          "sourceId": "src-prysmian-pgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pgl-rte-grid",
+      "projectId": "provence-grand-large",
+      "industryCompanyId": null,
+      "companyName": "RTE",
+      "role": "grid_connection",
+      "roleDetail": "Public electricity transmission grid operator",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-prysmian-pgl"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "grid_connection",
+          "sourceId": "src-prysmian-pgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-qair-developer",
+      "projectId": "eolmed",
+      "industryCompanyId": null,
+      "companyName": "Qair",
+      "role": "developer_owner",
+      "roleDetail": "Consortium lead and operator",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-eolmed-qair",
+        "src-eolmed-bw-ideol"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-totalenergies-owner",
+      "projectId": "eolmed",
+      "industryCompanyId": "totalenergies",
+      "companyName": "TotalEnergies",
+      "role": "developer_owner",
+      "roleDetail": "Project shareholder",
+      "startDate": "2020",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-totalenergies-eolmed-construction",
+        "src-eolmed-bw-ideol"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-totalenergies-eolmed-construction",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-bw-ideol-platform",
+      "projectId": "eolmed",
+      "industryCompanyId": "bw-ideol",
+      "companyName": "BW Ideol",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "Damping Pool technology, engineering and licensing",
+      "startDate": "2016",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-eolmed-bw-ideol"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-vestas-turbines",
+      "projectId": "eolmed",
+      "industryCompanyId": "vestas",
+      "companyName": "Vestas",
+      "role": "wind_turbine_oem",
+      "roleDetail": "Three 10 MW turbines",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-eolmed-bw-ideol"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "wind_turbine_oem",
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-rte-grid",
+      "projectId": "eolmed",
+      "industryCompanyId": null,
+      "companyName": "RTE",
+      "role": "grid_connection",
+      "roleDetail": "French transmission system operator for grid connection",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-eolmed-qair"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "grid_connection",
+          "sourceId": "src-eolmed-qair",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "demosath-saitec-platform",
+      "projectId": "demosath",
+      "industryCompanyId": "saitec-offshore",
+      "companyName": "Saitec Offshore Technologies",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "SATH platform designer and project partner",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-demosath-rwe",
+        "src-demosath-saitec"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-demosath-rwe",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "demosath-rwe-developer",
+      "projectId": "demosath",
+      "industryCompanyId": "rwe",
+      "companyName": "RWE",
+      "role": "developer_owner",
+      "roleDetail": "Project partner",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-demosath-rwe"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-demosath-rwe",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "demosath-kepco-partner",
+      "projectId": "demosath",
+      "industryCompanyId": null,
+      "companyName": "Kansai Electric Power",
+      "role": "developer_owner",
+      "roleDetail": "Project partner",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-demosath-rwe"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-demosath-rwe",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pentland-cip-developer",
+      "projectId": "pentland-floating-offshore-wind-farm",
+      "industryCompanyId": "cip",
+      "companyName": "Copenhagen Infrastructure Partners",
+      "role": "developer_owner",
+      "roleDetail": "Developer/owner via Highland Wind Limited project source context",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-stiesdal-pentland"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-stiesdal-pentland",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "pentland-stiesdal-platform",
+      "projectId": "pentland-floating-offshore-wind-farm",
+      "industryCompanyId": "stiesdal-offshore",
+      "companyName": "Stiesdal Offshore",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "TetraSub foundation technology selected",
+      "startDate": "2026-01-14",
+      "endDate": null,
+      "status": "announced",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-stiesdal-pentland"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-stiesdal-pentland",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "erebus-blue-gem-developer",
+      "projectId": "erebus-floating-wind-farm",
+      "industryCompanyId": null,
+      "companyName": "Blue Gem Wind",
+      "role": "developer_owner",
+      "roleDetail": "Joint venture project developer",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-govwales-erebus-consent",
+        "src-principle-erebus"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-govwales-erebus-consent",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "erebus-totalenergies-owner",
+      "projectId": "erebus-floating-wind-farm",
+      "industryCompanyId": "totalenergies",
+      "companyName": "TotalEnergies",
+      "role": "developer_owner",
+      "roleDetail": "Blue Gem Wind joint venture partner",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-govwales-erebus-consent",
+        "src-principle-erebus"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-govwales-erebus-consent",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "erebus-principle-platform",
+      "projectId": "erebus-floating-wind-farm",
+      "industryCompanyId": "principle-power",
+      "companyName": "Principle Power",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "WindFloat platform technology",
+      "startDate": null,
+      "endDate": null,
+      "status": "announced",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-principle-erebus"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-principle-erebus",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "erebus-bureau-veritas-certification",
+      "projectId": "erebus-floating-wind-farm",
+      "industryCompanyId": "bureau-veritas",
+      "companyName": "Bureau Veritas",
+      "role": "certification_assurance",
+      "roleDetail": "Certification listed by technology provider source",
+      "startDate": null,
+      "endDate": null,
+      "status": "announced",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-principle-erebus"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "certification_assurance",
+          "sourceId": "src-principle-erebus",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "maine-state-developer",
+      "projectId": "gulf-of-maine-research-array",
+      "industryCompanyId": null,
+      "companyName": "State of Maine",
+      "role": "developer_owner",
+      "roleDetail": "Research lease holder/applicant",
+      "startDate": "2024-08-19",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-boem-maine-research-lease",
+        "src-maine-research-array"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-boem-maine-research-lease",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "maine-pine-tree-operator",
+      "projectId": "gulf-of-maine-research-array",
+      "industryCompanyId": null,
+      "companyName": "Pine Tree Offshore Wind",
+      "role": "developer_owner",
+      "roleDetail": "BOEM-designated operator for research lease",
+      "startDate": "2024-08-19",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-boem-maine-research-lease"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-boem-maine-research-lease",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "maine-umaine-technology",
+      "projectId": "gulf-of-maine-research-array",
+      "industryCompanyId": null,
+      "companyName": "University of Maine",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "VolturnUS platform technology identified by State of Maine",
+      "startDate": null,
+      "endDate": null,
+      "status": "announced",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-maine-research-array"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-maine-research-array",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "goto-spc-developer",
+      "projectId": "goto-offshore-wind-farm",
+      "industryCompanyId": null,
+      "companyName": "Goto Floating Wind Farm LLC",
+      "role": "developer_owner",
+      "roleDetail": "Project venture company",
+      "startDate": "2021-10",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-inpex-goto",
+        "src-chubu-goto-operation"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-inpex-goto",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "goto-toda-owner",
+      "projectId": "goto-offshore-wind-farm",
+      "industryCompanyId": null,
+      "companyName": "Toda Corporation",
+      "role": "developer_owner",
+      "roleDetail": "Investor/owner participant",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-inpex-goto",
+        "src-chubu-goto-operation"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-inpex-goto",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "goto-inpex-owner",
+      "projectId": "goto-offshore-wind-farm",
+      "industryCompanyId": null,
+      "companyName": "INPEX",
+      "role": "developer_owner",
+      "roleDetail": "Investor/owner participant",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-inpex-goto"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-inpex-goto",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "goto-toda-hybrid-spar",
+      "projectId": "goto-offshore-wind-farm",
+      "industryCompanyId": null,
+      "companyName": "Toda Corporation",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "Hybrid spar-type floater designed and built by Toda",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-chubu-goto-operation"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-chubu-goto-operation",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "guanlan-cnooc-developer",
+      "projectId": "haiyou-guanlan",
+      "industryCompanyId": null,
+      "companyName": "CNOOC",
+      "role": "developer_owner",
+      "roleDetail": "Owner of Wenchang deep-sea floating wind demonstration project",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-cnooc-guanlan-grid"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-cnooc-guanlan-grid",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "guanlan-cooec-epci",
+      "projectId": "haiyou-guanlan",
+      "industryCompanyId": null,
+      "companyName": "Offshore Oil Engineering Co., Ltd.",
+      "role": "epci",
+      "roleDetail": "EPCI contractor for Haiyou Guanlan",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-cnooc-engineering-guanlan"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "epci",
+          "sourceId": "src-cnooc-engineering-guanlan",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-pacific-principle-developer",
+      "projectId": "windfloat-pacific",
+      "industryCompanyId": "principle-power",
+      "companyName": "Principle Power",
+      "role": "developer_owner",
+      "roleDetail": "Project sponsor/developer",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-principle-windfloat-pacific",
+        "src-boem-oregon-windfloat-pacific"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-principle-windfloat-pacific",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-pacific-principle-platform",
+      "projectId": "windfloat-pacific",
+      "industryCompanyId": "principle-power",
+      "companyName": "Principle Power",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "WindFloat floating technology",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-principle-windfloat-pacific"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-principle-windfloat-pacific",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "timelineEvents": [
+    {
+      "id": "hywind-scotland-first-power",
+      "projectId": "hywind-scotland",
+      "date": "2017-10",
+      "datePrecision": "month",
+      "eventType": "first_power",
+      "title": "First power",
+      "description": "Hywind Scotland started producing electricity.",
+      "companyNames": [
+        "Equinor"
+      ],
+      "sourceIds": [
+        "src-equinor-hywind-scotland"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "first_power",
+          "sourceId": "src-equinor-hywind-scotland",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-scotland-turbine-supply",
+      "projectId": "hywind-scotland",
+      "date": "2015-12-07",
+      "datePrecision": "day",
+      "eventType": "turbine_selection",
+      "title": "Siemens turbine supply announced",
+      "description": "Siemens announced it would supply five SWT-6.0-154 turbines.",
+      "companyNames": [
+        "Siemens",
+        "Statoil"
+      ],
+      "sourceIds": [
+        "src-siemens-hywind-scotland-turbines"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "turbine_selection",
+          "sourceId": "src-siemens-hywind-scotland-turbines",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-contracts-awarded",
+      "projectId": "hywind-tampen",
+      "date": "2019-10-31",
+      "datePrecision": "day",
+      "eventType": "epci_contract",
+      "title": "Major contracts awarded",
+      "description": "Equinor awarded major turbine, substructure, cable and installation contracts.",
+      "companyNames": [
+        "Equinor",
+        "Siemens Gamesa",
+        "Kvaerner",
+        "JDR Cable Systems",
+        "Subsea 7"
+      ],
+      "sourceIds": [
+        "src-equinor-hywind-tampen-contracts"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "epci_contract",
+          "sourceId": "src-equinor-hywind-tampen-contracts",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-first-power",
+      "projectId": "hywind-tampen",
+      "date": "2022-11",
+      "datePrecision": "month",
+      "eventType": "first_power",
+      "title": "Started production",
+      "description": "Hywind Tampen started production.",
+      "companyNames": [
+        "Equinor"
+      ],
+      "sourceIds": [
+        "src-equinor-hywind-tampen"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "first_power",
+          "sourceId": "src-equinor-hywind-tampen",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-full-operation",
+      "projectId": "hywind-tampen",
+      "date": "2023",
+      "datePrecision": "year",
+      "eventType": "commercial_operation",
+      "title": "Full operation",
+      "description": "Hywind Tampen was in full operation as of summer 2023.",
+      "companyNames": [
+        "Equinor"
+      ],
+      "sourceIds": [
+        "src-equinor-hywind-tampen"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "commercial_operation",
+          "sourceId": "src-equinor-hywind-tampen",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-turbine-order",
+      "projectId": "kincardine-offshore-wind-farm",
+      "date": "2019-04-01",
+      "datePrecision": "day",
+      "eventType": "turbine_selection",
+      "title": "MHI Vestas turbine order confirmed",
+      "description": "MHI Vestas confirmed a firm turbine order for Kincardine.",
+      "companyNames": [
+        "MHI Vestas",
+        "Cobra"
+      ],
+      "sourceIds": [
+        "src-vestas-kincardine"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "turbine_selection",
+          "sourceId": "src-vestas-kincardine",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-operation",
+      "projectId": "kincardine-offshore-wind-farm",
+      "date": "2021",
+      "datePrecision": "year",
+      "eventType": "commercial_operation",
+      "title": "Operational capacity reached",
+      "description": "Kincardine achieved its installed capacity in 2021.",
+      "companyNames": [
+        "Principle Power"
+      ],
+      "sourceIds": [
+        "src-principle-kincardine"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "commercial_operation",
+          "sourceId": "src-principle-kincardine",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-turbine-order",
+      "projectId": "windfloat-atlantic",
+      "date": "2018-09-10",
+      "datePrecision": "day",
+      "eventType": "turbine_selection",
+      "title": "MHI Vestas turbine order",
+      "description": "WindPlus signed a firm order for three V164-8.4 MW turbines.",
+      "companyNames": [
+        "WindPlus",
+        "MHI Vestas"
+      ],
+      "sourceIds": [
+        "src-vestas-windfloat-atlantic"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "turbine_selection",
+          "sourceId": "src-vestas-windfloat-atlantic",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-first-power",
+      "projectId": "windfloat-atlantic",
+      "date": "2020-02",
+      "datePrecision": "month",
+      "eventType": "first_power",
+      "title": "First generation",
+      "description": "WindFloat Atlantic recorded first generation.",
+      "companyNames": [
+        "WindPlus"
+      ],
+      "sourceIds": [
+        "src-windfloat-atlantic-official"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "first_power",
+          "sourceId": "src-windfloat-atlantic-official",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-full-operation",
+      "projectId": "windfloat-atlantic",
+      "date": "2020-07",
+      "datePrecision": "month",
+      "eventType": "commercial_operation",
+      "title": "Fully operational",
+      "description": "WindFloat Atlantic became fully operational.",
+      "companyNames": [
+        "WindPlus"
+      ],
+      "sourceIds": [
+        "src-windfloat-atlantic-official"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "commercial_operation",
+          "sourceId": "src-windfloat-atlantic-official",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pgl-cable-contract",
+      "projectId": "provence-grand-large",
+      "date": "2020-12-18",
+      "datePrecision": "day",
+      "eventType": "cable_contract",
+      "title": "Prysmian cable contract signed",
+      "description": "Prysmian signed the dynamic cable system contract for Provence Grand Large.",
+      "companyNames": [
+        "Prysmian",
+        "PEOPGL"
+      ],
+      "sourceIds": [
+        "src-prysmian-pgl"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "cable_contract",
+          "sourceId": "src-prysmian-pgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pgl-floaters-installed",
+      "projectId": "provence-grand-large",
+      "date": "2023-10-12",
+      "datePrecision": "day",
+      "eventType": "installation_contract",
+      "title": "Floating units installed",
+      "description": "SBM Offshore announced successful installation of the three floating units.",
+      "companyNames": [
+        "SBM Offshore"
+      ],
+      "sourceIds": [
+        "src-sbm-pgl"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "installation_contract",
+          "sourceId": "src-sbm-pgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pgl-commissioning",
+      "projectId": "provence-grand-large",
+      "date": "2025-06-05",
+      "datePrecision": "day",
+      "eventType": "commissioning",
+      "title": "Full commissioning",
+      "description": "EDF announced full commissioning of Provence Grand Large.",
+      "companyNames": [
+        "EDF Renewables",
+        "Enbridge"
+      ],
+      "sourceIds": [
+        "src-edf-pgl-commissioning"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "commissioning",
+          "sourceId": "src-edf-pgl-commissioning",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-fid",
+      "projectId": "eolmed",
+      "date": "2022-05",
+      "datePrecision": "month",
+      "eventType": "fid",
+      "title": "Final investment decision",
+      "description": "Eolmed reached final investment decision.",
+      "companyNames": [
+        "Qair",
+        "TotalEnergies",
+        "BW Ideol"
+      ],
+      "sourceIds": [
+        "src-eolmed-bw-ideol"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "fid",
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-construction-start",
+      "projectId": "eolmed",
+      "date": "2022",
+      "datePrecision": "year",
+      "eventType": "construction_start",
+      "title": "Construction period started",
+      "description": "Eolmed construction phase began.",
+      "companyNames": [
+        "Qair",
+        "TotalEnergies",
+        "BW Ideol"
+      ],
+      "sourceIds": [
+        "src-eolmed-bw-ideol",
+        "src-totalenergies-eolmed-construction"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "construction_start",
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-first-power",
+      "projectId": "eolmed",
+      "date": "2026-04",
+      "datePrecision": "month",
+      "eventType": "first_power",
+      "title": "First power",
+      "description": "Eolmed injected first electricity onto the RTE grid.",
+      "companyNames": [
+        "Qair",
+        "BW Ideol",
+        "RTE"
+      ],
+      "sourceIds": [
+        "src-eolmed-bw-ideol"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "first_power",
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-operation",
+      "projectId": "eolmed",
+      "date": "2026-05",
+      "datePrecision": "month",
+      "eventType": "commercial_operation",
+      "title": "Full capacity reached",
+      "description": "Eolmed reached full capacity and entered operation.",
+      "companyNames": [
+        "Qair",
+        "BW Ideol"
+      ],
+      "sourceIds": [
+        "src-eolmed-bw-ideol"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "commercial_operation",
+          "sourceId": "src-eolmed-bw-ideol",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "demosath-operation",
+      "projectId": "demosath",
+      "date": "2023-09",
+      "datePrecision": "month",
+      "eventType": "commercial_operation",
+      "title": "Operation began",
+      "description": "DemoSATH entered operation at BiMEP.",
+      "companyNames": [
+        "Saitec Offshore Technologies",
+        "RWE",
+        "Kansai Electric Power"
+      ],
+      "sourceIds": [
+        "src-demosath-rwe"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "commercial_operation",
+          "sourceId": "src-demosath-rwe",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pentland-consent",
+      "projectId": "pentland-floating-offshore-wind-farm",
+      "date": "2023-06",
+      "datePrecision": "month",
+      "eventType": "consent",
+      "title": "Offshore consents approved",
+      "description": "Scottish Ministers approved offshore consents for Pentland.",
+      "companyNames": [
+        "Pentland Floating Offshore Wind Farm"
+      ],
+      "sourceIds": [
+        "src-pentland-consents"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent",
+          "sourceId": "src-pentland-consents",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pentland-cfd",
+      "projectId": "pentland-floating-offshore-wind-farm",
+      "date": "2026-01-14",
+      "datePrecision": "day",
+      "eventType": "subsidy_or_cfd_award",
+      "title": "Contract for Difference secured",
+      "description": "Pentland secured a UK Contract for Difference and Stiesdal confirmed TetraSub selection.",
+      "companyNames": [
+        "Pentland Floating Offshore Wind Farm",
+        "Stiesdal Offshore"
+      ],
+      "sourceIds": [
+        "src-stiesdal-pentland",
+        "src-pentland-home"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "subsidy_or_cfd_award",
+          "sourceId": "src-stiesdal-pentland",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "erebus-consent",
+      "projectId": "erebus-floating-wind-farm",
+      "date": "2023-03-13",
+      "datePrecision": "day",
+      "eventType": "consent",
+      "title": "Welsh consent granted",
+      "description": "Welsh Government granted consent for Project Erebus.",
+      "companyNames": [
+        "Blue Gem Wind"
+      ],
+      "sourceIds": [
+        "src-govwales-erebus-consent"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent",
+          "sourceId": "src-govwales-erebus-consent",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "erebus-cfd",
+      "projectId": "erebus-floating-wind-farm",
+      "date": "2026",
+      "datePrecision": "year",
+      "eventType": "subsidy_or_cfd_award",
+      "title": "Contract for Difference awarded",
+      "description": "Erebus was awarded a Contract for Difference in AR7.",
+      "companyNames": [
+        "Blue Gem Wind"
+      ],
+      "sourceIds": [
+        "src-principle-erebus"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "subsidy_or_cfd_award",
+          "sourceId": "src-principle-erebus",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "maine-research-lease",
+      "projectId": "gulf-of-maine-research-array",
+      "date": "2024-08-19",
+      "datePrecision": "day",
+      "eventType": "research_lease_award",
+      "title": "Research lease executed",
+      "description": "BOEM executed the floating offshore wind research lease with the State of Maine.",
+      "companyNames": [
+        "BOEM",
+        "State of Maine"
+      ],
+      "sourceIds": [
+        "src-boem-maine-research-lease",
+        "src-maine-research-array"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "research_lease_award",
+          "sourceId": "src-boem-maine-research-lease",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "goto-public-occupancy-plan",
+      "projectId": "goto-offshore-wind-farm",
+      "date": "2022-04",
+      "datePrecision": "month",
+      "eventType": "consent",
+      "title": "Public occupancy plan approved",
+      "description": "The project received approval from METI and MLIT for its public occupancy plan.",
+      "companyNames": [
+        "Goto Floating Wind Farm LLC",
+        "METI",
+        "MLIT"
+      ],
+      "sourceIds": [
+        "src-inpex-goto"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent",
+          "sourceId": "src-inpex-goto",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "goto-commercial-operation",
+      "projectId": "goto-offshore-wind-farm",
+      "date": "2026-01-05",
+      "datePrecision": "day",
+      "eventType": "commercial_operation",
+      "title": "Commercial operation began",
+      "description": "Goto Offshore Wind Farm began commercial operation.",
+      "companyNames": [
+        "Goto Floating Wind Farm LLC"
+      ],
+      "sourceIds": [
+        "src-inpex-goto",
+        "src-chubu-goto-operation"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "commercial_operation",
+          "sourceId": "src-chubu-goto-operation",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "guanlan-grid-connection",
+      "projectId": "haiyou-guanlan",
+      "date": "2023-05-20",
+      "datePrecision": "day",
+      "eventType": "first_power",
+      "title": "Grid-connected power generation",
+      "description": "CNOOC announced the Wenchang floating wind demonstration project connected to the grid.",
+      "companyNames": [
+        "CNOOC"
+      ],
+      "sourceIds": [
+        "src-cnooc-guanlan-grid"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "first_power",
+          "sourceId": "src-cnooc-guanlan-grid",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-pacific-doe-award",
+      "projectId": "windfloat-pacific",
+      "date": "2012",
+      "datePrecision": "year",
+      "eventType": "development_award",
+      "title": "DOE demonstration grant awarded",
+      "description": "Principle Power received U.S. Department of Energy support for WindFloat Pacific.",
+      "companyNames": [
+        "Principle Power",
+        "U.S. Department of Energy"
+      ],
+      "sourceIds": [
+        "src-principle-windfloat-pacific"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "development_award",
+          "sourceId": "src-principle-windfloat-pacific",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-pacific-no-longer-processed",
+      "projectId": "windfloat-pacific",
+      "date": "2018-09",
+      "datePrecision": "month",
+      "eventType": "project_cancellation",
+      "title": "BOEM no longer processing lease request",
+      "description": "BOEM determined it was no longer processing the Principle Power lease request.",
+      "companyNames": [
+        "BOEM",
+        "Principle Power"
+      ],
+      "sourceIds": [
+        "src-boem-oregon-windfloat-pacific"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "project_cancellation",
+          "sourceId": "src-boem-oregon-windfloat-pacific",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

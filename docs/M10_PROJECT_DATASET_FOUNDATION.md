@@ -150,3 +150,118 @@ M10A's model held up with two small implementation choices:
 - Keep coordinates out until GIS licences and precision classes are accepted.
 - Add project-level editorial summaries only after the source-backed data
   contract is stable.
+
+## M10C Expansion Note
+
+M10C expands the production dataset from 13 golden records to 48 curated project records. The expansion keeps the M10B schema and validator unchanged: project facts, company relationships and timeline events remain source-backed, optional unknown facts remain `null`, and coordinates remain omitted.
+
+### Expansion Coverage
+
+Countries represented after expansion:
+
+- China
+- France
+- Italy
+- Japan
+- Norway
+- Portugal
+- South Korea
+- Spain
+- United Kingdom
+- United States
+
+Regions represented:
+
+- Asia-Pacific
+- Europe
+- North America
+
+Lifecycle distribution after expansion:
+
+- Operational: 10
+- Commissioning: 1
+- Pre-construction: 3
+- Consented: 2
+- Development: 12
+- Lease / area awarded: 16
+- Paused: 1
+- Cancelled: 3
+
+### Major New Source Classes
+
+The expansion added source packs from:
+
+- Scottish Government and Crown Estate Scotland-related public project evidence for ScotWind and INTOG records;
+- The Crown Estate Round 5 for Celtic Sea floating project development areas;
+- BOEM California lease records for U.S. Pacific floating lease areas;
+- Norwegian Ministry of Energy and Equinor for Utsira Nord;
+- CRE, Ocean Winds, RTE and Principle Power for French Mediterranean projects;
+- Italian MASE and Renexia/Med Wind sources for Italian projects;
+- MunmuBaram, Equinor Korea and NEDO for Asia-Pacific development and demonstrator records.
+
+No commercial offshore intelligence dataset was copied or redistributed.
+
+### Important Ambiguity Decisions
+
+- ScotWind and INTOG records are included only where the source-backed identity and floating/deep-water context is sufficiently clear. Sparse records remain sparse.
+- Celtic Sea Round 5 entries are treated as project development areas, not final wind-farm names.
+- California BOEM records are represented as lease-area records, not mature project designs.
+- Golden State Wind is normalized as `paused` because BOEM states cancellation will occur after settlement conditions are met; Invenergy California Offshore OCS-P 0565 is normalized as `cancelled` because BOEM states the lease has been cancelled and rescinded.
+- CampionWind remains a historically important cancelled/relinquished ScotWind floating record.
+- No Taiwan record was added because a named, source-backed floating project award was not strong enough in this pass.
+- No coordinates were added. GIS licensing and precision rules remain out of scope.
+
+### Remaining Coverage Gaps
+
+- South Korea beyond MunmuBaram and Firefly remains incomplete; several Ulsan projects need stronger project-company primary sources before inclusion.
+- China has only Haiyou Guanlan in this dataset; additional Chinese demonstrators need source normalization across Chinese and English project names.
+- Japan has Goto and Hibiki; Fukushima historical demonstrators still need a clean source pack before inclusion.
+- Ireland, Taiwan, Australia and other emerging markets remain candidates but were not expanded without sufficiently clear named floating project evidence.
+- Many lease/area records lack turbine, platform, water-depth, distance-offshore and COD fields because those facts are not yet project-specific.
+
+### Company Identity Gaps Added Or Still Unresolved
+
+Additional project-company names not currently represented as M9 Industry Map companies include:
+
+- Flotation Energy
+- Vargronn
+- Odfjell Oceanwind
+- Simply Blue
+- Qair
+- Buchan Offshore Wind
+- SSE Renewables
+- Marubeni
+- Nadara
+- Northland Power
+- ESB / ESB Asset Management
+- Orsted
+- BlueFloat Energy
+- Magnora Offshore Wind
+- Gwynt Glas
+- Canopy Offshore Wind
+- California North Floating
+- Atlas Offshore Wind
+- Golden State Wind
+- Invenergy California Offshore
+- Deep Wind Offshore Norway
+- Eolien en Mer Participations
+- Eoliennes Mediterranee Grand Large
+- Maple Power
+- Renexia
+- Hexicon
+- RPS
+- Sekwang Engineering
+- NEDO
+
+These should not automatically expand the Industry Map UI.
+
+### Licensing Limitations
+
+- Government and regulator pages are used for factual extraction and attribution, not map reproduction.
+- Crown Estate Marine Data Exchange and GIS products remain excluded from redistribution.
+- Developer and supplier pages are used only for normalized factual data and provenance.
+- Commercial databases remain discovery-only and are not stored as sources.
+
+### Recommendation For M10D
+
+M10D should add a shared company identity model before further expansion. The next useful data work is not more records at any cost; it is deduplicating company identities, separating project-development-area records from final project names, and adding review notes for records whose status is likely to change during permitting or auction processes.

@@ -341,6 +341,266 @@
       "publishedDate": null,
       "accessedDate": "2026-08-20",
       "licenseNote": "Public U.S. government webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-scotgov-owps-2026",
+      "title": "Annex A: Map of all Scottish offshore wind projects as of January 2026",
+      "publisher": "Scottish Government",
+      "url": "https://www.gov.scot/publications/update-2020-offshore-wind-policy-statement-scotlands-offshore-wind-ambition-2/pages/4/",
+      "sourceTier": 1,
+      "publishedDate": "2026-01-28",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Open Government Licence v3.0 except graphic assets and otherwise stated; factual extraction only."
+    },
+    {
+      "sourceId": "src-green-volt-overview",
+      "title": "Project overview",
+      "publisher": "Green Volt Offshore Windfarm",
+      "url": "https://greenvoltoffshorewind.com/project-overview/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-green-volt-consent",
+      "title": "Planning and consent",
+      "publisher": "Green Volt Offshore Windfarm",
+      "url": "https://greenvoltoffshorewind.com/planning-and-consent/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-totalenergies-culzean-demo",
+      "title": "TotalEnergies launches a floating offshore wind pilot project to supply renewable electricity to Culzean",
+      "publisher": "TotalEnergies",
+      "url": "https://totalenergies.co.uk/united-kingdom-totalenergies-launches-floating-offshore-wind-pilot-project-supply-renewable",
+      "sourceTier": 2,
+      "publishedDate": "2024-08-29",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-marramwind-official",
+      "title": "Welcome",
+      "publisher": "MarramWind",
+      "url": "https://www.marramwind.co.uk/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-shell-scottishpower-scotwind",
+      "title": "Shell and ScottishPower win bids to develop 5 GW of floating wind power in the UK",
+      "publisher": "Shell UK",
+      "url": "https://www.shell.co.uk/about-us/news-and-publications/media-releases/2022-media-releases/shell-and-scottishpower-win-bids.html",
+      "sourceTier": 2,
+      "publishedDate": "2022-01-17",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-buchan-project",
+      "title": "Project",
+      "publisher": "Buchan Offshore Wind",
+      "url": "https://buchanoffshorewind.com/project/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-buchan-consent",
+      "title": "Planning and Consent",
+      "publisher": "Buchan Offshore Wind",
+      "url": "https://buchanoffshorewind.com/planning-consent/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-sse-ossian-floating",
+      "title": "Projects and Future Growth",
+      "publisher": "SSE Renewables",
+      "url": "https://www.sserenewables.com/offshore-wind/floating-wind/projects-and-future-growth/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-ossian-eia",
+      "title": "Ossian digital offshore scoping report",
+      "publisher": "Ossian Offshore Wind Farm Limited",
+      "url": "https://ossian-eia.com/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-crown-estate-round5",
+      "title": "Floating Offshore Wind Leasing Round 5",
+      "publisher": "The Crown Estate",
+      "url": "https://www.thecrownestate.co.uk/our-business/marine/round-5",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public seabed authority webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-boem-california",
+      "title": "California Activities",
+      "publisher": "Bureau of Ocean Energy Management",
+      "url": "https://www.boem.gov/renewable-energy/state-activities/california-activities",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public U.S. government webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-utsira-nord-gov",
+      "title": "Utsira Nord",
+      "publisher": "Norwegian Ministry of Energy",
+      "url": "https://www.regjeringen.no/en/topics/energy/renewable-energy/havvind/utsira-nord/id3052997/",
+      "sourceTier": 1,
+      "publishedDate": "2026-02-12",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public government webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-equinor-utsira-nord",
+      "title": "Utsira Nord",
+      "publisher": "Equinor",
+      "url": "https://www.equinor.com/energy/utsira-nord",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-cre-ao6",
+      "title": "CRE publishes AO6 Mediterranean floating wind deliberation",
+      "publisher": "Commission de regulation de l energie",
+      "url": "https://www.cre.fr/actualites/toute-lactualite/la-cre-publie-la-deliberation-relative-a-son-instruction-de-la-procedure-concurrentielle-ao6-portant-sur-deux-installations-eoliennes-flottantes-de-production-delectricite-en-mer-mediterranee.html",
+      "sourceTier": 1,
+      "publishedDate": "2025-01-10",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public regulator webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-oceanwinds-eflo",
+      "title": "Eoliennes Flottantes d Occitanie",
+      "publisher": "Ocean Winds",
+      "url": "https://www.oceanwinds.com/projects/efflo/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-rte-mgl",
+      "title": "Raccordement des eoliennes flottantes au large de Fos-sur-Mer en Mediterranee",
+      "publisher": "RTE",
+      "url": "https://www.rte-france.com/projets/nos-projets/raccordement-eoliennes-flottantes-fos-sur-mer-mediterranee",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-oceanwinds-efgl-first-power",
+      "title": "Ocean Winds delivers first power from floating offshore wind project in France",
+      "publisher": "Ocean Winds",
+      "url": "https://www.oceanwinds.com/news/uncategorized/ocean-winds-delivers-its-first-power-from-floating-offshore-wind-project-in-france/",
+      "sourceTier": 2,
+      "publishedDate": "2026-05-04",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-principle-efgl",
+      "title": "Les Eoliennes Flottantes du Golfe du Lion",
+      "publisher": "Principle Power",
+      "url": "https://www.principlepower.com/fr/projets/efgl",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-mase-7seas-med",
+      "title": "Parco eolico offshore di tipo floating nel canale di Sicilia",
+      "publisher": "Italian Ministry of Environment and Energy Security",
+      "url": "https://va.mite.gov.it/en-GB/Oggetti/Info/7273",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public Italian government environmental assessment portal; factual extraction only."
+    },
+    {
+      "sourceId": "src-medwind-official",
+      "title": "Med Wind",
+      "publisher": "Med Wind Italia",
+      "url": "https://medwind.it/en/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-renexia-medwind-feed",
+      "title": "Renexia and Mingyang: FEED signed for Med Wind",
+      "publisher": "Renexia",
+      "url": "https://renexia.it/en/renexia-and-mingyang-feed-signed-for-med-wind/",
+      "sourceTier": 2,
+      "publishedDate": "2024-10-09",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-munmubaram-project",
+      "title": "The MunmuBaram project",
+      "publisher": "MunmuBaram",
+      "url": "https://www.munmubaram.com/the-project",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-equinor-firefly-feed",
+      "title": "Equinor awards Firefly substructure FEED to Technip Energies",
+      "publisher": "Equinor Korea",
+      "url": "https://www.equinor.co.kr/en/news/equinor-awards-firefly-substructure-feed-to-technip-energies",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-equinor-firefly-esia",
+      "title": "Equinor Korea awards offshore wind ESIA and EIA contract off the coast of Ulsan",
+      "publisher": "Equinor Korea",
+      "url": "https://www.equinor.co.kr/en/news/esia-and-eia-contract-ulsan",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-nedo-hibiki-opening",
+      "title": "NEDO holds opening ceremony for floating offshore wind power generation system",
+      "publisher": "NEDO",
+      "url": "https://www.nedo.go.jp/english/news/whatsnew_00142.html",
+      "sourceTier": 1,
+      "publishedDate": "2019-05-24",
+      "accessedDate": "2026-08-20",
+      "licenseNote": "Public Japanese government agency webpage; factual extraction only."
     }
   ],
   "projects": [
@@ -1189,6 +1449,1991 @@
           "value": "WindFloat",
           "sourceId": "src-principle-windfloat-pacific",
           "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "North Sea",
+      "locationDescription": "Near the Culzean platform",
+      "capacityMw": 3,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Ocergy semi-submersible floater hull",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "TotalEnergies",
+      "id": "culzean-demo-floating-wind",
+      "slug": "culzean-demo-floating-wind",
+      "name": "Culzean Demo Floating Wind Pilot",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Consented / pilot launched",
+      "normalizedStatus": "consented",
+      "sourceIds": [
+        "src-totalenergies-culzean-demo",
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Consented / pilot launched",
+          "sourceId": "src-totalenergies-culzean-demo",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "consented",
+          "sourceId": "src-totalenergies-culzean-demo",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 3,
+          "sourceId": "src-totalenergies-culzean-demo",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Ocergy semi-submersible floater hull",
+          "sourceId": "src-totalenergies-culzean-demo",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 560,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind farm",
+      "platformType": "unknown",
+      "developerOwnerText": "Flotation Energy and Vargronn",
+      "id": "green-volt",
+      "slug": "green-volt",
+      "name": "Green Volt",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Consented / CfD awarded",
+      "normalizedStatus": "pre_construction",
+      "sourceIds": [
+        "src-green-volt-overview",
+        "src-green-volt-consent",
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Consented / CfD awarded",
+          "sourceId": "src-green-volt-overview",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "pre_construction",
+          "sourceId": "src-green-volt-overview",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 560,
+          "sourceId": "src-green-volt-overview",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind farm",
+          "sourceId": "src-green-volt-overview",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 100,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": null,
+      "platformType": "unknown",
+      "developerOwnerText": "Odfjell Oceanwind / Simply Blue",
+      "id": "salamander-floating-wind",
+      "slug": "salamander-floating-wind",
+      "name": "Salamander",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Consented",
+      "normalizedStatus": "consented",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Consented",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "consented",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 100,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 1008,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Qair",
+      "id": "ayre-offshore-wind",
+      "slug": "ayre-offshore-wind",
+      "name": "Ayre Offshore Wind",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "In planning",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "In planning",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 1008,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 960,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Damping Pool",
+      "platformType": "barge",
+      "developerOwnerText": "Buchan Offshore Wind",
+      "id": "buchan-offshore-wind",
+      "slug": "buchan-offshore-wind",
+      "name": "Buchan Offshore Wind",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "In planning / offshore application submitted",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-scotgov-owps-2026",
+        "src-buchan-project",
+        "src-buchan-consent"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "In planning / offshore application submitted",
+          "sourceId": "src-buchan-project",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-buchan-project",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 960,
+          "sourceId": "src-buchan-project",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Damping Pool",
+          "sourceId": "src-buchan-project",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 3000,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind farm",
+      "platformType": "unknown",
+      "developerOwnerText": "ScottishPower Renewables / Shell",
+      "id": "marramwind",
+      "slug": "marramwind",
+      "name": "MarramWind",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "In planning",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-scotgov-owps-2026",
+        "src-marramwind-official",
+        "src-shell-scottishpower-scotwind"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "In planning",
+          "sourceId": "src-marramwind-official",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-marramwind-official",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 3000,
+          "sourceId": "src-marramwind-official",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind farm",
+          "sourceId": "src-marramwind-official",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 1005,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Vattenfall / Fred. Olsen Seawind",
+      "id": "muir-mhor",
+      "slug": "muir-mhor",
+      "name": "Muir Mhor Offshore Wind Farm",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "In planning",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "In planning",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 1005,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 3610,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind farm",
+      "platformType": "unknown",
+      "developerOwnerText": "SSE Renewables / Copenhagen Infrastructure Partners / Marubeni",
+      "id": "ossian",
+      "slug": "ossian",
+      "name": "Ossian",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "In planning",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-scotgov-owps-2026",
+        "src-sse-ossian-floating",
+        "src-ossian-eia"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "In planning",
+          "sourceId": "src-sse-ossian-floating",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-sse-ossian-floating",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 3610,
+          "sourceId": "src-sse-ossian-floating",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind farm",
+          "sourceId": "src-sse-ossian-floating",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 2300,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Mainstream Renewable Power / Ocean Winds",
+      "id": "arven-offshore-wind",
+      "slug": "arven-offshore-wind",
+      "name": "Arven",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Lease awarded",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Lease awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 2300,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 1800,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Nadara",
+      "id": "bellrock-offshore-wind",
+      "slug": "bellrock-offshore-wind",
+      "name": "Bellrock",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Lease awarded",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Lease awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 1800,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 900,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Nadara",
+      "id": "broadshore-offshore-wind",
+      "slug": "broadshore-offshore-wind",
+      "name": "Broadshore",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Lease awarded",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Lease awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 900,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 1500,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Northland Power / ESB",
+      "id": "havbredey-offshore-wind",
+      "slug": "havbredey-offshore-wind",
+      "name": "Havbredey",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Lease awarded",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Lease awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 1500,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 500,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "ESB Asset Management",
+      "id": "stoura-offshore-wind",
+      "slug": "stoura-offshore-wind",
+      "name": "Stoura",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Lease awarded",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Lease awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 500,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 1000,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Orsted / BlueFloat Energy / Nadara",
+      "id": "stromar-offshore-wind",
+      "slug": "stromar-offshore-wind",
+      "name": "Stromar",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Lease awarded",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Lease awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 1000,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 495,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Magnora Offshore Wind",
+      "id": "talisk-offshore-wind",
+      "slug": "talisk-offshore-wind",
+      "name": "Talisk",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Lease awarded",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Lease awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 495,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 3000,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Shell / ScottishPower Renewables",
+      "id": "campionwind",
+      "slug": "campionwind",
+      "name": "CampionWind",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Lease relinquished",
+      "normalizedStatus": "cancelled",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Lease relinquished",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "cancelled",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 3000,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": null,
+      "capacityMw": 1350,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "ScotWind floating lease/project area",
+      "platformType": "unknown",
+      "developerOwnerText": "Flotation Energy / Vargronn",
+      "id": "cenos-offshore-wind",
+      "slug": "cenos-offshore-wind",
+      "name": "Cenos",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "In planning",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "In planning",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 1350,
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "ScotWind floating lease/project area",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Celtic Sea",
+      "locationDescription": null,
+      "capacityMw": 1500,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind Round 5 project development area",
+      "platformType": "unknown",
+      "developerOwnerText": "Equinor",
+      "id": "celtic-sea-round5-equinor-pda",
+      "slug": "celtic-sea-round5-equinor-pda",
+      "name": "Celtic Sea Round 5 Equinor Project Development Area",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Preferred bidder / rights expected under Round 5",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-crown-estate-round5"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Preferred bidder / rights expected under Round 5",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "capacityMw",
+          "value": 1500,
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind Round 5 project development area",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Celtic Sea",
+      "locationDescription": null,
+      "capacityMw": 1500,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind Round 5 project development area",
+      "platformType": "unknown",
+      "developerOwnerText": "Gwynt Glas",
+      "id": "celtic-sea-round5-gwynt-glas-pda",
+      "slug": "celtic-sea-round5-gwynt-glas-pda",
+      "name": "Celtic Sea Round 5 Gwynt Glas Project Development Area",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Preferred bidder / rights expected under Round 5",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-crown-estate-round5"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Preferred bidder / rights expected under Round 5",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "capacityMw",
+          "value": 1500,
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind Round 5 project development area",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Celtic Sea",
+      "locationDescription": null,
+      "capacityMw": 1500,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind Round 5 project development area",
+      "platformType": "unknown",
+      "developerOwnerText": "Ocean Winds",
+      "id": "celtic-sea-round5-ocean-winds-pda",
+      "slug": "celtic-sea-round5-ocean-winds-pda",
+      "name": "Celtic Sea Round 5 Ocean Winds Project Development Area",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "sourceStatus": "Preferred bidder / rights expected under Round 5",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-crown-estate-round5"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Preferred bidder / rights expected under Round 5",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "capacityMw",
+          "value": 1500,
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind Round 5 project development area",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Pacific Ocean - Humboldt",
+      "locationDescription": null,
+      "capacityMw": null,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "California floating offshore wind lease area",
+      "platformType": "unknown",
+      "developerOwnerText": "Canopy Offshore Wind, LLC",
+      "id": "canopy-offshore-wind-ocs-p-0561",
+      "slug": "canopy-offshore-wind-ocs-p-0561",
+      "name": "Canopy Offshore Wind lease OCS-P 0561",
+      "country": "United States",
+      "region": "North America",
+      "sourceStatus": "Executed BOEM lease",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Executed BOEM lease",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "California floating offshore wind lease area",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Pacific Ocean - Humboldt",
+      "locationDescription": null,
+      "capacityMw": null,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "California floating offshore wind lease area",
+      "platformType": "unknown",
+      "developerOwnerText": "California North Floating LLC",
+      "id": "california-north-floating-ocs-p-0562",
+      "slug": "california-north-floating-ocs-p-0562",
+      "name": "California North Floating lease OCS-P 0562",
+      "country": "United States",
+      "region": "North America",
+      "sourceStatus": "Executed BOEM lease",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Executed BOEM lease",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "California floating offshore wind lease area",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Pacific Ocean - Morro Bay",
+      "locationDescription": null,
+      "capacityMw": null,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "California floating offshore wind lease area",
+      "platformType": "unknown",
+      "developerOwnerText": "Atlas Offshore Wind LLC",
+      "id": "atlas-offshore-wind-ocs-p-0563",
+      "slug": "atlas-offshore-wind-ocs-p-0563",
+      "name": "Atlas Offshore Wind lease OCS-P 0563",
+      "country": "United States",
+      "region": "North America",
+      "sourceStatus": "Executed BOEM lease",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Executed BOEM lease",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "California floating offshore wind lease area",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Pacific Ocean - Morro Bay",
+      "locationDescription": null,
+      "capacityMw": null,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "California floating offshore wind lease area",
+      "platformType": "unknown",
+      "developerOwnerText": "Golden State Wind LLC",
+      "id": "golden-state-wind-ocs-p-0564",
+      "slug": "golden-state-wind-ocs-p-0564",
+      "name": "Golden State Wind lease OCS-P 0564",
+      "country": "United States",
+      "region": "North America",
+      "sourceStatus": "Settlement provides for future cancellation/rescission",
+      "normalizedStatus": "paused",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Settlement provides for future cancellation/rescission",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "paused",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "California floating offshore wind lease area",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Pacific Ocean - Morro Bay",
+      "locationDescription": null,
+      "capacityMw": null,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "California floating offshore wind lease area",
+      "platformType": "unknown",
+      "developerOwnerText": "Invenergy California Offshore LLC",
+      "id": "invenergy-california-offshore-ocs-p-0565",
+      "slug": "invenergy-california-offshore-ocs-p-0565",
+      "name": "Invenergy California Offshore lease OCS-P 0565",
+      "country": "United States",
+      "region": "North America",
+      "sourceStatus": "Cancelled and rescinded by DOI",
+      "normalizedStatus": "cancelled",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Cancelled and rescinded by DOI",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "cancelled",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "California floating offshore wind lease area",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "North Sea",
+      "locationDescription": "Off Rogaland, south-west Norway",
+      "capacityMw": 500,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind area",
+      "platformType": "unknown",
+      "developerOwnerText": "Equinor and Vargronn",
+      "id": "utsira-nord-equinor-vargronn-area-3",
+      "slug": "utsira-nord-equinor-vargronn-area-3",
+      "name": "Utsira Nord Project Area 3",
+      "country": "Norway",
+      "region": "Europe",
+      "sourceStatus": "Project area awarded / impact assessment right",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-utsira-nord-gov",
+        "src-equinor-utsira-nord"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Project area awarded / impact assessment right",
+          "sourceId": "src-equinor-utsira-nord",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-equinor-utsira-nord",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 500,
+          "sourceId": "src-equinor-utsira-nord",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind area",
+          "sourceId": "src-equinor-utsira-nord",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "North Sea",
+      "locationDescription": "Off Rogaland, south-west Norway",
+      "capacityMw": 500,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind area",
+      "platformType": "unknown",
+      "developerOwnerText": "Deep Wind Offshore Norway and EDF Renewables International",
+      "id": "utsira-nord-harald-harfagre",
+      "slug": "utsira-nord-harald-harfagre",
+      "name": "Utsira Nord Harald Harfagre",
+      "country": "Norway",
+      "region": "Europe",
+      "sourceStatus": "Project area awarded / impact assessment right",
+      "normalizedStatus": "lease_or_area_awarded",
+      "sourceIds": [
+        "src-utsira-nord-gov"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Project area awarded / impact assessment right",
+          "sourceId": "src-utsira-nord-gov",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "lease_or_area_awarded",
+          "sourceId": "src-utsira-nord-gov",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 500,
+          "sourceId": "src-utsira-nord-gov",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind area",
+          "sourceId": "src-utsira-nord-gov",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [
+        "EFGL"
+      ],
+      "seaArea": "Mediterranean Sea",
+      "locationDescription": "16 km off the French Mediterranean coast",
+      "capacityMw": 30,
+      "turbineCount": 3,
+      "turbineRatingMw": 10,
+      "waterDepthM": "70-100",
+      "distanceOffshore": "16 km",
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "WindFloat",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "Ocean Winds and Banque des Territoires",
+      "id": "efgl",
+      "slug": "efgl",
+      "name": "Eoliennes Flottantes du Golfe du Lion",
+      "country": "France",
+      "region": "Europe",
+      "sourceStatus": "First power delivered",
+      "normalizedStatus": "commissioning",
+      "sourceIds": [
+        "src-oceanwinds-efgl-first-power",
+        "src-principle-efgl"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "First power delivered",
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "commissioning",
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 30,
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "WindFloat",
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 3,
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineRatingMw",
+          "value": 10,
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "70-100",
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "16 km",
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [
+        "EFLO",
+        "AO6 Narbonnaise"
+      ],
+      "seaArea": "Mediterranean Sea",
+      "locationDescription": null,
+      "capacityMw": 250,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Commercial floating offshore wind project",
+      "platformType": "unknown",
+      "developerOwnerText": "Ocean Winds and Eolien en Mer Participations",
+      "id": "eflo-narbonnaise",
+      "slug": "eflo-narbonnaise",
+      "name": "Eoliennes Flottantes d Occitanie",
+      "country": "France",
+      "region": "Europe",
+      "sourceStatus": "AO6 winner / development",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-cre-ao6",
+        "src-oceanwinds-eflo"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "AO6 winner / development",
+          "sourceId": "src-oceanwinds-eflo",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-oceanwinds-eflo",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 250,
+          "sourceId": "src-oceanwinds-eflo",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Commercial floating offshore wind project",
+          "sourceId": "src-oceanwinds-eflo",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [
+        "AO6 Golfe de Fos",
+        "MGL"
+      ],
+      "seaArea": "Mediterranean Sea",
+      "locationDescription": null,
+      "capacityMw": 250,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Commercial floating offshore wind project",
+      "platformType": "unknown",
+      "developerOwnerText": "Eoliennes Mediterranee Grand Large, EDF Renewables and Maple Power",
+      "id": "mediterranee-grand-large",
+      "slug": "mediterranee-grand-large",
+      "name": "Mediterranee Grand Large",
+      "country": "France",
+      "region": "Europe",
+      "sourceStatus": "AO6 winner / development",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-cre-ao6",
+        "src-rte-mgl"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "AO6 winner / development",
+          "sourceId": "src-cre-ao6",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-cre-ao6",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 250,
+          "sourceId": "src-cre-ao6",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Commercial floating offshore wind project",
+          "sourceId": "src-cre-ao6",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Sicily Channel",
+      "locationDescription": null,
+      "capacityMw": 250,
+      "turbineCount": 25,
+      "turbineRatingMw": 10,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind farm",
+      "platformType": "unknown",
+      "developerOwnerText": "7SEAS med S.r.l.",
+      "id": "seven-seas-med",
+      "slug": "seven-seas-med",
+      "name": "7Seas Med",
+      "country": "Italy",
+      "region": "Europe",
+      "sourceStatus": "Preliminary assessment / administrative control",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-mase-7seas-med"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Preliminary assessment / administrative control",
+          "sourceId": "src-mase-7seas-med",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-mase-7seas-med",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 250,
+          "sourceId": "src-mase-7seas-med",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind farm",
+          "sourceId": "src-mase-7seas-med",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 25,
+          "sourceId": "src-mase-7seas-med",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineRatingMw",
+          "value": 10,
+          "sourceId": "src-mase-7seas-med",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": "Mediterranean Sea",
+      "locationDescription": "Off western Sicily / Trapani area",
+      "capacityMw": 2800,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind farm",
+      "platformType": "unknown",
+      "developerOwnerText": "Renexia / Med Wind Italia",
+      "id": "med-wind",
+      "slug": "med-wind",
+      "name": "Med Wind",
+      "country": "Italy",
+      "region": "Europe",
+      "sourceStatus": "Development / EIA and concession process",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-medwind-official",
+        "src-renexia-medwind-feed"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Development / EIA and concession process",
+          "sourceId": "src-renexia-medwind-feed",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-renexia-medwind-feed",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 2800,
+          "sourceId": "src-renexia-medwind-feed",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind farm",
+          "sourceId": "src-renexia-medwind-feed",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": "65 km off Ulsan",
+      "capacityMw": 750,
+      "turbineCount": 50,
+      "turbineRatingMw": null,
+      "waterDepthM": "120-150",
+      "distanceOffshore": "65 km",
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind project",
+      "platformType": "unknown",
+      "developerOwnerText": "MunmuBaram Co., Ltd. / Hexicon",
+      "id": "munmubaram",
+      "slug": "munmubaram",
+      "name": "MunmuBaram",
+      "country": "South Korea",
+      "region": "Asia-Pacific",
+      "sourceStatus": "Regulatory approval procedures / development",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-munmubaram-project"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Regulatory approval procedures / development",
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 750,
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind project",
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 50,
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "120-150",
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "65 km",
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [],
+      "seaArea": null,
+      "locationDescription": "Approximately 70 km off Ulsan",
+      "capacityMw": 800,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": null,
+      "distanceOffshore": null,
+      "expectedCod": null,
+      "actualCod": null,
+      "floatingTechnology": "Floating offshore wind farm",
+      "platformType": "unknown",
+      "developerOwnerText": "Equinor Korea",
+      "id": "firefly-floating-wind",
+      "slug": "firefly-floating-wind",
+      "name": "Firefly Floating Offshore Wind Project",
+      "country": "South Korea",
+      "region": "Asia-Pacific",
+      "sourceStatus": "Development / FEED and EIA work awarded",
+      "normalizedStatus": "development",
+      "sourceIds": [
+        "src-equinor-firefly-feed",
+        "src-equinor-firefly-esia"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Development / FEED and EIA work awarded",
+          "sourceId": "src-equinor-firefly-feed",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "development",
+          "sourceId": "src-equinor-firefly-feed",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "capacityMw",
+          "value": 800,
+          "sourceId": "src-equinor-firefly-feed",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Floating offshore wind farm",
+          "sourceId": "src-equinor-firefly-feed",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "aliases": [
+        "Kitakyushu floating offshore wind demonstration"
+      ],
+      "seaArea": null,
+      "locationDescription": "15 km off Kitakyushu",
+      "capacityMw": null,
+      "turbineCount": null,
+      "turbineRatingMw": null,
+      "waterDepthM": "about 50",
+      "distanceOffshore": "15 km",
+      "expectedCod": null,
+      "actualCod": "2019-05",
+      "floatingTechnology": "Barge-type floating offshore wind power generation system",
+      "platformType": "barge",
+      "developerOwnerText": "NEDO demonstration project",
+      "id": "hibiki-floating-demonstrator",
+      "slug": "hibiki-floating-demonstrator",
+      "name": "Hibiki floating offshore wind demonstrator",
+      "country": "Japan",
+      "region": "Asia-Pacific",
+      "sourceStatus": "Demonstration operations started",
+      "normalizedStatus": "operational",
+      "sourceIds": [
+        "src-nedo-hibiki-opening"
+      ],
+      "factClaims": [
+        {
+          "path": "sourceStatus",
+          "value": "Demonstration operations started",
+          "sourceId": "src-nedo-hibiki-opening",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "normalizedStatus",
+          "value": "operational",
+          "sourceId": "src-nedo-hibiki-opening",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "floatingTechnology",
+          "value": "Barge-type floating offshore wind power generation system",
+          "sourceId": "src-nedo-hibiki-opening",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "waterDepthM",
+          "value": "about 50",
+          "sourceId": "src-nedo-hibiki-opening",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "distanceOffshore",
+          "value": "15 km",
+          "sourceId": "src-nedo-hibiki-opening",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "actualCod",
+          "value": "2019-05",
+          "sourceId": "src-nedo-hibiki-opening",
+          "note": "NEDO source states demonstration operations started in May 2019.",
           "confidence": "high"
         }
       ]
@@ -2358,6 +4603,1620 @@
           "confidence": "high"
         }
       ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "culzean-demo-floating-wind-totalenergies-developer",
+      "projectId": "culzean-demo-floating-wind",
+      "industryCompanyId": "totalenergies",
+      "companyName": "TotalEnergies",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-totalenergies-culzean-demo"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-totalenergies-culzean-demo",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Modular light semi-submersible floater hull",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "culzean-demo-floating-wind-ocergy-platform",
+      "projectId": "culzean-demo-floating-wind",
+      "industryCompanyId": "ocergy",
+      "companyName": "Ocergy",
+      "role": "floating_platform_technology_provider",
+      "sourceIds": [
+        "src-totalenergies-culzean-demo"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-totalenergies-culzean-demo",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "green-volt-flotation-energy-developer",
+      "projectId": "green-volt",
+      "industryCompanyId": null,
+      "companyName": "Flotation Energy",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-green-volt-overview"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-green-volt-overview",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "green-volt-vargronn-developer",
+      "projectId": "green-volt",
+      "industryCompanyId": null,
+      "companyName": "Vargronn",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-green-volt-overview"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-green-volt-overview",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "salamander-floating-wind-odfjell-oceanwind-developer",
+      "projectId": "salamander-floating-wind",
+      "industryCompanyId": null,
+      "companyName": "Odfjell Oceanwind",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "salamander-floating-wind-simply-blue-developer",
+      "projectId": "salamander-floating-wind",
+      "industryCompanyId": null,
+      "companyName": "Simply Blue",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "ayre-offshore-wind-qair-developer",
+      "projectId": "ayre-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Qair",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "buchan-offshore-wind-buchan-offshore-wind-developer",
+      "projectId": "buchan-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Buchan Offshore Wind",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-buchan-project"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-buchan-project",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Damping Pool floating foundation technology",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "buchan-offshore-wind-bw-ideol-platform",
+      "projectId": "buchan-offshore-wind",
+      "industryCompanyId": "bw-ideol",
+      "companyName": "BW Ideol",
+      "role": "floating_platform_technology_provider",
+      "sourceIds": [
+        "src-buchan-project"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-buchan-project",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "marramwind-scottishpower-renewables-developer",
+      "projectId": "marramwind",
+      "industryCompanyId": "iberdrola-scottishpower",
+      "companyName": "ScottishPower Renewables",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-marramwind-official"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-marramwind-official",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "marramwind-shell-developer",
+      "projectId": "marramwind",
+      "industryCompanyId": "shell",
+      "companyName": "Shell",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-marramwind-official"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-marramwind-official",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "muir-mhor-vattenfall-developer",
+      "projectId": "muir-mhor",
+      "industryCompanyId": null,
+      "companyName": "Vattenfall",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "muir-mhor-fred-olsen-seawind-developer",
+      "projectId": "muir-mhor",
+      "industryCompanyId": null,
+      "companyName": "Fred. Olsen Seawind",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "ossian-sse-renewables-developer",
+      "projectId": "ossian",
+      "industryCompanyId": null,
+      "companyName": "SSE Renewables",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-sse-ossian-floating"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-sse-ossian-floating",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "ossian-copenhagen-infrastructure-partners-developer",
+      "projectId": "ossian",
+      "industryCompanyId": "cip",
+      "companyName": "Copenhagen Infrastructure Partners",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-sse-ossian-floating"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-sse-ossian-floating",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "ossian-marubeni-developer",
+      "projectId": "ossian",
+      "industryCompanyId": null,
+      "companyName": "Marubeni",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-sse-ossian-floating"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-sse-ossian-floating",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "arven-offshore-wind-mainstream-renewable-power-developer",
+      "projectId": "arven-offshore-wind",
+      "industryCompanyId": "mainstream-renewable-power",
+      "companyName": "Mainstream Renewable Power",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "arven-offshore-wind-ocean-winds-developer",
+      "projectId": "arven-offshore-wind",
+      "industryCompanyId": "ocean-winds",
+      "companyName": "Ocean Winds",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "bellrock-offshore-wind-nadara-developer",
+      "projectId": "bellrock-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Nadara",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "broadshore-offshore-wind-nadara-developer",
+      "projectId": "broadshore-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Nadara",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "havbredey-offshore-wind-northland-power-developer",
+      "projectId": "havbredey-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Northland Power",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "havbredey-offshore-wind-esb-developer",
+      "projectId": "havbredey-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "ESB",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "stoura-offshore-wind-esb-asset-management-developer",
+      "projectId": "stoura-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "ESB Asset Management",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "stromar-offshore-wind-orsted-developer",
+      "projectId": "stromar-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Orsted",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "stromar-offshore-wind-bluefloat-energy-developer",
+      "projectId": "stromar-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "BlueFloat Energy",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "stromar-offshore-wind-nadara-developer",
+      "projectId": "stromar-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Nadara",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "talisk-offshore-wind-magnora-offshore-wind-developer",
+      "projectId": "talisk-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Magnora Offshore Wind",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "id": "campionwind-shell-developer",
+      "projectId": "campionwind",
+      "industryCompanyId": "shell",
+      "companyName": "Shell",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "id": "campionwind-scottishpower-renewables-developer",
+      "projectId": "campionwind",
+      "industryCompanyId": "iberdrola-scottishpower",
+      "companyName": "ScottishPower Renewables",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "cenos-offshore-wind-flotation-energy-developer",
+      "projectId": "cenos-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Flotation Energy",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "cenos-offshore-wind-vargronn-developer",
+      "projectId": "cenos-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Vargronn",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-scotgov-owps-2026"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-scotgov-owps-2026",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "announced",
+      "sourceStatusText": null,
+      "id": "celtic-sea-round5-equinor-pda-equinor-developer",
+      "projectId": "celtic-sea-round5-equinor-pda",
+      "industryCompanyId": "equinor",
+      "companyName": "Equinor",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-crown-estate-round5"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "announced",
+      "sourceStatusText": null,
+      "id": "celtic-sea-round5-gwynt-glas-pda-gwynt-glas-developer",
+      "projectId": "celtic-sea-round5-gwynt-glas-pda",
+      "industryCompanyId": null,
+      "companyName": "Gwynt Glas",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-crown-estate-round5"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "announced",
+      "sourceStatusText": null,
+      "id": "celtic-sea-round5-ocean-winds-pda-ocean-winds-developer",
+      "projectId": "celtic-sea-round5-ocean-winds-pda",
+      "industryCompanyId": "ocean-winds",
+      "companyName": "Ocean Winds",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-crown-estate-round5"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "canopy-offshore-wind-ocs-p-0561-canopy-offshore-wind-llc-developer",
+      "projectId": "canopy-offshore-wind-ocs-p-0561",
+      "industryCompanyId": null,
+      "companyName": "Canopy Offshore Wind, LLC",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "california-north-floating-ocs-p-0562-california-north-floating-llc-developer",
+      "projectId": "california-north-floating-ocs-p-0562",
+      "industryCompanyId": null,
+      "companyName": "California North Floating LLC",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "atlas-offshore-wind-ocs-p-0563-atlas-offshore-wind-llc-developer",
+      "projectId": "atlas-offshore-wind-ocs-p-0563",
+      "industryCompanyId": null,
+      "companyName": "Atlas Offshore Wind LLC",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "golden-state-wind-ocs-p-0564-golden-state-wind-llc-developer",
+      "projectId": "golden-state-wind-ocs-p-0564",
+      "industryCompanyId": null,
+      "companyName": "Golden State Wind LLC",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "past",
+      "sourceStatusText": null,
+      "id": "invenergy-california-offshore-ocs-p-0565-invenergy-california-offshore-llc-developer",
+      "projectId": "invenergy-california-offshore-ocs-p-0565",
+      "industryCompanyId": null,
+      "companyName": "Invenergy California Offshore LLC",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "utsira-nord-equinor-vargronn-area-3-equinor-developer",
+      "projectId": "utsira-nord-equinor-vargronn-area-3",
+      "industryCompanyId": "equinor",
+      "companyName": "Equinor",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-equinor-utsira-nord"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-equinor-utsira-nord",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "utsira-nord-equinor-vargronn-area-3-vargronn-developer",
+      "projectId": "utsira-nord-equinor-vargronn-area-3",
+      "industryCompanyId": null,
+      "companyName": "Vargronn",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-equinor-utsira-nord"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-equinor-utsira-nord",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "utsira-nord-harald-harfagre-deep-wind-offshore-norway-developer",
+      "projectId": "utsira-nord-harald-harfagre",
+      "industryCompanyId": null,
+      "companyName": "Deep Wind Offshore Norway",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-utsira-nord-gov"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-utsira-nord-gov",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "utsira-nord-harald-harfagre-edf-renewables-international-developer",
+      "projectId": "utsira-nord-harald-harfagre",
+      "industryCompanyId": "edf-renewables",
+      "companyName": "EDF Renewables International",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-utsira-nord-gov"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-utsira-nord-gov",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "efgl-ocean-winds-developer",
+      "projectId": "efgl",
+      "industryCompanyId": "ocean-winds",
+      "companyName": "Ocean Winds",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-oceanwinds-efgl-first-power"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-oceanwinds-efgl-first-power",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "efgl-banque-des-territoires-developer",
+      "projectId": "efgl",
+      "industryCompanyId": null,
+      "companyName": "Banque des Territoires",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-principle-efgl"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "WindFloat platform technology",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "efgl-principle-power-platform",
+      "projectId": "efgl",
+      "industryCompanyId": "principle-power",
+      "companyName": "Principle Power",
+      "role": "floating_platform_technology_provider",
+      "sourceIds": [
+        "src-principle-efgl"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Vestas V164 10 MW turbines",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "efgl-vestas-turbines",
+      "projectId": "efgl",
+      "industryCompanyId": "vestas",
+      "companyName": "Vestas",
+      "role": "wind_turbine_oem",
+      "sourceIds": [
+        "src-principle-efgl"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "wind_turbine_oem",
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": null,
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "efgl-bureau-veritas-certification",
+      "projectId": "efgl",
+      "industryCompanyId": "bureau-veritas",
+      "companyName": "Bureau Veritas",
+      "role": "certification_assurance",
+      "sourceIds": [
+        "src-principle-efgl"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "certification_assurance",
+          "sourceId": "src-principle-efgl",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "eflo-narbonnaise-ocean-winds-developer",
+      "projectId": "eflo-narbonnaise",
+      "industryCompanyId": "ocean-winds",
+      "companyName": "Ocean Winds",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-oceanwinds-eflo"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-oceanwinds-eflo",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "eflo-narbonnaise-eolien-en-mer-participations-developer",
+      "projectId": "eflo-narbonnaise",
+      "industryCompanyId": null,
+      "companyName": "Eolien en Mer Participations",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-cre-ao6"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-cre-ao6",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "mediterranee-grand-large-eoliennes-mediterranee-grand-large-developer",
+      "projectId": "mediterranee-grand-large",
+      "industryCompanyId": null,
+      "companyName": "Eoliennes Mediterranee Grand Large",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-cre-ao6"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-cre-ao6",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "mediterranee-grand-large-edf-renewables-developer",
+      "projectId": "mediterranee-grand-large",
+      "industryCompanyId": "edf-renewables",
+      "companyName": "EDF Renewables",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-rte-mgl"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-rte-mgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "mediterranee-grand-large-maple-power-developer",
+      "projectId": "mediterranee-grand-large",
+      "industryCompanyId": null,
+      "companyName": "Maple Power",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-rte-mgl"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-rte-mgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Grid connection project owner/operator",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "mediterranee-grand-large-rte-grid",
+      "projectId": "mediterranee-grand-large",
+      "industryCompanyId": null,
+      "companyName": "RTE",
+      "role": "grid_connection",
+      "sourceIds": [
+        "src-rte-mgl"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "grid_connection",
+          "sourceId": "src-rte-mgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "seven-seas-med-7seas-med-s-r-l-developer",
+      "projectId": "seven-seas-med",
+      "industryCompanyId": null,
+      "companyName": "7SEAS med S.r.l.",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-mase-7seas-med"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-mase-7seas-med",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "med-wind-renexia-developer",
+      "projectId": "med-wind",
+      "industryCompanyId": null,
+      "companyName": "Renexia",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-renexia-medwind-feed"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-renexia-medwind-feed",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "FEED contract and MySE 18-292 turbine technology for Med Wind",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "med-wind-mingyang-feed",
+      "projectId": "med-wind",
+      "industryCompanyId": "mingyang",
+      "companyName": "Mingyang Smart Energy",
+      "role": "feed",
+      "sourceIds": [
+        "src-renexia-medwind-feed"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "feed",
+          "sourceId": "src-renexia-medwind-feed",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "MySE 18-292 turbine technology selected for FEED",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "med-wind-mingyang-turbine",
+      "projectId": "med-wind",
+      "industryCompanyId": "mingyang",
+      "companyName": "Mingyang Smart Energy",
+      "role": "wind_turbine_oem",
+      "sourceIds": [
+        "src-renexia-medwind-feed"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "wind_turbine_oem",
+          "sourceId": "src-renexia-medwind-feed",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "munmubaram-munmubaram-co-ltd-developer",
+      "projectId": "munmubaram",
+      "industryCompanyId": null,
+      "companyName": "MunmuBaram Co., Ltd.",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-munmubaram-project"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "munmubaram-hexicon-developer",
+      "projectId": "munmubaram",
+      "industryCompanyId": null,
+      "companyName": "Hexicon",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-munmubaram-project"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Developer/owner identified by source record",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "firefly-floating-wind-equinor-developer",
+      "projectId": "firefly-floating-wind",
+      "industryCompanyId": "equinor",
+      "companyName": "Equinor",
+      "role": "developer_owner",
+      "sourceIds": [
+        "src-equinor-firefly-feed"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-equinor-firefly-feed",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Substructure FEED",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "firefly-technip-feed",
+      "projectId": "firefly-floating-wind",
+      "industryCompanyId": "technip-energies",
+      "companyName": "Technip Energies",
+      "role": "feed",
+      "sourceIds": [
+        "src-equinor-firefly-feed"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "feed",
+          "sourceId": "src-equinor-firefly-feed",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "ESIA support",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "firefly-rps-esia",
+      "projectId": "firefly-floating-wind",
+      "industryCompanyId": null,
+      "companyName": "RPS",
+      "role": "engineering_consultancy",
+      "sourceIds": [
+        "src-equinor-firefly-esia"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "engineering_consultancy",
+          "sourceId": "src-equinor-firefly-esia",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "EIA support",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "firefly-sekwang-eia",
+      "projectId": "firefly-floating-wind",
+      "industryCompanyId": null,
+      "companyName": "Sekwang Engineering",
+      "role": "engineering_consultancy",
+      "sourceIds": [
+        "src-equinor-firefly-esia"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "engineering_consultancy",
+          "sourceId": "src-equinor-firefly-esia",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Demonstration project public body",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "id": "hibiki-nedo-research",
+      "projectId": "hibiki-floating-demonstrator",
+      "industryCompanyId": null,
+      "companyName": "NEDO",
+      "role": "research_public_body",
+      "sourceIds": [
+        "src-nedo-hibiki-opening"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "research_public_body",
+          "sourceId": "src-nedo-hibiki-opening",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
     }
   ],
   "timelineEvents": [
@@ -3056,6 +6915,639 @@
           "path": "eventType",
           "value": "project_cancellation",
           "sourceId": "src-boem-oregon-windfloat-pacific",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "TotalEnergies"
+      ],
+      "id": "culzean-demo-floating-wind-development-award-2024-08-29",
+      "projectId": "culzean-demo-floating-wind",
+      "date": "2024-08-29",
+      "datePrecision": "day",
+      "eventType": "development_award",
+      "title": "TotalEnergies announced the Culzean floating wind pilot project",
+      "description": "TotalEnergies announced the Culzean floating wind pilot project",
+      "sourceIds": [
+        "src-totalenergies-culzean-demo"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "development_award",
+          "sourceId": "src-totalenergies-culzean-demo",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Green Volt"
+      ],
+      "id": "green-volt-consent-2024-04-19",
+      "projectId": "green-volt",
+      "date": "2024-04-19",
+      "datePrecision": "day",
+      "eventType": "consent",
+      "title": "Scottish Government granted offshore consent",
+      "description": "Scottish Government granted offshore consent",
+      "sourceIds": [
+        "src-green-volt-consent"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent",
+          "sourceId": "src-green-volt-consent",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Green Volt"
+      ],
+      "id": "green-volt-subsidy-or-cfd-award-2024-09",
+      "projectId": "green-volt",
+      "date": "2024-09",
+      "datePrecision": "month",
+      "eventType": "subsidy_or_cfd_award",
+      "title": "Green Volt secured a UK Contract for Difference",
+      "description": "Green Volt secured a UK Contract for Difference",
+      "sourceIds": [
+        "src-green-volt-overview"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "subsidy_or_cfd_award",
+          "sourceId": "src-green-volt-overview",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Buchan Offshore Wind"
+      ],
+      "id": "buchan-offshore-wind-consent-application-2025-08",
+      "projectId": "buchan-offshore-wind",
+      "date": "2025-08",
+      "datePrecision": "month",
+      "eventType": "consent_application",
+      "title": "Offshore planning application submitted to Scottish Ministers",
+      "description": "Offshore planning application submitted to Scottish Ministers",
+      "sourceIds": [
+        "src-buchan-consent"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-buchan-consent",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Shell",
+        "ScottishPower Renewables"
+      ],
+      "id": "marramwind-lease-award-2022-01-17",
+      "projectId": "marramwind",
+      "date": "2022-01-17",
+      "datePrecision": "day",
+      "eventType": "lease_award",
+      "title": "ScotWind seabed rights secured for MarramWind",
+      "description": "ScotWind seabed rights secured for MarramWind",
+      "sourceIds": [
+        "src-shell-scottishpower-scotwind"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-shell-scottishpower-scotwind",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Shell",
+        "ScottishPower Renewables"
+      ],
+      "id": "campionwind-lease-award-2022-01-17",
+      "projectId": "campionwind",
+      "date": "2022-01-17",
+      "datePrecision": "day",
+      "eventType": "lease_award",
+      "title": "ScotWind seabed rights secured for CampionWind",
+      "description": "ScotWind seabed rights secured for CampionWind",
+      "sourceIds": [
+        "src-shell-scottishpower-scotwind"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-shell-scottishpower-scotwind",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Equinor"
+      ],
+      "id": "celtic-sea-round5-equinor-pda-area-award-2025-06-19",
+      "projectId": "celtic-sea-round5-equinor-pda",
+      "date": "2025-06-19",
+      "datePrecision": "day",
+      "eventType": "area_award",
+      "title": "The Crown Estate identified the preferred bidder / intended award route for a Round 5 floating wind site",
+      "description": "The Crown Estate identified the preferred bidder / intended award route for a Round 5 floating wind site",
+      "sourceIds": [
+        "src-crown-estate-round5"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "area_award",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Gwynt Glas"
+      ],
+      "id": "celtic-sea-round5-gwynt-glas-pda-area-award-2025-06-19",
+      "projectId": "celtic-sea-round5-gwynt-glas-pda",
+      "date": "2025-06-19",
+      "datePrecision": "day",
+      "eventType": "area_award",
+      "title": "The Crown Estate identified the preferred bidder / intended award route for a Round 5 floating wind site",
+      "description": "The Crown Estate identified the preferred bidder / intended award route for a Round 5 floating wind site",
+      "sourceIds": [
+        "src-crown-estate-round5"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "area_award",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Ocean Winds"
+      ],
+      "id": "celtic-sea-round5-ocean-winds-pda-area-award-2025-11-19",
+      "projectId": "celtic-sea-round5-ocean-winds-pda",
+      "date": "2025-11-19",
+      "datePrecision": "day",
+      "eventType": "area_award",
+      "title": "The Crown Estate identified the preferred bidder / intended award route for a Round 5 floating wind site",
+      "description": "The Crown Estate identified the preferred bidder / intended award route for a Round 5 floating wind site",
+      "sourceIds": [
+        "src-crown-estate-round5"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "area_award",
+          "sourceId": "src-crown-estate-round5",
+          "note": null,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Canopy Offshore Wind, LLC"
+      ],
+      "id": "canopy-offshore-wind-ocs-p-0561-lease-award-2022-12",
+      "projectId": "canopy-offshore-wind-ocs-p-0561",
+      "date": "2022-12",
+      "datePrecision": "month",
+      "eventType": "lease_award",
+      "title": "BOEM lease sale selected/executed lease for California floating wind area",
+      "description": "BOEM lease sale selected/executed lease for California floating wind area",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "California North Floating LLC"
+      ],
+      "id": "california-north-floating-ocs-p-0562-lease-award-2022-12",
+      "projectId": "california-north-floating-ocs-p-0562",
+      "date": "2022-12",
+      "datePrecision": "month",
+      "eventType": "lease_award",
+      "title": "BOEM lease sale selected/executed lease for California floating wind area",
+      "description": "BOEM lease sale selected/executed lease for California floating wind area",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Atlas Offshore Wind LLC"
+      ],
+      "id": "atlas-offshore-wind-ocs-p-0563-lease-award-2022-12",
+      "projectId": "atlas-offshore-wind-ocs-p-0563",
+      "date": "2022-12",
+      "datePrecision": "month",
+      "eventType": "lease_award",
+      "title": "BOEM lease sale selected/executed lease for California floating wind area",
+      "description": "BOEM lease sale selected/executed lease for California floating wind area",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Golden State Wind LLC"
+      ],
+      "id": "golden-state-wind-ocs-p-0564-lease-award-2022-12",
+      "projectId": "golden-state-wind-ocs-p-0564",
+      "date": "2022-12",
+      "datePrecision": "month",
+      "eventType": "lease_award",
+      "title": "BOEM lease sale selected/executed lease for California floating wind area",
+      "description": "BOEM lease sale selected/executed lease for California floating wind area",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Invenergy California Offshore LLC"
+      ],
+      "id": "invenergy-california-offshore-ocs-p-0565-project-cancellation-2026-06-12",
+      "projectId": "invenergy-california-offshore-ocs-p-0565",
+      "date": "2026-06-12",
+      "datePrecision": "day",
+      "eventType": "project_cancellation",
+      "title": "DOI cancelled and rescinded the lease",
+      "description": "DOI cancelled and rescinded the lease",
+      "sourceIds": [
+        "src-boem-california"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "project_cancellation",
+          "sourceId": "src-boem-california",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Equinor",
+        "Vargronn"
+      ],
+      "id": "utsira-nord-equinor-vargronn-area-3-area-award-2026-02-13",
+      "projectId": "utsira-nord-equinor-vargronn-area-3",
+      "date": "2026-02-13",
+      "datePrecision": "day",
+      "eventType": "area_award",
+      "title": "Equinor and Vargronn awarded Utsira Nord Project Area 3",
+      "description": "Equinor and Vargronn awarded Utsira Nord Project Area 3",
+      "sourceIds": [
+        "src-equinor-utsira-nord"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "area_award",
+          "sourceId": "src-equinor-utsira-nord",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Deep Wind Offshore Norway",
+        "EDF Renewables International"
+      ],
+      "id": "utsira-nord-harald-harfagre-area-award-2025-12-11",
+      "projectId": "utsira-nord-harald-harfagre",
+      "date": "2025-12-11",
+      "datePrecision": "day",
+      "eventType": "area_award",
+      "title": "Norwegian Ministry of Energy announced Utsira Nord project-area awards",
+      "description": "Norwegian Ministry of Energy announced Utsira Nord project-area awards",
+      "sourceIds": [
+        "src-utsira-nord-gov"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "area_award",
+          "sourceId": "src-utsira-nord-gov",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Ocean Winds"
+      ],
+      "id": "efgl-first-power-2026-05-04",
+      "projectId": "efgl",
+      "date": "2026-05-04",
+      "datePrecision": "day",
+      "eventType": "first_power",
+      "title": "EFGL delivered first power to the French grid",
+      "description": "EFGL delivered first power to the French grid",
+      "sourceIds": [
+        "src-oceanwinds-efgl-first-power"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "first_power",
+          "sourceId": "src-oceanwinds-efgl-first-power",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Ocean Winds"
+      ],
+      "id": "eflo-narbonnaise-development-award-2024-12-27",
+      "projectId": "eflo-narbonnaise",
+      "date": "2024-12-27",
+      "datePrecision": "day",
+      "eventType": "development_award",
+      "title": "French government designated the AO6 Narbonnaise winner",
+      "description": "French government designated the AO6 Narbonnaise winner",
+      "sourceIds": [
+        "src-cre-ao6"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "development_award",
+          "sourceId": "src-cre-ao6",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Eoliennes Mediterranee Grand Large"
+      ],
+      "id": "mediterranee-grand-large-development-award-2024-12-27",
+      "projectId": "mediterranee-grand-large",
+      "date": "2024-12-27",
+      "datePrecision": "day",
+      "eventType": "development_award",
+      "title": "French government designated the AO6 Golfe de Fos winner",
+      "description": "French government designated the AO6 Golfe de Fos winner",
+      "sourceIds": [
+        "src-rte-mgl"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "development_award",
+          "sourceId": "src-rte-mgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "7SEAS med S.r.l."
+      ],
+      "id": "seven-seas-med-consent-application-2025-06-18",
+      "projectId": "seven-seas-med",
+      "date": "2025-06-18",
+      "datePrecision": "day",
+      "eventType": "consent_application",
+      "title": "Preliminary assessment application submitted in Italian environmental portal",
+      "description": "Preliminary assessment application submitted in Italian environmental portal",
+      "sourceIds": [
+        "src-mase-7seas-med"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-mase-7seas-med",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Renexia",
+        "Mingyang Smart Energy"
+      ],
+      "id": "med-wind-feed-contract-2024-10-09",
+      "projectId": "med-wind",
+      "date": "2024-10-09",
+      "datePrecision": "day",
+      "eventType": "feed_contract",
+      "title": "Renexia and Mingyang signed FEED for Med Wind",
+      "description": "Renexia and Mingyang signed FEED for Med Wind",
+      "sourceIds": [
+        "src-renexia-medwind-feed"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "feed_contract",
+          "sourceId": "src-renexia-medwind-feed",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "MunmuBaram"
+      ],
+      "id": "munmubaram-environmental-approval-2024-08",
+      "projectId": "munmubaram",
+      "date": "2024-08",
+      "datePrecision": "month",
+      "eventType": "environmental_approval",
+      "title": "MunmuBaram received final EIA approval from MOTIE according to project source",
+      "description": "MunmuBaram received final EIA approval from MOTIE according to project source",
+      "sourceIds": [
+        "src-munmubaram-project"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "environmental_approval",
+          "sourceId": "src-munmubaram-project",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Equinor",
+        "Technip Energies"
+      ],
+      "id": "firefly-floating-wind-feed-contract-2021",
+      "projectId": "firefly-floating-wind",
+      "date": "2021",
+      "datePrecision": "year",
+      "eventType": "feed_contract",
+      "title": "Equinor awarded Firefly substructure FEED to Technip Energies",
+      "description": "Equinor awarded Firefly substructure FEED to Technip Energies",
+      "sourceIds": [
+        "src-equinor-firefly-feed"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "feed_contract",
+          "sourceId": "src-equinor-firefly-feed",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Equinor",
+        "RPS",
+        "Sekwang Engineering"
+      ],
+      "id": "firefly-floating-wind-environmental-approval-2020",
+      "projectId": "firefly-floating-wind",
+      "date": "2020",
+      "datePrecision": "year",
+      "eventType": "environmental_approval",
+      "title": "Equinor awarded ESIA and EIA contracts for Firefly",
+      "description": "Equinor awarded ESIA and EIA contracts for Firefly",
+      "sourceIds": [
+        "src-equinor-firefly-esia"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "environmental_approval",
+          "sourceId": "src-equinor-firefly-esia",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "NEDO"
+      ],
+      "id": "hibiki-floating-demonstrator-commissioning-2019-05-21",
+      "projectId": "hibiki-floating-demonstrator",
+      "date": "2019-05-21",
+      "datePrecision": "day",
+      "eventType": "commissioning",
+      "title": "NEDO held opening ceremony for start of demonstration operations",
+      "description": "NEDO held opening ceremony for start of demonstration operations",
+      "sourceIds": [
+        "src-nedo-hibiki-opening"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "commissioning",
+          "sourceId": "src-nedo-hibiki-opening",
           "note": null,
           "confidence": "high"
         }

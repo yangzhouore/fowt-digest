@@ -265,3 +265,11 @@ These should not automatically expand the Industry Map UI.
 ### Recommendation For M10D
 
 M10D should add a shared company identity model before further expansion. The next useful data work is not more records at any cost; it is deduplicating company identities, separating project-development-area records from final project names, and adding review notes for records whose status is likely to change during permitting or auction processes.
+
+## M10D UX Note
+
+M10D turns the accepted 48-record M10C dataset into static Project Intelligence pages at `/projects` and `/projects/[slug]`. The implementation does not expand the dataset, add coordinates, introduce a map, modify the Industry Map UI, or add backend/CMS/search infrastructure.
+
+The UX uses a small project adapter over `web/data/projects/projects.json`, derives index counts and filter options from data, and renders project detail pages around identity, verified technical facts, project-company relationships, source-backed timeline events and source records. Missing facts remain absent from the UI rather than displayed as placeholders.
+
+M10 remains open for later company-identity integration and possible map/GIS work after licensing and precision rules are accepted.

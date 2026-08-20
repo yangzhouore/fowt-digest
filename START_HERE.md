@@ -7,7 +7,7 @@ Use this file as the resume entry point for a new Codex session.
 - Current stable branch: `main`
 - Active feature branch: none
 - Active milestone: none
-- Latest completed work: Website layout refinements and April-August 2026 archive expansion
+- Latest completed work: Projects MVP baseline
 - Release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Immediate next action: select or define the next milestone before starting
@@ -44,8 +44,18 @@ Open only when relevant:
 - Static Research Digest data: `web/data/digests/`
 - Static Engineering Briefing data: `web/data/briefings/`
 - Static Industry Map data: `web/data/industry/`
+- Static Projects data: `web/data/projects/`
 - Research adapter: `web/data/digest-adapter.ts`
 - Engineering adapter: `web/data/engineering-briefing-adapter.ts`
+- Projects adapter: `web/data/project-adapter.ts`
+
+The Projects MVP is implemented and accepted: `/projects` and
+`/projects/[slug]` render 48 source-backed floating offshore wind project
+records with region/country/status filtering, verified technical facts,
+project-company roles, source-backed timelines, and provenance links. Projects
+are intentionally static. No geographic map, automatic project collection,
+automatic updates, or Project-to-Industry deep integration exists yet; those
+belong to a future dedicated milestone.
 
 The Homepage now presents the weekly Engineering and Research selections with a
 week selector. Engineering and Research archive pages support static search over

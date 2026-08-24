@@ -74,11 +74,11 @@ const researchScoreComponents = [
 const engineeringMethod = [
   {
     title: "Source",
-    text: "Use public, attributable floating wind engineering sources: authorities, standards, project releases, software notes, companies, and trade news.",
+    text: "Collect public, attributable floating wind engineering candidates from approved source classes: authorities, standards, project releases, software notes, companies, and trade news.",
   },
   {
     title: "Score",
-    text: "Compute engineering_selection_score_v1 from retained source-record metadata and source-backed evidence text before ranking.",
+    text: "Normalize, deduplicate, filter for basic FOWT relevance, then compute engineering_selection_score_v1 from source metadata and source-backed evidence text before ranking.",
   },
   {
     title: "Rank",
@@ -95,8 +95,10 @@ const engineeringMethod = [
 ];
 
 const engineeringFlow = [
-  "Multiple trusted sources",
-  "candidate pool",
+  "Approved engineering sources",
+  "collect weekly items",
+  "normalize / deduplicate",
+  "FOWT relevance filter",
   "engineering_selection_score_v1",
   "importance ranking",
   "source/topic diversity",
@@ -197,9 +199,10 @@ export default function MethodologyPage() {
           <p className="eyebrow">Engineering</p>
           <h2 id="engineering-method-heading">News selection</h2>
           <p>
-            Engineering selection now scores retained source records, then applies
-            a small diversity layer so the final five remain useful as a weekly
-            briefing rather than a duplicate-heavy ranked list.
+            Engineering selection now starts from an approved-source weekly
+            candidate collection, scores retained candidates, then applies a
+            small diversity layer so the final five remain useful as a briefing
+            rather than a duplicate-heavy ranked list.
           </p>
           <ol className="methodology-step-list">
             {engineeringMethod.map((step) => (
@@ -237,7 +240,7 @@ export default function MethodologyPage() {
 
       <section className="research-selection-visual" aria-labelledby="engineering-selection-heading">
         <p className="eyebrow">Engineering Selection Score</p>
-        <h2 id="engineering-selection-heading">How sources become the weekly briefing</h2>
+<h2 id="engineering-selection-heading">How candidates become the weekly briefing</h2>
         <ol className="research-flow" aria-label="Engineering selection flow">
           {engineeringFlow.map((step) => (
             <li key={step}>{step}</li>
@@ -246,7 +249,7 @@ export default function MethodologyPage() {
         <ScoreFormula components={engineeringScoreComponents} label="Engineering 100 point score formula" />
         <p>
           The score is computed before ranking and uses deterministic, controlled
-          signal groups in retained source-record metadata and evidence text. No
+          signal groups in candidate metadata and source-backed evidence text. No
           LLM subjective scoring is used. Diversity is separate from importance:
           it can defer a high-scoring duplicate project or topic when another
           source-backed candidate gives the weekly briefing broader coverage.

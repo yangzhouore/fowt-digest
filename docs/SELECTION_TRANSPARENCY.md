@@ -15,11 +15,12 @@ were already present in the repository. Reconstructed historical pools are newly
 collected for the exact weekly publication window using the current deterministic
 pipeline, current `research_selection_score_v1`, and current OpenAlex metadata.
 
-For Engineering, the count is the number of retained source records in the
-static briefing JSON. For 17-23 August 2026, the retained pool contains 6 source
-records. Those records are scored with `engineering_selection_score_v1`, ranked
-by importance, then passed through a deterministic diversity layer to produce 5
-selected highlights.
+For Engineering, the latest scored edition uses a retained approved-source
+candidate pool. For 17-23 August 2026, the count is the number of deduplicated,
+basic-FOWT-relevant weekly candidates collected from the approved Engineering
+source universe before scoring. Duplicate reports and out-of-window official
+supporting pages may remain in the static source records as provenance, but they
+are not counted as independent candidates.
 
 Historical editions only expose candidate-pool pages when candidate records can
 be retained or reconstructed reliably. Reconstructed Research pools must not be
@@ -66,10 +67,24 @@ requiring proprietary metrics.
 
 ## Engineering Selection
 
-Engineering candidates are retained public source records in the weekly static
-briefing JSON. The latest scored edition uses `engineering_selection_score_v1`, a
-100-point deterministic score computed from source-record metadata and concise
-source-backed evidence text before ranking.
+Engineering candidates are retained public source records collected from the
+approved Engineering source classes for the weekly publication window. The latest
+scored edition uses `engineering_selection_score_v1`, a 100-point deterministic
+score computed from source-record metadata and concise source-backed evidence
+text before ranking.
+
+The latest-week collection path is:
+
+```text
+approved engineering sources
+-> collect all eligible weekly items
+-> normalize / deduplicate
+-> basic FOWT relevance filter
+-> engineering_selection_score_v1
+-> importance ranking
+-> diversity-aware curation
+-> 5 Engineering highlights
+```
 
 | Component | Weight | Basis |
 | --- | ---: | --- |
@@ -92,5 +107,5 @@ candidate adds broader weekly coverage. The candidate page labels the raw rank,
 final rank, selected state, score breakdown and diversity reason.
 
 No LLM subjective scoring is used. The score is a transparent heuristic over the
-retained source records, not a claim that every global engineering news source
-was collected.
+retained candidate records, not a claim that every global engineering news source
+was collected. Current Engineering collection remains manual and source-policy bounded; historical Engineering editions still show retained-source transparency unless a scored candidate pool is explicitly stored.

@@ -75,7 +75,7 @@ export default async function EngineeringBriefingPage({
             <dd>
               <Link href={`/engineering/${briefing.slug}/candidates`}>
                 {briefing.sourceCandidates.length > 0
-                  ? `${briefing.sourceCandidates.length} scored candidates ->`
+                  ? `${briefing.sourceCandidates.length} candidates across ${briefing.candidateSourceCount} sources ->`
                   : `${briefing.sourceRecords.length} retained sources ->`}
               </Link>
             </dd>

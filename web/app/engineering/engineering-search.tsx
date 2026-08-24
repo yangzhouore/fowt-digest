@@ -7,6 +7,8 @@ export type EngineeringArchiveBriefing = {
   slug: string;
   dateRange: string;
   sourceCount: number;
+  candidateCount: number;
+  candidateSourceCount: number;
   checkedResultCount: number;
   items: EngineeringArchiveNews[];
 };
@@ -181,7 +183,7 @@ export function EngineeringSearch({
                 <article className="engineering-briefing-card">
                   <div className="engineering-briefing-card-meta">
                     <p>{briefing.dateRange}</p>
-                    <p><Link href={`/engineering/${briefing.slug}/candidates`}>Curated from {briefing.sourceCount} retained sources -&gt;</Link></p>
+                    <p><Link href={`/engineering/${briefing.slug}/candidates`}>{candidatePoolLinkText(briefing)}</Link></p>
                   </div>
                   <ol className="engineering-top-news">
                     {briefing.visibleItems.map((item, index) => (
@@ -257,4 +259,12 @@ function inferRegion(item: EngineeringArchiveNews): string | null {
 
 function formatCategory(value: string): string {
   return value.replace(/_/g, " ");
+}
+
+function candidatePoolLinkText(briefing: EngineeringArchiveBriefing): string {
+  if (briefing.candidateCount > 0) {
+    return `Curated from ${briefing.candidateCount} candidates across ${briefing.candidateSourceCount} sources ->`;
+  }
+
+  return `Curated from ${briefing.sourceCount} retained sources ->`;
 }

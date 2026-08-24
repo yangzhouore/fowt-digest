@@ -47,6 +47,11 @@ type CollectionMethod =
   | "approved_api"
   | "approved_scrape";
 
+type CandidateStatus =
+  | "candidate"
+  | "supporting_provenance"
+  | "duplicate_event";
+
 type BriefingCategory =
   | "project"
   | "policy"
@@ -65,6 +70,7 @@ type EngineeringRegion =
 
 type PipelineEngineeringSourceRecord = {
   sourceRecordId: string;
+  candidateStatus?: CandidateStatus;
   sourceType: SourceType;
   publisher: string;
   title: string;
@@ -122,8 +128,36 @@ type PipelineEngineeringCandidate = {
   };
 };
 
+type PipelineEngineeringCollectionAudit = {
+  weekStart: string;
+  weekEnd: string;
+  sourcePolicy: string;
+  sourceUniverse: string;
+  sourcesAttempted: number;
+  sourcesSuccessfullyCollected: number;
+  rawItemsCollected: number;
+  itemsAfterDateFiltering: number;
+  itemsAfterFowtRelevanceFiltering: number;
+  duplicateEventOverlapsRemoved: number;
+  candidatePoolSize: number;
+  notes: string[];
+  attemptedSources: Array<{
+    publisher: string;
+    sourceClass: string;
+    result: string;
+    note: string;
+  }>;
+  duplicateEventGroups: Array<{
+    eventGroup: string;
+    primarySourceRecordId: string;
+    duplicateSourceRecordIds: string[];
+    note: string;
+  }>;
+};
+
 type PipelineEngineeringSelection = {
   candidatePoolType: string;
+  collectionAudit?: PipelineEngineeringCollectionAudit;
   selectionModel: {
     id: string;
     label: string;
@@ -220,6 +254,8 @@ export type EngineeringBriefing = {
   items: EngineeringBriefingItem[];
   selectionModel: EngineeringSelectionModel | null;
   sourceCandidates: EngineeringSourceCandidate[];
+  collectionAudit: PipelineEngineeringCollectionAudit | null;
+  candidateSourceCount: number;
 };
 
 const engineeringBriefingJsonFiles = [
@@ -334,6 +370,8 @@ function adaptEngineeringBriefing(
     }),
     selectionModel: briefing.engineeringSelection?.selectionModel ?? null,
     sourceCandidates,
+    collectionAudit: briefing.engineeringSelection?.collectionAudit ?? null,
+    candidateSourceCount: countUniqueCandidatePublishers(sourceCandidates),
   };
 }
 
@@ -351,6 +389,10 @@ function adaptSourceRecord(
     sourceText: source.sourceText,
     licenseNote: source.licenseNote,
   };
+}
+
+function countUniqueCandidatePublishers(candidates: EngineeringSourceCandidate[]): number {
+  return new Set(candidates.map((candidate) => candidate.sourceRecord.publisher)).size;
 }
 
 function adaptSourceCandidates(

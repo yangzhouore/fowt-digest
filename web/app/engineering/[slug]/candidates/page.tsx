@@ -72,9 +72,10 @@ export default async function EngineeringCandidatesPage({
         <h1 id="engineering-candidates-heading">{briefing.dateRange}</h1>
         {hasScoredSelection ? (
           <p>
-            The Engineering workflow scored {briefing.sourceCandidates.length} retained source
-            records, ranked them by importance, then applied a small deterministic diversity
-            layer to select {selectedCount} weekly highlights.
+            The Engineering workflow collected {briefing.sourceCandidates.length} source-backed
+            candidates across {briefing.candidateSourceCount} sources, scored them by importance,
+            then applied a small deterministic diversity layer to select {selectedCount} weekly
+            highlights.
           </p>
         ) : (
           <p>
@@ -91,6 +92,12 @@ export default async function EngineeringCandidatesPage({
             <dt>Candidate pool</dt>
             <dd>{hasScoredSelection ? briefing.sourceCandidates.length : briefing.sourceRecords.length}</dd>
           </div>
+          {hasScoredSelection ? (
+            <div>
+              <dt>Candidate sources</dt>
+              <dd>{briefing.candidateSourceCount}</dd>
+            </div>
+          ) : null}
           <div>
             <dt>Published highlights</dt>
             <dd>{briefing.itemCount}</dd>
@@ -179,6 +186,9 @@ export default async function EngineeringCandidatesPage({
                       <p className="candidate-meta-line">
                         {candidate.diversitySignals.regionHint} /{" "}
                         {candidate.diversitySignals.topicGroup.replace(/_/g, " ")} /{" "}
+                        {candidate.diversitySignals.projectGroup
+                          ? `Event group: ${candidate.diversitySignals.projectGroup.replace(/_/g, " ")} / `
+                          : ""}
                         {candidate.selectionReason}
                       </p>
                       {selectedItem ? (
@@ -220,8 +230,10 @@ export default async function EngineeringCandidatesPage({
       <section aria-labelledby="engineering-candidate-boundary-heading">
         <h2 id="engineering-candidate-boundary-heading">Data boundary</h2>
         <p>
-          These records are retained public sources in the static Engineering Briefing file. They
-          are not a scraped market database and should not be read as complete news coverage.
+          These records are retained public sources in the static Engineering Briefing file. The
+          latest scored edition uses a manual approved-source candidate collection before scoring;
+          older editions remain retained-source views. This is not a scraped market database and
+          should not be read as complete news coverage.
         </p>
         <p className="text-link-row">
           <Link href={`/engineering/${briefing.slug}`}>Back to engineering briefing</Link>

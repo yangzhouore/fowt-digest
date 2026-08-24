@@ -203,18 +203,35 @@ test("research candidates keep compact source provenance", () => {
   }
 });
 
-test("engineering latest candidate transparency stores scored retained source records", () => {
+test("engineering latest candidate transparency stores an audited multi-source candidate pool", () => {
   const selection = engineeringBriefing.engineeringSelection;
   const sourceIds = new Set(
     engineeringBriefing.sourceRecords.map((source) => source.sourceRecordId),
   );
   const itemIds = new Set(engineeringBriefing.briefingItems.map((item) => item.briefingItemId));
 
-  assert.equal(engineeringBriefing.checkedResultCount, engineeringBriefing.sourceRecords.length);
-  assert.equal(engineeringBriefing.sourceRecords.length, 6);
   assert.ok(selection);
+  assert.equal(selection.candidatePoolType, "approved_source_candidate_pool");
   assert.equal(selection.selectionModel.id, SCORE_MODEL_ID);
-  assert.equal(selection.candidates.length, engineeringBriefing.sourceRecords.length);
+  assert.equal(engineeringBriefing.sourceRecords.length, 10);
+  assert.equal(engineeringBriefing.checkedResultCount, 8);
+  assert.equal(selection.collectionAudit.candidatePoolSize, 8);
+  assert.equal(selection.collectionAudit.sourcesAttempted, 17);
+  assert.equal(selection.collectionAudit.duplicateEventOverlapsRemoved, 2);
+  assert.equal(selection.candidates.length, selection.collectionAudit.candidatePoolSize);
+
+  const candidateSourceIds = new Set(selection.candidates.map((candidate) => candidate.sourceRecordId));
+  assert.ok(candidateSourceIds.has("eng-src-2026-08-23-france-floating-ports-offshorewind"));
+  assert.ok(candidateSourceIds.has("eng-src-2026-08-23-stillstrom-cable-control"));
+  assert.ok(candidateSourceIds.has("eng-src-2026-08-23-stanford-offshore-wind-testing"));
+  assert.ok(!candidateSourceIds.has("eng-src-2026-08-23-brestport-inflow"));
+  assert.ok(!candidateSourceIds.has("eng-src-2026-08-23-mlit-port-study"));
+
+  for (const source of engineeringBriefing.sourceRecords) {
+    if (source.candidateStatus === "candidate") {
+      assert.ok(candidateSourceIds.has(source.sourceRecordId));
+    }
+  }
 
   for (const candidate of selection.candidates) {
     assert.ok(sourceIds.has(candidate.sourceRecordId));
@@ -269,15 +286,12 @@ test("engineering scored candidates are raw-ranked by score with source ID tie-b
   }
 });
 
-test("engineering diversity layer preserves five selected highlights and documents its effect", () => {
+test("engineering diversity layer preserves five selected highlights from candidate records", () => {
   const { candidates } = buildEngineeringCandidatePool(engineeringBriefing);
   const selected = candidates.filter((candidate) => candidate.selected);
   const selectedIds = selected.map((candidate) => candidate.sourceRecordId);
-  const mlitOfficial = candidates.find(
-    (candidate) => candidate.sourceRecordId === "eng-src-2026-08-23-mlit-port-study",
-  );
-  const deepwind = candidates.find(
-    (candidate) => candidate.sourceRecordId === "eng-src-2026-08-23-deepwind-mlit-ports",
+  const selectedBriefingSourceIds = engineeringBriefing.briefingItems.map(
+    (item) => item.sourceRecordIds[0],
   );
 
   assert.equal(selected.length, 5);
@@ -285,12 +299,12 @@ test("engineering diversity layer preserves five selected highlights and documen
     selected.map((candidate) => candidate.finalRank),
     [1, 2, 3, 4, 5],
   );
-  assert.ok(!selectedIds.includes("eng-src-2026-08-23-mlit-port-study"));
+  assert.deepEqual(selectedIds, selectedBriefingSourceIds);
+  assert.ok(selectedIds.includes("eng-src-2026-08-23-france-floating-ports-offshorewind"));
   assert.ok(selectedIds.includes("eng-src-2026-08-23-deepwind-mlit-ports"));
-  assert.equal(mlitOfficial.selected, false);
-  assert.match(mlitOfficial.diversityReason, /Deferred/);
-  assert.equal(deepwind.selected, true);
-  assert.match(deepwind.diversityReason, /broader technology coverage/);
+  assert.ok(!selectedIds.includes("eng-src-2026-08-23-stillstrom-cable-control"));
+  assert.ok(!selectedIds.includes("eng-src-2026-08-23-stanford-offshore-wind-testing"));
+  assert.ok(selected.every((candidate) => candidate.diversityReason));
 });
 
 function assertEngineeringScore(score) {

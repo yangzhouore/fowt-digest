@@ -116,6 +116,7 @@ function buildEngineeringCandidatePool(briefing) {
     briefing.briefingItems.map((item) => [item.sourceRecordIds[0], item]),
   );
   const candidates = briefing.sourceRecords
+    .filter((source) => source.candidateStatus === undefined || source.candidateStatus === "candidate")
     .map((source) => {
       const score = scoreEngineeringSourceRecord(source);
       return {
@@ -334,11 +335,11 @@ function diversitySignals(source) {
 }
 
 function projectGroup(text) {
+  if (hasAny(text, ["france 2030", "marseille fos", "nantes saint nazaire", "port la nouvelle", "cherbourg", "brestport", "port of brest", "inflow"])) {
+    return "france_floating_wind_ports_2030";
+  }
   if (hasAny(text, ["port talbot", "celtic sea"])) {
     return "port_talbot_celtic_sea";
-  }
-  if (hasAny(text, ["brestport", "port of brest", "inflow"])) {
-    return "brestport_inflow";
   }
   if (hasAny(text, ["ardersier", "haventus", "dajin"])) {
     return "ardersier_haventus_dajin";
@@ -348,6 +349,15 @@ function projectGroup(text) {
   }
   if (hasAny(text, ["mlit", "japan", "base ports", "port study"])) {
     return "japan_port_planning";
+  }
+  if (hasAny(text, ["stillstrom", "esvagt", "semco", "offshore charging", "cable control"])) {
+    return "offshore_vessel_charging";
+  }
+  if (hasAny(text, ["pacifico", "jindo", "manho", "offshore wind integrated cluster"])) {
+    return "jindo_offshore_wind_cluster";
+  }
+  if (hasAny(text, ["stanford", "real time hybrid simulation", "offshore wind testing"])) {
+    return "stanford_fowt_testing";
   }
   return null;
 }
@@ -372,8 +382,11 @@ function regionHint(text) {
   if (hasAny(text, ["japan", "korea", "korean"])) {
     return "Asia-Pacific";
   }
-  if (hasAny(text, ["uk", "wales", "france", "brest", "europe", "celtic sea"])) {
+  if (hasAny(text, ["uk", "wales", "france", "brest", "europe", "celtic sea", "ardersier", "marseille", "cherbourg", "port la nouvelle", "nantes"])) {
     return "Europe";
+  }
+  if (hasAny(text, ["united states", "u s", "stanford", "california"])) {
+    return "North America";
   }
   return "Unspecified";
 }
@@ -428,4 +441,3 @@ module.exports = {
   scoreEngineeringSourceRecord,
   scoreModelMetadata,
 };
-

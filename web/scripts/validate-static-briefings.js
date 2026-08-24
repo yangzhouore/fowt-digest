@@ -37,6 +37,12 @@ const REGIONS = new Set([
   "Unspecified",
 ]);
 
+const CANDIDATE_STATUSES = new Set([
+  "candidate",
+  "supporting_provenance",
+  "duplicate_event",
+]);
+
 const ENGINEERING_SELECTION_COMPONENTS = new Map([
   ["engineering_relevance", 30],
   ["project_company", 25],
@@ -240,6 +246,9 @@ function validateSourceRecords(records, fileName, errors) {
     enumString(source.collectionMethod, COLLECTION_METHODS, label, "collectionMethod", errors);
     requiredString(source.sourceText, label, "sourceText", errors);
     requiredString(source.licenseNote, label, "licenseNote", errors);
+    if (source.candidateStatus !== undefined) {
+      enumString(source.candidateStatus, CANDIDATE_STATUSES, label, "candidateStatus", errors);
+    }
 
     if (typeof source.sourceRecordId === "string") {
       addUnique(sourceIds, source.sourceRecordId, `${label}: duplicate sourceRecordId ${source.sourceRecordId}`, errors);
@@ -316,8 +325,11 @@ function validateEngineeringSelection({
     errors.push(`${label}: candidates must be an array`);
     return;
   }
-  if (selection.candidates.length !== sourceRecordCount) {
-    errors.push(`${label}: candidates must match retained sourceRecords count`);
+  const auditedCandidateCount = collectionAuditCandidateCount(selection.collectionAudit);
+  if (auditedCandidateCount !== null && selection.candidates.length !== auditedCandidateCount) {
+    errors.push(`${label}: candidates must match collectionAudit.candidatePoolSize`);
+  } else if (auditedCandidateCount === null && selection.candidates.length !== sourceRecordCount) {
+    errors.push(`${label}: candidates must match retained sourceRecords count when no collection audit is stored`);
   }
 
   const candidateIds = new Map();
@@ -344,6 +356,15 @@ function validateEngineeringSelection({
 
   ensureContiguousRanks(rawRanks, selection.candidates.length, `${label}: rawRank`, errors);
   ensureContiguousRanks(finalRanks, finalRanks.size, `${label}: selected finalRank`, errors);
+}
+
+function collectionAuditCandidateCount(audit) {
+  if (!isRecord(audit)) {
+    return null;
+  }
+  return typeof audit.candidatePoolSize === "number" && Number.isInteger(audit.candidatePoolSize)
+    ? audit.candidatePoolSize
+    : null;
 }
 
 function validateSelectionModel(model, label, errors) {

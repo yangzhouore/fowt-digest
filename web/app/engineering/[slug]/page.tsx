@@ -54,8 +54,8 @@ export default async function EngineeringBriefingPage({
         <p className="eyebrow">Engineering briefing</p>
         <h1 id="engineering-heading">{briefing.dateRange}</h1>
         <p>
-          Manual source-backed engineering highlights for floating offshore wind.
-          This prototype is independent from the deterministic Research Digest.
+          Source-backed engineering highlights for floating offshore wind. This
+          prototype is independent from the deterministic Research Digest.
         </p>
       </section>
 
@@ -71,10 +71,12 @@ export default async function EngineeringBriefingPage({
             <dd>{briefing.itemCount}</dd>
           </div>
           <div>
-            <dt>Source records</dt>
+            <dt>Candidate pool</dt>
             <dd>
               <Link href={`/engineering/${briefing.slug}/candidates`}>
-                {briefing.sourceRecords.length} retained sources -&gt;
+                {briefing.sourceCandidates.length > 0
+                  ? `${briefing.sourceCandidates.length} scored candidates ->`
+                  : `${briefing.sourceRecords.length} retained sources ->`}
               </Link>
             </dd>
           </div>
@@ -96,6 +98,12 @@ export default async function EngineeringBriefingPage({
                 </p>
                 <h3>{item.title}</h3>
                 <p className="engineering-summary">{item.oneLineSummary}</p>
+                {item.selectionScore ? (
+                  <p className="candidate-meta-line">
+                    Engineering Selection Score {item.selectionScore.total} / 100
+                    {item.finalRank ? ` / Final rank ${item.finalRank}` : ""}
+                  </p>
+                ) : null}
                 <ul className="topic-list" aria-label="Engineering topics">
                   {item.engineeringTopics.map((topic) => (
                     <li key={topic}>{topic}</li>
@@ -131,9 +139,9 @@ export default async function EngineeringBriefingPage({
         <h2 id="engineering-boundary-heading">Data boundary</h2>
         <p>
           Engineering Briefing source records and briefing copy are stored in a
-          separate static data path from the OpenAlex Research Digest. No
-          scraping, AI generation, backend, database, scheduled collection, or
-          deterministic scoring is used in this prototype.
+          separate static data path from the OpenAlex Research Digest. The website
+          does not run collection, scraping, scoring, ranking, scheduling or news
+          extraction; it renders committed static JSON.
         </p>
         <p className="text-link-row">
           <Link href="/">Back to Homepage</Link>

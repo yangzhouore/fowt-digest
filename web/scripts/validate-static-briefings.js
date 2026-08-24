@@ -37,6 +37,14 @@ const REGIONS = new Set([
   "Unspecified",
 ]);
 
+const ENGINEERING_SELECTION_COMPONENTS = new Map([
+  ["engineering_relevance", 30],
+  ["project_company", 25],
+  ["technology", 20],
+  ["policy_market", 15],
+  ["source_quality", 10],
+]);
+
 function validateRepository(rootDir = process.cwd()) {
   return validateStaticBriefings({
     briefingDir: path.join(rootDir, "data", "briefings"),
@@ -198,7 +206,17 @@ function validateBriefing({ briefing, fileName, slugs, errors }) {
   }
 
   const sourceIds = validateSourceRecords(briefing.sourceRecords, fileName, errors);
-  validateBriefingItems(briefing.briefingItems, sourceIds, fileName, errors);
+  const itemIds = validateBriefingItems(briefing.briefingItems, sourceIds, fileName, errors);
+  if (briefing.engineeringSelection !== undefined) {
+    validateEngineeringSelection({
+      selection: briefing.engineeringSelection,
+      sourceIds,
+      itemIds,
+      sourceRecordCount: briefing.sourceRecords.length,
+      fileName,
+      errors,
+    });
+  }
 }
 
 function validateSourceRecords(records, fileName, errors) {
@@ -275,6 +293,246 @@ function validateBriefingItems(items, sourceIds, fileName, errors) {
       });
     }
   });
+
+  return itemIds;
+}
+
+function validateEngineeringSelection({
+  selection,
+  sourceIds,
+  itemIds,
+  sourceRecordCount,
+  fileName,
+  errors,
+}) {
+  if (!isRecord(selection)) {
+    errors.push(`${fileName}: engineeringSelection must be an object`);
+    return;
+  }
+  const label = `${fileName}: engineeringSelection`;
+  requiredString(selection.candidatePoolType, label, "candidatePoolType", errors);
+  validateSelectionModel(selection.selectionModel, label, errors);
+  if (!Array.isArray(selection.candidates)) {
+    errors.push(`${label}: candidates must be an array`);
+    return;
+  }
+  if (selection.candidates.length !== sourceRecordCount) {
+    errors.push(`${label}: candidates must match retained sourceRecords count`);
+  }
+
+  const candidateIds = new Map();
+  const candidateSourceIds = new Map();
+  const rawRanks = new Map();
+  const finalRanks = new Map();
+  const selectedItemIds = new Map();
+
+  selection.candidates.forEach((candidate, index) => {
+    validateEngineeringCandidate({
+      candidate,
+      index,
+      sourceIds,
+      itemIds,
+      candidateIds,
+      candidateSourceIds,
+      rawRanks,
+      finalRanks,
+      selectedItemIds,
+      fileName,
+      errors,
+    });
+  });
+
+  ensureContiguousRanks(rawRanks, selection.candidates.length, `${label}: rawRank`, errors);
+  ensureContiguousRanks(finalRanks, finalRanks.size, `${label}: selected finalRank`, errors);
+}
+
+function validateSelectionModel(model, label, errors) {
+  if (!isRecord(model)) {
+    errors.push(`${label}: selectionModel must be an object`);
+    return;
+  }
+  if (model.id !== "engineering_selection_score_v1") {
+    errors.push(`${label}: selectionModel.id must be engineering_selection_score_v1`);
+  }
+  requiredString(model.label, label, "selectionModel.label", errors);
+  requiredString(model.description, label, "selectionModel.description", errors);
+  if (!Array.isArray(model.components)) {
+    errors.push(`${label}: selectionModel.components must be an array`);
+  } else {
+    const componentIds = new Map();
+    model.components.forEach((component, index) => {
+      const componentLabel = `${label}: selectionModel.components[${index}]`;
+      if (!isRecord(component)) {
+        errors.push(`${componentLabel}: component must be an object`);
+        return;
+      }
+      requiredString(component.componentId, componentLabel, "componentId", errors);
+      requiredString(component.label, componentLabel, "label", errors);
+      const expectedMax = ENGINEERING_SELECTION_COMPONENTS.get(component.componentId);
+      if (expectedMax === undefined) {
+        errors.push(`${componentLabel}: unsupported componentId ${component.componentId}`);
+      } else if (component.maxScore !== expectedMax) {
+        errors.push(`${componentLabel}: maxScore must be ${expectedMax}`);
+      }
+      if (typeof component.componentId === "string") {
+        addUnique(componentIds, component.componentId, `${componentLabel}: duplicate componentId ${component.componentId}`, errors);
+      }
+    });
+  }
+  if (!Array.isArray(model.diversityRules) || model.diversityRules.length === 0) {
+    errors.push(`${label}: selectionModel.diversityRules must be a non-empty array`);
+  }
+}
+
+function validateEngineeringCandidate({
+  candidate,
+  index,
+  sourceIds,
+  itemIds,
+  candidateIds,
+  candidateSourceIds,
+  rawRanks,
+  finalRanks,
+  selectedItemIds,
+  fileName,
+  errors,
+}) {
+  const label = `${fileName}: engineeringSelection.candidates[${index}]`;
+  if (!isRecord(candidate)) {
+    errors.push(`${label}: candidate must be an object`);
+    return;
+  }
+
+  requiredString(candidate.candidateId, label, "candidateId", errors);
+  requiredString(candidate.sourceRecordId, label, "sourceRecordId", errors);
+  requiredString(candidate.selectionReason, label, "selectionReason", errors);
+  if (typeof candidate.selected !== "boolean") {
+    errors.push(`${label}: selected must be boolean`);
+  }
+  if (typeof candidate.candidateId === "string") {
+    addUnique(candidateIds, candidate.candidateId, `${label}: duplicate candidateId ${candidate.candidateId}`, errors);
+  }
+  if (typeof candidate.sourceRecordId === "string") {
+    addUnique(candidateSourceIds, candidate.sourceRecordId, `${label}: duplicate sourceRecordId ${candidate.sourceRecordId}`, errors);
+    if (!sourceIds.has(candidate.sourceRecordId)) {
+      errors.push(`${label}: missing source record ${candidate.sourceRecordId}`);
+    }
+  }
+  integerRank(candidate.rawRank, label, "rawRank", errors);
+  if (typeof candidate.rawRank === "number") {
+    addUnique(rawRanks, candidate.rawRank, `${label}: duplicate rawRank ${candidate.rawRank}`, errors);
+  }
+
+  if (candidate.selected) {
+    integerRank(candidate.finalRank, label, "finalRank", errors);
+    if (typeof candidate.finalRank === "number") {
+      addUnique(finalRanks, candidate.finalRank, `${label}: duplicate finalRank ${candidate.finalRank}`, errors);
+    }
+    if (typeof candidate.selectedBriefingItemId !== "string" || !itemIds.has(candidate.selectedBriefingItemId)) {
+      errors.push(`${label}: selected candidate must reference an existing briefing item`);
+    } else {
+      addUnique(selectedItemIds, candidate.selectedBriefingItemId, `${label}: duplicate selectedBriefingItemId ${candidate.selectedBriefingItemId}`, errors);
+    }
+  } else {
+    if (candidate.finalRank !== null) {
+      errors.push(`${label}: unselected candidate finalRank must be null`);
+    }
+    if (candidate.selectedBriefingItemId !== null) {
+      errors.push(`${label}: unselected candidate selectedBriefingItemId must be null`);
+    }
+  }
+
+  nullableString(candidate.diversityReason, label, "diversityReason", errors);
+  validateSelectionScore(candidate.engineeringSelectionScore, label, errors);
+  validateDiversitySignals(candidate.diversitySignals, label, errors);
+}
+
+function validateSelectionScore(score, label, errors) {
+  if (!isRecord(score)) {
+    errors.push(`${label}: engineeringSelectionScore must be an object`);
+    return;
+  }
+  if (score.modelId !== "engineering_selection_score_v1") {
+    errors.push(`${label}: engineeringSelectionScore.modelId must be engineering_selection_score_v1`);
+  }
+  if (score.maxScore !== 100) {
+    errors.push(`${label}: engineeringSelectionScore.maxScore must be 100`);
+  }
+  if (typeof score.total !== "number" || !Number.isInteger(score.total) || score.total < 0 || score.total > 100) {
+    errors.push(`${label}: engineeringSelectionScore.total must be an integer 0-100`);
+  }
+  if (!Array.isArray(score.components)) {
+    errors.push(`${label}: engineeringSelectionScore.components must be an array`);
+    return;
+  }
+
+  const componentIds = new Map();
+  const total = score.components.reduce((sum, component, index) => {
+    const componentLabel = `${label}: engineeringSelectionScore.components[${index}]`;
+    if (!isRecord(component)) {
+      errors.push(`${componentLabel}: component must be an object`);
+      return sum;
+    }
+    requiredString(component.componentId, componentLabel, "componentId", errors);
+    requiredString(component.label, componentLabel, "label", errors);
+    const expectedMax = ENGINEERING_SELECTION_COMPONENTS.get(component.componentId);
+    if (expectedMax === undefined) {
+      errors.push(`${componentLabel}: unsupported componentId ${component.componentId}`);
+    } else if (component.maxScore !== expectedMax) {
+      errors.push(`${componentLabel}: maxScore must be ${expectedMax}`);
+    }
+    if (typeof component.componentId === "string") {
+      addUnique(componentIds, component.componentId, `${componentLabel}: duplicate componentId ${component.componentId}`, errors);
+    }
+    if (
+      typeof component.score !== "number" ||
+      !Number.isInteger(component.score) ||
+      component.score < 0 ||
+      typeof component.maxScore !== "number" ||
+      !Number.isInteger(component.maxScore) ||
+      component.score > component.maxScore
+    ) {
+      errors.push(`${componentLabel}: score must be an integer inside component bounds`);
+    }
+    if (!Array.isArray(component.evidence)) {
+      errors.push(`${componentLabel}: evidence must be an array`);
+    }
+    return sum + (typeof component.score === "number" ? component.score : 0);
+  }, 0);
+
+  for (const componentId of ENGINEERING_SELECTION_COMPONENTS.keys()) {
+    if (!componentIds.has(componentId)) {
+      errors.push(`${label}: engineeringSelectionScore missing component ${componentId}`);
+    }
+  }
+  if (typeof score.total === "number" && score.total !== total) {
+    errors.push(`${label}: engineeringSelectionScore.total must equal component sum`);
+  }
+}
+
+function validateDiversitySignals(signals, label, errors) {
+  if (!isRecord(signals)) {
+    errors.push(`${label}: diversitySignals must be an object`);
+    return;
+  }
+  requiredString(signals.publisher, label, "diversitySignals.publisher", errors);
+  nullableString(signals.projectGroup, label, "diversitySignals.projectGroup", errors);
+  requiredString(signals.topicGroup, label, "diversitySignals.topicGroup", errors);
+  enumString(signals.regionHint, REGIONS, label, "diversitySignals.regionHint", errors);
+}
+
+function ensureContiguousRanks(rankMap, expectedCount, label, errors) {
+  for (let rank = 1; rank <= expectedCount; rank += 1) {
+    if (!rankMap.has(rank)) {
+      errors.push(`${label}: missing rank ${rank}`);
+    }
+  }
+}
+
+function integerRank(value, label, field, errors) {
+  if (typeof value !== "number" || !Number.isInteger(value) || value < 1) {
+    errors.push(`${label}: ${field} must be a positive integer`);
+  }
 }
 
 function requiredString(value, label, field, errors) {

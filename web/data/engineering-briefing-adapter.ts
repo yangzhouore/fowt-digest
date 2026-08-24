@@ -89,6 +89,51 @@ type PipelineEngineeringBriefingItem = {
   engineeringTopics: string[];
 };
 
+type PipelineEngineeringScoreComponent = {
+  componentId: string;
+  label: string;
+  score: number;
+  maxScore: number;
+  evidence: string[];
+};
+
+type PipelineEngineeringSelectionScore = {
+  modelId: string;
+  total: number;
+  maxScore: number;
+  components: PipelineEngineeringScoreComponent[];
+};
+
+type PipelineEngineeringCandidate = {
+  candidateId: string;
+  sourceRecordId: string;
+  selected: boolean;
+  selectedBriefingItemId: string | null;
+  rawRank: number;
+  finalRank: number | null;
+  selectionReason: string;
+  diversityReason: string | null;
+  engineeringSelectionScore: PipelineEngineeringSelectionScore;
+  diversitySignals: {
+    publisher: string;
+    projectGroup: string | null;
+    topicGroup: string;
+    regionHint: EngineeringRegion;
+  };
+};
+
+type PipelineEngineeringSelection = {
+  candidatePoolType: string;
+  selectionModel: {
+    id: string;
+    label: string;
+    description: string;
+    components: Array<{ componentId: string; label: string; maxScore: number }>;
+    diversityRules: string[];
+  };
+  candidates: PipelineEngineeringCandidate[];
+};
+
 type PipelineEngineeringBriefing = {
   schemaVersion: string;
   weekStart: string;
@@ -97,6 +142,7 @@ type PipelineEngineeringBriefing = {
   checkedResultCount?: number;
   sourceRecords: PipelineEngineeringSourceRecord[];
   briefingItems: PipelineEngineeringBriefingItem[];
+  engineeringSelection?: PipelineEngineeringSelection;
 };
 
 export type EngineeringSourceRecord = {
@@ -111,6 +157,40 @@ export type EngineeringSourceRecord = {
   licenseNote: string;
 };
 
+export type EngineeringSelectionScoreComponent = {
+  id: string;
+  label: string;
+  score: number;
+  maxScore: number;
+  evidence: string[];
+};
+
+export type EngineeringSelectionScore = {
+  total: number;
+  maxScore: number;
+  components: EngineeringSelectionScoreComponent[];
+};
+
+export type EngineeringSourceCandidate = {
+  id: string;
+  sourceRecord: EngineeringSourceRecord;
+  selected: boolean;
+  selectedBriefingItemId: string | null;
+  rawRank: number;
+  finalRank: number | null;
+  selectionReason: string;
+  diversityReason: string | null;
+  score: EngineeringSelectionScore;
+  diversitySignals: {
+    publisher: string;
+    projectGroup: string | null;
+    topicGroup: string;
+    regionHint: EngineeringRegion;
+  };
+};
+
+export type EngineeringSelectionModel = PipelineEngineeringSelection["selectionModel"];
+
 export type EngineeringBriefingItem = {
   id: string;
   number: number;
@@ -123,6 +203,11 @@ export type EngineeringBriefingItem = {
   whyItMatters: string | null;
   engineeringTopics: string[];
   sourceRecords: EngineeringSourceRecord[];
+  selectionScore: EngineeringSelectionScore | null;
+  selectionReason: string | null;
+  diversityReason: string | null;
+  rawRank: number | null;
+  finalRank: number | null;
 };
 
 export type EngineeringBriefing = {
@@ -133,6 +218,8 @@ export type EngineeringBriefing = {
   generatedAt: string;
   sourceRecords: EngineeringSourceRecord[];
   items: EngineeringBriefingItem[];
+  selectionModel: EngineeringSelectionModel | null;
+  sourceCandidates: EngineeringSourceCandidate[];
 };
 
 const engineeringBriefingJsonFiles = [
@@ -203,6 +290,12 @@ function adaptEngineeringBriefing(
 ): EngineeringBriefing {
   const sourceRecords = briefing.sourceRecords.map(adaptSourceRecord);
   const sourceById = new Map(sourceRecords.map((source) => [source.id, source]));
+  const sourceCandidates = adaptSourceCandidates(briefing.engineeringSelection, sourceById);
+  const candidateByItemId = new Map(
+    sourceCandidates
+      .filter((candidate) => candidate.selectedBriefingItemId !== null)
+      .map((candidate) => [candidate.selectedBriefingItemId, candidate]),
+  );
 
   return {
     slug: briefing.weekEnd,
@@ -212,25 +305,35 @@ function adaptEngineeringBriefing(
       briefing.checkedResultCount ?? briefing.sourceRecords.length,
     generatedAt: briefing.generatedAt,
     sourceRecords,
-    items: briefing.briefingItems.map((item, index) => ({
-      id: item.briefingItemId,
-      number: index + 1,
-      title: item.title,
-      oneLineSummary: item.oneLineSummary,
-      category: item.category,
-      region: item.region ?? null,
-      sourceUrl: item.sourceUrl,
-      explanation: item.explanation,
-      whyItMatters: item.whyItMatters,
-      engineeringTopics: item.engineeringTopics,
-      sourceRecords: item.sourceRecordIds.map((sourceId) => {
-        const source = sourceById.get(sourceId);
-        if (!source) {
-          throw new Error(`engineering briefing item references missing source ${sourceId}`);
-        }
-        return source;
-      }),
-    })),
+    items: briefing.briefingItems.map((item, index) => {
+      const candidate = candidateByItemId.get(item.briefingItemId);
+      return {
+        id: item.briefingItemId,
+        number: index + 1,
+        title: item.title,
+        oneLineSummary: item.oneLineSummary,
+        category: item.category,
+        region: item.region ?? null,
+        sourceUrl: item.sourceUrl,
+        explanation: item.explanation,
+        whyItMatters: item.whyItMatters,
+        engineeringTopics: item.engineeringTopics,
+        sourceRecords: item.sourceRecordIds.map((sourceId) => {
+          const source = sourceById.get(sourceId);
+          if (!source) {
+            throw new Error(`engineering briefing item references missing source ${sourceId}`);
+          }
+          return source;
+        }),
+        selectionScore: candidate?.score ?? null,
+        selectionReason: candidate?.selectionReason ?? null,
+        diversityReason: candidate?.diversityReason ?? null,
+        rawRank: candidate?.rawRank ?? null,
+        finalRank: candidate?.finalRank ?? null,
+      };
+    }),
+    selectionModel: briefing.engineeringSelection?.selectionModel ?? null,
+    sourceCandidates,
   };
 }
 
@@ -247,6 +350,49 @@ function adaptSourceRecord(
     retrievedAt: source.retrievedAt,
     sourceText: source.sourceText,
     licenseNote: source.licenseNote,
+  };
+}
+
+function adaptSourceCandidates(
+  selection: PipelineEngineeringSelection | undefined,
+  sourceById: Map<string, EngineeringSourceRecord>,
+): EngineeringSourceCandidate[] {
+  if (!selection) {
+    return [];
+  }
+  return selection.candidates.map((candidate) => {
+    const source = sourceById.get(candidate.sourceRecordId);
+    if (!source) {
+      throw new Error(`engineering candidate references missing source ${candidate.sourceRecordId}`);
+    }
+    return {
+      id: candidate.candidateId,
+      sourceRecord: source,
+      selected: candidate.selected,
+      selectedBriefingItemId: candidate.selectedBriefingItemId,
+      rawRank: candidate.rawRank,
+      finalRank: candidate.finalRank,
+      selectionReason: selectionReasonLabel(candidate.selectionReason),
+      diversityReason: candidate.diversityReason,
+      score: adaptSelectionScore(candidate.engineeringSelectionScore),
+      diversitySignals: candidate.diversitySignals,
+    };
+  });
+}
+
+function adaptSelectionScore(
+  score: PipelineEngineeringSelectionScore,
+): EngineeringSelectionScore {
+  return {
+    total: score.total,
+    maxScore: score.maxScore,
+    components: score.components.map((component) => ({
+      id: component.componentId,
+      label: component.label,
+      score: component.score,
+      maxScore: component.maxScore,
+      evidence: component.evidence,
+    })),
   };
 }
 
@@ -267,6 +413,9 @@ function validateEngineeringBriefing(value: unknown): PipelineEngineeringBriefin
   }
   briefing.sourceRecords.forEach(validateSourceRecord);
   briefing.briefingItems.forEach(validateBriefingItem);
+  if (briefing.engineeringSelection !== undefined) {
+    validateEngineeringSelection(briefing.engineeringSelection);
+  }
   return briefing as PipelineEngineeringBriefing;
 }
 
@@ -307,6 +456,102 @@ function validateBriefingItem(value: unknown): void {
   }
 }
 
+function validateEngineeringSelection(value: unknown): void {
+  if (!isRecord(value)) {
+    throw new Error("engineeringSelection must be an object");
+  }
+  requiredString(value.candidatePoolType, "engineeringSelection.candidatePoolType");
+  if (!isRecord(value.selectionModel)) {
+    throw new Error("engineeringSelection requires selectionModel");
+  }
+  requiredString(value.selectionModel.id, "engineeringSelection.selectionModel.id");
+  requiredString(value.selectionModel.label, "engineeringSelection.selectionModel.label");
+  requiredString(value.selectionModel.description, "engineeringSelection.selectionModel.description");
+  if (!Array.isArray(value.selectionModel.components)) {
+    throw new Error("engineeringSelection selectionModel.components must be an array");
+  }
+  if (!Array.isArray(value.selectionModel.diversityRules)) {
+    throw new Error("engineeringSelection selectionModel.diversityRules must be an array");
+  }
+  if (!Array.isArray(value.candidates)) {
+    throw new Error("engineeringSelection candidates must be an array");
+  }
+  value.candidates.forEach(validateEngineeringCandidate);
+}
+
+function validateEngineeringCandidate(value: unknown): void {
+  if (!isRecord(value)) {
+    throw new Error("engineeringSelection candidates must contain objects");
+  }
+  requiredString(value.candidateId, "engineeringSelection.candidates.candidateId");
+  requiredString(value.sourceRecordId, "engineeringSelection.candidates.sourceRecordId");
+  requiredString(value.selectionReason, "engineeringSelection.candidates.selectionReason");
+  if (typeof value.selected !== "boolean") {
+    throw new Error("engineeringSelection candidates selected must be boolean");
+  }
+  if (typeof value.rawRank !== "number" || !Number.isInteger(value.rawRank) || value.rawRank < 1) {
+    throw new Error("engineeringSelection candidates rawRank must be a positive integer");
+  }
+  if (
+    value.finalRank !== null &&
+    (typeof value.finalRank !== "number" || !Number.isInteger(value.finalRank) || value.finalRank < 1)
+  ) {
+    throw new Error("engineeringSelection candidates finalRank must be a positive integer or null");
+  }
+  if (value.selectedBriefingItemId !== null && typeof value.selectedBriefingItemId !== "string") {
+    throw new Error("engineeringSelection selectedBriefingItemId must be a string or null");
+  }
+  if (value.diversityReason !== null && typeof value.diversityReason !== "string") {
+    throw new Error("engineeringSelection diversityReason must be a string or null");
+  }
+  if (!isRecord(value.engineeringSelectionScore)) {
+    throw new Error("engineeringSelection candidates require engineeringSelectionScore");
+  }
+  validateSelectionScore(value.engineeringSelectionScore);
+  if (!isRecord(value.diversitySignals)) {
+    throw new Error("engineeringSelection candidates require diversitySignals");
+  }
+}
+
+function validateSelectionScore(value: Record<string, unknown>): void {
+  requiredString(value.modelId, "engineeringSelectionScore.modelId");
+  if (
+    typeof value.total !== "number" ||
+    !Number.isInteger(value.total) ||
+    value.total < 0 ||
+    value.total > 100 ||
+    value.maxScore !== 100
+  ) {
+    throw new Error("engineeringSelectionScore requires integer total 0-100 and maxScore 100");
+  }
+  if (!Array.isArray(value.components)) {
+    throw new Error("engineeringSelectionScore components must be an array");
+  }
+  value.components.forEach(validateSelectionScoreComponent);
+}
+
+function validateSelectionScoreComponent(value: unknown): void {
+  if (!isRecord(value)) {
+    throw new Error("engineeringSelectionScore components must contain objects");
+  }
+  requiredString(value.componentId, "engineeringSelectionScore.components.componentId");
+  requiredString(value.label, "engineeringSelectionScore.components.label");
+  if (
+    typeof value.score !== "number" ||
+    !Number.isInteger(value.score) ||
+    typeof value.maxScore !== "number" ||
+    !Number.isInteger(value.maxScore) ||
+    value.score < 0 ||
+    value.maxScore < 1 ||
+    value.score > value.maxScore
+  ) {
+    throw new Error("engineeringSelectionScore component has invalid bounds");
+  }
+  if (!Array.isArray(value.evidence)) {
+    throw new Error("engineeringSelectionScore component evidence must be an array");
+  }
+}
+
 function requiredString(value: unknown, field: string): string {
   if (typeof value !== "string" || value.trim() === "") {
     throw new Error(`engineering briefing JSON requires ${field}`);
@@ -316,6 +561,19 @@ function requiredString(value: unknown, field: string): string {
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function selectionReasonLabel(value: string): string {
+  if (value === "selected_after_diversity") {
+    return "Selected after diversity review";
+  }
+  if (value === "not_selected_after_diversity") {
+    return "Not selected after diversity review";
+  }
+  if (value === "not_selected_below_diversity_limit") {
+    return "Not selected below diversity limit";
+  }
+  return value;
 }
 
 function formatDateRange(start: string, end: string): string {

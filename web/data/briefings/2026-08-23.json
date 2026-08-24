@@ -170,5 +170,474 @@
         "Tow-out logistics"
       ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "retained_source_records",
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-08-23-brestport-inflow",
+        "sourceRecordId": "eng-src-2026-08-23-brestport-inflow",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-02",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 71,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 22,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: port, assembly, logistics"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 22,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: brestport, port of brest, france 2030",
+                "project/company event signals: selected, support, state support, project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports",
+                "technology signal: fabrication"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 9,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government, state support, france 2030",
+                "trade association source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "trade association source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Bretagne Ocean Power",
+          "projectGroup": "brestport_inflow",
+          "topicGroup": "ports",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-port-talbot-consultancy",
+        "sourceRecordId": "eng-src-2026-08-23-port-talbot-consultancy",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-01",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 67,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 27,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: port, ports, consenting"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 14,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: associated british ports, port talbot",
+                "project/company event signals: procurement, support"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 11,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government, consenting, procurement",
+                "government source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 10,
+              "maxScore": 10,
+              "evidence": [
+                "government announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "GwerthwchiGymru / Associated British Ports",
+          "projectGroup": "port_talbot_celtic_sea",
+          "topicGroup": "ports",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-haventus-dajin",
+        "sourceRecordId": "eng-src-2026-08-23-haventus-dajin",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 62,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 25,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: port, manufacturing"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 21,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: haventus, dajin, ardersier",
+                "project/company event signals: mou, partnership, customers"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports",
+                "technology signal: fabrication"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Energy Global",
+          "projectGroup": "ardersier_haventus_dajin",
+          "topicGroup": "ports",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-mlit-port-study",
+        "sourceRecordId": "eng-src-2026-08-23-mlit-port-study",
+        "selected": false,
+        "selectedBriefingItemId": null,
+        "rawRank": 4,
+        "finalRank": null,
+        "selectionReason": "not_selected_after_diversity",
+        "diversityReason": "Deferred because japan_port_planning was represented by a candidate with broader technology coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 62,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 25,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: port, ports"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 11,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: mlit, ministry of land",
+                "project/company event signals: study group"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 11,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government, ministry, mlit",
+                "government source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 10,
+              "maxScore": 10,
+              "evidence": [
+                "government announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Japan Ministry of Land, Infrastructure, Transport and Tourism",
+          "projectGroup": "japan_port_planning",
+          "topicGroup": "ports",
+          "regionHint": "Asia-Pacific"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-deepwind-mlit-ports",
+        "sourceRecordId": "eng-src-2026-08-23-deepwind-mlit-ports",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-05",
+        "rawRank": 5,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected over a higher-ranked duplicate from japan_port_planning because it adds broader technology coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 51,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 24,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: port, ports, platform, tow"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 4,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: mlit"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 15,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports",
+                "technology signal: floating platforms",
+                "technology signal: installation"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: mlit"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "DeepWind",
+          "projectGroup": "japan_port_planning",
+          "topicGroup": "ports",
+          "regionHint": "Asia-Pacific"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-taihan-panstar",
+        "sourceRecordId": "eng-src-2026-08-23-taihan-panstar",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-04",
+        "rawRank": 6,
+        "finalRank": 5,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 45,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 13,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: installation, cable, hvdc, grid"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 11,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: taihan, panstar",
+                "project/company event signals: mou"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 15,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables",
+                "technology signal: installation",
+                "technology signal: digital"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Ocean News & Technology",
+          "projectGroup": "korean_cable_robotics",
+          "topicGroup": "cables",
+          "regionHint": "Asia-Pacific"
+        }
+      }
+    ]
+  }
 }

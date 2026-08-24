@@ -15,6 +15,12 @@ test("valid engineering briefing fixture passes", () => {
   assert.deepEqual(runValidation(fixture), []);
 });
 
+test("valid engineering briefing fixture with selection score passes", () => {
+  const fixture = createFixture({ briefing: validBriefingWithSelection() });
+
+  assert.deepEqual(runValidation(fixture), []);
+});
+
 test("missing source provenance fails", () => {
   const fixture = createFixture({
     mutateSource: (source) => {
@@ -43,6 +49,39 @@ test("unsupported briefing category fails", () => {
   });
 
   assertHasError(fixture, "category has unsupported value finance");
+});
+
+test("engineering selection candidate missing source record fails", () => {
+  const fixture = createFixture({
+    briefing: validBriefingWithSelection(),
+    mutateBriefing: (briefing) => {
+      briefing.engineeringSelection.candidates[0].sourceRecordId = "eng-src-missing";
+    },
+  });
+
+  assertHasError(fixture, "missing source record eng-src-missing");
+});
+
+test("engineering selection score total must equal component sum", () => {
+  const fixture = createFixture({
+    briefing: validBriefingWithSelection(),
+    mutateBriefing: (briefing) => {
+      briefing.engineeringSelection.candidates[0].engineeringSelectionScore.total = 99;
+    },
+  });
+
+  assertHasError(fixture, "engineeringSelectionScore.total must equal component sum");
+});
+
+test("engineering selected candidate must reference briefing item", () => {
+  const fixture = createFixture({
+    briefing: validBriefingWithSelection(),
+    mutateBriefing: (briefing) => {
+      briefing.engineeringSelection.candidates[0].selectedBriefingItemId = "eng-item-missing";
+    },
+  });
+
+  assertHasError(fixture, "selected candidate must reference an existing briefing item");
 });
 
 test("unregistered engineering briefing JSON fails", () => {
@@ -76,6 +115,7 @@ function createFixture({
   fileName = "2026-01-04.json",
   mutateSource,
   mutateItem,
+  mutateBriefing,
   adapterSource: customAdapterSource,
 } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), "fowt-briefing-"));
@@ -89,6 +129,9 @@ function createFixture({
     }
     if (mutateItem) {
       mutateItem(briefing.briefingItems[0]);
+    }
+    if (mutateBriefing) {
+      mutateBriefing(briefing);
     }
   }
 
@@ -130,6 +173,67 @@ function validBriefing({
     generatedAt: "2026-01-04T09:00:00Z",
     sourceRecords: [validSourceRecord()],
     briefingItems: [validBriefingItem()],
+  };
+}
+
+function validBriefingWithSelection() {
+  const briefing = validBriefing();
+  briefing.engineeringSelection = {
+    candidatePoolType: "retained_source_records",
+    selectionModel: {
+      id: "engineering_selection_score_v1",
+      label: "Engineering Selection Score",
+      description: "Deterministic Engineering score.",
+      components: [
+        { componentId: "engineering_relevance", label: "Engineering relevance", maxScore: 30 },
+        { componentId: "project_company", label: "Project / company", maxScore: 25 },
+        { componentId: "technology", label: "Technology", maxScore: 20 },
+        { componentId: "policy_market", label: "Policy / market", maxScore: 15 },
+        { componentId: "source_quality", label: "Source quality", maxScore: 10 },
+      ],
+      diversityRules: ["Rank by score.", "Apply diversity."],
+    },
+    candidates: [
+      {
+        candidateId: "eng-src-2026-01-04-example",
+        sourceRecordId: "eng-src-2026-01-04-example",
+        selected: true,
+        selectedBriefingItemId: "eng-item-2026-01-04-01",
+        rawRank: 1,
+        finalRank: 1,
+        selectionReason: "selected_after_diversity",
+        diversityReason: "Selected by score while adding source/project coverage.",
+        engineeringSelectionScore: {
+          modelId: "engineering_selection_score_v1",
+          total: 50,
+          maxScore: 100,
+          components: [
+            scoreComponent("engineering_relevance", "Engineering relevance", 30, 20),
+            scoreComponent("project_company", "Project / company", 25, 10),
+            scoreComponent("technology", "Technology", 20, 5),
+            scoreComponent("policy_market", "Policy / market", 15, 5),
+            scoreComponent("source_quality", "Source quality", 10, 10),
+          ],
+        },
+        diversitySignals: {
+          publisher: "Example Publisher",
+          projectGroup: null,
+          topicGroup: "engineering",
+          regionHint: "Europe",
+        },
+      },
+    ],
+  };
+  return briefing;
+}
+
+function scoreComponent(componentId, label, maxScore, score) {
+  return {
+    componentId,
+    label,
+    score,
+    maxScore,
+    evidence: [`${label} evidence`],
   };
 }
 

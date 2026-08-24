@@ -17,19 +17,23 @@ pipeline, current `research_selection_score_v1`, and current OpenAlex metadata.
 
 For Engineering, the count is the number of retained source records in the
 static briefing JSON. For 17-23 August 2026, the retained pool contains 6 source
-records and 5 selected highlights.
+records. Those records are scored with `engineering_selection_score_v1`, ranked
+by importance, then passed through a deterministic diversity layer to produce 5
+selected highlights.
 
 Historical editions only expose candidate-pool pages when candidate records can
-be retained or reconstructed reliably. Reconstructed pools must not be described
-as the original historical candidate pools because upstream OpenAlex records,
-metadata, indexing, and links can change over time. The 2026-08-16 pool is not
-published because the reconstruction did not complete reliably.
+be retained or reconstructed reliably. Reconstructed Research pools must not be
+described as the original historical candidate pools because upstream OpenAlex
+records, metadata, indexing, and links can change over time. The 2026-08-16
+Research pool is not published because the reconstruction did not complete
+reliably. Historical Engineering editions remain retained-source views unless a
+scored Engineering candidate pool is explicitly stored.
 
 ## Research Selection
 
 Research candidates are collected from OpenAlex, normalised, deduplicated,
 classified for FOWT relevance, scored, then ranked deterministically. The
-Selection Score is computed before ranking and now contributes directly to paper
+Selection Score is computed before ranking and contributes directly to paper
 selection.
 
 The current model is `research_selection_score_v1`, a 100-point deterministic
@@ -62,11 +66,31 @@ requiring proprietary metrics.
 
 ## Engineering Selection
 
-Engineering Briefing currently uses manual source-backed review. The static data
-stores source records, item-source provenance, category, region and briefing
-copy, but it does not retain ranked candidates or deterministic score
-components.
+Engineering candidates are retained public source records in the weekly static
+briefing JSON. The latest scored edition uses `engineering_selection_score_v1`, a
+100-point deterministic score computed from source-record metadata and concise
+source-backed evidence text before ranking.
 
-Engineering therefore does not show a numeric Selection Score. A future score
-would require an accepted deterministic Engineering ranking model before it can
-be displayed honestly.
+| Component | Weight | Basis |
+| --- | ---: | --- |
+| Engineering relevance | 30 | Floating-wind, offshore-wind and engineering terms such as ports, installation, fabrication, cables, moorings, grid, vessels and consenting. |
+| Project / company | 25 | Named projects, ports, government bodies, developers or supply-chain entities plus concrete events such as tenders, selections, support, partnerships or study groups. |
+| Technology | 20 | Controlled topic groups for ports, floating platforms, cables, installation, fabrication and digital engineering. |
+| Policy / market | 15 | Government, procurement, state-support, consenting, regulation, supply-chain, leasing and market signals, with source-type additions. |
+| Source quality | 10 | Source-type proxy that favors government and standards sources, then company/trade sources, with reputable industry news below primary sources. |
+
+The raw ranking order is deterministic:
+
+1. Engineering Selection Score, highest first;
+2. source record ID as a stable final tie-breaker.
+
+The final five are not simply the five highest scores when that would duplicate
+coverage unnecessarily. After scoring, a deterministic diversity layer checks
+publisher, detected project group, topic group and region. It can defer a
+higher-ranked duplicate project/topic candidate when another source-backed
+candidate adds broader weekly coverage. The candidate page labels the raw rank,
+final rank, selected state, score breakdown and diversity reason.
+
+No LLM subjective scoring is used. The score is a transparent heuristic over the
+retained source records, not a claim that every global engineering news source
+was collected.

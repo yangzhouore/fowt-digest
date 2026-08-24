@@ -41,6 +41,8 @@ const CANDIDATE_STATUSES = new Set([
   "candidate",
   "supporting_provenance",
   "duplicate_event",
+  "excluded_out_of_window",
+  "excluded_low_relevance",
 ]);
 
 const ENGINEERING_SELECTION_COMPONENTS = new Map([

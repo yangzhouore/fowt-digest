@@ -3,7 +3,7 @@
   "weekStart": "2026-08-03",
   "weekEnd": "2026-08-09",
   "generatedAt": "2026-08-11T17:00:00Z",
-  "checkedResultCount": 6,
+  "checkedResultCount": 3,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-08-09-llyr-consent",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "offshoreWIND.biz reported that Welsh ministers granted Section 36 consent to the Llyr Wind Farm, a floating wind test and demonstration project in the Celtic Sea off Pembrokeshire. The record states that Llyr consists of two 100 MW wind farms and is planned around 40 km offshore in water depths averaging 60-70 metres.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-09-encomara-squid-trials",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "offshoreWIND.biz reported that Encomara was preparing inshore trials at Ardersier for its first Squid floating wind connection system. The article states that the 40-tonne system supports mooring lines, power cables, and subsea connectors above the seabed so they can be pre-installed before a floating turbine arrives.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-09-abs-squid-pda",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "ABS stated that it issued a product design assessment to Encomara for the Squid system, a mooring and electrical cable protection technology for floating offshore wind turbines. ABS said it completed a detailed review against class and industry requirements for floating offshore wind applications.",
-      "licenseNote": "Public press release; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public press release; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-08-03 to 2026-08-09.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-08-09-rwe-us-exit",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "Associated Press reported that the US administration reached a 1.2 billion dollar settlement with RWE U.S. Offshore to terminate offshore wind projects off New York, California, and Louisiana. The report states that RWE would end its US offshore wind involvement under the settlement.",
-      "licenseNote": "Public news webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public news webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-09-bw-ideol-nge-fos3f",
@@ -63,7 +67,8 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "BW Ideol announced an equal partnership with NGE on the Fos3F floating foundation factory project in Fos-sur-Mer. The announcement states that the planned serial fabrication line is sized for about 30 floaters per year, equivalent to around 500 MW of annual floating wind capacity.",
-      "licenseNote": "Public company announcement; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public company announcement; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-08-03 to 2026-08-09.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-08-09-shi-fawt-japan",
@@ -75,30 +80,13 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "Sumitomo Heavy Industries announced that the FAWT Consortium installed an experimental Floating Axis Wind Turbine in a bay of Iki City, Nagasaki Prefecture. The announcement states that the offshore demonstration starts in July 2026 and is intended to advance a low-cost domestic offshore wind power generation system.",
-      "licenseNote": "Public company announcement; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public company announcement; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-08-03 to 2026-08-09.",
+      "candidateStatus": "excluded_out_of_window"
     }
   ],
   "briefingItems": [
     {
       "briefingItemId": "eng-item-2026-08-09-01",
-      "title": "Llyr floating wind project gets Section 36 consent",
-      "oneLineSummary": "Welsh ministers granted Section 36 consent to the Llyr floating wind test and demonstration project.",
-      "category": "project",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-08-09-llyr-consent"
-      ],
-      "sourceUrl": "https://www.offshorewind.biz/2026/08/07/wales-grants-section-36-consent-to-llyr-floating-wind-project/",
-      "explanation": "The source identifies the consent status, location, water-depth range, and two-project scale of the Celtic Sea demonstration project.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Planning consent",
-        "Celtic Sea",
-        "Demonstration project"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-08-09-02",
       "title": "Encomara prepares Squid floating wind connection trials",
       "oneLineSummary": "Encomara is preparing inshore trials in Scotland for a pre-installed mooring and power-cable connection system.",
       "category": "technology",
@@ -114,6 +102,24 @@
         "Mooring connection",
         "Dynamic cable interface",
         "Technology qualification"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-09-02",
+      "title": "Llyr floating wind project gets Section 36 consent",
+      "oneLineSummary": "Welsh ministers granted Section 36 consent to the Llyr floating wind test and demonstration project.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-08-09-llyr-consent"
+      ],
+      "sourceUrl": "https://www.offshorewind.biz/2026/08/07/wales-grants-section-36-consent-to-llyr-floating-wind-project/",
+      "explanation": "The source identifies the consent status, location, water-depth range, and two-project scale of the Celtic Sea demonstration project.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Planning consent",
+        "Celtic Sea",
+        "Demonstration project"
       ]
     },
     {
@@ -133,42 +139,296 @@
         "Project pipeline",
         "US offshore wind"
       ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-08-09-04",
-      "title": "BW Ideol and NGE advance Fos3F floating foundation factory",
-      "oneLineSummary": "BW Ideol and NGE formed an equal partnership on the Fos3F serial floating foundation fabrication project.",
-      "category": "supply_chain",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-08-09-bw-ideol-nge-fos3f"
-      ],
-      "sourceUrl": "https://bw-ideol.com/en/bw-ideol-and-nge-join-forces-mediterranean",
-      "explanation": "The company announcement identifies the factory location, equal partnership structure, and planned production scale for floating foundations.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Floating foundations",
-        "Serial fabrication",
-        "Port infrastructure"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-08-09-05",
-      "title": "Japanese FAWT demonstrator starts offshore test phase",
-      "oneLineSummary": "A Japanese consortium installed an experimental Floating Axis Wind Turbine for offshore demonstration at Iki City, Nagasaki.",
-      "category": "technology",
-      "region": "Asia-Pacific",
-      "sourceRecordIds": [
-        "eng-src-2026-08-09-shi-fawt-japan"
-      ],
-      "sourceUrl": "https://www.shi.co.jp/english/info/2026/6kgpsq00000043cd.html",
-      "explanation": "The company announcement identifies the installed experimental turbine, location, consortium context, and July 2026 offshore demonstration start.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Floating turbine concept",
-        "Offshore demonstration",
-        "Domestic supply chain"
-      ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-08-03",
+      "weekEnd": "2026-08-09",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 6,
+      "sourcesSuccessfullyCollected": 6,
+      "rawItemsCollected": 6,
+      "itemsAfterDateFiltering": 3,
+      "itemsAfterFowtRelevanceFiltering": 3,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 3,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "ABS",
+          "sourceClass": "standards update",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "Associated Press",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "BW Ideol",
+          "sourceClass": "company announcement",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "Sumitomo Heavy Industries",
+          "sourceClass": "company announcement",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-08-09-encomara-squid-trials",
+        "sourceRecordId": "eng-src-2026-08-09-encomara-squid-trials",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-09-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 28,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 18,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: mooring"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 4,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: ardersier"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": "ardersier_haventus_dajin",
+          "topicGroup": "engineering",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-09-llyr-consent",
+        "sourceRecordId": "eng-src-2026-08-09-llyr-consent",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-09-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 25,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 16,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": "port_talbot_celtic_sea",
+          "topicGroup": "engineering",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-09-rwe-us-exit",
+        "sourceRecordId": "eng-src-2026-08-09-rwe-us-exit",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-09-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 11,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 5,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Associated Press",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "North America"
+        }
+      }
+    ]
+  }
 }

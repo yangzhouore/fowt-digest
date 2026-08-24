@@ -253,6 +253,8 @@ export default function MethodologyPage() {
           LLM subjective scoring is used. Diversity is separate from importance:
           it can defer a high-scoring duplicate project or topic when another
           source-backed candidate gives the weekly briefing broader coverage.
+          Historical Engineering pools are labeled as retained-source
+          reconstructions when no original full candidate artifact was stored.
         </p>
       </section>
 

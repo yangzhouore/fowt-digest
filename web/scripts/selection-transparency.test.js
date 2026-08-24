@@ -24,9 +24,14 @@ const researchDigests = new Map(
       return [digest.weekEnd, digest];
     }),
 );
+const engineeringBriefingDir = path.join(__dirname, "..", "data", "briefings");
 const engineeringBriefing = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "..", "data", "briefings", "2026-08-23.json"), "utf8"),
+  fs.readFileSync(path.join(engineeringBriefingDir, "2026-08-23.json"), "utf8"),
 );
+const engineeringBackfillBriefings = fs.readdirSync(engineeringBriefingDir)
+  .filter((fileName) => fileName >= "2026-04-05.json" && fileName <= "2026-08-23.json")
+  .sort()
+  .map((fileName) => JSON.parse(fs.readFileSync(path.join(engineeringBriefingDir, fileName), "utf8")));
 
 const expectedScoreComponents = new Set([
   "fowt_relevance",
@@ -305,6 +310,54 @@ test("engineering diversity layer preserves five selected highlights from candid
   assert.ok(!selectedIds.includes("eng-src-2026-08-23-stillstrom-cable-control"));
   assert.ok(!selectedIds.includes("eng-src-2026-08-23-stanford-offshore-wind-testing"));
   assert.ok(selected.every((candidate) => candidate.diversityReason));
+});
+test("engineering historical backfilled weeks retain scored reconstructed candidate pools", () => {
+  const expectedCounts = new Map([
+    ["2026-04-05", 5],
+    ["2026-04-12", 2],
+    ["2026-04-19", 1],
+    ["2026-04-26", 3],
+    ["2026-05-03", 1],
+    ["2026-05-10", 5],
+    ["2026-05-17", 1],
+    ["2026-05-24", 4],
+    ["2026-05-31", 5],
+    ["2026-06-07", 1],
+    ["2026-06-21", 5],
+    ["2026-06-28", 5],
+    ["2026-07-05", 2],
+    ["2026-07-12", 5],
+    ["2026-07-19", 3],
+    ["2026-07-26", 5],
+    ["2026-08-02", 4],
+    ["2026-08-09", 3],
+    ["2026-08-16", 5],
+    ["2026-08-23", 8],
+  ]);
+  const incompleteWeeks = new Set(["2026-06-14"]);
+
+  for (const briefing of engineeringBackfillBriefings) {
+    if (incompleteWeeks.has(briefing.weekEnd)) {
+      assert.equal(briefing.engineeringSelection, undefined);
+      continue;
+    }
+
+    const expectedCount = expectedCounts.get(briefing.weekEnd);
+    assert.ok(expectedCount, `missing expected count for ${briefing.weekEnd}`);
+    assert.ok(briefing.engineeringSelection, `missing engineeringSelection for ${briefing.weekEnd}`);
+    assert.equal(briefing.engineeringSelection.selectionModel.id, SCORE_MODEL_ID);
+    assert.equal(briefing.engineeringSelection.collectionAudit.candidatePoolSize, expectedCount);
+    assert.equal(briefing.engineeringSelection.candidates.length, expectedCount);
+    assert.equal(briefing.checkedResultCount, expectedCount);
+
+    const regenerated = buildEngineeringCandidatePool(briefing);
+    assert.deepEqual(briefing.engineeringSelection.candidates, regenerated.candidates);
+
+    for (const candidate of briefing.engineeringSelection.candidates) {
+      assertEngineeringScore(candidate.engineeringSelectionScore);
+      assert.equal(candidate.engineeringSelectionScore.modelId, SCORE_MODEL_ID);
+    }
+  }
 });
 
 function assertEngineeringScore(score) {

@@ -27,8 +27,16 @@ be retained or reconstructed reliably. Reconstructed Research pools must not be
 described as the original historical candidate pools because upstream OpenAlex
 records, metadata, indexing, and links can change over time. The 2026-08-16
 Research pool is not published because the reconstruction did not complete
-reliably. Historical Engineering editions remain retained-source views unless a
-scored Engineering candidate pool is explicitly stored.
+reliably.
+
+Historical Engineering pools from April-August 2026 are labeled separately when
+they were reconstructed from retained static source records rather than from an
+original full multi-source collection artifact. They use exact weekly date
+filtering, basic FOWT/offshore-wind relevance filtering, current
+`engineering_selection_score_v1`, and the same deterministic diversity layer, but
+may undercount candidates that were never retained in the historical JSON. Weeks
+with no reliable in-window retained candidates remain unscored instead of being
+filled from guesses.
 
 ## Research Selection
 
@@ -108,4 +116,7 @@ final rank, selected state, score breakdown and diversity reason.
 
 No LLM subjective scoring is used. The score is a transparent heuristic over the
 retained candidate records, not a claim that every global engineering news source
-was collected. Current Engineering collection remains manual and source-policy bounded; historical Engineering editions still show retained-source transparency unless a scored candidate pool is explicitly stored.
+was collected. Current Engineering collection remains manual and source-policy
+bounded. Reconstructed historical Engineering pools are explicitly labeled as
+retained-source reconstructions when no original full candidate collection was
+stored.

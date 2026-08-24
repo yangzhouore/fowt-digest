@@ -3,7 +3,7 @@
   "weekStart": "2026-03-30",
   "weekEnd": "2026-04-05",
   "generatedAt": "2026-08-19T17:05:00Z",
-  "checkedResultCount": 8,
+  "checkedResultCount": 5,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-04-05-oregon-roadmap",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Oregon extended public comment on offshore wind roadmap options, including pilot-scale floating wind and a no-build pathway.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-04-05-tgs-market",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "TGS 4C forecast offshore wind offtake and site-award activity, including floating offshore wind projects expected in 2026.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-04-05-port-talbot",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "The UK Government and ABP agreed funding terms to support Port Talbot manufacturing, assembly, and marshalling capacity for floating wind.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-04-05-teesport",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "PD Ports outlined a Teesport offshore wind gateway intended to support fixed and floating wind manufacturing and assembly.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-04-05-flowra-lr",
@@ -63,44 +67,13 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "FLOWRA and Lloyds Register announced a partnership to support floating offshore wind project development and risk sharing.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     }
   ],
   "briefingItems": [
     {
       "briefingItemId": "eng-item-2026-04-05-01",
-      "title": "Oregon extends offshore wind roadmap comment period",
-      "oneLineSummary": "Oregon extended public comment on offshore wind roadmap options, including pilot-scale floating wind and a no-build pathway.",
-      "category": "policy",
-      "region": "North America",
-      "sourceRecordIds": [
-        "eng-src-2026-04-05-oregon-roadmap"
-      ],
-      "sourceUrl": "https://oregoncapitalchronicle.com/2026/04/02/public-comment-extended-on-future-of-offshore-wind-in-oregon-including-none-at-all/",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Regional planning"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-04-05-02",
-      "title": "TGS 4C flags floating wind award outlook",
-      "oneLineSummary": "TGS 4C forecast offshore wind offtake and site-award activity, including floating offshore wind projects expected in 2026.",
-      "category": "project",
-      "region": "Unspecified",
-      "sourceRecordIds": [
-        "eng-src-2026-04-05-tgs-market"
-      ],
-      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55368214/tgs-tgs-4c-delivers-offshore-wind-market-predictions",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Project pipeline"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-04-05-03",
       "title": "UK backs Port Talbot floating wind hub",
       "oneLineSummary": "The UK Government and ABP agreed funding terms to support Port Talbot manufacturing, assembly, and marshalling capacity for floating wind.",
       "category": "supply_chain",
@@ -116,7 +89,7 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-04-05-04",
+      "briefingItemId": "eng-item-2026-04-05-02",
       "title": "Teesport pitches offshore wind gateway",
       "oneLineSummary": "PD Ports outlined a Teesport offshore wind gateway intended to support fixed and floating wind manufacturing and assembly.",
       "category": "supply_chain",
@@ -132,7 +105,7 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-04-05-05",
+      "briefingItemId": "eng-item-2026-04-05-03",
       "title": "FLOWRA partners with Lloyds Register",
       "oneLineSummary": "FLOWRA and Lloyds Register announced a partnership to support floating offshore wind project development and risk sharing.",
       "category": "standards",
@@ -146,6 +119,465 @@
       "engineeringTopics": [
         "Project development"
       ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-05-04",
+      "title": "TGS 4C flags floating wind award outlook",
+      "oneLineSummary": "TGS 4C forecast offshore wind offtake and site-award activity, including floating offshore wind projects expected in 2026.",
+      "category": "project",
+      "region": "Unspecified",
+      "sourceRecordIds": [
+        "eng-src-2026-04-05-tgs-market"
+      ],
+      "sourceUrl": "https://www.offshore-mag.com/renewable-energy/news/55368214/tgs-tgs-4c-delivers-offshore-wind-market-predictions",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Project pipeline"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-04-05-05",
+      "title": "Oregon extends offshore wind roadmap comment period",
+      "oneLineSummary": "Oregon extended public comment on offshore wind roadmap options, including pilot-scale floating wind and a no-build pathway.",
+      "category": "policy",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-04-05-oregon-roadmap"
+      ],
+      "sourceUrl": "https://oregoncapitalchronicle.com/2026/04/02/public-comment-extended-on-future-of-offshore-wind-in-oregon-including-none-at-all/",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Regional planning"
+      ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-03-30",
+      "weekEnd": "2026-04-05",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 5,
+      "itemsAfterFowtRelevanceFiltering": 5,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 5,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "Oregon Capital Chronicle",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Offshore Magazine",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Cyprus Shipping News",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Cyprus Shipping News",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Energies Media",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-04-05-port-talbot",
+        "sourceRecordId": "eng-src-2026-04-05-port-talbot",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-04-05-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 52,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 27,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: port, assembly, manufacturing"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 7,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: port talbot",
+                "project/company event signals: support"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports",
+                "technology signal: fabrication"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Cyprus Shipping News",
+          "projectGroup": "port_talbot_celtic_sea",
+          "topicGroup": "ports",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-04-05-teesport",
+        "sourceRecordId": "eng-src-2026-04-05-teesport",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-04-05-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 46,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 27,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: ports, assembly, manufacturing"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: support"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports",
+                "technology signal: fabrication"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Cyprus Shipping News",
+          "projectGroup": null,
+          "topicGroup": "ports",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-04-05-flowra-lr",
+        "sourceRecordId": "eng-src-2026-04-05-flowra-lr",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-04-05-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 36,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 9,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: support, partnership, project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Energies Media",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-04-05-tgs-market",
+        "sourceRecordId": "eng-src-2026-04-05-tgs-market",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-04-05-04",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 29,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: market"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Offshore Magazine",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-04-05-oregon-roadmap",
+        "sourceRecordId": "eng-src-2026-04-05-oregon-roadmap",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-04-05-05",
+        "rawRank": 5,
+        "finalRank": 5,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 27,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Oregon Capital Chronicle",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

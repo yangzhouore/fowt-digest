@@ -62,6 +62,8 @@ export default async function EngineeringCandidatesPage({
   const selectedCount = hasScoredSelection
     ? briefing.sourceCandidates.filter((candidate) => candidate.selected).length
     : briefing.itemCount;
+  const isReconstructedHistorical =
+    briefing.candidatePoolType === "reconstructed_historical_retained_source_records";
 
   return (
     <main>
@@ -72,8 +74,10 @@ export default async function EngineeringCandidatesPage({
         <h1 id="engineering-candidates-heading">{briefing.dateRange}</h1>
         {hasScoredSelection ? (
           <p>
-            The Engineering workflow collected {briefing.sourceCandidates.length} source-backed
-            candidates across {briefing.candidateSourceCount} sources, scored them by importance,
+            {isReconstructedHistorical
+              ? "This historical Engineering pool was reconstructed from retained source records already stored for the edition. "
+              : "The Engineering workflow collected source-backed candidates from approved sources for this weekly window. "}
+            It scored {briefing.sourceCandidates.length} candidates across {briefing.candidateSourceCount} sources by importance,
             then applied a small deterministic diversity layer to select {selectedCount} weekly
             highlights.
           </p>
@@ -232,8 +236,8 @@ export default async function EngineeringCandidatesPage({
         <p>
           These records are retained public sources in the static Engineering Briefing file. The
           latest scored edition uses a manual approved-source candidate collection before scoring;
-          older editions remain retained-source views. This is not a scraped market database and
-          should not be read as complete news coverage.
+          reconstructed historical editions use retained source records and exact weekly filters.
+          This is not a scraped market database and should not be read as complete news coverage.
         </p>
         <p className="text-link-row">
           <Link href={`/engineering/${briefing.slug}`}>Back to engineering briefing</Link>

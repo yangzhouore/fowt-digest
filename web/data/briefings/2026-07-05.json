@@ -3,7 +3,7 @@
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "generatedAt": "2026-08-19T17:05:00Z",
-  "checkedResultCount": 8,
+  "checkedResultCount": 2,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-07-05-llyr-marine",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Natural Resources Wales granted a marine licence for the Llyr floating offshore wind demonstration project off Pembrokeshire.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-07-05-fawt-longyuan",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Longyuan described offshore wind and marine innovation work, including floating platform integration with marine ranching.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-07-05-tgs-4c-jobs",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Windtech reported analysis estimating 180,000 offshore wind jobs across Europe in 2025.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-29 to 2026-07-05.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-07-05-us-court",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "A US appeals court dismissed a challenge related to a federal wind permitting pause, leaving a lower-court ruling in place.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-29 to 2026-07-05.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-07-05-spain-ai-lab",
@@ -63,7 +67,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "The Spanish wind sector launched an AI laboratory for wind operations and value-chain applications.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-29 to 2026-07-05.",
+      "candidateStatus": "excluded_out_of_window"
     }
   ],
   "briefingItems": [
@@ -98,54 +103,234 @@
       "engineeringTopics": [
         "Marine ranching"
       ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-07-05-03",
-      "title": "TGS 4C study estimates offshore wind jobs",
-      "oneLineSummary": "Windtech reported analysis estimating 180,000 offshore wind jobs across Europe in 2025.",
-      "category": "supply_chain",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-07-05-tgs-4c-jobs"
-      ],
-      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#european-offshore-wind-jobs",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Supply chain"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-07-05-04",
-      "title": "US appeals court leaves wind permitting ruling in place",
-      "oneLineSummary": "A US appeals court dismissed a challenge related to a federal wind permitting pause, leaving a lower-court ruling in place.",
-      "category": "policy",
-      "region": "North America",
-      "sourceRecordIds": [
-        "eng-src-2026-07-05-us-court"
-      ],
-      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#us-permitting-freeze",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Policy risk"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-07-05-05",
-      "title": "Spain launches wind AI laboratory",
-      "oneLineSummary": "The Spanish wind sector launched an AI laboratory for wind operations and value-chain applications.",
-      "category": "technology",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-07-05-spain-ai-lab"
-      ],
-      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-8#spain-ai-lab",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Operations"
-      ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-06-29",
+      "weekEnd": "2026-07-05",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 2,
+      "itemsAfterFowtRelevanceFiltering": 2,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 2,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "Natural Resources Wales",
+          "sourceClass": "government announcement",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "China Energy Investment Corporation",
+          "sourceClass": "company announcement",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-07-05-llyr-marine",
+        "sourceRecordId": "eng-src-2026-07-05-llyr-marine",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-07-05-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 41,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 7,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government",
+                "government source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 10,
+              "maxScore": 10,
+              "evidence": [
+                "government announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Natural Resources Wales",
+          "projectGroup": null,
+          "topicGroup": "policy",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-07-05-fawt-longyuan",
+        "sourceRecordId": "eng-src-2026-07-05-fawt-longyuan",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-07-05-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 22,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 7,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: platform"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: floating platforms"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "China Energy Investment Corporation",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

@@ -3,7 +3,7 @@
   "weekStart": "2026-04-06",
   "weekEnd": "2026-04-12",
   "generatedAt": "2026-08-19T17:05:00Z",
-  "checkedResultCount": 8,
+  "checkedResultCount": 2,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-04-12-gazelle-tupem",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Gazelle secured a 10-year authorization for its 2 MW Nau Azul floating wind demonstrator off Aguçadoura, Portugal.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-04-12-hexicon-twinhub",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Hexicon completed divestment of the TwinHub project company, transferring the floating wind site and liabilities to a new buyer.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-04-12-port-talbot-follow",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Celtic Sea developers welcomed Port Talbot infrastructure plans as a route to future assembly and deployment capacity.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-04-06 to 2026-04-12.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-04-12-portugal-auction",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Portugal prepared a 1.5 GW floating offshore wind auction framework for Atlantic sites off Viana do Castelo.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-04-06 to 2026-04-12.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-04-12-noviocean-hybrid",
@@ -63,7 +67,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "NoviOcean described a floating ocean-energy platform concept combining wave, wind, and solar generation.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-04-06 to 2026-04-12.",
+      "candidateStatus": "excluded_out_of_window"
     }
   ],
   "briefingItems": [
@@ -98,54 +103,227 @@
       "engineeringTopics": [
         "Cost pressure"
       ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-04-12-03",
-      "title": "Celtic Sea developers welcome Port Talbot plan",
-      "oneLineSummary": "Celtic Sea developers welcomed Port Talbot infrastructure plans as a route to future assembly and deployment capacity.",
-      "category": "supply_chain",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-04-12-port-talbot-follow"
-      ],
-      "sourceUrl": "https://cyprusshippingnews.com/2026/04/02/uk-government-agrees-support-for-major-floating-offshore-wind-port-hub-in-port-talbot/#developers",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Port readiness"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-04-12-04",
-      "title": "Portugal floating wind auction draws interest",
-      "oneLineSummary": "Portugal prepared a 1.5 GW floating offshore wind auction framework for Atlantic sites off Viana do Castelo.",
-      "category": "policy",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-04-12-portugal-auction"
-      ],
-      "sourceUrl": "https://www.northsouthhq.com/articles/portugal-floating-offshore-wind-nordic-energy.html",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Market entry"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-04-12-05",
-      "title": "NoviOcean promotes hybrid ocean platform",
-      "oneLineSummary": "NoviOcean described a floating ocean-energy platform concept combining wave, wind, and solar generation.",
-      "category": "technology",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-04-12-noviocean-hybrid"
-      ],
-      "sourceUrl": "https://www.intelligentliving.co/noviocean-hybrid-wave-wind-solar-power/",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Marine energy"
-      ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-04-06",
+      "weekEnd": "2026-04-12",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 2,
+      "itemsAfterFowtRelevanceFiltering": 2,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 2,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "Business Wire",
+          "sourceClass": "company announcement",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Cyprus Shipping News",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "NorthSouth HQ",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "Intelligent Living",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-04-12-gazelle-tupem",
+        "sourceRecordId": "eng-src-2026-04-12-gazelle-tupem",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-04-12-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 26,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 16,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Business Wire",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-04-12-hexicon-twinhub",
+        "sourceRecordId": "eng-src-2026-04-12-hexicon-twinhub",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-04-12-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 25,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 16,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Europe"
+        }
+      }
+    ]
+  }
 }

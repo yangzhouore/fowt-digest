@@ -3,7 +3,7 @@
   "weekStart": "2026-05-18",
   "weekEnd": "2026-05-24",
   "generatedAt": "2026-08-19T17:05:00Z",
-  "checkedResultCount": 8,
+  "checkedResultCount": 4,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-05-24-korea-auction",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "South Korea received bids including 1.467 GW of floating offshore wind projects in its 2026 H1 auction.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-24-caledonia-onshore",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Ocean Winds received onshore planning consent for cable infrastructure connecting the 2 GW Caledonia project to the grid.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-24-taihan-vessel",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Taihan acquired the Skandi Connector vessel to strengthen offshore wind cable installation capability.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-24-boskalis-cable",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Boskalis announced a high-capacity cable-lay vessel for interconnector and offshore wind HVDC cable installation.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-24-scottish-supply",
@@ -63,44 +67,13 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Scottish Renewables published a supply-chain impact statement covering sector organisations and jobs.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because basic FOWT/offshore-wind relevance was not supported by the stored title/evidence text.",
+      "candidateStatus": "excluded_low_relevance"
     }
   ],
   "briefingItems": [
     {
       "briefingItemId": "eng-item-2026-05-24-01",
-      "title": "South Korea floating auction receives bids",
-      "oneLineSummary": "South Korea received bids including 1.467 GW of floating offshore wind projects in its 2026 H1 auction.",
-      "category": "policy",
-      "region": "Asia-Pacific",
-      "sourceRecordIds": [
-        "eng-src-2026-05-24-korea-auction"
-      ],
-      "sourceUrl": "https://ftp.windtech-international.com/industry-news/south-korea-receives-bids-for-3-6-gw-in-2026-h1-offshore-wind-auction",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Floating pipeline"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-05-24-02",
-      "title": "Caledonia receives onshore consent",
-      "oneLineSummary": "Ocean Winds received onshore planning consent for cable infrastructure connecting the 2 GW Caledonia project to the grid.",
-      "category": "project",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-05-24-caledonia-onshore"
-      ],
-      "sourceUrl": "https://windtech-international.com/index.php?z=online-coumadin-pharmacy-reviews#caledonia-onshore-consent",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Grid connection"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-05-24-03",
       "title": "Taihan acquires cable installation vessel",
       "oneLineSummary": "Taihan acquired the Skandi Connector vessel to strengthen offshore wind cable installation capability.",
       "category": "supply_chain",
@@ -116,7 +89,7 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-05-24-04",
+      "briefingItemId": "eng-item-2026-05-24-02",
       "title": "Boskalis plans high-capacity cable vessel",
       "oneLineSummary": "Boskalis announced a high-capacity cable-lay vessel for interconnector and offshore wind HVDC cable installation.",
       "category": "supply_chain",
@@ -132,20 +105,393 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-05-24-05",
-      "title": "Scottish Renewables maps supply chain impact",
-      "oneLineSummary": "Scottish Renewables published a supply-chain impact statement covering sector organisations and jobs.",
-      "category": "supply_chain",
-      "region": "Europe",
+      "briefingItemId": "eng-item-2026-05-24-03",
+      "title": "South Korea floating auction receives bids",
+      "oneLineSummary": "South Korea received bids including 1.467 GW of floating offshore wind projects in its 2026 H1 auction.",
+      "category": "policy",
+      "region": "Asia-Pacific",
       "sourceRecordIds": [
-        "eng-src-2026-05-24-scottish-supply"
+        "eng-src-2026-05-24-korea-auction"
       ],
-      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-8#scottish-renewables-supply-chain",
+      "sourceUrl": "https://ftp.windtech-international.com/industry-news/south-korea-receives-bids-for-3-6-gw-in-2026-h1-offshore-wind-auction",
       "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
       "whyItMatters": null,
       "engineeringTopics": [
-        "Workforce"
+        "Floating pipeline"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-24-04",
+      "title": "Caledonia receives onshore consent",
+      "oneLineSummary": "Ocean Winds received onshore planning consent for cable infrastructure connecting the 2 GW Caledonia project to the grid.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-24-caledonia-onshore"
+      ],
+      "sourceUrl": "https://windtech-international.com/index.php?z=online-coumadin-pharmacy-reviews#caledonia-onshore-consent",
+      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Grid connection"
       ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-05-18",
+      "weekEnd": "2026-05-24",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 5,
+      "itemsAfterFowtRelevanceFiltering": 4,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 4,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_low_relevance",
+          "note": "Retained source did not pass basic FOWT/offshore-wind relevance from stored evidence text."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-05-24-taihan-vessel",
+        "sourceRecordId": "eng-src-2026-05-24-taihan-vessel",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-24-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 31,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 11,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: installation, cable, vessel"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 4,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: taihan"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables",
+                "technology signal: installation"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": "korean_cable_robotics",
+          "topicGroup": "cables",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-24-boskalis-cable",
+        "sourceRecordId": "eng-src-2026-05-24-boskalis-cable",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-24-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 29,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 13,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: installation, cable, hvdc, vessel"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables",
+                "technology signal: installation"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "cables",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-24-korea-auction",
+        "sourceRecordId": "eng-src-2026-05-24-korea-auction",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-24-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 27,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Asia-Pacific"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-24-caledonia-onshore",
+        "sourceRecordId": "eng-src-2026-05-24-caledonia-onshore",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-24-04",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 23,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 9,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: cable, grid"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "cables",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

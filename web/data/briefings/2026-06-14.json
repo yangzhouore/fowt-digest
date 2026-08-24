@@ -3,7 +3,7 @@
   "weekStart": "2026-06-08",
   "weekEnd": "2026-06-14",
   "generatedAt": "2026-08-19T17:05:00Z",
-  "checkedResultCount": 8,
+  "checkedResultCount": 0,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-06-14-france-ao10",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "France prepared AO10 tender activity covering fixed and floating offshore wind projects across multiple sea areas.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-08 to 2026-06-14.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-06-14-germany-reform",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Germany advanced offshore wind auction and regulatory reform discussions through a Federal Council resolution.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-08 to 2026-06-14.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-06-14-mps-award",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Marine Power Systems won a green energy technology award for its PelaFlex GS deep-water floating wind platform.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-08 to 2026-06-14.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-06-14-uk-japan",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "The UK and Japan prepared cooperation covering 5.9 GW of floating offshore wind projects including Ossian, Green Volt, and Erebus.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-08 to 2026-06-14.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-06-14-acoustiscan",
@@ -63,7 +67,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Omexom and Seven Bel developed Acoustiscan to detect partial discharges in offshore wind electrical equipment.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-08 to 2026-06-14.",
+      "candidateStatus": "excluded_out_of_window"
     }
   ],
   "briefingItems": [

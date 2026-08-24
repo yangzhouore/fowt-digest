@@ -3,7 +3,7 @@
   "weekStart": "2026-07-27",
   "weekEnd": "2026-08-02",
   "generatedAt": "2026-08-19T17:05:00Z",
-  "checkedResultCount": 8,
+  "checkedResultCount": 4,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-08-02-california-investigates",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "California investigated federal agreements that paid offshore wind developers to relinquish offshore wind leases.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-02-bluepoint-goldenstate",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "The US administration agreed payments with Bluepoint Wind and Golden State Wind to terminate offshore wind leases.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-02-tgs-report-outlook",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "TGS 4C reported a more positive long-term offshore wind outlook despite near-term project and supply-chain challenges.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-02-us-dod-freeze",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Renewable energy groups challenged a US Department of Defense wind project review freeze.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because basic FOWT/offshore-wind relevance was not supported by the stored title/evidence text.",
+      "candidateStatus": "excluded_low_relevance"
     },
     {
       "sourceRecordId": "eng-src-2026-08-02-offshore-vessel-pressure",
@@ -63,44 +67,29 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "TGS 4C highlighted offshore wind vessel and cable supply-chain constraints as delivery risks.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     }
   ],
   "briefingItems": [
     {
       "briefingItemId": "eng-item-2026-08-02-01",
-      "title": "California probes offshore wind lease exit deal",
-      "oneLineSummary": "California investigated federal agreements that paid offshore wind developers to relinquish offshore wind leases.",
-      "category": "policy",
-      "region": "North America",
+      "title": "TGS 4C highlights vessel and cable pressure",
+      "oneLineSummary": "TGS 4C highlighted offshore wind vessel and cable supply-chain constraints as delivery risks.",
+      "category": "supply_chain",
+      "region": "Unspecified",
       "sourceRecordIds": [
-        "eng-src-2026-08-02-california-investigates"
+        "eng-src-2026-08-02-offshore-vessel-pressure"
       ],
-      "sourceUrl": "https://apnews.com/article/be65157a407733658be97a9de8978a02",
+      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-8#vessel-cable-pressure",
       "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
       "whyItMatters": null,
       "engineeringTopics": [
-        "US offshore wind"
+        "Cable supply"
       ]
     },
     {
       "briefingItemId": "eng-item-2026-08-02-02",
-      "title": "US pays two developers to exit offshore leases",
-      "oneLineSummary": "The US administration agreed payments with Bluepoint Wind and Golden State Wind to terminate offshore wind leases.",
-      "category": "policy",
-      "region": "North America",
-      "sourceRecordIds": [
-        "eng-src-2026-08-02-bluepoint-goldenstate"
-      ],
-      "sourceUrl": "https://apnews.com/article/02a1fa04b750809bbe035a70256c734d",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Project pipeline"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-08-02-03",
       "title": "TGS 4C notes long-term offshore wind outlook",
       "oneLineSummary": "TGS 4C reported a more positive long-term offshore wind outlook despite near-term project and supply-chain challenges.",
       "category": "policy",
@@ -116,36 +105,388 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-08-02-04",
-      "title": "Renewables groups challenge US wind review freeze",
-      "oneLineSummary": "Renewable energy groups challenged a US Department of Defense wind project review freeze.",
+      "briefingItemId": "eng-item-2026-08-02-03",
+      "title": "California probes offshore wind lease exit deal",
+      "oneLineSummary": "California investigated federal agreements that paid offshore wind developers to relinquish offshore wind leases.",
       "category": "policy",
       "region": "North America",
       "sourceRecordIds": [
-        "eng-src-2026-08-02-us-dod-freeze"
+        "eng-src-2026-08-02-california-investigates"
       ],
-      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-4#dod-review-freeze",
+      "sourceUrl": "https://apnews.com/article/be65157a407733658be97a9de8978a02",
       "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
       "whyItMatters": null,
       "engineeringTopics": [
-        "Policy risk"
+        "US offshore wind"
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-08-02-05",
-      "title": "TGS 4C highlights vessel and cable pressure",
-      "oneLineSummary": "TGS 4C highlighted offshore wind vessel and cable supply-chain constraints as delivery risks.",
-      "category": "supply_chain",
-      "region": "Unspecified",
+      "briefingItemId": "eng-item-2026-08-02-04",
+      "title": "US pays two developers to exit offshore leases",
+      "oneLineSummary": "The US administration agreed payments with Bluepoint Wind and Golden State Wind to terminate offshore wind leases.",
+      "category": "policy",
+      "region": "North America",
       "sourceRecordIds": [
-        "eng-src-2026-08-02-offshore-vessel-pressure"
+        "eng-src-2026-08-02-bluepoint-goldenstate"
       ],
-      "sourceUrl": "https://www.windtech-international.com/news/industry-news/page-8#vessel-cable-pressure",
+      "sourceUrl": "https://apnews.com/article/02a1fa04b750809bbe035a70256c734d",
       "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
       "whyItMatters": null,
       "engineeringTopics": [
-        "Cable supply"
+        "Project pipeline"
       ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-07-27",
+      "weekEnd": "2026-08-02",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 5,
+      "itemsAfterFowtRelevanceFiltering": 4,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 4,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "Associated Press",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Associated Press",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_low_relevance",
+          "note": "Retained source did not pass basic FOWT/offshore-wind relevance from stored evidence text."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-08-02-offshore-vessel-pressure",
+        "sourceRecordId": "eng-src-2026-08-02-offshore-vessel-pressure",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-02-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 22,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 9,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: cable, vessel"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: supply chain"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "cables",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-02-tgs-report-outlook",
+        "sourceRecordId": "eng-src-2026-08-02-tgs-report-outlook",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-02-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 16,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 5,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: supply chain"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-02-california-investigates",
+        "sourceRecordId": "eng-src-2026-08-02-california-investigates",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-02-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 14,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 5,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Associated Press",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "North America"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-02-bluepoint-goldenstate",
+        "sourceRecordId": "eng-src-2026-08-02-bluepoint-goldenstate",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-02-04",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 11,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 5,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Associated Press",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

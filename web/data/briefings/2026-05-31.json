@@ -14,7 +14,8 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "OffshoreWIND.biz reported that TouchWind installed a floating wind turbine prototype at Fieldlab Green Economy Westvoorne, starting in-water testing for the POWER project. The source states the test campaign will run through 2026 and collect data on turbine performance, platform behaviour and mooring loads.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-31-seatwirl-mooreast",
@@ -26,7 +27,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Offshore Engineer reported that SeaTwirl and Mooreast Asia entered a strategic collaboration to pursue floating offshore wind opportunities across Southeast Asia, combining SeaTwirl's floating wind technology with Mooreast's offshore mooring expertise.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-31-obayashi-tlp-aip",
@@ -38,7 +40,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "DeepWind reported that Obayashi received Approval in Principle from ClassNK for a steel-concrete hybrid TLP support structure for floating offshore wind.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-31-open-c-rhode",
@@ -50,7 +53,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Fondation OPEN-C reported that the RHODE consortium launched an R&D project focused on floating HVDC electrical connection for deep-water offshore wind farms.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-31-floating-wind-days",
@@ -62,25 +66,27 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Offshore Wind Greece listed Floating Wind Days 2026 in Haugesund, Norway, as a two-day industry event focused on international floating wind development, site visits, technology discussion, and commercial delivery.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     }
   ],
   "briefingItems": [
     {
       "briefingItemId": "eng-item-2026-05-31-01",
-      "title": "TouchWind prototype enters in-water testing",
-      "oneLineSummary": "TouchWind installed a floating turbine prototype for POWER demonstration testing in the Netherlands.",
-      "category": "technology",
+      "title": "Obayashi hybrid TLP design receives ClassNK AiP",
+      "oneLineSummary": "Obayashi received ClassNK Approval in Principle for a steel-concrete hybrid TLP support structure for floating offshore wind.",
+      "category": "standards",
+      "region": "Asia-Pacific",
       "sourceRecordIds": [
-        "eng-src-2026-05-31-touchwind-testing"
+        "eng-src-2026-05-31-obayashi-tlp-aip"
       ],
-      "sourceUrl": "https://www.offshorewind.biz/2026/05/28/dutch-company-deploys-floating-wind-turbine-prototype-for-testing/",
-      "explanation": "The source links prototype deployment with measured performance, platform and mooring-load data collection.",
+      "sourceUrl": "https://deepwind.jp/en/technology-innovations/obayashi-tlp-hybrid-floating-wind-aip/",
+      "explanation": "The source identifies a certification milestone for a hybrid TLP floater concept aimed at mass production and cost reduction.",
       "whyItMatters": null,
       "engineeringTopics": [
-        "Prototype testing",
-        "Mooring loads",
-        "Wake research"
+        "TLP foundation",
+        "Hybrid structure",
+        "Certification"
       ]
     },
     {
@@ -103,42 +109,23 @@
     },
     {
       "briefingItemId": "eng-item-2026-05-31-03",
-      "title": "Obayashi hybrid TLP design receives ClassNK AiP",
-      "oneLineSummary": "Obayashi received ClassNK Approval in Principle for a steel-concrete hybrid TLP support structure for floating offshore wind.",
-      "category": "standards",
-      "region": "Asia-Pacific",
+      "title": "TouchWind prototype enters in-water testing",
+      "oneLineSummary": "TouchWind installed a floating turbine prototype for POWER demonstration testing in the Netherlands.",
+      "category": "technology",
       "sourceRecordIds": [
-        "eng-src-2026-05-31-obayashi-tlp-aip"
+        "eng-src-2026-05-31-touchwind-testing"
       ],
-      "sourceUrl": "https://deepwind.jp/en/technology-innovations/obayashi-tlp-hybrid-floating-wind-aip/",
-      "explanation": "The source identifies a certification milestone for a hybrid TLP floater concept aimed at mass production and cost reduction.",
+      "sourceUrl": "https://www.offshorewind.biz/2026/05/28/dutch-company-deploys-floating-wind-turbine-prototype-for-testing/",
+      "explanation": "The source links prototype deployment with measured performance, platform and mooring-load data collection.",
       "whyItMatters": null,
       "engineeringTopics": [
-        "TLP foundation",
-        "Hybrid structure",
-        "Certification"
+        "Prototype testing",
+        "Mooring loads",
+        "Wake research"
       ]
     },
     {
       "briefingItemId": "eng-item-2026-05-31-04",
-      "title": "OPEN-C launches floating HVDC R&D project",
-      "oneLineSummary": "The RHODE consortium launched R&D work on floating HVDC electrical connections for deep-water offshore wind farms.",
-      "category": "technology",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-05-31-open-c-rhode"
-      ],
-      "sourceUrl": "https://fondation-open-c.org/en/news/",
-      "explanation": "The source links deep-water floating wind to high-power electrical export and HVDC connection development.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "HVDC connection",
-        "Dynamic cable",
-        "Deep-water wind"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-05-31-05",
       "title": "Floating Wind Days 2026 convenes in Norway",
       "oneLineSummary": "Floating Wind Days 2026 brought international floating wind stakeholders to Haugesund for technology, site-visit, and delivery discussions.",
       "category": "event",
@@ -154,7 +141,444 @@
         "Technology exchange",
         "Floating wind delivery"
       ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-31-05",
+      "title": "OPEN-C launches floating HVDC R&D project",
+      "oneLineSummary": "The RHODE consortium launched R&D work on floating HVDC electrical connections for deep-water offshore wind farms.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-05-31-open-c-rhode"
+      ],
+      "sourceUrl": "https://fondation-open-c.org/en/news/",
+      "explanation": "The source links deep-water floating wind to high-power electrical export and HVDC connection development.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "HVDC connection",
+        "Dynamic cable",
+        "Deep-water wind"
+      ]
     }
   ],
-  "checkedResultCount": 12
+  "checkedResultCount": 5,
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-05-25",
+      "weekEnd": "2026-05-31",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 5,
+      "itemsAfterFowtRelevanceFiltering": 5,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 5,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Offshore Engineer",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "DeepWind",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Fondation OPEN-C",
+          "sourceClass": "company announcement",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Offshore Wind Greece",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-05-31-obayashi-tlp-aip",
+        "sourceRecordId": "eng-src-2026-05-31-obayashi-tlp-aip",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-31-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 30,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: support"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "DeepWind",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-31-seatwirl-mooreast",
+        "sourceRecordId": "eng-src-2026-05-31-seatwirl-mooreast",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-31-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 29,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: mooring"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Offshore Engineer",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-31-touchwind-testing",
+        "sourceRecordId": "eng-src-2026-05-31-touchwind-testing",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-31-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 29,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 20,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: mooring, platform"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-31-floating-wind-days",
+        "sourceRecordId": "eng-src-2026-05-31-floating-wind-days",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-31-04",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 27,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Offshore Wind Greece",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-31-open-c-rhode",
+        "sourceRecordId": "eng-src-2026-05-31-open-c-rhode",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-31-05",
+        "rawRank": 5,
+        "finalRank": 5,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 25,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 7,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: hvdc"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Fondation OPEN-C",
+          "projectGroup": null,
+          "topicGroup": "cables",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

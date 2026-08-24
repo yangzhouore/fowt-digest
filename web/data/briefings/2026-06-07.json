@@ -3,7 +3,7 @@
   "weekStart": "2026-06-01",
   "weekEnd": "2026-06-07",
   "generatedAt": "2026-08-19T17:05:00Z",
-  "checkedResultCount": 8,
+  "checkedResultCount": 1,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-06-07-sonardyne-amog",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Sonardyne and AMOG agreed to develop subsea asset monitoring services for floating offshore wind mooring systems.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-06-07-floating-data-centre",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Capital Clean Energy Carriers, Lloyds Register, and Samsung Heavy Industries signed an MoU for floating data-centre design.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because basic FOWT/offshore-wind relevance was not supported by the stored title/evidence text.",
+      "candidateStatus": "excluded_low_relevance"
     },
     {
       "sourceRecordId": "eng-src-2026-06-07-venterra-vdata",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Venterra launched V-Data to give offshore wind teams direct access to metocean measurement data.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-01 to 2026-06-07.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-06-07-hitachi-mtdc",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Hitachi Energy launched multi-terminal DC grid tools relevant to offshore wind transmission development.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-01 to 2026-06-07.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-06-07-ow-northeast",
@@ -63,7 +67,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Windtech covered offshore wind development in the Northeastern USA as a regional market and delivery topic.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-06-01 to 2026-06-07.",
+      "candidateStatus": "excluded_out_of_window"
     }
   ],
   "briefingItems": [
@@ -82,70 +87,163 @@
       "engineeringTopics": [
         "Subsea data"
       ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-06-07-02",
-      "title": "LR and SHI advance floating data-centre design",
-      "oneLineSummary": "Capital Clean Energy Carriers, Lloyds Register, and Samsung Heavy Industries signed an MoU for floating data-centre design.",
-      "category": "technology",
-      "region": "Unspecified",
-      "sourceRecordIds": [
-        "eng-src-2026-06-07-floating-data-centre"
-      ],
-      "sourceUrl": "https://ir.capitalcleanenergycarriers.com/news-releases/news-release-details/capital-clean-energy-carriers-corp-lloyds-register-and-samsung",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Certification"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-06-07-03",
-      "title": "Venterra launches metocean data platform",
-      "oneLineSummary": "Venterra launched V-Data to give offshore wind teams direct access to metocean measurement data.",
-      "category": "technology",
-      "region": "Unspecified",
-      "sourceRecordIds": [
-        "eng-src-2026-06-07-venterra-vdata"
-      ],
-      "sourceUrl": "https://test.windtech-international.com/product-news/products-news/blog#venterra-v-data",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Digital platform"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-06-07-04",
-      "title": "Hitachi Energy launches MTDC grid tools",
-      "oneLineSummary": "Hitachi Energy launched multi-terminal DC grid tools relevant to offshore wind transmission development.",
-      "category": "technology",
-      "region": "Unspecified",
-      "sourceRecordIds": [
-        "eng-src-2026-06-07-hitachi-mtdc"
-      ],
-      "sourceUrl": "https://test.windtech-international.com/product-news/products-news/blog#hitachi-axoniq",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "HVDC"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-06-07-05",
-      "title": "Windtech covers Northeast US offshore wind",
-      "oneLineSummary": "Windtech covered offshore wind development in the Northeastern USA as a regional market and delivery topic.",
-      "category": "policy",
-      "region": "North America",
-      "sourceRecordIds": [
-        "eng-src-2026-06-07-ow-northeast"
-      ],
-      "sourceUrl": "https://www.windtech-international.com/previous-issues/may-june-2026#offshore-wind-northeastern-usa",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Policy"
-      ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-06-01",
+      "weekEnd": "2026-06-07",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 2,
+      "itemsAfterFowtRelevanceFiltering": 1,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 1,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Capital Clean Energy Carriers",
+          "sourceClass": "company announcement",
+          "result": "excluded_low_relevance",
+          "note": "Retained source did not pass basic FOWT/offshore-wind relevance from stored evidence text."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-06-07-sonardyne-amog",
+        "sourceRecordId": "eng-src-2026-06-07-sonardyne-amog",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-06-07-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 29,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: mooring"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

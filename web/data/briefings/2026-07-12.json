@@ -14,7 +14,8 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "OffshoreWIND.biz reported that the PlemCat test site for floating offshore wind projects in the Spanish Mediterranean received favourable Environmental Impact Assessment approval. The source states that the milestone clears the path for the NextFloat project using X1 Wind X100 8.5 MW platform.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-07-12-tailwind-station-keeping",
@@ -26,7 +27,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Tethys listed a TAILWIND factsheet on sustainable station-keeping systems for floating offshore wind, covering anchor concepts, fibre rope mooring lines, shared-anchor opportunities, recycling pathways, and bottlenecks.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-07-12-archer2-openfoam",
@@ -38,7 +40,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "ARCHER2 announced a webinar on OpenFOAM modelling of offshore floating wind turbines, including breaking-wave interaction, scale simulation, mooring coupling, and high-performance computing workflows.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-07-12-cosec-modelling",
@@ -50,7 +53,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "CoSeC reported that code-coupling tools are being applied to floating offshore wind turbine systems where coupled fluid-structure dynamics are important for performance, safety, and resilience.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-07-12-saitec-nature-inclusive",
@@ -62,29 +66,13 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Marine Technology News reported that Saitec Offshore Technologies is using DemoSATH Lab to test nature-inclusive design installations and aquaculture co-location methods on an operating floating wind demonstrator.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     }
   ],
   "briefingItems": [
     {
       "briefingItemId": "eng-item-2026-07-12-01",
-      "title": "PlemCat floating wind test site clears EIA",
-      "oneLineSummary": "Spain PlemCat test site received favourable Environmental Impact Assessment approval.",
-      "category": "project",
-      "sourceRecordIds": [
-        "eng-src-2026-07-12-plemcat-eia"
-      ],
-      "sourceUrl": "https://www.offshorewind.biz/2026/07/08/floating-wind-test-site-offshore-spain-gets-regulatory-nod/",
-      "explanation": "The source links environmental approval with a specific commercial-scale floating platform pilot.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Test site",
-        "EIA",
-        "TLP platform"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-07-12-02",
       "title": "TAILWIND factsheet focuses station keeping",
       "oneLineSummary": "A TAILWIND factsheet highlighted sustainable anchors, fibre-rope moorings, shared anchors, recycling, and station-keeping design choices.",
       "category": "technology",
@@ -102,25 +90,7 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-07-12-03",
-      "title": "ARCHER2 webinar covers high-fidelity FOWT modelling",
-      "oneLineSummary": "ARCHER2 listed a webinar on OpenFOAM simulation of offshore floating wind turbines, including wave interaction, mooring coupling, and HPC workflows.",
-      "category": "event",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-07-12-archer2-openfoam"
-      ],
-      "sourceUrl": "https://www.archer2.ac.uk/news/2026/07/08/newsletter.html",
-      "explanation": "The source identifies numerical modelling work relevant to hydrodynamics, wave impacts, moorings, and simulation scale.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "OpenFOAM",
-        "Hydrodynamics",
-        "HPC simulation"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-07-12-04",
+      "briefingItemId": "eng-item-2026-07-12-02",
       "title": "CoSeC applies code coupling to floating wind",
       "oneLineSummary": "CoSeC reported that multiscale code-coupling tools are being applied to floating offshore wind turbine systems.",
       "category": "software",
@@ -135,6 +105,41 @@
         "Fluid-structure interaction",
         "Code coupling",
         "Simulation tools"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-12-03",
+      "title": "PlemCat floating wind test site clears EIA",
+      "oneLineSummary": "Spain PlemCat test site received favourable Environmental Impact Assessment approval.",
+      "category": "project",
+      "sourceRecordIds": [
+        "eng-src-2026-07-12-plemcat-eia"
+      ],
+      "sourceUrl": "https://www.offshorewind.biz/2026/07/08/floating-wind-test-site-offshore-spain-gets-regulatory-nod/",
+      "explanation": "The source links environmental approval with a specific commercial-scale floating platform pilot.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Test site",
+        "EIA",
+        "TLP platform"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-07-12-04",
+      "title": "ARCHER2 webinar covers high-fidelity FOWT modelling",
+      "oneLineSummary": "ARCHER2 listed a webinar on OpenFOAM simulation of offshore floating wind turbines, including wave interaction, mooring coupling, and HPC workflows.",
+      "category": "event",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-07-12-archer2-openfoam"
+      ],
+      "sourceUrl": "https://www.archer2.ac.uk/news/2026/07/08/newsletter.html",
+      "explanation": "The source identifies numerical modelling work relevant to hydrodynamics, wave impacts, moorings, and simulation scale.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "OpenFOAM",
+        "Hydrodynamics",
+        "HPC simulation"
       ]
     },
     {
@@ -156,5 +161,423 @@
       ]
     }
   ],
-  "checkedResultCount": 12
+  "checkedResultCount": 5,
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-07-06",
+      "weekEnd": "2026-07-12",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 5,
+      "itemsAfterFowtRelevanceFiltering": 5,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 5,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Tethys",
+          "sourceClass": "trade association",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "ARCHER2",
+          "sourceClass": "conference announcement",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "CoSeC",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Marine Technology News",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-07-12-tailwind-station-keeping",
+        "sourceRecordId": "eng-src-2026-07-12-tailwind-station-keeping",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-07-12-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 34,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: mooring"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 3,
+              "maxScore": 15,
+              "evidence": [
+                "trade association source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "trade association source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Tethys",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-07-12-cosec-modelling",
+        "sourceRecordId": "eng-src-2026-07-12-cosec-modelling",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-07-12-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 32,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: digital"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "CoSeC",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-07-12-plemcat-eia",
+        "sourceRecordId": "eng-src-2026-07-12-plemcat-eia",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-07-12-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 32,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: platform"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-07-12-archer2-openfoam",
+        "sourceRecordId": "eng-src-2026-07-12-archer2-openfoam",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-07-12-04",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 29,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 18,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: mooring"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: digital"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "conference announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "ARCHER2",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-07-12-saitec-nature-inclusive",
+        "sourceRecordId": "eng-src-2026-07-12-saitec-nature-inclusive",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-07-12-05",
+        "rawRank": 5,
+        "finalRank": 5,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 24,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 18,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: platform"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Marine Technology News",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

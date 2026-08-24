@@ -14,7 +14,8 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "OffshoreWIND.biz reported that Orient Cable installed the subsea cable for CTG 16 MW floating wind demonstration platform. The source states this was China first 66 kV dynamic cable for floating wind and that NBO scope included design, supply and installation.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-06-28-windeed-bvga-lcoe",
@@ -26,7 +27,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Windeed reported that BVG Associates independently assessed its floating foundation and mooring system and found its LCOE materially lower than typical second-generation floating wind designs on a like-for-like basis.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-06-28-westwood-floating-europe",
@@ -38,7 +40,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Westwood listed the 6th Annual Floating Wind Europe event on 23-24 June 2026, focused on floating offshore wind and its role in Europe energy transition.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-06-28-offshore-roundup",
@@ -50,7 +53,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Offshore Magazine reported that floating wind and connection-system innovations are advancing as developers and suppliers address scale, cost, and complexity across offshore wind markets.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-06-28-power-marine-energy",
@@ -62,7 +66,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "POWER Magazine reported on marine and energy technology convergence in floating offshore wind, noting EFGL electricity delivery and floating wind deployment in Japan.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     }
   ],
   "briefingItems": [
@@ -85,42 +90,6 @@
     },
     {
       "briefingItemId": "eng-item-2026-06-28-02",
-      "title": "Windeed review claims lower-cost floating wind system",
-      "oneLineSummary": "An independent BVG Associates review found Windeed floating foundation and mooring system cost materially lower than typical second-generation designs.",
-      "category": "technology",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-06-28-windeed-bvga-lcoe"
-      ],
-      "sourceUrl": "https://www.windeed.se/independent-review-confirms-windeed-s-floating-wind-cost-advantage",
-      "explanation": "The source connects floating foundation architecture, mooring design, CAPEX, lifecycle cost, and commercial deployment readiness.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Floating foundation",
-        "Mooring system",
-        "LCOE"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-06-28-03",
-      "title": "Floating Wind Europe gathers supply-chain debate",
-      "oneLineSummary": "Westwood listed the 6th Annual Floating Wind Europe event focused on floating offshore wind and Europe energy transition.",
-      "category": "event",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-06-28-westwood-floating-europe"
-      ],
-      "sourceUrl": "https://www.westwoodenergy.com/event/6th-annual-floating-wind-europe",
-      "explanation": "The source identifies a dedicated floating wind industry forum for commercial and technical scale-up discussion.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Industry forum",
-        "Europe",
-        "Commercial scale-up"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-06-28-04",
       "title": "Offshore roundup flags floating connection systems",
       "oneLineSummary": "Offshore Magazine highlighted floating wind and connection-system innovation as part of wider offshore wind project and grid progress.",
       "category": "technology",
@@ -138,7 +107,25 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-06-28-05",
+      "briefingItemId": "eng-item-2026-06-28-03",
+      "title": "Windeed review claims lower-cost floating wind system",
+      "oneLineSummary": "An independent BVG Associates review found Windeed floating foundation and mooring system cost materially lower than typical second-generation designs.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-28-windeed-bvga-lcoe"
+      ],
+      "sourceUrl": "https://www.windeed.se/independent-review-confirms-windeed-s-floating-wind-cost-advantage",
+      "explanation": "The source connects floating foundation architecture, mooring design, CAPEX, lifecycle cost, and commercial deployment readiness.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Floating foundation",
+        "Mooring system",
+        "LCOE"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-28-04",
       "title": "Marine energy tools converge with floating wind",
       "oneLineSummary": "POWER Magazine described how marine technologies are being adapted for floating offshore wind deployment and oil-and-gas electrification links.",
       "category": "technology",
@@ -154,7 +141,439 @@
         "Offshore operations",
         "Energy integration"
       ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-06-28-05",
+      "title": "Floating Wind Europe gathers supply-chain debate",
+      "oneLineSummary": "Westwood listed the 6th Annual Floating Wind Europe event focused on floating offshore wind and Europe energy transition.",
+      "category": "event",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-06-28-westwood-floating-europe"
+      ],
+      "sourceUrl": "https://www.westwoodenergy.com/event/6th-annual-floating-wind-europe",
+      "explanation": "The source identifies a dedicated floating wind industry forum for commercial and technical scale-up discussion.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Industry forum",
+        "Europe",
+        "Commercial scale-up"
+      ]
     }
   ],
-  "checkedResultCount": 12
+  "checkedResultCount": 5,
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-06-22",
+      "weekEnd": "2026-06-28",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 5,
+      "itemsAfterFowtRelevanceFiltering": 5,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 5,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windeed",
+          "sourceClass": "company announcement",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Westwood Global Energy Group",
+          "sourceClass": "conference announcement",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Offshore Magazine",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "POWER Magazine",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-06-28-orient-66kv-dynamic",
+        "sourceRecordId": "eng-src-2026-06-28-orient-66kv-dynamic",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-06-28-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 38,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 22,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: installation, cable, platform"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables",
+                "technology signal: installation"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": null,
+          "topicGroup": "cables",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-06-28-offshore-roundup",
+        "sourceRecordId": "eng-src-2026-06-28-offshore-roundup",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-06-28-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 29,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: grid"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Offshore Magazine",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-06-28-windeed-bvga-lcoe",
+        "sourceRecordId": "eng-src-2026-06-28-windeed-bvga-lcoe",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-06-28-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 28,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 18,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: mooring"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windeed",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-06-28-power-marine-energy",
+        "sourceRecordId": "eng-src-2026-06-28-power-marine-energy",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-06-28-04",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 27,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "POWER Magazine",
+          "projectGroup": "japan_port_planning",
+          "topicGroup": "engineering",
+          "regionHint": "Asia-Pacific"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-06-28-westwood-floating-europe",
+        "sourceRecordId": "eng-src-2026-06-28-westwood-floating-europe",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-06-28-05",
+        "rawRank": 5,
+        "finalRank": 5,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 27,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "conference announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Westwood Global Energy Group",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Europe"
+        }
+      }
+    ]
+  }
 }

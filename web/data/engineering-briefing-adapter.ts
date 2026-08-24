@@ -50,7 +50,9 @@ type CollectionMethod =
 type CandidateStatus =
   | "candidate"
   | "supporting_provenance"
-  | "duplicate_event";
+  | "duplicate_event"
+  | "excluded_out_of_window"
+  | "excluded_low_relevance";
 
 type BriefingCategory =
   | "project"
@@ -253,6 +255,7 @@ export type EngineeringBriefing = {
   sourceRecords: EngineeringSourceRecord[];
   items: EngineeringBriefingItem[];
   selectionModel: EngineeringSelectionModel | null;
+  candidatePoolType: string | null;
   sourceCandidates: EngineeringSourceCandidate[];
   collectionAudit: PipelineEngineeringCollectionAudit | null;
   candidateSourceCount: number;
@@ -369,6 +372,7 @@ function adaptEngineeringBriefing(
       };
     }),
     selectionModel: briefing.engineeringSelection?.selectionModel ?? null,
+    candidatePoolType: briefing.engineeringSelection?.candidatePoolType ?? null,
     sourceCandidates,
     collectionAudit: briefing.engineeringSelection?.collectionAudit ?? null,
     candidateSourceCount: countUniqueCandidatePublishers(sourceCandidates),

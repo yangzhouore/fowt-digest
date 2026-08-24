@@ -14,7 +14,8 @@
       "retrievedAt": "2026-08-11T17:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "OffshoreWIND.biz reported that Ocean Winds started electricity production at the 30 MW EFGL floating offshore wind farm in southern France. The source states the pilot has three 10 MW turbines on floating foundations located 16 kilometres offshore.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-10-wison-otc-platform",
@@ -26,7 +27,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Wison New Energies reported that it presented a four-column semi-submersible floating wind platform concept for 16 MW turbines at OTC 2026, comparing it with a three-column design under North Atlantic metocean conditions.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-10-qair-ayre-om-base",
@@ -38,7 +40,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "offshoreWIND.biz reported that Qair began assessing Orkney and Caithness ports for a long-term O&M base for the 1 GW Ayre floating offshore wind farm.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-10-ctg-16mw-install",
@@ -50,7 +53,8 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Renewables Now reported that China Three Gorges installed a 16 MW floating wind turbine in China, identifying the item as offshore wind technology news.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-10-green-volt-ecology",
@@ -62,47 +66,31 @@
       "retrievedAt": "2026-08-19T15:30:00Z",
       "collectionMethod": "manual",
       "sourceText": "Green Volt reported that ecological survey work had started along the onshore cable route for the floating offshore wind project.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     }
   ],
   "briefingItems": [
     {
       "briefingItemId": "eng-item-2026-05-10-01",
-      "title": "EFGL starts delivering electricity",
-      "oneLineSummary": "Ocean Winds started electricity production at the 30 MW EFGL floating offshore wind farm.",
+      "title": "Green Volt begins ecological cable-route surveys",
+      "oneLineSummary": "Green Volt started ecological survey work on its onshore cable route for the floating offshore wind project.",
       "category": "project",
+      "region": "Europe",
       "sourceRecordIds": [
-        "eng-src-2026-05-10-efgl-first-power"
+        "eng-src-2026-05-10-green-volt-ecology"
       ],
-      "sourceUrl": "https://www.offshorewind.biz/2026/05/05/french-floating-offshore-wind-farm-starts-delivering-electricity/",
-      "explanation": "The source records first power from a Mediterranean floating wind pilot project.",
+      "sourceUrl": "https://greenvoltoffshorewind.com/news/",
+      "explanation": "The source connects the floating wind project to environmental survey work needed for cable-route and consenting development.",
       "whyItMatters": null,
       "engineeringTopics": [
-        "First power",
-        "Floating pilot",
-        "France"
+        "Cable route",
+        "Environmental survey",
+        "Project development"
       ]
     },
     {
       "briefingItemId": "eng-item-2026-05-10-02",
-      "title": "Wison presents 16 MW semi-submersible platform concept",
-      "oneLineSummary": "Wison presented a four-column semi-submersible floating wind platform concept for 16 MW turbines at OTC 2026.",
-      "category": "technology",
-      "region": "Asia-Pacific",
-      "sourceRecordIds": [
-        "eng-src-2026-05-10-wison-otc-platform"
-      ],
-      "sourceUrl": "https://www.wison-energies.com/News/1301.aspx",
-      "explanation": "The source describes platform concept selection, hydrodynamic comparison, stability, structural dynamics, and coupled-response evaluation for large-capacity floating wind.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Semi-submersible platform",
-        "16 MW turbine",
-        "Coupled response"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-05-10-03",
       "title": "Qair assesses ports for Ayre floating wind O&M base",
       "oneLineSummary": "Qair started assessing northern Scotland ports for the long-term O&M base for the 1 GW Ayre floating offshore wind farm.",
       "category": "supply_chain",
@@ -117,6 +105,24 @@
         "O&M base",
         "Port logistics",
         "ScotWind"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-05-10-03",
+      "title": "Wison presents 16 MW semi-submersible platform concept",
+      "oneLineSummary": "Wison presented a four-column semi-submersible floating wind platform concept for 16 MW turbines at OTC 2026.",
+      "category": "technology",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-05-10-wison-otc-platform"
+      ],
+      "sourceUrl": "https://www.wison-energies.com/News/1301.aspx",
+      "explanation": "The source describes platform concept selection, hydrodynamic comparison, stability, structural dynamics, and coupled-response evaluation for large-capacity floating wind.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Semi-submersible platform",
+        "16 MW turbine",
+        "Coupled response"
       ]
     },
     {
@@ -139,22 +145,443 @@
     },
     {
       "briefingItemId": "eng-item-2026-05-10-05",
-      "title": "Green Volt begins ecological cable-route surveys",
-      "oneLineSummary": "Green Volt started ecological survey work on its onshore cable route for the floating offshore wind project.",
+      "title": "EFGL starts delivering electricity",
+      "oneLineSummary": "Ocean Winds started electricity production at the 30 MW EFGL floating offshore wind farm.",
       "category": "project",
-      "region": "Europe",
       "sourceRecordIds": [
-        "eng-src-2026-05-10-green-volt-ecology"
+        "eng-src-2026-05-10-efgl-first-power"
       ],
-      "sourceUrl": "https://greenvoltoffshorewind.com/news/",
-      "explanation": "The source connects the floating wind project to environmental survey work needed for cable-route and consenting development.",
+      "sourceUrl": "https://www.offshorewind.biz/2026/05/05/french-floating-offshore-wind-farm-starts-delivering-electricity/",
+      "explanation": "The source records first power from a Mediterranean floating wind pilot project.",
       "whyItMatters": null,
       "engineeringTopics": [
-        "Cable route",
-        "Environmental survey",
-        "Project development"
+        "First power",
+        "Floating pilot",
+        "France"
       ]
     }
   ],
-  "checkedResultCount": 12
+  "checkedResultCount": 5,
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-05-04",
+      "weekEnd": "2026-05-10",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 5,
+      "itemsAfterFowtRelevanceFiltering": 5,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 5,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Wison New Energies",
+          "sourceClass": "company announcement",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Renewables Now",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Green Volt Windfarm",
+          "sourceClass": "company announcement",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-05-10-green-volt-ecology",
+        "sourceRecordId": "eng-src-2026-05-10-green-volt-ecology",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-10-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 41,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: cable"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Green Volt Windfarm",
+          "projectGroup": null,
+          "topicGroup": "cables",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-10-qair-ayre-om-base",
+        "sourceRecordId": "eng-src-2026-05-10-qair-ayre-om-base",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-10-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 34,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: ports"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": null,
+          "topicGroup": "ports",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-10-wison-otc-platform",
+        "sourceRecordId": "eng-src-2026-05-10-wison-otc-platform",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-10-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 33,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 18,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: platform"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: floating platforms"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Wison New Energies",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-10-ctg-16mw-install",
+        "sourceRecordId": "eng-src-2026-05-10-ctg-16mw-install",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-10-04",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 27,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Renewables Now",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-05-10-efgl-first-power",
+        "sourceRecordId": "eng-src-2026-05-10-efgl-first-power",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-10-05",
+        "rawRank": 5,
+        "finalRank": 5,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 27,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Europe"
+        }
+      }
+    ]
+  }
 }

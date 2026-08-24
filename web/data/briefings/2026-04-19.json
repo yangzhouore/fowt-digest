@@ -3,7 +3,7 @@
   "weekStart": "2026-04-13",
   "weekEnd": "2026-04-19",
   "generatedAt": "2026-08-19T17:05:00Z",
-  "checkedResultCount": 8,
+  "checkedResultCount": 1,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-04-19-integria-ai",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "The INTEGRIA project presented AI-based digital modelling for structural integrity management of floating wind turbines.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-04-19-outer-dowsing",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Outer Dowsing records showed April regulatory activity around the NSIP process and consent implementation.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because basic FOWT/offshore-wind relevance was not supported by the stored title/evidence text.",
+      "candidateStatus": "excluded_low_relevance"
     },
     {
       "sourceRecordId": "eng-src-2026-04-19-qenergy-pennavel",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Q Energy acquired a stake in the Pennavel floating offshore wind farm in southern Brittany.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-04-13 to 2026-04-19.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-04-19-msp-siting",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Tethys listed a marine spatial planning method for co-located offshore wind and wave energy projects.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-04-13 to 2026-04-19.",
+      "candidateStatus": "excluded_out_of_window"
     },
     {
       "sourceRecordId": "eng-src-2026-04-19-pembrokeshire-fow",
@@ -63,7 +67,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Welsh political coverage framed Celtic Sea floating offshore wind as part of the region’s industrial and clean-energy direction.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because the publication date is outside 2026-04-13 to 2026-04-19.",
+      "candidateStatus": "excluded_out_of_window"
     }
   ],
   "briefingItems": [
@@ -82,70 +87,166 @@
       "engineeringTopics": [
         "AI monitoring"
       ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-04-19-02",
-      "title": "Outer Dowsing regulatory process advances",
-      "oneLineSummary": "Outer Dowsing records showed April regulatory activity around the NSIP process and consent implementation.",
-      "category": "policy",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-04-19-outer-dowsing"
-      ],
-      "sourceUrl": "https://agentzero.energy/projects/outer-dowsing",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Transmission"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-04-19-03",
-      "title": "Q Energy takes Pennavel stake",
-      "oneLineSummary": "Q Energy acquired a stake in the Pennavel floating offshore wind farm in southern Brittany.",
-      "category": "project",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-04-19-qenergy-pennavel"
-      ],
-      "sourceUrl": "https://globallegalchronicle.com/post-231607/",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Floating wind farm"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-04-19-04",
-      "title": "Tethys tracks co-located wind-wave siting work",
-      "oneLineSummary": "Tethys listed a marine spatial planning method for co-located offshore wind and wave energy projects.",
-      "category": "technology",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-04-19-msp-siting"
-      ],
-      "sourceUrl": "https://tethys.pnnl.gov/publications/marine-spatial-planning-based-siting-methodology-co-located-offshore-wind-wave-energy",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Marine spatial planning"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-04-19-05",
-      "title": "Welsh political debate points to Celtic Sea floating wind",
-      "oneLineSummary": "Welsh political coverage framed Celtic Sea floating offshore wind as part of the region’s industrial and clean-energy direction.",
-      "category": "policy",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-04-19-pembrokeshire-fow"
-      ],
-      "sourceUrl": "https://pembrokeshire-herald.com/135729/lib-dems-criticise-reform-over-coal-and-fracking-comments/",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Celtic Sea"
-      ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-04-13",
+      "weekEnd": "2026-04-19",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 2,
+      "itemsAfterFowtRelevanceFiltering": 1,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 1,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "AgentZero Energy",
+          "sourceClass": "industry news",
+          "result": "excluded_low_relevance",
+          "note": "Retained source did not pass basic FOWT/offshore-wind relevance from stored evidence text."
+        },
+        {
+          "publisher": "Global Legal Chronicle",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "Tethys",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        },
+        {
+          "publisher": "Pembrokeshire Herald",
+          "sourceClass": "industry news",
+          "result": "excluded_out_of_window",
+          "note": "Retained source was outside the exact weekly publication window."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-04-19-integria-ai",
+        "sourceRecordId": "eng-src-2026-04-19-integria-ai",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-04-19-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 35,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: digital"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "digital",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

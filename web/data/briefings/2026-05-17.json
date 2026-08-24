@@ -3,7 +3,7 @@
   "weekStart": "2026-05-11",
   "weekEnd": "2026-05-17",
   "generatedAt": "2026-08-19T17:05:00Z",
-  "checkedResultCount": 8,
+  "checkedResultCount": 1,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-05-17-esteyco-wheel",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Esteyco presented the WHEEL floating offshore wind project in Canarias, with the 6 MW foundation under construction.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-05-17-enercon-blades",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Enercon announced rotor-blade production in Turkiye, adding regional wind manufacturing capacity.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because basic FOWT/offshore-wind relevance was not supported by the stored title/evidence text.",
+      "candidateStatus": "excluded_low_relevance"
     },
     {
       "sourceRecordId": "eng-src-2026-05-17-deme-norse",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "DEME named its Norse Energi offshore transport and installation vessel ahead of Baltic and North Sea deployment.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because basic FOWT/offshore-wind relevance was not supported by the stored title/evidence text.",
+      "candidateStatus": "excluded_low_relevance"
     },
     {
       "sourceRecordId": "eng-src-2026-05-17-rwe-q1",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "RWE reported higher wind earnings and continued renewable construction activity in the first quarter of 2026.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because basic FOWT/offshore-wind relevance was not supported by the stored title/evidence text.",
+      "candidateStatus": "excluded_low_relevance"
     },
     {
       "sourceRecordId": "eng-src-2026-05-17-fullcircle-gds",
@@ -63,7 +67,8 @@
       "retrievedAt": "2026-08-19T17:05:00Z",
       "collectionMethod": "manual",
       "sourceText": "Full Circle Wind Services expanded its UK-centred service and supply-chain network through a GDS partnership.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review. Not counted as a reconstructed weekly candidate because basic FOWT/offshore-wind relevance was not supported by the stored title/evidence text.",
+      "candidateStatus": "excluded_low_relevance"
     }
   ],
   "briefingItems": [
@@ -82,70 +87,164 @@
       "engineeringTopics": [
         "Demonstrator"
       ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-05-17-02",
-      "title": "Enercon plans Turkish blade facility",
-      "oneLineSummary": "Enercon announced rotor-blade production in Turkiye, adding regional wind manufacturing capacity.",
-      "category": "supply_chain",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-05-17-enercon-blades"
-      ],
-      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#enercon-blade-facility",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Supply chain"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-05-17-03",
-      "title": "DEME names Norse Energi installation vessel",
-      "oneLineSummary": "DEME named its Norse Energi offshore transport and installation vessel ahead of Baltic and North Sea deployment.",
-      "category": "supply_chain",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-05-17-deme-norse"
-      ],
-      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#deme-norse-energi",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Marine operations"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-05-17-04",
-      "title": "RWE reports stronger wind earnings",
-      "oneLineSummary": "RWE reported higher wind earnings and continued renewable construction activity in the first quarter of 2026.",
-      "category": "project",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-05-17-rwe-q1"
-      ],
-      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#rwe-q1",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Financial signal"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-05-17-05",
-      "title": "Full Circle expands UK service network",
-      "oneLineSummary": "Full Circle Wind Services expanded its UK-centred service and supply-chain network through a GDS partnership.",
-      "category": "supply_chain",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-05-17-fullcircle-gds"
-      ],
-      "sourceUrl": "https://www.windtech-international.com/news/company-news/page-2#full-circle-gds",
-      "explanation": "The source identifies the project, policy, technology, or supply-chain signal behind this weekly engineering briefing item.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Supply chain"
-      ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-05-11",
+      "weekEnd": "2026-05-17",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 5,
+      "itemsAfterFowtRelevanceFiltering": 1,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 1,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_low_relevance",
+          "note": "Retained source did not pass basic FOWT/offshore-wind relevance from stored evidence text."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_low_relevance",
+          "note": "Retained source did not pass basic FOWT/offshore-wind relevance from stored evidence text."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_low_relevance",
+          "note": "Retained source did not pass basic FOWT/offshore-wind relevance from stored evidence text."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "excluded_low_relevance",
+          "note": "Retained source did not pass basic FOWT/offshore-wind relevance from stored evidence text."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-05-17-esteyco-wheel",
+        "sourceRecordId": "eng-src-2026-05-17-esteyco-wheel",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-05-17-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 30,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

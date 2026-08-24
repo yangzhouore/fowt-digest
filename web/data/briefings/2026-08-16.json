@@ -3,7 +3,7 @@
   "weekStart": "2026-08-10",
   "weekEnd": "2026-08-16",
   "generatedAt": "2026-08-19T13:50:00Z",
-  "checkedResultCount": 17,
+  "checkedResultCount": 5,
   "sourceRecords": [
     {
       "sourceRecordId": "eng-src-2026-08-16-haiyou-anlan",
@@ -15,7 +15,8 @@
       "retrievedAt": "2026-08-19T13:50:00Z",
       "collectionMethod": "manual",
       "sourceText": "Switchgear Magazine reported that CNOOC's Haiyou Anlan, described as a 16 MW tension-leg-platform floating wind unit, began operations and supplies offshore oil and gas facilities through a 4.3 km subsea cable.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-16-gwynt-glas-sumitomo",
@@ -27,7 +28,8 @@
       "retrievedAt": "2026-08-19T13:50:00Z",
       "collectionMethod": "manual",
       "sourceText": "Energy Global reported that Sumitomo acquired a 33.3 percent equity interest in Gwynt Glas, a floating offshore wind project being developed by EDF power solutions UK and Ireland and ESB in the Celtic Sea.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-16-encomara-squid",
@@ -39,7 +41,8 @@
       "retrievedAt": "2026-08-19T13:50:00Z",
       "collectionMethod": "manual",
       "sourceText": "Windtech International reported that Encomara was preparing inshore trials at Ardersier for Squid, a 40-tonne floating wind connection system supporting mooring lines, power cables, and subsea connectors.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-16-windeed-enova",
@@ -51,7 +54,8 @@
       "retrievedAt": "2026-08-19T13:50:00Z",
       "collectionMethod": "manual",
       "sourceText": "Windtech International reported that Enova awarded funding to Windeed for a feasibility study for a full-scale floating offshore wind demonstrator in Norway with Aibel and AF Gruppen.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     },
     {
       "sourceRecordId": "eng-src-2026-08-16-france-ports",
@@ -63,12 +67,31 @@
       "retrievedAt": "2026-08-19T13:50:00Z",
       "collectionMethod": "manual",
       "sourceText": "Windtech International reported that France selected Cherbourg, Brest, Nantes-Saint-Nazaire, Port-la-Nouvelle, and Marseille-Fos for France 2030 funding to support floating wind manufacturing, assembly, and turbine integration.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review."
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual archive prototype review.",
+      "candidateStatus": "candidate"
     }
   ],
   "briefingItems": [
     {
       "briefingItemId": "eng-item-2026-08-16-01",
+      "title": "France selects five ports for floating wind infrastructure",
+      "oneLineSummary": "France selected five ports for funding support tied to floating wind manufacturing, assembly, and turbine integration capacity.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-08-16-france-ports"
+      ],
+      "sourceUrl": "https://www.windtech-international.com/industry-news/france-selects-five-ports-for-floating-wind-infrastructure",
+      "explanation": "The source identifies the port locations and the infrastructure scope needed to support floating offshore wind serial delivery.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Port infrastructure",
+        "Floating wind assembly",
+        "Supply chain"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-16-02",
       "title": "Haiyou Anlan 16 MW floating wind unit starts operations",
       "oneLineSummary": "CNOOC's Haiyou Anlan 16 MW TLP floating wind unit began supplying offshore oilfield operations through a 4.3 km subsea cable.",
       "category": "technology",
@@ -86,7 +109,7 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-08-16-02",
+      "briefingItemId": "eng-item-2026-08-16-03",
       "title": "Sumitomo joins Gwynt Glas floating offshore wind project",
       "oneLineSummary": "Sumitomo acquired a 33.3 percent stake in the Gwynt Glas floating offshore wind project in the Celtic Sea.",
       "category": "project",
@@ -104,7 +127,7 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-08-16-03",
+      "briefingItemId": "eng-item-2026-08-16-04",
       "title": "Encomara prepares Squid connection trials at Ardersier",
       "oneLineSummary": "Encomara is preparing inshore trials for a pre-installed connection system that supports floating wind mooring and power-cable interfaces.",
       "category": "technology",
@@ -122,7 +145,7 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-08-16-04",
+      "briefingItemId": "eng-item-2026-08-16-05",
       "title": "Enova funds Windeed floating wind demonstrator study",
       "oneLineSummary": "Enova funded Windeed's feasibility work for a Norwegian full-scale floating offshore wind demonstrator with Aibel and AF Gruppen.",
       "category": "technology",
@@ -138,24 +161,428 @@
         "Demonstrator study",
         "Delivery chain"
       ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-08-16-05",
-      "title": "France selects five ports for floating wind infrastructure",
-      "oneLineSummary": "France selected five ports for funding support tied to floating wind manufacturing, assembly, and turbine integration capacity.",
-      "category": "supply_chain",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-08-16-france-ports"
-      ],
-      "sourceUrl": "https://www.windtech-international.com/industry-news/france-selects-five-ports-for-floating-wind-infrastructure",
-      "explanation": "The source identifies the port locations and the infrastructure scope needed to support floating offshore wind serial delivery.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Port infrastructure",
-        "Floating wind assembly",
-        "Supply chain"
-      ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "reconstructed_historical_retained_source_records",
+    "collectionAudit": {
+      "weekStart": "2026-08-10",
+      "weekEnd": "2026-08-16",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceUniverse": "Historical reconstruction from retained public Engineering source records already present in the static briefing file; no claim is made that this is the original full multi-source candidate universe for the week.",
+      "sourcesAttempted": 5,
+      "sourcesSuccessfullyCollected": 5,
+      "rawItemsCollected": 5,
+      "itemsAfterDateFiltering": 5,
+      "itemsAfterFowtRelevanceFiltering": 5,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 5,
+      "notes": [
+        "Reconstructed historical candidate pool using stored source records, exact weekly date filtering and current engineering_selection_score_v1.",
+        "This is not the original historical candidate universe and may undercount items that were never retained in static data.",
+        "Out-of-window retained records remain in sourceRecords as provenance but are not scored as weekly candidates."
+      ],
+      "attemptedSources": [
+        {
+          "publisher": "Switchgear Magazine",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Energy Global",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        },
+        {
+          "publisher": "Windtech International",
+          "sourceClass": "industry news",
+          "result": "candidate",
+          "note": "Retained as an in-window reconstructed candidate."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-08-16-france-ports",
+        "sourceRecordId": "eng-src-2026-08-16-france-ports",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-16-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 52,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 24,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: port, ports, assembly, manufacturing"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 10,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: france 2030",
+                "project/company event signals: selected, support"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports",
+                "technology signal: fabrication"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: france 2030"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": "france_floating_wind_ports_2030",
+          "topicGroup": "ports",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-16-haiyou-anlan",
+        "sourceRecordId": "eng-src-2026-08-16-haiyou-anlan",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-16-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 31,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 20,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: cable, platform"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Switchgear Magazine",
+          "projectGroup": null,
+          "topicGroup": "cables",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-16-gwynt-glas-sumitomo",
+        "sourceRecordId": "eng-src-2026-08-16-gwynt-glas-sumitomo",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-16-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 30,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Energy Global",
+          "projectGroup": "port_talbot_celtic_sea",
+          "topicGroup": "engineering",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-16-encomara-squid",
+        "sourceRecordId": "eng-src-2026-08-16-encomara-squid",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-16-04",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 28,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 18,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: mooring"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 4,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: ardersier"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": "ardersier_haventus_dajin",
+          "topicGroup": "engineering",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-16-windeed-enova",
+        "sourceRecordId": "eng-src-2026-08-16-windeed-enova",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-16-05",
+        "rawRank": 5,
+        "finalRank": 5,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 27,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Windtech International",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
 }

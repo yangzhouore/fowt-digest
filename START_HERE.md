@@ -7,8 +7,8 @@ Use this file as the resume entry point for a new Codex session.
 - Current stable branch: `main`
 - Active feature branch: none
 - Active milestone: none
-- Latest completed work: Projects MVP baseline
-- Release tag: `v1.3.0`
+- Latest completed work: Engineering selection transparency baseline
+- Latest release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Immediate next action: select or define the next milestone before starting
   implementation work.
@@ -56,6 +56,13 @@ project-company roles, source-backed timelines, and provenance links. Projects
 are intentionally static. No geographic map, automatic project collection,
 automatic updates, or Project-to-Industry deep integration exists yet; those
 belong to a future dedicated milestone.
+
+Selection transparency is implemented for Research and Engineering where
+candidate-pool data exists. Weekly Research candidate pages expose deterministic
+`research_selection_score_v1`; weekly Engineering candidate pages expose
+`engineering_selection_score_v1`, source-registry diagnostics, selected state,
+score breakdowns and source links. `/engineering` shows all selected highlights
+for each edition with selected/candidate/source counts.
 
 The Homepage now presents the weekly Engineering and Research selections with a
 week selector. Engineering and Research archive pages support static search over

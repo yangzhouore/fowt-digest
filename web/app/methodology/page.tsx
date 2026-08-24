@@ -201,7 +201,7 @@ export default function MethodologyPage() {
           <p>
             Engineering selection now starts from an approved-source weekly
             candidate collection, scores retained candidates, then applies a
-            small diversity layer so the final five remain useful as a briefing
+            small diversity layer so the selected highlights remain useful as a briefing
             rather than a duplicate-heavy ranked list.
           </p>
           <ol className="methodology-step-list">

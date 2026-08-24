@@ -92,7 +92,7 @@ approved engineering sources
 -> engineering_selection_score_v1
 -> importance ranking
 -> diversity-aware curation
--> 5 Engineering highlights
+-> up to 5 Engineering highlights
 ```
 
 | Component | Weight | Basis |
@@ -108,8 +108,8 @@ The raw ranking order is deterministic:
 1. Engineering Selection Score, highest first;
 2. source record ID as a stable final tie-breaker.
 
-The final five are not simply the five highest scores when that would duplicate
-coverage unnecessarily. After scoring, a deterministic diversity layer checks
+The final selected highlights are not always simply the five highest scores when
+that would duplicate coverage unnecessarily. After scoring, a deterministic diversity layer checks
 publisher, detected project group, topic group and region. It can defer a
 higher-ranked duplicate project/topic candidate when another source-backed
 candidate adds broader weekly coverage. The candidate page labels the raw rank,
@@ -119,5 +119,5 @@ No LLM subjective scoring is used. The score is a transparent heuristic over the
 retained candidate records, not a claim that every global engineering news source
 was collected. Current Engineering collection remains manual and source-policy
 bounded. Reconstructed historical Engineering pools are explicitly labeled as
-retained-source reconstructions when no original full candidate collection was
-stored.
+registry-source reconstructions when built from the approved registry for a
+historical weekly window.

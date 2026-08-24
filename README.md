@@ -1,9 +1,10 @@
 # FOWT Research Digest
 
-FOWT Research Digest is a deterministic research and engineering briefing site
-for Floating Offshore Wind Turbines. It combines a local Python pipeline for
-producing auditable Research Digest data with a static Next.js website for
-reading selected Research Digest and Engineering Briefing editions.
+FOWT Research Digest is a deterministic research, engineering and project
+intelligence site for Floating Offshore Wind Turbines. It combines a local
+Python pipeline for producing auditable Research Digest data with a static
+Next.js website for reading selected Research Digest, Engineering Briefing and
+Projects records.
 
 Live website: https://fowt-digest-oegd.vercel.app/
 
@@ -16,10 +17,12 @@ Repository: https://github.com/yangzhouore/fowt-digest
 - Static Research Digest editions committed under `web/data/digests/`.
 - Static source-backed Engineering Briefing editions committed under
   `web/data/briefings/`.
+- Static source-backed Projects data committed under `web/data/projects/`.
 - Homepage, Research Digest, Paper Detail, Research Archive, Archive Search,
-  Engineering archive, Engineering search, and Engineering Briefing reading
-  paths.
-- Local validation guardrails for committed static digest and briefing JSON.
+  Engineering archive, Engineering search, Engineering Briefing, Projects and
+  selection-transparency reading paths.
+- Local validation guardrails for committed static Research, Engineering and
+  Projects JSON.
 - Deterministic publishing tooling that copies an accepted pipeline
   `weekly_digest.json` into the website data directory and refreshes adapter
   registration.
@@ -124,6 +127,8 @@ second deployment system.
 
 - Research and Engineering archives are selected representative static editions,
   not complete historical coverage.
+- Projects are curated source-backed records, not a claim of complete global
+  market coverage.
 - New data publication is a manual accepted-change workflow.
 - There is no backend, database, CMS, API, scheduler, semantic search, or
   automatic source collection.

@@ -125,7 +125,7 @@ export default async function EngineeringCandidatesPage({
           <h2 id="engineering-score-model-heading">Selection Score</h2>
           <p>
             {selectionModel.description} The score measures source-backed engineering
-            importance. Diversity is applied after scoring so the final five avoid unnecessary
+            importance. Diversity is applied after scoring so selected highlights avoid unnecessary
             duplication across source, project, topic and region where practical.
           </p>
           <div className="score-formula" aria-label="Engineering 100 point score formula">

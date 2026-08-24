@@ -1,14 +1,14 @@
 # Project Status
 
-Last updated: 2026-08-20
+Last updated: 2026-08-24
 
 ## Current State
 
 - Current stable branch: `main`
 - Active milestone: none
 - Active feature branch: none
-- Latest completed work: Projects MVP baseline
-- Release tag: `v1.3.0`
+- Latest completed work: Engineering selection transparency baseline
+- Latest release tag: `v1.3.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Immediate next task: select or define the next milestone.
 
@@ -33,6 +33,9 @@ The website supports:
 - Paper Detail pages;
 - Research Archive with static client-side search;
 - Engineering archive and briefing pages with static search and region filters;
+- Engineering candidate transparency pages with deterministic
+  `engineering_selection_score_v1`, source-registry diagnostics, selected
+  state, score breakdowns and source links for supported weeks;
 - Industry Map page explaining the FOWT value chain and curated companies;
 - Projects index and detail pages for 48 source-backed floating offshore wind
   project records, with region/country/status filtering, technical facts,
@@ -65,8 +68,11 @@ committed `main` through Git integration.
 
 ## Current Data Baseline
 
-- Static Research Digest editions: 32 selected representative editions.
-- Static Engineering Briefing editions: 32 selected representative editions.
+- Static Research Digest editions: 33 selected representative editions.
+- Static Research candidate-pool files: 20 retained or reconstructed weekly
+  candidate pools.
+- Static Engineering Briefing editions: 33 selected representative editions.
+- Static Engineering source registry: 42 approved source records.
 - Static Industry Map companies: 47 curated organisations.
 - Static Projects records: 48 source-backed floating offshore wind project
   records.
@@ -86,11 +92,11 @@ committed `main` through Git integration.
 Latest local accepted baseline:
 
 ```text
-python -m pytest pipeline/tests -> 204 passed
+python -m pytest pipeline/tests -> 210 passed
 npm.cmd run validate:data -> passed
-npm.cmd run test:data -> 46 passed
-npm.cmd run lint -> passed with one existing `<img>` optimisation warning
-npm.cmd run build -> passed, 313 static pages
+npm.cmd run test:data -> 66 passed
+npm.cmd run lint -> passed
+npm.cmd run build -> passed, 354 static pages
 git diff --check -> passed
 ```
 

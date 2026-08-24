@@ -23,14 +23,14 @@ Read only as needed:
 Use the existing workflow:
 
 approved source registry
-→ weekly discovery
-→ exact date filter
-→ FOWT relevance filter
-→ event/duplicate grouping
-→ `engineering_selection_score_v1`
-→ deterministic ranking
-→ diversity review
-→ up to 5 highlights
+-> weekly discovery
+-> exact date filter
+-> FOWT relevance filter
+-> event/duplicate grouping
+-> `engineering_selection_score_v1`
+-> deterministic ranking
+-> diversity review
+-> up to 5 highlights
 
 Never begin with five hand-picked stories.
 Build the candidate pool before selection.
@@ -112,9 +112,9 @@ Historical reconstructed pools must be labelled `reconstructed`.
 
 ## Finish
 
-Verify candidate pool → score → rank → selection consistency.
+Verify candidate pool -> score -> rank -> selection consistency.
 
 Run the validation required by `AGENTS.md`.
 
-Report collection diagnostics, Top 5, source diversity, validation,
+Report collection diagnostics, selected highlights, source diversity, validation,
 and remaining coverage gaps.

@@ -5,7 +5,7 @@
 Decision:
 Do not use Tailwind.
 
-Reason:
+eeason:
 The project is content-first rather than component-first.
 Plain CSS is easier to maintain for this scope.
 
@@ -16,11 +16,11 @@ Plain CSS is easier to maintain for this scope.
 Decision:
 Do not extract PaperSummary component.
 
-Reason:
+eeason:
 Only two pages currently reuse it.
 Extraction now would be premature abstraction.
 
-Revisit after 3–4 reuse locations.
+eevisit after 3–4 reuse locations.
 
 ---
 
@@ -29,6 +29,6 @@ Revisit after 3–4 reuse locations.
 Decision:
 Keep frontend independent from the future AI pipeline.
 
-Reason:
+eeason:
 The website should remain a presentation layer.
 The pipeline should be replaceable independently.

@@ -6,6 +6,11 @@ Digital & AI Signals should track source-backed developments at the intersection
 of floating offshore wind, offshore wind infrastructure, energy engineering and
 applied digital systems.
 
+Engineering answers: what happened in offshore wind. Digital & AI answers:
+which digital, AI, automation, software and data-infrastructure developments
+could materially change offshore wind engineering, operations, infrastructure or
+energy systems.
+
 The section must not become a generic AI news feed. Every future signal must
 state its direct connection to offshore wind, wind-energy infrastructure, or a
 closely relevant engineering or energy-system workflow.
@@ -23,6 +28,8 @@ Include a signal only when it has:
 
 - a clear offshore wind, floating wind, wind-energy infrastructure, grid, port,
   inspection, engineering, or energy-systems connection;
+- evidence for that connection in the stored source record, not only an editor's
+  interpretation or a generic renewable-energy adjacency;
 - a source-backed factual event, research output, deployment, partnership,
   standard, funding decision, pilot, product release, or infrastructure decision;
 - enough provenance to identify source, date, publisher and claim boundary.
@@ -32,6 +39,9 @@ Exclude:
 - generic AI product launches with no wind or energy-infrastructure link;
 - data-centre stories with no credible connection to renewable energy supply,
   grid flexibility, offshore wind procurement, or energy infrastructure;
+- AI, robotics or software stories that mention climate, energy or renewables
+  generally but do not identify a wind, grid, offshore, port, inspection,
+  forecasting, engineering or energy-infrastructure use case;
 - vendor marketing claims that cannot be tied to a deployment, pilot, technical
   method, customer, project, standard, or source-backed use case;
 - stock, financial, opinion, podcast-only, social-media-only, or unsourced items;
@@ -57,6 +67,10 @@ The initial taxonomy is accepted with tighter boundaries:
   signals only when linked to offshore wind procurement, renewable energy
   matching, grid capacity, curtailment, flexibility, siting, or energy-system
   impacts.
+
+This taxonomy is intentionally small for MVP implementation. New categories
+should be added only when a repeated, source-backed signal type cannot fit these
+groups without distortion.
 
 ## 5. Source Strategy
 
@@ -91,17 +105,23 @@ Minimum useful fields:
 - `connectionToFowt`
 - `shortDescription`
 - `organizations`
-- `relatedProjectIds`
-- `relatedCompanyIds`
 - `technologyTags`
 - `evidenceType`
 - `sourceIds`
-- `status`
+
+Optional later fields:
+
+- `relatedProjectIds`
+- `relatedCompanyIds`
 - `notes`
 
 Optional fields should remain `null` or absent when unsupported. The data model
 must allow source-level, relationship-level and field-level provenance where a
 fact is not supported by the main source alone.
+
+Related project and company IDs should be stored only when the source explicitly
+supports that relationship. Do not infer a relationship from a company's general
+business area, a project's known supplier list, or a technology category.
 
 ## 7. Maturity Model
 
@@ -143,7 +163,9 @@ organizations, related projects or companies, maturity and provenance.
 - Engineering: operational, project, construction, supply-chain and technology
   news may cross-reference Digital & AI when the digital element is material.
 - Research: academic AI, digital twin and control papers remain Research items;
-  Digital & AI may surface applied significance without duplicating paper pages.
+  Digital & AI may reference them later, but should not duplicate a paper as a
+  Signal unless there is a distinct industry deployment, standard, funding,
+  project, policy or product event angle.
 - Industry: future signals may reference existing company IDs, but should not
   modify the Industry Map or imply company involvement without source evidence.
 - Projects: future signals may reference project IDs when a digital deployment
@@ -153,12 +175,17 @@ organizations, related projects or companies, maturity and provenance.
 
 The first implementation should be static and small:
 
-- a curated, source-backed signal dataset;
+- a curated, source-backed signal dataset of about 12-20 records;
 - a `/digital-ai` index;
 - lightweight filters;
 - provenance links;
 - no automatic collection;
 - no scoring model unless a deterministic, documented need emerges.
+
+The first dataset should cover at least four taxonomy categories and at least
+three source classes, with no category included solely for symmetry. A smaller
+dataset is acceptable if only a smaller set of records meets the evidence
+threshold.
 
 The current M11A task is design only and should add no data or application code.
 

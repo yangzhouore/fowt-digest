@@ -62,7 +62,9 @@ export default async function EngineeringCandidatesPage({
   const selectedCount = hasScoredSelection
     ? briefing.sourceCandidates.filter((candidate) => candidate.selected).length
     : briefing.itemCount;
-  const isReconstructedHistorical =
+  const isRegistryReconstructedHistorical =
+    briefing.candidatePoolType === "reconstructed_historical_registry_source_pool";
+  const isRetainedRecordReconstructedHistorical =
     briefing.candidatePoolType === "reconstructed_historical_retained_source_records";
 
   return (
@@ -74,9 +76,10 @@ export default async function EngineeringCandidatesPage({
         <h1 id="engineering-candidates-heading">{briefing.dateRange}</h1>
         {hasScoredSelection ? (
           <p>
-            {isReconstructedHistorical
-              ? "This historical Engineering pool was reconstructed from retained source records already stored for the edition. "
-              : "The Engineering workflow collected source-backed candidates from approved sources for this weekly window. "}
+            {candidatePoolIntro(
+              isRegistryReconstructedHistorical,
+              isRetainedRecordReconstructedHistorical,
+            )}
             It scored {briefing.sourceCandidates.length} candidates across {briefing.candidateSourceCount} sources by importance,
             then applied a small deterministic diversity layer to select {selectedCount} weekly
             highlights.
@@ -234,10 +237,12 @@ export default async function EngineeringCandidatesPage({
       <section aria-labelledby="engineering-candidate-boundary-heading">
         <h2 id="engineering-candidate-boundary-heading">Data boundary</h2>
         <p>
-          These records are retained public sources in the static Engineering Briefing file. The
-          latest scored edition uses a manual approved-source candidate collection before scoring;
-          reconstructed historical editions use retained source records and exact weekly filters.
-          This is not a scraped market database and should not be read as complete news coverage.
+          These records are retained public sources in the static Engineering Briefing file. Scored
+          editions use approved-source candidate collection before scoring. Registry-reconstructed
+          historical editions use the approved Engineering source registry, exact weekly filters,
+          relevance filtering and duplicate/event grouping; older retained-record reconstructions
+          are labeled separately when present. This is not a scraped market database and should not
+          be read as complete news coverage.
         </p>
         <p className="text-link-row">
           <Link href={`/engineering/${briefing.slug}`}>Back to engineering briefing</Link>
@@ -249,6 +254,20 @@ export default async function EngineeringCandidatesPage({
   );
 }
 
+function candidatePoolIntro(
+  isRegistryReconstructedHistorical: boolean,
+  isRetainedRecordReconstructedHistorical: boolean,
+): string {
+  if (isRegistryReconstructedHistorical) {
+    return "This historical Engineering pool was reconstructed by querying the approved source registry for this weekly window. ";
+  }
+
+  if (isRetainedRecordReconstructedHistorical) {
+    return "This historical Engineering pool was reconstructed from retained source records already stored for the edition. ";
+  }
+
+  return "The Engineering workflow collected source-backed candidates from approved sources for this weekly window. ";
+}
 function ManualSourceList({
   briefing,
 }: {

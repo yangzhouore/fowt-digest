@@ -26,13 +26,13 @@ Use existing pipeline behavior instead of recreating it manually.
 Use:
 
 OpenAlex
-→ normalize
-→ deduplicate
-→ FOWT relevance classification
-→ `research_selection_score_v1`
-→ deterministic ranking
-→ Top 5
-→ Weekly Research Digest
+-> normalize
+-> deduplicate
+-> FOWT relevance classification
+-> `research_selection_score_v1`
+-> deterministic ranking
+-> Top 5
+-> Weekly Research Digest
 
 Do not manually choose papers.
 
@@ -118,11 +118,11 @@ If reliable reconstruction fails, report the gap rather than fabricate data.
 Verify:
 
 candidate collection
-→ classification
-→ score
-→ ranking
-→ Top 5
-→ transparency
+-> classification
+-> score
+-> ranking
+-> Top 5
+-> transparency
 
 Run the validation required by `AGENTS.md`.
 

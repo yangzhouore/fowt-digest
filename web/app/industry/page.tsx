@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "../site-footer";
 import { SiteHeader } from "../site-header";
@@ -254,10 +255,13 @@ export default function IndustryPage() {
                             <span className="industry-company-mark" aria-hidden="true">
                               {companyInitials(company.name)}
                             </span>
-                            <img
+                            <Image
                               className="industry-company-logo"
                               src={companyLogoUrl(company)}
                               alt=""
+                              width={28}
+                              height={28}
+                              unoptimized
                               aria-hidden="true"
                             />
                             <span className="industry-company-summary-copy">

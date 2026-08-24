@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-08-17",
+  "weekEnd": "2026-08-23",
+  "generatedAt": "2026-08-24T10:00:00Z",
+  "checkedResultCount": 6,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-08-23-port-talbot-consultancy",
+      "sourceType": "government_announcement",
+      "publisher": "GwerthwchiGymru / Associated British Ports",
+      "title": "Marine Consultancy - Future Port Talbot",
+      "sourceUrl": "https://www.gwerthwchigymru.llyw.cymru/search/show/search_view.aspx?ID=AUG650883&catID=",
+      "publishedDate": "2026-08-22",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "The Welsh public procurement notice identifies Associated British Ports' Future Port Talbot marine consultancy procurement, with marine environmental and consenting support for port works intended to support floating offshore wind deployment and supply chains in the Celtic Sea.",
+      "licenseNote": "Public procurement notice; source text stored as concise factual evidence for manual weekly briefing review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-23-brestport-inflow",
+      "sourceType": "trade_association",
+      "publisher": "Bretagne Ocean Power",
+      "title": "The French government confirms the Port of Brest as a major hub for the construction of floating wind turbines",
+      "sourceUrl": "https://bretagneoceanpower.fr/en/2026-brestport-inflow/",
+      "publishedDate": "2026-08-18",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Bretagne Ocean Power reported that BrestPort's InFloW project was selected under France 2030, with more than EUR 58 million in state support to adapt the Offshore Renewable Energy terminal for floating wind infrastructure, assembly and logistics.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual weekly briefing review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-23-haventus-dajin",
+      "sourceType": "industry_news",
+      "publisher": "Energy Global",
+      "title": "Haventus and Dajin sign MoU to explore strategic partnership in offshore wind",
+      "sourceUrl": "https://www.energyglobal.com/wind/21082026/haventus-and-dajin-sign-mou-to-explore-strategic-partnership-in-offshore-wind/",
+      "publishedDate": "2026-08-21",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Energy Global reported that Haventus and Dajin signed an MoU to explore combining Dajin manufacturing and transport capabilities with Ardersier Port infrastructure for fixed and floating offshore wind customers across the UK and Europe.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual weekly briefing review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-23-taihan-panstar",
+      "sourceType": "industry_news",
+      "publisher": "Ocean News & Technology",
+      "title": "Taihan Cable and Panstar Robotics Partner to Develop Domestic ROVs for HVDC Submarine Cable Projects",
+      "sourceUrl": "https://oceannews.com/news/subsea-cable/taihan-cable-and-panstar-robotics-partner-to-develop-domestic-rovs-for-hvdc-submarine-cable-projects/",
+      "publishedDate": "2026-08-20",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Ocean News & Technology reported that Taihan Cable & Solution and Panstar Robotics signed an MoU to develop Korean ROV trenchers, operating technologies and installation solutions for offshore wind inter-array and export cable systems, grid interconnection and HVDC submarine cable projects.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual weekly briefing review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-23-deepwind-mlit-ports",
+      "sourceType": "industry_news",
+      "publisher": "DeepWind",
+      "title": "Japan's Floating Wind Base Ports Cannot Work Alone: MLIT Sets a 2-Year Build Target and a 400 km Towing Radius",
+      "sourceUrl": "https://deepwind.jp/en/policy-regulations/mlit-floating-wind-multi-port-2year-target/",
+      "publishedDate": "2026-08-18",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "DeepWind reported that Japan MLIT's FY2026 port-study materials for floating wind use a base case including a two-year construction target, semi-submersible steel floating platform assumptions, multi-port operation and one-to-three-day tow-radius planning.",
+      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual weekly briefing review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-23-mlit-port-study",
+      "sourceType": "government_announcement",
+      "publisher": "Japan Ministry of Land, Infrastructure, Transport and Tourism",
+      "title": "FY2026 first study group on ports for offshore wind deployment",
+      "sourceUrl": "https://www.mlit.go.jp/report/press/port01_hh_000330.html",
+      "publishedDate": "2026-07-29",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "MLIT announced the August 5, 2026 study group to discuss port facility scale and efficient port use for promoting floating offshore wind deployment.",
+      "licenseNote": "Public government webpage; source text stored as concise factual evidence for manual weekly briefing review."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-08-23-01",
+      "title": "ABP opens marine consultancy tender for Future Port Talbot",
+      "oneLineSummary": "Associated British Ports is procuring marine environmental and consenting support for Future Port Talbot works tied to Celtic Sea floating wind deployment and supply chains.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-08-23-port-talbot-consultancy"
+      ],
+      "sourceUrl": "https://www.gwerthwchigymru.llyw.cymru/search/show/search_view.aspx?ID=AUG650883&catID=",
+      "explanation": "The procurement notice connects marine technical EIA and consenting work to port expansion and logistics infrastructure for floating offshore wind in the Celtic Sea.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Port infrastructure",
+        "Consenting",
+        "Celtic Sea floating wind"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-23-02",
+      "title": "BrestPort InFloW secures France 2030 floating wind port support",
+      "oneLineSummary": "BrestPort's InFloW project received more than EUR 58 million of French state support to adapt Brest's ORE terminal for floating wind assembly and logistics.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-08-23-brestport-inflow"
+      ],
+      "sourceUrl": "https://bretagneoceanpower.fr/en/2026-brestport-inflow/",
+      "explanation": "The source identifies state-backed port infrastructure work for manufacturing, storage, integration and launch operations serving floating offshore wind.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Port infrastructure",
+        "Floater assembly",
+        "France 2030"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-23-03",
+      "title": "Haventus and Dajin target Ardersier offshore wind logistics",
+      "oneLineSummary": "Haventus and Dajin signed an MoU to explore combining Ardersier Port infrastructure with Dajin manufacturing and transport capability for fixed and floating wind projects.",
+      "category": "supply_chain",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-08-23-haventus-dajin"
+      ],
+      "sourceUrl": "https://www.energyglobal.com/wind/21082026/haventus-and-dajin-sign-mou-to-explore-strategic-partnership-in-offshore-wind/",
+      "explanation": "The reported partnership focuses on component storage, marshalling, assembly and transportation before offshore deployment, including floating wind customers.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Offshore wind logistics",
+        "Foundation fabrication",
+        "Port marshalling"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-23-04",
+      "title": "Taihan and Panstar plan Korean ROV trenchers for offshore wind cables",
+      "oneLineSummary": "Taihan Cable and Panstar Robotics agreed to develop ROV trenchers and installation solutions for offshore wind cable systems and HVDC submarine projects.",
+      "category": "technology",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-08-23-taihan-panstar"
+      ],
+      "sourceUrl": "https://oceannews.com/news/subsea-cable/taihan-cable-and-panstar-robotics-partner-to-develop-domestic-rovs-for-hvdc-submarine-cable-projects/",
+      "explanation": "The source connects the development work to inter-array and export cable systems, cable burial and protection, grid interconnection, and HVDC submarine cable installation.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "ROV trenching",
+        "Submarine cable burial",
+        "HVDC export"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-23-05",
+      "title": "Japan port study narrows floating wind base-case assumptions",
+      "oneLineSummary": "DeepWind reported that MLIT's FY2026 floating wind port work uses a two-year build target, semi-submersible steel base case and longer tow-radius planning.",
+      "category": "policy",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-08-23-deepwind-mlit-ports",
+        "eng-src-2026-08-23-mlit-port-study"
+      ],
+      "sourceUrl": "https://deepwind.jp/en/policy-regulations/mlit-floating-wind-multi-port-2year-target/",
+      "explanation": "The weekly source reports the port-planning assumptions, while the MLIT page confirms the official study-group context for port facility scale and efficient use in floating wind deployment.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "Base ports",
+        "Floating wind installation",
+        "Tow-out logistics"
+      ]
+    }
+  ]
+}

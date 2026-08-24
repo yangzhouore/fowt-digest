@@ -72,7 +72,11 @@ export default async function EngineeringBriefingPage({
           </div>
           <div>
             <dt>Source records</dt>
-            <dd>{briefing.sourceRecords.length}</dd>
+            <dd>
+              <Link href={`/engineering/${briefing.slug}/candidates`}>
+                {briefing.sourceRecords.length} retained sources -&gt;
+              </Link>
+            </dd>
           </div>
           <div>
             <dt>Checked results</dt>
@@ -128,8 +132,8 @@ export default async function EngineeringBriefingPage({
         <p>
           Engineering Briefing source records and briefing copy are stored in a
           separate static data path from the OpenAlex Research Digest. No
-          scraping, AI generation, backend, database, or scheduled collection is
-          used in this prototype.
+          scraping, AI generation, backend, database, scheduled collection, or
+          deterministic scoring is used in this prototype.
         </p>
         <p className="text-link-row">
           <Link href="/">Back to Homepage</Link>

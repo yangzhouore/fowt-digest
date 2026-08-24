@@ -61,9 +61,27 @@ type PipelinePaper = {
   selectionReason: string;
   relevanceAssessment?: {
     classification?: string;
+    confidence?: number;
+    reason?: string;
+    evidenceBasis?: string[];
   };
+  selectionScore?: PipelineSelectionScore;
 };
 
+type PipelineSelectionScore = {
+  modelId: string;
+  total: number;
+  maxScore: number;
+  components: PipelineSelectionScoreComponent[];
+};
+
+type PipelineSelectionScoreComponent = {
+  componentId: string;
+  label: string;
+  score: number;
+  maxScore: number;
+  evidence: string[];
+};
 export type DigestPaper = {
   id: string;
   slug: string;
@@ -81,9 +99,21 @@ export type DigestPaper = {
   openAccessStatus: string | null;
   fullTextAvailability: string;
   classification: string | null;
+  classificationConfidence: number | null;
+  classificationReason: string | null;
+  evidenceBasis: string[];
   selectionReason: string;
+  selectionScore: number | null;
+  selectionScoreComponents: DigestSelectionScoreComponent[];
 };
 
+export type DigestSelectionScoreComponent = {
+  id: string;
+  label: string;
+  score: number;
+  maxScore: number;
+  evidence: string[];
+};
 export type DigestEdition = {
   slug: string;
   dateRange: string;
@@ -215,7 +245,12 @@ function adaptPaper(paper: PipelinePaper): DigestPaper {
     openAccessStatus: paper.openAccessStatus,
     fullTextAvailability: fullTextAvailabilityLabel(paper.fullTextAvailability),
     classification: paper.relevanceAssessment?.classification ?? null,
+    classificationConfidence: paper.relevanceAssessment?.confidence ?? null,
+    classificationReason: classificationReasonLabel(paper.relevanceAssessment?.reason ?? null),
+    evidenceBasis: paper.relevanceAssessment?.evidenceBasis ?? [],
     selectionReason: selectionReasonLabel(paper.selectionReason),
+    selectionScore: paper.selectionScore?.total ?? null,
+    selectionScoreComponents: adaptSelectionScoreComponents(paper.selectionScore),
   };
 }
 
@@ -308,6 +343,42 @@ function selectionReasonLabel(value: string): string {
   }
   if (value === "not_selected_not_relevant") {
     return "Not selected because not relevant";
+  }
+  return value;
+}
+
+function adaptSelectionScoreComponents(
+  selectionScore: PipelineSelectionScore | undefined,
+): DigestSelectionScoreComponent[] {
+  return selectionScore?.components.map((component) => ({
+    id: component.componentId,
+    label: component.label,
+    score: component.score,
+    maxScore: component.maxScore,
+    evidence: component.evidence,
+  })) ?? [];
+}
+function classificationReasonLabel(value: string | null): string | null {
+  if (value === "relevant_title_fowt_phrase") {
+    return "FOWT phrase in title";
+  }
+  if (value === "relevant_topic_fowt_phrase") {
+    return "FOWT phrase in topic tags";
+  }
+  if (value === "relevant_title_combined_fowt_signals") {
+    return "Floating and wind signals in title";
+  }
+  if (value === "possibly_relevant_abstract_only_fowt_phrase") {
+    return "FOWT phrase in abstract";
+  }
+  if (value === "possibly_relevant_combined_weak_signals") {
+    return "Combined floating and wind signals";
+  }
+  if (value === "possibly_relevant_offshore_wind_only") {
+    return "Offshore wind signal only";
+  }
+  if (value === "not_relevant_no_fowt_signals") {
+    return "No FOWT signal found";
   }
   return value;
 }

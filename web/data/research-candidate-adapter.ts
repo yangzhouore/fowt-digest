@@ -14,6 +14,7 @@ type PipelineResearchCandidatePool = {
     id: string;
     label: string;
     description: string;
+    components?: PipelineScoreModelComponent[];
   };
   candidates: PipelineResearchCandidate[];
 };
@@ -36,8 +37,30 @@ type PipelineResearchCandidate = {
   classificationReason: string | null;
   evidenceBasis: string[];
   selectionScore: number;
+  scoreComponents: PipelineSelectionScoreComponent[];
 };
 
+type PipelineScoreModelComponent = {
+  componentId: string;
+  label: string;
+  maxScore: number;
+};
+
+type PipelineSelectionScoreComponent = {
+  componentId: string;
+  label: string;
+  score: number;
+  maxScore: number;
+  evidence: string[];
+};
+
+export type ResearchSelectionScoreComponent = {
+  id: string;
+  label: string;
+  score: number;
+  maxScore: number;
+  evidence: string[];
+};
 export type ResearchCandidatePool = {
   slug: string;
   dateRange: string;
@@ -50,6 +73,7 @@ export type ResearchCandidatePool = {
     id: string;
     label: string;
     description: string;
+    components?: PipelineScoreModelComponent[];
   };
   candidates: ResearchCandidate[];
 };
@@ -72,6 +96,7 @@ export type ResearchCandidate = {
   classificationReason: string | null;
   evidenceBasis: string[];
   selectionScore: number;
+  scoreComponents: ResearchSelectionScoreComponent[];
 };
 
 const researchCandidateJsonFiles = [
@@ -134,6 +159,13 @@ function adaptResearchCandidate(
     classificationReason: classificationReasonLabel(candidate.classificationReason),
     evidenceBasis: candidate.evidenceBasis,
     selectionScore: candidate.selectionScore,
+    scoreComponents: candidate.scoreComponents.map((component) => ({
+      id: component.componentId,
+      label: component.label,
+      score: component.score,
+      maxScore: component.maxScore,
+      evidence: component.evidence,
+    })),
   };
 }
 
@@ -151,6 +183,18 @@ function validateResearchCandidatePool(
   requiredString(pool.weekStart, "weekStart");
   requiredString(pool.weekEnd, "weekEnd");
   requiredString(pool.generatedAt, "generatedAt");
+  if (!isRecord(pool.scoreModel)) {
+    throw new Error("research candidate pool JSON requires scoreModel");
+  }
+  requiredString(pool.scoreModel.id, "scoreModel.id");
+  requiredString(pool.scoreModel.label, "scoreModel.label");
+  requiredString(pool.scoreModel.description, "scoreModel.description");
+  if (
+    pool.scoreModel.components !== undefined &&
+    !Array.isArray(pool.scoreModel.components)
+  ) {
+    throw new Error("research candidate pool scoreModel.components must be an array");
+  }
   if (!Array.isArray(pool.candidates)) {
     throw new Error("research candidate pool JSON requires candidates");
   }
@@ -193,8 +237,34 @@ function validateResearchCandidate(value: unknown): void {
   if (!Array.isArray(value.evidenceBasis)) {
     throw new Error("research candidate evidenceBasis must be an array");
   }
+  if (!Array.isArray(value.scoreComponents)) {
+    throw new Error("research candidate scoreComponents must be an array");
+  }
+  value.scoreComponents.forEach(validateScoreComponent);
 }
 
+
+function validateScoreComponent(value: unknown): void {
+  if (!isRecord(value)) {
+    throw new Error("research candidate scoreComponents must contain objects");
+  }
+  requiredString(value.componentId, "scoreComponents.componentId");
+  requiredString(value.label, "scoreComponents.label");
+  if (
+    typeof value.score !== "number" ||
+    !Number.isInteger(value.score) ||
+    typeof value.maxScore !== "number" ||
+    !Number.isInteger(value.maxScore) ||
+    value.score < 0 ||
+    value.maxScore < 1 ||
+    value.score > value.maxScore
+  ) {
+    throw new Error("research candidate score component has invalid bounds");
+  }
+  if (!Array.isArray(value.evidence)) {
+    throw new Error("research candidate score component evidence must be an array");
+  }
+}
 function requiredString(value: unknown, field: string): string {
   if (typeof value !== "string" || value.trim() === "") {
     throw new Error(`research candidate pool JSON requires ${field}`);

@@ -2523,6 +2523,41 @@ dd {
   line-height: 1.35;
 }
 
+.score-breakdown {
+  display: grid;
+  gap: 5px;
+  margin: 8px 0 0;
+}
+
+.score-breakdown div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  border-top: 1px solid var(--border);
+  padding-top: 5px;
+}
+
+.score-breakdown dt,
+.score-breakdown dd {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+.score-breakdown dt {
+  color: var(--muted);
+}
+
+.score-breakdown dd {
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.paper-score-breakdown {
+  max-width: 560px;
+}
+
 .candidate-score-unavailable strong {
   color: var(--ink);
 }

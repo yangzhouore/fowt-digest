@@ -23,19 +23,37 @@ memory or inferred counts.
 ## Research Selection
 
 Research candidates are collected from OpenAlex, normalised, deduplicated,
-classified for FOWT relevance, then ranked deterministically. Current ranking
-order is:
+classified for FOWT relevance, scored, then ranked deterministically. The
+Selection Score is computed before ranking and now contributes directly to paper
+selection.
 
-1. relevance classification;
-2. publication date, newest first;
-3. paper ID as a stable tie-breaker.
+The current model is `research_selection_score_v1`, a 100-point deterministic
+score with these components:
 
-Selected weekly papers are the highest-ranked relevant or possibly relevant
-records within the weekly selection limit.
+| Component | Weight | Basis |
+| --- | ---: | --- |
+| FOWT relevance | 35 | Classifier result, explicit floating-offshore-wind phrases, combined floating and wind signals, classifier confidence. |
+| Technical specificity | 25 | Matched title/topic/abstract keyword groups for aerodynamic, hydrodynamic, station-keeping, structural, control, platform, electrical, numerical-method and economic signals. |
+| Research value | 15 | Matched keyword groups for validation, datasets, modelling, optimization and design, plus available abstract evidence. |
+| Venue quality | 10 | OpenAlex source metadata, publication type and transparent venue/repository signals. |
+| Metadata quality | 10 | DOI, source URL, author list, source title, abstract, topic tags and full-text/abstract availability. |
+| Recency | 5 | Publication date relative to the newest retained candidate in the same weekly pool. |
 
-The Research Selection Score is display-only and is normalized from retained
-rank position: rank 1 is 100, the last ranked candidate is 0. It explains the
-stored ranking position and does not re-rank records.
+Ranking order is deterministic:
+
+1. Selection Score, highest first;
+2. relevance classification as a tie-breaker;
+3. publication date, newest first;
+4. paper ID as a stable final tie-breaker.
+
+Selected weekly papers are the first eligible records in that order, excluding
+records classified as `Not Relevant`, up to the weekly selection limit.
+
+The model does not use journal impact factor. No reliable impact-factor source is
+currently committed to the static architecture, and journal prestige should not
+dominate the Research Digest. The venue component is therefore a small proxy that
+supports journals, conferences, preprints, datasets and repositories without
+requiring proprietary metrics.
 
 ## Engineering Selection
 

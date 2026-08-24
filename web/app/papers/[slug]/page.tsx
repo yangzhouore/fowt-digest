@@ -170,6 +170,20 @@ export default async function PaperPage({ params }: PaperPageProps) {
           )}
         </section>
 
+        {paper.selectionScoreComponents.length > 0 ? (
+          <section aria-labelledby="selection-breakdown-heading">
+            <h2 id="selection-breakdown-heading">Selection score breakdown</h2>
+            <dl className="score-breakdown paper-score-breakdown">
+              {paper.selectionScoreComponents.map((component) => (
+                <div key={component.id}>
+                  <dt>{component.label}</dt>
+                  <dd>{component.score} / {component.maxScore}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        ) : null}
+
         <section aria-labelledby="pipeline-notice-heading">
           <h2 id="pipeline-notice-heading">Pipeline-data notice</h2>
           <p>

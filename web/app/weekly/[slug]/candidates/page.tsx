@@ -89,8 +89,8 @@ export default async function ResearchCandidatesPage({
         <h2 id="score-model-heading">Selection Score</h2>
         <p>
           {pool.scoreModel.description} The underlying ranking order is
-          deterministic: relevance classification first, then publication date,
-          then paper ID.
+          deterministic: Selection Score first, then relevance classification,
+          publication date, and paper ID as stable tie-breakers.
         </p>
       </section>
 
@@ -130,6 +130,14 @@ export default async function ResearchCandidatesPage({
                   <span>Selection Score</span>
                   <strong>{candidate.selectionScore} / 100</strong>
                   <p>Rank {candidate.rank} of {pool.candidateCount}</p>
+                  <dl className="score-breakdown" aria-label="Score breakdown">
+                    {candidate.scoreComponents.map((component) => (
+                      <div key={component.id}>
+                        <dt>{component.label}</dt>
+                        <dd>{component.score} / {component.maxScore}</dd>
+                      </div>
+                    ))}
+                  </dl>
                 </div>
                 <p className="candidate-source">
                   {candidate.sourceUrl ? (

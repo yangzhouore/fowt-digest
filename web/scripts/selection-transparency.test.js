@@ -17,6 +17,15 @@ const engineeringBriefing = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "data", "briefings", "2026-08-23.json"), "utf8"),
 );
 
+const expectedScoreComponents = new Set([
+  "fowt_relevance",
+  "technical_specificity",
+  "research_value",
+  "venue_quality",
+  "metadata_quality",
+  "recency",
+]);
+
 test("research candidate count matches retained ranked candidates and digest count", () => {
   assert.equal(researchPool.candidates.length, researchPool.candidateCount);
   assert.equal(researchDigest.checkedResultCount, researchPool.candidateCount);
@@ -32,17 +41,69 @@ test("research selected candidates match weekly digest selected papers", () => {
   assert.deepEqual(selectedCandidateIds, digestPaperIds);
 });
 
-test("research selection scores are derived from rank position", () => {
-  const total = researchPool.candidateCount;
+test("research selection scores are component totals from the deterministic model", () => {
+  assert.equal(researchPool.scoreModel.id, "research_selection_score_v1");
 
   for (const candidate of researchPool.candidates) {
-    const expectedScore = total === 1
-      ? 100
-      : Math.round(((total - candidate.rank) / (total - 1)) * 100);
+    assert.equal(candidate.scoreComponents.length, expectedScoreComponents.size);
+    const componentIds = new Set(candidate.scoreComponents.map((component) => component.componentId));
+    assert.deepEqual(componentIds, expectedScoreComponents);
 
-    assert.equal(candidate.selectionScore, expectedScore);
+    const total = candidate.scoreComponents.reduce((sum, component) => {
+      assert.ok(Number.isInteger(component.score));
+      assert.ok(Number.isInteger(component.maxScore));
+      assert.ok(component.score >= 0);
+      assert.ok(component.maxScore > 0);
+      assert.ok(component.score <= component.maxScore);
+      assert.ok(Array.isArray(component.evidence));
+      return sum + component.score;
+    }, 0);
+
+    assert.equal(candidate.selectionScore, total);
     assert.ok(candidate.selectionScore >= 0 && candidate.selectionScore <= 100);
   }
+});
+
+test("research candidates are ordered by score with deterministic tie-breakers", () => {
+  const priority = {
+    Relevant: 0,
+    "Possibly Relevant": 1,
+    "Not Relevant": 2,
+  };
+
+  for (let index = 1; index < researchPool.candidates.length; index += 1) {
+    const previous = researchPool.candidates[index - 1];
+    const current = researchPool.candidates[index];
+
+    const previousKey = [
+      -previous.selectionScore,
+      priority[previous.classification] ?? 99,
+      -Date.parse(`${previous.publishedDate}T00:00:00Z`),
+      previous.candidateId,
+    ];
+    const currentKey = [
+      -current.selectionScore,
+      priority[current.classification] ?? 99,
+      -Date.parse(`${current.publishedDate}T00:00:00Z`),
+      current.candidateId,
+    ];
+
+    assert.ok(compareTuple(previousKey, currentKey) <= 0);
+  }
+});
+
+test("research selected top five are the first eligible scored records", () => {
+  const selected = researchPool.candidates.filter((candidate) => candidate.selected);
+  const expectedSelected = researchPool.candidates
+    .filter((candidate) => candidate.classification !== "Not Relevant")
+    .slice(0, researchPool.selectionLimit);
+
+  assert.equal(selected.length, researchPool.selectionLimit);
+  assert.deepEqual(
+    selected.map((candidate) => candidate.candidateId),
+    expectedSelected.map((candidate) => candidate.candidateId),
+  );
+  assert.ok(selected.every((candidate) => candidate.selectionReason === "selected_within_limit"));
 });
 
 test("research candidates keep compact source provenance", () => {
@@ -69,5 +130,16 @@ test("engineering candidate transparency uses retained source records without sc
     }
     assert.equal(item.selectionScore, undefined);
   }
+});
+
+function compareTuple(left, right) {
+  for (let index = 0; index < left.length; index += 1) {
+    if (left[index] < right[index]) {
+      return -1;
+    }
+    if (left[index] > right[index]) {
+      return 1;
+    }
+  }
+  return 0;
 }
-);

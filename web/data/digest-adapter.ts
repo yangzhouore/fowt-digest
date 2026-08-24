@@ -65,8 +65,23 @@ type PipelinePaper = {
     reason?: string;
     evidenceBasis?: string[];
   };
+  selectionScore?: PipelineSelectionScore;
 };
 
+type PipelineSelectionScore = {
+  modelId: string;
+  total: number;
+  maxScore: number;
+  components: PipelineSelectionScoreComponent[];
+};
+
+type PipelineSelectionScoreComponent = {
+  componentId: string;
+  label: string;
+  score: number;
+  maxScore: number;
+  evidence: string[];
+};
 export type DigestPaper = {
   id: string;
   slug: string;
@@ -89,8 +104,16 @@ export type DigestPaper = {
   evidenceBasis: string[];
   selectionReason: string;
   selectionScore: number | null;
+  selectionScoreComponents: DigestSelectionScoreComponent[];
 };
 
+export type DigestSelectionScoreComponent = {
+  id: string;
+  label: string;
+  score: number;
+  maxScore: number;
+  evidence: string[];
+};
 export type DigestEdition = {
   slug: string;
   dateRange: string;
@@ -198,13 +221,11 @@ function adaptDigest(digest: PipelineDigest): DigestEdition {
     checkedResultCount: digest.checkedResultCount ?? digest.selectedPapers.length,
     generatedAt: digest.generatedAt,
     introduction: `Selected papers from the deterministic FOWT pipeline for ${dateRange}.`,
-    papers: digest.selectedPapers.map((paper) =>
-      adaptPaper(paper, digest.checkedResultCount ?? digest.selectedPapers.length),
-    ),
+    papers: digest.selectedPapers.map(adaptPaper),
   };
 }
 
-function adaptPaper(paper: PipelinePaper, candidateCount: number): DigestPaper {
+function adaptPaper(paper: PipelinePaper): DigestPaper {
   const abstract = paper.abstract;
 
   return {
@@ -228,7 +249,8 @@ function adaptPaper(paper: PipelinePaper, candidateCount: number): DigestPaper {
     classificationReason: classificationReasonLabel(paper.relevanceAssessment?.reason ?? null),
     evidenceBasis: paper.relevanceAssessment?.evidenceBasis ?? [],
     selectionReason: selectionReasonLabel(paper.selectionReason),
-    selectionScore: selectionScoreFromRank(paper.rank, candidateCount),
+    selectionScore: paper.selectionScore?.total ?? null,
+    selectionScoreComponents: adaptSelectionScoreComponents(paper.selectionScore),
   };
 }
 
@@ -325,6 +347,17 @@ function selectionReasonLabel(value: string): string {
   return value;
 }
 
+function adaptSelectionScoreComponents(
+  selectionScore: PipelineSelectionScore | undefined,
+): DigestSelectionScoreComponent[] {
+  return selectionScore?.components.map((component) => ({
+    id: component.componentId,
+    label: component.label,
+    score: component.score,
+    maxScore: component.maxScore,
+    evidence: component.evidence,
+  })) ?? [];
+}
 function classificationReasonLabel(value: string | null): string | null {
   if (value === "relevant_title_fowt_phrase") {
     return "FOWT phrase in title";
@@ -350,18 +383,6 @@ function classificationReasonLabel(value: string | null): string | null {
   return value;
 }
 
-function selectionScoreFromRank(rank: number, candidateCount: number): number | null {
-  if (!Number.isInteger(rank) || !Number.isInteger(candidateCount) || candidateCount < 1) {
-    return null;
-  }
-  if (rank < 1 || rank > candidateCount) {
-    return null;
-  }
-  if (candidateCount === 1) {
-    return 100;
-  }
-  return Math.round(((candidateCount - rank) / (candidateCount - 1)) * 100);
-}
 function formatDateRange(start: string, end: string): string {
   return `${formatDate(start)} - ${formatDate(end)}`;
 }

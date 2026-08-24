@@ -3,6 +3,16 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const test = require("node:test");
+const {
+  SCORE_MODEL_ID,
+  buildEngineeringCandidatePool,
+  scoreEngineeringSourceRecord,
+} = require("./engineering-selection-scoring.js");
+const {
+  SOURCE_CLASSES,
+  validateEngineeringSourceRegistry,
+  validateRegistryBackedCollectionAudit,
+} = require("./engineering-source-registry.js");
 
 const researchCandidateDir = path.join(__dirname, "..", "data", "research-candidates");
 const researchPools = fs.readdirSync(researchCandidateDir)
@@ -19,9 +29,17 @@ const researchDigests = new Map(
       return [digest.weekEnd, digest];
     }),
 );
-const engineeringBriefing = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "..", "data", "briefings", "2026-08-23.json"), "utf8"),
+const engineeringBriefingDir = path.join(__dirname, "..", "data", "briefings");
+const engineeringSourceRegistry = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "..", "data", "engineering-source-registry.json"), "utf8"),
 );
+const engineeringBriefing = JSON.parse(
+  fs.readFileSync(path.join(engineeringBriefingDir, "2026-08-23.json"), "utf8"),
+);
+const engineeringBackfillBriefings = fs.readdirSync(engineeringBriefingDir)
+  .filter((fileName) => fileName >= "2026-04-05.json" && fileName <= "2026-08-23.json")
+  .sort()
+  .map((fileName) => JSON.parse(fs.readFileSync(path.join(engineeringBriefingDir, fileName), "utf8")));
 
 const expectedScoreComponents = new Set([
   "fowt_relevance",
@@ -30,6 +48,14 @@ const expectedScoreComponents = new Set([
   "venue_quality",
   "metadata_quality",
   "recency",
+]);
+
+const expectedEngineeringComponents = new Map([
+  ["engineering_relevance", 30],
+  ["project_company", 25],
+  ["technology", 20],
+  ["policy_market", 15],
+  ["source_quality", 10],
 ]);
 
 const expectedResearchCounts = new Map([
@@ -190,22 +216,214 @@ test("research candidates keep compact source provenance", () => {
   }
 });
 
-test("engineering candidate transparency uses retained source records without scores", () => {
+test("engineering latest candidate transparency stores an audited multi-source candidate pool", () => {
+  const selection = engineeringBriefing.engineeringSelection;
   const sourceIds = new Set(
     engineeringBriefing.sourceRecords.map((source) => source.sourceRecordId),
   );
+  const itemIds = new Set(engineeringBriefing.briefingItems.map((item) => item.briefingItemId));
 
-  assert.equal(engineeringBriefing.checkedResultCount, engineeringBriefing.sourceRecords.length);
-  assert.equal(engineeringBriefing.sourceRecords.length, 6);
+  assert.ok(selection);
+  assert.equal(selection.candidatePoolType, "approved_source_candidate_pool");
+  assert.equal(selection.selectionModel.id, SCORE_MODEL_ID);
+  assert.equal(engineeringBriefing.sourceRecords.length, 10);
+  assert.equal(engineeringBriefing.checkedResultCount, 8);
+  assert.equal(selection.collectionAudit.candidatePoolSize, 8);
+  assert.equal(selection.collectionAudit.sourcesAttempted, 17);
+  assert.equal(selection.collectionAudit.sourcesSuccessfullyCollected, 12);
+  assert.equal(selection.collectionAudit.sourcesFailed, 5);
+  assert.equal(selection.collectionAudit.rawItemsCollected, 18);
+  assert.equal(selection.collectionAudit.itemsAfterDateFiltering, 13);
+  assert.equal(selection.collectionAudit.itemsAfterFowtRelevanceFiltering, 12);
+  assert.equal(selection.collectionAudit.duplicateEventOverlapsRemoved, 4);
+  assert.equal(selection.candidates.length, selection.collectionAudit.candidatePoolSize);
 
-  for (const item of engineeringBriefing.briefingItems) {
-    assert.ok(item.sourceRecordIds.length > 0);
-    for (const sourceId of item.sourceRecordIds) {
-      assert.ok(sourceIds.has(sourceId), `missing source ${sourceId}`);
+  const candidateSourceIds = new Set(selection.candidates.map((candidate) => candidate.sourceRecordId));
+  assert.ok(candidateSourceIds.has("eng-src-2026-08-23-france-floating-ports-offshorewind"));
+  assert.ok(candidateSourceIds.has("eng-src-2026-08-23-stillstrom-cable-control"));
+  assert.ok(candidateSourceIds.has("eng-src-2026-08-23-stanford-offshore-wind-testing"));
+  assert.ok(!candidateSourceIds.has("eng-src-2026-08-23-brestport-inflow"));
+  assert.ok(!candidateSourceIds.has("eng-src-2026-08-23-mlit-port-study"));
+
+  for (const source of engineeringBriefing.sourceRecords) {
+    if (source.candidateStatus === "candidate") {
+      assert.ok(candidateSourceIds.has(source.sourceRecordId));
     }
-    assert.equal(item.selectionScore, undefined);
+  }
+
+  for (const candidate of selection.candidates) {
+    assert.ok(sourceIds.has(candidate.sourceRecordId));
+    assertEngineeringScore(candidate.engineeringSelectionScore);
+    if (candidate.selected) {
+      assert.ok(itemIds.has(candidate.selectedBriefingItemId));
+      assert.ok(Number.isInteger(candidate.finalRank));
+    } else {
+      assert.equal(candidate.selectedBriefingItemId, null);
+      assert.equal(candidate.finalRank, null);
+    }
   }
 });
+
+test("engineering source registry covers approved source classes", () => {
+  assert.deepEqual(validateEngineeringSourceRegistry(engineeringSourceRegistry), []);
+  assert.equal(engineeringSourceRegistry.sources.length, 42);
+
+  const classes = new Set(engineeringSourceRegistry.sources.map((source) => source.sourceClass));
+  for (const sourceClass of SOURCE_CLASSES) {
+    assert.ok(classes.has(sourceClass), `missing source class ${sourceClass}`);
+  }
+});
+
+test("engineering latest collection audit is backed by registry source records", () => {
+  const audit = engineeringBriefing.engineeringSelection.collectionAudit;
+  const registryIds = new Set(engineeringSourceRegistry.sources.map((source) => source.sourceId));
+
+  assert.deepEqual(
+    validateRegistryBackedCollectionAudit(
+      audit,
+      engineeringSourceRegistry,
+      "2026-08-23.json: engineeringSelection",
+    ),
+    [],
+  );
+  assert.equal(audit.sourceRegistry, "web/data/engineering-source-registry.json");
+  assert.equal(audit.attemptedSources.length, audit.sourcesAttempted);
+  assert.ok(audit.attemptedSources.every((source) => registryIds.has(source.sourceId)));
+  assert.equal(
+    audit.attemptedSources.filter((source) => source.collectionStatus === "succeeded").length,
+    audit.sourcesSuccessfullyCollected,
+  );
+});
+test("engineering persisted latest pool matches regenerated scoring output", () => {
+  const regenerated = buildEngineeringCandidatePool(engineeringBriefing);
+
+  assert.deepEqual(
+    engineeringBriefing.engineeringSelection.candidates,
+    regenerated.candidates,
+  );
+});
+test("engineering scoring is deterministic and tolerates sparse metadata", () => {
+  const source = {
+    sourceRecordId: "eng-src-test-minimal",
+    sourceType: "industry_news",
+    publisher: "Example",
+    title: "Floating offshore wind cable installation update",
+    sourceText: null,
+  };
+
+  const first = scoreEngineeringSourceRecord(source);
+  const second = scoreEngineeringSourceRecord(source);
+
+  assert.deepEqual(first, second);
+  assert.equal(first.modelId, SCORE_MODEL_ID);
+  assertEngineeringScore(first);
+});
+
+test("engineering scored candidates are raw-ranked by score with source ID tie-breaker", () => {
+  const { candidates } = buildEngineeringCandidatePool(engineeringBriefing);
+
+  for (let index = 1; index < candidates.length; index += 1) {
+    const previous = candidates[index - 1];
+    const current = candidates[index];
+    const previousKey = [-previous.engineeringSelectionScore.total, previous.sourceRecordId];
+    const currentKey = [-current.engineeringSelectionScore.total, current.sourceRecordId];
+
+    assert.ok(compareTuple(previousKey, currentKey) <= 0);
+    assert.equal(current.rawRank, index + 1);
+  }
+});
+
+test("engineering diversity layer preserves five selected highlights from candidate records", () => {
+  const { candidates } = buildEngineeringCandidatePool(engineeringBriefing);
+  const selected = candidates.filter((candidate) => candidate.selected);
+  const selectedIds = selected.map((candidate) => candidate.sourceRecordId);
+  const selectedBriefingSourceIds = engineeringBriefing.briefingItems.map(
+    (item) => item.sourceRecordIds[0],
+  );
+
+  assert.equal(selected.length, 5);
+  assert.deepEqual(
+    selected.map((candidate) => candidate.finalRank),
+    [1, 2, 3, 4, 5],
+  );
+  assert.deepEqual(selectedIds, selectedBriefingSourceIds);
+  assert.ok(selectedIds.includes("eng-src-2026-08-23-france-floating-ports-offshorewind"));
+  assert.ok(selectedIds.includes("eng-src-2026-08-23-deepwind-mlit-ports"));
+  assert.ok(!selectedIds.includes("eng-src-2026-08-23-stillstrom-cable-control"));
+  assert.ok(!selectedIds.includes("eng-src-2026-08-23-stanford-offshore-wind-testing"));
+  assert.ok(selected.every((candidate) => candidate.diversityReason));
+});
+test("engineering historical backfilled weeks retain scored reconstructed candidate pools", () => {
+  const expectedCounts = new Map([
+    ["2026-04-05", 2],
+    ["2026-04-12", 2],
+    ["2026-04-19", 3],
+    ["2026-04-26", 2],
+    ["2026-05-03", 1],
+    ["2026-05-10", 4],
+    ["2026-05-17", 1],
+    ["2026-05-24", 3],
+    ["2026-05-31", 5],
+    ["2026-06-07", 1],
+    ["2026-06-14", 3],
+    ["2026-06-21", 3],
+    ["2026-06-28", 4],
+    ["2026-07-05", 2],
+    ["2026-07-12", 4],
+    ["2026-07-19", 3],
+    ["2026-07-26", 5],
+    ["2026-08-02", 2],
+    ["2026-08-09", 3],
+    ["2026-08-16", 4],
+    ["2026-08-23", 8],
+  ]);
+
+  for (const briefing of engineeringBackfillBriefings) {
+    const expectedCount = expectedCounts.get(briefing.weekEnd);
+    assert.ok(expectedCount, `missing expected count for ${briefing.weekEnd}`);
+    assert.ok(briefing.engineeringSelection, `missing engineeringSelection for ${briefing.weekEnd}`);
+    assert.equal(briefing.engineeringSelection.selectionModel.id, SCORE_MODEL_ID);
+    assert.equal(briefing.engineeringSelection.collectionAudit.candidatePoolSize, expectedCount);
+    assert.equal(briefing.engineeringSelection.candidates.length, expectedCount);
+    assert.equal(briefing.checkedResultCount, expectedCount);
+    if (briefing.weekEnd !== "2026-08-23") {
+      assert.equal(
+        briefing.engineeringSelection.candidatePoolType,
+        "reconstructed_historical_registry_source_pool",
+      );
+      assert.equal(
+        briefing.engineeringSelection.collectionAudit.sourceRegistry,
+        "web/data/engineering-source-registry.json",
+      );
+      assert.ok(briefing.briefingItems.length <= 5);
+    }
+
+    const regenerated = buildEngineeringCandidatePool(briefing);
+    assert.deepEqual(briefing.engineeringSelection.candidates, regenerated.candidates);
+
+    for (const candidate of briefing.engineeringSelection.candidates) {
+      assertEngineeringScore(candidate.engineeringSelectionScore);
+      assert.equal(candidate.engineeringSelectionScore.modelId, SCORE_MODEL_ID);
+    }
+  }
+});
+
+function assertEngineeringScore(score) {
+  assert.equal(score.modelId, SCORE_MODEL_ID);
+  assert.equal(score.maxScore, 100);
+  assert.equal(score.components.length, expectedEngineeringComponents.size);
+  const total = score.components.reduce((sum, component) => {
+    assert.ok(expectedEngineeringComponents.has(component.componentId));
+    assert.equal(component.maxScore, expectedEngineeringComponents.get(component.componentId));
+    assert.ok(Number.isInteger(component.score));
+    assert.ok(component.score >= 0);
+    assert.ok(component.score <= component.maxScore);
+    assert.ok(Array.isArray(component.evidence));
+    return sum + component.score;
+  }, 0);
+  assert.equal(score.total, total);
+  assert.ok(score.total >= 0 && score.total <= 100);
+}
 
 function compareTuple(left, right) {
   for (let index = 0; index < left.length; index += 1) {

@@ -7,6 +7,8 @@ export type EngineeringArchiveBriefing = {
   slug: string;
   dateRange: string;
   sourceCount: number;
+  candidateCount: number;
+  candidateSourceCount: number;
   checkedResultCount: number;
   items: EngineeringArchiveNews[];
 };
@@ -25,7 +27,6 @@ export type EngineeringArchiveNews = {
 
 type EngineeringSearchProps = {
   briefings: EngineeringArchiveBriefing[];
-  topNewsLimit: number;
 };
 
 const REGION_RULES = [
@@ -62,7 +63,6 @@ const REGION_RULES = [
 
 export function EngineeringSearch({
   briefings,
-  topNewsLimit,
 }: EngineeringSearchProps) {
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
@@ -104,9 +104,7 @@ export function EngineeringSearch({
 
       return {
         ...briefing,
-        visibleItems: hasActiveFilter
-          ? matchingItems
-          : briefing.items.slice(0, topNewsLimit),
+        visibleItems: hasActiveFilter ? matchingItems : briefing.items,
       };
     })
     .filter((briefing) => briefing.visibleItems.length > 0);
@@ -181,7 +179,12 @@ export function EngineeringSearch({
                 <article className="engineering-briefing-card">
                   <div className="engineering-briefing-card-meta">
                     <p>{briefing.dateRange}</p>
-                    <p><Link href={`/engineering/${briefing.slug}/candidates`}>Curated from {briefing.sourceCount} retained sources -&gt;</Link></p>
+                    <p>{archiveMetricsText(briefing)}</p>
+                    <p>
+                      <Link href={`/engineering/${briefing.slug}/candidates`}>
+                        {candidatePoolLinkText(briefing)}
+                      </Link>
+                    </p>
                   </div>
                   <ol className="engineering-top-news">
                     {briefing.visibleItems.map((item, index) => (
@@ -257,4 +260,26 @@ function inferRegion(item: EngineeringArchiveNews): string | null {
 
 function formatCategory(value: string): string {
   return value.replace(/_/g, " ");
+}
+
+function archiveMetricsText(briefing: EngineeringArchiveBriefing): string {
+  const selectedText = pluralise(briefing.items.length, "selected highlight");
+
+  if (briefing.candidateCount > 0) {
+    return `${selectedText} / ${pluralise(briefing.candidateCount, "candidate")} / ${pluralise(briefing.candidateSourceCount, "source")}`;
+  }
+
+  return `${selectedText} / ${pluralise(briefing.sourceCount, "retained source")}`;
+}
+
+function pluralise(count: number, label: string): string {
+  return `${count} ${label}${count === 1 ? "" : "s"}`;
+}
+
+function candidatePoolLinkText(briefing: EngineeringArchiveBriefing): string {
+  if (briefing.candidateCount > 0) {
+    return `Curated from ${briefing.candidateCount} candidates across ${briefing.candidateSourceCount} sources ->`;
+  }
+
+  return `Curated from ${briefing.sourceCount} retained sources ->`;
 }

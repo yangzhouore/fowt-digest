@@ -4,7 +4,6 @@ import { SiteFooter } from "../site-footer";
 import { getAllEngineeringBriefings } from "../../data/engineering-briefing-adapter";
 import { EngineeringSearch } from "./engineering-search";
 
-const ENGINEERING_ARCHIVE_TOP_NEWS_LIMIT = 3;
 
 export const metadata: Metadata = {
   title: "Engineering Briefings",
@@ -18,6 +17,8 @@ export default function EngineeringArchivePage() {
     slug: briefing.slug,
     dateRange: briefing.dateRange,
     sourceCount: briefing.sourceRecords.length,
+    candidateCount: briefing.sourceCandidates.length,
+    candidateSourceCount: briefing.candidateSourceCount,
     checkedResultCount: briefing.checkedResultCount,
     items: briefing.items.map((item) => ({
       id: item.id,
@@ -46,10 +47,7 @@ export default function EngineeringArchivePage() {
         </p>
       </section>
 
-      <EngineeringSearch
-        briefings={archiveBriefings}
-        topNewsLimit={ENGINEERING_ARCHIVE_TOP_NEWS_LIMIT}
-      />
+      <EngineeringSearch briefings={archiveBriefings} />
 
       <section aria-labelledby="engineering-archive-notice-heading">
         <h2 id="engineering-archive-notice-heading">Data notice</h2>

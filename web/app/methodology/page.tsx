@@ -38,7 +38,7 @@ const researchFlow = [
   "Top 5 Research Digest",
 ];
 
-const scoreComponents = [
+const researchScoreComponents = [
   {
     label: "FOWT relevance",
     points: 35,
@@ -74,23 +74,62 @@ const scoreComponents = [
 const engineeringMethod = [
   {
     title: "Source",
-    text: "Use public, attributable floating wind engineering sources: authorities, standards, project releases, software notes, companies, and trade news.",
+    text: "Collect public, attributable floating wind engineering candidates from approved source classes: authorities, standards, project releases, software notes, companies, and trade news.",
   },
   {
-    title: "Filter",
-    text: "Keep only concrete project, policy, technology, supply-chain, grid, vessel, cable, mooring, foundation, O&M, or software updates.",
+    title: "Score",
+    text: "Normalize, deduplicate, filter for basic FOWT relevance, then compute engineering_selection_score_v1 from source metadata and source-backed evidence text before ranking.",
   },
   {
-    title: "Exclude",
-    text: "Drop inaccessible, unattributed, duplicate, social-only, pure marketing, unverifiable opinion, and research-paper items.",
+    title: "Rank",
+    text: "Order candidates by Engineering Selection Score, with source record ID as a deterministic tie-breaker.",
   },
   {
-    title: "Trace",
-    text: "Store URL, publisher, title, date, retrieval time, source type, excerpt, and collection method.",
+    title: "Diversify",
+    text: "Apply a small deterministic diversity layer so one project, publisher or topic does not crowd out the weekly briefing when suitable alternatives exist.",
   },
   {
     title: "Publish",
-    text: "Write source-backed briefing items to static JSON; the website does not scrape, score, or automate news extraction.",
+    text: "Select up to five source-backed highlights. Weeks with fewer strong independent Engineering developments are not padded. The website renders committed static JSON and does not collect or score news at runtime.",
+  },
+];
+
+const engineeringFlow = [
+  "Approved 42-source registry",
+  "collect weekly items",
+  "normalize / deduplicate",
+  "FOWT relevance filter",
+  "engineering_selection_score_v1",
+  "importance ranking",
+  "source/topic diversity",
+  "Up to 5 Engineering highlights",
+];
+
+const engineeringScoreComponents = [
+  {
+    label: "Engineering relevance",
+    points: 30,
+    text: "Explicit floating-wind, offshore-wind and engineering terms such as ports, installation, fabrication, cables, moorings, grid, vessels and consenting.",
+  },
+  {
+    label: "Project / company",
+    points: 25,
+    text: "Named project, port, government, developer or supply-chain entities plus concrete events such as tenders, selections, support, partnerships or study groups.",
+  },
+  {
+    label: "Technology",
+    points: 20,
+    text: "Controlled topic groups for ports, floating platforms, cables, installation, fabrication and digital engineering signals.",
+  },
+  {
+    label: "Policy / market",
+    points: 15,
+    text: "Government, procurement, state-support, consenting, regulation, supply-chain, leasing and market signals, with small source-type additions.",
+  },
+  {
+    label: "Source quality",
+    points: 10,
+    text: "Source-type proxy that favors government and standards sources, then company/trade sources, with reputable industry news below primary sources.",
   },
 ];
 
@@ -160,9 +199,10 @@ export default function MethodologyPage() {
           <p className="eyebrow">Engineering</p>
           <h2 id="engineering-method-heading">News selection</h2>
           <p>
-            A separate source policy filters practical floating wind engineering
-            updates into weekly briefing items. Engineering remains editorial and
-            manual; no quantitative score is shown.
+            Engineering selection now starts from an approved-source weekly
+            candidate collection, scores retained candidates, then applies a
+            small diversity layer so the final five remain useful as a briefing
+            rather than a duplicate-heavy ranked list.
           </p>
           <ol className="methodology-step-list">
             {engineeringMethod.map((step) => (
@@ -183,27 +223,7 @@ export default function MethodologyPage() {
             <li key={step}>{step}</li>
           ))}
         </ol>
-        <div className="score-formula" aria-label="100 point score formula">
-          <dl>
-            {scoreComponents.map((component) => (
-              <div key={component.label}>
-                <dt>{component.label}</dt>
-                <dd>{component.points}</dd>
-              </div>
-            ))}
-            <div className="score-total">
-              <dt>Total</dt>
-              <dd>100</dd>
-            </div>
-          </dl>
-          <div className="score-component-copy">
-            {scoreComponents.map((component) => (
-              <p key={component.label}>
-                <strong>{component.label}:</strong> {component.text}
-              </p>
-            ))}
-          </div>
-        </div>
+        <ScoreFormula components={researchScoreComponents} label="Research 100 point score formula" />
         <p>
           The score is computed before ranking. Ranking uses the score first,
           then classification, publication date, and paper ID for deterministic
@@ -215,6 +235,26 @@ export default function MethodologyPage() {
           weekly window was recollected later with the current pipeline. A
           reconstructed pool may differ from what OpenAlex would have returned
           at the original publication date because upstream metadata can change.
+        </p>
+      </section>
+
+      <section className="research-selection-visual" aria-labelledby="engineering-selection-heading">
+        <p className="eyebrow">Engineering Selection Score</p>
+<h2 id="engineering-selection-heading">How candidates become the weekly briefing</h2>
+        <ol className="research-flow" aria-label="Engineering selection flow">
+          {engineeringFlow.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+        <ScoreFormula components={engineeringScoreComponents} label="Engineering 100 point score formula" />
+        <p>
+          The score is computed before ranking and uses deterministic, controlled
+          signal groups in candidate metadata and source-backed evidence text. No
+          LLM subjective scoring is used. Diversity is separate from importance:
+          it can defer a high-scoring duplicate project or topic when another
+          source-backed candidate gives the weekly briefing broader coverage.
+          Historical Engineering pools are labeled as retained-source
+          reconstructions when no original full candidate artifact was stored.
         </p>
       </section>
 
@@ -241,5 +281,37 @@ export default function MethodologyPage() {
 
       <SiteFooter />
     </main>
+  );
+}
+
+function ScoreFormula({
+  components,
+  label,
+}: {
+  components: Array<{ label: string; points: number; text: string }>;
+  label: string;
+}) {
+  return (
+    <div className="score-formula" aria-label={label}>
+      <dl>
+        {components.map((component) => (
+          <div key={component.label}>
+            <dt>{component.label}</dt>
+            <dd>{component.points}</dd>
+          </div>
+        ))}
+        <div className="score-total">
+          <dt>Total</dt>
+          <dd>100</dd>
+        </div>
+      </dl>
+      <div className="score-component-copy">
+        {components.map((component) => (
+          <p key={component.label}>
+            <strong>{component.label}:</strong> {component.text}
+          </p>
+        ))}
+      </div>
+    </div>
   );
 }

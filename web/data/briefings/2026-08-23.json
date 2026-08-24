@@ -3,10 +3,24 @@
   "weekStart": "2026-08-17",
   "weekEnd": "2026-08-23",
   "generatedAt": "2026-08-24T10:00:00Z",
-  "checkedResultCount": 6,
+  "checkedResultCount": 8,
   "sourceRecords": [
     {
+      "sourceRecordId": "eng-src-2026-08-23-france-floating-ports-offshorewind",
+      "candidateStatus": "candidate",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "French Government-Backed Floating Wind Ports to Upgrade Quays, Storage Areas",
+      "sourceUrl": "https://www.offshorewind.biz/2026/08/21/french-government-backed-floating-wind-ports-to-upgrade-quays-storage-areas/",
+      "publishedDate": "2026-08-21",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "offshoreWIND.biz reported that five French port infrastructure projects were selected for EUR 258.5 million of public support to prepare Marseille-Fos, Nantes-Saint-Nazaire, Brest, Port-la-Nouvelle and Cherbourg for floating wind manufacturing, assembly, storage, turbine integration and launch logistics under France 2030.",
+      "licenseNote": "Public industry-news webpage; factual metadata and concise normalized evidence retained for source-backed weekly review."
+    },
+    {
       "sourceRecordId": "eng-src-2026-08-23-port-talbot-consultancy",
+      "candidateStatus": "candidate",
       "sourceType": "government_announcement",
       "publisher": "GwerthwchiGymru / Associated British Ports",
       "title": "Marine Consultancy - Future Port Talbot",
@@ -15,22 +29,11 @@
       "retrievedAt": "2026-08-24T10:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "The Welsh public procurement notice identifies Associated British Ports' Future Port Talbot marine consultancy procurement, with marine environmental and consenting support for port works intended to support floating offshore wind deployment and supply chains in the Celtic Sea.",
-      "licenseNote": "Public procurement notice; source text stored as concise factual evidence for manual weekly briefing review."
-    },
-    {
-      "sourceRecordId": "eng-src-2026-08-23-brestport-inflow",
-      "sourceType": "trade_association",
-      "publisher": "Bretagne Ocean Power",
-      "title": "The French government confirms the Port of Brest as a major hub for the construction of floating wind turbines",
-      "sourceUrl": "https://bretagneoceanpower.fr/en/2026-brestport-inflow/",
-      "publishedDate": "2026-08-18",
-      "retrievedAt": "2026-08-24T10:00:00Z",
-      "collectionMethod": "manual",
-      "sourceText": "Bretagne Ocean Power reported that BrestPort's InFloW project was selected under France 2030, with more than EUR 58 million in state support to adapt the Offshore Renewable Energy terminal for floating wind infrastructure, assembly and logistics.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual weekly briefing review."
+      "licenseNote": "Public procurement notice; factual metadata and concise normalized evidence retained for source-backed weekly review."
     },
     {
       "sourceRecordId": "eng-src-2026-08-23-haventus-dajin",
+      "candidateStatus": "candidate",
       "sourceType": "industry_news",
       "publisher": "Energy Global",
       "title": "Haventus and Dajin sign MoU to explore strategic partnership in offshore wind",
@@ -39,10 +42,11 @@
       "retrievedAt": "2026-08-24T10:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "Energy Global reported that Haventus and Dajin signed an MoU to explore combining Dajin manufacturing and transport capabilities with Ardersier Port infrastructure for fixed and floating offshore wind customers across the UK and Europe.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual weekly briefing review."
+      "licenseNote": "Public industry-news webpage; factual metadata and concise normalized evidence retained for source-backed weekly review."
     },
     {
       "sourceRecordId": "eng-src-2026-08-23-taihan-panstar",
+      "candidateStatus": "candidate",
       "sourceType": "industry_news",
       "publisher": "Ocean News & Technology",
       "title": "Taihan Cable and Panstar Robotics Partner to Develop Domestic ROVs for HVDC Submarine Cable Projects",
@@ -51,10 +55,11 @@
       "retrievedAt": "2026-08-24T10:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "Ocean News & Technology reported that Taihan Cable & Solution and Panstar Robotics signed an MoU to develop Korean ROV trenchers, operating technologies and installation solutions for offshore wind inter-array and export cable systems, grid interconnection and HVDC submarine cable projects.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual weekly briefing review."
+      "licenseNote": "Public industry-news webpage; factual metadata and concise normalized evidence retained for source-backed weekly review."
     },
     {
       "sourceRecordId": "eng-src-2026-08-23-deepwind-mlit-ports",
+      "candidateStatus": "candidate",
       "sourceType": "industry_news",
       "publisher": "DeepWind",
       "title": "Japan's Floating Wind Base Ports Cannot Work Alone: MLIT Sets a 2-Year Build Target and a 400 km Towing Radius",
@@ -63,10 +68,63 @@
       "retrievedAt": "2026-08-24T10:00:00Z",
       "collectionMethod": "manual",
       "sourceText": "DeepWind reported that Japan MLIT's FY2026 port-study materials for floating wind use a base case including a two-year construction target, semi-submersible steel floating platform assumptions, multi-port operation and one-to-three-day tow-radius planning.",
-      "licenseNote": "Public webpage; source text stored as concise factual evidence for manual weekly briefing review."
+      "licenseNote": "Public industry-news webpage; factual metadata and concise normalized evidence retained for source-backed weekly review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-23-stillstrom-cable-control",
+      "candidateStatus": "candidate",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Stillstrom Demonstrates Automated Cable Control for Offshore Wind Vessel Charging",
+      "sourceUrl": "https://www.offshorewind.biz/2026/08/17/stillstrom-demonstrates-automated-cable-control-for-offshore-wind-vessel-charging/",
+      "publishedDate": "2026-08-17",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "offshoreWIND.biz reported that Stillstrom demonstrated automated cable control for offshore wind vessel charging with ESVAGT, Semco Maritime and DNV-witnessed testing, addressing cable motion and offshore support-vessel charging operations.",
+      "licenseNote": "Public industry-news webpage; factual metadata and concise normalized evidence retained for source-backed weekly review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-23-pacifico-jindo-cluster",
+      "candidateStatus": "candidate",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "US-Based Company Selected to Develop 2.13 GW Offshore Wind Cluster in South Korea",
+      "sourceUrl": "https://www.offshorewind.biz/2026/08/20/us-based-company-selected-to-develop-2-13-gw-offshore-wind-cluster-in-south-korea/",
+      "publishedDate": "2026-08-20",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "offshoreWIND.biz reported that Pacifico Energy Korea was selected as sole developer for the 2.13 GW Jindo Offshore Wind Integrated Cluster Phase 2, covering the Manho and Jindo Baram offshore wind projects under an implementation agreement with regional and local government bodies.",
+      "licenseNote": "Public industry-news webpage; factual metadata and concise normalized evidence retained for source-backed weekly review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-23-stanford-offshore-wind-testing",
+      "candidateStatus": "candidate",
+      "sourceType": "conference_announcement",
+      "publisher": "Stanford University",
+      "title": "Stanford Energy Student Lectures: Offshore wind testing and intermediate band solar cells",
+      "sourceUrl": "https://events.stanford.edu/event/stanford-energy-student-lectures-offshore-wind-testing-and-intermediate-band-solar-cells",
+      "publishedDate": "2026-08-18",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Stanford University listed an August 18, 2026 technical lecture including offshore wind testing and robotic real-time hybrid simulation, a concrete engineering-method topic relevant to floating offshore wind model validation and test practice.",
+      "licenseNote": "Public university event listing; factual metadata and concise normalized evidence retained for source-backed weekly review."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-08-23-brestport-inflow",
+      "candidateStatus": "duplicate_event",
+      "sourceType": "trade_association",
+      "publisher": "Bretagne Ocean Power",
+      "title": "The French government confirms the Port of Brest as a major hub for the construction of floating wind turbines",
+      "sourceUrl": "https://bretagneoceanpower.fr/en/2026-brestport-inflow/",
+      "publishedDate": "2026-08-18",
+      "retrievedAt": "2026-08-24T10:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Bretagne Ocean Power reported that BrestPort's InFloW project was selected under France 2030, with more than EUR 58 million in state support to adapt the Offshore Renewable Energy terminal for floating wind infrastructure, assembly and logistics. The event overlaps the broader French ports funding candidate and is retained as duplicate provenance rather than a separate scored candidate.",
+      "licenseNote": "Public webpage; retained as duplicate-event provenance and not separately scored as an independent candidate."
     },
     {
       "sourceRecordId": "eng-src-2026-08-23-mlit-port-study",
+      "candidateStatus": "supporting_provenance",
       "sourceType": "government_announcement",
       "publisher": "Japan Ministry of Land, Infrastructure, Transport and Tourism",
       "title": "FY2026 first study group on ports for offshore wind deployment",
@@ -74,8 +132,8 @@
       "publishedDate": "2026-07-29",
       "retrievedAt": "2026-08-24T10:00:00Z",
       "collectionMethod": "manual",
-      "sourceText": "MLIT announced the August 5, 2026 study group to discuss port facility scale and efficient port use for promoting floating offshore wind deployment.",
-      "licenseNote": "Public government webpage; source text stored as concise factual evidence for manual weekly briefing review."
+      "sourceText": "MLIT announced the August 5, 2026 study group to discuss port facility scale and efficient port use for promoting floating offshore wind deployment. This official page supports the DeepWind weekly candidate but was published outside the 17-23 August 2026 collection window.",
+      "licenseNote": "Public government webpage; retained as supporting provenance and not counted as a weekly candidate."
     }
   ],
   "briefingItems": [
@@ -99,24 +157,6 @@
     },
     {
       "briefingItemId": "eng-item-2026-08-23-02",
-      "title": "BrestPort InFloW secures France 2030 floating wind port support",
-      "oneLineSummary": "BrestPort's InFloW project received more than EUR 58 million of French state support to adapt Brest's ORE terminal for floating wind assembly and logistics.",
-      "category": "supply_chain",
-      "region": "Europe",
-      "sourceRecordIds": [
-        "eng-src-2026-08-23-brestport-inflow"
-      ],
-      "sourceUrl": "https://bretagneoceanpower.fr/en/2026-brestport-inflow/",
-      "explanation": "The source identifies state-backed port infrastructure work for manufacturing, storage, integration and launch operations serving floating offshore wind.",
-      "whyItMatters": null,
-      "engineeringTopics": [
-        "Port infrastructure",
-        "Floater assembly",
-        "France 2030"
-      ]
-    },
-    {
-      "briefingItemId": "eng-item-2026-08-23-03",
       "title": "Haventus and Dajin target Ardersier offshore wind logistics",
       "oneLineSummary": "Haventus and Dajin signed an MoU to explore combining Ardersier Port infrastructure with Dajin manufacturing and transport capability for fixed and floating wind projects.",
       "category": "supply_chain",
@@ -134,25 +174,26 @@
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-08-23-04",
-      "title": "Taihan and Panstar plan Korean ROV trenchers for offshore wind cables",
-      "oneLineSummary": "Taihan Cable and Panstar Robotics agreed to develop ROV trenchers and installation solutions for offshore wind cable systems and HVDC submarine projects.",
-      "category": "technology",
-      "region": "Asia-Pacific",
+      "briefingItemId": "eng-item-2026-08-23-03",
+      "title": "France backs five ports for floating wind industrialisation",
+      "oneLineSummary": "France selected five port infrastructure projects for EUR 258.5 million of support to prepare floating wind manufacturing, assembly, storage, turbine integration and launch capacity.",
+      "category": "supply_chain",
+      "region": "Europe",
       "sourceRecordIds": [
-        "eng-src-2026-08-23-taihan-panstar"
+        "eng-src-2026-08-23-france-floating-ports-offshorewind",
+        "eng-src-2026-08-23-brestport-inflow"
       ],
-      "sourceUrl": "https://oceannews.com/news/subsea-cable/taihan-cable-and-panstar-robotics-partner-to-develop-domestic-rovs-for-hvdc-submarine-cable-projects/",
-      "explanation": "The source connects the development work to inter-array and export cable systems, cable burial and protection, grid interconnection, and HVDC submarine cable installation.",
+      "sourceUrl": "https://www.offshorewind.biz/2026/08/21/french-government-backed-floating-wind-ports-to-upgrade-quays-storage-areas/",
+      "explanation": "The selected candidate covers a multi-port French industrialisation decision rather than a single-port duplicate, while the BrestPort source remains supporting provenance for the InFloW portion of the same funding event.",
       "whyItMatters": null,
       "engineeringTopics": [
-        "ROV trenching",
-        "Submarine cable burial",
-        "HVDC export"
+        "Port infrastructure",
+        "Floater assembly",
+        "France 2030"
       ]
     },
     {
-      "briefingItemId": "eng-item-2026-08-23-05",
+      "briefingItemId": "eng-item-2026-08-23-04",
       "title": "Japan port study narrows floating wind base-case assumptions",
       "oneLineSummary": "DeepWind reported that MLIT's FY2026 floating wind port work uses a two-year build target, semi-submersible steel base case and longer tow-radius planning.",
       "category": "policy",
@@ -169,6 +210,842 @@
         "Floating wind installation",
         "Tow-out logistics"
       ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-08-23-05",
+      "title": "Taihan and Panstar plan Korean ROV trenchers for offshore wind cables",
+      "oneLineSummary": "Taihan Cable and Panstar Robotics agreed to develop ROV trenchers and installation solutions for offshore wind cable systems and HVDC submarine projects.",
+      "category": "technology",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-08-23-taihan-panstar"
+      ],
+      "sourceUrl": "https://oceannews.com/news/subsea-cable/taihan-cable-and-panstar-robotics-partner-to-develop-domestic-rovs-for-hvdc-submarine-cable-projects/",
+      "explanation": "The source connects the development work to inter-array and export cable systems, cable burial and protection, grid interconnection, and HVDC submarine cable installation.",
+      "whyItMatters": null,
+      "engineeringTopics": [
+        "ROV trenching",
+        "Submarine cable burial",
+        "HVDC export"
+      ]
     }
-  ]
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "approved_source_candidate_pool",
+    "collectionAudit": {
+      "weekStart": "2026-08-17",
+      "weekEnd": "2026-08-23",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceRegistry": "web/data/engineering-source-registry.json",
+      "sourceUniverse": "Approved Engineering source classes are defined in the machine-readable Engineering source registry.",
+      "sourcesAttempted": 17,
+      "sourcesSuccessfullyCollected": 12,
+      "sourcesFailed": 5,
+      "rawItemsCollected": 18,
+      "itemsAfterDateFiltering": 13,
+      "itemsAfterFowtRelevanceFiltering": 12,
+      "duplicateEventOverlapsRemoved": 4,
+      "candidatePoolSize": 8,
+      "notes": [
+        "The pool is a manual, source-policy collection for the latest weekly window, not an automated scrape or commercial database copy.",
+        "Duplicate reporting of the same underlying event is retained as provenance where useful but not scored as additional independent importance.",
+        "Out-of-window official sources may support provenance but are not counted as current-week candidates."
+      ],
+      "attemptedSources": [
+        {
+          "sourceId": "gwerthwchigymru-procurement",
+          "publisher": "GwerthwchiGymru / Associated British Ports",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "succeeded",
+          "result": "candidate",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "note": "Current-week Future Port Talbot procurement notice retained."
+        },
+        {
+          "sourceId": "offshorewind-biz",
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "result": "candidates_and_duplicates",
+          "rawItemsDiscovered": 3,
+          "dateWindowItems": 3,
+          "fowtRelevantItems": 3,
+          "note": "Current-week floating-wind and offshore-engineering items collected; duplicate event reports grouped."
+        },
+        {
+          "sourceId": "energy-global-wind",
+          "publisher": "Energy Global",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "result": "candidate",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "note": "Current-week Haventus/Dajin Ardersier partnership retained."
+        },
+        {
+          "sourceId": "ocean-news-technology",
+          "publisher": "Ocean News & Technology",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "result": "candidate",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "note": "Current-week Taihan/Panstar cable robotics item retained."
+        },
+        {
+          "sourceId": "deepwind",
+          "publisher": "DeepWind",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "result": "candidate",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "note": "Current-week Japan floating-wind port-planning item retained."
+        },
+        {
+          "sourceId": "japan-mlit-press",
+          "publisher": "Japan Ministry of Land, Infrastructure, Transport and Tourism",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "succeeded",
+          "result": "supporting_provenance",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Official study-group page retained as support, but publication date is outside the weekly window."
+        },
+        {
+          "sourceId": "bretagne-ocean-power-news",
+          "publisher": "Bretagne Ocean Power",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "succeeded",
+          "result": "duplicate_event",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "note": "BrestPort InFloW item overlaps the broader French ports funding event."
+        },
+        {
+          "sourceId": "stanford-events",
+          "publisher": "Stanford University",
+          "sourceClass": "conferences_universities",
+          "collectionStatus": "succeeded",
+          "result": "candidate",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "note": "Current-week technical event listing retained as a low-volume engineering-method candidate."
+        },
+        {
+          "sourceId": "baird-maritime",
+          "publisher": "Baird Maritime",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "result": "duplicate_event",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "note": "Haventus/Dajin Ardersier report overlaps the selected Energy Global event record."
+        },
+        {
+          "sourceId": "eco-magazine",
+          "publisher": "ECO Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "result": "duplicate_event",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "note": "BrestPort funding report overlaps the broader French ports funding event."
+        },
+        {
+          "sourceId": "offshore-source",
+          "publisher": "Offshore Source",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "result": "duplicate_event",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "note": "BrestPort funding report overlaps the broader French ports funding event."
+        },
+        {
+          "sourceId": "aivp-news",
+          "publisher": "AIVP",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "succeeded",
+          "result": "duplicate_or_low_specificity",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 0,
+          "note": "Newsletter-level port item was not retained as an independent candidate."
+        },
+        {
+          "sourceId": "sumitomo-corporation-news",
+          "publisher": "Sumitomo Corporation",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "out_of_window",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Gwynt Glas stake announcement was published before the weekly window."
+        },
+        {
+          "sourceId": "cierco-energy-news",
+          "publisher": "Cierco Energy",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "out_of_window",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Llyr consent announcement was published before the weekly window."
+        },
+        {
+          "sourceId": "scio-xinhua",
+          "publisher": "SCIO / Xinhua",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "out_of_window",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "CNOOC floating platform operation item was published before the weekly window."
+        },
+        {
+          "sourceId": "carbon-trust-news",
+          "publisher": "Carbon Trust",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "out_of_window",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Floating Wind JIP tender item was not a current-week publication."
+        },
+        {
+          "sourceId": "korea-offshore-wind-intelligence",
+          "publisher": "Korea Offshore Wind Intelligence",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "not_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Homepage snippets did not provide enough public source detail for a retained candidate record."
+        }
+      ],
+      "duplicateEventGroups": [
+        {
+          "eventGroup": "france_floating_wind_ports_2030",
+          "primarySourceRecordId": "eng-src-2026-08-23-france-floating-ports-offshorewind",
+          "duplicateSourceRecordIds": [
+            "eng-src-2026-08-23-brestport-inflow"
+          ],
+          "note": "Single French port-funding decision; the broader five-port article is scored, while BrestPort-specific coverage remains supporting provenance."
+        },
+        {
+          "eventGroup": "ardersier_haventus_dajin",
+          "primarySourceRecordId": "eng-src-2026-08-23-haventus-dajin",
+          "duplicateSourceRecordIds": [],
+          "note": "Additional trade-press reports were discovered for the same Haventus/Dajin MoU and not counted as independent candidates."
+        }
+      ]
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-08-23-port-talbot-consultancy",
+        "sourceRecordId": "eng-src-2026-08-23-port-talbot-consultancy",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-01",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 67,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 27,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: port, ports, consenting"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 14,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: associated british ports, port talbot",
+                "project/company event signals: procurement, support"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 11,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government, consenting, procurement",
+                "government source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 10,
+              "maxScore": 10,
+              "evidence": [
+                "government announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "GwerthwchiGymru / Associated British Ports",
+          "projectGroup": "port_talbot_celtic_sea",
+          "topicGroup": "ports",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-haventus-dajin",
+        "sourceRecordId": "eng-src-2026-08-23-haventus-dajin",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-02",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 62,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 25,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: port, manufacturing"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 21,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: haventus, dajin, ardersier",
+                "project/company event signals: mou, partnership, customers"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports",
+                "technology signal: fabrication"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Energy Global",
+          "projectGroup": "ardersier_haventus_dajin",
+          "topicGroup": "ports",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-france-floating-ports-offshorewind",
+        "sourceRecordId": "eng-src-2026-08-23-france-floating-ports-offshorewind",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-03",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 55,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 25,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: port, ports, assembly, logistics"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 10,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: france 2030",
+                "project/company event signals: selected, support"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports",
+                "technology signal: fabrication"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 4,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government, france 2030"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": "france_floating_wind_ports_2030",
+          "topicGroup": "ports",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-deepwind-mlit-ports",
+        "sourceRecordId": "eng-src-2026-08-23-deepwind-mlit-ports",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-04",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 51,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 24,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: port, ports, platform, tow"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 4,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: mlit"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 15,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: ports",
+                "technology signal: floating platforms",
+                "technology signal: installation"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: mlit"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "DeepWind",
+          "projectGroup": "japan_port_planning",
+          "topicGroup": "ports",
+          "regionHint": "Asia-Pacific"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-taihan-panstar",
+        "sourceRecordId": "eng-src-2026-08-23-taihan-panstar",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-08-23-05",
+        "rawRank": 5,
+        "finalRank": 5,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 45,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 13,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: installation, cable, hvdc, grid"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 11,
+              "maxScore": 25,
+              "evidence": [
+                "named project/company signals: taihan, panstar",
+                "project/company event signals: mou"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 15,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables",
+                "technology signal: installation",
+                "technology signal: digital"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Ocean News & Technology",
+          "projectGroup": "korean_cable_robotics",
+          "topicGroup": "cables",
+          "regionHint": "Asia-Pacific"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-stanford-offshore-wind-testing",
+        "sourceRecordId": "eng-src-2026-08-23-stanford-offshore-wind-testing",
+        "selected": false,
+        "selectedBriefingItemId": null,
+        "rawRank": 6,
+        "finalRank": null,
+        "selectionReason": "not_selected_after_diversity",
+        "diversityReason": null,
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 29,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: engineering"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "conference announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Stanford University",
+          "projectGroup": "stanford_fowt_testing",
+          "topicGroup": "engineering",
+          "regionHint": "North America"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-stillstrom-cable-control",
+        "sourceRecordId": "eng-src-2026-08-23-stillstrom-cable-control",
+        "selected": false,
+        "selectedBriefingItemId": null,
+        "rawRank": 7,
+        "finalRank": null,
+        "selectionReason": "not_selected_after_diversity",
+        "diversityReason": null,
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 23,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 9,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: cable, vessel"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: support"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: cables"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": "offshore_vessel_charging",
+          "topicGroup": "cables",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-08-23-pacifico-jindo-cluster",
+        "sourceRecordId": "eng-src-2026-08-23-pacifico-jindo-cluster",
+        "selected": false,
+        "selectedBriefingItemId": null,
+        "rawRank": 8,
+        "finalRank": null,
+        "selectionReason": "not_selected_after_diversity",
+        "diversityReason": null,
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 16,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 5,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: selected"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": "jindo_offshore_wind_cluster",
+          "topicGroup": "policy",
+          "regionHint": "Asia-Pacific"
+        }
+      }
+    ]
+  }
 }

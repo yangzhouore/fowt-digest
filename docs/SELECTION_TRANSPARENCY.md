@@ -17,12 +17,11 @@ pipeline, current `research_selection_score_v1`, and current OpenAlex metadata.
 
 For Engineering, the approved source universe is represented by the small
 machine-readable registry at `web/data/engineering-source-registry.json`, derived
-from `docs/ENGINEERING_SOURCE_POLICY.md`. The latest scored edition uses a
-retained approved-source candidate pool. For 17-23 August 2026, the count is
-the number of deduplicated, basic-FOWT-relevant weekly candidates collected from the approved Engineering
-source universe before scoring. Duplicate reports and out-of-window official
-supporting pages may remain in the static source records as provenance, but they
-are not counted as independent candidates.
+from `docs/ENGINEERING_SOURCE_POLICY.md`. Engineering candidate counts are the
+number of deduplicated, basic-FOWT-relevant weekly candidates collected from the
+approved Engineering source universe before scoring. Duplicate reports and
+out-of-window official supporting pages may remain in the static source records
+as provenance, but they are not counted as independent candidates.
 
 Historical editions only expose candidate-pool pages when candidate records can
 be retained or reconstructed reliably. Reconstructed Research pools must not be
@@ -31,14 +30,14 @@ records, metadata, indexing, and links can change over time. The 2026-08-16
 Research pool is not published because the reconstruction did not complete
 reliably.
 
-Historical Engineering pools from April-August 2026 are labeled separately when
-they were reconstructed from retained static source records rather than from an
-original full multi-source collection artifact. They use exact weekly date
-filtering, basic FOWT/offshore-wind relevance filtering, current
-`engineering_selection_score_v1`, and the same deterministic diversity layer, but
-may undercount candidates that were never retained in the historical JSON. Weeks
-with no reliable in-window retained candidates remain unscored instead of being
-filled from guesses.
+Historical Engineering pools from April-August 2026 are labeled as reconstructed
+historical registry-source pools. They use the approved 42-source registry, exact
+weekly date filtering, basic FOWT/offshore-wind relevance filtering,
+duplicate/event grouping, current `engineering_selection_score_v1`, and the same
+deterministic diversity layer. They are not described as original retained pools
+because publisher indexes and source availability can change over time. Weekly
+briefings select up to five highlights; weeks with fewer strong independent
+Engineering developments are intentionally not padded.
 
 ## Research Selection
 

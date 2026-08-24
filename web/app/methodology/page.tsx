@@ -90,19 +90,19 @@ const engineeringMethod = [
   },
   {
     title: "Publish",
-    text: "Select five source-backed highlights. The website renders committed static JSON and does not collect or score news at runtime.",
+    text: "Select up to five source-backed highlights. Weeks with fewer strong independent Engineering developments are not padded. The website renders committed static JSON and does not collect or score news at runtime.",
   },
 ];
 
 const engineeringFlow = [
-  "Approved engineering sources",
+  "Approved 42-source registry",
   "collect weekly items",
   "normalize / deduplicate",
   "FOWT relevance filter",
   "engineering_selection_score_v1",
   "importance ranking",
   "source/topic diversity",
-  "5 Engineering highlights",
+  "Up to 5 Engineering highlights",
 ];
 
 const engineeringScoreComponents = [

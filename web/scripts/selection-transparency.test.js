@@ -355,35 +355,30 @@ test("engineering diversity layer preserves five selected highlights from candid
 });
 test("engineering historical backfilled weeks retain scored reconstructed candidate pools", () => {
   const expectedCounts = new Map([
-    ["2026-04-05", 5],
+    ["2026-04-05", 2],
     ["2026-04-12", 2],
-    ["2026-04-19", 1],
-    ["2026-04-26", 3],
+    ["2026-04-19", 3],
+    ["2026-04-26", 2],
     ["2026-05-03", 1],
-    ["2026-05-10", 5],
+    ["2026-05-10", 4],
     ["2026-05-17", 1],
-    ["2026-05-24", 4],
+    ["2026-05-24", 3],
     ["2026-05-31", 5],
     ["2026-06-07", 1],
-    ["2026-06-21", 5],
-    ["2026-06-28", 5],
+    ["2026-06-14", 3],
+    ["2026-06-21", 3],
+    ["2026-06-28", 4],
     ["2026-07-05", 2],
-    ["2026-07-12", 5],
+    ["2026-07-12", 4],
     ["2026-07-19", 3],
     ["2026-07-26", 5],
-    ["2026-08-02", 4],
+    ["2026-08-02", 2],
     ["2026-08-09", 3],
-    ["2026-08-16", 5],
+    ["2026-08-16", 4],
     ["2026-08-23", 8],
   ]);
-  const incompleteWeeks = new Set(["2026-06-14"]);
 
   for (const briefing of engineeringBackfillBriefings) {
-    if (incompleteWeeks.has(briefing.weekEnd)) {
-      assert.equal(briefing.engineeringSelection, undefined);
-      continue;
-    }
-
     const expectedCount = expectedCounts.get(briefing.weekEnd);
     assert.ok(expectedCount, `missing expected count for ${briefing.weekEnd}`);
     assert.ok(briefing.engineeringSelection, `missing engineeringSelection for ${briefing.weekEnd}`);
@@ -391,6 +386,17 @@ test("engineering historical backfilled weeks retain scored reconstructed candid
     assert.equal(briefing.engineeringSelection.collectionAudit.candidatePoolSize, expectedCount);
     assert.equal(briefing.engineeringSelection.candidates.length, expectedCount);
     assert.equal(briefing.checkedResultCount, expectedCount);
+    if (briefing.weekEnd !== "2026-08-23") {
+      assert.equal(
+        briefing.engineeringSelection.candidatePoolType,
+        "reconstructed_historical_registry_source_pool",
+      );
+      assert.equal(
+        briefing.engineeringSelection.collectionAudit.sourceRegistry,
+        "web/data/engineering-source-registry.json",
+      );
+      assert.ok(briefing.briefingItems.length <= 5);
+    }
 
     const regenerated = buildEngineeringCandidatePool(briefing);
     assert.deepEqual(briefing.engineeringSelection.candidates, regenerated.candidates);

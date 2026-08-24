@@ -15,9 +15,11 @@ were already present in the repository. Reconstructed historical pools are newly
 collected for the exact weekly publication window using the current deterministic
 pipeline, current `research_selection_score_v1`, and current OpenAlex metadata.
 
-For Engineering, the latest scored edition uses a retained approved-source
-candidate pool. For 17-23 August 2026, the count is the number of deduplicated,
-basic-FOWT-relevant weekly candidates collected from the approved Engineering
+For Engineering, the approved source universe is represented by the small
+machine-readable registry at `web/data/engineering-source-registry.json`, derived
+from `docs/ENGINEERING_SOURCE_POLICY.md`. The latest scored edition uses a
+retained approved-source candidate pool. For 17-23 August 2026, the count is
+the number of deduplicated, basic-FOWT-relevant weekly candidates collected from the approved Engineering
 source universe before scoring. Duplicate reports and out-of-window official
 supporting pages may remain in the static source records as provenance, but they
 are not counted as independent candidates.

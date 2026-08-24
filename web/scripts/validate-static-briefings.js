@@ -1,6 +1,11 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require("node:fs");
 const path = require("node:path");
+const {
+  loadEngineeringSourceRegistry,
+  validateEngineeringSourceRegistry,
+  validateRegistryBackedCollectionAudit,
+} = require("./engineering-source-registry.js");
 
 const SOURCE_TYPES = new Set([
   "government_announcement",
@@ -54,19 +59,24 @@ const ENGINEERING_SELECTION_COMPONENTS = new Map([
 ]);
 
 function validateRepository(rootDir = process.cwd()) {
+  const registry = loadEngineeringSourceRegistry(rootDir);
   return validateStaticBriefings({
     briefingDir: path.join(rootDir, "data", "briefings"),
     adapterPath: path.join(rootDir, "data", "engineering-briefing-adapter.ts"),
+    registry,
   });
 }
 
-function validateStaticBriefings({ briefingDir, adapterPath }) {
+function validateStaticBriefings({ briefingDir, adapterPath, registry }) {
   const errors = [];
+  if (registry !== undefined) {
+    errors.push(...validateEngineeringSourceRegistry(registry));
+  }
   const briefingFiles = listJsonFiles(briefingDir, errors);
   const adapter = parseAdapterRegistration(adapterPath, errors);
 
   validateAdapterRegistration({ adapter, briefingFiles, briefingDir, errors });
-  validateBriefingFiles({ briefingFiles, briefingDir, errors });
+  validateBriefingFiles({ briefingFiles, briefingDir, registry, errors });
 
   return errors;
 }
@@ -155,7 +165,7 @@ function validateAdapterRegistration({ adapter, briefingFiles, briefingDir, erro
   }
 }
 
-function validateBriefingFiles({ briefingFiles, briefingDir, errors }) {
+function validateBriefingFiles({ briefingFiles, briefingDir, registry, errors }) {
   if (briefingFiles.length === 0) {
     errors.push(`${briefingDir}: at least one engineering briefing JSON file is required`);
     return;
@@ -168,7 +178,7 @@ function validateBriefingFiles({ briefingFiles, briefingDir, errors }) {
     if (briefing === undefined) {
       continue;
     }
-    validateBriefing({ briefing, fileName, slugs, errors });
+    validateBriefing({ briefing, fileName, slugs, registry, errors });
   }
 }
 
@@ -181,7 +191,7 @@ function parseJsonFile(filePath, fileName, errors) {
   }
 }
 
-function validateBriefing({ briefing, fileName, slugs, errors }) {
+function validateBriefing({ briefing, fileName, slugs, registry, errors }) {
   if (!isRecord(briefing)) {
     errors.push(`${fileName}: engineering briefing must be an object`);
     return;
@@ -222,6 +232,7 @@ function validateBriefing({ briefing, fileName, slugs, errors }) {
       itemIds,
       sourceRecordCount: briefing.sourceRecords.length,
       fileName,
+      registry,
       errors,
     });
   }
@@ -314,6 +325,7 @@ function validateEngineeringSelection({
   itemIds,
   sourceRecordCount,
   fileName,
+  registry,
   errors,
 }) {
   if (!isRecord(selection)) {
@@ -322,6 +334,9 @@ function validateEngineeringSelection({
   }
   const label = `${fileName}: engineeringSelection`;
   requiredString(selection.candidatePoolType, label, "candidatePoolType", errors);
+  if (registry !== undefined && selection.collectionAudit !== undefined) {
+    errors.push(...validateRegistryBackedCollectionAudit(selection.collectionAudit, registry, label));
+  }
   validateSelectionModel(selection.selectionModel, label, errors);
   if (!Array.isArray(selection.candidates)) {
     errors.push(`${label}: candidates must be an array`);

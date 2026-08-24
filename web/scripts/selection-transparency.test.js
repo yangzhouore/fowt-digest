@@ -8,6 +8,11 @@ const {
   buildEngineeringCandidatePool,
   scoreEngineeringSourceRecord,
 } = require("./engineering-selection-scoring.js");
+const {
+  SOURCE_CLASSES,
+  validateEngineeringSourceRegistry,
+  validateRegistryBackedCollectionAudit,
+} = require("./engineering-source-registry.js");
 
 const researchCandidateDir = path.join(__dirname, "..", "data", "research-candidates");
 const researchPools = fs.readdirSync(researchCandidateDir)
@@ -25,6 +30,9 @@ const researchDigests = new Map(
     }),
 );
 const engineeringBriefingDir = path.join(__dirname, "..", "data", "briefings");
+const engineeringSourceRegistry = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "..", "data", "engineering-source-registry.json"), "utf8"),
+);
 const engineeringBriefing = JSON.parse(
   fs.readFileSync(path.join(engineeringBriefingDir, "2026-08-23.json"), "utf8"),
 );
@@ -222,7 +230,12 @@ test("engineering latest candidate transparency stores an audited multi-source c
   assert.equal(engineeringBriefing.checkedResultCount, 8);
   assert.equal(selection.collectionAudit.candidatePoolSize, 8);
   assert.equal(selection.collectionAudit.sourcesAttempted, 17);
-  assert.equal(selection.collectionAudit.duplicateEventOverlapsRemoved, 2);
+  assert.equal(selection.collectionAudit.sourcesSuccessfullyCollected, 12);
+  assert.equal(selection.collectionAudit.sourcesFailed, 5);
+  assert.equal(selection.collectionAudit.rawItemsCollected, 18);
+  assert.equal(selection.collectionAudit.itemsAfterDateFiltering, 13);
+  assert.equal(selection.collectionAudit.itemsAfterFowtRelevanceFiltering, 12);
+  assert.equal(selection.collectionAudit.duplicateEventOverlapsRemoved, 4);
   assert.equal(selection.candidates.length, selection.collectionAudit.candidatePoolSize);
 
   const candidateSourceIds = new Set(selection.candidates.map((candidate) => candidate.sourceRecordId));
@@ -251,7 +264,36 @@ test("engineering latest candidate transparency stores an audited multi-source c
   }
 });
 
+test("engineering source registry covers approved source classes", () => {
+  assert.deepEqual(validateEngineeringSourceRegistry(engineeringSourceRegistry), []);
+  assert.equal(engineeringSourceRegistry.sources.length, 42);
 
+  const classes = new Set(engineeringSourceRegistry.sources.map((source) => source.sourceClass));
+  for (const sourceClass of SOURCE_CLASSES) {
+    assert.ok(classes.has(sourceClass), `missing source class ${sourceClass}`);
+  }
+});
+
+test("engineering latest collection audit is backed by registry source records", () => {
+  const audit = engineeringBriefing.engineeringSelection.collectionAudit;
+  const registryIds = new Set(engineeringSourceRegistry.sources.map((source) => source.sourceId));
+
+  assert.deepEqual(
+    validateRegistryBackedCollectionAudit(
+      audit,
+      engineeringSourceRegistry,
+      "2026-08-23.json: engineeringSelection",
+    ),
+    [],
+  );
+  assert.equal(audit.sourceRegistry, "web/data/engineering-source-registry.json");
+  assert.equal(audit.attemptedSources.length, audit.sourcesAttempted);
+  assert.ok(audit.attemptedSources.every((source) => registryIds.has(source.sourceId)));
+  assert.equal(
+    audit.attemptedSources.filter((source) => source.collectionStatus === "succeeded").length,
+    audit.sourcesSuccessfullyCollected,
+  );
+});
 test("engineering persisted latest pool matches regenerated scoring output", () => {
   const regenerated = buildEngineeringCandidatePool(engineeringBriefing);
 

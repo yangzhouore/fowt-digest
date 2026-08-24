@@ -2500,6 +2500,14 @@ dd {
 }
 
 /* Selection transparency */
+.candidate-pool-note {
+  max-width: 760px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
 .selection-score-inline {
   margin: -4px 0 14px;
   color: var(--accent);

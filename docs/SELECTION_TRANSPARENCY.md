@@ -5,24 +5,25 @@ Research Digest or Engineering Briefing reading experience.
 
 ## Curated From X Results
 
-`Curated from X results` means the number of retained records available to the
+`Curated from X results` means the number of candidate records available to the
 weekly selection workflow for that edition.
 
 For Research, the count is the deterministic ranked candidate count from the
-OpenAlex pipeline. Retained candidate-pool pages currently exist for weekly
-editions ending 2026-07-19, 2026-07-26, 2026-08-02, 2026-08-09, and
-2026-08-23. These weeks were rebuilt from local classified OpenAlex run
-artifacts using `research_selection_score_v1` and a five-paper selection limit.
+OpenAlex pipeline. Candidate-pool pages are either retained or reconstructed.
+Retained historical pools come from local classified OpenAlex run artifacts that
+were already present in the repository. Reconstructed historical pools are newly
+collected for the exact weekly publication window using the current deterministic
+pipeline, current `research_selection_score_v1`, and current OpenAlex metadata.
 
 For Engineering, the count is the number of retained source records in the
 static briefing JSON. For 17-23 August 2026, the retained pool contains 6 source
 records and 5 selected highlights.
 
-Historical editions only expose candidate-pool pages when candidate records were
-actually retained. April, May, June, early July, and 2026-08-16 editions that
-exist only as selected-paper digest snapshots or manual gap-fill records do not
-show candidate-pool links. Missing candidate-pool data must not be reconstructed
-from memory or inferred counts.
+Historical editions only expose candidate-pool pages when candidate records can
+be retained or reconstructed reliably. Reconstructed pools must not be described
+as the original historical candidate pools because upstream OpenAlex records,
+metadata, indexing, and links can change over time. The 2026-08-16 pool is not
+published because the reconstruction did not complete reliably.
 
 ## Research Selection
 
@@ -41,7 +42,7 @@ score with these components:
 | Research value | 15 | Matched keyword groups for validation, datasets, modelling, optimization and design, plus available abstract evidence. |
 | Venue quality | 10 | OpenAlex source metadata, publication type and transparent venue/repository signals. |
 | Metadata quality | 10 | DOI, source URL, author list, source title, abstract, topic tags and full-text/abstract availability. |
-| Recency | 5 | Publication date relative to the newest retained candidate in the same weekly pool. |
+| Recency | 5 | Publication date relative to the newest candidate in the same weekly pool. |
 
 Ranking order is deterministic:
 

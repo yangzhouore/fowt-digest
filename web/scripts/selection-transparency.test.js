@@ -33,6 +33,21 @@ const expectedScoreComponents = new Set([
 ]);
 
 const expectedResearchCounts = new Map([
+  ["2026-04-05", 118],
+  ["2026-04-12", 91],
+  ["2026-04-19", 95],
+  ["2026-04-26", 90],
+  ["2026-05-03", 197],
+  ["2026-05-10", 95],
+  ["2026-05-17", 81],
+  ["2026-05-24", 92],
+  ["2026-05-31", 93],
+  ["2026-06-07", 100],
+  ["2026-06-14", 91],
+  ["2026-06-21", 96],
+  ["2026-06-28", 101],
+  ["2026-07-05", 144],
+  ["2026-07-12", 99],
   ["2026-07-19", 82],
   ["2026-07-26", 77],
   ["2026-08-02", 92],
@@ -40,11 +55,34 @@ const expectedResearchCounts = new Map([
   ["2026-08-23", 90],
 ]);
 
-test("research candidate pools exist only for retained reproducible weeks", () => {
+const retainedWeeks = new Set([
+  "2026-07-19",
+  "2026-07-26",
+  "2026-08-02",
+  "2026-08-09",
+  "2026-08-23",
+]);
+
+const failedReconstructionWeeks = new Set(["2026-08-16"]);
+
+test("research candidate pools are available for retained and reconstructed weeks", () => {
   assert.deepEqual(
     researchPools.map((pool) => pool.weekEnd),
     Array.from(expectedResearchCounts.keys()),
   );
+  assert.ok(!researchPools.some((pool) => failedReconstructionWeeks.has(pool.weekEnd)));
+});
+
+test("research candidate pools distinguish retained and reconstructed history", () => {
+  for (const pool of researchPools) {
+    if (retainedWeeks.has(pool.weekEnd)) {
+      assert.equal(pool.candidatePoolKind, "retained_historical");
+      assert.match(pool.candidatePoolNote, /Retained historical candidate pool/);
+    } else {
+      assert.equal(pool.candidatePoolKind, "reconstructed_historical");
+      assert.match(pool.candidatePoolNote, /current OpenAlex metadata/);
+    }
+  }
 });
 
 test("research candidate counts match retained ranked candidates and digest counts", () => {

@@ -67,7 +67,7 @@ const scoreComponents = [
   {
     label: "Recency",
     points: 5,
-    text: "Publication date relative to the newest candidate retained in the same weekly pool.",
+    text: "Publication date relative to the newest candidate in the same weekly pool.",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function MethodologyPage() {
           <p className="eyebrow">Research</p>
           <h2 id="research-method-heading">Paper selection</h2>
           <p>
-            A deterministic OpenAlex pipeline scores each retained candidate
+            A deterministic OpenAlex pipeline scores each weekly candidate
             before ranking and selects the first five eligible papers per week.
           </p>
           <ol className="methodology-step-list">
@@ -208,6 +208,13 @@ export default function MethodologyPage() {
           The score is computed before ranking. Ranking uses the score first,
           then classification, publication date, and paper ID for deterministic
           tie-breaking.
+        </p>
+        <p>
+          Candidate-pool pages are labeled as retained when the historical run
+          artifacts were already available, and reconstructed when the same
+          weekly window was recollected later with the current pipeline. A
+          reconstructed pool may differ from what OpenAlex would have returned
+          at the original publication date because upstream metadata can change.
         </p>
       </section>
 

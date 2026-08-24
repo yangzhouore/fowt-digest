@@ -61,6 +61,12 @@ export default async function ResearchCandidatesPage({
           The deterministic Research pipeline ranked {pool.candidateCount} OpenAlex
           candidates and selected {selectedCount} papers for the weekly digest.
         </p>
+        <p className="candidate-pool-note">
+          {pool.candidatePoolKind === "reconstructed_historical"
+            ? "Reconstructed historical candidate pool"
+            : "Retained historical candidate pool"}
+          : {pool.candidatePoolNote}
+        </p>
       </section>
 
       <section className="edition-meta" aria-labelledby="candidate-meta-heading">
@@ -69,6 +75,14 @@ export default async function ResearchCandidatesPage({
           <div>
             <dt>Candidate pool</dt>
             <dd>{pool.candidateCount}</dd>
+          </div>
+          <div>
+            <dt>Pool type</dt>
+            <dd>
+              {pool.candidatePoolKind === "reconstructed_historical"
+                ? "Reconstructed historical"
+                : "Retained historical"}
+            </dd>
           </div>
           <div>
             <dt>Selected</dt>

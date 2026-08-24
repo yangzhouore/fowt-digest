@@ -9399,5 +9399,7 @@
         }
       ]
     }
-  ]
+  ],
+  "candidatePoolKind": "retained_historical",
+  "candidatePoolNote": "Retained historical candidate pool rebuilt from local classified OpenAlex run artifacts using the current accepted scoring model."
 }

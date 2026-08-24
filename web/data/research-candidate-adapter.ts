@@ -3,11 +3,29 @@ import researchCandidates20260809Json from "./research-candidates/2026-08-09.jso
 import researchCandidates20260802Json from "./research-candidates/2026-08-02.json";
 import researchCandidates20260726Json from "./research-candidates/2026-07-26.json";
 import researchCandidates20260719Json from "./research-candidates/2026-07-19.json";
+import researchCandidates20260712Json from "./research-candidates/2026-07-12.json";
+import researchCandidates20260705Json from "./research-candidates/2026-07-05.json";
+import researchCandidates20260628Json from "./research-candidates/2026-06-28.json";
+import researchCandidates20260621Json from "./research-candidates/2026-06-21.json";
+import researchCandidates20260614Json from "./research-candidates/2026-06-14.json";
+import researchCandidates20260607Json from "./research-candidates/2026-06-07.json";
+import researchCandidates20260531Json from "./research-candidates/2026-05-31.json";
+import researchCandidates20260524Json from "./research-candidates/2026-05-24.json";
+import researchCandidates20260517Json from "./research-candidates/2026-05-17.json";
+import researchCandidates20260510Json from "./research-candidates/2026-05-10.json";
+import researchCandidates20260503Json from "./research-candidates/2026-05-03.json";
+import researchCandidates20260426Json from "./research-candidates/2026-04-26.json";
+import researchCandidates20260419Json from "./research-candidates/2026-04-19.json";
+import researchCandidates20260412Json from "./research-candidates/2026-04-12.json";
+import researchCandidates20260405Json from "./research-candidates/2026-04-05.json";
+
 
 
 type PipelineResearchCandidatePool = {
   schemaVersion: string;
   candidateType: string;
+  candidatePoolKind: "retained_historical" | "reconstructed_historical";
+  candidatePoolNote: string;
   runId: string;
   sourceName: string;
   weekStart: string;
@@ -69,6 +87,8 @@ export type ResearchSelectionScoreComponent = {
 export type ResearchCandidatePool = {
   slug: string;
   dateRange: string;
+  candidatePoolKind: "retained_historical" | "reconstructed_historical";
+  candidatePoolNote: string;
   runId: string;
   sourceName: string;
   generatedAt: string;
@@ -110,6 +130,21 @@ const researchCandidateJsonFiles = [
   researchCandidates20260802Json,
   researchCandidates20260726Json,
   researchCandidates20260719Json,
+  researchCandidates20260712Json,
+  researchCandidates20260705Json,
+  researchCandidates20260628Json,
+  researchCandidates20260621Json,
+  researchCandidates20260614Json,
+  researchCandidates20260607Json,
+  researchCandidates20260531Json,
+  researchCandidates20260524Json,
+  researchCandidates20260517Json,
+  researchCandidates20260510Json,
+  researchCandidates20260503Json,
+  researchCandidates20260426Json,
+  researchCandidates20260419Json,
+  researchCandidates20260412Json,
+  researchCandidates20260405Json,
 ];
 
 const researchCandidatePools = researchCandidateJsonFiles
@@ -137,6 +172,8 @@ function adaptResearchCandidatePool(
   return {
     slug: pool.weekEnd,
     dateRange: formatDateRange(pool.weekStart, pool.weekEnd),
+    candidatePoolKind: pool.candidatePoolKind,
+    candidatePoolNote: pool.candidatePoolNote,
     runId: pool.runId,
     sourceName: pool.sourceName,
     generatedAt: pool.generatedAt,
@@ -187,6 +224,13 @@ function validateResearchCandidatePool(
   const pool = value as Partial<PipelineResearchCandidatePool>;
   requiredString(pool.schemaVersion, "schemaVersion");
   requiredString(pool.candidateType, "candidateType");
+  requiredString(pool.candidatePoolNote, "candidatePoolNote");
+  if (
+    pool.candidatePoolKind !== "retained_historical" &&
+    pool.candidatePoolKind !== "reconstructed_historical"
+  ) {
+    throw new Error("research candidate pool requires valid candidatePoolKind");
+  }
   requiredString(pool.runId, "runId");
   requiredString(pool.sourceName, "sourceName");
   requiredString(pool.weekStart, "weekStart");

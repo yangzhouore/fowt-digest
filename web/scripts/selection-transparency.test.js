@@ -4,14 +4,20 @@ const fs = require("node:fs");
 const path = require("node:path");
 const test = require("node:test");
 
-const researchPool = JSON.parse(
-  fs.readFileSync(
-    path.join(__dirname, "..", "data", "research-candidates", "2026-08-23.json"),
-    "utf8",
-  ),
-);
-const researchDigest = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "..", "data", "digests", "2026-08-23.json"), "utf8"),
+const researchCandidateDir = path.join(__dirname, "..", "data", "research-candidates");
+const researchPools = fs.readdirSync(researchCandidateDir)
+  .filter((fileName) => fileName.endsWith(".json"))
+  .sort()
+  .map((fileName) => JSON.parse(fs.readFileSync(path.join(researchCandidateDir, fileName), "utf8")));
+const researchDigests = new Map(
+  fs.readdirSync(path.join(__dirname, "..", "data", "digests"))
+    .filter((fileName) => fileName.endsWith(".json"))
+    .map((fileName) => {
+      const digest = JSON.parse(
+        fs.readFileSync(path.join(__dirname, "..", "data", "digests", fileName), "utf8"),
+      );
+      return [digest.weekEnd, digest];
+    }),
 );
 const engineeringBriefing = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "data", "briefings", "2026-08-23.json"), "utf8"),
@@ -26,41 +32,65 @@ const expectedScoreComponents = new Set([
   "recency",
 ]);
 
-test("research candidate count matches retained ranked candidates and digest count", () => {
-  assert.equal(researchPool.candidates.length, researchPool.candidateCount);
-  assert.equal(researchDigest.checkedResultCount, researchPool.candidateCount);
-  assert.equal(researchPool.candidateCount, 90);
+const expectedResearchCounts = new Map([
+  ["2026-07-19", 82],
+  ["2026-07-26", 77],
+  ["2026-08-02", 92],
+  ["2026-08-09", 106],
+  ["2026-08-23", 90],
+]);
+
+test("research candidate pools exist only for retained reproducible weeks", () => {
+  assert.deepEqual(
+    researchPools.map((pool) => pool.weekEnd),
+    Array.from(expectedResearchCounts.keys()),
+  );
+});
+
+test("research candidate counts match retained ranked candidates and digest counts", () => {
+  for (const pool of researchPools) {
+    const digest = researchDigests.get(pool.weekEnd);
+    assert.ok(digest, `missing digest ${pool.weekEnd}`);
+    assert.equal(pool.candidates.length, pool.candidateCount);
+    assert.equal(digest.checkedResultCount, pool.candidateCount);
+    assert.equal(pool.candidateCount, expectedResearchCounts.get(pool.weekEnd));
+  }
 });
 
 test("research selected candidates match weekly digest selected papers", () => {
-  const selectedCandidateIds = researchPool.candidates
-    .filter((candidate) => candidate.selected)
-    .map((candidate) => candidate.candidateId);
-  const digestPaperIds = researchDigest.selectedPapers.map((paper) => paper.paperId);
+  for (const pool of researchPools) {
+    const digest = researchDigests.get(pool.weekEnd);
+    const selectedCandidateIds = pool.candidates
+      .filter((candidate) => candidate.selected)
+      .map((candidate) => candidate.candidateId);
+    const digestPaperIds = digest.selectedPapers.map((paper) => paper.paperId);
 
-  assert.deepEqual(selectedCandidateIds, digestPaperIds);
+    assert.deepEqual(selectedCandidateIds, digestPaperIds);
+  }
 });
 
 test("research selection scores are component totals from the deterministic model", () => {
-  assert.equal(researchPool.scoreModel.id, "research_selection_score_v1");
+  for (const pool of researchPools) {
+    assert.equal(pool.scoreModel.id, "research_selection_score_v1");
 
-  for (const candidate of researchPool.candidates) {
-    assert.equal(candidate.scoreComponents.length, expectedScoreComponents.size);
-    const componentIds = new Set(candidate.scoreComponents.map((component) => component.componentId));
-    assert.deepEqual(componentIds, expectedScoreComponents);
+    for (const candidate of pool.candidates) {
+      assert.equal(candidate.scoreComponents.length, expectedScoreComponents.size);
+      const componentIds = new Set(candidate.scoreComponents.map((component) => component.componentId));
+      assert.deepEqual(componentIds, expectedScoreComponents);
 
-    const total = candidate.scoreComponents.reduce((sum, component) => {
-      assert.ok(Number.isInteger(component.score));
-      assert.ok(Number.isInteger(component.maxScore));
-      assert.ok(component.score >= 0);
-      assert.ok(component.maxScore > 0);
-      assert.ok(component.score <= component.maxScore);
-      assert.ok(Array.isArray(component.evidence));
-      return sum + component.score;
-    }, 0);
+      const total = candidate.scoreComponents.reduce((sum, component) => {
+        assert.ok(Number.isInteger(component.score));
+        assert.ok(Number.isInteger(component.maxScore));
+        assert.ok(component.score >= 0);
+        assert.ok(component.maxScore > 0);
+        assert.ok(component.score <= component.maxScore);
+        assert.ok(Array.isArray(component.evidence));
+        return sum + component.score;
+      }, 0);
 
-    assert.equal(candidate.selectionScore, total);
-    assert.ok(candidate.selectionScore >= 0 && candidate.selectionScore <= 100);
+      assert.equal(candidate.selectionScore, total);
+      assert.ok(candidate.selectionScore >= 0 && candidate.selectionScore <= 100);
+    }
   }
 });
 
@@ -71,47 +101,54 @@ test("research candidates are ordered by score with deterministic tie-breakers",
     "Not Relevant": 2,
   };
 
-  for (let index = 1; index < researchPool.candidates.length; index += 1) {
-    const previous = researchPool.candidates[index - 1];
-    const current = researchPool.candidates[index];
+  for (const pool of researchPools) {
+    for (let index = 1; index < pool.candidates.length; index += 1) {
+      const previous = pool.candidates[index - 1];
+      const current = pool.candidates[index];
 
-    const previousKey = [
-      -previous.selectionScore,
-      priority[previous.classification] ?? 99,
-      -Date.parse(`${previous.publishedDate}T00:00:00Z`),
-      previous.candidateId,
-    ];
-    const currentKey = [
-      -current.selectionScore,
-      priority[current.classification] ?? 99,
-      -Date.parse(`${current.publishedDate}T00:00:00Z`),
-      current.candidateId,
-    ];
+      const previousKey = [
+        -previous.selectionScore,
+        priority[previous.classification] ?? 99,
+        -Date.parse(`${previous.publishedDate}T00:00:00Z`),
+        previous.candidateId,
+      ];
+      const currentKey = [
+        -current.selectionScore,
+        priority[current.classification] ?? 99,
+        -Date.parse(`${current.publishedDate}T00:00:00Z`),
+        current.candidateId,
+      ];
 
-    assert.ok(compareTuple(previousKey, currentKey) <= 0);
+      assert.ok(compareTuple(previousKey, currentKey) <= 0);
+    }
   }
 });
 
 test("research selected top five are the first eligible scored records", () => {
-  const selected = researchPool.candidates.filter((candidate) => candidate.selected);
-  const expectedSelected = researchPool.candidates
-    .filter((candidate) => candidate.classification !== "Not Relevant")
-    .slice(0, researchPool.selectionLimit);
+  for (const pool of researchPools) {
+    const selected = pool.candidates.filter((candidate) => candidate.selected);
+    const expectedSelected = pool.candidates
+      .filter((candidate) => candidate.classification !== "Not Relevant")
+      .slice(0, pool.selectionLimit);
 
-  assert.equal(selected.length, researchPool.selectionLimit);
-  assert.deepEqual(
-    selected.map((candidate) => candidate.candidateId),
-    expectedSelected.map((candidate) => candidate.candidateId),
-  );
-  assert.ok(selected.every((candidate) => candidate.selectionReason === "selected_within_limit"));
+    assert.equal(pool.selectionLimit, 5);
+    assert.equal(selected.length, pool.selectionLimit);
+    assert.deepEqual(
+      selected.map((candidate) => candidate.candidateId),
+      expectedSelected.map((candidate) => candidate.candidateId),
+    );
+    assert.ok(selected.every((candidate) => candidate.selectionReason === "selected_within_limit"));
+  }
 });
 
 test("research candidates keep compact source provenance", () => {
-  for (const candidate of researchPool.candidates) {
-    assert.ok(candidate.title);
-    assert.ok(candidate.publishedDate);
-    assert.ok(candidate.publicationType);
-    assert.ok(candidate.sourceUrl || candidate.doi);
+  for (const pool of researchPools) {
+    for (const candidate of pool.candidates) {
+      assert.ok(candidate.title);
+      assert.ok(candidate.publishedDate);
+      assert.ok(candidate.publicationType);
+      assert.ok(candidate.sourceUrl || candidate.doi);
+    }
   }
 });
 

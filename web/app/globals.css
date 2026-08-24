@@ -802,6 +802,88 @@ dd {
   margin: 0;
 }
 
+.research-selection-visual {
+  border-top: 1px solid var(--ink);
+  padding-top: 26px;
+}
+
+.research-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  margin: 28px 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.research-flow li {
+  position: relative;
+  padding: 16px 24px 16px 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.research-flow li:not(:last-child)::after {
+  content: "->";
+  position: absolute;
+  right: 10px;
+  color: var(--accent);
+}
+
+.score-formula {
+  display: grid;
+  grid-template-columns: minmax(240px, 340px) minmax(0, 1fr);
+  gap: 34px;
+  margin: 26px 0;
+}
+
+.score-formula dl {
+  margin: 0;
+  border-top: 1px solid var(--ink);
+}
+
+.score-formula dl div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 48px;
+  gap: 18px;
+  border-bottom: 1px solid var(--border);
+  padding: 9px 0;
+}
+
+.score-formula dt,
+.score-formula dd {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.score-formula dd {
+  text-align: right;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.score-formula .score-total {
+  border-top: 1px solid var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.score-component-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.score-component-copy p {
+  margin: 0;
+}
+
 .text-list {
   columns: 2;
   margin: 0;
@@ -817,6 +899,31 @@ dd {
   .methodology-step-list li {
     grid-template-columns: 1fr;
     gap: 6px;
+  }
+
+  .research-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .research-flow li {
+    padding-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .research-flow li:last-child {
+    border-bottom: 0;
+  }
+
+  .research-flow li:not(:last-child)::after {
+    content: "->";
+    position: static;
+    display: block;
+    margin-top: 8px;
+  }
+
+  .score-formula {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .text-list {

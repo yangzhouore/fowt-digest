@@ -12,16 +12,62 @@ const researchMethod = [
     text: "Normalise metadata, reject malformed records, and merge exact duplicates.",
   },
   {
-    title: "Filter",
-    text: "Use title, abstract, and topic tags to label papers as Relevant, Possibly Relevant, or Not Relevant.",
+    title: "Classify",
+    text: "Use deterministic title, abstract, and topic-tag signals to label papers as Relevant, Possibly Relevant, or Not Relevant.",
   },
   {
-    title: "Select",
-    text: "Rank by relevance, newest date, then paper ID; select up to six Relevant or Possibly Relevant papers.",
+    title: "Score",
+    text: "Compute research_selection_score_v1 before ranking. No LLM subjective scoring is used.",
+  },
+  {
+    title: "Rank",
+    text: "Order by Selection Score, then classification, publication date, and paper ID as stable tie-breakers.",
   },
   {
     title: "Publish",
-    text: "Copy selected records to static digest JSON; the website does not re-rank or rewrite them.",
+    text: "Select the first five eligible papers and copy them to static digest JSON; the website does not re-rank or rewrite them.",
+  },
+];
+
+const researchFlow = [
+  "OpenAlex candidates",
+  "normalize / deduplicate",
+  "FOWT classification",
+  "research_selection_score_v1",
+  "deterministic ranking",
+  "Top 5 Research Digest",
+];
+
+const scoreComponents = [
+  {
+    label: "FOWT relevance",
+    points: 35,
+    text: "Classifier outcome, explicit floating-offshore-wind phrases, combined floating and wind terms, and classifier confidence.",
+  },
+  {
+    label: "Technical specificity",
+    points: 25,
+    text: "Matched technical keyword groups in title, topics, and abstract: aerodynamics, hydrodynamics, mooring, structures, controls, platforms, cables/grid, modelling, and economics.",
+  },
+  {
+    label: "Research value",
+    points: 15,
+    text: "Deterministic signals for validation, datasets, modelling, optimization, design, and available abstract evidence.",
+  },
+  {
+    label: "Venue quality",
+    points: 10,
+    text: "OpenAlex source metadata, publication type, technical venue terms, and repository or dataset source signals. Journal impact factor is not used.",
+  },
+  {
+    label: "Metadata quality",
+    points: 10,
+    text: "DOI, source URL, authors, source title, abstract, topic tags, and full-text or abstract availability.",
+  },
+  {
+    label: "Recency",
+    points: 5,
+    text: "Publication date relative to the newest candidate retained in the same weekly pool.",
   },
 ];
 
@@ -97,8 +143,8 @@ export default function MethodologyPage() {
           <p className="eyebrow">Research</p>
           <h2 id="research-method-heading">Paper selection</h2>
           <p>
-            A deterministic OpenAlex pipeline filters floating wind research and
-            selects up to six papers per week.
+            A deterministic OpenAlex pipeline scores each retained candidate
+            before ranking and selects the first five eligible papers per week.
           </p>
           <ol className="methodology-step-list">
             {researchMethod.map((step) => (
@@ -115,7 +161,8 @@ export default function MethodologyPage() {
           <h2 id="engineering-method-heading">News selection</h2>
           <p>
             A separate source policy filters practical floating wind engineering
-            updates into weekly briefing items.
+            updates into weekly briefing items. Engineering remains editorial and
+            manual; no quantitative score is shown.
           </p>
           <ol className="methodology-step-list">
             {engineeringMethod.map((step) => (
@@ -126,6 +173,42 @@ export default function MethodologyPage() {
             ))}
           </ol>
         </article>
+      </section>
+
+      <section className="research-selection-visual" aria-labelledby="research-selection-heading">
+        <p className="eyebrow">Research Selection Score</p>
+        <h2 id="research-selection-heading">How candidates become the Top 5</h2>
+        <ol className="research-flow" aria-label="Research selection flow">
+          {researchFlow.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+        <div className="score-formula" aria-label="100 point score formula">
+          <dl>
+            {scoreComponents.map((component) => (
+              <div key={component.label}>
+                <dt>{component.label}</dt>
+                <dd>{component.points}</dd>
+              </div>
+            ))}
+            <div className="score-total">
+              <dt>Total</dt>
+              <dd>100</dd>
+            </div>
+          </dl>
+          <div className="score-component-copy">
+            {scoreComponents.map((component) => (
+              <p key={component.label}>
+                <strong>{component.label}:</strong> {component.text}
+              </p>
+            ))}
+          </div>
+        </div>
+        <p>
+          The score is computed before ranking. Ranking uses the score first,
+          then classification, publication date, and paper ID for deterministic
+          tie-breaking.
+        </p>
       </section>
 
       <section aria-labelledby="audit-heading">

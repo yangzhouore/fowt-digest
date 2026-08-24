@@ -1,4 +1,9 @@
 import researchCandidates20260823Json from "./research-candidates/2026-08-23.json";
+import researchCandidates20260809Json from "./research-candidates/2026-08-09.json";
+import researchCandidates20260802Json from "./research-candidates/2026-08-02.json";
+import researchCandidates20260726Json from "./research-candidates/2026-07-26.json";
+import researchCandidates20260719Json from "./research-candidates/2026-07-19.json";
+
 
 type PipelineResearchCandidatePool = {
   schemaVersion: string;
@@ -101,6 +106,10 @@ export type ResearchCandidate = {
 
 const researchCandidateJsonFiles = [
   researchCandidates20260823Json,
+  researchCandidates20260809Json,
+  researchCandidates20260802Json,
+  researchCandidates20260726Json,
+  researchCandidates20260719Json,
 ];
 
 const researchCandidatePools = researchCandidateJsonFiles

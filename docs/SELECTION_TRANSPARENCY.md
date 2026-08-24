@@ -9,16 +9,20 @@ Research Digest or Engineering Briefing reading experience.
 weekly selection workflow for that edition.
 
 For Research, the count is the deterministic ranked candidate count from the
-OpenAlex pipeline. For 17-23 August 2026, the retained ranked pool contains 90
-candidates and 5 selected papers.
+OpenAlex pipeline. Retained candidate-pool pages currently exist for weekly
+editions ending 2026-07-19, 2026-07-26, 2026-08-02, 2026-08-09, and
+2026-08-23. These weeks were rebuilt from local classified OpenAlex run
+artifacts using `research_selection_score_v1` and a five-paper selection limit.
 
 For Engineering, the count is the number of retained source records in the
 static briefing JSON. For 17-23 August 2026, the retained pool contains 6 source
 records and 5 selected highlights.
 
 Historical editions only expose candidate-pool pages when candidate records were
-actually retained. Missing candidate-pool data must not be reconstructed from
-memory or inferred counts.
+actually retained. April, May, June, early July, and 2026-08-16 editions that
+exist only as selected-paper digest snapshots or manual gap-fill records do not
+show candidate-pool links. Missing candidate-pool data must not be reconstructed
+from memory or inferred counts.
 
 ## Research Selection
 

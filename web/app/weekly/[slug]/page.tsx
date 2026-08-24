@@ -4,6 +4,7 @@ import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
 import { notFound } from "next/navigation";
 import { getAllDigests, getDigestBySlug } from "../../../data/digest-adapter";
+import { hasResearchCandidatePool } from "../../../data/research-candidate-adapter";
 
 const ABSTRACT_PREVIEW_LENGTH = 280;
 
@@ -43,6 +44,8 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
     notFound();
   }
 
+  const hasCandidatePool = hasResearchCandidatePool(digest.slug);
+
   return (
     <main>
       <SiteHeader />
@@ -66,7 +69,15 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
           </div>
           <div>
             <dt>Checked results</dt>
-            <dd>{digest.checkedResultCount}</dd>
+            <dd>
+              {hasCandidatePool ? (
+                <Link href={`/weekly/${digest.slug}/candidates`}>
+                  {digest.checkedResultCount} candidates reviewed -&gt;
+                </Link>
+              ) : (
+                digest.checkedResultCount
+              )}
+            </dd>
           </div>
           <div>
             <dt>Generated</dt>
@@ -94,6 +105,11 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
                   {formatPublicationDate(paper.publicationDate)} /{" "}
                   {paper.publicationSource} / {paper.publicationType}
                 </p>
+                {paper.selectionScore !== null ? (
+                  <p className="selection-score-inline">
+                    Selection Score {paper.selectionScore} / 100
+                  </p>
+                ) : null}
                 {paper.topicTags.length > 0 ? (
                   <ul className="topic-list" aria-label="Topic tags">
                     {paper.topicTags.map((topic) => (

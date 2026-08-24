@@ -7,6 +7,7 @@ import {
   getAllDigests,
   getDigestPaperWithEditionBySlug,
 } from "../../../data/digest-adapter";
+import { hasResearchCandidatePool } from "../../../data/research-candidate-adapter";
 
 type PaperPageProps = {
   params: Promise<{
@@ -53,6 +54,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
   }
 
   const { edition, paper } = result;
+  const hasCandidatePool = hasResearchCandidatePool(edition.slug);
 
   return (
     <main>
@@ -72,6 +74,11 @@ export default async function PaperPage({ params }: PaperPageProps) {
           <p>
             Selected from the deterministic weekly digest for {edition.dateRange}.
           </p>
+          {paper.selectionScore !== null ? (
+            <p className="selection-score-inline">
+              Selection Score {paper.selectionScore} / 100
+            </p>
+          ) : null}
           {paper.sourceUrl || paper.doi ? (
             <p className="paper-action-row">
               {paper.sourceUrl ? <a href={paper.sourceUrl}>View source</a> : null}
@@ -123,6 +130,24 @@ export default async function PaperPage({ params }: PaperPageProps) {
               <dt>Selection reason</dt>
               <dd>{paper.selectionReason}</dd>
             </div>
+            {paper.classificationReason ? (
+              <div>
+                <dt>Classifier signal</dt>
+                <dd>{paper.classificationReason}</dd>
+              </div>
+            ) : null}
+            {paper.classificationConfidence !== null ? (
+              <div>
+                <dt>Classifier confidence</dt>
+                <dd>{Math.round(paper.classificationConfidence * 100)} / 100</dd>
+              </div>
+            ) : null}
+            {paper.selectionScore !== null ? (
+              <div>
+                <dt>Selection Score</dt>
+                <dd>{paper.selectionScore} / 100</dd>
+              </div>
+            ) : null}
             {paper.openAccessStatus ? (
               <div>
                 <dt>Open access</dt>
@@ -154,6 +179,14 @@ export default async function PaperPage({ params }: PaperPageProps) {
           </p>
           <p className="text-link-row">
             <Link href={`/weekly/${edition.slug}`}>Back to the weekly digest</Link>
+            {hasCandidatePool ? (
+              <>
+                {" / "}
+                <Link href={`/weekly/${edition.slug}/candidates`}>
+                  View candidate pool
+                </Link>
+              </>
+            ) : null}
           </p>
         </section>
       </article>

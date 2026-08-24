@@ -7,6 +7,7 @@ import {
   getAllDigests,
 } from "../../data/digest-adapter";
 import { ArchiveSearch, type ArchiveSearchPaper } from "./archive-search";
+import { hasResearchCandidatePool } from "../../data/research-candidate-adapter";
 
 const RESEARCH_ARCHIVE_TOP_PAPER_LIMIT = 3;
 const BROAD_RESEARCH_TAGS = new Set([
@@ -79,7 +80,7 @@ export default function ArchivePage() {
               <article className="engineering-briefing-card">
                 <div className="engineering-briefing-card-meta">
                   <p>{digest.dateRange}</p>
-                  <p>Curated from {digest.checkedResultCount} results</p>
+                  <p>{hasResearchCandidatePool(digest.slug) ? (<Link href={`/weekly/${digest.slug}/candidates`}>Curated from {digest.checkedResultCount} results -&gt;</Link>) : (`Curated from ${digest.checkedResultCount} results`)}</p>
                 </div>
                 <ol className="engineering-top-news">
                   {digest.papers

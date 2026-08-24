@@ -61,6 +61,9 @@ type PipelinePaper = {
   selectionReason: string;
   relevanceAssessment?: {
     classification?: string;
+    confidence?: number;
+    reason?: string;
+    evidenceBasis?: string[];
   };
 };
 
@@ -81,7 +84,11 @@ export type DigestPaper = {
   openAccessStatus: string | null;
   fullTextAvailability: string;
   classification: string | null;
+  classificationConfidence: number | null;
+  classificationReason: string | null;
+  evidenceBasis: string[];
   selectionReason: string;
+  selectionScore: number | null;
 };
 
 export type DigestEdition = {
@@ -191,11 +198,13 @@ function adaptDigest(digest: PipelineDigest): DigestEdition {
     checkedResultCount: digest.checkedResultCount ?? digest.selectedPapers.length,
     generatedAt: digest.generatedAt,
     introduction: `Selected papers from the deterministic FOWT pipeline for ${dateRange}.`,
-    papers: digest.selectedPapers.map(adaptPaper),
+    papers: digest.selectedPapers.map((paper) =>
+      adaptPaper(paper, digest.checkedResultCount ?? digest.selectedPapers.length),
+    ),
   };
 }
 
-function adaptPaper(paper: PipelinePaper): DigestPaper {
+function adaptPaper(paper: PipelinePaper, candidateCount: number): DigestPaper {
   const abstract = paper.abstract;
 
   return {
@@ -215,7 +224,11 @@ function adaptPaper(paper: PipelinePaper): DigestPaper {
     openAccessStatus: paper.openAccessStatus,
     fullTextAvailability: fullTextAvailabilityLabel(paper.fullTextAvailability),
     classification: paper.relevanceAssessment?.classification ?? null,
+    classificationConfidence: paper.relevanceAssessment?.confidence ?? null,
+    classificationReason: classificationReasonLabel(paper.relevanceAssessment?.reason ?? null),
+    evidenceBasis: paper.relevanceAssessment?.evidenceBasis ?? [],
     selectionReason: selectionReasonLabel(paper.selectionReason),
+    selectionScore: selectionScoreFromRank(paper.rank, candidateCount),
   };
 }
 
@@ -312,6 +325,43 @@ function selectionReasonLabel(value: string): string {
   return value;
 }
 
+function classificationReasonLabel(value: string | null): string | null {
+  if (value === "relevant_title_fowt_phrase") {
+    return "FOWT phrase in title";
+  }
+  if (value === "relevant_topic_fowt_phrase") {
+    return "FOWT phrase in topic tags";
+  }
+  if (value === "relevant_title_combined_fowt_signals") {
+    return "Floating and wind signals in title";
+  }
+  if (value === "possibly_relevant_abstract_only_fowt_phrase") {
+    return "FOWT phrase in abstract";
+  }
+  if (value === "possibly_relevant_combined_weak_signals") {
+    return "Combined floating and wind signals";
+  }
+  if (value === "possibly_relevant_offshore_wind_only") {
+    return "Offshore wind signal only";
+  }
+  if (value === "not_relevant_no_fowt_signals") {
+    return "No FOWT signal found";
+  }
+  return value;
+}
+
+function selectionScoreFromRank(rank: number, candidateCount: number): number | null {
+  if (!Number.isInteger(rank) || !Number.isInteger(candidateCount) || candidateCount < 1) {
+    return null;
+  }
+  if (rank < 1 || rank > candidateCount) {
+    return null;
+  }
+  if (candidateCount === 1) {
+    return 100;
+  }
+  return Math.round(((candidateCount - rank) / (candidateCount - 1)) * 100);
+}
 function formatDateRange(start: string, end: string): string {
   return `${formatDate(start)} - ${formatDate(end)}`;
 }

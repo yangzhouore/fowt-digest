@@ -181,7 +181,7 @@ export function EngineeringSearch({
                 <article className="engineering-briefing-card">
                   <div className="engineering-briefing-card-meta">
                     <p>{briefing.dateRange}</p>
-                    <p>Curated from {briefing.checkedResultCount} results</p>
+                    <p><Link href={`/engineering/${briefing.slug}/candidates`}>Curated from {briefing.sourceCount} retained sources -&gt;</Link></p>
                   </div>
                   <ol className="engineering-top-news">
                     {briefing.visibleItems.map((item, index) => (

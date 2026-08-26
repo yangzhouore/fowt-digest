@@ -103,9 +103,10 @@ git diff --check
 git status
 ```
 
-`validate:data` verifies that every committed digest JSON file is registered by
-the static adapter and that each digest file satisfies the website data
-guardrails.
+`validate:data` runs the Research Digest, Engineering Briefing, Projects, and
+Digital & AI static-data validators. For Research, it verifies that every
+committed digest JSON file is registered by the static adapter and satisfies the
+digest guardrails.
 
 ## Boundaries
 

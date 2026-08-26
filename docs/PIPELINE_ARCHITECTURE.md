@@ -2,13 +2,18 @@
 
 ## 1. Purpose
 
-This document defines the high-level architecture for the FOWT Research Digest paper processing pipeline. The implemented deterministic MVP pipeline currently covers source collection through weekly digest assembly and pipeline orchestration while keeping the website a simple presentation layer.
+This document defines the high-level architecture for the FOWT Research Digest
+paper-processing pipeline. The implemented deterministic pipeline covers source
+collection through scored weekly selection, digest assembly, orchestration, and
+local static-website publishing.
 
-M3H Pipeline Orchestration is complete. Later scoring, AI-assisted editorial writing, factual review, human approval, and publication export remain future work.
+The pipeline uses `research_selection_score_v1`; it does not use AI for
+classification, scoring, selection, or published copy. AI-assisted editorial
+writing and AI review remain unimplemented design concepts.
 
 ## 2. Scope
 
-The implemented workflow through M3H is:
+The implemented workflow is:
 
 ```text
 Paper sources
@@ -16,12 +21,16 @@ Paper sources
   -> Metadata normalisation
   -> Deduplication
   -> FOWT relevance classification
-  -> Ranking and selection
+  -> Deterministic scoring, ranking and selection
   -> Weekly digest assembly
   -> Pipeline orchestration
 ```
 
-The implemented prototype runs locally, reads and writes structured JSON files, and includes a thin orchestrator over accepted stage contracts. Static website display now uses selected static digest JSON files under `web/data/digests/`, published from deterministic pipeline output for presentation. The local M4 publishing workflow copies `weekly_digest.json` into the website data structure and refreshes adapter registration. Automated publication export, website-driven pipeline execution, and deployment automation remain future work.
+The implemented pipeline runs locally, reads and writes structured JSON files,
+and includes a thin orchestrator over accepted stage contracts. The local
+publishing workflow copies an accepted `weekly_digest.json` into
+`web/data/digests/` and refreshes adapter registration. Automatic publication,
+website-driven pipeline execution, and deployment automation do not exist.
 
 ## 3. Non-goals
 
@@ -44,10 +53,12 @@ The first pipeline design does not include:
 3. Metadata normalisation converts raw records into a consistent internal format.
 4. Deduplication groups duplicate records using deterministic exact rules.
 5. FOWT relevance classification applies deterministic rules to label records as `Relevant`, `Possibly Relevant`, or `Not Relevant`.
-6. Ranking and selection deterministically ranks classified records and marks selected records without scoring, AI, or website integration.
+6. Scoring, ranking and selection applies `research_selection_score_v1`, stable
+   tie-breakers, and the weekly selection limit without AI or website execution.
 7. Weekly digest assembly copies selected ranked records into a minimal digest data product.
 8. Pipeline orchestration sequences the accepted deterministic stages without changing stage behavior or creating new JSON products.
-9. Scoring, AI-assisted editorial writing, factual review, human approval, and publication export remain future work.
+9. The local publishing workflow can copy accepted digest output into committed
+   website data; it does not commit, push, deploy, or automate approval.
 
 ## 5. Module responsibilities
 
@@ -117,7 +128,9 @@ Receives: classified papers and a selection limit.
 
 Produces: ranked papers plus an aggregate ranking result.
 
-Needs AI: no. The implemented M3F stage uses deterministic classification/date/paper ID ordering only.
+Needs AI: no. The ranker uses the deterministic 100-point
+`research_selection_score_v1`, then relevance, publication date, and paper ID as
+stable ordering inputs.
 
 Can run independently: yes, once classification output exists.
 
@@ -198,13 +211,14 @@ Deterministic Python should handle:
 - duplicate detection using stable identifiers and normalised strings;
 - file writing;
 - run logging;
-- publication export;
+- local static-website publication;
 - validation of required fields once schemas are defined.
 
 AI-assisted steps should be limited to cases requiring semantic judgement or writing:
 
 - future AI-assisted FOWT relevance classification if deterministic rules become insufficient;
-- scoring rationale;
+- any future semantic scoring rationale outside the deterministic selection
+  score;
 - topic interpretation;
 - editorial summaries;
 - factual and consistency review.

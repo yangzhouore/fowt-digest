@@ -40,6 +40,13 @@ Website:
 - `web/app/archive/archive-search.tsx`
 - `web/app/engineering/page.tsx`
 - `web/app/engineering/[slug]/page.tsx`
+- `web/app/industry/page.tsx`
+- `web/app/projects/page.tsx`
+- `web/app/projects/[slug]/page.tsx`
+- `web/app/digital-ai/page.tsx`
+- `web/app/digital-ai/signal-filters.tsx`
+- `web/app/methodology/page.tsx`
+- `web/app/i18n/`
 - `web/app/globals.css`
 
 Static website data:
@@ -48,6 +55,11 @@ Static website data:
 - `web/data/digest-adapter.ts`
 - `web/data/briefings/*.json`
 - `web/data/engineering-briefing-adapter.ts`
+- `web/data/industry/industry-map.ts`
+- `web/data/projects/projects.json`
+- `web/data/project-adapter.ts`
+- `web/data/digital-ai/signals.json`
+- `web/data/digital-ai-adapter.ts`
 
 Website validation scripts:
 
@@ -55,6 +67,10 @@ Website validation scripts:
 - `web/scripts/validate-static-digests.test.js`
 - `web/scripts/validate-static-briefings.js`
 - `web/scripts/validate-static-briefings.test.js`
+- `web/scripts/validate-static-projects.js`
+- `web/scripts/validate-static-projects.test.js`
+- `web/scripts/validate-static-digital-ai.js`
+- `web/scripts/validate-static-digital-ai.test.js`
 
 Repository workflow:
 
@@ -71,6 +87,8 @@ Open only when relevant:
 - Website publishing workflow: `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
 - Engineering source policy: `docs/ENGINEERING_SOURCE_POLICY.md`
 - Engineering briefing contract: `docs/ENGINEERING_BRIEFING_DATA_MODEL.md`
+- Selection transparency: `docs/SELECTION_TRANSPARENCY.md`
+- Digital & AI scope and evidence rules: `docs/M11_DIGITAL_AI_SIGNALS_DESIGN.md`
 
 Historical milestone and early-design records live under `docs/archive/` and
 should normally remain outside active context.

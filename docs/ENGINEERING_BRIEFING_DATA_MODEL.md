@@ -2,11 +2,11 @@
 
 ## Purpose
 
-This document defines the minimum stable contracts for a future source-backed
-Engineering Briefing pipeline. The contracts are intentionally small and are not
-implemented in code by M7A.
+This document defines the minimum stable contracts for the source-backed static
+Engineering Briefing workflow. The contracts are implemented under
+`web/data/briefings/` and enforced by the website briefing validator.
 
-The intended flow is:
+The current flow is:
 
 ```text
 Engineering Source Record
@@ -142,12 +142,12 @@ Rules:
 - `briefingItems` should contain approximately five items, but validation should
   allow fewer when fewer accepted items exist.
 - `sourceRecords` must include every source referenced by `briefingItems`.
-- Briefing JSON should be committed under a future static website data path such
-  as `web/data/briefings/` only after a later implementation milestone.
+- Briefing JSON is committed under `web/data/briefings/` after validation and
+  review.
 
 ## Publication-Blocking Validation Rules
 
-A future validator must block publication when:
+The static Engineering validator must block publication when:
 
 - `schemaVersion` is missing or unsupported;
 - required fields are missing, empty, or the wrong type;

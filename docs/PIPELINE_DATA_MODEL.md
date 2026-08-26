@@ -2,9 +2,15 @@
 
 ## Purpose
 
-This document defines the minimum data contracts and workflow states required to implement the future FOWT Research Digest paper-processing pipeline. It is a design document only. It does not define Python classes, Pydantic models, database tables, or frontend code.
+This document records the data contracts and workflow states for the FOWT
+Research Digest pipeline. The deterministic M3C-M3H contracts are implemented as
+local JSON and Python modules. Later AI assessment, writer, reviewer, and human
+approval records remain design reference only; they are not current repository
+capabilities. This document does not define database tables or frontend code.
 
-The model separates source metadata from AI-generated analysis and human-edited publication content. The first implementation should store these records as local JSON files created by explicit Python pipeline stages.
+The model separates source metadata from any future generated analysis or
+human-edited publication content. Implemented stages store local JSON through
+explicit deterministic pipeline modules.
 
 ## Design Rules
 

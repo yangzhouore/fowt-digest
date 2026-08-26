@@ -1,8 +1,12 @@
 # M11 - Digital & AI Signals Design
 
+Status: implemented and accepted. The current `/digital-ai` page uses 14
+source-backed Signals as evidence for two visual impact maps. This document
+remains the active scope, taxonomy, provenance, and caution policy.
+
 ## 1. Product Purpose
 
-Digital & AI Signals should track source-backed developments at the intersection
+Digital & AI Signals track source-backed developments at the intersection
 of floating offshore wind, offshore wind infrastructure, energy engineering and
 applied digital systems.
 
@@ -11,7 +15,7 @@ which digital, AI, automation, software and data-infrastructure developments
 could materially change offshore wind engineering, operations, infrastructure or
 energy systems.
 
-The section must not become a generic AI news feed. Every future signal must
+The section must not become a generic AI news feed. Every signal must
 state its direct connection to offshore wind, wind-energy infrastructure, or a
 closely relevant engineering or energy-system workflow.
 
@@ -138,25 +142,31 @@ Use a restrained maturity model:
 Maturity must follow source evidence. Do not upgrade a vendor claim to
 commercial deployment without evidence of actual customer or asset use.
 
-## 8. Proposed `/digital-ai` UX
+## 8. Implemented `/digital-ai` UX
 
-Future UX should be a static editorial index, not a dashboard.
+The page is a static visual briefing, not a dashboard or signal feed.
 
-The first screen should communicate "Digital & AI Signals" and the boundary:
-applied digital, AI and automation developments relevant to offshore wind and
-energy infrastructure. Items should be compact, with topic, maturity, date,
-source, region and a one-line FOWT connection.
+Its primary hierarchy is:
 
-Useful first filters:
+```text
+AI × Offshore Wind
+-> How AI affects the offshore-wind lifecycle
+-> How offshore wind may power AI and compute infrastructure
+-> Source-backed Signal evidence
+-> Original sources and provenance
+```
+
+The lifecycle map uses Develop, Design, Manufacture, Install, Operate, and
+Connect. The energy map distinguishes land-based AI power, coastal compute,
+offshore compute, and flexible compute/storage pathways. Emerging and
+experimental concepts are explicitly qualified.
+
+The 14 Signals remain a compact secondary evidence drawer. Filters remain
+available there for:
 
 - topic
 - maturity
 - region
-- organization type
-
-Detail pages are optional for the MVP. If added later, a detail page should
-prioritize source-backed identity, sector connection, technical significance,
-organizations, related projects or companies, maturity and provenance.
 
 ## 9. Relationship With Existing Product Areas
 
@@ -171,23 +181,20 @@ organizations, related projects or companies, maturity and provenance.
 - Projects: future signals may reference project IDs when a digital deployment
   is tied to a verified project, without changing Projects data automatically.
 
-## 10. MVP Scope
+## 10. Implemented MVP Scope
 
-The first implementation should be static and small:
+The accepted implementation is static and small:
 
-- a curated, source-backed signal dataset of about 12-20 records;
+- a curated dataset of 14 source-backed Signal records;
 - a `/digital-ai` index;
-- lightweight filters;
+- two visual impact maps with interactive detail panels;
+- lightweight filters inside the secondary evidence view;
 - provenance links;
 - no automatic collection;
-- no scoring model unless a deterministic, documented need emerges.
+- no scoring model.
 
-The first dataset should cover at least four taxonomy categories and at least
-three source classes, with no category included solely for symmetry. A smaller
-dataset is acceptable if only a smaller set of records meets the evidence
-threshold.
-
-The current M11A task is design only and should add no data or application code.
+The existing dataset remains fixed until a separately reviewed, source-backed
+addition is justified. Signals must not be added merely to fill diagram nodes.
 
 ## 11. Risks
 
@@ -202,7 +209,7 @@ The current M11A task is design only and should add no data or application code.
 
 ## 12. Acceptance Criteria
 
-A future Digital & AI MVP should be accepted only if:
+The Digital & AI MVP and future changes are acceptable only if:
 
 - every item has a clear offshore wind, wind-energy infrastructure, or directly
   relevant engineering/energy-system connection;
@@ -219,7 +226,7 @@ A future Digital & AI MVP should be accepted only if:
 - Automatic collection or scheduled updates
 - AI-written summaries or subjective AI scoring
 - Backend, database, CMS or API routes
-- Navigation changes during design
+- unrelated navigation or product-area redesign
 - Changes to Engineering, Research, Industry, Projects or Homepage UX
 - Project/company deep integration
 - Maps, GIS, financial data or market dashboards

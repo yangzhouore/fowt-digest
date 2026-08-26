@@ -2,11 +2,12 @@
 
 ## Purpose
 
-This policy defines which source material may feed a future Engineering Briefing
-pipeline. It protects the core repository rule that source data is authoritative
-and presentation must not silently repair, reinterpret, or invent content.
+This policy defines which source material may feed the static Engineering
+Briefing candidate and publication workflow. It protects the core repository
+rule that source data is authoritative and presentation must not silently
+repair, reinterpret, or invent content.
 
-The policy supports the future flow:
+The policy supports the current flow:
 
 ```text
 source record
@@ -15,8 +16,9 @@ source record
 -> static website data
 ```
 
-It does not implement collection, scraping, APIs, AI summarisation, or website
-changes.
+The policy itself does not perform collection, scraping, API access, AI
+summarisation, or website changes. Current collection remains manual and
+source-registry bounded.
 
 ## Accepted Source Types
 
@@ -105,7 +107,7 @@ research paper content from the Research Digest.
 
 ## Publication-Blocking Policy Rules
 
-A future validation step must block publication when:
+The static Engineering validator must block publication when:
 
 - any source record lacks required provenance;
 - any source URL is empty or invalid;

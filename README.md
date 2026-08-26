@@ -1,10 +1,9 @@
 # FOWT Research Digest
 
-FOWT Research Digest is a deterministic research, engineering and project
-intelligence site for Floating Offshore Wind Turbines. It combines a local
-Python pipeline for producing auditable Research Digest data with a static
-Next.js website for reading selected Research Digest, Engineering Briefing and
-Projects records.
+FOWT Research Digest is a source-backed intelligence briefing for floating and
+offshore wind. It combines a deterministic local Research pipeline with a
+static Next.js website covering Engineering, Research, Industry, Projects, and
+Digital & AI.
 
 Live website: https://fowt-digest-oegd.vercel.app/
 
@@ -18,18 +17,23 @@ Repository: https://github.com/yangzhouore/fowt-digest
 - Static source-backed Engineering Briefing editions committed under
   `web/data/briefings/`.
 - Static source-backed Projects data committed under `web/data/projects/`.
-- Homepage, Research Digest, Paper Detail, Research Archive, Archive Search,
-  Engineering archive, Engineering search, Engineering Briefing, Projects and
-  selection-transparency reading paths.
-- Local validation guardrails for committed static Research, Engineering and
-  Projects JSON.
+- A curated Industry Map under `web/data/industry/`.
+- Fourteen source-backed Digital & AI Signals under `web/data/digital-ai/`,
+  presented as evidence for AI × offshore-wind lifecycle and energy pathways.
+- Homepage, Engineering, Research, Industry Map, Projects, Digital & AI,
+  Methodology, About, paper detail, and selection-transparency reading paths.
+- A reader-facing Methodology that separates Research and Engineering methods,
+  explains provenance and editorial control, and states known limitations.
+- English and Simplified Chinese interface and fixed editorial copy, persisted
+  locally without external translation services or locale-specific routes.
+- Local validation guardrails for all committed static datasets.
 - Deterministic publishing tooling that copies an accepted pipeline
   `weekly_digest.json` into the website data directory and refreshes adapter
   registration.
 - GitHub CI for pull requests and pushes to `main`.
 
 The website does not run the pipeline, collect sources, query OpenAlex, generate
-summaries, or deploy itself. It displays committed static JSON data.
+content at runtime, or deploy itself. It displays committed static data.
 
 ## How The Research Digest Works
 
@@ -129,6 +133,11 @@ second deployment system.
   not complete historical coverage.
 - Projects are curated source-backed records, not a claim of complete global
   market coverage.
+- Digital & AI is a narrow offshore-wind evidence area, not a generic AI news
+  feed; emerging and experimental pathways require caution.
+- Source-backed titles, abstracts, briefing summaries, company/project facts,
+  publishers, proper nouns, and URLs remain in their original language unless
+  an explicit translated field exists.
 - New data publication is a manual accepted-change workflow.
 - There is no backend, database, CMS, API, scheduler, semantic search, or
   automatic source collection.

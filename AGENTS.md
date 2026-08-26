@@ -16,14 +16,19 @@ historical notes.
 
 ## Project Boundary
 
-FOWT Research Digest is a static website plus deterministic local pipeline for
-Floating Offshore Wind Turbine research and engineering briefing data.
+FOWT Research Digest is a static source-backed intelligence website plus a
+deterministic local pipeline for Floating Offshore Wind Turbine research data.
+The reader-facing product covers Engineering, Research, Industry, Projects, and
+Digital & AI, with English and Simplified Chinese interface copy.
 
 Keep boundaries explicit:
 
 - `pipeline/` owns deterministic research data production.
 - `web/` owns static website presentation and committed JSON consumption.
 - Engineering Briefing data is independent static source-backed website data.
+- Industry, Projects, and Digital & AI are independent curated static datasets.
+- Language switching is a local presentation concern; it must not rewrite
+  source-backed records or introduce runtime translation services.
 - The website must not run collection, scoring, summarisation, scheduling, or
   publication automation.
 

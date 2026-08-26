@@ -1,135 +1,106 @@
 import type { Metadata } from "next";
-import { SiteHeader } from "../site-header";
 import { SiteFooter } from "../site-footer";
+import { SiteHeader } from "../site-header";
 
-const researchMethod = [
+const coverageAreas = [
   {
-    title: "Source",
-    text: "Collect OpenAlex records inside the weekly publication window.",
+    title: "Engineering",
+    text: "What happened: source-backed project, technology, infrastructure, policy, supply-chain and operational developments.",
   },
   {
-    title: "Clean",
-    text: "Normalise metadata, reject malformed records, and merge exact duplicates.",
+    title: "Research",
+    text: "What is being studied: recent papers selected from a deterministic OpenAlex workflow.",
   },
   {
-    title: "Classify",
-    text: "Use deterministic title, abstract, and topic-tag signals to label papers as Relevant, Possibly Relevant, or Not Relevant.",
+    title: "Industry",
+    text: "Who builds it: a curated map of companies and roles across the floating-wind value chain.",
   },
   {
-    title: "Score",
-    text: "Compute research_selection_score_v1 before ranking. No LLM subjective scoring is used.",
+    title: "Projects",
+    text: "Where it is happening: structured project facts, status, participants, timelines and sources.",
   },
   {
-    title: "Rank",
-    text: "Order by Selection Score, then classification, publication date, and paper ID as stable tie-breakers.",
-  },
-  {
-    title: "Publish",
-    text: "Select the first five eligible papers and copy them to static digest JSON; the website does not re-rank or rewrite them.",
+    title: "Digital & AI",
+    text: "How digital technologies may change offshore wind, and how offshore wind may support AI and compute infrastructure.",
   },
 ];
 
 const researchFlow = [
-  "OpenAlex candidates",
-  "normalize / deduplicate",
+  "OpenAlex weekly candidates",
+  "normalise metadata",
+  "exact deduplication",
   "FOWT classification",
-  "research_selection_score_v1",
-  "deterministic ranking",
-  "Top 5 Research Digest",
+  "100-point score",
+  "rank and select up to 5",
 ];
 
 const researchScoreComponents = [
   {
     label: "FOWT relevance",
     points: 35,
-    text: "Classifier outcome, explicit floating-offshore-wind phrases, combined floating and wind terms, and classifier confidence.",
+    text: "Classifier result, explicit floating-offshore-wind phrases, combined floating and wind terms, and classifier confidence.",
   },
   {
     label: "Technical specificity",
     points: 25,
-    text: "Matched technical keyword groups in title, topics, and abstract: aerodynamics, hydrodynamics, mooring, structures, controls, platforms, cables/grid, modelling, and economics.",
+    text: "Controlled signals covering aerodynamics, hydrodynamics, station keeping, structures, controls, platforms, electrical systems, numerical methods and economics.",
   },
   {
     label: "Research value",
     points: 15,
-    text: "Deterministic signals for validation, datasets, modelling, optimization, design, and available abstract evidence.",
+    text: "Signals for validation, datasets, modelling, optimisation and design, plus the availability of an abstract.",
   },
   {
     label: "Venue quality",
     points: 10,
-    text: "OpenAlex source metadata, publication type, technical venue terms, and repository or dataset source signals. Journal impact factor is not used.",
+    text: "A transparent proxy based on source metadata, publication type and technical or repository terms. Journal impact factor is not used.",
   },
   {
     label: "Metadata quality",
     points: 10,
-    text: "DOI, source URL, authors, source title, abstract, topic tags, and full-text or abstract availability.",
+    text: "Completeness of identifiers, source URL, authors, publication source, abstract, topic tags and text-availability metadata.",
   },
   {
     label: "Recency",
     points: 5,
-    text: "Publication date relative to the newest candidate in the same weekly pool.",
-  },
-];
-
-const engineeringMethod = [
-  {
-    title: "Source",
-    text: "Collect public, attributable floating wind engineering candidates from approved source classes: authorities, standards, project releases, software notes, companies, and trade news.",
-  },
-  {
-    title: "Score",
-    text: "Normalize, deduplicate, filter for basic FOWT relevance, then compute engineering_selection_score_v1 from source metadata and source-backed evidence text before ranking.",
-  },
-  {
-    title: "Rank",
-    text: "Order candidates by Engineering Selection Score, with source record ID as a deterministic tie-breaker.",
-  },
-  {
-    title: "Diversify",
-    text: "Apply a small deterministic diversity layer so one project, publisher or topic does not crowd out the weekly briefing when suitable alternatives exist.",
-  },
-  {
-    title: "Publish",
-    text: "Select up to five source-backed highlights. Weeks with fewer strong independent Engineering developments are not padded. The website renders committed static JSON and does not collect or score news at runtime.",
+    text: "Publication date relative to the newest candidate in that weekly pool.",
   },
 ];
 
 const engineeringFlow = [
-  "Approved 42-source registry",
-  "collect weekly items",
-  "normalize / deduplicate",
-  "FOWT relevance filter",
-  "engineering_selection_score_v1",
-  "importance ranking",
-  "source/topic diversity",
-  "Up to 5 Engineering highlights",
+  "Approved sources",
+  "weekly discovery",
+  "date and FOWT filtering",
+  "duplicate-event grouping",
+  "100-point score",
+  "diversity and up to 5",
 ];
 
 const engineeringScoreComponents = [
   {
     label: "Engineering relevance",
     points: 30,
-    text: "Explicit floating-wind, offshore-wind and engineering terms such as ports, installation, fabrication, cables, moorings, grid, vessels and consenting.",
+    text: "Explicit floating-wind, offshore-wind and engineering terms for areas such as ports, installation, fabrication, cables, moorings, vessels and grid connection.",
   },
   {
     label: "Project / company",
     points: 25,
-    text: "Named project, port, government, developer or supply-chain entities plus concrete events such as tenders, selections, support, partnerships or study groups.",
+    text: "Named project or supply-chain entities and concrete events such as tenders, selections, partnerships, support decisions and study groups.",
   },
   {
     label: "Technology",
     points: 20,
-    text: "Controlled topic groups for ports, floating platforms, cables, installation, fabrication and digital engineering signals.",
+    text: "Controlled groups for ports, floating platforms, cables, installation, fabrication and digital engineering.",
   },
   {
     label: "Policy / market",
     points: 15,
-    text: "Government, procurement, state-support, consenting, regulation, supply-chain, leasing and market signals, with small source-type additions.",
+    text: "Government, procurement, regulation, consenting, leasing, state-support, market and supply-chain signals.",
   },
   {
     label: "Source quality",
     points: 10,
-    text: "Source-type proxy that favors government and standards sources, then company/trade sources, with reputable industry news below primary sources.",
+    text: "A source-type proxy that gives more weight to government and standards records, followed by attributable company, association, conference and trade sources.",
   },
 ];
 
@@ -139,27 +110,37 @@ const projectLinks = [
     label: "GitHub repository",
   },
   {
-    href: "https://github.com/yangzhouore/fowt-digest/blob/main/docs/PIPELINE_ARCHITECTURE.md",
-    label: "Pipeline Architecture",
+    href: "https://github.com/yangzhouore/fowt-digest/blob/main/pipeline/ranker.py",
+    label: "Research scoring implementation",
   },
   {
-    href: "https://github.com/yangzhouore/fowt-digest/blob/main/docs/PIPELINE_DATA_MODEL.md",
-    label: "Pipeline Data Model",
+    href: "https://github.com/yangzhouore/fowt-digest/blob/main/web/scripts/engineering-selection-scoring.js",
+    label: "Engineering scoring implementation",
   },
   {
     href: "https://github.com/yangzhouore/fowt-digest/blob/main/docs/ENGINEERING_SOURCE_POLICY.md",
     label: "Engineering Source Policy",
   },
   {
-    href: "https://github.com/yangzhouore/fowt-digest/blob/main/docs/ENGINEERING_BRIEFING_DATA_MODEL.md",
-    label: "Engineering Briefing Data Model",
+    href: "https://github.com/yangzhouore/fowt-digest/blob/main/docs/M11_DIGITAL_AI_SIGNALS_DESIGN.md",
+    label: "Digital & AI scope and evidence rules",
   },
+];
+
+const limitations = [
+  "Coverage is incomplete. OpenAlex, the approved Engineering registry and the curated website datasets do not represent every relevant paper, organisation, project or industry event.",
+  "Source choice and deterministic weights introduce bias. A high score means a record matched the published model; it is not a universal measure of scientific quality or industry importance.",
+  "Historical candidate pools may be retained or reconstructed. Reconstructed Research and Engineering pools can drift because upstream pages, indexes and metadata change over time.",
+  "Research selection relies heavily on metadata, topic tags and abstracts. It does not imply that every full paper has been reviewed, and missing or weak abstracts can affect classification and score.",
+  "Project facts and status can change after access. Static records may lag announcements, construction changes, ownership changes, pauses or cancellations.",
+  "Digital & AI is an emerging field. Research, prototypes and pilots must not be read as proven commercial performance, and speculative infrastructure pathways are labelled cautiously.",
+  "Projects are maintained independently from Research, Engineering and Industry. Cross-area relationships are not inferred or automatically synchronized, so valid links and updates may be absent.",
 ];
 
 export const metadata: Metadata = {
   title: "Methodology",
   description:
-    "How Floating Wind Digest selects research papers and engineering news.",
+    "How FOWT Digest sources, selects and presents floating and offshore wind intelligence.",
 };
 
 export default function MethodologyPage() {
@@ -168,112 +149,217 @@ export default function MethodologyPage() {
       <SiteHeader />
 
       <section className="intro" aria-labelledby="methodology-heading">
-        <p className="eyebrow">Methodology</p>
-        <h1 id="methodology-heading">How we select papers and engineering news.</h1>
+        <p className="eyebrow">01 / What FOWT Digest is</p>
+        <h1 id="methodology-heading">Source-backed intelligence for floating and offshore wind.</h1>
         <p>
-          Floating Wind Digest keeps research papers and engineering news in
-          separate source-backed workflows. Both publish static data, and the
-          website only formats what has already been selected.
+          FOWT Digest is a static intelligence briefing for people who need a
+          clear view of floating offshore wind without treating every source as
+          equally important or every missing fact as permission to infer. It
+          brings together engineering developments, research papers, industry
+          roles, projects, and a narrow Digital & AI evidence set. Published
+          records remain linked to their underlying sources.
         </p>
       </section>
 
-      <section className="methodology-sectors" aria-label="Selection methods">
-        <article className="methodology-sector" aria-labelledby="research-method-heading">
-          <p className="eyebrow">Research</p>
-          <h2 id="research-method-heading">Paper selection</h2>
-          <p>
-            A deterministic OpenAlex pipeline scores each weekly candidate
-            before ranking and selects the first five eligible papers per week.
-          </p>
-          <ol className="methodology-step-list">
-            {researchMethod.map((step) => (
-              <li key={step.title}>
-                <span>{step.title}</span>
-                <p>{step.text}</p>
-              </li>
-            ))}
-          </ol>
-        </article>
+      <section aria-labelledby="why-heading">
+        <p className="eyebrow">02 / Why this exists</p>
+        <h2 id="why-heading">Less noise, clearer evidence.</h2>
+        <p>
+          Floating wind knowledge is distributed across academic indexes,
+          government and regulatory pages, project announcements, standards
+          bodies, technical organisations, company releases and trade sources.
+          FOWT Digest reduces the time needed to scan that material while
+          preserving the route back to the original record. It is a briefing,
+          not a claim of complete market coverage and not a substitute for
+          primary technical, commercial, legal or investment due diligence.
+        </p>
+      </section>
 
-        <article className="methodology-sector" aria-labelledby="engineering-method-heading">
-          <p className="eyebrow">Engineering</p>
-          <h2 id="engineering-method-heading">News selection</h2>
-          <p>
-            Engineering selection now starts from an approved-source weekly
-            candidate collection, scores retained candidates, then applies a
-            small diversity layer so the selected highlights remain useful as a briefing
-            rather than a duplicate-heavy ranked list.
-          </p>
-          <ol className="methodology-step-list">
-            {engineeringMethod.map((step) => (
-              <li key={step.title}>
-                <span>{step.title}</span>
-                <p>{step.text}</p>
-              </li>
-            ))}
-          </ol>
-        </article>
+      <section aria-labelledby="audience-heading">
+        <p className="eyebrow">03 / Who this is for</p>
+        <h2 id="audience-heading">Readers working across the FOWT system.</h2>
+        <p>
+          The intended readers are offshore-wind engineers, researchers,
+          developers, project and supply-chain teams, public-sector and policy
+          professionals, students, and others who need a concise technical
+          orientation. The site assumes domain interest but does not assume that
+          every reader follows every journal, project or supplier.
+        </p>
+      </section>
+
+      <section aria-labelledby="coverage-heading">
+        <p className="eyebrow">04 / What the site covers</p>
+        <h2 id="coverage-heading">Five views of one sector.</h2>
+        <div className="methodology-sectors">
+          {coverageAreas.map((area) => (
+            <article className="methodology-sector" key={area.title}>
+              <h3>{area.title}</h3>
+              <p>{area.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section aria-labelledby="sources-heading">
+        <p className="eyebrow">05 / Sources</p>
+        <h2 id="sources-heading">Attributable records before presentation.</h2>
+        <p>
+          Research candidates currently come from OpenAlex searches within a
+          defined weekly publication window. Engineering starts from a controlled
+          registry of public, attributable sources covering government and
+          regulators, developers and suppliers, standards and certification,
+          ports, engineering software, associations, universities, conferences
+          and specialist trade press. Industry, Projects and Digital & AI use
+          curated static records with source URLs and provenance fields.
+        </p>
+        <p>
+          Primary and authoritative sources are preferred where available.
+          Company and trade sources can provide useful evidence, but their claims
+          are kept within the boundary of what the stored record supports.
+          Missing facts remain absent or unknown. The site does not silently
+          repair dates, relationships, technical values or project status.
+        </p>
+        <ul className="project-link-list">
+          {projectLinks.map((link) => (
+            <li key={link.href}><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
       </section>
 
       <section className="research-selection-visual" aria-labelledby="research-selection-heading">
-        <p className="eyebrow">Research Selection Score</p>
-        <h2 id="research-selection-heading">How candidates become the Top 5</h2>
+        <p className="eyebrow">06 / How Research selection works</p>
+        <h2 id="research-selection-heading">A deterministic paper pipeline.</h2>
+        <p>
+          The local Research pipeline queries OpenAlex using controlled FOWT
+          terms and a weekly publication-date window. It stores raw responses,
+          normalises identifiers and metadata, reconstructs abstracts when
+          available, and deduplicates exact matches using DOI, OpenAlex ID or
+          normalised title plus publication date. It then classifies each paper
+          as Relevant, Possibly Relevant or Not Relevant from title, abstract and
+          topic-tag signals. No language model performs this classification.
+        </p>
         <ol className="research-flow" aria-label="Research selection flow">
-          {researchFlow.map((step) => (
-            <li key={step}>{step}</li>
-          ))}
+          {researchFlow.map((step) => <li key={step}>{step}</li>)}
         </ol>
         <ScoreFormula components={researchScoreComponents} label="Research 100 point score formula" />
         <p>
-          The score is computed before ranking. Ranking uses the score first,
-          then classification, publication date, and paper ID for deterministic
-          tie-breaking.
-        </p>
-        <p>
-          Candidate-pool pages are labeled as retained when the historical run
-          artifacts were already available, and reconstructed when the same
-          weekly window was recollected later with the current pipeline. A
-          reconstructed pool may differ from what OpenAlex would have returned
-          at the original publication date because upstream metadata can change.
+          <code>research_selection_score_v1</code> is computed before ranking.
+          Candidates are ordered by total score, then relevance classification,
+          publication date and paper ID as stable tie-breakers. Not Relevant
+          records are ineligible; the first eligible records are selected up to
+          the five-paper limit. Candidate pages expose the score and component
+          evidence where pool data exists. The website reads committed digest
+          JSON and does not re-rank or rewrite papers.
         </p>
       </section>
 
       <section className="research-selection-visual" aria-labelledby="engineering-selection-heading">
-        <p className="eyebrow">Engineering Selection Score</p>
-<h2 id="engineering-selection-heading">How candidates become the weekly briefing</h2>
+        <p className="eyebrow">07 / How Engineering selection works</p>
+        <h2 id="engineering-selection-heading">A separate source-record workflow.</h2>
+        <p>
+          Engineering does not use the Research paper pipeline. Candidates are
+          discovered from approved public sources, retained for the weekly date
+          window, filtered for basic FOWT relevance, and grouped to remove
+          duplicate coverage of the same event. Collection audits record source
+          attempts and candidate counts where that evidence exists. Each retained
+          source record preserves publisher, title, URL, date, source type,
+          evidence text, retrieval information and licensing notes.
+        </p>
         <ol className="research-flow" aria-label="Engineering selection flow">
-          {engineeringFlow.map((step) => (
-            <li key={step}>{step}</li>
-          ))}
+          {engineeringFlow.map((step) => <li key={step}>{step}</li>)}
         </ol>
         <ScoreFormula components={engineeringScoreComponents} label="Engineering 100 point score formula" />
         <p>
-          The score is computed before ranking and uses deterministic, controlled
-          signal groups in candidate metadata and source-backed evidence text. No
-          LLM subjective scoring is used. Diversity is separate from importance:
-          it can defer a high-scoring duplicate project or topic when another
-          source-backed candidate gives the weekly briefing broader coverage.
-          Historical Engineering pools are labeled as retained-source
-          reconstructions when no original full candidate artifact was stored.
+          <code>engineering_selection_score_v1</code> ranks candidates by total
+          score, using source record ID as the deterministic tie-breaker. A
+          separate deterministic diversity step can defer duplicate project
+          groups and prefer broader technology coverage before selecting up to
+          five highlights. Fewer than five may be published when the source pool
+          does not support padding. The resulting briefing copy and sources are
+          committed as static data; the website does not discover or score news
+          at runtime.
         </p>
       </section>
 
-      <section aria-labelledby="audit-heading">
-        <h2 id="audit-heading">What the website does not do</h2>
+      <section aria-labelledby="structured-intelligence-heading">
+        <p className="eyebrow">08 / How Industry and Projects work</p>
+        <h2 id="structured-intelligence-heading">Structured intelligence, not ranked feeds.</h2>
+        <div className="methodology-sectors">
+          <article className="methodology-sector">
+            <h3>Industry</h3>
+            <p>
+              The Industry Map organises curated organisations by declared roles
+              across project ownership, turbines, floating platforms, moorings,
+              cables, electrical systems, installation, assurance, engineering
+              and simulation. Each company entry includes a representative
+              involvement and source URL. Placement explains a value-chain role;
+              it is not a quality ranking or endorsement.
+            </p>
+          </article>
+          <article className="methodology-sector">
+            <h3>Projects</h3>
+            <p>
+              Projects are maintained as static structured records. Controlled
+              status values make filtering consistent, while individual facts,
+              company relationships and timeline events retain source references
+              and, where needed, field-level claims. Relationships are stored only
+              when supported. Unsupported values remain null rather than being
+              estimated from adjacent projects or companies.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="digital-ai-method-heading">
+        <p className="eyebrow">09 / Digital & AI methodology</p>
+        <h2 id="digital-ai-method-heading">Offshore wind × digital systems, narrowly defined.</h2>
         <p>
-          The website does not run collection, summarisation, ranking,
-          scraping, scheduling, or publication automation. It reads committed
-          static JSON so every paper and news item can be traced back to source
-          data.
+          Digital & AI covers applications with a direct offshore-wind,
+          wind-infrastructure or energy-system connection: engineering models,
+          digital twins, autonomous inspection, robotics, industrial software,
+          forecasting, grid integration and relevant compute infrastructure. It
+          excludes generic AI news. Every Signal stores its sector connection,
+          maturity, evidence type and source IDs.
+        </p>
+        <p>
+          The page separates application areas from real-world evidence. The
+          lifecycle map shows where digital methods could enter engineering
+          practice; linked Signals show what the current source set actually
+          supports. Offshore-wind-to-AI pathways distinguish grid-based supply
+          from emerging coastal, offshore and flexible-compute concepts.
+          Emerging or experimental labels are cautions, not predictions of
+          commercial success.
         </p>
       </section>
 
-      <section aria-labelledby="project-links-heading">
-        <h2 id="project-links-heading">Project links</h2>
-        <ul className="project-link-list">
-          {projectLinks.map((link) => (
-            <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
+      <section aria-labelledby="editorial-control-heading">
+        <p className="eyebrow">10 / Editorial control and neutrality</p>
+        <h2 id="editorial-control-heading">Deterministic tools support, but do not replace, judgement.</h2>
+        <p>
+          Collection records, validation rules and scoring make selection more
+          inspectable and repeatable. They do not make it objective in an
+          absolute sense. Source lists, keyword groups, weights, taxonomies and
+          diversity rules are editorial choices and can shape what appears.
+          Scores are selection aids, not technical verdicts.
+        </p>
+        <p>
+          Publication remains a human-controlled repository action: static data
+          is inspected, validated and committed before it reaches the website.
+          The current site does not use AI to write published summaries or to
+          make final publication decisions. Inclusion does not endorse an
+          organisation, technology or project. Provenance is preserved so
+          readers can inspect the evidence and form their own view.
+        </p>
+      </section>
+
+      <section aria-labelledby="limitations-heading">
+        <p className="eyebrow">11 / Known limitations</p>
+        <h2 id="limitations-heading">What this methodology cannot guarantee.</h2>
+        <ul className="methodology-step-list">
+          {limitations.map((limitation, index) => (
+            <li key={limitation}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p>{limitation}</p>
             </li>
           ))}
         </ul>

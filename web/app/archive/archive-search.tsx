@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { useLanguage } from "../i18n/language-context";
 
 export type ArchiveSearchPaper = {
   editionSlug: string;
@@ -18,6 +19,7 @@ type ArchiveSearchProps = {
 };
 
 export function ArchiveSearch({ papers }: ArchiveSearchProps) {
+  const { language } = useLanguage();
   const [query, setQuery] = useState("");
   const normalisedQuery = query.trim().toLowerCase();
 
@@ -34,21 +36,21 @@ export function ArchiveSearch({ papers }: ArchiveSearchProps) {
   return (
     <section className="archive-search" aria-labelledby="archive-search-heading">
       <div className="archive-search-heading">
-        <h2 id="archive-search-heading">Search papers</h2>
+        <h2 id="archive-search-heading">{language === "zh" ? "搜索论文" : "Search papers"}</h2>
         {normalisedQuery ? (
           <p>
-            {results.length} {results.length === 1 ? "result" : "results"}
+            {language === "zh" ? `${results.length} 条结果` : `${results.length} ${results.length === 1 ? "result" : "results"}`}
           </p>
         ) : null}
       </div>
-      <label htmlFor="archive-search-input">Search the static archive</label>
+      <label htmlFor="archive-search-input">{language === "zh" ? "搜索静态往期" : "Search the static archive"}</label>
       <input
         id="archive-search-input"
         name="archive-search"
         type="search"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="Search title, author, source, topic, or year"
+        placeholder={language === "zh" ? "搜索标题、作者、来源、主题或年份" : "Search title, author, source, topic, or year"}
         autoComplete="off"
       />
 
@@ -71,7 +73,7 @@ export function ArchiveSearch({ papers }: ArchiveSearchProps) {
                   </p>
                   <p className="text-link-row">
                     <Link href={`/weekly/${result.editionSlug}`}>
-                      View weekly digest
+                      {language === "zh" ? "查看本周研究摘要" : "View weekly digest"}
                     </Link>
                   </p>
                 </article>
@@ -80,7 +82,7 @@ export function ArchiveSearch({ papers }: ArchiveSearchProps) {
           </ol>
         ) : (
           <p className="archive-search-empty">
-            No matching papers in the static archive.
+            {language === "zh" ? "静态往期中没有匹配论文。" : "No matching papers in the static archive."}
           </p>
         )
       ) : null}

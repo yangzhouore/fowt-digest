@@ -8,6 +8,7 @@ import {
 } from "../../data/digest-adapter";
 import { ArchiveSearch, type ArchiveSearchPaper } from "./archive-search";
 import { hasResearchCandidatePool } from "../../data/research-candidate-adapter";
+import { LocalizedCopy } from "../i18n/localized-copy";
 
 const RESEARCH_ARCHIVE_TOP_PAPER_LIMIT = 3;
 const BROAD_RESEARCH_TAGS = new Set([
@@ -61,19 +62,17 @@ export default function ArchivePage() {
       <SiteHeader />
 
       <section className="intro" aria-labelledby="archive-heading">
-        <p className="eyebrow">Archive</p>
-        <h1 id="archive-heading">Weekly editions in sequence.</h1>
+        <p className="eyebrow"><LocalizedCopy en="Archive" zh="研究往期" /></p>
+        <h1 id="archive-heading"><LocalizedCopy en="Weekly editions in sequence." zh="按周查看研究摘要。" /></h1>
         <p>
-          Browse selected historical demonstration editions generated from static
-          deterministic pipeline outputs. This archive is not complete weekly
-          historical coverage.
+          <LocalizedCopy en="Browse selected historical demonstration editions generated from static deterministic pipeline outputs. This archive is not complete weekly historical coverage." zh="浏览由静态确定性流水线输出生成的精选历史演示期次。本往期并非完整的逐周历史覆盖。" />
         </p>
       </section>
 
       <ArchiveSearch papers={searchPapers} />
 
       <section aria-labelledby="archive-list-heading">
-        <h2 id="archive-list-heading">Editions</h2>
+        <h2 id="archive-list-heading"><LocalizedCopy en="Editions" zh="期次" /></h2>
         <ol className="engineering-briefing-editions research-edition-cards">
           {digests.map((digest) => (
             <li key={digest.slug}>
@@ -112,7 +111,7 @@ export default function ArchivePage() {
                     ))}
                 </ol>
                 <p className="text-link-row">
-                  <Link href={`/weekly/${digest.slug}`}>View weekly digest</Link>
+                  <Link href={`/weekly/${digest.slug}`}><LocalizedCopy en="View weekly digest" zh="查看本周研究摘要" /></Link>
                 </p>
               </article>
             </li>
@@ -121,12 +120,9 @@ export default function ArchivePage() {
       </section>
 
       <section aria-labelledby="archive-notice-heading">
-        <h2 id="archive-notice-heading">Pipeline-data notice</h2>
+        <h2 id="archive-notice-heading"><LocalizedCopy en="Pipeline-data notice" zh="流水线数据说明" /></h2>
         <p>
-          Archive entries are static local copies of selected deterministic pipeline
-          digest outputs prepared for demonstration. The website does not run
-          the pipeline, generate historical entries automatically, or claim
-          complete weekly historical coverage.
+          <LocalizedCopy en="Archive entries are static local copies of selected deterministic pipeline digest outputs prepared for demonstration. The website does not run the pipeline, generate historical entries automatically, or claim complete weekly historical coverage." zh="往期条目是为演示准备的确定性流水线精选摘要输出的本地静态副本。网站不运行流水线、不自动生成历史条目，也不声称提供完整的逐周历史覆盖。" />
         </p>
       </section>
 

@@ -4,7 +4,6 @@ import { SiteFooter } from "./site-footer";
 import { HomepageWeeklyBriefing } from "./homepage-weekly-briefing";
 import { getAllDigests } from "../data/digest-adapter";
 import { getAllEngineeringBriefings } from "../data/engineering-briefing-adapter";
-import { industryCompanyCount, industryStages } from "../data/industry/industry-map";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -30,11 +29,7 @@ export default function Home() {
     <main>
       <SiteHeader />
 
-      <HomepageWeeklyBriefing
-        editions={homepageEditions}
-        industryCompanyCount={industryCompanyCount}
-        industryStageCount={industryStages.length}
-      />
+      <HomepageWeeklyBriefing editions={homepageEditions} />
 
       <SiteFooter />
     </main>

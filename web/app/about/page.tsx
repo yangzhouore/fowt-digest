@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "../site-header";
 import { SiteFooter } from "../site-footer";
+import { LocalizedCopy } from "../i18n/localized-copy";
 
 const sellingPoints = [
   {
@@ -48,12 +49,10 @@ export default function AboutPage() {
       <SiteHeader />
 
       <section className="intro" aria-labelledby="about-heading">
-        <p className="eyebrow">About</p>
-        <h1 id="about-heading">A weekly digest for floating wind decisions.</h1>
+        <p className="eyebrow"><LocalizedCopy en="About" zh="关于" /></p>
+        <h1 id="about-heading"><LocalizedCopy en="A weekly digest for floating wind decisions." zh="服务浮式风电决策的每周摘要。" /></h1>
         <p>
-          Floating Wind Digest helps technical readers scan floating offshore
-          wind research, engineering news, and industry structure without
-          reading every source from scratch.
+          <LocalizedCopy en="Floating Wind Digest helps technical readers scan floating offshore wind research, engineering news, and industry structure without reading every source from scratch." zh="Floating Wind Digest 帮助技术读者快速浏览浮式海上风电研究、工程动态和产业结构，无需从头阅读每个来源。" />
         </p>
       </section>
 
@@ -67,7 +66,7 @@ export default function AboutPage() {
       </section>
 
       <section aria-labelledby="readers-heading">
-        <h2 id="readers-heading">Who it is for</h2>
+        <h2 id="readers-heading"><LocalizedCopy en="Who it is for" zh="面向人群" /></h2>
         <ul className="text-list">
           {readerGroups.map((reader) => (
             <li key={reader}>{reader}</li>
@@ -76,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       <section aria-labelledby="about-prototype-heading">
-        <h2 id="about-prototype-heading">Current scope</h2>
+        <h2 id="about-prototype-heading"><LocalizedCopy en="Current scope" zh="当前范围" /></h2>
         <ul className="text-list">
           {currentScope.map((item) => (
             <li key={item}>{item}</li>

@@ -8,6 +8,7 @@ import {
   getProjectOptions,
 } from "../../data/project-adapter";
 import { ProjectFilters } from "./project-filters";
+import { LocalizedCopy } from "../i18n/localized-copy";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -21,28 +22,26 @@ export default function ProjectsPage() {
   const countryCount = options.countries.length;
 
   return (
-    <main>
+    <main className="projects-page">
       <SiteHeader />
 
       <section className="project-hero" aria-labelledby="projects-heading">
-        <p className="eyebrow">Project Intelligence</p>
-        <h1 id="projects-heading">Global FOWT Projects</h1>
+        <p className="eyebrow"><LocalizedCopy en="Project Intelligence" zh="项目信息" /></p>
+        <h1 id="projects-heading"><LocalizedCopy en="Global FOWT Projects" zh="全球浮式海上风电项目" /></h1>
         <p>
-          A curated, source-backed static dataset of known floating offshore wind
-          projects. Coverage is representative rather than mathematically
-          complete, and missing facts remain absent until verified.
+          <LocalizedCopy en="A curated, source-backed static dataset of known floating offshore wind projects. Coverage is representative rather than mathematically complete, and missing facts remain absent until verified." zh="经筛选且有来源依据的已知浮式海上风电项目静态数据集。覆盖具有代表性而非绝对完整；缺失事实将在核实前保持空缺。" />
         </p>
         <dl className="project-hero-stats" aria-label="Project dataset coverage">
           <div>
-            <dt>Projects</dt>
+            <dt><LocalizedCopy en="Projects" zh="项目" /></dt>
             <dd>{getProjectCount()}</dd>
           </div>
           <div>
-            <dt>Countries</dt>
+            <dt><LocalizedCopy en="Countries" zh="国家" /></dt>
             <dd>{countryCount}</dd>
           </div>
           <div>
-            <dt>Regions</dt>
+            <dt><LocalizedCopy en="Regions" zh="地区" /></dt>
             <dd>{options.regions.length}</dd>
           </div>
         </dl>
@@ -59,12 +58,9 @@ export default function ProjectsPage() {
       />
 
       <section aria-labelledby="project-data-notice-heading">
-        <h2 id="project-data-notice-heading">Data notice</h2>
+        <h2 id="project-data-notice-heading"><LocalizedCopy en="Data notice" zh="数据说明" /></h2>
         <p>
-          Project records are static, source-backed JSON under
-          `web/data/projects/`. The website does not run collection, scraping,
-          scoring, AI summarisation, geospatial services, a backend, a database,
-          or a CMS.
+          <LocalizedCopy en="Project records are static, source-backed JSON under web/data/projects/. The website does not run collection, scraping, scoring, AI summarisation, geospatial services, a backend, a database, or a CMS." zh="项目记录是 web/data/projects/ 下有来源依据的静态 JSON。网站不运行采集、抓取、评分、AI 摘要、地理空间服务、后端、数据库或 CMS。" />
         </p>
       </section>
 

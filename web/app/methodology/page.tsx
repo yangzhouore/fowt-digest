@@ -145,7 +145,7 @@ export const metadata: Metadata = {
 
 export default function MethodologyPage() {
   return (
-    <main>
+    <main className="methodology-page">
       <SiteHeader />
 
       <section className="intro" aria-labelledby="methodology-heading">

@@ -765,6 +765,16 @@ dd {
   align-items: start;
 }
 
+.methodology-page h1,
+.methodology-page p {
+  max-width: none;
+}
+
+.methodology-page .eyebrow {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
 .methodology-sector {
   border-top: 1px solid var(--ink);
   padding-top: 22px;

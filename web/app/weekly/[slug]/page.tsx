@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
+import { LocalizedCopy } from "../../i18n/localized-copy";
 import { notFound } from "next/navigation";
 import { getAllDigests, getDigestBySlug } from "../../../data/digest-adapter";
 import { hasResearchCandidatePool } from "../../../data/research-candidate-adapter";
@@ -51,13 +52,13 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
       <SiteHeader />
 
       <section className="intro" aria-labelledby="weekly-heading">
-        <p className="eyebrow">Weekly digest</p>
+        <p className="eyebrow"><LocalizedCopy en="Weekly digest" zh="每周研究摘要" /></p>
         <h1 id="weekly-heading">{digest.dateRange}</h1>
         <p>{digest.introduction}</p>
       </section>
 
       <section className="edition-meta" aria-labelledby="edition-meta-heading">
-        <h2 id="edition-meta-heading">Digest metadata</h2>
+        <h2 id="edition-meta-heading"><LocalizedCopy en="Digest metadata" zh="摘要元数据" /></h2>
         <dl>
           <div>
             <dt>Date range</dt>
@@ -87,7 +88,7 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
       </section>
 
       <section id="papers" aria-labelledby="selected-papers-heading">
-        <h2 id="selected-papers-heading">Selected papers</h2>
+        <h2 id="selected-papers-heading"><LocalizedCopy en="Selected papers" zh="精选论文" /></h2>
         <ol className="paper-list">
           {digest.papers.map((paper) => (
             <li key={paper.id}>
@@ -122,7 +123,7 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
                 <p>{abstractPreview(paper.abstract)}</p>
                 {paper.sourceUrl ? (
                   <p className="text-link-row">
-                    <a href={paper.sourceUrl}>View source</a>
+                    <a href={paper.sourceUrl}><LocalizedCopy en="View source" zh="查看来源" /></a>
                   </p>
                 ) : null}
               </article>
@@ -132,7 +133,7 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
       </section>
 
       <section aria-labelledby="weekly-notice-heading">
-        <h2 id="weekly-notice-heading">Pipeline-data notice</h2>
+        <h2 id="weekly-notice-heading"><LocalizedCopy en="Pipeline-data notice" zh="流水线数据说明" /></h2>
         <p>
           This page displays a static local copy of one selected historical
           demonstration edition from the deterministic pipeline. It is not a

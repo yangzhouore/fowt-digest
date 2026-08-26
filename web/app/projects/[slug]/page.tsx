@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "../../site-footer";
 import { SiteHeader } from "../../site-header";
+import { LocalizedCopy } from "../../i18n/localized-copy";
 import {
   formatCapacity,
   formatDate,
@@ -81,7 +82,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
       <article>
         <section className="project-detail-hero" aria-labelledby="project-heading">
-          <p className="eyebrow">Project profile</p>
+          <p className="eyebrow"><LocalizedCopy en="Project profile" zh="项目档案" /></p>
           <h1 id="project-heading">{project.name}</h1>
           <p>
             {project.locationDescription ?? project.seaArea ?? project.country}
@@ -118,7 +119,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </section>
 
         <section className="project-technical" aria-labelledby="technical-heading">
-          <h2 id="technical-heading">Technical configuration</h2>
+          <h2 id="technical-heading"><LocalizedCopy en="Technical configuration" zh="技术配置" /></h2>
           {technicalFacts.length > 0 ? (
             <dl className="project-fact-grid">
               {technicalFacts.map((fact) => (
@@ -138,8 +139,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         <section className="project-ecosystem" aria-labelledby="ecosystem-heading">
           <div className="project-section-copy">
-            <p className="eyebrow">Project ecosystem</p>
-            <h2 id="ecosystem-heading">Who is involved, and what are they doing?</h2>
+            <p className="eyebrow"><LocalizedCopy en="Project ecosystem" zh="项目生态" /></p>
+            <h2 id="ecosystem-heading"><LocalizedCopy en="Who is involved, and what are they doing?" zh="有哪些参与方，各自承担什么工作？" /></h2>
           </div>
           <div className="project-ecosystem-grid">
             {groupedRelationships.map(([role, relationships]) => (
@@ -162,8 +163,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         <section className="project-timeline-section" aria-labelledby="timeline-heading">
           <div className="project-section-copy">
-            <p className="eyebrow">Timeline</p>
-            <h2 id="timeline-heading">Source-backed milestones</h2>
+            <p className="eyebrow"><LocalizedCopy en="Timeline" zh="时间线" /></p>
+            <h2 id="timeline-heading"><LocalizedCopy en="Source-backed milestones" zh="有来源依据的里程碑" /></h2>
           </div>
           {project.timelineEvents.length > 0 ? (
             <ol className="project-timeline">
@@ -196,8 +197,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         <section className="project-sources" aria-labelledby="sources-heading">
           <div className="project-section-copy">
-            <p className="eyebrow">Provenance</p>
-            <h2 id="sources-heading">Sources supporting this profile</h2>
+            <p className="eyebrow"><LocalizedCopy en="Provenance" zh="溯源" /></p>
+            <h2 id="sources-heading"><LocalizedCopy en="Sources supporting this profile" zh="支持本档案的来源" /></h2>
           </div>
           <ol className="project-source-list">
             {project.sources.map((source) => (
@@ -218,9 +219,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </section>
 
         <section aria-labelledby="project-navigation-heading">
-          <h2 id="project-navigation-heading">Project index</h2>
+          <h2 id="project-navigation-heading"><LocalizedCopy en="Project index" zh="项目索引" /></h2>
           <p className="text-link-row">
-            <Link href="/projects">Back to all projects</Link>
+            <Link href="/projects"><LocalizedCopy en="Back to all projects" zh="返回全部项目" /></Link>
           </p>
         </section>
       </article>

@@ -9,6 +9,7 @@ import {
   getDigitalAiSignalCount,
 } from "../../data/digital-ai-adapter";
 import { DigitalAiExperience } from "./signal-filters";
+import { LocalizedCopy } from "../i18n/localized-copy";
 
 export const metadata: Metadata = {
   title: "Digital & AI",
@@ -21,13 +22,13 @@ export default function DigitalAiPage() {
   const options = getDigitalAiOptions();
 
   return (
-    <main>
+    <main className="digital-ai-page">
       <SiteHeader />
 
       <section className="digital-ai-hero" aria-labelledby="digital-ai-heading">
-        <p className="eyebrow">Digital & AI</p>
+        <p className="eyebrow"><LocalizedCopy en="Digital & AI" zh="数字化与 AI" /></p>
         <h1 id="digital-ai-heading">AI <span aria-hidden="true">×</span> Offshore Wind</h1>
-        <p>Two forces reshaping each other.</p>
+        <p><LocalizedCopy en="Two forces reshaping each other." zh="两股力量，相互塑造。" /></p>
       </section>
 
       <DigitalAiExperience

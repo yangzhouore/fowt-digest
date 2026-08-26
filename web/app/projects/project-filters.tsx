@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { ProjectStatus } from "../../data/project-adapter";
+import { useLanguage } from "../i18n/language-context";
 
 export type ProjectIndexItem = {
   id: string;
@@ -30,6 +31,7 @@ export function ProjectFilters({
   countries,
   statuses,
 }: ProjectFiltersProps) {
+  const { language } = useLanguage();
   const [region, setRegion] = useState("All");
   const [country, setCountry] = useState("All");
   const [status, setStatus] = useState("All");
@@ -52,38 +54,38 @@ export function ProjectFilters({
     <>
       <section className="project-filter-band" aria-labelledby="project-filter-heading">
         <div className="project-filter-heading">
-          <h2 id="project-filter-heading">Browse projects</h2>
+          <h2 id="project-filter-heading">{language === "zh" ? "浏览项目" : "Browse projects"}</h2>
           <p>
             {filteredProjects.length}{" "}
-            {filteredProjects.length === 1 ? "project" : "projects"}
+            {language === "zh" ? "个项目" : (filteredProjects.length === 1 ? "project" : "projects")}
           </p>
         </div>
         <div className="project-filter-controls">
           <label>
-            <span>Region</span>
+            <span>{language === "zh" ? "地区" : "Region"}</span>
             <select value={region} onChange={(event) => setRegion(event.target.value)}>
-              <option>All</option>
+              <option value="All">{language === "zh" ? "全部" : "All"}</option>
               {regions.map((value) => (
                 <option key={value}>{value}</option>
               ))}
             </select>
           </label>
           <label>
-            <span>Country</span>
+            <span>{language === "zh" ? "国家" : "Country"}</span>
             <select value={country} onChange={(event) => setCountry(event.target.value)}>
-              <option>All</option>
+              <option value="All">{language === "zh" ? "全部" : "All"}</option>
               {countries.map((value) => (
                 <option key={value}>{value}</option>
               ))}
             </select>
           </label>
           <label>
-            <span>Status</span>
+            <span>{language === "zh" ? "状态" : "Status"}</span>
             <select value={status} onChange={(event) => setStatus(event.target.value)}>
-              <option value="All">All</option>
+              <option value="All">{language === "zh" ? "全部" : "All"}</option>
               {statuses.map((item) => (
                 <option key={item.value} value={item.value}>
-                  {item.label}
+                  {language === "zh" ? projectStatusZh(item.value) : item.label}
                 </option>
               ))}
             </select>
@@ -99,13 +101,13 @@ export function ProjectFilters({
               setStatus("All");
             }}
           >
-            Clear filters
+            {language === "zh" ? "清除筛选" : "Clear filters"}
           </button>
         ) : null}
       </section>
 
       <section aria-labelledby="project-list-heading">
-        <h2 id="project-list-heading">Project records</h2>
+        <h2 id="project-list-heading">{language === "zh" ? "项目记录" : "Project records"}</h2>
         {filteredProjects.length > 0 ? (
           <ol className="project-index-list">
             {filteredProjects.map((project) => (
@@ -126,7 +128,7 @@ export function ProjectFilters({
                     </div>
                     <div className="project-preview-facts">
                       <span className={`project-status project-status-${project.normalizedStatus}`}>
-                        {project.statusLabel}
+                        {language === "zh" ? projectStatusZh(project.normalizedStatus) : project.statusLabel}
                       </span>
                       {project.capacityMw !== null ? (
                         <span>{formatCapacity(project.capacityMw)}</span>
@@ -141,11 +143,19 @@ export function ProjectFilters({
             ))}
           </ol>
         ) : (
-          <p className="archive-search-empty">No projects match these filters.</p>
+          <p className="archive-search-empty">{language === "zh" ? "没有符合这些筛选条件的项目。" : "No projects match these filters."}</p>
         )}
       </section>
     </>
   );
+}
+
+function projectStatusZh(status: ProjectStatus): string {
+  return ({
+    concept_early_development: "概念 / 早期开发", lease_or_area_awarded: "租赁 / 区域已授予", development: "开发中", consented: "已获许可",
+    pre_construction: "施工准备", under_construction: "建设中", commissioning: "调试中", operational: "运营中", paused: "已暂停",
+    cancelled: "已取消", decommissioned: "已退役",
+  } as Record<ProjectStatus, string>)[status];
 }
 
 function formatCapacity(value: number): string {

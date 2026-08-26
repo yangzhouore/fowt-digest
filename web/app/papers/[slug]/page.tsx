@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
+import { LocalizedCopy } from "../../i18n/localized-copy";
 import { notFound } from "next/navigation";
 import {
   getAllDigests,
@@ -62,7 +63,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
 
       <article>
         <section className="intro" aria-labelledby="paper-heading">
-          <p className="eyebrow">Pipeline paper detail</p>
+          <p className="eyebrow"><LocalizedCopy en="Pipeline paper detail" zh="流水线论文详情" /></p>
           <h1 id="paper-heading">{paper.title}</h1>
           <p className="paper-authors">
             {paper.authors.join(", ") || "No authors listed"}
@@ -81,7 +82,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
           ) : null}
           {paper.sourceUrl || paper.doi ? (
             <p className="paper-action-row">
-              {paper.sourceUrl ? <a href={paper.sourceUrl}>View source</a> : null}
+              {paper.sourceUrl ? <a href={paper.sourceUrl}><LocalizedCopy en="View source" zh="查看来源" /></a> : null}
               {paper.sourceUrl && paper.doi ? " / " : null}
               {paper.doi ? <a href={paper.doi}>Open DOI</a> : null}
             </p>
@@ -89,12 +90,12 @@ export default async function PaperPage({ params }: PaperPageProps) {
         </section>
 
         <section className="paper-abstract" aria-labelledby="abstract-heading">
-          <h2 id="abstract-heading">Abstract</h2>
+          <h2 id="abstract-heading"><LocalizedCopy en="Abstract" zh="摘要" /></h2>
           <p>{paper.abstract ?? "No abstract available."}</p>
         </section>
 
         <section className="paper-detail-meta" aria-labelledby="paper-meta-heading">
-          <h2 id="paper-meta-heading">Supporting metadata</h2>
+          <h2 id="paper-meta-heading"><LocalizedCopy en="Supporting metadata" zh="辅助元数据" /></h2>
           <dl>
             <div>
               <dt>Rank</dt>
@@ -105,7 +106,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
               <dd>{formatPublicationDate(paper.publicationDate)}</dd>
             </div>
             <div>
-              <dt>Source</dt>
+              <dt><LocalizedCopy en="Source" zh="来源" /></dt>
               <dd>{paper.publicationSource}</dd>
             </div>
             <div>
@@ -172,7 +173,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
 
         {paper.selectionScoreComponents.length > 0 ? (
           <section aria-labelledby="selection-breakdown-heading">
-            <h2 id="selection-breakdown-heading">Selection score breakdown</h2>
+            <h2 id="selection-breakdown-heading"><LocalizedCopy en="Selection score breakdown" zh="筛选评分明细" /></h2>
             <dl className="score-breakdown paper-score-breakdown">
               {paper.selectionScoreComponents.map((component) => (
                 <div key={component.id}>
@@ -185,14 +186,14 @@ export default async function PaperPage({ params }: PaperPageProps) {
         ) : null}
 
         <section aria-labelledby="pipeline-notice-heading">
-          <h2 id="pipeline-notice-heading">Pipeline-data notice</h2>
+          <h2 id="pipeline-notice-heading"><LocalizedCopy en="Pipeline-data notice" zh="流水线数据说明" /></h2>
           <p>
             This page uses a static local copy of one selected historical
             demonstration edition from the deterministic pipeline. It does not
             include AI-written summaries or editorial analysis.
           </p>
           <p className="text-link-row">
-            <Link href={`/weekly/${edition.slug}`}>Back to the weekly digest</Link>
+            <Link href={`/weekly/${edition.slug}`}><LocalizedCopy en="Back to the weekly digest" zh="返回每周研究摘要" /></Link>
             {hasCandidatePool ? (
               <>
                 {" / "}

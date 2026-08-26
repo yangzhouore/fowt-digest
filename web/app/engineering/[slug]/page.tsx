@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
+import { LocalizedCopy } from "../../i18n/localized-copy";
 import {
   getAllEngineeringBriefings,
   getEngineeringBriefingBySlug,
@@ -51,7 +52,7 @@ export default async function EngineeringBriefingPage({
       <SiteHeader />
 
       <section className="intro" aria-labelledby="engineering-heading">
-        <p className="eyebrow">Engineering briefing</p>
+        <p className="eyebrow"><LocalizedCopy en="Engineering briefing" zh="工程简报" /></p>
         <h1 id="engineering-heading">{briefing.dateRange}</h1>
         <p>
           Source-backed engineering highlights for floating offshore wind. This
@@ -60,7 +61,7 @@ export default async function EngineeringBriefingPage({
       </section>
 
       <section className="edition-meta" aria-labelledby="engineering-meta-heading">
-        <h2 id="engineering-meta-heading">Briefing metadata</h2>
+        <h2 id="engineering-meta-heading"><LocalizedCopy en="Briefing metadata" zh="简报元数据" /></h2>
         <dl>
           <div>
             <dt>Date range</dt>
@@ -88,7 +89,7 @@ export default async function EngineeringBriefingPage({
       </section>
 
       <section aria-labelledby="engineering-items-heading">
-        <h2 id="engineering-items-heading">Engineering highlights</h2>
+        <h2 id="engineering-items-heading"><LocalizedCopy en="Engineering highlights" zh="工程重点" /></h2>
         <ol className="engineering-list">
           {briefing.items.map((item) => (
             <li key={item.id}>
@@ -112,17 +113,17 @@ export default async function EngineeringBriefingPage({
                 <p>{item.explanation}</p>
                 {item.whyItMatters ? (
                   <div className="engineering-note">
-                    <h4>Why it matters</h4>
+                    <h4><LocalizedCopy en="Why it matters" zh="重要性" /></h4>
                     <p>{item.whyItMatters}</p>
                   </div>
                 ) : null}
                 <dl className="engineering-source-meta">
                   <div>
-                    <dt>Source</dt>
+                    <dt><LocalizedCopy en="Source" zh="来源" /></dt>
                     <dd>{item.sourceRecords[0]?.publisher}</dd>
                   </div>
                   <div>
-                    <dt>Source date</dt>
+                    <dt><LocalizedCopy en="Source date" zh="来源日期" /></dt>
                     <dd>{formatPublicationDate(item.sourceRecords[0]?.publishedDate)}</dd>
                   </div>
                 </dl>
@@ -136,7 +137,7 @@ export default async function EngineeringBriefingPage({
       </section>
 
       <section aria-labelledby="engineering-boundary-heading">
-        <h2 id="engineering-boundary-heading">Data boundary</h2>
+        <h2 id="engineering-boundary-heading"><LocalizedCopy en="Data boundary" zh="数据边界" /></h2>
         <p>
           Engineering Briefing source records and briefing copy are stored in a
           separate static data path from the OpenAlex Research Digest. The website
@@ -144,7 +145,7 @@ export default async function EngineeringBriefingPage({
           extraction; it renders committed static JSON.
         </p>
         <p className="text-link-row">
-          <Link href="/">Back to Homepage</Link>
+          <Link href="/"><LocalizedCopy en="Back to Homepage" zh="返回首页" /></Link>
         </p>
       </section>
 

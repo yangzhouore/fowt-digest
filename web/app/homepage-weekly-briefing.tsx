@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { DigestEdition } from "../data/digest-adapter";
 import type { EngineeringBriefing } from "../data/engineering-briefing-adapter";
+import { useLanguage } from "./i18n/language-context";
 
 const HOMEPAGE_PAPER_LIMIT = 5;
 const BROAD_TOPIC_TAGS = new Set([
@@ -56,15 +57,12 @@ type HomepageEdition = {
 
 type HomepageWeeklyBriefingProps = {
   editions: HomepageEdition[];
-  industryCompanyCount: number;
-  industryStageCount: number;
 };
 
 export function HomepageWeeklyBriefing({
   editions,
-  industryCompanyCount,
-  industryStageCount,
 }: HomepageWeeklyBriefingProps) {
+  const { language } = useLanguage();
   const [selectedSlug, setSelectedSlug] = useState(editions[0]?.digest.slug ?? "");
   const selectedEdition = useMemo(
     () => editions.find((edition) => edition.digest.slug === selectedSlug) ?? editions[0],
@@ -77,32 +75,45 @@ export function HomepageWeeklyBriefing({
 
   const previewPapers = selectedEdition.digest.papers.slice(0, HOMEPAGE_PAPER_LIMIT);
   const engineeringHighlights = selectedEdition.engineeringBriefing.items.slice(0, 5);
-  const homepageMetrics = `${engineeringHighlights.length} news and ${previewPapers.length} papers per week in 5 minutes`;
+  const homepageMetrics = language === "zh"
+    ? `每周 ${engineeringHighlights.length} 条工程动态与 ${previewPapers.length} 篇论文，5 分钟掌握`
+    : `${engineeringHighlights.length} news and ${previewPapers.length} papers per week in 5 minutes`;
 
   return (
     <>
       <section className="homepage-masthead" aria-labelledby="intro-heading">
-        <h1 id="intro-heading">Floating Wind, Curated.</h1>
+        <h1 id="intro-heading">{language === "zh" ? "浮式风电，精选呈现。" : "Floating Wind, Curated."}</h1>
         <p className="homepage-metrics">{homepageMetrics}</p>
-        <label className="homepage-week-picker">
-          <span>Week</span>
-          <select
-            value={selectedEdition.digest.slug}
-            onChange={(event) => setSelectedSlug(event.target.value)}
+        <div className="homepage-week-picker">
+          <div
+            className="homepage-week-axis"
+            role="group"
+            aria-label={language === "zh" ? "选择周次" : "Select a week"}
           >
-            {editions.map((edition) => (
-              <option key={edition.digest.slug} value={edition.digest.slug}>
-                {compactDateRange(edition.engineeringBriefing.dateRange)}
-              </option>
-            ))}
-          </select>
-        </label>
+            {editions.map((edition) => {
+              const isSelected = edition.digest.slug === selectedEdition.digest.slug;
+
+              return (
+                <button
+                  key={edition.digest.slug}
+                  type="button"
+                  className="homepage-week-option"
+                  aria-pressed={isSelected}
+                  onClick={() => setSelectedSlug(edition.digest.slug)}
+                >
+                  <span className="homepage-week-marker" aria-hidden="true" />
+                  <span>{formatWeekLabel(edition.engineeringBriefing.dateRange, language)}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </section>
 
-      <section className="homepage-front" aria-label="This week's briefing">
+      <section className="homepage-front" aria-label={language === "zh" ? "本周简报" : "This week's briefing"}>
         <section aria-labelledby="engineering-briefing-heading">
           <div className="section-heading-row">
-            <h2 id="engineering-briefing-heading">Engineering</h2>
+            <h2 id="engineering-briefing-heading">{language === "zh" ? "工程" : "Engineering"}</h2>
           </div>
           <ol className="engineering-highlight-list">
             {engineeringHighlights.map((item) => (
@@ -128,14 +139,14 @@ export function HomepageWeeklyBriefing({
           </ol>
           <p className="text-link-row">
             <Link href={`/engineering/${selectedEdition.engineeringBriefing.slug}`}>
-              Explore Engineering -&gt;
+              {language === "zh" ? "查看工程简报" : "Explore Engineering"} -&gt;
             </Link>
           </p>
         </section>
 
         <section id="weekly" aria-labelledby="papers-heading">
           <div className="section-heading-row">
-            <h2 id="papers-heading">Research</h2>
+            <h2 id="papers-heading">{language === "zh" ? "研究" : "Research"}</h2>
           </div>
           <ol className="homepage-paper-list">
             {previewPapers.map((paper) => {
@@ -163,22 +174,12 @@ export function HomepageWeeklyBriefing({
           </ol>
           <p className="text-link-row">
             <Link href={`/weekly/${selectedEdition.digest.slug}`}>
-              Explore Research -&gt;
+              {language === "zh" ? "查看研究摘要" : "Explore Research"} -&gt;
             </Link>
           </p>
         </section>
       </section>
 
-      <section className="homepage-industry" aria-labelledby="industry-heading">
-        <div>
-          <p className="eyebrow">Industry</p>
-          <h2 id="industry-heading">Who builds floating wind?</h2>
-          <p>
-            {industryCompanyCount} companies - {industryStageCount} value-chain stages
-          </p>
-        </div>
-        <Link href="/industry">Explore Industry Map -&gt;</Link>
-      </section>
     </>
   );
 }
@@ -206,24 +207,32 @@ function isDisplayTopicTag(tag: string): boolean {
   return Boolean(tag) && !BROAD_TOPIC_TAGS.has(key) && tag.length <= 34;
 }
 
-function compactDateRange(dateRange: string): string {
-  const [start, end] = dateRange.split(" - ");
-  if (!start || !end) {
-    return dateRange;
+function formatWeekLabel(dateRange: string, language: "en" | "zh"): string {
+  const [start] = dateRange.split(" - ");
+  const [day, month, year] = start?.split(" ") ?? [];
+  const monthNumber = MONTH_NUMBERS[month];
+
+  if (!day || !monthNumber || !year) {
+    return `${language === "zh" ? "周" : "Week"} ${dateRange}`;
   }
 
-  const startParts = start.split(" ");
-  const endParts = end.split(" ");
-  if (startParts.length === 3 && endParts.length === 3) {
-    const [startDay, startMonth, startYear] = startParts;
-    const [endDay, endMonth, endYear] = endParts;
-    if (startMonth === endMonth && startYear === endYear) {
-      return `${startDay}-${endDay} ${endMonth} ${endYear}`;
-    }
-  }
-
-  return dateRange;
+  return `${language === "zh" ? "周" : "Week"} ${day.padStart(2, "0")}/${monthNumber}/${year.slice(-2)}`;
 }
+
+const MONTH_NUMBERS: Record<string, string> = {
+  January: "01",
+  February: "02",
+  March: "03",
+  April: "04",
+  May: "05",
+  June: "06",
+  July: "07",
+  August: "08",
+  September: "09",
+  October: "10",
+  November: "11",
+  December: "12",
+};
 
 function uniqueFirst(values: string[], limit: number): string[] {
   const selected: string[] = [];

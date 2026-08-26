@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { useLanguage } from "../i18n/language-context";
 
 export type EngineeringArchiveBriefing = {
   slug: string;
@@ -64,6 +65,7 @@ const REGION_RULES = [
 export function EngineeringSearch({
   briefings,
 }: EngineeringSearchProps) {
+  const { language } = useLanguage();
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
   const normalisedQuery = query.trim().toLowerCase();
@@ -118,26 +120,26 @@ export function EngineeringSearch({
     <>
       <section className="archive-search" aria-labelledby="engineering-search-heading">
         <div className="archive-search-heading">
-          <h2 id="engineering-search-heading">Search news</h2>
+          <h2 id="engineering-search-heading">{language === "zh" ? "搜索动态" : "Search news"}</h2>
           {hasActiveFilter ? (
             <p>
-              {visibleCount} {visibleCount === 1 ? "result" : "results"}
+              {language === "zh" ? `${visibleCount} 条结果` : `${visibleCount} ${visibleCount === 1 ? "result" : "results"}`}
             </p>
           ) : null}
         </div>
-        <label htmlFor="engineering-search-input">Search the engineering archive</label>
+        <label htmlFor="engineering-search-input">{language === "zh" ? "搜索工程简报往期" : "Search the engineering archive"}</label>
         <input
           id="engineering-search-input"
           name="engineering-search"
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search project, company, region, topic, source, or year"
+          placeholder={language === "zh" ? "搜索项目、企业、地区、主题、来源或年份" : "Search project, company, region, topic, source, or year"}
           autoComplete="off"
         />
 
         <div className="engineering-region-filter" aria-labelledby="engineering-region-heading">
-          <h3 id="engineering-region-heading">Filter by region</h3>
+          <h3 id="engineering-region-heading">{language === "zh" ? "按地区筛选" : "Filter by region"}</h3>
           <div className="engineering-region-options">
             {regions.map((region) => (
               <button
@@ -146,7 +148,7 @@ export function EngineeringSearch({
                 aria-pressed={selectedRegion === region}
                 onClick={() => setSelectedRegion(region)}
               >
-                {region}
+                {translateRegion(region, language)}
               </button>
             ))}
           </div>
@@ -156,7 +158,7 @@ export function EngineeringSearch({
       <section aria-labelledby="engineering-archive-list-heading">
         <div className="section-heading-row">
           <h2 id="engineering-archive-list-heading">
-            {hasActiveFilter ? "Matching news by week" : "Briefing editions"}
+            {language === "zh" ? (hasActiveFilter ? "按周显示匹配动态" : "简报期次") : (hasActiveFilter ? "Matching news by week" : "Briefing editions")}
           </h2>
           {hasActiveFilter ? (
             <button
@@ -167,7 +169,7 @@ export function EngineeringSearch({
                 setSelectedRegion("All");
               }}
             >
-              Clear filters
+              {language === "zh" ? "清除筛选" : "Clear filters"}
             </button>
           ) : null}
         </div>
@@ -205,7 +207,7 @@ export function EngineeringSearch({
                   </ol>
                   <p className="text-link-row">
                     <Link href={`/engineering/${briefing.slug}`}>
-                      View more details for this week
+                      {language === "zh" ? "查看本周详情" : "View more details for this week"}
                     </Link>
                   </p>
                 </article>
@@ -214,12 +216,17 @@ export function EngineeringSearch({
           </ol>
         ) : (
           <p className="archive-search-empty">
-            No matching news in the engineering archive.
+            {language === "zh" ? "工程简报往期中没有匹配动态。" : "No matching news in the engineering archive."}
           </p>
         )}
       </section>
     </>
   );
+}
+
+function translateRegion(region: string, language: "en" | "zh"): string {
+  if (language === "en") return region;
+  return ({ All: "全部", Europe: "欧洲", "Asia-Pacific": "亚太", "North America": "北美", Unspecified: "未指定" } as Record<string, string>)[region] ?? region;
 }
 
 function searchText(item: EngineeringArchiveNews & { displayRegion?: string | null }): string {

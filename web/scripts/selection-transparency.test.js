@@ -34,10 +34,10 @@ const engineeringSourceRegistry = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "data", "engineering-source-registry.json"), "utf8"),
 );
 const engineeringBriefing = JSON.parse(
-  fs.readFileSync(path.join(engineeringBriefingDir, "2026-08-23.json"), "utf8"),
+  fs.readFileSync(path.join(engineeringBriefingDir, "2026-08-30.json"), "utf8"),
 );
 const engineeringBackfillBriefings = fs.readdirSync(engineeringBriefingDir)
-  .filter((fileName) => fileName >= "2026-04-05.json" && fileName <= "2026-08-23.json")
+  .filter((fileName) => fileName >= "2026-04-05.json" && fileName <= "2026-08-30.json")
   .sort()
   .map((fileName) => JSON.parse(fs.readFileSync(path.join(engineeringBriefingDir, fileName), "utf8")));
 
@@ -79,6 +79,7 @@ const expectedResearchCounts = new Map([
   ["2026-08-02", 92],
   ["2026-08-09", 106],
   ["2026-08-23", 90],
+  ["2026-08-30", 106],
 ]);
 
 const retainedWeeks = new Set([
@@ -87,6 +88,7 @@ const retainedWeeks = new Set([
   "2026-08-02",
   "2026-08-09",
   "2026-08-23",
+  "2026-08-30",
 ]);
 
 const failedReconstructionWeeks = new Set(["2026-08-16"]);
@@ -226,24 +228,22 @@ test("engineering latest candidate transparency stores an audited multi-source c
   assert.ok(selection);
   assert.equal(selection.candidatePoolType, "approved_source_candidate_pool");
   assert.equal(selection.selectionModel.id, SCORE_MODEL_ID);
-  assert.equal(engineeringBriefing.sourceRecords.length, 10);
-  assert.equal(engineeringBriefing.checkedResultCount, 8);
-  assert.equal(selection.collectionAudit.candidatePoolSize, 8);
-  assert.equal(selection.collectionAudit.sourcesAttempted, 17);
-  assert.equal(selection.collectionAudit.sourcesSuccessfullyCollected, 12);
-  assert.equal(selection.collectionAudit.sourcesFailed, 5);
-  assert.equal(selection.collectionAudit.rawItemsCollected, 18);
-  assert.equal(selection.collectionAudit.itemsAfterDateFiltering, 13);
-  assert.equal(selection.collectionAudit.itemsAfterFowtRelevanceFiltering, 12);
-  assert.equal(selection.collectionAudit.duplicateEventOverlapsRemoved, 4);
+  assert.equal(engineeringBriefing.sourceRecords.length, 3);
+  assert.equal(engineeringBriefing.checkedResultCount, 2);
+  assert.equal(selection.collectionAudit.candidatePoolSize, 2);
+  assert.equal(selection.collectionAudit.sourcesAttempted, 42);
+  assert.equal(selection.collectionAudit.sourcesSuccessfullyCollected, 2);
+  assert.equal(selection.collectionAudit.sourcesFailed, 40);
+  assert.equal(selection.collectionAudit.rawItemsCollected, 3);
+  assert.equal(selection.collectionAudit.itemsAfterDateFiltering, 3);
+  assert.equal(selection.collectionAudit.itemsAfterFowtRelevanceFiltering, 3);
+  assert.equal(selection.collectionAudit.duplicateEventOverlapsRemoved, 1);
   assert.equal(selection.candidates.length, selection.collectionAudit.candidatePoolSize);
 
   const candidateSourceIds = new Set(selection.candidates.map((candidate) => candidate.sourceRecordId));
-  assert.ok(candidateSourceIds.has("eng-src-2026-08-23-france-floating-ports-offshorewind"));
-  assert.ok(candidateSourceIds.has("eng-src-2026-08-23-stillstrom-cable-control"));
-  assert.ok(candidateSourceIds.has("eng-src-2026-08-23-stanford-offshore-wind-testing"));
-  assert.ok(!candidateSourceIds.has("eng-src-2026-08-23-brestport-inflow"));
-  assert.ok(!candidateSourceIds.has("eng-src-2026-08-23-mlit-port-study"));
+  assert.ok(candidateSourceIds.has("eng-src-2026-08-30-encomara-squid"));
+  assert.ok(candidateSourceIds.has("eng-src-2026-08-30-bw-ideol-floatgen-40gwh"));
+  assert.ok(!candidateSourceIds.has("eng-src-2026-08-30-encomara-squid-offshorewind"));
 
   for (const source of engineeringBriefing.sourceRecords) {
     if (source.candidateStatus === "candidate") {
@@ -333,7 +333,7 @@ test("engineering scored candidates are raw-ranked by score with source ID tie-b
   }
 });
 
-test("engineering diversity layer preserves five selected highlights from candidate records", () => {
+test("engineering diversity layer does not pad a two-candidate week", () => {
   const { candidates } = buildEngineeringCandidatePool(engineeringBriefing);
   const selected = candidates.filter((candidate) => candidate.selected);
   const selectedIds = selected.map((candidate) => candidate.sourceRecordId);
@@ -341,16 +341,14 @@ test("engineering diversity layer preserves five selected highlights from candid
     (item) => item.sourceRecordIds[0],
   );
 
-  assert.equal(selected.length, 5);
+  assert.equal(selected.length, 2);
   assert.deepEqual(
     selected.map((candidate) => candidate.finalRank),
-    [1, 2, 3, 4, 5],
+    [1, 2],
   );
   assert.deepEqual(selectedIds, selectedBriefingSourceIds);
-  assert.ok(selectedIds.includes("eng-src-2026-08-23-france-floating-ports-offshorewind"));
-  assert.ok(selectedIds.includes("eng-src-2026-08-23-deepwind-mlit-ports"));
-  assert.ok(!selectedIds.includes("eng-src-2026-08-23-stillstrom-cable-control"));
-  assert.ok(!selectedIds.includes("eng-src-2026-08-23-stanford-offshore-wind-testing"));
+  assert.ok(selectedIds.includes("eng-src-2026-08-30-encomara-squid"));
+  assert.ok(selectedIds.includes("eng-src-2026-08-30-bw-ideol-floatgen-40gwh"));
   assert.ok(selected.every((candidate) => candidate.diversityReason));
 });
 test("engineering historical backfilled weeks retain scored reconstructed candidate pools", () => {
@@ -376,6 +374,7 @@ test("engineering historical backfilled weeks retain scored reconstructed candid
     ["2026-08-09", 3],
     ["2026-08-16", 4],
     ["2026-08-23", 8],
+    ["2026-08-30", 2],
   ]);
 
   for (const briefing of engineeringBackfillBriefings) {
@@ -386,7 +385,7 @@ test("engineering historical backfilled weeks retain scored reconstructed candid
     assert.equal(briefing.engineeringSelection.collectionAudit.candidatePoolSize, expectedCount);
     assert.equal(briefing.engineeringSelection.candidates.length, expectedCount);
     assert.equal(briefing.checkedResultCount, expectedCount);
-    if (briefing.weekEnd !== "2026-08-23") {
+    if (!["2026-08-23", "2026-08-30"].includes(briefing.weekEnd)) {
       assert.equal(
         briefing.engineeringSelection.candidatePoolType,
         "reconstructed_historical_registry_source_pool",

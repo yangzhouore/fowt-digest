@@ -1,3 +1,4 @@
+import researchCandidates20260830Json from "./research-candidates/2026-08-30.json";
 import researchCandidates20260823Json from "./research-candidates/2026-08-23.json";
 import researchCandidates20260809Json from "./research-candidates/2026-08-09.json";
 import researchCandidates20260802Json from "./research-candidates/2026-08-02.json";
@@ -125,6 +126,7 @@ export type ResearchCandidate = {
 };
 
 const researchCandidateJsonFiles = [
+  researchCandidates20260830Json,
   researchCandidates20260823Json,
   researchCandidates20260809Json,
   researchCandidates20260802Json,

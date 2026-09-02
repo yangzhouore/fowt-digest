@@ -2400,6 +2400,266 @@ dd {
   margin-top: 18px;
 }
 
+.green-volt-detail {
+  --gv-secured: #176a4a;
+  --gv-active: #8a5a00;
+  --gv-open: #8b2f2f;
+  --gv-unknown: #525252;
+}
+
+.green-volt-hero {
+  border-bottom: 1px solid var(--border);
+  padding: 58px 0 34px;
+}
+
+.green-volt-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 34px;
+  align-items: end;
+}
+
+.green-volt-hero h1 {
+  max-width: 820px;
+  margin-bottom: 12px;
+  font-size: 4.2rem;
+  line-height: 0.95;
+}
+
+.green-volt-status-line {
+  margin: 0;
+  color: var(--accent);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.green-volt-standfirst {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.green-volt-hero-facts {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+}
+
+.green-volt-hero-facts div {
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.green-volt-hero-facts dt,
+.green-volt-progress span,
+.green-volt-readiness span,
+.green-volt-story-chain span,
+.green-volt-fid-note {
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.green-volt-hero-facts dd {
+  margin: 7px 0 0;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.28rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.green-volt-section {
+  display: grid;
+  gap: 24px;
+  padding-top: 18px;
+}
+
+.green-volt-progress,
+.green-volt-story-chain,
+.green-volt-watchpoints,
+.green-volt-stands ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.green-volt-progress {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(120px, 1fr));
+  gap: 1px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.green-volt-progress li {
+  min-width: 120px;
+  border-top: 1px solid var(--border);
+  padding: 14px 10px 0 0;
+}
+
+.green-volt-progress p {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.green-volt-progress strong,
+.green-volt-state-pill {
+  display: inline-block;
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.green-volt-progress span {
+  display: block;
+  margin-top: 8px;
+}
+
+.green-volt-state-secured strong,
+.green-volt-state-secured.green-volt-state-pill {
+  color: var(--gv-secured);
+}
+
+.green-volt-state-active strong,
+.green-volt-state-active.green-volt-state-pill {
+  color: var(--gv-active);
+}
+
+.green-volt-state-not-verified strong,
+.green-volt-state-not-verified.green-volt-state-pill,
+.green-volt-state-not-started strong,
+.green-volt-state-not-started.green-volt-state-pill {
+  color: var(--gv-open);
+}
+
+.green-volt-state-unknown strong,
+.green-volt-state-unknown.green-volt-state-pill {
+  color: var(--gv-unknown);
+}
+
+.green-volt-two-column {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  gap: 28px;
+}
+
+.green-volt-two-column article {
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.green-volt-two-column h3,
+.green-volt-readiness p,
+.green-volt-watchpoints h3,
+.green-volt-story-chain span {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.green-volt-two-column li {
+  border-top: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+.green-volt-two-column li:first-child {
+  border-top: 0;
+}
+
+.green-volt-two-column p {
+  max-width: 850px;
+}
+
+.green-volt-fid-note {
+  margin-top: 14px;
+}
+
+.green-volt-story-chain {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+}
+
+.green-volt-story-chain li {
+  position: relative;
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  padding: 16px 22px 0 0;
+}
+
+.green-volt-story-chain li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+}
+
+.green-volt-story-chain p {
+  margin: 10px 0 0;
+}
+
+.green-volt-readiness {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+.green-volt-readiness > div {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.45fr) minmax(112px, 0.3fr) minmax(0, 1.25fr);
+  gap: 18px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+
+.green-volt-readiness p {
+  color: var(--ink);
+}
+
+.green-volt-watchpoints {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.green-volt-watchpoints li {
+  min-width: 0;
+  border-top: 2px solid var(--accent);
+  padding-top: 14px;
+}
+
+.green-volt-watchpoints h3 {
+  color: var(--ink);
+}
+
+.green-volt-watchpoints p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.green-volt-secondary {
+  margin-top: 10px;
+}
+
 .project-section-copy h2 {
   max-width: 760px;
   margin: 8px 0 0;
@@ -2544,6 +2804,38 @@ dd {
   .project-timeline li,
   .project-source-list article {
     grid-template-columns: 1fr;
+  }
+
+  .green-volt-hero-grid,
+  .green-volt-hero-facts,
+  .green-volt-two-column,
+  .green-volt-story-chain,
+  .green-volt-watchpoints {
+    grid-template-columns: 1fr;
+  }
+
+  .green-volt-hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .green-volt-progress {
+    grid-template-columns: repeat(8, 138px);
+  }
+
+  .green-volt-readiness > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .green-volt-story-chain li:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -22px;
+    left: 0;
+  }
+
+  .green-volt-story-chain {
+    gap: 26px;
   }
 
   .project-filter-heading {

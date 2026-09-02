@@ -47,6 +47,7 @@ export type Project = {
   developerOwnerText: string | null;
   sourceIds: string[];
   factClaims: FactClaim[];
+  intelligence?: ProjectIntelligence;
 };
 
 export type FactClaim = {
@@ -54,6 +55,23 @@ export type FactClaim = {
   value: string | number | boolean;
   sourceId: string;
   note: string | null;
+  confidence: "high" | "medium" | "low";
+};
+
+export type ProjectIntelligence = {
+  currentAssessment: string;
+  fidStatus: string;
+  sourceIds: string[];
+  confirmedFacts: ProjectIntelligenceStatement[];
+  editorialInferences: ProjectIntelligenceStatement[];
+  currentGates: string[];
+  watchpoints: string[];
+  unresolvedUncertainties: string[];
+};
+
+export type ProjectIntelligenceStatement = {
+  text: string;
+  sourceIds: string[];
   confidence: "high" | "medium" | "low";
 };
 
@@ -260,6 +278,9 @@ export function getProjectWithRelations(project: Project): ProjectWithRelations 
   const referencedSourceIds = new Set([
     ...project.sourceIds,
     ...project.factClaims.map((claim) => claim.sourceId),
+    ...(project.intelligence?.sourceIds ?? []),
+    ...(project.intelligence?.confirmedFacts.flatMap((statement) => statement.sourceIds) ?? []),
+    ...(project.intelligence?.editorialInferences.flatMap((statement) => statement.sourceIds) ?? []),
     ...relationships.flatMap((relationship) => relationship.sourceIds),
     ...relationships.flatMap((relationship) =>
       relationship.factClaims.map((claim) => claim.sourceId),

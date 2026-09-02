@@ -250,6 +250,7 @@ function validateProjects(projects, sourceIds, errors) {
     nullableString(project.developerOwnerText, label, "developerOwnerText", errors);
     sourceIdArray(project.sourceIds, sourceIds, label, "sourceIds", errors);
     validateFactClaims(project.factClaims, sourceIds, label, errors);
+    validateProjectIntelligence(project.intelligence, sourceIds, label, errors);
 
     if (project.normalizedStatus === "operational" && project.actualCod === null) {
       errors.push(`${label}: operational projects must include actualCod when status is operational`);
@@ -270,6 +271,61 @@ function validateProjects(projects, sourceIds, errors) {
   });
 
   return projectIds;
+}
+
+function validateProjectIntelligence(intelligence, sourceIds, label, errors) {
+  if (intelligence === undefined) {
+    return;
+  }
+  const intelligenceLabel = `${label}: intelligence`;
+  if (!isRecord(intelligence)) {
+    errors.push(`${intelligenceLabel}: intelligence must be an object`);
+    return;
+  }
+
+  requiredString(intelligence.currentAssessment, intelligenceLabel, "currentAssessment", errors);
+  requiredString(intelligence.fidStatus, intelligenceLabel, "fidStatus", errors);
+  sourceIdArray(intelligence.sourceIds, sourceIds, intelligenceLabel, "sourceIds", errors);
+  validateIntelligenceStatements(
+    intelligence.confirmedFacts,
+    sourceIds,
+    intelligenceLabel,
+    "confirmedFacts",
+    errors,
+  );
+  validateIntelligenceStatements(
+    intelligence.editorialInferences,
+    sourceIds,
+    intelligenceLabel,
+    "editorialInferences",
+    errors,
+  );
+  nonEmptyStringArray(intelligence.currentGates, intelligenceLabel, "currentGates", errors);
+  nonEmptyStringArray(intelligence.watchpoints, intelligenceLabel, "watchpoints", errors);
+  nonEmptyStringArray(
+    intelligence.unresolvedUncertainties,
+    intelligenceLabel,
+    "unresolvedUncertainties",
+    errors,
+  );
+}
+
+function validateIntelligenceStatements(statements, sourceIds, label, field, errors) {
+  if (!Array.isArray(statements) || statements.length === 0) {
+    errors.push(`${label}: ${field} must be a non-empty array`);
+    return;
+  }
+
+  statements.forEach((statement, index) => {
+    const statementLabel = `${label}: ${field}[${index}]`;
+    if (!isRecord(statement)) {
+      errors.push(`${statementLabel}: statement must be an object`);
+      return;
+    }
+    requiredString(statement.text, statementLabel, "text", errors);
+    sourceIdArray(statement.sourceIds, sourceIds, statementLabel, "sourceIds", errors);
+    enumString(statement.confidence, CONFIDENCE_LEVELS, statementLabel, "confidence", errors);
+  });
 }
 
 function validateRelationships(
@@ -501,6 +557,14 @@ function stringArray(value, label, field, errors) {
       errors.push(`${label}: ${field}[${index}] must be a non-empty string`);
     }
   });
+}
+
+function nonEmptyStringArray(value, label, field, errors) {
+  if (!Array.isArray(value) || value.length === 0) {
+    errors.push(`${label}: ${field} must be a non-empty array`);
+    return;
+  }
+  stringArray(value, label, field, errors);
 }
 
 function strictDate(value, label, field, errors) {

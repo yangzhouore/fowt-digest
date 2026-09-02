@@ -75,6 +75,17 @@ test("timeline event without provenance fails", () => {
   assertHasError(fixture, "factClaims must be a non-empty array");
 });
 
+test("project intelligence statement without provenance fails", () => {
+  const fixture = createFixture({
+    mutateDataset: (dataset) => {
+      dataset.projects[0].intelligence = validProjectIntelligence();
+      dataset.projects[0].intelligence.confirmedFacts[0].sourceIds = [];
+    },
+  });
+
+  assertHasError(fixture, "sourceIds must contain at least one source ID");
+});
+
 test("relationship referencing missing project fails", () => {
   const fixture = createFixture({
     mutateDataset: (dataset) => {
@@ -142,6 +153,31 @@ function createFixture({ mutateDataset } = {}) {
   );
 
   return { dataPath, industryMapPath };
+}
+
+function validProjectIntelligence() {
+  return {
+    currentAssessment: "Active / Pre-FID.",
+    fidStatus: "FID status is UNKNOWN.",
+    sourceIds: ["src-example"],
+    confirmedFacts: [
+      {
+        text: "Example confirmed fact.",
+        sourceIds: ["src-example"],
+        confidence: "high",
+      },
+    ],
+    editorialInferences: [
+      {
+        text: "Example sourced inference.",
+        sourceIds: ["src-example"],
+        confidence: "medium",
+      },
+    ],
+    currentGates: ["FID"],
+    watchpoints: ["FID announcement"],
+    unresolvedUncertainties: ["FID date is UNKNOWN."],
+  };
 }
 
 function validDataset() {

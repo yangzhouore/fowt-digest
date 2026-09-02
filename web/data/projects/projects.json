@@ -373,6 +373,96 @@
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
+      "sourceId": "src-green-volt-cfd-ar6-govuk",
+      "title": "Contracts for Difference (CfD) Allocation Round 6: results",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "url": "https://www.gov.uk/government/publications/contracts-for-difference-cfd-allocation-round-6-results/contracts-for-difference-cfd-allocation-round-6-results-accessible-webpage",
+      "sourceTier": 1,
+      "publishedDate": "2024-09-03",
+      "accessedDate": "2026-09-02",
+      "licenseNote": "Open Government Licence v3.0 except where otherwise stated; factual extraction only."
+    },
+    {
+      "sourceId": "src-crown-estate-scotland-intog",
+      "title": "INTOG leasing round",
+      "publisher": "Crown Estate Scotland",
+      "url": "https://www.crownestatescotland.com/scotlands-property/offshore-wind/intog-leasing-round",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-09-02",
+      "licenseNote": "Public seabed authority webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-green-volt-supply-exemption-govuk",
+      "title": "Electricity supply licence exemption: Green Volt Offshore Wind Farm",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "url": "https://www.gov.uk/government/publications/electricity-supply-licence-exemption-green-volt-offshore-wind-farm",
+      "sourceTier": 1,
+      "publishedDate": "2024-01-10",
+      "accessedDate": "2026-09-02",
+      "licenseNote": "Open Government Licence v3.0 except where otherwise stated; factual extraction only."
+    },
+    {
+      "sourceId": "src-green-volt-sau-supply-exemption-2024",
+      "title": "Referral of a proposed subsidy exempting Green Volt Floating Offshore Wind Farm Limited from the requirement to hold an electricity supply licence",
+      "publisher": "Competition and Markets Authority",
+      "url": "https://www.gov.uk/cma-cases/referral-of-a-proposed-subsidy-exempting-green-volt-floating-offshore-wind-farm-limited-from-the-requirement-to-hold-an-electricity-supply-licence",
+      "sourceTier": 1,
+      "publishedDate": "2024-04-12",
+      "accessedDate": "2026-09-02",
+      "licenseNote": "Open Government Licence v3.0 except where otherwise stated; factual extraction only."
+    },
+    {
+      "sourceId": "src-green-volt-worley-feed-2025",
+      "title": "Green Volt awards Onshore FEED contract to Worley",
+      "publisher": "Green Volt Offshore Windfarm",
+      "url": "https://greenvoltoffshorewind.com/green-volt-awards-onshore-feed-contract-to-worley/",
+      "sourceTier": 2,
+      "publishedDate": "2025-07-17",
+      "accessedDate": "2026-09-02",
+      "licenseNote": "Public project announcement; factual extraction only."
+    },
+    {
+      "sourceId": "src-energyvoice-green-volt-buzzard-2025",
+      "title": "CNOOC drops North Sea electrification plans putting flagship Green Volt floating wind scheme at risk",
+      "publisher": "Energy Voice",
+      "url": "https://www.energyvoice.com/?p=578822",
+      "sourceTier": 5,
+      "publishedDate": "2025-08-28",
+      "accessedDate": "2026-09-02",
+      "licenseNote": "Reputable trade press; used for reported offtake setback and attributed statements."
+    },
+    {
+      "sourceId": "src-ofgem-green-volt-land-access-2026",
+      "title": "Green Volt Offshore Windfarm Limited: application for the Authority's consent to its exercise of statutory rights of entry on land",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/consultation/green-volt-offshore-windfarm-limited-application-authoritys-consent-its-exercise-statutory-rights-entry-land",
+      "sourceTier": 1,
+      "publishedDate": "2025-11-28",
+      "accessedDate": "2026-09-02",
+      "licenseNote": "Public regulator webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-green-volt-surveys-2026",
+      "title": "Green Volt survey programme work",
+      "publisher": "Green Volt Offshore Windfarm",
+      "url": "https://greenvoltoffshorewind.com/green-volt-survey-programme-work/",
+      "sourceTier": 2,
+      "publishedDate": "2026-07-07",
+      "accessedDate": "2026-09-02",
+      "licenseNote": "Public project update; factual extraction only."
+    },
+    {
+      "sourceId": "src-sdi-green-volt-2026",
+      "title": "Green Volt Floating Offshore Wind Farm",
+      "publisher": "Scottish Development International",
+      "url": "https://www.sdi.co.uk/invest/capital-investment/opportunities/green-volt-floating-offshore-wind-farm",
+      "sourceTier": 1,
+      "publishedDate": "2026-01-23",
+      "accessedDate": "2026-09-02",
+      "licenseNote": "Public investment promotion webpage; factual extraction only."
+    },
+    {
       "sourceId": "src-totalenergies-culzean-demo",
       "title": "TotalEnergies launches a floating offshore wind pilot project to supply renewable electricity to Culzean",
       "publisher": "TotalEnergies",
@@ -1510,44 +1600,57 @@
       ]
     },
     {
-      "aliases": [],
-      "seaArea": null,
-      "locationDescription": null,
+      "aliases": [
+        "Green Volt Offshore Windfarm",
+        "Green Volt Offshore Wind Farm",
+        "GV01"
+      ],
+      "seaArea": "North Sea",
+      "locationDescription": "Around 80 km off Aberdeenshire, Scotland",
       "capacityMw": 560,
-      "turbineCount": null,
+      "turbineCount": 35,
       "turbineRatingMw": null,
       "waterDepthM": null,
-      "distanceOffshore": null,
-      "expectedCod": null,
+      "distanceOffshore": "Around 80 km",
+      "expectedCod": "UNKNOWN",
       "actualCod": null,
       "floatingTechnology": "Floating offshore wind farm",
       "platformType": "unknown",
-      "developerOwnerText": "Flotation Energy and Vargronn",
+      "developerOwnerText": "Flotation Energy and Vårgrønn",
       "id": "green-volt",
       "slug": "green-volt",
       "name": "Green Volt",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Consented / CfD awarded",
+      "sourceStatus": "Active development / pre-FID; consented, option agreement secured, CfD awarded",
       "normalizedStatus": "pre_construction",
       "sourceIds": [
         "src-green-volt-overview",
         "src-green-volt-consent",
-        "src-scotgov-owps-2026"
+        "src-scotgov-owps-2026",
+        "src-green-volt-cfd-ar6-govuk",
+        "src-crown-estate-scotland-intog",
+        "src-green-volt-supply-exemption-govuk",
+        "src-green-volt-sau-supply-exemption-2024",
+        "src-green-volt-worley-feed-2025",
+        "src-energyvoice-green-volt-buzzard-2025",
+        "src-ofgem-green-volt-land-access-2026",
+        "src-green-volt-surveys-2026",
+        "src-sdi-green-volt-2026"
       ],
       "factClaims": [
         {
           "path": "sourceStatus",
-          "value": "Consented / CfD awarded",
-          "sourceId": "src-green-volt-overview",
-          "note": null,
+          "value": "Active development / pre-FID; consented, option agreement secured, CfD awarded",
+          "sourceId": "src-sdi-green-volt-2026",
+          "note": "Current assessment combines development status, consent, lease-option, CfD, FEED, and 2026 survey evidence.",
           "confidence": "high"
         },
         {
           "path": "normalizedStatus",
           "value": "pre_construction",
-          "sourceId": "src-green-volt-overview",
-          "note": null,
+          "sourceId": "src-sdi-green-volt-2026",
+          "note": "FID / financial close has not been verified in public primary sources as of 2026-09-02.",
           "confidence": "high"
         },
         {
@@ -1563,8 +1666,137 @@
           "sourceId": "src-green-volt-overview",
           "note": null,
           "confidence": "high"
+        },
+        {
+          "path": "turbineCount",
+          "value": 35,
+          "sourceId": "src-green-volt-overview",
+          "note": "Project source states up to 35 floating wind turbines.",
+          "confidence": "high"
+        },
+        {
+          "path": "locationDescription",
+          "value": "Around 80 km off Aberdeenshire, Scotland",
+          "sourceId": "src-green-volt-supply-exemption-govuk",
+          "note": null,
+          "confidence": "high"
+        },
+        {
+          "path": "expectedCod",
+          "value": "UNKNOWN",
+          "sourceId": "src-sdi-green-volt-2026",
+          "note": "Sources distinguish targeted first power in 2029 from estimated COD in 2030; current public evidence is insufficient to treat either as a committed COD.",
+          "confidence": "medium"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active / Pre-FID. Green Volt has full onshore and offshore consent, a Crown Estate Scotland option agreement, and a 400 MW AR6 CfD, while 2025-2026 FEED, land-access, and survey activity show continuing development. Construction is not yet committed because no public FID or financial close announcement was verified and oil-and-gas offtake remains a material open gate after Buzzard electrification was reportedly dropped.",
+        "fidStatus": "No public FID or financial close announcement verified as of 2026-09-02; latest public evidence still frames FID as a future 2026 decision rather than an achieved milestone.",
+        "sourceIds": [
+          "src-green-volt-consent",
+          "src-crown-estate-scotland-intog",
+          "src-green-volt-cfd-ar6-govuk",
+          "src-green-volt-worley-feed-2025",
+          "src-energyvoice-green-volt-buzzard-2025",
+          "src-ofgem-green-volt-land-access-2026",
+          "src-green-volt-surveys-2026",
+          "src-sdi-green-volt-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Scottish Ministers granted offshore consent and marine licences on 19 April 2024; Aberdeenshire Council granted onshore infrastructure consent on 21 March 2024.",
+            "sourceIds": [
+              "src-green-volt-consent"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Crown Estate Scotland entered into an Option Agreement with Flotation Energy and Vårgrønn for Green Volt on 19 April 2024.",
+            "sourceIds": [
+              "src-crown-estate-scotland-intog"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "DESNZ AR6 results awarded Green Volt Offshore Windfarm (GV01) 400 MW of Floating Offshore Wind CfD support for delivery year 2028/29 at 139.93 GBP/MWh in 2012 prices.",
+            "sourceIds": [
+              "src-green-volt-cfd-ar6-govuk"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Green Volt awarded Worley the onshore substation FEED contract in July 2025.",
+            "sourceIds": [
+              "src-green-volt-worley-feed-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Ofgem granted consent in January 2026 for Green Volt to exercise statutory rights of entry for survey work on remaining land along the planned cable corridor.",
+            "sourceIds": [
+              "src-ofgem-green-volt-land-access-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Green Volt reported continuing 2026 onshore and nearshore survey work to inform civil, cable, system, and construction methodology design.",
+            "sourceIds": [
+              "src-green-volt-surveys-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Consent + option agreement + CfD + FEED and survey activity imply an active pre-construction project, not a cancelled or paused project.",
+            "sourceIds": [
+              "src-green-volt-consent",
+              "src-crown-estate-scotland-intog",
+              "src-green-volt-cfd-ar6-govuk",
+              "src-green-volt-worley-feed-2025",
+              "src-green-volt-surveys-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "400 MW CfD support + 560 MW project capacity + reported loss of the Buzzard electrification route imply revenue support is meaningful but does not resolve the INTOG oil-and-gas offtake gate.",
+            "sourceIds": [
+              "src-green-volt-cfd-ar6-govuk",
+              "src-green-volt-overview",
+              "src-energyvoice-green-volt-buzzard-2025"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "The absence of a verified FID announcement, together with SDI's January 2026 description of FID as estimated in 2026, supports treating Green Volt as pre-FID.",
+            "sourceIds": [
+              "src-sdi-green-volt-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "FID / financial close",
+          "Current electricity offtake agreement for oil-and-gas installation supply",
+          "Firm turbine and floating-platform supply decisions",
+          "Progression from Crown Estate Scotland option agreement to lease",
+          "Post-FEED EPC / construction contracting"
+        ],
+        "watchpoints": [
+          "FID or financial close announcement",
+          "Named replacement or confirmed oil-and-gas offtake agreement",
+          "Crown Estate Scotland lease step-through for Green Volt",
+          "Turbine, floater, cable, mooring, or EPCI contract awards",
+          "Start of fabrication, onshore substation construction, or offshore installation"
+        ],
+        "unresolvedUncertainties": [
+          "FID / financial close date is UNKNOWN.",
+          "Committed COD is UNKNOWN; public sources cite first power and estimated COD targets but not a committed COD.",
+          "Oil-and-gas offtake counterparties are UNKNOWN after the reported Buzzard setback.",
+          "Turbine OEM, floater technology, mooring, cable, and EPCI suppliers are UNKNOWN.",
+          "Whether the full 560 MW project can proceed under the current commercial structure remains an inference, not a confirmed fact."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -4605,7 +4837,7 @@
       ]
     },
     {
-      "roleDetail": "Developer/owner identified by source record",
+      "roleDetail": "Joint developer / owner",
       "startDate": null,
       "endDate": null,
       "status": "active",
@@ -4654,7 +4886,7 @@
       ]
     },
     {
-      "roleDetail": "Developer/owner identified by source record",
+      "roleDetail": "Joint developer / owner",
       "startDate": null,
       "endDate": null,
       "status": "active",
@@ -4665,7 +4897,8 @@
       "companyName": "Flotation Energy",
       "role": "developer_owner",
       "sourceIds": [
-        "src-green-volt-overview"
+        "src-green-volt-overview",
+        "src-green-volt-worley-feed-2025"
       ],
       "confidence": "high",
       "factClaims": [
@@ -4679,7 +4912,7 @@
       ]
     },
     {
-      "roleDetail": "Developer/owner identified by source record",
+      "roleDetail": "Joint developer / owner",
       "startDate": null,
       "endDate": null,
       "status": "active",
@@ -4687,10 +4920,11 @@
       "id": "green-volt-vargronn-developer",
       "projectId": "green-volt",
       "industryCompanyId": null,
-      "companyName": "Vargronn",
+      "companyName": "Vårgrønn",
       "role": "developer_owner",
       "sourceIds": [
-        "src-green-volt-overview"
+        "src-green-volt-overview",
+        "src-green-volt-worley-feed-2025"
       ],
       "confidence": "high",
       "factClaims": [
@@ -4699,6 +4933,31 @@
           "value": "developer_owner",
           "sourceId": "src-green-volt-overview",
           "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "roleDetail": "Onshore substation FEED contractor",
+      "startDate": "2025-07-17",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": "Awarded front-end engineering design contract for Green Volt's onshore substation.",
+      "id": "green-volt-worley-feed",
+      "projectId": "green-volt",
+      "industryCompanyId": null,
+      "companyName": "Worley",
+      "role": "feed",
+      "sourceIds": [
+        "src-green-volt-worley-feed-2025"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "feed",
+          "sourceId": "src-green-volt-worley-feed-2025",
+          "note": "Contract scope is onshore substation FEED, not full project EPCI.",
           "confidence": "high"
         }
       ]
@@ -6976,21 +7235,176 @@
       ],
       "id": "green-volt-subsidy-or-cfd-award-2024-09",
       "projectId": "green-volt",
-      "date": "2024-09",
-      "datePrecision": "month",
+      "date": "2024-09-03",
+      "datePrecision": "day",
       "eventType": "subsidy_or_cfd_award",
-      "title": "Green Volt secured a UK Contract for Difference",
-      "description": "Green Volt secured a UK Contract for Difference",
+      "title": "DESNZ awarded Green Volt 400 MW of AR6 CfD support",
+      "description": "The UK AR6 results listed Green Volt Offshore Windfarm (GV01) for 400 MW of Floating Offshore Wind support, delivery year 2028/29, at 139.93 GBP/MWh in 2012 prices.",
       "sourceIds": [
-        "src-green-volt-overview"
+        "src-green-volt-cfd-ar6-govuk"
       ],
       "confidence": "high",
       "factClaims": [
         {
           "path": "eventType",
           "value": "subsidy_or_cfd_award",
-          "sourceId": "src-green-volt-overview",
+          "sourceId": "src-green-volt-cfd-ar6-govuk",
           "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Flotation Energy",
+        "Vårgrønn",
+        "Green Volt"
+      ],
+      "id": "green-volt-option-agreement-2024-04-19",
+      "projectId": "green-volt",
+      "date": "2024-04-19",
+      "datePrecision": "day",
+      "eventType": "lease_award",
+      "title": "Crown Estate Scotland entered into the Green Volt option agreement",
+      "description": "Crown Estate Scotland entered into an Option Agreement with Flotation Energy and Vårgrønn for the 560 MW Green Volt INTOG project after marine licences and Section 36 consent were granted.",
+      "sourceIds": [
+        "src-crown-estate-scotland-intog"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-crown-estate-scotland-intog",
+          "note": "This is an option agreement, not a full seabed lease or construction commitment.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Green Volt"
+      ],
+      "id": "green-volt-supply-exemption-2024-05-23",
+      "projectId": "green-volt",
+      "date": "2024-05-23",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "SAU report addressed Green Volt's proposed offshore supply licence exemption",
+      "description": "The Subsidy Advice Unit published its report on the proposed supply licence exemption intended to enable Green Volt to supply electricity directly to offshore oil-and-gas installations.",
+      "sourceIds": [
+        "src-green-volt-sau-supply-exemption-2024"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-green-volt-sau-supply-exemption-2024",
+          "note": "Regulatory enabler for offshore installation supply; not a construction decision.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Green Volt",
+        "Worley"
+      ],
+      "id": "green-volt-worley-feed-2025-07-17",
+      "projectId": "green-volt",
+      "date": "2025-07-17",
+      "datePrecision": "day",
+      "eventType": "feed_contract",
+      "title": "Green Volt awarded the onshore substation FEED contract to Worley",
+      "description": "Green Volt awarded Worley a front-end engineering design contract for the onshore substation, covering electrical, construction, commissioning, operations, maintenance, and decommissioning engineering scopes.",
+      "sourceIds": [
+        "src-green-volt-worley-feed-2025"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "feed_contract",
+          "sourceId": "src-green-volt-worley-feed-2025",
+          "note": "Onshore substation FEED only.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "CNOOC",
+        "Green Volt"
+      ],
+      "id": "green-volt-buzzard-offtake-setback-2025-08-28",
+      "projectId": "green-volt",
+      "date": "2025-08-28",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "Energy Voice reported CNOOC dropped Buzzard electrification plans",
+      "description": "Energy Voice reported that CNOOC International was no longer pursuing Buzzard electrification, creating a material offtake uncertainty for Green Volt's INTOG commercial route.",
+      "sourceIds": [
+        "src-energyvoice-green-volt-buzzard-2025"
+      ],
+      "confidence": "medium",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-energyvoice-green-volt-buzzard-2025",
+          "note": "Reported by trade press with attributed CNOOC and Crown Estate Scotland comments; no primary Green Volt offtake contract record was found.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Green Volt",
+        "Ofgem"
+      ],
+      "id": "green-volt-land-access-decision-2026-01-26",
+      "projectId": "green-volt",
+      "date": "2026-01-26",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "Ofgem granted statutory land-access consent for cable-corridor surveys",
+      "description": "Ofgem granted consent for Green Volt to exercise statutory rights of entry on remaining land required for survey work along the planned cable corridor from landfall north of Peterhead to the New Deer substation.",
+      "sourceIds": [
+        "src-ofgem-green-volt-land-access-2026"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-ofgem-green-volt-land-access-2026",
+          "note": "Evidence of ongoing development and unresolved land/survey work; not a construction milestone.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "companyNames": [
+        "Green Volt"
+      ],
+      "id": "green-volt-survey-programme-2026-07-07",
+      "projectId": "green-volt",
+      "date": "2026-07-07",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "Green Volt reported continuing 2026 survey programme work",
+      "description": "Green Volt reported phase three ground investigation work across the onshore cable route and recent drone surveys to inform civil, cable, system, and construction-methodology design.",
+      "sourceIds": [
+        "src-green-volt-surveys-2026"
+      ],
+      "confidence": "high",
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-green-volt-surveys-2026",
+          "note": "Included as current activity evidence because FID is not verified.",
           "confidence": "high"
         }
       ]

@@ -539,7 +539,7 @@
       "url": "https://www.thecrownestate.co.uk/our-business/marine/round-5",
       "sourceTier": 1,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public seabed authority webpage; factual extraction only."
     },
     {
@@ -549,7 +549,7 @@
       "url": "https://www.boem.gov/renewable-energy/state-activities/california-activities",
       "sourceTier": 1,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public U.S. government webpage; factual extraction only."
     },
     {
@@ -559,7 +559,7 @@
       "url": "https://www.regjeringen.no/en/topics/energy/renewable-energy/havvind/utsira-nord/id3052997/",
       "sourceTier": 1,
       "publishedDate": "2026-02-12",
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public government webpage; factual extraction only."
     },
     {
@@ -569,7 +569,7 @@
       "url": "https://www.equinor.com/energy/utsira-nord",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -579,7 +579,7 @@
       "url": "https://www.cre.fr/actualites/toute-lactualite/la-cre-publie-la-deliberation-relative-a-son-instruction-de-la-procedure-concurrentielle-ao6-portant-sur-deux-installations-eoliennes-flottantes-de-production-delectricite-en-mer-mediterranee.html",
       "sourceTier": 1,
       "publishedDate": "2025-01-10",
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public regulator webpage; factual extraction only."
     },
     {
@@ -589,7 +589,7 @@
       "url": "https://www.oceanwinds.com/projects/efflo/",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -599,7 +599,7 @@
       "url": "https://www.rte-france.com/projets/nos-projets/raccordement-eoliennes-flottantes-fos-sur-mer-mediterranee",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -609,7 +609,7 @@
       "url": "https://www.oceanwinds.com/news/uncategorized/ocean-winds-delivers-its-first-power-from-floating-offshore-wind-project-in-france/",
       "sourceTier": 2,
       "publishedDate": "2026-05-04",
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -619,7 +619,7 @@
       "url": "https://www.principlepower.com/fr/projets/efgl",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -629,7 +629,7 @@
       "url": "https://va.mite.gov.it/en-GB/Oggetti/Info/7273",
       "sourceTier": 1,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public Italian government environmental assessment portal; factual extraction only."
     },
     {
@@ -639,7 +639,7 @@
       "url": "https://medwind.it/en/",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -649,7 +649,7 @@
       "url": "https://renexia.it/en/renexia-and-mingyang-feed-signed-for-med-wind/",
       "sourceTier": 2,
       "publishedDate": "2024-10-09",
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -659,7 +659,7 @@
       "url": "https://www.munmubaram.com/the-project",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -669,7 +669,7 @@
       "url": "https://www.equinor.co.kr/en/news/equinor-awards-firefly-substructure-feed-to-technip-energies",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -679,7 +679,7 @@
       "url": "https://www.equinor.co.kr/en/news/esia-and-eia-contract-ulsan",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -689,7 +689,7 @@
       "url": "https://www.nedo.go.jp/english/news/whatsnew_00142.html",
       "sourceTier": 1,
       "publishedDate": "2019-05-24",
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public Japanese government agency webpage; factual extraction only."
     },
     {
@@ -979,6 +979,206 @@
       "url": "https://cenosoffshorewind.com/documents/",
       "sourceTier": 2,
       "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-crown-estate-round5-afl-2025",
+      "title": "Next milestone achieved for Round 5 in the Celtic Sea as Equinor and Gwynt Glas enter agreements for lease",
+      "publisher": "The Crown Estate",
+      "url": "https://www.thecrownestate.co.uk/news/next-milestone-achieved-for-round-5-in-the-celtic-sea",
+      "sourceTier": 2,
+      "publishedDate": "2025-10-07",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-crown-estate-round5-ocean-winds-afl-2026",
+      "title": "Final site progressing for Round 5 as Ocean Winds enters agreement for lease for floating wind farm in the Celtic Sea",
+      "publisher": "The Crown Estate",
+      "url": "https://www.thecrownestate.co.uk/news/final-site-progressing-for-round-5",
+      "sourceTier": 2,
+      "publishedDate": "2026-03-03",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-boem-california-lease-info-2026",
+      "title": "Lease and Grant Information",
+      "publisher": "Bureau of Ocean Energy Management",
+      "url": "https://www.boem.gov/renewable-energy/lease-and-grant-information",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-boem-golden-state-2026",
+      "title": "Golden State Wind LLC (OCS-P 0564)",
+      "publisher": "Bureau of Ocean Energy Management",
+      "url": "https://www.boem.gov/renewable-energy/state-activities/golden-state-wind-llc-ocs-p-0564",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-rwe-canopy-settlement-2026",
+      "title": "RWE U.S. Offshore reaches settlement agreement with U.S. Department of Interior on offshore wind leases",
+      "publisher": "RWE Americas",
+      "url": "https://americas.rwe.com/press/2026-08-06-rwe-us-offshore-reaches-settlement-agreement/",
+      "sourceTier": 2,
+      "publishedDate": "2026-08-06",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-doi-golden-state-settlement-2026",
+      "title": "Interior Announces Two Historic Agreements to Promote Affordable, Reliable Energy Production in the United States",
+      "publisher": "U.S. Department of the Interior",
+      "url": "https://www.doi.gov/node/66636",
+      "sourceTier": 1,
+      "publishedDate": "2026-04-27",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-nve-utsira-nord-2026",
+      "title": "Utsira Nord",
+      "publisher": "Norwegian Water Resources and Energy Directorate",
+      "url": "https://www.nve.no/energi/energisystem/havvind/utsira-nord/",
+      "sourceTier": 1,
+      "publishedDate": "2026-07-02",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-deepwind-utsira-nord-2026",
+      "title": "Utsira Nord",
+      "publisher": "Deep Wind Offshore",
+      "url": "https://www.deepwindoffshore.com/project/utsira-nord",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-efgl-full-operation-2026",
+      "title": "Les Eoliennes flottantes du golfe du Lion (EFGL) entrent en exploitation complete",
+      "publisher": "EFGL",
+      "url": "https://info-efgl.fr/les-eoliennes-flottantes-du-golfe-du-lion-efgl-entrent-en-exploitation-complete/",
+      "sourceTier": 2,
+      "publishedDate": "2026-08-17",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-engie-efgl-first-power-2026",
+      "title": "ENGIE delivers on its first two offshore wind projects in France",
+      "publisher": "ENGIE",
+      "url": "https://en.newsroom.engie.com/news/engie-delivers-on-its-first-two-offshore-wind-projects-in-france-448ae-314df.html",
+      "sourceTier": 2,
+      "publishedDate": "2026-05-04",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-premar-eflo-ics-2026",
+      "title": "Installation de l'instance de concertation et de suivi du projet de parc eolien en mer Eoliennes Flottantes d'Occitanie",
+      "publisher": "Prefecture maritime de la Mediterranee",
+      "url": "https://www.premar-mediterranee.gouv.fr/communiques-presse/installation-de-l-instance-de-concertation-et-de-suivi-du-projet-de-parc-eolien-en-mer-eoliennes-flottantes-d-occitanie-eflo",
+      "sourceTier": 1,
+      "publishedDate": "2026-06-29",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-oceanwinds-eflo-award-2024",
+      "title": "Ocean Winds and Banque des Territoires awarded new 250 MW floating offshore wind project in the French Mediterranean Sea",
+      "publisher": "Ocean Winds",
+      "url": "https://www.oceanwinds.com/news/uncategorized/ocean-winds-and-banque-des-territoires-awarded-new-250-mw-floating-offshore-wind-project-in-the-french-mediterranean-sea/",
+      "sourceTier": 2,
+      "publishedDate": "2024-12-27",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-saipem-7seas-2025",
+      "title": "Saipem and Divento sign collaboration agreement for floating wind in Italy",
+      "publisher": "Saipem",
+      "url": "https://www.saipem.com/en/media/press-releases/2025-03-05/saipem-and-divento-sign-collaboration-agreement-floating-wind-italy",
+      "sourceTier": 3,
+      "publishedDate": "2025-03-05",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-divento-7seas-med-2026",
+      "title": "7 Seas Med",
+      "publisher": "Divento",
+      "url": "https://diventoenergia.it/en/projects/7-seas-med/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-mase-medwind-scirocco-2026",
+      "title": "Med Wind Scirocco documentation",
+      "publisher": "Italian Ministry of Environment and Energy Security",
+      "url": "https://va.mite.gov.it/it-IT/Oggetti/Documentazione/11236/16881",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-renexia-medwind-2026",
+      "title": "Med Wind",
+      "publisher": "Renexia",
+      "url": "https://renexia.it/en/wind-power-plants/med-wind-settori/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-hexicon-munmubaram-2026",
+      "title": "This is Hexicon",
+      "publisher": "Hexicon",
+      "url": "https://www.hexicongroup.com/this-is-hexicon/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-munmubaram-korean-2026",
+      "title": "Project introduction",
+      "publisher": "MunmuBaram",
+      "url": "https://www.munmubaram.co.kr/project-introduction",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-equinor-bandibuli-stop-2026",
+      "title": "Important Notice on Bandibuli Project",
+      "publisher": "Equinor Korea",
+      "url": "https://www.equinor.co.kr/en/news/important-notice-on-bandibuli-project_en",
+      "sourceTier": 2,
+      "publishedDate": "2026-05-22",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-equinor-bandibuli-statement-2026",
+      "title": "Holding Statement on the Bandibuli Floating Offshore Wind Project",
+      "publisher": "Equinor Korea",
+      "url": "https://www.equinor.co.kr/en/news/holding-statement-on-bandibuli-project_en",
+      "sourceTier": 2,
+      "publishedDate": "2026-02-13",
       "accessedDate": "2026-09-03",
       "licenseNote": "Public source; factual extraction only."
     }
@@ -5113,10 +5313,11 @@
       "name": "Celtic Sea Round 5 Equinor Project Development Area",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Preferred bidder / rights expected under Round 5",
+      "sourceStatus": "Agreement for lease secured / early development",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
-        "src-crown-estate-round5"
+        "src-crown-estate-round5",
+        "src-crown-estate-round5-afl-2025"
       ],
       "factClaims": [
         {
@@ -5147,7 +5348,74 @@
           "note": null,
           "confidence": "medium"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Early development under a Celtic Sea Round 5 agreement for lease. Equinor has secured seabed development rights for a 1.5 GW floating wind PDA, but the project remains before planning consent, revenue support, procurement, FID, and construction.",
+        "fidStatus": "FID not reached. The evidence confirms agreement-for-lease rights only, not investment decision or financial close.",
+        "sourceIds": [
+          "src-crown-estate-round5",
+          "src-crown-estate-round5-afl-2025"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "The Crown Estate states Equinor entered an agreement for lease for a Celtic Sea Round 5 floating wind project on 7 October 2025.",
+            "sourceIds": [
+              "src-crown-estate-round5-afl-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Round 5 provides three Project Development Areas, each with up to 1.5 GW potential capacity.",
+            "sourceIds": [
+              "src-crown-estate-round5"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Crown Estate says developers must complete initial requirements before applying for leases to build and operate.",
+            "sourceIds": [
+              "src-crown-estate-round5-ocean-winds-afl-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The current story is market-entry seabed rights, not construction readiness.",
+            "sourceIds": [
+              "src-crown-estate-round5-afl-2025",
+              "src-crown-estate-round5"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Agreement-for-lease status should not be interpreted as consent, revenue support, FID, or COD.",
+            "sourceIds": [
+              "src-crown-estate-round5-afl-2025"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Agreement for lease is secured, but planning consent is not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Early project design and site assessment are active or expected, but final design is not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Planning consent application: Would move the project from seabed-rights development into formal permitting.",
+          "Grid connection and landfall evidence: Would clarify a core delivery interface in the Celtic Sea.",
+          "CfD or offtake award: Would establish a revenue route.",
+          "FID or major supplier awards: Would mark transition toward execution."
+        ],
+        "unresolvedUncertainties": [
+          "Planning consent route and timing are UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine count, technology, suppliers, grid route, and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5162,16 +5430,17 @@
       "actualCod": null,
       "floatingTechnology": "Floating offshore wind Round 5 project development area",
       "platformType": "unknown",
-      "developerOwnerText": "Gwynt Glas",
+      "developerOwnerText": "Gwynt Glas (EDF power solutions / ESB)",
       "id": "celtic-sea-round5-gwynt-glas-pda",
       "slug": "celtic-sea-round5-gwynt-glas-pda",
       "name": "Celtic Sea Round 5 Gwynt Glas Project Development Area",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Preferred bidder / rights expected under Round 5",
+      "sourceStatus": "Agreement for lease secured / early development",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
-        "src-crown-estate-round5"
+        "src-crown-estate-round5",
+        "src-crown-estate-round5-afl-2025"
       ],
       "factClaims": [
         {
@@ -5202,7 +5471,73 @@
           "note": null,
           "confidence": "medium"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Early development under a Celtic Sea Round 5 agreement for lease. Gwynt Glas, the EDF power solutions and ESB joint venture, has secured a 1.5 GW floating wind PDA, with planning, revenue, procurement, FID, and execution still ahead.",
+        "fidStatus": "FID not reached. Current evidence supports agreement-for-lease rights, not investment decision or financial close.",
+        "sourceIds": [
+          "src-crown-estate-round5",
+          "src-crown-estate-round5-afl-2025"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "The Crown Estate states Gwynt Glas entered an agreement for lease for a Celtic Sea Round 5 floating wind project on 7 October 2025.",
+            "sourceIds": [
+              "src-crown-estate-round5-afl-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Gwynt Glas is identified as a joint venture between EDF power solutions and ESB.",
+            "sourceIds": [
+              "src-crown-estate-round5-afl-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Each Round 5 PDA has up to 1.5 GW potential capacity.",
+            "sourceIds": [
+              "src-crown-estate-round5"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The material position is seabed-rights development before project consenting and bankability gates.",
+            "sourceIds": [
+              "src-crown-estate-round5-afl-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The agreement-for-lease milestone de-risks site access but does not verify FID or construction commitment.",
+            "sourceIds": [
+              "src-crown-estate-round5"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Agreement for lease is secured, but planning consent is not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Early project design and site assessment are active or expected, but final design is not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Planning consent application: Would move the project from seabed-rights development into formal permitting.",
+          "Grid connection and landfall evidence: Would clarify a core delivery interface in the Celtic Sea.",
+          "CfD or offtake award: Would establish a revenue route.",
+          "FID or major supplier awards: Would mark transition toward execution."
+        ],
+        "unresolvedUncertainties": [
+          "Planning consent route and timing are UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final technology, suppliers, grid route, and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5223,10 +5558,11 @@
       "name": "Celtic Sea Round 5 Ocean Winds Project Development Area",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Preferred bidder / rights expected under Round 5",
+      "sourceStatus": "Agreement for lease secured / early development",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
-        "src-crown-estate-round5"
+        "src-crown-estate-round5",
+        "src-crown-estate-round5-ocean-winds-afl-2026"
       ],
       "factClaims": [
         {
@@ -5257,7 +5593,73 @@
           "note": null,
           "confidence": "medium"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Early development under a Celtic Sea Round 5 agreement for lease. Ocean Winds entered the final Round 5 agreement for lease in March 2026 for a 1.5 GW floating wind project, but consenting, revenue support, procurement, FID, and construction are not verified.",
+        "fidStatus": "FID not reached. The evidence confirms agreement-for-lease rights only.",
+        "sourceIds": [
+          "src-crown-estate-round5",
+          "src-crown-estate-round5-ocean-winds-afl-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "The Crown Estate states Ocean Winds entered an agreement for lease on 3 March 2026 for a 1.5 GW Celtic Sea floating wind project.",
+            "sourceIds": [
+              "src-crown-estate-round5-ocean-winds-afl-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Ocean Winds was selected as preferred supplier for the third site in November 2025.",
+            "sourceIds": [
+              "src-crown-estate-round5-ocean-winds-afl-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Crown Estate says Ocean Winds will focus on project designs, surveys, EIAs, engagement, and planning consents.",
+            "sourceIds": [
+              "src-crown-estate-round5-ocean-winds-afl-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Ocean Winds completes the Round 5 rights picture but remains before consent and construction readiness.",
+            "sourceIds": [
+              "src-crown-estate-round5-ocean-winds-afl-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The mid-2030s operation language is a potential schedule, not a committed COD.",
+            "sourceIds": [
+              "src-crown-estate-round5-ocean-winds-afl-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Agreement for lease is secured and planning/EIA work is next.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Early project design and site assessment are active or expected, but final design is not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Planning consent application: Would move the project from seabed-rights development into formal permitting.",
+          "Grid connection and landfall evidence: Would clarify a core delivery interface in the Celtic Sea.",
+          "CfD or offtake award: Would establish a revenue route.",
+          "FID or major supplier awards: Would mark transition toward execution."
+        ],
+        "unresolvedUncertainties": [
+          "Planning consent route and timing are UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine/floater design, suppliers, grid route, and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5278,10 +5680,12 @@
       "name": "Canopy Offshore Wind lease OCS-P 0561",
       "country": "United States",
       "region": "North America",
-      "sourceStatus": "Executed BOEM lease",
-      "normalizedStatus": "lease_or_area_awarded",
+      "sourceStatus": "Executed lease / RWE settlement creates relinquishment path",
+      "normalizedStatus": "paused",
       "sourceIds": [
-        "src-boem-california"
+        "src-boem-california",
+        "src-boem-california-lease-info-2026",
+        "src-rwe-canopy-settlement-2026"
       ],
       "factClaims": [
         {
@@ -5305,7 +5709,83 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "California floating lease with a material settlement overhang. BOEM still lists OCS-P 0561 as active, but RWE announced an August 2026 settlement to relinquish U.S. offshore wind leases including California; no COP, FID, or construction evidence is verified.",
+        "fidStatus": "FID not reached. The lease remains before COP, procurement, financial close, and construction.",
+        "sourceIds": [
+          "src-boem-california",
+          "src-boem-california-lease-info-2026",
+          "src-rwe-canopy-settlement-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "BOEM records the relevant California OCS-P leases as commercial wind leases executed in 2023.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "BOEM states Construction and Operations Plans drive later site-specific environmental review.",
+            "sourceIds": [
+              "src-boem-california"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "BOEM lists OCS-P 0561 as Canopy Offshore Wind, LLC and active in the lease table.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "RWE announced a settlement with DOI involving relinquishment of offshore wind leases off California.",
+            "sourceIds": [
+              "src-rwe-canopy-settlement-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The project should be treated as paused/at risk rather than a normal active lease because the developer has announced a relinquishment settlement.",
+            "sourceIds": [
+              "src-rwe-canopy-settlement-2026",
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The active BOEM lease table and RWE settlement are a status tension that should be tracked explicitly.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026",
+              "src-rwe-canopy-settlement-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - UNKNOWN: BOEM lists an active lease, but RWE has announced a relinquishment settlement.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Early project design and site assessment are active or expected, but final design is not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "BOEM lease table or cancellation letter update: Would resolve whether OCS-P 0561 remains active or is formally cancelled.",
+          "California/DOI litigation or settlement implementation: Would clarify whether the relinquishment proceeds.",
+          "COP submission: Would be required to revive a normal development pathway.",
+          "New owner or assignment filing: Would materially change the project assessment."
+        ],
+        "unresolvedUncertainties": [
+          "Formal cancellation/relinquishment date is UNKNOWN.",
+          "COP, revenue support, FID, and COD are not reached.",
+          "Whether any successor development path survives the settlement is UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5326,10 +5806,11 @@
       "name": "California North Floating lease OCS-P 0562",
       "country": "United States",
       "region": "North America",
-      "sourceStatus": "Executed BOEM lease",
+      "sourceStatus": "Executed BOEM lease / early development",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
-        "src-boem-california"
+        "src-boem-california",
+        "src-boem-california-lease-info-2026"
       ],
       "factClaims": [
         {
@@ -5353,7 +5834,74 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active early-stage California floating lease. BOEM lists OCS-P 0562 as an active 2023 commercial wind lease, but no COP, revenue support, FID, supplier chain, or construction milestone is verified.",
+        "fidStatus": "FID not reached. Lease execution alone does not evidence investment decision or financial close.",
+        "sourceIds": [
+          "src-boem-california",
+          "src-boem-california-lease-info-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "BOEM records the relevant California OCS-P leases as commercial wind leases executed in 2023.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "BOEM states Construction and Operations Plans drive later site-specific environmental review.",
+            "sourceIds": [
+              "src-boem-california"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "BOEM lists OCS-P 0562 as California North Floating LLC and active.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The current story is site-control preservation during a difficult U.S. federal permitting context, not construction readiness.",
+            "sourceIds": [
+              "src-boem-california",
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The absence of a settlement or cancellation in current BOEM evidence distinguishes OCS-P 0562 from OCS-P 0561, OCS-P 0564, and OCS-P 0565.",
+            "sourceIds": [
+              "src-boem-california"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: BOEM lease is active; COP and project approvals are not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Early project design and site assessment are active or expected, but final design is not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "COP or Site Assessment Plan filing: Would move the lease into formal project review.",
+          "Federal wind-permitting review outcome: Would clarify whether approvals can proceed.",
+          "Offtake or California procurement signal: Would establish revenue context.",
+          "FID or major supplier awards: Would mark construction commitment."
+        ],
+        "unresolvedUncertainties": [
+          "COP timing is UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final capacity, layout, technology, suppliers, and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5374,10 +5922,11 @@
       "name": "Atlas Offshore Wind lease OCS-P 0563",
       "country": "United States",
       "region": "North America",
-      "sourceStatus": "Executed BOEM lease",
+      "sourceStatus": "Executed BOEM lease / early development",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
-        "src-boem-california"
+        "src-boem-california",
+        "src-boem-california-lease-info-2026"
       ],
       "factClaims": [
         {
@@ -5401,7 +5950,80 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active early-stage California floating lease. BOEM lists Atlas Offshore Wind OCS-P 0563 as active, but no COP, offtake, procurement, FID, or construction milestone is verified.",
+        "fidStatus": "FID not reached. Current evidence is lease execution and early BOEM oversight only.",
+        "sourceIds": [
+          "src-boem-california",
+          "src-boem-california-lease-info-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "BOEM records the relevant California OCS-P leases as commercial wind leases executed in 2023.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "BOEM states Construction and Operations Plans drive later site-specific environmental review.",
+            "sourceIds": [
+              "src-boem-california"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "BOEM lists OCS-P 0563 as Atlas Offshore Wind LLC and active.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "BOEM says Atlas was originally Equinor Wind US LLC before record title changed.",
+            "sourceIds": [
+              "src-boem-california"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Atlas remains a lease-stage option, not an approved project.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The main current gate is federal project-plan submission and review.",
+            "sourceIds": [
+              "src-boem-california"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: BOEM lease is active; COP and project approvals are not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Early project design and site assessment are active or expected, but final design is not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "COP or Site Assessment Plan filing: Would move Atlas into formal project review.",
+          "Federal wind-permitting review outcome: Would clarify approval timing.",
+          "Offtake or California procurement signal: Would establish revenue context.",
+          "FID or major supplier awards: Would mark construction commitment."
+        ],
+        "unresolvedUncertainties": [
+          "COP timing is UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final capacity, layout, technology, suppliers, and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5425,7 +6047,9 @@
       "sourceStatus": "Settlement provides for future cancellation/rescission",
       "normalizedStatus": "paused",
       "sourceIds": [
-        "src-boem-california"
+        "src-boem-california",
+        "src-boem-golden-state-2026",
+        "src-doi-golden-state-settlement-2026"
       ],
       "factClaims": [
         {
@@ -5449,7 +6073,75 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "California floating lease on a cancellation path. BOEM says DOI will cancel and rescind OCS-P 0564 upon Golden State Wind demonstrating required investments under the April 2026 settlement; no COP, FID, or construction commitment is verified.",
+        "fidStatus": "FID not reached. The lease is before COP and now subject to a cancellation/rescission mechanism.",
+        "sourceIds": [
+          "src-boem-golden-state-2026",
+          "src-doi-golden-state-settlement-2026",
+          "src-boem-california"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "BOEM states DOI will cancel and rescind Lease OCS-P 0564 upon demonstration that Golden State Wind has made required U.S. oil and gas investments.",
+            "sourceIds": [
+              "src-boem-golden-state-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "DOI announced on 27 April 2026 that Golden State Wind agreed to voluntarily end its California offshore wind lease.",
+            "sourceIds": [
+              "src-doi-golden-state-settlement-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "BOEM says Golden State Wind has not submitted a COP.",
+            "sourceIds": [
+              "src-boem-golden-state-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Golden State Wind should be treated as paused/exit path rather than an ordinary active lease.",
+            "sourceIds": [
+              "src-boem-golden-state-2026",
+              "src-doi-golden-state-settlement-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Settlement status means lease cancellation evidence matters more than ordinary pre-COP development milestones.",
+            "sourceIds": [
+              "src-boem-golden-state-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - UNKNOWN: Lease is listed but DOI/BOEM describe a cancellation and rescission trigger.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Early project design and site assessment are active or expected, but final design is not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "BOEM cancellation/rescission letter: Would move the project from paused to cancelled.",
+          "California/DOI litigation outcome: Would determine whether the settlement path is blocked or implemented.",
+          "COP submission or developer reversal: Would be needed to restore a development pathway.",
+          "Lease assignment or ownership change: Would materially change the assessment."
+        ],
+        "unresolvedUncertainties": [
+          "Final cancellation/rescission date is UNKNOWN.",
+          "Litigation effect on the settlement is UNKNOWN.",
+          "No COP, FID, revenue support, or COD is verified."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5473,7 +6165,8 @@
       "sourceStatus": "Cancelled and rescinded by DOI",
       "normalizedStatus": "cancelled",
       "sourceIds": [
-        "src-boem-california"
+        "src-boem-california",
+        "src-boem-california-lease-info-2026"
       ],
       "factClaims": [
         {
@@ -5497,7 +6190,73 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Cancelled California floating lease. BOEM states DOI cancelled and rescinded OCS-P 0565 on 12 June 2026 under a settlement with Invenergy California Offshore; no active project path remains in the dataset.",
+        "fidStatus": "FID not reached. The lease was cancelled before COP, investment decision, financial close, or construction.",
+        "sourceIds": [
+          "src-boem-california",
+          "src-boem-california-lease-info-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "BOEM states DOI cancelled and rescinded Lease OCS-P 0565 on 12 June 2026.",
+            "sourceIds": [
+              "src-boem-california"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "BOEM lease information lists OCS-P 0565 as cancelled.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The existing project record identifies Invenergy California Offshore LLC as the lessee.",
+            "sourceIds": [
+              "src-boem-california"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The project should be treated as cancelled, not paused or active development.",
+            "sourceIds": [
+              "src-boem-california",
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Any future California central-coast project should require new lease evidence and not be merged into this cancelled record.",
+            "sourceIds": [
+              "src-boem-california-lease-info-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - NOT STARTED: The lease was cancelled before COP approval.",
+          "Revenue - NOT STARTED: No current revenue route is verified.",
+          "Engineering - NOT STARTED: No active design pathway is verified after cancellation.",
+          "Procurement - NOT STARTED: No active supplier chain is verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "BOEM or court action reversing cancellation: Would be required to change the cancelled assessment.",
+          "New California lease award: Would be a successor market event, not continuation by itself.",
+          "Developer statement on asset closure or transfer: Would strengthen project-end provenance."
+        ],
+        "unresolvedUncertainties": [
+          "Whether any development work transfers elsewhere is UNKNOWN.",
+          "No replacement project is verified.",
+          "FID, COD, and supplier chain were never reached."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5518,11 +6277,12 @@
       "name": "Utsira Nord Project Area 3",
       "country": "Norway",
       "region": "Europe",
-      "sourceStatus": "Project area awarded / impact assessment right",
-      "normalizedStatus": "lease_or_area_awarded",
+      "sourceStatus": "Impact-assessment notification under NVE review",
+      "normalizedStatus": "development",
       "sourceIds": [
         "src-utsira-nord-gov",
-        "src-equinor-utsira-nord"
+        "src-equinor-utsira-nord",
+        "src-nve-utsira-nord-2026"
       ],
       "factClaims": [
         {
@@ -5553,14 +6313,88 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Norwegian floating wind project in the impact-assessment-program stage. Equinor and Vargronn have exclusive rights to assess and apply for consent for up to 500 MW in Utsira Nord Project Area 3, but state-aid competition, consent, procurement, FID, and construction remain ahead.",
+        "fidStatus": "FID not reached. Project-area award and impact-assessment rights do not evidence investment decision or financial close.",
+        "sourceIds": [
+          "src-equinor-utsira-nord",
+          "src-nve-utsira-nord-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Equinor states Utsira Nord Havvind DA was awarded Project Area 3 on 13 February 2026.",
+            "sourceIds": [
+              "src-equinor-utsira-nord"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Utsira Nord Havvind is owned by Equinor 65% and Vargronn 35%.",
+            "sourceIds": [
+              "src-equinor-utsira-nord"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "NVE says it received notifications in late March and sent the Utsira Nord notifications to public hearing with a deadline of 18 June 2026.",
+            "sourceIds": [
+              "src-nve-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Rights holders may compete for state support after the project-area process.",
+            "sourceIds": [
+              "src-nve-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The project has moved beyond area award into regulatory scoping, but remains before concession application and support competition.",
+            "sourceIds": [
+              "src-equinor-utsira-nord",
+              "src-nve-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "State support is a material gate because NVE states only one rights holder will receive support.",
+            "sourceIds": [
+              "src-nve-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Impact-assessment notification is under NVE process; concession is not granted.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Impact-assessment program and grid-connection alternatives are being defined.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "NVE impact-assessment program decision: Would define the evidence required for concession application.",
+          "Concession application submission: Would move the project into the next permitting gate.",
+          "State-aid competition result: Would determine whether this project receives capex support.",
+          "FID or major supplier awards: Would mark transition toward execution."
+        ],
+        "unresolvedUncertainties": [
+          "Impact-assessment program outcome is UNKNOWN.",
+          "Whether this project wins state support is UNKNOWN.",
+          "Revenue route, FID, suppliers, and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": "North Sea",
       "locationDescription": "Off Rogaland, south-west Norway",
       "capacityMw": 500,
-      "turbineCount": null,
+      "turbineCount": 35,
       "turbineRatingMw": null,
       "waterDepthM": null,
       "distanceOffshore": null,
@@ -5568,16 +6402,18 @@
       "actualCod": null,
       "floatingTechnology": "Floating offshore wind area",
       "platformType": "unknown",
-      "developerOwnerText": "Deep Wind Offshore Norway and EDF Renewables International",
+      "developerOwnerText": "Harald Harfagre AS (Deep Wind Offshore Norway / EDF power solutions)",
       "id": "utsira-nord-harald-harfagre",
       "slug": "utsira-nord-harald-harfagre",
       "name": "Utsira Nord Harald Harfagre",
       "country": "Norway",
       "region": "Europe",
-      "sourceStatus": "Project area awarded / impact assessment right",
-      "normalizedStatus": "lease_or_area_awarded",
+      "sourceStatus": "Impact-assessment notification under NVE review",
+      "normalizedStatus": "development",
       "sourceIds": [
-        "src-utsira-nord-gov"
+        "src-utsira-nord-gov",
+        "src-nve-utsira-nord-2026",
+        "src-deepwind-utsira-nord-2026"
       ],
       "factClaims": [
         {
@@ -5608,7 +6444,81 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Norwegian floating wind project in the impact-assessment-program stage. Harald Harfagre has a 500 MW Utsira Nord project area and NVE notification process, but concession, state-aid support, procurement, FID, and construction remain unverified.",
+        "fidStatus": "FID not reached. Awarded area and notification status are pre-consent and pre-investment-decision evidence.",
+        "sourceIds": [
+          "src-nve-utsira-nord-2026",
+          "src-deepwind-utsira-nord-2026",
+          "src-utsira-nord-gov"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "The Ministry/NVE process identifies Harald Harfagre AS, owned by Deep Wind Offshore Norway and EDF Renewables International, as a Utsira Nord rights holder.",
+            "sourceIds": [
+              "src-nve-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "NVE lists Project Area 2 as a 500 MW offshore wind notification with up to 35 turbines.",
+            "sourceIds": [
+              "src-nve-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Deep Wind Offshore says the consortium was awarded its preferred Utsira Nord area in 2025.",
+            "sourceIds": [
+              "src-deepwind-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "NVE states the rights holders may compete for state support and one will receive support.",
+            "sourceIds": [
+              "src-nve-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Harald Harfagre is in active regulatory scoping but not yet concessioned or bankable.",
+            "sourceIds": [
+              "src-nve-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The state-aid competition is a decisive commercial turning point because support is not available to every rights holder.",
+            "sourceIds": [
+              "src-nve-utsira-nord-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Impact-assessment notification is under NVE process; concession is not granted.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Turbine envelope and grid-connection alternatives are in notification evidence.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "NVE impact-assessment program decision: Would define the concession evidence path.",
+          "Concession application submission: Would advance the permitting gate.",
+          "State-aid competition result: Would decide support eligibility.",
+          "FID or major supplier awards: Would mark transition toward execution."
+        ],
+        "unresolvedUncertainties": [
+          "Impact-assessment program outcome is UNKNOWN.",
+          "Whether Harald Harfagre wins state support is UNKNOWN.",
+          "Revenue route, FID, final design, suppliers, and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [
@@ -5622,7 +6532,7 @@
       "waterDepthM": "70-100",
       "distanceOffshore": "16 km",
       "expectedCod": null,
-      "actualCod": null,
+      "actualCod": "2026-07-10",
       "floatingTechnology": "WindFloat",
       "platformType": "semi_submersible",
       "developerOwnerText": "Ocean Winds and Banque des Territoires",
@@ -5631,10 +6541,11 @@
       "name": "Eoliennes Flottantes du Golfe du Lion",
       "country": "France",
       "region": "Europe",
-      "sourceStatus": "First power delivered",
-      "normalizedStatus": "commissioning",
+      "sourceStatus": "Full operation achieved",
+      "normalizedStatus": "operational",
       "sourceIds": [
-        "src-oceanwinds-efgl-first-power",
+        "src-efgl-full-operation-2026",
+        "src-engie-efgl-first-power-2026",
         "src-principle-efgl"
       ],
       "factClaims": [
@@ -5694,7 +6605,81 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Operational French Mediterranean floating wind pilot. EFGL reached first power in May 2026 and full operation in July 2026 as a 30 MW, three-turbine WindFloat project; current assessment shifts to operating performance and fleet lessons.",
+        "fidStatus": "FID not verified. Construction and operation are verified, but the dataset does not include a standalone FID or financial-close source.",
+        "sourceIds": [
+          "src-efgl-full-operation-2026",
+          "src-engie-efgl-first-power-2026",
+          "src-principle-efgl"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "EFGL announced full operation on 10 July 2026.",
+            "sourceIds": [
+              "src-efgl-full-operation-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "ENGIE reported first power from EFGL on 4 May 2026.",
+            "sourceIds": [
+              "src-engie-efgl-first-power-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Principle Power identifies EFGL as three WindFloat foundations carrying Vestas V164 10 MW turbines.",
+            "sourceIds": [
+              "src-principle-efgl"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The project is 16 km offshore in 70-100 m water depth with a planned 20-year operating life.",
+            "sourceIds": [
+              "src-principle-efgl"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "EFGL has moved from commissioning to operating asset, so remaining project intelligence questions are performance, maintenance, and lessons for EFLO and commercial Mediterranean floating wind.",
+            "sourceIds": [
+              "src-efgl-full-operation-2026",
+              "src-principle-efgl"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The absence of a standalone FID date should not be backfilled from first power or operation.",
+            "sourceIds": [
+              "src-engie-efgl-first-power-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - SECURED: Full operation is verified.",
+          "Revenue - UNKNOWN: The current revenue/support arrangement is not fully represented in the dataset.",
+          "Engineering - SECURED: Technology, turbine configuration, water depth, and distance are verified.",
+          "Procurement - SECURED: Vestas turbine and WindFloat technology are verified through the operating asset.",
+          "Financing / FID - NOT VERIFIED: No standalone FID or financial-close source is in the dataset.",
+          "Execution - SECURED: First power and full operation are verified."
+        ],
+        "watchpoints": [
+          "Operating-performance disclosure: Would change the benchmark value of EFGL for Mediterranean floating wind scale-up.",
+          "Major maintenance or retrofit event: Would alter the operating-asset risk profile.",
+          "Transfer of lessons to EFLO or other commercial projects: Would affect the strategic assessment."
+        ],
+        "unresolvedUncertainties": [
+          "Standalone FID or financial-close date is UNKNOWN.",
+          "Detailed revenue mechanism is UNKNOWN.",
+          "Long-term availability and operating performance are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [
@@ -5712,17 +6697,19 @@
       "actualCod": null,
       "floatingTechnology": "Commercial floating offshore wind project",
       "platformType": "unknown",
-      "developerOwnerText": "Ocean Winds and Eolien en Mer Participations",
+      "developerOwnerText": "Ocean Winds / Banque des Territoires",
       "id": "eflo-narbonnaise",
       "slug": "eflo-narbonnaise",
       "name": "Eoliennes Flottantes d Occitanie",
       "country": "France",
       "region": "Europe",
-      "sourceStatus": "AO6 winner / development",
+      "sourceStatus": "AO6 awarded / development and consultation active",
       "normalizedStatus": "development",
       "sourceIds": [
-        "src-cre-ao6",
-        "src-oceanwinds-eflo"
+        "src-oceanwinds-eflo-award-2024",
+        "src-premar-eflo-ics-2026",
+        "src-oceanwinds-eflo",
+        "src-cre-ao6"
       ],
       "factClaims": [
         {
@@ -5753,7 +6740,82 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Awarded commercial-scale French floating wind development. EFLO has a 250 MW AO6 award and formal consultation body installation in 2026, but permitting completion, final support contract execution, procurement, FID, and construction are not verified.",
+        "fidStatus": "FID not reached. AO6 award and consultation do not evidence final investment decision or financial close.",
+        "sourceIds": [
+          "src-oceanwinds-eflo-award-2024",
+          "src-premar-eflo-ics-2026",
+          "src-oceanwinds-eflo"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Ocean Winds and Banque des Territoires were awarded the 250 MW EFLO project under French AO6 on 27 December 2024.",
+            "sourceIds": [
+              "src-oceanwinds-eflo-award-2024"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The maritime prefecture states an Instance de concertation et de suivi for EFLO was installed in July 2026.",
+            "sourceIds": [
+              "src-premar-eflo-ics-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "RTE is responsible for the EFLO grid connection.",
+            "sourceIds": [
+              "src-premar-eflo-ics-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Ocean Winds describes EFLO as building on WindFloat Atlantic and EFGL experience.",
+            "sourceIds": [
+              "src-oceanwinds-eflo"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The project story has moved from auction award into consultation and development, but remains pre-FID.",
+            "sourceIds": [
+              "src-oceanwinds-eflo-award-2024",
+              "src-premar-eflo-ics-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "EFGL provides relevant technology experience, but it does not determine EFLO technology or procurement by itself.",
+            "sourceIds": [
+              "src-oceanwinds-eflo"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: AO6 award is secured and consultation is active; final authorisations are not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: Consultation and project design are active; final technology and suppliers are not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Permitting or authorisation decision: Would move the project closer to construction readiness.",
+          "RTE grid-connection milestone: Would clarify export readiness.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major turbine, floater, cable, or EPCI awards: Would establish the delivery chain."
+        ],
+        "unresolvedUncertainties": [
+          "Final authorisations are UNKNOWN.",
+          "FID and financial close are not reached.",
+          "Final turbine/floater technology, suppliers, and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [
@@ -5777,11 +6839,11 @@
       "name": "Mediterranee Grand Large",
       "country": "France",
       "region": "Europe",
-      "sourceStatus": "AO6 winner / development",
+      "sourceStatus": "AO6 awarded / development and grid consultation active",
       "normalizedStatus": "development",
       "sourceIds": [
-        "src-cre-ao6",
-        "src-rte-mgl"
+        "src-rte-mgl",
+        "src-cre-ao6"
       ],
       "factClaims": [
         {
@@ -5812,31 +6874,99 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Awarded commercial-scale French floating wind development. Mediterranee Grand Large has the AO6 Golfe de Fos 250 MW award and RTE grid-connection process, but final authorisations, procurement, FID, and construction are not verified.",
+        "fidStatus": "FID not reached. Current evidence is development award and grid-connection planning, not financial close.",
+        "sourceIds": [
+          "src-rte-mgl",
+          "src-cre-ao6"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "RTE states Eoliennes Mediterranee Grand Large, with EDF Renewables and Maple Power as shareholders, was named winner for the 250 MW AO6 Fos project.",
+            "sourceIds": [
+              "src-rte-mgl"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "RTE is responsible for a mutualised connection for the 250 MW AO6 Fos project and a later 500 MW extension.",
+            "sourceIds": [
+              "src-rte-mgl"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "RTE records a June 2026 consultation/follow-up meeting for Mediterranee Grand Large.",
+            "sourceIds": [
+              "src-rte-mgl"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "MGL has moved beyond award into grid and stakeholder-development work, but remains before construction commitment.",
+            "sourceIds": [
+              "src-rte-mgl"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The planned AO9 extension should not be treated as part of the current 250 MW awarded project capacity.",
+            "sourceIds": [
+              "src-rte-mgl"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: AO6 award and grid-connection process are active; final authorisations are not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, auction support, or other revenue mechanism is verified.",
+          "Engineering - ACTIVE: RTE grid planning and stakeholder process are active; final project design is not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Project authorisation and permitting decisions: Would materially de-risk development.",
+          "RTE grid-connection orders or construction start: Would advance the export path.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major turbine, floater, cable, or EPCI awards: Would establish the delivery chain."
+        ],
+        "unresolvedUncertainties": [
+          "Final authorisations are UNKNOWN.",
+          "Revenue contract status beyond AO6 award is not fully represented.",
+          "FID, supplier chain, and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": "Sicily Channel",
       "locationDescription": null,
-      "capacityMw": 250,
-      "turbineCount": 25,
-      "turbineRatingMw": 10,
+      "capacityMw": 252,
+      "turbineCount": 21,
+      "turbineRatingMw": 12,
       "waterDepthM": null,
-      "distanceOffshore": null,
+      "distanceOffshore": "about 35 km",
       "expectedCod": null,
       "actualCod": null,
-      "floatingTechnology": "Floating offshore wind farm",
-      "platformType": "unknown",
+      "floatingTechnology": "Saipem STAR 1 semi-submersible floating foundation",
+      "platformType": "semi_submersible",
       "developerOwnerText": "7SEAS med S.r.l.",
       "id": "seven-seas-med",
       "slug": "seven-seas-med",
       "name": "7Seas Med",
       "country": "Italy",
       "region": "Europe",
-      "sourceStatus": "Preliminary assessment / administrative control",
-      "normalizedStatus": "development",
+      "sourceStatus": "Environmental approval secured / authorisation and auction gates remain",
+      "normalizedStatus": "pre_construction",
       "sourceIds": [
-        "src-mase-7seas-med"
+        "src-mase-7seas-med",
+        "src-divento-7seas-med-2026",
+        "src-saipem-7seas-2025"
       ],
       "factClaims": [
         {
@@ -5881,14 +7011,89 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Italian floating wind project with environmental approval but not yet construction committed. 7Seas Med has a VIA decree and Saipem STAR 1 collaboration, while FER2 tariff support, full authorisation, FID, and construction remain unverified.",
+        "fidStatus": "FID not reached. Environmental approval and technology collaboration do not verify investment decision or financial close.",
+        "sourceIds": [
+          "src-mase-7seas-med",
+          "src-divento-7seas-med-2026",
+          "src-saipem-7seas-2025"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "MASE records the 7SEAS med S.r.l. floating offshore wind project in the Strait of Sicily.",
+            "sourceIds": [
+              "src-mase-7seas-med"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Divento states 7 Seas Med received its VIA decree on 21 March 2024.",
+            "sourceIds": [
+              "src-divento-7seas-med-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Saipem says its STAR 1 floating foundation collaboration covers 7 Seas Med and that the project is in development awaiting the regulatory framework and FER2 auctions.",
+            "sourceIds": [
+              "src-saipem-7seas-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Divento describes about 250 MW using 21 floating turbines of 12 MW each.",
+            "sourceIds": [
+              "src-divento-7seas-med-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "7Seas Med is more advanced than ordinary early development because environmental compatibility is secured, but it remains before full bankability and construction commitment.",
+            "sourceIds": [
+              "src-divento-7seas-med-2026",
+              "src-saipem-7seas-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Construction timing should remain a target until authorisation, auction support, and FID are verified.",
+            "sourceIds": [
+              "src-divento-7seas-med-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: VIA is secured, but full authorisation/concession path is not verified as complete.",
+          "Revenue - NOT VERIFIED: FER2 auction or tariff support is not verified as awarded.",
+          "Engineering - ACTIVE: Saipem STAR 1 collaboration and project configuration are documented.",
+          "Procurement - NOT VERIFIED: Technology collaboration is not a full construction contract chain.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "FER2 tariff/auction award: Would clarify the revenue route.",
+          "Single authorisation or concession completion: Would materially de-risk permitting.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major turbine, floater, cable, or EPCI awards: Would convert collaboration into delivery contracts."
+        ],
+        "unresolvedUncertainties": [
+          "Full authorisation and concession status are UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final supplier chain and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": "Mediterranean Sea",
       "locationDescription": "Off western Sicily / Trapani area",
       "capacityMw": 2800,
-      "turbineCount": null,
+      "turbineCount": 190,
       "turbineRatingMw": null,
       "waterDepthM": null,
       "distanceOffshore": null,
@@ -5902,10 +7107,12 @@
       "name": "Med Wind",
       "country": "Italy",
       "region": "Europe",
-      "sourceStatus": "Development / EIA and concession process",
+      "sourceStatus": "Development / EIA and concession process active",
       "normalizedStatus": "development",
       "sourceIds": [
         "src-medwind-official",
+        "src-renexia-medwind-2026",
+        "src-mase-medwind-scirocco-2026",
         "src-renexia-medwind-feed"
       ],
       "factClaims": [
@@ -5937,7 +7144,83 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Large Italian floating wind development before authorisation and FID. Med Wind has a 2.8 GW Renexia concept, MASE EIA documentation for a first 698.25 MW Scirocco section, and Mingyang FEED, but EIA/concession, tariff support, full procurement, FID, and construction are not verified.",
+        "fidStatus": "FID not reached. FEED and application activity do not prove financial close.",
+        "sourceIds": [
+          "src-medwind-official",
+          "src-renexia-medwind-2026",
+          "src-mase-medwind-scirocco-2026",
+          "src-renexia-medwind-feed"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Renexia describes Med Wind as about 2.8 GW, more than 80 km off western Sicily, with 190 floating turbines.",
+            "sourceIds": [
+              "src-renexia-medwind-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Med Wind site timeline lists EIA application in 2024 and concession application in 2025, with later authorisation and tariff milestones as targets.",
+            "sourceIds": [
+              "src-medwind-official"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "MASE records technical review for Med Wind Scirocco lot Sud-Est at 698.25 MW.",
+            "sourceIds": [
+              "src-mase-medwind-scirocco-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Renexia and Mingyang signed FEED for Med Wind in October 2024.",
+            "sourceIds": [
+              "src-renexia-medwind-feed"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The current project should be read as phased development: a very large concept with a first section in formal EIA review.",
+            "sourceIds": [
+              "src-renexia-medwind-2026",
+              "src-mase-medwind-scirocco-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Developer schedule targets for tariff, authorisation, and notice to proceed are not verified commitments.",
+            "sourceIds": [
+              "src-medwind-official"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: EIA and concession processes are active; final approvals are not verified.",
+          "Revenue - NOT VERIFIED: Tariff or auction award is a future target, not a verified fact.",
+          "Engineering - ACTIVE: FEED and MASE project documentation are verified.",
+          "Procurement - NOT VERIFIED: Mingyang FEED/turbine design work is not a complete construction supply chain.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "EIA or concession decision for Med Wind Scirocco: Would materially advance the first section.",
+          "FER2 tariff or support award: Would clarify revenue bankability.",
+          "FID or notice to proceed: Would mark construction commitment.",
+          "Major cable, floater, port, or EPCI awards: Would complete the delivery chain beyond FEED."
+        ],
+        "unresolvedUncertainties": [
+          "EIA/concession outcomes are UNKNOWN.",
+          "How the 2.8 GW concept phases beyond Scirocco are authorised is UNKNOWN.",
+          "Revenue support, FID, COD, and final suppliers are not verified."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5952,16 +7235,18 @@
       "actualCod": null,
       "floatingTechnology": "Floating offshore wind project",
       "platformType": "unknown",
-      "developerOwnerText": "MunmuBaram Co., Ltd. / Hexicon",
+      "developerOwnerText": "Hexicon / MunmuBaram Co., Ltd.",
       "id": "munmubaram",
       "slug": "munmubaram",
       "name": "MunmuBaram",
       "country": "South Korea",
       "region": "Asia-Pacific",
-      "sourceStatus": "Regulatory approval procedures / development",
+      "sourceStatus": "Late development / EIA approval secured and auction route pending",
       "normalizedStatus": "development",
       "sourceIds": [
-        "src-munmubaram-project"
+        "src-munmubaram-project",
+        "src-hexicon-munmubaram-2026",
+        "src-munmubaram-korean-2026"
       ],
       "factClaims": [
         {
@@ -6013,7 +7298,82 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Late-development Korean floating wind project before auction support and FID. MunmuBaram has Hexicon ownership, EIA approval, and grid-use agreement evidence, but auction/revenue support, final permits, procurement, FID, and construction remain unverified.",
+        "fidStatus": "FID not reached. EIA approval and grid-use agreement do not evidence investment decision or financial close.",
+        "sourceIds": [
+          "src-munmubaram-project",
+          "src-hexicon-munmubaram-2026",
+          "src-munmubaram-korean-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Hexicon says it acquired full ownership of MunmuBaram in 2024.",
+            "sourceIds": [
+              "src-hexicon-munmubaram-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The MunmuBaram Korean project page states final EIA approval was completed in August 2024 and a transmission-facility use contract with KEPCO was completed.",
+            "sourceIds": [
+              "src-munmubaram-korean-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Hexicon describes MunmuBaram as advancing toward South Korea offshore wind auction during 2025.",
+            "sourceIds": [
+              "src-hexicon-munmubaram-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The existing project source records regulatory approval procedures and development status.",
+            "sourceIds": [
+              "src-munmubaram-project"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "MunmuBaram is materially de-risked on environment/grid compared with early development, but it is still before revenue support and FID.",
+            "sourceIds": [
+              "src-hexicon-munmubaram-2026",
+              "src-munmubaram-korean-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Shell's exit changes the ownership story and removes the former Shell/Hexicon joint-venture framing.",
+            "sourceIds": [
+              "src-hexicon-munmubaram-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: EIA approval is secured, while remaining construction permits are still in process.",
+          "Revenue - NOT VERIFIED: Auction or offtake support is not verified as awarded.",
+          "Engineering - ACTIVE: Development and grid-use evidence are present; final design is not verified.",
+          "Procurement - NOT VERIFIED: SK Oceanplant collaboration is reported by Hexicon, but full supplier/EPCI chain is not verified in the dataset.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Korean offshore wind auction result: Would clarify revenue support and bankability.",
+          "Remaining construction permits: Would complete a key readiness gate.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major floater, turbine, cable, or EPCI awards: Would establish the delivery chain."
+        ],
+        "unresolvedUncertainties": [
+          "Auction outcome and support price are UNKNOWN.",
+          "Remaining permit status is not fully verified.",
+          "FID, COD, final turbine/floater suppliers, and construction schedule are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -6034,9 +7394,11 @@
       "name": "Firefly Floating Offshore Wind Project",
       "country": "South Korea",
       "region": "Asia-Pacific",
-      "sourceStatus": "Development / FEED and EIA work awarded",
-      "normalizedStatus": "development",
+      "sourceStatus": "Stopped by Equinor / cancelled",
+      "normalizedStatus": "cancelled",
       "sourceIds": [
+        "src-equinor-bandibuli-stop-2026",
+        "src-equinor-bandibuli-statement-2026",
         "src-equinor-firefly-feed",
         "src-equinor-firefly-esia"
       ],
@@ -6069,7 +7431,81 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Cancelled Korean floating wind development. Equinor decided in May 2026 to stop the Bandibuli/Firefly project after seeking a viable offtake solution and completing development, permitting, consenting, and engagement work; no active construction path remains.",
+        "fidStatus": "FID not reached. Equinor stopped the project before investment decision, financial close, or construction.",
+        "sourceIds": [
+          "src-equinor-bandibuli-stop-2026",
+          "src-equinor-bandibuli-statement-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Equinor Korea announced on 22 May 2026 that it decided to stop the Bandibuli project.",
+            "sourceIds": [
+              "src-equinor-bandibuli-stop-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Equinor said it had undertaken community engagement, permitting, consenting, and development activities while seeking viable power offtake.",
+            "sourceIds": [
+              "src-equinor-bandibuli-stop-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Equinor's February 2026 holding statement said it would assess the way forward after a relevant authority decision.",
+            "sourceIds": [
+              "src-equinor-bandibuli-statement-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The legacy dataset records earlier Firefly FEED and EIA work.",
+            "sourceIds": [
+              "src-equinor-firefly-feed",
+              "src-equinor-firefly-esia"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The latest primary-source status supersedes earlier FEED/EIA development framing.",
+            "sourceIds": [
+              "src-equinor-bandibuli-stop-2026",
+              "src-equinor-firefly-feed"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The project story changed because Equinor could not make the project investable and bankable through available offtake routes, as stated by Equinor.",
+            "sourceIds": [
+              "src-equinor-bandibuli-stop-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - NOT STARTED: Development work occurred, but the active project has been stopped.",
+          "Revenue - NOT STARTED: Equinor identified viable power offtake as unresolved before stopping the project.",
+          "Engineering - NOT STARTED: Earlier FEED no longer supports an active execution path.",
+          "Procurement - NOT STARTED: No active supplier chain is verified after cancellation.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Equinor Korea strategic update: Would clarify whether any Korean offshore wind activity continues.",
+          "Transfer or sale of Bandibuli assets: Would be required for a successor-project assessment.",
+          "Government auction or offtake reform: Would provide context, but not revive Firefly without developer evidence."
+        ],
+        "unresolvedUncertainties": [
+          "Whether any development assets transfer to another project is UNKNOWN.",
+          "Final authority decision details are not fully represented in the dataset.",
+          "No replacement owner or revived project is verified."
+        ]
+      }
     },
     {
       "aliases": [
@@ -6140,7 +7576,64 @@
           "note": "NEDO source states demonstration operations started in May 2019.",
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Operational Japanese floating wind demonstrator in the dataset evidence. NEDO held an opening ceremony for demonstration operations at Hibiki in May 2019; current questions concern operating lessons and whether the demonstrator remains active or has completed its research term.",
+        "fidStatus": "FID not verified. The dataset verifies demonstration operation start, not a standalone FID or financial-close milestone.",
+        "sourceIds": [
+          "src-nedo-hibiki-opening"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "NEDO announced an opening ceremony for the start of demonstration operations on 24 May 2019.",
+            "sourceIds": [
+              "src-nedo-hibiki-opening"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The existing project record identifies Hibiki as a NEDO demonstration project.",
+            "sourceIds": [
+              "src-nedo-hibiki-opening"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "For reader-facing intelligence, Hibiki should be treated as an operating demonstrator rather than a pre-FID commercial project.",
+            "sourceIds": [
+              "src-nedo-hibiki-opening"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The absence of current post-2019 evidence leaves operating-life status less certain than newer operating assets.",
+            "sourceIds": [
+              "src-nedo-hibiki-opening"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "Permitting - SECURED: Demonstration operation start is verified.",
+          "Revenue - UNKNOWN: Revenue or support mechanism is not represented in the dataset.",
+          "Engineering - SECURED: Demonstration operation start confirms the installed research configuration exists, but detailed configuration is sparse.",
+          "Procurement - SECURED: Execution occurred for the demonstrator, though supplier chain is not fully represented.",
+          "Financing / FID - NOT VERIFIED: No standalone FID or financial-close source is in the dataset.",
+          "Execution - SECURED: Demonstration operations started in 2019."
+        ],
+        "watchpoints": [
+          "Current NEDO or operator status update: Would confirm whether the demonstrator is still operating or completed.",
+          "Published operating-performance results: Would increase the project value as a reference asset.",
+          "Decommissioning or repowering evidence: Would define the next asset-lifecycle state."
+        ],
+        "unresolvedUncertainties": [
+          "Current operating status after the initial demonstration start is UNKNOWN.",
+          "Standalone FID or financial-close date is UNKNOWN.",
+          "Detailed installed turbine/floater configuration and current revenue/support mechanism are UNKNOWN."
+        ]
+      }
     }
   ],
   "projectCompanyRelationships": [
@@ -8832,16 +10325,17 @@
     {
       "roleDetail": "Developer/owner identified by source record",
       "startDate": null,
-      "endDate": null,
-      "status": "active",
-      "sourceStatusText": null,
+      "endDate": "2026-05-22",
+      "status": "past",
+      "sourceStatusText": "Equinor stopped the Bandibuli project in May 2026.",
       "id": "firefly-floating-wind-equinor-developer",
       "projectId": "firefly-floating-wind",
       "industryCompanyId": "equinor",
       "companyName": "Equinor",
       "role": "developer_owner",
       "sourceIds": [
-        "src-equinor-firefly-feed"
+        "src-equinor-firefly-feed",
+        "src-equinor-bandibuli-stop-2026"
       ],
       "confidence": "high",
       "factClaims": [
@@ -8857,16 +10351,17 @@
     {
       "roleDetail": "Substructure FEED",
       "startDate": null,
-      "endDate": null,
-      "status": "active",
-      "sourceStatusText": null,
+      "endDate": "2026-05-22",
+      "status": "past",
+      "sourceStatusText": "Equinor stopped the Bandibuli project in May 2026.",
       "id": "firefly-technip-feed",
       "projectId": "firefly-floating-wind",
       "industryCompanyId": "technip-energies",
       "companyName": "Technip Energies",
       "role": "feed",
       "sourceIds": [
-        "src-equinor-firefly-feed"
+        "src-equinor-firefly-feed",
+        "src-equinor-bandibuli-stop-2026"
       ],
       "factClaims": [
         {
@@ -8881,16 +10376,17 @@
     {
       "roleDetail": "ESIA support",
       "startDate": null,
-      "endDate": null,
-      "status": "active",
-      "sourceStatusText": null,
+      "endDate": "2026-05-22",
+      "status": "past",
+      "sourceStatusText": "Equinor stopped the Bandibuli project in May 2026.",
       "id": "firefly-rps-esia",
       "projectId": "firefly-floating-wind",
       "industryCompanyId": null,
       "companyName": "RPS",
       "role": "engineering_consultancy",
       "sourceIds": [
-        "src-equinor-firefly-esia"
+        "src-equinor-firefly-esia",
+        "src-equinor-bandibuli-stop-2026"
       ],
       "factClaims": [
         {
@@ -8905,16 +10401,17 @@
     {
       "roleDetail": "EIA support",
       "startDate": null,
-      "endDate": null,
-      "status": "active",
-      "sourceStatusText": null,
+      "endDate": "2026-05-22",
+      "status": "past",
+      "sourceStatusText": "Equinor stopped the Bandibuli project in May 2026.",
       "id": "firefly-sekwang-eia",
       "projectId": "firefly-floating-wind",
       "industryCompanyId": null,
       "companyName": "Sekwang Engineering",
       "role": "engineering_consultancy",
       "sourceIds": [
-        "src-equinor-firefly-esia"
+        "src-equinor-firefly-esia",
+        "src-equinor-bandibuli-stop-2026"
       ],
       "factClaims": [
         {
@@ -9185,6 +10682,126 @@
           "path": "role",
           "value": "certification_assurance",
           "sourceId": "src-talisk-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "celtic-round5-gwynt-glas-edf",
+      "projectId": "celtic-sea-round5-gwynt-glas-pda",
+      "industryCompanyId": null,
+      "companyName": "EDF power solutions",
+      "role": "developer_owner",
+      "roleDetail": "Gwynt Glas joint venture participant",
+      "startDate": "2025-10-07",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-crown-estate-round5-afl-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-crown-estate-round5-afl-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "celtic-round5-gwynt-glas-esb",
+      "projectId": "celtic-sea-round5-gwynt-glas-pda",
+      "industryCompanyId": null,
+      "companyName": "ESB",
+      "role": "developer_owner",
+      "roleDetail": "Gwynt Glas joint venture participant",
+      "startDate": "2025-10-07",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-crown-estate-round5-afl-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-crown-estate-round5-afl-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eflo-banque-des-territoires-developer",
+      "projectId": "eflo-narbonnaise",
+      "industryCompanyId": null,
+      "companyName": "Banque des Territoires",
+      "role": "developer_owner",
+      "roleDetail": "Project partner with Ocean Winds",
+      "startDate": "2024-12-27",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-oceanwinds-eflo-award-2024"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-oceanwinds-eflo-award-2024",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "seven-seas-saipem-platform",
+      "projectId": "seven-seas-med",
+      "industryCompanyId": null,
+      "companyName": "Saipem",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "STAR 1 floating foundation collaboration",
+      "startDate": "2025-03-05",
+      "endDate": null,
+      "status": "announced",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-saipem-7seas-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-saipem-7seas-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "munmubaram-hexicon-owner-current",
+      "projectId": "munmubaram",
+      "industryCompanyId": null,
+      "companyName": "Hexicon",
+      "role": "developer_owner",
+      "roleDetail": "Sole owner after acquiring Shell share",
+      "startDate": "2024-11",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-hexicon-munmubaram-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-hexicon-munmubaram-2026",
           "note": null,
           "confidence": "high"
         }
@@ -11292,6 +12909,428 @@
           "path": "eventType",
           "value": "consent_application",
           "sourceId": "src-cenos-consent-application-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "celtic-round5-equinor-afl-2025",
+      "projectId": "celtic-sea-round5-equinor-pda",
+      "date": "2025-10-07",
+      "datePrecision": "day",
+      "eventType": "lease_award",
+      "title": "Agreement for lease entered",
+      "description": "The Crown Estate announced Equinor entered an agreement for lease for a Round 5 Celtic Sea floating wind project.",
+      "companyNames": [
+        "The Crown Estate",
+        "Equinor"
+      ],
+      "sourceIds": [
+        "src-crown-estate-round5-afl-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-crown-estate-round5-afl-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "celtic-round5-gwynt-glas-afl-2025",
+      "projectId": "celtic-sea-round5-gwynt-glas-pda",
+      "date": "2025-10-07",
+      "datePrecision": "day",
+      "eventType": "lease_award",
+      "title": "Agreement for lease entered",
+      "description": "The Crown Estate announced Gwynt Glas entered an agreement for lease for a Round 5 Celtic Sea floating wind project.",
+      "companyNames": [
+        "The Crown Estate",
+        "Gwynt Glas"
+      ],
+      "sourceIds": [
+        "src-crown-estate-round5-afl-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-crown-estate-round5-afl-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "celtic-round5-ocean-winds-afl-2026",
+      "projectId": "celtic-sea-round5-ocean-winds-pda",
+      "date": "2026-03-03",
+      "datePrecision": "day",
+      "eventType": "lease_award",
+      "title": "Agreement for lease entered",
+      "description": "The Crown Estate announced Ocean Winds entered an agreement for lease for the final Round 5 Celtic Sea floating wind project.",
+      "companyNames": [
+        "The Crown Estate",
+        "Ocean Winds"
+      ],
+      "sourceIds": [
+        "src-crown-estate-round5-ocean-winds-afl-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-crown-estate-round5-ocean-winds-afl-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "canopy-rwe-settlement-2026",
+      "projectId": "canopy-offshore-wind-ocs-p-0561",
+      "date": "2026-08-06",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "RWE announced DOI settlement covering California lease relinquishment",
+      "description": "RWE announced a settlement with DOI involving relinquishment of U.S. offshore wind leases including California.",
+      "companyNames": [
+        "RWE",
+        "U.S. Department of the Interior"
+      ],
+      "sourceIds": [
+        "src-rwe-canopy-settlement-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-rwe-canopy-settlement-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "golden-state-settlement-2026",
+      "projectId": "golden-state-wind-ocs-p-0564",
+      "date": "2026-04-27",
+      "datePrecision": "day",
+      "eventType": "project_pause",
+      "title": "DOI announced Golden State Wind settlement",
+      "description": "DOI announced Golden State Wind agreed to voluntarily end OCS-P 0564, with BOEM stating cancellation and rescission will follow required investment demonstration.",
+      "companyNames": [
+        "Golden State Wind",
+        "U.S. Department of the Interior"
+      ],
+      "sourceIds": [
+        "src-doi-golden-state-settlement-2026",
+        "src-boem-golden-state-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "project_pause",
+          "sourceId": "src-doi-golden-state-settlement-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "utsira-nord-equinor-nve-hearing-2026",
+      "projectId": "utsira-nord-equinor-vargronn-area-3",
+      "date": "2026-05-04",
+      "datePrecision": "day",
+      "eventType": "consent_application",
+      "title": "NVE sent Utsira Nord notifications to public hearing",
+      "description": "NVE sent Utsira Nord project notifications to public hearing as part of impact-assessment-program processing.",
+      "companyNames": [
+        "NVE",
+        "Utsira Nord Havvind DA"
+      ],
+      "sourceIds": [
+        "src-nve-utsira-nord-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-nve-utsira-nord-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "utsira-nord-harald-nve-hearing-2026",
+      "projectId": "utsira-nord-harald-harfagre",
+      "date": "2026-05-04",
+      "datePrecision": "day",
+      "eventType": "consent_application",
+      "title": "NVE sent Utsira Nord notifications to public hearing",
+      "description": "NVE sent Harald Harfagre project notification to public hearing as part of impact-assessment-program processing.",
+      "companyNames": [
+        "NVE",
+        "Harald Harfagre AS"
+      ],
+      "sourceIds": [
+        "src-nve-utsira-nord-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-nve-utsira-nord-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "efgl-full-operation-2026",
+      "projectId": "efgl",
+      "date": "2026-07-10",
+      "datePrecision": "day",
+      "eventType": "commercial_operation",
+      "title": "EFGL entered full operation",
+      "description": "EFGL announced the 30 MW pilot floating wind farm was operating at full capacity.",
+      "companyNames": [
+        "Ocean Winds",
+        "Banque des Territoires"
+      ],
+      "sourceIds": [
+        "src-efgl-full-operation-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "commercial_operation",
+          "sourceId": "src-efgl-full-operation-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eflo-consultation-body-2026",
+      "projectId": "eflo-narbonnaise",
+      "date": "2026-07-01",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "EFLO consultation and follow-up body installed",
+      "description": "The maritime prefecture announced installation of the consultation and follow-up body for EFLO.",
+      "companyNames": [
+        "EFLO",
+        "RTE"
+      ],
+      "sourceIds": [
+        "src-premar-eflo-ics-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-premar-eflo-ics-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mediterranee-grand-large-consultation-2026",
+      "projectId": "mediterranee-grand-large",
+      "date": "2026-06-29",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "MGL consultation and follow-up body installed",
+      "description": "RTE recorded installation of the consultation and follow-up body for Mediterranee Grand Large.",
+      "companyNames": [
+        "RTE",
+        "Eoliennes Mediterranee Grand Large"
+      ],
+      "sourceIds": [
+        "src-rte-mgl"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-rte-mgl",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "seven-seas-via-approval-2024",
+      "projectId": "seven-seas-med",
+      "date": "2024-03-21",
+      "datePrecision": "day",
+      "eventType": "environmental_approval",
+      "title": "VIA decree secured",
+      "description": "Divento states 7 Seas Med received its VIA decree for environmental compatibility.",
+      "companyNames": [
+        "7SEAS med S.r.l."
+      ],
+      "sourceIds": [
+        "src-divento-7seas-med-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "environmental_approval",
+          "sourceId": "src-divento-7seas-med-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "seven-seas-saipem-collaboration-2025",
+      "projectId": "seven-seas-med",
+      "date": "2025-03-05",
+      "datePrecision": "day",
+      "eventType": "technology_selection",
+      "title": "Saipem STAR 1 collaboration signed",
+      "description": "Saipem and Divento signed a collaboration agreement covering STAR 1 floating foundation technology for 7 Seas Med.",
+      "companyNames": [
+        "Saipem",
+        "Divento"
+      ],
+      "sourceIds": [
+        "src-saipem-7seas-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "technology_selection",
+          "sourceId": "src-saipem-7seas-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "med-wind-eia-application-2024",
+      "projectId": "med-wind",
+      "date": "2024-08-09",
+      "datePrecision": "day",
+      "eventType": "consent_application",
+      "title": "Med Wind Scirocco EIA application submitted",
+      "description": "MASE records EIA application filing for the Med Wind Scirocco Sud-Est section.",
+      "companyNames": [
+        "Med Wind Scirocco S.r.l."
+      ],
+      "sourceIds": [
+        "src-mase-medwind-scirocco-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-mase-medwind-scirocco-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "med-wind-concession-application-2025",
+      "projectId": "med-wind",
+      "date": "2025-08-07",
+      "datePrecision": "day",
+      "eventType": "consent_application",
+      "title": "Med Wind state concession application submitted",
+      "description": "Italian public notice records Med Wind Scirocco application for maritime state concession procedures.",
+      "companyNames": [
+        "Med Wind Scirocco S.r.l."
+      ],
+      "sourceIds": [
+        "src-medwind-official"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-medwind-official",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "munmubaram-hexicon-ownership-2024",
+      "projectId": "munmubaram",
+      "date": "2024-11",
+      "datePrecision": "month",
+      "eventType": "ownership_change",
+      "title": "Hexicon became sole owner of MunmuBaram",
+      "description": "Hexicon reports completing acquisition and becoming sole owner of MunmuBaram in 2024.",
+      "companyNames": [
+        "Hexicon",
+        "Shell"
+      ],
+      "sourceIds": [
+        "src-hexicon-munmubaram-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "ownership_change",
+          "sourceId": "src-hexicon-munmubaram-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "munmubaram-grid-use-2024",
+      "projectId": "munmubaram",
+      "date": "2024-08",
+      "datePrecision": "month",
+      "eventType": "grid_connection_agreement",
+      "title": "EIA approval and KEPCO grid-use agreement completed",
+      "description": "MunmuBaram states final EIA approval and a transmission-facility use contract with KEPCO were completed.",
+      "companyNames": [
+        "MunmuBaram",
+        "KEPCO"
+      ],
+      "sourceIds": [
+        "src-munmubaram-korean-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "grid_connection_agreement",
+          "sourceId": "src-munmubaram-korean-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "firefly-stopped-2026",
+      "projectId": "firefly-floating-wind",
+      "date": "2026-05-22",
+      "datePrecision": "day",
+      "eventType": "project_cancellation",
+      "title": "Equinor stopped Bandibuli project",
+      "description": "Equinor announced it decided to stop the Bandibuli floating offshore wind project.",
+      "companyNames": [
+        "Equinor Korea"
+      ],
+      "sourceIds": [
+        "src-equinor-bandibuli-stop-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "project_cancellation",
+          "sourceId": "src-equinor-bandibuli-stop-2026",
           "note": null,
           "confidence": "high"
         }

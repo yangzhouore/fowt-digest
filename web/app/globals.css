@@ -2407,6 +2407,266 @@ dd {
   --gv-unknown: #525252;
 }
 
+.project-intel-detail {
+  --pi-secured: #176a4a;
+  --pi-active: #8a5a00;
+  --pi-open: #8b2f2f;
+  --pi-unknown: #525252;
+}
+
+.project-intel-hero {
+  border-bottom: 1px solid var(--border);
+  padding: 58px 0 34px;
+}
+
+.project-intel-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 34px;
+  align-items: end;
+}
+
+.project-intel-hero h1 {
+  max-width: 820px;
+  margin-bottom: 12px;
+  font-size: 4.2rem;
+  line-height: 0.95;
+}
+
+.project-intel-status-line {
+  margin: 0;
+  color: var(--accent);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.project-intel-standfirst {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.project-intel-hero-facts {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+}
+
+.project-intel-hero-facts div {
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.project-intel-hero-facts dt,
+.project-intel-progress span,
+.project-intel-readiness span,
+.project-intel-story-chain span,
+.project-intel-fid-note {
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.project-intel-hero-facts dd {
+  margin: 7px 0 0;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.28rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.project-intel-section {
+  display: grid;
+  gap: 24px;
+  padding-top: 18px;
+}
+
+.project-intel-progress,
+.project-intel-story-chain,
+.project-intel-watchpoints,
+.project-intel-stands ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-intel-progress {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(120px, 1fr));
+  gap: 1px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.project-intel-progress li {
+  min-width: 120px;
+  border-top: 1px solid var(--border);
+  padding: 14px 10px 0 0;
+}
+
+.project-intel-progress p {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.project-intel-progress strong,
+.project-intel-state-pill {
+  display: inline-block;
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.project-intel-progress span {
+  display: block;
+  margin-top: 8px;
+}
+
+.project-intel-state-secured strong,
+.project-intel-state-secured.project-intel-state-pill {
+  color: var(--pi-secured);
+}
+
+.project-intel-state-active strong,
+.project-intel-state-active.project-intel-state-pill {
+  color: var(--pi-active);
+}
+
+.project-intel-state-not-verified strong,
+.project-intel-state-not-verified.project-intel-state-pill,
+.project-intel-state-not-started strong,
+.project-intel-state-not-started.project-intel-state-pill {
+  color: var(--pi-open);
+}
+
+.project-intel-state-unknown strong,
+.project-intel-state-unknown.project-intel-state-pill {
+  color: var(--pi-unknown);
+}
+
+.project-intel-two-column {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  gap: 28px;
+}
+
+.project-intel-two-column article {
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.project-intel-two-column h3,
+.project-intel-readiness p,
+.project-intel-watchpoints h3,
+.project-intel-story-chain span {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.project-intel-two-column li {
+  border-top: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+.project-intel-two-column li:first-child {
+  border-top: 0;
+}
+
+.project-intel-two-column p {
+  max-width: 850px;
+}
+
+.project-intel-fid-note {
+  margin-top: 14px;
+}
+
+.project-intel-story-chain {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+}
+
+.project-intel-story-chain li {
+  position: relative;
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  padding: 16px 22px 0 0;
+}
+
+.project-intel-story-chain li:not(:last-child)::after {
+  content: "->";
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+
+.project-intel-story-chain p {
+  margin: 10px 0 0;
+}
+
+.project-intel-readiness {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+.project-intel-readiness > div {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.45fr) minmax(112px, 0.3fr) minmax(0, 1.25fr);
+  gap: 18px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+
+.project-intel-readiness p {
+  color: var(--ink);
+}
+
+.project-intel-watchpoints {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-intel-watchpoints li {
+  min-width: 0;
+  border-top: 2px solid var(--accent);
+  padding-top: 14px;
+}
+
+.project-intel-watchpoints h3 {
+  color: var(--ink);
+}
+
+.project-intel-watchpoints p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.project-intel-secondary {
+  margin-top: 10px;
+}
+
 .green-volt-hero {
   border-bottom: 1px solid var(--border);
   padding: 58px 0 34px;
@@ -2807,26 +3067,35 @@ dd {
   }
 
   .green-volt-hero-grid,
+  .project-intel-hero-grid,
   .green-volt-hero-facts,
+  .project-intel-hero-facts,
   .green-volt-two-column,
+  .project-intel-two-column,
   .green-volt-story-chain,
+  .project-intel-story-chain,
+  .project-intel-watchpoints,
   .green-volt-watchpoints {
     grid-template-columns: 1fr;
   }
 
+  .project-intel-hero h1,
   .green-volt-hero h1 {
     font-size: 2.7rem;
   }
 
+  .project-intel-progress,
   .green-volt-progress {
     grid-template-columns: repeat(8, 138px);
   }
 
+  .project-intel-readiness > div,
   .green-volt-readiness > div {
     grid-template-columns: 1fr;
     gap: 6px;
   }
 
+  .project-intel-story-chain li:not(:last-child)::after,
   .green-volt-story-chain li:not(:last-child)::after {
     top: auto;
     right: auto;
@@ -2834,6 +3103,7 @@ dd {
     left: 0;
   }
 
+  .project-intel-story-chain,
   .green-volt-story-chain {
     gap: 26px;
   }

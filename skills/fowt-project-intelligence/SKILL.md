@@ -1,341 +1,242 @@
 ---
 name: fowt-project-intelligence
-description: Research and update source-backed floating offshore wind project status, milestone timeline, causal logic, risks, and next watchpoints.
+description: Audit and update source-backed floating offshore wind project intelligence, status, readiness gates, project story, and watchpoints.
 ---
 
 # FOWT Project Intelligence
 
-Use this skill to help readers quickly understand a floating offshore wind project's real progress, why it reached the current state, and what matters next.
+Use this skill to update a floating offshore wind project's real status, why it
+reached that state, and what evidence would change the assessment next.
 
 Follow `AGENTS.md` for repository, Git, provenance, and validation rules.
 
-## Core Goal
+## Operating Boundary
 
-A strong project update should answer five questions:
-
-1. What is the project?
-2. Where is it now?
-3. What major milestones got it here?
-4. Why did the important changes happen?
-5. What should we watch next?
-
-Do not produce a press-release chronology. Build a project story around status, milestones, and cause-and-effect.
+- `pipeline/` owns deterministic research data production.
+- `web/` owns static presentation and committed JSON consumption.
+- Do not add services, databases, API routes, AI writing, translation services,
+  schedulers, collection, scoring, or new pipeline stages.
+- Update only the requested project unless the user explicitly asks for a batch.
 
 ## Read First
 
-Read only what is needed:
+Read only what the task needs:
 
 - `AGENTS.md`
 - `web/data/projects/projects.json`
-- the target project's existing data/page
-- recent project-specific Engineering Briefing records when relevant
+- the target project's current record, timeline, relationships, and sources
+- `web/data/project-adapter.ts` and the project detail page only when data shape
+  or presentation changes are needed
+- recent project-specific Engineering Briefing records only when relevant
 
-Use existing project schemas unless the task explicitly requires a schema change.
+Do not read `docs/archive/` unless the user asks or ambiguity requires it.
 
-## Source Priority
+## Workflow
 
-Prefer sources in this order:
+Use this order:
 
-1. government, regulator, auction/CfD authority, seabed authority
-2. project company, developer, owner, operator
-3. named OEM, supplier, contractor, grid company, port, lender
-4. certification body or industry association
-5. reputable trade or financial press
+`current state -> FID gate -> identity -> material timeline -> project story -> readiness -> watchpoints -> reader-facing output`
 
-Use secondary sources mainly for discovery, context, or when primary evidence is unavailable.
+### 1. Current State First
 
-## Required Workflow
+Establish what the project is today before reconstructing history.
 
-Use this sequence:
+Confirm, with the freshest reliable evidence available:
 
-`identity -> current status -> material timeline -> turning point -> causal logic -> current gates -> watch next`
+- lifecycle state and whether construction is actually committed
+- whether recent activity is only development, surveys, FEED, or procurement
+- whether current sources contradict stale schedule or status claims
 
-### 1. Establish identity
+Consent, CfD/REC/PPA support, FEED, surveys, preferred suppliers, or schedule
+claims do not prove construction commitment.
+
+### 2. FID Is A Core Gate
+
+Explicitly classify FID / financial close when material:
+
+- `FID confirmed`
+- `FID not verified`
+- `FID not reached`
+- `UNKNOWN`
+
+Never infer FID from consent, CfD, offtake, FEED, surveys, supplier activity,
+land access, procurement notices, or target COD. Use `UNKNOWN` where evidence is
+insufficient.
+
+### 3. Establish Identity
 
 Confirm:
 
-- project name and aliases
-- location
-- developer / owner
-- capacity
-- floating technology if verified
+- name, aliases, location, sea area, developer / owner, and capacity
+- turbine count/rating, floating technology, and platform type if verified
 - current lifecycle status
 
-Do not merge similarly named phases or projects.
+Do not merge similarly named phases, lease areas, demonstrators, or commercial
+projects.
 
-### 2. Determine the current status first
+### 4. Material Timeline
 
-Find the freshest reliable evidence before reconstructing history.
+Keep only milestones that materially change project maturity, economics, or
+execution confidence. Do not turn the timeline into a news feed.
 
-Use clear lifecycle language such as:
-
-- development
-- consented
-- pre-construction / pre-FID
-- FID reached
-- under construction
-- commissioning
-- operational
-- paused
-- cancelled / stopped
-
-For commercial-scale projects, explicitly state whether **FID / financial close has been reached** when this matters.
-
-Consent, CfD, REC, FEED, surveys, preferred suppliers, or early contracts do not automatically mean the project is committed to construction.
-
-### 3. Build only the material timeline
-
-Include events that changed project maturity, economics, or execution confidence.
-
-Typical milestones:
-
-- lease / area award
-- consent / environmental approval
-- grid connection
-- CfD / REC / PPA / auction award
-- FEED
-- turbine / floater selection
-- major cable / mooring / EPCI / fabrication contract
-- partner or ownership change
-- anchor offtake agreement or withdrawal
-- FID / financial close
-- construction start
-- first power / COD
-- major delay, pause, support loss, cancellation
-
-Minor survey notices should only appear when they provide useful evidence that the project is still active or that engineering uncertainty is being reduced.
-
-## Source Rule
-
-Every **major milestone** must have a source.
-
-Every **important factual claim that changes the project assessment** must have a source.
-
-Examples:
-
-- CfD awarded -> source required
-- consent granted -> source required
-- FID reached / not reached -> source required when stated as fact
-- offtaker withdrew -> source required
-- project stopped -> source required
-- turbine supplier selected -> source required
-
-Prefer the strongest primary source available.
-
-Do not invent dates, contract states, suppliers, capacity, COD, FID, or reasons for delay.
-
-Use `UNKNOWN` when evidence is insufficient.
-
-## Fact vs Inference
-
-Keep these separate:
-
-**Fact** = directly supported by a source.
-
-**Inference** = interpretation built from one or more sourced facts.
-
-**Open question** = plausible but not sufficiently supported.
-
-Never turn an inference into a timeline fact.
-
-When making an important inference, show the logic chain.
-
-Use this pattern:
-
-`Fact A + Fact B -> project implication -> current assessment`
-
-Example:
-
-`400 MW CfD secured + anchor industrial offtaker withdrew + FID still not reached -> revenue certainty remains partly intact but the original commercial structure weakened -> bankability risk increased.`
-
-The facts in that chain must be sourced.
-
-## Causal Analysis
-
-For each major turning point, ask what mechanism changed.
-
-### Revenue / offtake
-
-Check:
-
-- CfD / REC / PPA support
-- supported MW versus total capacity
-- anchor customers
-- support withdrawal or failure to sign
-
-### CAPEX / supply chain
-
-Check:
-
-- turbine availability and pricing
-- floater serial fabrication
-- cables, moorings, anchors
-- installation and port requirements
-- major supplier or procurement changes
-
-### Financing / bankability
-
-Check:
-
-- FID / financial close
-- project finance
-- partner search
-- explicit language such as `investable`, `bankable`, `commercially viable`, or `competitive return`
-
-Useful logic:
-
-`revenue certainty + credible CAPEX + financeable risk -> bankability -> FID`
-
-Do not calculate IRR without source-backed inputs.
-
-### Regulation / infrastructure
-
-Check when relevant:
+Include events that affect:
 
 - permitting
-- fisheries / compensation
-- local-content rules
-- security restrictions
-- grid timing
-- port readiness
+- revenue / offtake / support
+- engineering
+- procurement
+- financing / FID
+- execution
+- ownership or commercial structure
 
-### Sponsor strategy
+Typical material milestones include lease or area award, consent, grid
+connection, support award, PPA/offtake, FEED, major supplier/EPCI/fabrication
+contracts, ownership change, FID/financial close, construction start, first
+power/COD, major delay, support loss, pause, cancellation, or lease
+relinquishment.
 
-Check whether developer portfolio changes, market exits, or capital reallocation also explain the project outcome.
+Minor surveys belong in the timeline only when they are the best current
+evidence that a pre-FID project remains active or is reducing engineering
+uncertainty.
 
-Do not attribute a setback to one cause when evidence shows several interacting causes.
+## Source Discipline
 
-## Narrative Logic
+Every major milestone and every factual claim that changes the assessment needs
+a source.
 
-Use this internal story structure:
+Prefer, where available:
 
-`original project thesis`
+1. government, regulator, auction/CfD authority, grid/system authority
+2. seabed authority
+3. project owner, developer, operator, or project company
+4. official supplier, contractor, lender, port, or certification announcement
+5. industry association
+6. reputable trade or financial press
 
-`-> de-risking milestones`
+Use trade press mainly for discovery, context, or clearly labelled reported
+developments when primary evidence is unavailable.
 
-`-> apparent route to construction`
+Do not invent FID, financial close, COD, schedule certainty, capacity,
+contracts, suppliers, economics, financing, delay reasons, or causal
+explanations.
 
-`-> turning point`
+## Fact Vs Inference
 
-`-> why it mattered`
+Keep confirmed facts separate from editorial assessment.
 
-`-> current status`
+- **Fact:** directly supported by source evidence.
+- **Inference:** interpretation from sourced facts.
+- **Open question:** plausible but not sufficiently supported.
 
-`-> next gating decisions`
+Never turn an inference into a timeline fact or factual project field.
 
-A timeline tells the reader **what happened**.
+For important inference, show the logic chain:
 
-The causal chain tells the reader **why the project is now in this state**.
+`Fact A + Fact B -> implication -> current assessment`
 
-Both are required for important projects.
+Use `UNKNOWN` for insufficient evidence instead of filling gaps.
 
-## Current Assessment
+## Project Story
 
-Summarise the project in 1-3 sentences.
+Reconstruct the story behind the current state:
 
-A useful assessment normally states:
+`original thesis -> major de-risking -> turning point(s) -> current state`
 
-- active / paused / cancelled / operating
-- pre-FID or post-FID where relevant
-- strongest positive evidence
-- biggest unresolved risk
+Explain causal mechanisms only where the evidence supports them. Common
+mechanisms include revenue certainty, offtake, support coverage versus total
+capacity, supply chain availability, procurement maturity, financing
+bankability, permitting, grid/port readiness, infrastructure constraints, and
+sponsor strategy.
 
-Example style:
+Do not attribute a setback to one cause when evidence shows several interacting
+causes. Do not calculate returns without source-backed inputs.
 
-`Active / Pre-FID. The project retains consent and government-backed revenue support, while recent engineering activity shows continued development. However, unresolved procurement and financing decisions mean construction is not yet committed.`
+## Readiness Gates
 
-## Key Gates
+Assess only the meaningful gates for the project stage:
 
-For projects that have not reached construction, identify only the important remaining gates.
+- Permitting
+- Revenue
+- Engineering
+- Procurement
+- Financing / FID
+- Execution
 
-Usually 3-5 items, such as:
+Use qualitative states: `SECURED`, `ACTIVE`, `NOT VERIFIED`, `NOT STARTED`,
+or `UNKNOWN`.
 
-- FID / financial close
-- turbine supply agreement
-- floater / EPCI award
-- cable contract
-- replacement offtaker
-- port commitment
-- fabrication start
-- support-contract execution
+Never use artificial percentages, maturity scores, or confidence scores as a
+reader-facing readiness metric.
 
-## Watch Next
+## Data Model
 
-End with 3-5 observable events that would materially change the assessment.
+Preserve the factual `Project` model.
 
-Do not use vague items such as `project progress`.
+- Use factual fields for identity, status, capacity, COD, technology,
+  relationships, timeline events, and source-backed claims.
+- Use optional `ProjectIntelligence` fields only when analytical content cannot
+  be represented cleanly as factual project data.
+- Do not overload factual fields with interpretation.
+- Add schema or adapter extensions only when genuinely necessary, and keep them
+  optional for other projects.
 
-Prefer concrete signals:
+Useful optional intelligence fields include current assessment, FID status,
+confirmed facts, editorial inferences, current gates, watchpoints, and unresolved
+uncertainties.
 
-- FID announced
-- turbine contract signed
-- support agreement executed
-- fabrication begins
-- first offshore installation
-- revised COD announced
+## Reader-Facing Output
 
-## Project Page Output
+The schema should support the UX, not dictate a database-shaped page.
 
-When the existing product structure allows it, organise project intelligence as:
+Preferred hierarchy: current status, project progress, where the project
+stands, why the story changed, readiness, what to watch next, material
+timeline, companies, sources / evidence.
 
-1. **Snapshot** - identity, capacity, owners, location, status, FID/COD
-2. **Current assessment** - where the project really stands now
-3. **Timeline** - only material sourced milestones
-4. **Why the project is here** - causal chain with sourced facts
-5. **Key gates** - unresolved blockers or decisions
-6. **Watch next** - next decision-changing signals
-7. **Sources** - provenance for milestones and important conclusions
+A reader should understand within 5-10 seconds where the project is now, what
+is secured, what is still missing, why it reached this state, and what could
+change the assessment next.
 
-## Writing Style
+Do not mechanically expose raw `confirmedFacts`, `editorialInferences`,
+`currentGates`, or `watchpoints`; use them to shape a clear project page.
 
-Write for engineers, developers, investors, and informed industry readers.
+## Watchpoints
 
-Prefer:
+Identify 3-5 observable developments that would materially change the project
+assessment.
 
-- concrete dates
-- concise project-stage language
-- clear cause-and-effect
-- explicit uncertainty
-- precise contract status
+A good watchpoint answers:
 
-Avoid:
+`What future evidence would cause us to update our view of this project?`
 
-- marketing language
-- generic renewable-energy praise
-- calling every event a milestone
-- claiming a project is `on track` from old guidance
-- treating technical feasibility as bankability
-- treating an MoU or preferred bidder as a firm contract
+Prefer concrete signals such as FID announcement, financial close, support
+contract execution, offtake agreement, lease progression, turbine/floater/cable/
+mooring/EPCI award, fabrication start, construction start, first installation,
+first power, revised COD, pause, cancellation, or lease relinquishment.
 
-## Update Existing Projects
+Avoid vague watchpoints such as `project progress`.
 
-When updating a project:
+## Updating Existing Projects
 
-1. inspect the existing record and timeline;
-2. establish the latest status independently;
-3. add or update sources first;
-4. correct stale current-state claims;
-5. add only material milestones;
-6. preserve valid historical events;
-7. add causal interpretation only when supported by sourced facts;
-8. identify current gates and watchpoints;
-9. keep unresolved facts as `UNKNOWN`;
-10. verify status, timeline, relationships, and sources agree.
+When auditing an existing project, inspect current facts, timeline,
+relationships, sources, and page rendering first. Then establish latest current
+state independently, preserve still-valid information, replace stale claims,
+strengthen weak provenance, update relationships only with evidence, add only
+material milestones, separate fact from inference, use `UNKNOWN` for gaps, avoid
+unnecessary schema/architecture/visual changes, and update only the requested
+project unless explicitly asked to batch.
 
-Do not rewrite unrelated projects.
+## Finish
 
-## Quality Gate
+Before reporting completion, verify:
 
-Before finishing, verify:
+`source -> fact -> assessment -> current state -> readiness -> watchpoints -> reader-facing presentation`
 
-- current status reflects recent evidence;
-- FID status is explicit when material;
-- every major milestone has a source;
-- every important inference shows a sourced logic chain;
-- facts and interpretations are clearly separated;
-- obsolete target dates are not presented as current;
-- supplier / contract status is precise;
-- the reader can understand the project state quickly;
-- 3-5 meaningful watchpoints are identified.
+Check that current status reflects recent evidence; FID status is explicit when
+material; the timeline has only material sourced milestones; important
+inferences have sourced logic chains; facts and interpretations are separate;
+obsolete targets are not presented as commitments; supplier and contract states
+are precise; readiness uses qualitative gates, not scores; 3-5 meaningful
+watchpoints are present; and relationships/sources agree with the assessment.
 
-Run the relevant validation required by `AGENTS.md` and report remaining uncertainties.
+Run the relevant validation required by `AGENTS.md`, inspect `git diff` and
+`git status`, and report remaining uncertainties.

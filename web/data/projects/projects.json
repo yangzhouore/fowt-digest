@@ -289,7 +289,7 @@
       "url": "https://www.inpex.com/english/business/project/goto-city.html",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public owner webpage; factual extraction only."
     },
     {
@@ -299,7 +299,7 @@
       "url": "https://www.chuden.co.jp/english/corporate/releases/pressreleases/1217247_5163.html",
       "sourceTier": 2,
       "publishedDate": "2026-01-05",
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public owner announcement; factual extraction only."
     },
     {
@@ -309,7 +309,7 @@
       "url": "https://www.cnoocltd.com/english/presscenter/pressreleases/2023/202409/t20240925_96696.html",
       "sourceTier": 2,
       "publishedDate": "2023-05-20",
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public company announcement; factual extraction only."
     },
     {
@@ -319,7 +319,7 @@
       "url": "https://www.cnoocengineering.com/english/ProjectsTop/CleanEnergyTwo/202411/t20241105_100451.html",
       "sourceTier": 3,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public contractor project page; factual extraction only."
     },
     {
@@ -329,7 +329,7 @@
       "url": "https://www.principlepower.com/en/projects/windfloat-pacific",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public technology provider project page; factual extraction only."
     },
     {
@@ -339,7 +339,7 @@
       "url": "https://www.boem.gov/renewable-energy/state-activities/oregon-activities",
       "sourceTier": 1,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public U.S. government webpage; factual extraction only."
     },
     {
@@ -349,7 +349,7 @@
       "url": "https://www.gov.scot/publications/update-2020-offshore-wind-policy-statement-scotlands-offshore-wind-ambition-2/pages/4/",
       "sourceTier": 1,
       "publishedDate": "2026-01-28",
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Open Government Licence v3.0 except graphic assets and otherwise stated; factual extraction only."
     },
     {
@@ -469,7 +469,7 @@
       "url": "https://totalenergies.co.uk/united-kingdom-totalenergies-launches-floating-offshore-wind-pilot-project-supply-renewable",
       "sourceTier": 2,
       "publishedDate": "2024-08-29",
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -479,7 +479,7 @@
       "url": "https://www.marramwind.co.uk/",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -509,7 +509,7 @@
       "url": "https://buchanoffshorewind.com/planning-consent/",
       "sourceTier": 2,
       "publishedDate": null,
-      "accessedDate": "2026-08-20",
+      "accessedDate": "2026-09-03",
       "licenseNote": "Public webpage; factual extraction only."
     },
     {
@@ -691,6 +691,296 @@
       "publishedDate": "2019-05-24",
       "accessedDate": "2026-08-20",
       "licenseNote": "Public Japanese government agency webpage; factual extraction only."
+    },
+    {
+      "sourceId": "src-qair-ayre-official",
+      "title": "Ayre, Scotland",
+      "publisher": "Qair Group",
+      "url": "https://www.qair.energy/realisations/ayre/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-qair-ayre-onshore-consent-2026",
+      "title": "Qair gains onshore consent for 1 GW Ayre offshore wind farm",
+      "publisher": "Qair Group",
+      "url": "https://www.qair.energy/qair-gains-onshore-consent-for-1-gw-ayre-offshore-wind-farm-pioneering-floating-wind-innovation-from-france-to-the-uk/",
+      "sourceTier": 2,
+      "publishedDate": "2026-03-17",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-ayre-documents-2025",
+      "title": "Documents",
+      "publisher": "Ayre Offshore Wind Farm",
+      "url": "https://ayreoffshorewindfarm.scot/documents",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-buchan-home-2026",
+      "title": "Home",
+      "publisher": "Buchan Offshore Wind",
+      "url": "https://buchanoffshorewind.com/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-buchan-owner-engineer-2026",
+      "title": "Owner's Engineer appointed to pioneering energy project",
+      "publisher": "Buchan Offshore Wind",
+      "url": "https://buchanoffshorewind.com/owners-engineer-appointed-to-pioneering-energy-project/",
+      "sourceTier": 2,
+      "publishedDate": "2026-07-01",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-marramwind-planning-2026",
+      "title": "ScottishPower Renewables submits planning application for MarramWind",
+      "publisher": "Offshore Wind Scotland",
+      "url": "https://www.offshorewindscotland.org.uk/news/2026/january/23/scottishpower-renewables-submits-planning-application-for-marramwind/",
+      "sourceTier": 5,
+      "publishedDate": "2026-01-23",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-marramwind-companies-house-2025",
+      "title": "MARRAMWIND LIMITED filing history",
+      "publisher": "Companies House",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC719634/filing-history",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-muir-mhor-official-2026",
+      "title": "Muir Mhor Offshore Wind Farm",
+      "publisher": "Muir Mhor Offshore Wind Farm",
+      "url": "https://muirmhor.co.uk/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-muir-mhor-consent-notice-2026",
+      "title": "East Coast of Scotland - Muir Mhor Offshore Wind Farm Planning & Marine Consent Notice",
+      "publisher": "Public Notice Portal",
+      "url": "https://publicnoticeportal.uk/notice/planning/6968b99cf33f036bdcd27c49",
+      "sourceTier": 5,
+      "publishedDate": "2026-01-15",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-ossian-development-process-2026",
+      "title": "Development Process",
+      "publisher": "Ossian Wind Farm",
+      "url": "https://www.ossianwindfarm.com/development-process-1",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-ossian-array-2026",
+      "title": "Array",
+      "publisher": "Ossian Wind Farm",
+      "url": "https://www.ossianwindfarm.com/ossian-array",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-ossian-transmission-faq-2026",
+      "title": "FAQs",
+      "publisher": "Ossian Transmission",
+      "url": "https://ossiantransmission.com/faqs/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-arven-project-2026",
+      "title": "The Project",
+      "publisher": "Arven Offshore Wind Farm",
+      "url": "https://www.arvenoffshorewind.com/the-project/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-arven-partnership-2023",
+      "title": "Mainstream Renewable Power and Ocean Winds partner on second ScotWind floating offshore wind site",
+      "publisher": "Arven Offshore Wind Farm",
+      "url": "https://www.arvenoffshorewind.com/mainstream-renewable-power-and-ocean-winds-partner-on-second-scotwind-floating-offshore-wind-site/",
+      "sourceTier": 2,
+      "publishedDate": "2023-08-07",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-bellrock-official-2026",
+      "title": "Home",
+      "publisher": "Bellrock Wind",
+      "url": "https://bellrockwind.co.uk/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-bellrock-consent-2026",
+      "title": "Consent Applications Submitted for 1.8 GW Bellrock Floating Offshore Wind Project",
+      "publisher": "Bellrock Wind",
+      "url": "https://bellrockwind.co.uk/consent-applications-submitted-for-1-8-gw-bellrock-floating-offshore-wind-project/",
+      "sourceTier": 2,
+      "publishedDate": "2026-04-21",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-bellrock-aker-2026",
+      "title": "Bellrock Advances Electrical Design with Aker Solutions Appointment",
+      "publisher": "Bellrock Wind",
+      "url": "https://bellrockwind.co.uk/bellrock-advances-electrical-design-with-aker-solutions-appointment/",
+      "sourceTier": 2,
+      "publishedDate": "2026-07-14",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-broadshore-official-2026",
+      "title": "Home",
+      "publisher": "Broadshore Offshore Wind Farm",
+      "url": "https://broadshorewind.co.uk/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-havbredey-official-2026",
+      "title": "Havbredey",
+      "publisher": "Northland Power ScotWind",
+      "url": "https://northlandpowerscotwind.co.uk/havbredey/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-stoura-official-2026",
+      "title": "Welcome to the Stoura Offshore Wind Farm Website",
+      "publisher": "Stoura Offshore Wind Farm",
+      "url": "https://www.stouraoffshorewind.com/home",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-stromar-official-2026",
+      "title": "Home",
+      "publisher": "Stromar",
+      "url": "https://stromarwind.co.uk/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-stromar-project-2026",
+      "title": "The project",
+      "publisher": "Stromar",
+      "url": "https://stromarwind.co.uk/the-project/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-talisk-official-2026",
+      "title": "Talisk",
+      "publisher": "Magnora Offshore Wind",
+      "url": "https://www.magnoraoffshorewind.com/talisk/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-magnora-talisk-q1-2026",
+      "title": "First quarter report 2026",
+      "publisher": "Magnora ASA",
+      "url": "https://magnora.wrep.it/q1-2026-report/sec/2",
+      "sourceTier": 2,
+      "publishedDate": "2026-04-28",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-salamander-official-2026",
+      "title": "Salamander Project",
+      "publisher": "Salamander",
+      "url": "https://salamanderfloatingwind.com/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-salamander-odfjell-acquisition-2025",
+      "title": "Odfjell Oceanwind acquires Orsted shares in the Salamander Offshore Wind Farm",
+      "publisher": "Salamander",
+      "url": "https://salamanderfloatingwind.com/wp-content/uploads/2025/08/Salamander-PR-Odfjell-Oceanwind-acquires-Orsteds-shares-in-the-Salamander-Offshore-Wind-Farm.pdf",
+      "sourceTier": 2,
+      "publishedDate": "2025-08-26",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-cenos-official-2026",
+      "title": "Cenos floating offshore windfarm",
+      "publisher": "Cenos Offshore Windfarm",
+      "url": "https://cenosoffshorewind.com/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-cenos-consent-application-2025",
+      "title": "Offshore consent application submitted for Cenos Offshore Windfarm",
+      "publisher": "Cenos Offshore Windfarm",
+      "url": "https://cenosoffshorewind.com/offshore-consent-application-submitted-for-cenos-offshore-windfarm/",
+      "sourceTier": 2,
+      "publishedDate": "2025-02-26",
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
+    },
+    {
+      "sourceId": "src-cenos-documents-2025",
+      "title": "Documents",
+      "publisher": "Cenos Offshore Windfarm",
+      "url": "https://cenosoffshorewind.com/documents/",
+      "sourceTier": 2,
+      "publishedDate": null,
+      "accessedDate": "2026-09-03",
+      "licenseNote": "Public source; factual extraction only."
     }
   ],
   "projects": [
@@ -2091,7 +2381,7 @@
       "region": "Asia-Pacific",
       "seaArea": null,
       "locationDescription": "Offshore Goto City, Nagasaki Prefecture",
-      "sourceStatus": "In commercial operation",
+      "sourceStatus": "In commercial operation since January 2026",
       "normalizedStatus": "operational",
       "capacityMw": 16.8,
       "turbineCount": 8,
@@ -2150,7 +2440,80 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Operational commercial floating wind farm. Goto is a 16.8 MW, eight-turbine hybrid-spar project off Goto City that began commercial operation on 5 January 2026, shifting the live assessment from construction readiness to operating performance and local power-delivery evidence.",
+        "fidStatus": "FID not verified. The project is operational, but the dataset does not include a standalone FID or financial-close announcement.",
+        "sourceIds": [
+          "src-inpex-goto",
+          "src-chubu-goto-operation"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "INPEX identifies Goto as a 16.8 MW project in commercial operation through Goto Floating Wind Farm LLC.",
+            "sourceIds": [
+              "src-inpex-goto"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Chubu Electric Power records commercial operation beginning on 5 January 2026 and identifies eight 2.1 MW floating units.",
+            "sourceIds": [
+              "src-chubu-goto-operation"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Goto area received public occupancy plan certification in April 2022 and an occupancy permit with offshore construction start in August 2022.",
+            "sourceIds": [
+              "src-chubu-goto-operation"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Toda designed and built the hybrid spar-type floater used for the project.",
+            "sourceIds": [
+              "src-chubu-goto-operation"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Because commercial operation is verified, current project risk has moved from development gates to operation, availability, maintenance, and local power-sale performance.",
+            "sourceIds": [
+              "src-inpex-goto",
+              "src-chubu-goto-operation"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The absence of a standalone FID source should not be backfilled from the later commercial-operation milestone.",
+            "sourceIds": [
+              "src-chubu-goto-operation"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - SECURED: Public occupancy certification, occupancy permit, construction start, and operation are verified.",
+          "Revenue - SECURED: Chubu reports generated electricity will be supplied preferentially to local retail electricity providers.",
+          "Engineering - SECURED: Capacity, turbine count, rating, and hybrid spar technology are verified.",
+          "Procurement - SECURED: The installed hybrid spar and turbine configuration are verified through the operating asset.",
+          "Financing / FID - NOT VERIFIED: No standalone FID or financial-close source is in the dataset.",
+          "Execution - SECURED: Commercial operation began on 5 January 2026."
+        ],
+        "watchpoints": [
+          "Operating performance disclosure: Would show whether Japan first commercial floating wind farm is meeting availability and production expectations.",
+          "Major maintenance or retrofit announcement: Would change the operating-asset risk profile.",
+          "Replication in Japan offshore wind tenders: Would indicate whether Goto is influencing follow-on commercial floating projects."
+        ],
+        "unresolvedUncertainties": [
+          "Standalone FID or financial-close date is UNKNOWN.",
+          "Detailed current revenue contract terms are UNKNOWN.",
+          "Long-term operating performance and availability are UNKNOWN."
+        ]
+      }
     },
     {
       "id": "haiyou-guanlan",
@@ -2164,7 +2527,7 @@
       "region": "Asia-Pacific",
       "seaArea": "South China Sea",
       "locationDescription": "Near the Wenchang oilfields",
-      "sourceStatus": "Connected to the grid for power generation",
+      "sourceStatus": "Grid-connected demonstration platform in operation",
       "normalizedStatus": "operational",
       "capacityMw": 7.25,
       "turbineCount": 1,
@@ -2216,7 +2579,80 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Operational oilfield-electrification demonstrator. Haiyou Guanlan is a 7.25 MW single-turbine semi-submersible floating platform supplying power near CNOOC Wenchang oilfields; the live question is operating learning, not construction readiness.",
+        "fidStatus": "FID not verified. The project is operating, but no standalone FID or financial-close source is recorded.",
+        "sourceIds": [
+          "src-cnooc-guanlan-grid",
+          "src-cnooc-engineering-guanlan"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "CNOOC announced grid-connected power generation for the Wenchang deep-sea floating wind demonstration project on 20 May 2023.",
+            "sourceIds": [
+              "src-cnooc-guanlan-grid"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "CNOOC records the site as 136 km offshore in 120 m water depth with 7.25 MW installed capacity.",
+            "sourceIds": [
+              "src-cnooc-guanlan-grid"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "CNOOC Limited owns 100% of the demonstration project.",
+            "sourceIds": [
+              "src-cnooc-guanlan-grid"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Offshore Oil Engineering identifies the project as CNOOC Guanlan and records completion in June 2023.",
+            "sourceIds": [
+              "src-cnooc-engineering-guanlan"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The project story is a completed oilfield-power demonstrator rather than a commercial multi-turbine wind farm.",
+            "sourceIds": [
+              "src-cnooc-guanlan-grid",
+              "src-cnooc-engineering-guanlan"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Further assessment should focus on operational lessons and replication for offshore oilfield electrification.",
+            "sourceIds": [
+              "src-cnooc-guanlan-grid"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "Permitting - SECURED: Grid connection and operation are verified.",
+          "Revenue - SECURED: The source-backed use case is power supply to offshore oilfield operations.",
+          "Engineering - SECURED: Capacity, water depth, distance, and semi-submersible configuration are verified.",
+          "Procurement - SECURED: EPCI completion is verified by the contractor project record.",
+          "Financing / FID - NOT VERIFIED: No standalone FID or financial-close source is in the dataset.",
+          "Execution - SECURED: Grid-connected power generation and completion are verified."
+        ],
+        "watchpoints": [
+          "Operating-performance disclosure: Would clarify reliability in deep-water oilfield-power service.",
+          "Follow-on CNOOC floating wind deployment: Would show whether the demonstrator is being replicated.",
+          "Major retrofit or decommissioning plan: Would define the next material asset-state change."
+        ],
+        "unresolvedUncertainties": [
+          "Standalone FID or financial-close date is UNKNOWN.",
+          "Current measured annual output and availability are UNKNOWN.",
+          "Long-term operating-life plan is UNKNOWN."
+        ]
+      }
     },
     {
       "id": "windfloat-pacific",
@@ -2229,7 +2665,7 @@
       "region": "North America",
       "seaArea": "Pacific Ocean",
       "locationDescription": "Proposed offshore Oregon",
-      "sourceStatus": "No longer processed by BOEM / discontinued",
+      "sourceStatus": "Discontinued / BOEM no longer processing lease request",
       "normalizedStatus": "cancelled",
       "capacityMw": 24,
       "turbineCount": null,
@@ -2281,7 +2717,80 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Cancelled U.S. West Coast demonstration project. WindFloat Pacific remains useful as a permitting and technology-development reference, but BOEM stopped processing the Principle Power lease request in 2018 and the project never reached construction or operation.",
+        "fidStatus": "FID not reached. The project was discontinued before a verified investment decision or construction commitment.",
+        "sourceIds": [
+          "src-principle-windfloat-pacific",
+          "src-boem-oregon-windfloat-pacific"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Principle Power describes WindFloat Pacific as a DOE-supported Oregon floating wind demonstration project that was eventually discontinued.",
+            "sourceIds": [
+              "src-principle-windfloat-pacific"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "BOEM states it is no longer processing the Principle Power lease request after the project no longer retained non-competitive interest status.",
+            "sourceIds": [
+              "src-boem-oregon-windfloat-pacific"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Principle Power records the original concept as a 24 MW project using 8 MW turbines in deep Oregon waters, while its data table lists 25 MW and 8.4 MW.",
+            "sourceIds": [
+              "src-principle-windfloat-pacific"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "The project received Approval in Principle and advanced early federal permitting work before discontinuation.",
+            "sourceIds": [
+              "src-principle-windfloat-pacific"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The current state is not paused development; the material regulatory path ended when BOEM stopped processing the lease request.",
+            "sourceIds": [
+              "src-boem-oregon-windfloat-pacific"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The record should be read as a historical demonstrator pathway that informed later floating wind planning, not as an active Oregon project.",
+            "sourceIds": [
+              "src-principle-windfloat-pacific",
+              "src-boem-oregon-windfloat-pacific"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - NOT STARTED: BOEM stopped processing the lease request before a construction lease path was completed.",
+          "Revenue - NOT STARTED: No current offtake, support, or revenue route is verified.",
+          "Engineering - SECURED: The proposed WindFloat technology and deep-water concept are documented historically.",
+          "Procurement - NOT STARTED: No construction-stage supplier chain is verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: The project did not reach construction or operation."
+        ],
+        "watchpoints": [
+          "Formal revival or replacement lease path: Would be required to change the cancelled assessment.",
+          "BOEM Oregon commercial leasing outcome: Would provide context for successor floating wind development, not restart WindFloat Pacific by itself.",
+          "Principle Power reuse of WindFloat Pacific lessons: Would affect the historical value of the project record."
+        ],
+        "unresolvedUncertainties": [
+          "Whether any specific design work survives in successor Oregon projects is UNKNOWN.",
+          "Final project economics and cancellation rationale are not fully evidenced in the dataset.",
+          "The source-backed capacity is inconsistent between 24 MW narrative and 25 MW table values."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -2302,7 +2811,7 @@
       "name": "Culzean Demo Floating Wind Pilot",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Consented / pilot launched",
+      "sourceStatus": "Launched / operation not verified",
       "normalizedStatus": "consented",
       "sourceIds": [
         "src-totalenergies-culzean-demo",
@@ -2337,7 +2846,80 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Consented oil-and-gas electrification pilot, but operation is not verified. TotalEnergies launched a 3 MW floating wind pilot near Culzean in 2024 with expected operation by end-2025; the current dataset has consent and launch evidence, but no source confirming commissioning or commercial operation.",
+        "fidStatus": "FID not verified. The launch announcement implies project commitment but does not provide a standalone FID or financial-close milestone.",
+        "sourceIds": [
+          "src-totalenergies-culzean-demo",
+          "src-scotgov-owps-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "TotalEnergies launched a 3 MW floating wind pilot to supply renewable power to the Culzean offshore platform.",
+            "sourceIds": [
+              "src-totalenergies-culzean-demo"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The turbine is planned 2 km west of Culzean, about 220 km off eastern Scotland.",
+            "sourceIds": [
+              "src-totalenergies-culzean-demo"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The pilot uses an Ocergy modular semi-submersible floater hull according to TotalEnergies.",
+            "sourceIds": [
+              "src-totalenergies-culzean-demo"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Scottish Government January 2026 offshore wind project map lists Culzean Demo as consented.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The material open question is not whether the pilot was launched, but whether the expected end-2025 operation milestone has actually been achieved.",
+            "sourceIds": [
+              "src-totalenergies-culzean-demo",
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Until commissioning or power-delivery evidence is found, the project should remain consented rather than operational.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "Permitting - SECURED: The Scottish Government lists Culzean Demo as consented.",
+          "Revenue - SECURED: The source-backed use case is supplying power to the Culzean oil and gas platform.",
+          "Engineering - SECURED: Capacity, location, and Ocergy floater concept are verified.",
+          "Procurement - ACTIVE: The launch announcement identifies Ocergy technology but full delivery chain and commissioning evidence are not complete.",
+          "Financing / FID - NOT VERIFIED: No standalone FID or financial-close source is recorded.",
+          "Execution - ACTIVE: The project was launched, but operation or first power is not verified."
+        ],
+        "watchpoints": [
+          "Commissioning or first-power confirmation: Would move the pilot from consented/launched to operational.",
+          "Verified construction or installation milestone: Would strengthen the execution assessment if operation remains unconfirmed.",
+          "Operating data from Culzean power supply: Would show whether the hybrid offshore-platform power concept is working."
+        ],
+        "unresolvedUncertainties": [
+          "Actual first power or operational date is UNKNOWN.",
+          "Standalone FID or financial-close date is UNKNOWN.",
+          "Final installed turbine OEM and complete contracting chain are not fully verified."
+        ]
+      }
     },
     {
       "aliases": [
@@ -2549,17 +3131,19 @@
       "distanceOffshore": null,
       "expectedCod": null,
       "actualCod": null,
-      "floatingTechnology": null,
-      "platformType": "unknown",
-      "developerOwnerText": "Odfjell Oceanwind / Simply Blue",
+      "floatingTechnology": "Deepsea Star",
+      "platformType": "semi_submersible",
+      "developerOwnerText": "Odfjell Oceanwind / Simply Blue Group / Subsea7",
       "id": "salamander-floating-wind",
       "slug": "salamander-floating-wind",
       "name": "Salamander",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Consented",
+      "sourceStatus": "Consented / pre-FID",
       "normalizedStatus": "consented",
       "sourceIds": [
+        "src-salamander-official-2026",
+        "src-salamander-odfjell-acquisition-2025",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -2584,7 +3168,84 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Consented pre-commercial floating wind project. Salamander has consent and an INTOG exclusivity route, and Odfjell Oceanwind replaced Orsted as a major shareholder in 2025; it remains pre-FID with CfD, final lease progression, procurement, and execution still unverified.",
+        "fidStatus": "FID not reached. The current evidence shows consent, ownership change, and intended future FID, not a completed investment decision.",
+        "sourceIds": [
+          "src-salamander-official-2026",
+          "src-salamander-odfjell-acquisition-2025",
+          "src-scotgov-owps-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "The Salamander project is a proposed 100 MW floating wind farm with a 100 MW onshore battery off Peterhead.",
+            "sourceIds": [
+              "src-salamander-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Scottish Government January 2026 project map lists Salamander as consented.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Odfjell Oceanwind completed acquisition of Orsted share in Salamander on 26 August 2025, joining Simply Blue Group and Subsea7.",
+            "sourceIds": [
+              "src-salamander-odfjell-acquisition-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The project has adopted Odfjell Oceanwind Deepsea Star semi-submersible steel foundation technology.",
+            "sourceIds": [
+              "src-salamander-odfjell-acquisition-2025"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The project story shifted from an Orsted-backed pre-commercial bridge project to an Odfjell-led technology-demonstration pathway after the 2025 ownership change.",
+            "sourceIds": [
+              "src-salamander-odfjell-acquisition-2025",
+              "src-salamander-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Consent is material de-risking, but the project still needs revenue support and FID before construction can be treated as committed.",
+            "sourceIds": [
+              "src-salamander-official-2026",
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - SECURED: Scottish Government lists Salamander as consented.",
+          "Revenue - NOT VERIFIED: CfD or other revenue support is listed as a future/anticipated stage, not verified as secured.",
+          "Engineering - ACTIVE: Deepsea Star technology is selected, while final design and battery integration details remain under development.",
+          "Procurement - NOT VERIFIED: Major turbine, cable, mooring, EPCI, and fabrication awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction, installation, first power, or operation is verified."
+        ],
+        "watchpoints": [
+          "CfD or other revenue award: Would materially improve bankability for the pre-commercial project.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain.",
+          "Crown Estate Scotland lease progression: Would confirm movement beyond exclusivity toward seabed lease rights."
+        ],
+        "unresolvedUncertainties": [
+          "FID and financial close are not reached in the evidence set.",
+          "Revenue support or offtake is UNKNOWN.",
+          "Final COD and construction schedule are UNKNOWN.",
+          "Full supplier chain is not verified."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -2595,7 +3256,7 @@
       "turbineRatingMw": null,
       "waterDepthM": null,
       "distanceOffshore": null,
-      "expectedCod": null,
+      "expectedCod": "2033",
       "actualCod": null,
       "floatingTechnology": "ScotWind floating lease/project area",
       "platformType": "unknown",
@@ -2605,9 +3266,12 @@
       "name": "Ayre Offshore Wind",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "In planning",
+      "sourceStatus": "Development / onshore consent secured, offshore application submitted",
       "normalizedStatus": "development",
       "sourceIds": [
+        "src-qair-ayre-official",
+        "src-qair-ayre-onshore-consent-2026",
+        "src-ayre-documents-2025",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -2639,20 +3303,97 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active pre-FID development project. Ayre has ScotWind rights, Qair ownership, onshore consent, and published offshore/onshore application material; offshore consent, revenue support, procurement, and FID are still missing.",
+        "fidStatus": "FID not reached. Qair describes construction as expected around 2030 and commissioning in 2033, but no FID or financial-close evidence is verified.",
+        "sourceIds": [
+          "src-qair-ayre-official",
+          "src-qair-ayre-onshore-consent-2026",
+          "src-ayre-documents-2025"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Qair identifies Ayre as a 1 GW floating wind project awarded under ScotWind and now fully owned by Qair.",
+            "sourceIds": [
+              "src-qair-ayre-official"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Qair announced onshore infrastructure planning consent for Ayre on 17 March 2026.",
+            "sourceIds": [
+              "src-qair-ayre-onshore-consent-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Ayre document library records offshore consent application documents and onshore consent application documents in 2025.",
+            "sourceIds": [
+              "src-ayre-documents-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Qair describes Ayre as in the development phase with environmental and technical studies progressing.",
+            "sourceIds": [
+              "src-qair-ayre-official"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Ayre has moved beyond lease-only status because onshore consent is secured and offshore consent material is lodged, but construction is not yet committed.",
+            "sourceIds": [
+              "src-qair-ayre-onshore-consent-2026",
+              "src-ayre-documents-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The current main gate is offshore consent followed by revenue/FID, not turbine selection or construction.",
+            "sourceIds": [
+              "src-qair-ayre-official",
+              "src-ayre-documents-2025"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Onshore consent is secured and offshore consent application documents are published.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other support award is verified.",
+          "Engineering - ACTIVE: Environmental and technical studies are progressing; final design is not verified.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Offshore consent determination: Would move the permitting gate from active to secured.",
+          "CfD or offtake award: Would create a clearer revenue route before FID.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+        ],
+        "unresolvedUncertainties": [
+          "Offshore consent outcome is UNKNOWN.",
+          "FID and financial close are not reached.",
+          "Revenue support or offtake is UNKNOWN.",
+          "Final turbine count/rating and floating foundation are not verified."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": null,
       "locationDescription": null,
       "capacityMw": 960,
-      "turbineCount": null,
+      "turbineCount": 70,
       "turbineRatingMw": null,
       "waterDepthM": null,
       "distanceOffshore": null,
       "expectedCod": null,
       "actualCod": null,
-      "floatingTechnology": "Damping Pool",
+      "floatingTechnology": "BW Ideol Damping Pool floating foundation",
       "platformType": "barge",
       "developerOwnerText": "Buchan Offshore Wind",
       "id": "buchan-offshore-wind",
@@ -2660,12 +3401,13 @@
       "name": "Buchan Offshore Wind",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "In planning / offshore application submitted",
+      "sourceStatus": "Development / onshore consent secured, offshore determination pending",
       "normalizedStatus": "development",
       "sourceIds": [
-        "src-scotgov-owps-2026",
-        "src-buchan-project",
-        "src-buchan-consent"
+        "src-buchan-home-2026",
+        "src-buchan-consent",
+        "src-buchan-owner-engineer-2026",
+        "src-scotgov-owps-2026"
       ],
       "factClaims": [
         {
@@ -2696,7 +3438,82 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active pre-FID development project. Buchan has seabed rights, onshore consent, an offshore application under consideration, and owner-engineer work toward FEED; offshore consent, CfD/revenue support, FID, and construction contracts remain unverified.",
+        "fidStatus": "FID not reached. Buchan frames current work as progressing toward FEED and FID, not as an achieved investment decision.",
+        "sourceIds": [
+          "src-buchan-home-2026",
+          "src-buchan-consent",
+          "src-buchan-owner-engineer-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Buchan describes the project as up to 70 turbines on BW Ideol Damping Pool floating foundations.",
+            "sourceIds": [
+              "src-buchan-home-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Aberdeenshire Council granted onshore planning consent in May 2026.",
+            "sourceIds": [
+              "src-buchan-consent"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The offshore planning application was submitted to Scottish Ministers in August 2025 and remains under consideration.",
+            "sourceIds": [
+              "src-buchan-consent"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Buchan appointed Kent as Owner's Engineer in 2026 to support the next phase toward FEED.",
+            "sourceIds": [
+              "src-buchan-owner-engineer-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Buchan is materially more advanced than lease-only projects because onshore consent and offshore determination are active, but offshore consent and revenue support remain gating.",
+            "sourceIds": [
+              "src-buchan-consent"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Owner-engineer work supports engineering maturity but does not evidence FID or construction commitment.",
+            "sourceIds": [
+              "src-buchan-owner-engineer-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Onshore consent is secured and offshore consent remains under consideration.",
+          "Revenue - NOT STARTED: The project states a future CfD auction will be needed after consents.",
+          "Engineering - ACTIVE: Owner-engineer work is supporting progress toward FEED.",
+          "Procurement - NOT VERIFIED: Major construction and supply awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Offshore consent determination: Would complete the main current permitting gate.",
+          "CfD auction participation or award: Would establish a revenue route.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+        ],
+        "unresolvedUncertainties": [
+          "Offshore consent outcome is UNKNOWN.",
+          "Revenue support is not secured.",
+          "FID and financial close are not reached.",
+          "Final turbine rating and full supplier chain are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -2711,18 +3528,19 @@
       "actualCod": null,
       "floatingTechnology": "Floating offshore wind farm",
       "platformType": "unknown",
-      "developerOwnerText": "ScottishPower Renewables / Shell",
+      "developerOwnerText": "ScottishPower Renewables",
       "id": "marramwind",
       "slug": "marramwind",
       "name": "MarramWind",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "In planning",
+      "sourceStatus": "Development / offshore planning application submitted",
       "normalizedStatus": "development",
       "sourceIds": [
-        "src-scotgov-owps-2026",
         "src-marramwind-official",
-        "src-shell-scottishpower-scotwind"
+        "src-marramwind-planning-2026",
+        "src-marramwind-companies-house-2025",
+        "src-scotgov-owps-2026"
       ],
       "factClaims": [
         {
@@ -2753,7 +3571,83 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active pre-FID ScotWind floating project led by ScottishPower Renewables. MarramWind has submitted a Section 36 planning application and Shell has exited the project company; consent, revenue support, FID, and procurement remain unverified.",
+        "fidStatus": "FID not reached. Current evidence shows planning application and ownership restructuring, not a completed investment decision.",
+        "sourceIds": [
+          "src-marramwind-official",
+          "src-marramwind-planning-2026",
+          "src-marramwind-companies-house-2025"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "MarramWind is a proposed up to 3 GW floating offshore wind farm about 75 km off northeast Scotland.",
+            "sourceIds": [
+              "src-marramwind-official"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Offshore Wind Scotland reported ScottishPower Renewables submitted the MarramWind Section 36 planning application on 23 January 2026.",
+            "sourceIds": [
+              "src-marramwind-planning-2026"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "Companies House records Shell New Energies Holding Limited ceased as a person with significant control of MarramWind Limited in November 2025.",
+            "sourceIds": [
+              "src-marramwind-companies-house-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The developer page records earlier EIA scoping submitted in January 2023.",
+            "sourceIds": [
+              "src-marramwind-official"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Shell exit plus planning submission changes the story from a Shell/ScottishPower joint ScotWind pair to ScottishPower continuing MarramWind while CampionWind was relinquished.",
+            "sourceIds": [
+              "src-marramwind-planning-2026",
+              "src-marramwind-companies-house-2025"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "Consent application is material progress, but the project remains before consent, revenue support, FID, and construction commitment.",
+            "sourceIds": [
+              "src-marramwind-planning-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Section 36 planning application has been submitted; consent is not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other revenue support is verified.",
+          "Engineering - ACTIVE: Scoping and planning application material indicate development work.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Consent determination: Would move the project beyond the main current permitting gate.",
+          "CfD or offtake award: Would clarify the revenue path after consent.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+        ],
+        "unresolvedUncertainties": [
+          "Consent outcome is UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine count/rating and floating technology are UNKNOWN.",
+          "Long-term implications of Shell exit are not fully evidenced beyond ownership filings and reported lease split."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -2763,20 +3657,22 @@
       "turbineCount": null,
       "turbineRatingMw": null,
       "waterDepthM": null,
-      "distanceOffshore": null,
+      "distanceOffshore": "63 km",
       "expectedCod": null,
       "actualCod": null,
       "floatingTechnology": "ScotWind floating lease/project area",
       "platformType": "unknown",
-      "developerOwnerText": "Vattenfall / Fred. Olsen Seawind",
+      "developerOwnerText": "Fred. Olsen Seawind",
       "id": "muir-mhor",
       "slug": "muir-mhor",
       "name": "Muir Mhor Offshore Wind Farm",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "In planning",
+      "sourceStatus": "Development / onshore consent secured and offshore application submitted",
       "normalizedStatus": "development",
       "sourceIds": [
+        "src-muir-mhor-official-2026",
+        "src-muir-mhor-consent-notice-2026",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -2808,7 +3704,83 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active pre-FID ScotWind floating project. Muir Mhor has onshore consent secured and an offshore consent application submitted, while supply-chain engagement is underway; offshore consent, revenue support, procurement, and FID are still unverified.",
+        "fidStatus": "FID not reached. The project remains in development with no public FID or financial-close evidence.",
+        "sourceIds": [
+          "src-muir-mhor-official-2026",
+          "src-muir-mhor-consent-notice-2026",
+          "src-scotgov-owps-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Muir Mhor is described by the developer as a 1 GW floating offshore wind farm located 63 km off Peterhead.",
+            "sourceIds": [
+              "src-muir-mhor-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The developer says onshore planning consent is secured and advanced supply-chain engagement is underway.",
+            "sourceIds": [
+              "src-muir-mhor-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "A January 2026 public notice states Muir Mhor Offshore Wind Farm Limited applied to Scottish Ministers for Section 36 consent and marine licences.",
+            "sourceIds": [
+              "src-muir-mhor-consent-notice-2026"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "The Scottish Government January 2026 project map lists Muir Mhor as in planning with 1005 MW capacity.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Muir Mhor has moved beyond early lease development because both onshore consent and offshore application evidence are present.",
+            "sourceIds": [
+              "src-muir-mhor-official-2026",
+              "src-muir-mhor-consent-notice-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Supply-chain engagement and early-2030s target power do not verify procurement, revenue, FID, or construction commitment.",
+            "sourceIds": [
+              "src-muir-mhor-official-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Onshore consent is secured and offshore consent application is submitted.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other support award is verified.",
+          "Engineering - ACTIVE: Consent application and supply-chain engagement indicate development maturity.",
+          "Procurement - NOT VERIFIED: No major turbine, floater, cable, mooring, or EPCI awards are verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Offshore consent determination: Would secure the key remaining permitting gate.",
+          "CfD or offtake award: Would define the revenue route.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+        ],
+        "unresolvedUncertainties": [
+          "Offshore consent outcome is UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine count/rating and floating technology are UNKNOWN.",
+          "Confirmed grid-connection date and COD are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -2829,12 +3801,13 @@
       "name": "Ossian",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "In planning",
+      "sourceStatus": "Development / array consent application under determination",
       "normalizedStatus": "development",
       "sourceIds": [
-        "src-scotgov-owps-2026",
-        "src-sse-ossian-floating",
-        "src-ossian-eia"
+        "src-ossian-development-process-2026",
+        "src-ossian-array-2026",
+        "src-ossian-transmission-faq-2026",
+        "src-scotgov-owps-2026"
       ],
       "factClaims": [
         {
@@ -2865,16 +3838,94 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active pre-FID development project with a material transmission redesign. Ossian has submitted its array consent application and additional environmental information, while Lincolnshire transmission DCO work is paused/withdrawn so the project can focus on its Scottish connection; consent, revenue support, FID, and procurement remain unverified.",
+        "fidStatus": "FID not reached. The current evidence shows consent and transmission development activity, not a completed investment decision.",
+        "sourceIds": [
+          "src-ossian-development-process-2026",
+          "src-ossian-array-2026",
+          "src-ossian-transmission-faq-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Ossian submitted the wind farm array consent application to the Scottish Government in June 2024, with additional information submitted in 2025 and early 2026.",
+            "sourceIds": [
+              "src-ossian-development-process-2026",
+              "src-ossian-array-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Ossian identifies SSE Renewables, Copenhagen Infrastructure Partners, and Marubeni as joint-venture partners.",
+            "sourceIds": [
+              "src-ossian-array-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The project has separate generation and transmission infrastructure consent pathways.",
+            "sourceIds": [
+              "src-ossian-development-process-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Ossian says it is pausing Lincolnshire DCO work to focus on the Scottish grid connection after NESO design changes.",
+            "sourceIds": [
+              "src-ossian-transmission-faq-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The transmission redesign is the material turning point: it changes the permitting path but does not cancel the array project.",
+            "sourceIds": [
+              "src-ossian-development-process-2026",
+              "src-ossian-transmission-faq-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Ossian remains a large pre-FID development case with active consenting but unresolved revenue, grid, and execution gates.",
+            "sourceIds": [
+              "src-ossian-array-2026",
+              "src-ossian-transmission-faq-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Array consent is under determination and transmission consenting is being reworked.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other revenue support is verified.",
+          "Engineering - ACTIVE: Surveys, EIA, additional environmental information, and grid redesign work are active.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Array consent determination: Would materially de-risk the generation asset.",
+          "Scottish transmission consent route and grid connection updates: Would clarify the redesigned export path.",
+          "CfD or offtake award: Would define revenue support for the very large project.",
+          "FID or financial close: Would mark construction commitment."
+        ],
+        "unresolvedUncertainties": [
+          "Array consent outcome is UNKNOWN.",
+          "Final transmission configuration and Lincolnshire DCO timing are UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine/floater technology and supplier chain are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": null,
-      "locationDescription": null,
+      "locationDescription": "About 30 km off Mainland Shetland",
       "capacityMw": 2300,
       "turbineCount": null,
       "turbineRatingMw": null,
-      "waterDepthM": null,
+      "waterDepthM": "~100",
       "distanceOffshore": null,
       "expectedCod": null,
       "actualCod": null,
@@ -2886,9 +3937,11 @@
       "name": "Arven",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Lease awarded",
+      "sourceStatus": "Lease option / early development",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
+        "src-arven-project-2026",
+        "src-arven-partnership-2023",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -2920,17 +3973,93 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Lease-option stage floating wind development. Arven has ScotWind lease options across two sites and a staged development plan, but it remains before consent application, revenue support, procurement, FID, and construction.",
+        "fidStatus": "FID not reached. Arven is in early development and its own timeline places engineering/procurement, construction, and operations in later phases.",
+        "sourceIds": [
+          "src-arven-project-2026",
+          "src-arven-partnership-2023",
+          "src-scotgov-owps-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Arven is a 2.3 GW floating wind development about 30 km from Mainland Shetland, spanning 1.8 GW and 500 MW sites.",
+            "sourceIds": [
+              "src-arven-project-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The project timeline records ScotWind lease option award in 2022, baseline surveys in 2023, offshore scoping in 2024, and onshore scoping planned for 2026.",
+            "sourceIds": [
+              "src-arven-project-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Mainstream and Ocean Winds announced in 2023 that the two sites would be developed jointly.",
+            "sourceIds": [
+              "src-arven-partnership-2023"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Scottish Government January 2026 map lists Arven as lease awarded.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Arven remains pre-consent because its own timeline places EIA modelling/reporting after scoping and before late-2020s engineering/procurement.",
+            "sourceIds": [
+              "src-arven-project-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The material project story is consolidation of two adjacent ScotWind lease areas into one large Shetland development pathway.",
+            "sourceIds": [
+              "src-arven-project-2026",
+              "src-arven-partnership-2023"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Offshore scoping is recorded and onshore scoping is planned; consent applications are not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other revenue support is verified.",
+          "Engineering - ACTIVE: Baseline surveys and scoping are underway, while final design is not verified.",
+          "Procurement - NOT STARTED: Major supply and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Consent application submission: Would move Arven from lease/scoping into formal permitting.",
+          "Grid/export-route confirmation: Would clarify a critical Shetland project interface.",
+          "CfD or offtake route: Would establish commercial support.",
+          "FID or major procurement awards: Would show the project moving toward execution."
+        ],
+        "unresolvedUncertainties": [
+          "Consent application timing and outcome are UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine count/rating and floating technology are UNKNOWN.",
+          "Grid connection and COD are not committed."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": null,
       "locationDescription": null,
       "capacityMw": 1800,
-      "turbineCount": null,
+      "turbineCount": 132,
       "turbineRatingMw": null,
-      "waterDepthM": null,
-      "distanceOffshore": null,
+      "waterDepthM": "70-120",
+      "distanceOffshore": "120 km",
       "expectedCod": null,
       "actualCod": null,
       "floatingTechnology": "ScotWind floating lease/project area",
@@ -2941,9 +4070,12 @@
       "name": "Bellrock",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Lease awarded",
-      "normalizedStatus": "lease_or_area_awarded",
+      "sourceStatus": "Development / wind farm area consent application submitted",
+      "normalizedStatus": "development",
       "sourceIds": [
+        "src-bellrock-official-2026",
+        "src-bellrock-consent-2026",
+        "src-bellrock-aker-2026",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -2975,7 +4107,82 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active pre-FID consent-stage project. Bellrock has moved beyond lease-only status with a 2026 wind farm development area consent application and electrical infrastructure studies, but transmission consents, revenue support, procurement, FID, and construction remain unverified.",
+        "fidStatus": "FID not reached. Bellrock describes further consenting, procurement preparation, and investment decision stages as future steps.",
+        "sourceIds": [
+          "src-bellrock-official-2026",
+          "src-bellrock-consent-2026",
+          "src-bellrock-aker-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Bellrock is a proposed 1.8 GW floating project about 120 km east of Stonehaven.",
+            "sourceIds": [
+              "src-bellrock-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Bellrock submitted Section 36 and Marine Licence applications for its Wind Farm Development Area in April 2026.",
+            "sourceIds": [
+              "src-bellrock-consent-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The consent application covers up to 132 floating turbines plus substructures, moorings, anchors, inter-array cables, and supporting offshore infrastructure.",
+            "sourceIds": [
+              "src-bellrock-consent-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Nadara appointed Aker Solutions group companies for electrical infrastructure studies in July 2026.",
+            "sourceIds": [
+              "src-bellrock-aker-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Bellrock is now a consent-stage development case rather than a simple lease-award record.",
+            "sourceIds": [
+              "src-bellrock-consent-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Electrical studies reduce design uncertainty but do not verify procurement, revenue, FID, or construction commitment.",
+            "sourceIds": [
+              "src-bellrock-aker-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Wind Farm Development Area consent application is submitted; transmission consents remain future work.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other revenue support is verified.",
+          "Engineering - ACTIVE: Electrical infrastructure studies and EIA work are underway.",
+          "Procurement - NOT VERIFIED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Wind Farm Development Area consent determination: Would materially de-risk the generation asset.",
+          "Transmission infrastructure consent progress: Would define the export path.",
+          "CfD or offtake award: Would establish the commercial route.",
+          "FID or major supplier awards: Would mark movement toward execution."
+        ],
+        "unresolvedUncertainties": [
+          "Consent outcome is UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine rating and floating foundation supplier are UNKNOWN.",
+          "Transmission infrastructure route and consent timing are not settled."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -2984,8 +4191,8 @@
       "capacityMw": 900,
       "turbineCount": null,
       "turbineRatingMw": null,
-      "waterDepthM": null,
-      "distanceOffshore": null,
+      "waterDepthM": "up to 100",
+      "distanceOffshore": "47 km",
       "expectedCod": null,
       "actualCod": null,
       "floatingTechnology": "ScotWind floating lease/project area",
@@ -2996,9 +4203,10 @@
       "name": "Broadshore",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Lease awarded",
+      "sourceStatus": "Lease awarded / development and surveys active",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
+        "src-broadshore-official-2026",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -3030,16 +4238,91 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Lease-award stage floating wind development. Broadshore has a defined 900 MW Nadara-led concept, published community/supply-chain engagement and survey activity, but no consent application, revenue support, procurement, FID, or construction evidence is verified.",
+        "fidStatus": "FID not reached. Current evidence supports early development and surveys only.",
+        "sourceIds": [
+          "src-broadshore-official-2026",
+          "src-scotgov-owps-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Broadshore is being developed by Nadara as an up to 900 MW floating wind farm 47 km north of Fraserburgh.",
+            "sourceIds": [
+              "src-broadshore-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The developer states the site is in water depths up to 100 m and has an array area of 134 square km.",
+            "sourceIds": [
+              "src-broadshore-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The project page records recent wind/metocean campaign completion and community engagement updates.",
+            "sourceIds": [
+              "src-broadshore-official-2026"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "The Scottish Government January 2026 map lists Broadshore as lease awarded.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Broadshore is active but still pre-consent; survey and engagement activity do not establish a consented or construction-ready project.",
+            "sourceIds": [
+              "src-broadshore-official-2026",
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Its current story is early ScotWind lease maturation alongside adjacent Nadara projects, not procurement or execution.",
+            "sourceIds": [
+              "src-broadshore-official-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Development engagement and surveys are active, but consent application is not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other revenue support is verified.",
+          "Engineering - ACTIVE: Site data campaigns and early design work are referenced.",
+          "Procurement - NOT STARTED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Consent application submission: Would move the project into formal permitting.",
+          "Grid/export-route selection: Would clarify a core development constraint.",
+          "CfD or offtake award: Would define revenue support.",
+          "FID or major supplier awards: Would indicate transition from development to delivery."
+        ],
+        "unresolvedUncertainties": [
+          "Consent application timing is UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine count/rating and floating technology are UNKNOWN.",
+          "Full ownership and delivery contracting details beyond Nadara are not verified."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": null,
-      "locationDescription": null,
+      "locationDescription": "Approximately 27 km northwest of Cape Wrath",
       "capacityMw": 1500,
-      "turbineCount": null,
+      "turbineCount": 110,
       "turbineRatingMw": null,
-      "waterDepthM": null,
+      "waterDepthM": "75-116",
       "distanceOffshore": null,
       "expectedCod": null,
       "actualCod": null,
@@ -3051,9 +4334,10 @@
       "name": "Havbredey",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Lease awarded",
+      "sourceStatus": "Lease awarded / offshore scoping expected",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
+        "src-havbredey-official-2026",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -3085,12 +4369,86 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Lease-award stage ScotWind floating project. Havbredey has a defined 1.5 GW concept owned by Northland Power and ESB, with offshore scoping expected before later consent submissions; it remains before consent, revenue support, procurement, FID, and construction.",
+        "fidStatus": "FID not reached. The developer timeline places consent submissions in 2028/29 and construction in 2032, so investment decision is not current evidence.",
+        "sourceIds": [
+          "src-havbredey-official-2026",
+          "src-scotgov-owps-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Havbredey is a proposed 1.5 GW floating wind farm about 27 km northwest of Cape Wrath.",
+            "sourceIds": [
+              "src-havbredey-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Northland Power owns 75.5% and ESB owns 24.5%, with Northland leading development, construction, and operation.",
+            "sourceIds": [
+              "src-havbredey-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The developer describes up to 110 wind turbines and 75-116 m water depth.",
+            "sourceIds": [
+              "src-havbredey-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The developer indicative timeline lists offshore scoping in 2025, consent submissions in 2028/29, construction in 2032, and full operation in 2036.",
+            "sourceIds": [
+              "src-havbredey-official-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Havbredey remains an early ScotWind lease development because formal consent submission is still a future milestone in the developer timeline.",
+            "sourceIds": [
+              "src-havbredey-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Long-dated schedule claims should be treated as targets, not committed COD or construction evidence.",
+            "sourceIds": [
+              "src-havbredey-official-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Offshore scoping is expected/early, while consent submissions are not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other revenue support is verified.",
+          "Engineering - ACTIVE: Concept capacity, turbine envelope, water depth, and array area are identified.",
+          "Procurement - NOT STARTED: Major supplier and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Offshore scoping opinion or consent application: Would advance the permitting path.",
+          "Grid connection and transmission-route evidence: Would clarify a major delivery interface.",
+          "CfD or offtake award: Would establish revenue support.",
+          "FID or major supplier awards: Would mark transition toward execution."
+        ],
+        "unresolvedUncertainties": [
+          "Consent application timing and outcome are UNKNOWN beyond indicative targets.",
+          "Revenue support and FID are not reached.",
+          "Final turbine rating and floater technology are UNKNOWN.",
+          "Committed COD is UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": null,
-      "locationDescription": null,
+      "locationDescription": "Off east coast of Shetland",
       "capacityMw": 500,
       "turbineCount": null,
       "turbineRatingMw": null,
@@ -3106,9 +4464,10 @@
       "name": "Stoura",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Lease awarded",
+      "sourceStatus": "Lease awarded / early development",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
+        "src-stoura-official-2026",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -3140,30 +4499,100 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Early lease-stage floating wind project. Stoura has ScotWind seabed development rights and an ESB-led 500 MW development concept off east Shetland, but no consent application, revenue support, procurement, FID, or construction evidence is verified.",
+        "fidStatus": "FID not reached. Current evidence supports development after lease award only.",
+        "sourceIds": [
+          "src-stoura-official-2026",
+          "src-scotgov-owps-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Stoura is a large-scale floating wind farm project currently in development off the east coast of Shetland.",
+            "sourceIds": [
+              "src-stoura-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The developer page states seabed development rights were awarded to ESB in 2022 through ScotWind.",
+            "sourceIds": [
+              "src-stoura-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Scottish Government January 2026 map lists Stoura as lease awarded with 500 MW capacity.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Stoura remains lease-stage because the public evidence verifies seabed rights and development only, not consent submission or construction commitment.",
+            "sourceIds": [
+              "src-stoura-official-2026",
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The current project story is Shetland lease maturation within ESB portfolio planning.",
+            "sourceIds": [
+              "src-stoura-official-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "Permitting - NOT STARTED: No consent application or scoping milestone is verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other revenue support is verified.",
+          "Engineering - UNKNOWN: No detailed public design, turbine, or floater evidence is verified beyond floating project status.",
+          "Procurement - NOT STARTED: Major supplier and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Scoping or consent application submission: Would show movement beyond lease-stage development.",
+          "Grid/export-route evidence: Would clarify the Shetland delivery pathway.",
+          "CfD or offtake award: Would establish revenue support.",
+          "FID or major engineering/procurement awards: Would indicate maturation toward delivery."
+        ],
+        "unresolvedUncertainties": [
+          "Consent application timing is UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine count/rating, technology, and supplier chain are UNKNOWN.",
+          "Committed COD is UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": null,
       "locationDescription": null,
-      "capacityMw": 1000,
+      "capacityMw": 1500,
       "turbineCount": null,
       "turbineRatingMw": null,
-      "waterDepthM": null,
-      "distanceOffshore": null,
+      "waterDepthM": "60-100",
+      "distanceOffshore": "50 km",
       "expectedCod": null,
       "actualCod": null,
       "floatingTechnology": "ScotWind floating lease/project area",
       "platformType": "unknown",
-      "developerOwnerText": "Orsted / BlueFloat Energy / Nadara",
+      "developerOwnerText": "Nadara",
       "id": "stromar-offshore-wind",
       "slug": "stromar-offshore-wind",
       "name": "Stromar",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Lease awarded",
+      "sourceStatus": "Lease awarded / scoping and consultation active",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
+        "src-stromar-official-2026",
+        "src-stromar-project-2026",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -3195,17 +4624,95 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active lease-stage/scoping project. Stromar is led by Nadara with survey, scoping, and consultation evidence, and public materials now describe up to 1.5 GW potential; consent application, revenue support, procurement, FID, and construction remain unverified.",
+        "fidStatus": "FID not reached. Current evidence supports early-stage development and scoping, not an investment decision.",
+        "sourceIds": [
+          "src-stromar-official-2026",
+          "src-stromar-project-2026",
+          "src-scotgov-owps-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Stromar is a floating offshore wind development off Caithness, around 50 km from shore, in roughly 60-100 m water depth.",
+            "sourceIds": [
+              "src-stromar-official-2026",
+              "src-stromar-project-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The current project website states Stromar could generate up to 1.5 GW and is led by Nadara.",
+            "sourceIds": [
+              "src-stromar-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The project page says the joint venture partners signed an option agreement with Crown Estate Scotland in April 2022.",
+            "sourceIds": [
+              "src-stromar-project-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Stromar submitted EIA scoping and HRA screening reports in January 2024 and held statutory consultation in late 2024.",
+            "sourceIds": [
+              "src-stromar-project-2026",
+              "src-stromar-official-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Stromar is active but still before consent application because the public record shows scoping, EIA preparation, and consultation rather than a submitted consent application.",
+            "sourceIds": [
+              "src-stromar-project-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The increase from the Scottish Government 1 GW listing to developer up to 1.5 GW potential should be treated as current developer framing, not a consented capacity.",
+            "sourceIds": [
+              "src-stromar-official-2026",
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Scoping reports and consultation are verified; consent application is not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other revenue support is verified.",
+          "Engineering - ACTIVE: Surveys, scoping, and EIA preparation are underway.",
+          "Procurement - NOT VERIFIED: No major turbine, floater, cable, mooring, or EPCI awards are verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Consent application submission: Would move Stromar into formal determination.",
+          "Confirmed project capacity/design envelope: Would resolve the 1 GW versus up to 1.5 GW evidence tension.",
+          "Grid connection and export-route evidence: Would clarify delivery readiness.",
+          "FID or major supplier awards: Would indicate transition toward execution."
+        ],
+        "unresolvedUncertainties": [
+          "Consent application timing and outcome are UNKNOWN.",
+          "FID and revenue support are not reached.",
+          "Final capacity, turbine count, and floating foundation are not verified.",
+          "Role of Orsted/BlueFloat versus Nadara in current ownership requires further primary-source confirmation."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": null,
-      "locationDescription": null,
+      "locationDescription": "35 km offshore from the Western Isles",
       "capacityMw": 495,
-      "turbineCount": null,
-      "turbineRatingMw": null,
-      "waterDepthM": null,
-      "distanceOffshore": null,
+      "turbineCount": 33,
+      "turbineRatingMw": 15,
+      "waterDepthM": "106-125",
+      "distanceOffshore": "35 km",
       "expectedCod": null,
       "actualCod": null,
       "floatingTechnology": "ScotWind floating lease/project area",
@@ -3216,9 +4723,11 @@
       "name": "Talisk",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Lease awarded",
+      "sourceStatus": "Lease awarded / development spending reduced",
       "normalizedStatus": "lease_or_area_awarded",
       "sourceIds": [
+        "src-talisk-official-2026",
+        "src-magnora-talisk-q1-2026",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -3250,7 +4759,83 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Lease-stage development project with spending discipline signal. Talisk retains a 495 MW ScotWind option and ongoing EIA/supply-chain preparation, but Magnora reported reduced remaining 2026 spending; consent, revenue support, procurement, FID, and construction are not verified.",
+        "fidStatus": "FID not reached. Current evidence shows development and cost control, not a construction investment decision.",
+        "sourceIds": [
+          "src-talisk-official-2026",
+          "src-magnora-talisk-q1-2026",
+          "src-scotgov-owps-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Talisk is a 495 MW floating project in Scotland N3, 35 km offshore from the Western Isles.",
+            "sourceIds": [
+              "src-talisk-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The project page lists a base case of 33 x 15 MW turbines in 106-125 m water depth.",
+            "sourceIds": [
+              "src-talisk-official-2026"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "Talisk states site investigations and supply-chain engagement are ongoing, with EIA preparation as the next step.",
+            "sourceIds": [
+              "src-talisk-official-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Magnora reported in Q1 2026 that spending on Talisk was reduced and expected to be less than NOK 5 million for the remaining three quarters of 2026.",
+            "sourceIds": [
+              "src-magnora-talisk-q1-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "The project remains active but weakly advanced: lease, site investigations, and EIA preparation are real, while reduced spending signals a lower near-term development tempo.",
+            "sourceIds": [
+              "src-talisk-official-2026",
+              "src-magnora-talisk-q1-2026"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "Base-case turbine assumptions should not be treated as procurement commitments.",
+            "sourceIds": [
+              "src-talisk-official-2026"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: EIA preparation is identified, but consent application is not verified.",
+          "Revenue - UNKNOWN: No CfD, PPA, or other revenue support is verified.",
+          "Engineering - ACTIVE: Site investigations and base-case design parameters are published.",
+          "Procurement - NOT STARTED: No major supplier or EPCI awards are verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Consent application submission: Would move Talisk beyond lease-stage development.",
+          "Developer spending or ownership update: Would clarify whether reduced spending is temporary discipline or a strategic slowdown.",
+          "Grid and port route confirmation: Would strengthen the delivery case.",
+          "CfD/FID or major supplier awards: Would materially change bankability and execution readiness."
+        ],
+        "unresolvedUncertainties": [
+          "Consent application timing and outcome are UNKNOWN.",
+          "Revenue support and FID are not reached.",
+          "Final turbine rating, floater type, and supplier chain are UNKNOWN.",
+          "Whether reduced 2026 spending changes the project schedule is not fully evidenced."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -3271,10 +4856,11 @@
       "name": "CampionWind",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "Lease relinquished",
+      "sourceStatus": "Lease relinquished / cancelled",
       "normalizedStatus": "cancelled",
       "sourceIds": [
-        "src-scotgov-owps-2026"
+        "src-scotgov-owps-2026",
+        "src-marramwind-planning-2026"
       ],
       "factClaims": [
         {
@@ -3305,20 +4891,86 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Cancelled ScotWind floating project. CampionWind was awarded ScotWind seabed rights, but the lease was subsequently handed back to Crown Estate Scotland while ScottishPower continues MarramWind; the project has no current consent, revenue, FID, procurement, or execution path.",
+        "fidStatus": "FID not reached. The project was relinquished before a verified investment decision.",
+        "sourceIds": [
+          "src-scotgov-owps-2026",
+          "src-marramwind-planning-2026"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "The Scottish Government January 2026 map lists CampionWind under lease relinquished with Shell as developer and 3000 MW capacity.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Offshore Wind Scotland reported that Shell handed back the CampionWind lease to Crown Estate Scotland as ScottishPower continued MarramWind.",
+            "sourceIds": [
+              "src-marramwind-planning-2026"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "text": "The existing dataset records Shell and ScottishPower Renewables as past developer participants.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "CampionWind should not be treated as paused or pre-FID development; relinquishment removes the active seabed-rights pathway.",
+            "sourceIds": [
+              "src-scotgov-owps-2026",
+              "src-marramwind-planning-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Any future floating development in the area would need new evidence and should not be merged into the CampionWind record.",
+            "sourceIds": [
+              "src-scotgov-owps-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "Permitting - NOT STARTED: Lease relinquishment ended the active project pathway before consent.",
+          "Revenue - NOT STARTED: No current revenue route is verified.",
+          "Engineering - NOT STARTED: No active design or EIA work is verified after relinquishment.",
+          "Procurement - NOT STARTED: No active supplier chain is verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Crown Estate Scotland re-award or new leasing action: Would be needed for any successor project assessment.",
+          "Developer statement on project closure or asset transfer: Would strengthen the cancellation provenance.",
+          "MarramWind progression after CampionWind split: Would explain how the former joint portfolio focus changed."
+        ],
+        "unresolvedUncertainties": [
+          "Exact relinquishment effective date is UNKNOWN in the dataset.",
+          "Whether any CampionWind survey or development work transfers to other projects is UNKNOWN.",
+          "No current replacement project is verified."
+        ]
+      }
     },
     {
       "aliases": [],
       "seaArea": null,
       "locationDescription": null,
       "capacityMw": 1350,
-      "turbineCount": null,
+      "turbineCount": 95,
       "turbineRatingMw": null,
-      "waterDepthM": null,
-      "distanceOffshore": null,
+      "waterDepthM": ">90",
+      "distanceOffshore": "190 km",
       "expectedCod": null,
       "actualCod": null,
-      "floatingTechnology": "ScotWind floating lease/project area",
+      "floatingTechnology": "Floating substructures with mooring lines and anchors",
       "platformType": "unknown",
       "developerOwnerText": "Flotation Energy / Vargronn",
       "id": "cenos-offshore-wind",
@@ -3326,9 +4978,12 @@
       "name": "Cenos",
       "country": "United Kingdom",
       "region": "Europe",
-      "sourceStatus": "In planning",
+      "sourceStatus": "Development / offshore consent application submitted",
       "normalizedStatus": "development",
       "sourceIds": [
+        "src-cenos-official-2026",
+        "src-cenos-consent-application-2025",
+        "src-cenos-documents-2025",
         "src-scotgov-owps-2026"
       ],
       "factClaims": [
@@ -3360,7 +5015,84 @@
           "note": null,
           "confidence": "high"
         }
-      ]
+      ],
+      "intelligence": {
+        "currentAssessment": "Active pre-FID INTOG development project. Cenos has a 1.35 GW oil-and-gas electrification and grid-export concept with an offshore consent application submitted in February 2025; consent award, CfD/revenue support, industrial offtake, procurement, FID, and construction remain unverified.",
+        "fidStatus": "FID not reached. The latest source-backed evidence is consent application and development planning, not FID or financial close.",
+        "sourceIds": [
+          "src-cenos-official-2026",
+          "src-cenos-consent-application-2025",
+          "src-cenos-documents-2025"
+        ],
+        "confirmedFacts": [
+          {
+            "text": "Cenos is a joint venture project between Flotation Energy and Vargronn with nominal capacity up to 1,350 MW.",
+            "sourceIds": [
+              "src-cenos-consent-application-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Cenos submitted its offshore consent application to MD-LOT on 26 February 2025.",
+            "sourceIds": [
+              "src-cenos-consent-application-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The project comprises up to 95 floating turbine units and is designed to supply selected oil and gas installations with excess power exported to the UK grid.",
+            "sourceIds": [
+              "src-cenos-official-2026",
+              "src-cenos-consent-application-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The Cenos document library lists Section 36 consent application and EIA materials.",
+            "sourceIds": [
+              "src-cenos-documents-2025"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "editorialInferences": [
+          {
+            "text": "Cenos has moved from scoping into formal consent determination, but it is not yet consented or construction committed.",
+            "sourceIds": [
+              "src-cenos-consent-application-2025",
+              "src-cenos-documents-2025"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "The commercial story depends on both regulated support and oil-and-gas power demand; neither should be assumed from the INTOG concept alone.",
+            "sourceIds": [
+              "src-cenos-official-2026"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "currentGates": [
+          "Permitting - ACTIVE: Offshore consent application and EIA materials are submitted; consent award is not verified.",
+          "Revenue - NOT VERIFIED: CfD award and oil-and-gas offtake are project timeline targets, not verified facts.",
+          "Engineering - ACTIVE: EIA, surveys, turbine envelope, and grid concept are documented.",
+          "Procurement - NOT VERIFIED: Major turbine, floater, cable, mooring, and EPCI awards are not verified.",
+          "Financing / FID - NOT STARTED: No FID or financial-close evidence is present.",
+          "Execution - NOT STARTED: No construction or installation start is verified."
+        ],
+        "watchpoints": [
+          "Consent determination: Would move the main permitting gate from active to secured.",
+          "CfD or confirmed oil-and-gas offtake: Would clarify the revenue model and bankability.",
+          "FID or financial close: Would mark construction commitment.",
+          "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+        ],
+        "unresolvedUncertainties": [
+          "Consent outcome is UNKNOWN.",
+          "FID and financial close are not reached.",
+          "CfD award and selected oil-and-gas offtake counterparties are not verified.",
+          "Final turbine rating, floater supplier, and major contractors are UNKNOWN."
+        ]
+      }
     },
     {
       "aliases": [],
@@ -5854,16 +7586,17 @@
     {
       "roleDetail": "Developer/owner identified by source record",
       "startDate": null,
-      "endDate": null,
-      "status": "active",
-      "sourceStatusText": null,
+      "endDate": "2025-11-04",
+      "status": "past",
+      "sourceStatusText": "Companies House records Shell ceased as PSC in November 2025",
       "id": "marramwind-shell-developer",
       "projectId": "marramwind",
       "industryCompanyId": "shell",
       "companyName": "Shell",
       "role": "developer_owner",
       "sourceIds": [
-        "src-marramwind-official"
+        "src-marramwind-official",
+        "src-marramwind-companies-house-2025"
       ],
       "confidence": "high",
       "factClaims": [
@@ -7212,6 +8945,246 @@
           "path": "role",
           "value": "research_public_body",
           "sourceId": "src-nedo-hibiki-opening",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "salamander-odfjell-owner",
+      "projectId": "salamander-floating-wind",
+      "industryCompanyId": null,
+      "companyName": "Odfjell Oceanwind",
+      "role": "developer_owner",
+      "roleDetail": "Major shareholder after acquiring Orsted share",
+      "startDate": "2025-08-26",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-salamander-odfjell-acquisition-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-salamander-odfjell-acquisition-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "salamander-odfjell-platform",
+      "projectId": "salamander-floating-wind",
+      "industryCompanyId": null,
+      "companyName": "Odfjell Oceanwind",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "Deepsea Star semi-submersible steel foundation",
+      "startDate": "2025-08-26",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-salamander-odfjell-acquisition-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-salamander-odfjell-acquisition-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "buchan-kent-owner-engineer",
+      "projectId": "buchan-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Kent",
+      "role": "engineering_consultancy",
+      "roleDetail": "Owner's Engineer supporting next phase toward FEED",
+      "startDate": "2026-07",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-buchan-owner-engineer-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "engineering_consultancy",
+          "sourceId": "src-buchan-owner-engineer-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "buchan-bw-ideol-platform",
+      "projectId": "buchan-offshore-wind",
+      "industryCompanyId": "bw-ideol",
+      "companyName": "BW Ideol",
+      "role": "floating_platform_technology_provider",
+      "roleDetail": "Damping Pool floating foundation technology partner",
+      "startDate": "2024",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-buchan-home-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "floating_platform_technology_provider",
+          "sourceId": "src-buchan-home-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "muir-mhor-fred-olsen-developer",
+      "projectId": "muir-mhor",
+      "industryCompanyId": null,
+      "companyName": "Fred. Olsen Seawind",
+      "role": "developer_owner",
+      "roleDetail": "Developer identified by current project website",
+      "startDate": "2026",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-muir-mhor-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-muir-mhor-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bellrock-aker-electrical",
+      "projectId": "bellrock-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Aker Solutions",
+      "role": "engineering_consultancy",
+      "roleDetail": "Electrical infrastructure studies through Entr and Unitech Power Systems",
+      "startDate": "2026-07-14",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-bellrock-aker-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "engineering_consultancy",
+          "sourceId": "src-bellrock-aker-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "havbredey-northland-owner",
+      "projectId": "havbredey-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Northland Power",
+      "role": "developer_owner",
+      "roleDetail": "75.5% owner and development/construction/operation lead",
+      "startDate": "2022-04",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-havbredey-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-havbredey-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "havbredey-esb-owner",
+      "projectId": "havbredey-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "ESB",
+      "role": "developer_owner",
+      "roleDetail": "24.5% owner",
+      "startDate": "2022-04",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-havbredey-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-havbredey-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "stromar-nadara-developer-current",
+      "projectId": "stromar-offshore-wind",
+      "industryCompanyId": null,
+      "companyName": "Nadara",
+      "role": "developer_owner",
+      "roleDetail": "Lead developer identified by current project website",
+      "startDate": "2026",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-stromar-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "developer_owner",
+          "sourceId": "src-stromar-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "talisk-dnv-knowledge-partner",
+      "projectId": "talisk-offshore-wind",
+      "industryCompanyId": "dnv",
+      "companyName": "DNV",
+      "role": "certification_assurance",
+      "roleDetail": "Knowledge partner for wind assessment, EIA and technical aspects",
+      "startDate": "2022",
+      "endDate": null,
+      "status": "active",
+      "sourceStatusText": null,
+      "sourceIds": [
+        "src-talisk-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "role",
+          "value": "certification_assurance",
+          "sourceId": "src-talisk-official-2026",
           "note": null,
           "confidence": "high"
         }
@@ -8702,6 +10675,623 @@
           "path": "eventType",
           "value": "commissioning",
           "sourceId": "src-nedo-hibiki-opening",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "goto-offshore-construction-start",
+      "projectId": "goto-offshore-wind-farm",
+      "date": "2022-08",
+      "datePrecision": "month",
+      "eventType": "construction_start",
+      "title": "Offshore construction began after occupancy permit",
+      "description": "Chubu timeline records occupancy permit grant and offshore construction start in August 2022.",
+      "companyNames": [
+        "Goto Floating Wind Farm LLC"
+      ],
+      "sourceIds": [
+        "src-chubu-goto-operation"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "construction_start",
+          "sourceId": "src-chubu-goto-operation",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-pacific-lease-processing-ended",
+      "projectId": "windfloat-pacific",
+      "date": "2018-09",
+      "datePrecision": "month",
+      "eventType": "project_cancellation",
+      "title": "BOEM stopped processing the lease request",
+      "description": "BOEM determined the project no longer retained non-competitive interest status and stopped processing Principle Power lease request.",
+      "companyNames": [
+        "BOEM",
+        "Principle Power"
+      ],
+      "sourceIds": [
+        "src-boem-oregon-windfloat-pacific"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "project_cancellation",
+          "sourceId": "src-boem-oregon-windfloat-pacific",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "culzean-demo-launch-2024",
+      "projectId": "culzean-demo-floating-wind",
+      "date": "2024-08-29",
+      "datePrecision": "day",
+      "eventType": "development_award",
+      "title": "TotalEnergies launched Culzean floating wind pilot",
+      "description": "TotalEnergies launched a 3 MW floating turbine pilot to supply renewable electricity to the Culzean platform.",
+      "companyNames": [
+        "TotalEnergies"
+      ],
+      "sourceIds": [
+        "src-totalenergies-culzean-demo"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "development_award",
+          "sourceId": "src-totalenergies-culzean-demo",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "salamander-odfjell-acquisition-2025",
+      "projectId": "salamander-floating-wind",
+      "date": "2025-08-26",
+      "datePrecision": "day",
+      "eventType": "ownership_change",
+      "title": "Odfjell Oceanwind acquired Orsted share",
+      "description": "Odfjell Oceanwind completed acquisition of Orsted share in Salamander and continued development with Simply Blue Group and Subsea7.",
+      "companyNames": [
+        "Odfjell Oceanwind",
+        "Orsted",
+        "Simply Blue Group",
+        "Subsea7"
+      ],
+      "sourceIds": [
+        "src-salamander-odfjell-acquisition-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "ownership_change",
+          "sourceId": "src-salamander-odfjell-acquisition-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ayre-onshore-consent-2026",
+      "projectId": "ayre-offshore-wind",
+      "date": "2026-03-17",
+      "datePrecision": "day",
+      "eventType": "consent",
+      "title": "Onshore infrastructure consent secured",
+      "description": "Qair announced planning consent for the onshore infrastructure of the Ayre Offshore Wind Farm.",
+      "companyNames": [
+        "Qair"
+      ],
+      "sourceIds": [
+        "src-qair-ayre-onshore-consent-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent",
+          "sourceId": "src-qair-ayre-onshore-consent-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "buchan-offshore-application-2025",
+      "projectId": "buchan-offshore-wind",
+      "date": "2025-08",
+      "datePrecision": "month",
+      "eventType": "consent_application",
+      "title": "Offshore consent application submitted",
+      "description": "Buchan submitted its offshore planning application to Scottish Ministers in August 2025.",
+      "companyNames": [
+        "Buchan Offshore Wind"
+      ],
+      "sourceIds": [
+        "src-buchan-consent"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-buchan-consent",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "buchan-onshore-consent-2026",
+      "projectId": "buchan-offshore-wind",
+      "date": "2026-05",
+      "datePrecision": "month",
+      "eventType": "consent",
+      "title": "Onshore planning consent granted",
+      "description": "Aberdeenshire Council granted planning consent for Buchan onshore infrastructure in May 2026.",
+      "companyNames": [
+        "Buchan Offshore Wind",
+        "Aberdeenshire Council"
+      ],
+      "sourceIds": [
+        "src-buchan-consent"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent",
+          "sourceId": "src-buchan-consent",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "buchan-kent-owner-engineer-2026",
+      "projectId": "buchan-offshore-wind",
+      "date": "2026-07",
+      "datePrecision": "month",
+      "eventType": "feed_contract",
+      "title": "Owner's Engineer appointed",
+      "description": "Buchan appointed Kent as Owner's Engineer to support progress toward FEED.",
+      "companyNames": [
+        "Buchan Offshore Wind",
+        "Kent"
+      ],
+      "sourceIds": [
+        "src-buchan-owner-engineer-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "feed_contract",
+          "sourceId": "src-buchan-owner-engineer-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "marramwind-shell-exit-2025",
+      "projectId": "marramwind",
+      "date": "2025-11-04",
+      "datePrecision": "day",
+      "eventType": "ownership_change",
+      "title": "Shell ceased as MarramWind PSC",
+      "description": "Companies House records Shell New Energies Holding Limited ceased as a person with significant control of MarramWind Limited.",
+      "companyNames": [
+        "Shell",
+        "ScottishPower Renewables"
+      ],
+      "sourceIds": [
+        "src-marramwind-companies-house-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "ownership_change",
+          "sourceId": "src-marramwind-companies-house-2025",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "marramwind-consent-application-2026",
+      "projectId": "marramwind",
+      "date": "2026-01-23",
+      "datePrecision": "day",
+      "eventType": "consent_application",
+      "title": "Section 36 planning application submitted",
+      "description": "Offshore Wind Scotland reported ScottishPower Renewables submitted the MarramWind Section 36 planning application.",
+      "companyNames": [
+        "ScottishPower Renewables"
+      ],
+      "sourceIds": [
+        "src-marramwind-planning-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-marramwind-planning-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "muir-mhor-onshore-consent-2025",
+      "projectId": "muir-mhor",
+      "date": "2025-05",
+      "datePrecision": "month",
+      "eventType": "consent",
+      "title": "Onshore planning consent secured",
+      "description": "The current developer website states Muir Mhor has secured onshore planning consent.",
+      "companyNames": [
+        "Muir Mhor Offshore Wind Farm"
+      ],
+      "sourceIds": [
+        "src-muir-mhor-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent",
+          "sourceId": "src-muir-mhor-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "muir-mhor-offshore-application-2026",
+      "projectId": "muir-mhor",
+      "date": "2026-01-15",
+      "datePrecision": "day",
+      "eventType": "consent_application",
+      "title": "Offshore consent and marine licence application noticed",
+      "description": "A public notice states Muir Mhor applied to Scottish Ministers for Section 36 consent and marine licences.",
+      "companyNames": [
+        "Muir Mhor Offshore Wind Farm"
+      ],
+      "sourceIds": [
+        "src-muir-mhor-consent-notice-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-muir-mhor-consent-notice-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ossian-array-application-2024",
+      "projectId": "ossian",
+      "date": "2024-06",
+      "datePrecision": "month",
+      "eventType": "consent_application",
+      "title": "Array consent application submitted",
+      "description": "Ossian submitted its wind farm array consent application to the Scottish Government in June 2024.",
+      "companyNames": [
+        "Ossian Offshore Wind Farm"
+      ],
+      "sourceIds": [
+        "src-ossian-development-process-2026",
+        "src-ossian-array-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-ossian-development-process-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ossian-transmission-redesign-2026",
+      "projectId": "ossian",
+      "date": "2026-03",
+      "datePrecision": "month",
+      "eventType": "other_verified_event",
+      "title": "Transmission DCO work paused for grid redesign",
+      "description": "Ossian paused Lincolnshire DCO work to focus on its Scottish connection after NESO-led grid design changes.",
+      "companyNames": [
+        "Ossian Offshore Wind Farm",
+        "NESO"
+      ],
+      "sourceIds": [
+        "src-ossian-transmission-faq-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-ossian-transmission-faq-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "arven-sites-joint-development-2023",
+      "projectId": "arven-offshore-wind",
+      "date": "2023-08-07",
+      "datePrecision": "day",
+      "eventType": "ownership_change",
+      "title": "Two Arven sites consolidated for joint development",
+      "description": "Mainstream and Ocean Winds agreed to develop the 1.8 GW and 500 MW Arven sites jointly.",
+      "companyNames": [
+        "Mainstream Renewable Power",
+        "Ocean Winds"
+      ],
+      "sourceIds": [
+        "src-arven-partnership-2023"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "ownership_change",
+          "sourceId": "src-arven-partnership-2023",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bellrock-consent-application-2026",
+      "projectId": "bellrock-offshore-wind",
+      "date": "2026-04-21",
+      "datePrecision": "day",
+      "eventType": "consent_application",
+      "title": "Wind Farm Development Area consent application submitted",
+      "description": "Bellrock submitted Section 36 and Marine Licence applications for the 1.8 GW Wind Farm Development Area.",
+      "companyNames": [
+        "Nadara",
+        "Bellrock Offshore Wind Farm"
+      ],
+      "sourceIds": [
+        "src-bellrock-consent-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-bellrock-consent-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bellrock-electrical-study-2026",
+      "projectId": "bellrock-offshore-wind",
+      "date": "2026-07-14",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "Electrical infrastructure studies awarded",
+      "description": "Nadara appointed Aker Solutions group companies for Bellrock electrical infrastructure studies.",
+      "companyNames": [
+        "Nadara",
+        "Aker Solutions"
+      ],
+      "sourceIds": [
+        "src-bellrock-aker-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-bellrock-aker-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "broadshore-metocean-campaign-2025",
+      "projectId": "broadshore-offshore-wind",
+      "date": "2025-05",
+      "datePrecision": "month",
+      "eventType": "other_verified_event",
+      "title": "Wind and metocean campaign completed",
+      "description": "The project website records completion of wind and metocean measurement campaigns for Broadshore and Bellrock.",
+      "companyNames": [
+        "Nadara"
+      ],
+      "sourceIds": [
+        "src-broadshore-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-broadshore-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "havbredey-scoping-2025",
+      "projectId": "havbredey-offshore-wind",
+      "date": "2025",
+      "datePrecision": "year",
+      "eventType": "other_verified_event",
+      "title": "Offshore scoping expected",
+      "description": "The developer indicative timeline lists request for offshore scoping opinion in 2025.",
+      "companyNames": [
+        "Northland Power",
+        "ESB"
+      ],
+      "sourceIds": [
+        "src-havbredey-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-havbredey-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "stoura-lease-award-2022",
+      "projectId": "stoura-offshore-wind",
+      "date": "2022",
+      "datePrecision": "year",
+      "eventType": "lease_award",
+      "title": "ScotWind seabed development rights awarded",
+      "description": "Stoura seabed development rights were awarded to ESB through ScotWind.",
+      "companyNames": [
+        "ESB",
+        "Crown Estate Scotland"
+      ],
+      "sourceIds": [
+        "src-stoura-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_award",
+          "sourceId": "src-stoura-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "stromar-scoping-2024",
+      "projectId": "stromar-offshore-wind",
+      "date": "2024-01",
+      "datePrecision": "month",
+      "eventType": "other_verified_event",
+      "title": "EIA scoping reports submitted",
+      "description": "Stromar submitted EIA scoping and HRA screening reports for offshore and onshore aspects.",
+      "companyNames": [
+        "Stromar Offshore Wind Farm"
+      ],
+      "sourceIds": [
+        "src-stromar-project-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-stromar-project-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "talisk-metocean-lidar-2024",
+      "projectId": "talisk-offshore-wind",
+      "date": "2024-09",
+      "datePrecision": "month",
+      "eventType": "other_verified_event",
+      "title": "Metocean and LiDAR installed",
+      "description": "Magnora reports a metocean and LiDAR was installed on the Talisk site in September 2024.",
+      "companyNames": [
+        "Magnora Offshore Wind"
+      ],
+      "sourceIds": [
+        "src-talisk-official-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-talisk-official-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "talisk-spending-reduced-2026",
+      "projectId": "talisk-offshore-wind",
+      "date": "2026-04-28",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "Magnora reported reduced Talisk spending",
+      "description": "Magnora reported reduced spending on Talisk for the remaining three quarters of 2026.",
+      "companyNames": [
+        "Magnora ASA"
+      ],
+      "sourceIds": [
+        "src-magnora-talisk-q1-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-magnora-talisk-q1-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "campionwind-lease-relinquishment-2025",
+      "projectId": "campionwind",
+      "date": "2025",
+      "datePrecision": "year",
+      "eventType": "lease_relinquishment",
+      "title": "CampionWind lease handed back",
+      "description": "Offshore Wind Scotland reported Shell handed back the CampionWind lease to Crown Estate Scotland.",
+      "companyNames": [
+        "Shell",
+        "Crown Estate Scotland"
+      ],
+      "sourceIds": [
+        "src-marramwind-planning-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "lease_relinquishment",
+          "sourceId": "src-marramwind-planning-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cenos-consent-application-2025",
+      "projectId": "cenos-offshore-wind",
+      "date": "2025-02-26",
+      "datePrecision": "day",
+      "eventType": "consent_application",
+      "title": "Offshore consent application submitted",
+      "description": "Cenos submitted its offshore consent application to Marine Directorate Licensing Operations Team.",
+      "companyNames": [
+        "Cenos Offshore Windfarm",
+        "Flotation Energy",
+        "Vargronn"
+      ],
+      "sourceIds": [
+        "src-cenos-consent-application-2025"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "consent_application",
+          "sourceId": "src-cenos-consent-application-2025",
           "note": null,
           "confidence": "high"
         }

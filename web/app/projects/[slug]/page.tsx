@@ -87,6 +87,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     );
   }
 
+  if (project.intelligence) {
+    return (
+      <ProjectIntelligenceDetailPage
+        groupedRelationships={groupedRelationships}
+        intelligence={project.intelligence}
+        project={project}
+        technicalFacts={technicalFacts}
+      />
+    );
+  }
+
   return (
     <main>
       <SiteHeader />
@@ -128,47 +139,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </p>
           ) : null}
         </section>
-
-        {project.intelligence ? (
-          <section className="project-intelligence" aria-labelledby="intelligence-heading">
-            <div className="project-section-copy">
-              <p className="eyebrow"><LocalizedCopy en="Current intelligence" zh="当前情报" /></p>
-              <h2 id="intelligence-heading"><LocalizedCopy en="Where the project stands now" zh="项目当前状态" /></h2>
-            </div>
-            <div className="project-intelligence-grid">
-              <article>
-                <h3>Assessment</h3>
-                <p>{project.intelligence.currentAssessment}</p>
-              </article>
-              <article>
-                <h3>FID status</h3>
-                <p>{project.intelligence.fidStatus}</p>
-              </article>
-            </div>
-            <div className="project-intelligence-lists">
-              <IntelligenceStatements
-                heading="Confirmed facts"
-                statements={project.intelligence.confirmedFacts}
-              />
-              <IntelligenceStatements
-                heading="Editorial inference"
-                statements={project.intelligence.editorialInferences}
-              />
-              <IntelligenceList
-                heading="Current gates"
-                items={project.intelligence.currentGates}
-              />
-              <IntelligenceList
-                heading="Watch next"
-                items={project.intelligence.watchpoints}
-              />
-              <IntelligenceList
-                heading="Unresolved uncertainties"
-                items={project.intelligence.unresolvedUncertainties}
-              />
-            </div>
-          </section>
-        ) : null}
 
         <section className="project-technical" aria-labelledby="technical-heading">
           <h2 id="technical-heading"><LocalizedCopy en="Technical configuration" zh="技术配置" /></h2>
@@ -304,6 +274,242 @@ function relationshipNames(
     .map((relationship) => relationship.companyName);
 
   return names.length > 0 ? names.join(" / ") : null;
+}
+
+function ProjectIntelligenceDetailPage({
+  groupedRelationships,
+  intelligence,
+  project,
+  technicalFacts,
+}: {
+  groupedRelationships: [string, ProjectCompanyRelationship[]][];
+  intelligence: NonNullable<ProjectWithRelations["intelligence"]>;
+  project: ProjectWithRelations;
+  technicalFacts: { label: string; value: string | null }[];
+}) {
+  const headlineFacts = buildHeadlineFacts(project, intelligence);
+  const readinessRows = parseReadinessRows(intelligence.currentGates);
+  const progressGates = buildProgressGates(project, readinessRows, intelligence);
+  const storySteps = buildStorySteps(project, intelligence);
+  const watchpoints = intelligence.watchpoints.map(parseWatchpoint);
+
+  return (
+    <main>
+      <SiteHeader />
+
+      <article className="project-intel-detail">
+        <section className="project-intel-hero" aria-labelledby="project-heading">
+          <p className="eyebrow"><LocalizedCopy en="Project intelligence" zh="项目情报" /></p>
+          <div className="project-intel-hero-grid">
+            <div>
+              <h1 id="project-heading">{project.name}</h1>
+              <p className="project-intel-status-line">
+                {formatStatus(project.normalizedStatus)} · {shortFidStatus(intelligence.fidStatus)}
+              </p>
+              <p className="project-intel-standfirst">{intelligence.currentAssessment}</p>
+            </div>
+            <dl className="project-intel-hero-facts" aria-label={`${project.name} key facts`}>
+              {headlineFacts.map((fact) => (
+                <div key={fact.label}>
+                  <dt>{fact.label}</dt>
+                  <dd>{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+
+        <section className="project-intel-section project-intel-progress-section" aria-labelledby="progress-heading">
+          <div className="project-section-copy">
+            <p className="eyebrow">Project progress</p>
+            <h2 id="progress-heading">Lifecycle gates</h2>
+          </div>
+          <ol className="project-intel-progress">
+            {progressGates.map((gate) => (
+              <li key={gate.label} className={`project-intel-state-${stateClass(gate.state)}`}>
+                <p>{gate.label}</p>
+                <strong>{gate.state}</strong>
+                <span>{gate.note}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="project-intel-section project-intel-stands" aria-labelledby="stands-heading">
+          <div className="project-section-copy">
+            <p className="eyebrow">Where the project stands</p>
+            <h2 id="stands-heading">{whereStandsHeading(project, intelligence)}</h2>
+          </div>
+          <div className="project-intel-two-column">
+            <article>
+              <h3>Confirmed</h3>
+              <ul>
+                {intelligence.confirmedFacts.slice(0, 4).map((fact) => (
+                  <li key={fact.text}>{fact.text}</li>
+                ))}
+              </ul>
+            </article>
+            <article>
+              <h3>Assessment</h3>
+              <p>{intelligence.editorialInferences[0]?.text ?? intelligence.currentAssessment}</p>
+              <p className="project-intel-fid-note">{intelligence.fidStatus}</p>
+            </article>
+          </div>
+        </section>
+
+        <section className="project-intel-section" aria-labelledby="story-heading">
+          <div className="project-section-copy">
+            <p className="eyebrow">Why the story changed</p>
+            <h2 id="story-heading">From original thesis to current gate</h2>
+          </div>
+          <ol className="project-intel-story-chain">
+            {storySteps.map((step) => (
+              <li key={step.label}>
+                <span>{step.label}</span>
+                <p>{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="project-intel-section" aria-labelledby="readiness-heading">
+          <div className="project-section-copy">
+            <p className="eyebrow">Readiness</p>
+            <h2 id="readiness-heading">What is secured, active, or still missing</h2>
+          </div>
+          <div className="project-intel-readiness" role="table" aria-label={`${project.name} readiness matrix`}>
+            {readinessRows.map((row) => (
+              <div key={row.area} role="row">
+                <p role="cell">{row.area}</p>
+                <strong className={`project-intel-state-pill project-intel-state-${stateClass(row.state)}`} role="cell">
+                  {row.state}
+                </strong>
+                <span role="cell">{row.evidence}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="project-intel-section" aria-labelledby="watch-heading">
+          <div className="project-section-copy">
+            <p className="eyebrow">What to watch next</p>
+            <h2 id="watch-heading">Signals that would change the assessment</h2>
+          </div>
+          <ol className="project-intel-watchpoints">
+            {watchpoints.map((item) => (
+              <li key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.why}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="project-timeline-section project-intel-section project-intel-secondary" aria-labelledby="timeline-heading">
+          <div className="project-section-copy">
+            <p className="eyebrow">Material timeline</p>
+            <h2 id="timeline-heading">Source-backed milestones</h2>
+          </div>
+          <ol className="project-timeline">
+            {project.timelineEvents.map((event) => (
+              <li key={event.id}>
+                <time dateTime={event.date}>
+                  {formatDate(event.date, event.datePrecision)}
+                </time>
+                <div>
+                  <p className="project-timeline-type">
+                    {formatEventType(event.eventType)}
+                  </p>
+                  <h3>{event.title}</h3>
+                  {event.companyNames.length > 0 ? (
+                    <p className="project-timeline-companies">
+                      {event.companyNames.join(" / ")}
+                    </p>
+                  ) : null}
+                  <p>{event.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="project-technical project-intel-section project-intel-secondary" aria-labelledby="technical-heading">
+          <h2 id="technical-heading">Technical configuration</h2>
+          {technicalFacts.length > 0 ? (
+            <dl className="project-fact-grid">
+              {technicalFacts.map((fact) => (
+                <div key={fact.label}>
+                  <dt>{fact.label}</dt>
+                  <dd>{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          ) : (
+            <p className="project-muted-note">
+              No additional technical configuration facts are verified in the
+              current dataset.
+            </p>
+          )}
+        </section>
+
+        <section className="project-ecosystem project-intel-section project-intel-secondary" aria-labelledby="ecosystem-heading">
+          <div className="project-section-copy">
+            <p className="eyebrow">Companies</p>
+            <h2 id="ecosystem-heading">Project relationships</h2>
+          </div>
+          <div className="project-ecosystem-grid">
+            {groupedRelationships.map(([role, relationships]) => (
+              <section className="project-role-group" key={role}>
+                <h3>{formatRole(role)}</h3>
+                <ul>
+                  {relationships.map((relationship) => (
+                    <li key={relationship.id}>
+                      <p>{relationship.companyName}</p>
+                      {relationship.roleDetail ? (
+                        <span>{relationship.roleDetail}</span>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </section>
+
+        <section className="project-sources project-intel-section project-intel-secondary" aria-labelledby="sources-heading">
+          <div className="project-section-copy">
+            <p className="eyebrow">Sources</p>
+            <h2 id="sources-heading">Provenance</h2>
+          </div>
+          <ol className="project-source-list">
+            {project.sources.map((source) => (
+              <li key={source.sourceId}>
+                <article>
+                  <p className="project-source-tier">Tier {source.sourceTier}</p>
+                  <h3>
+                    <a href={source.url}>{source.title}</a>
+                  </h3>
+                  <p>
+                    {source.publisher} / accessed {source.accessedDate}
+                  </p>
+                  <p>{source.licenseNote}</p>
+                </article>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="project-intel-section project-intel-secondary" aria-labelledby="project-navigation-heading">
+          <h2 id="project-navigation-heading">Project index</h2>
+          <p className="text-link-row">
+            <Link href="/projects">Back to all projects</Link>
+          </p>
+        </section>
+      </article>
+
+      <SiteFooter />
+    </main>
+  );
 }
 
 function GreenVoltProjectDetailPage({
@@ -640,51 +846,167 @@ function GreenVoltProjectDetailPage({
   );
 }
 
-function IntelligenceStatements({
-  heading,
-  statements,
-}: {
-  heading: string;
-  statements: { text: string; confidence: "high" | "medium" | "low" }[];
-}) {
-  return (
-    <section>
-      <h3>{heading}</h3>
-      <ul>
-        {statements.map((statement) => (
-          <li key={statement.text}>
-            <p>{statement.text}</p>
-            <span>Confidence: {statement.confidence}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
-function IntelligenceList({
-  heading,
-  items,
-}: {
-  heading: string;
-  items: string[];
-}) {
-  return (
-    <section>
-      <h3>{heading}</h3>
-      <ul>
-        {items.map((item) => (
-          <li key={item}>
-            <p>{item}</p>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
 function stateClass(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+type ReadinessRow = {
+  area: string;
+  state: string;
+  evidence: string;
+};
+
+function buildHeadlineFacts(
+  project: ProjectWithRelations,
+  intelligence: NonNullable<ProjectWithRelations["intelligence"]>,
+) {
+  const turbines =
+    project.turbineCount === null
+      ? null
+      : project.turbineRatingMw === null
+        ? String(project.turbineCount)
+        : `${project.turbineCount} x ${project.turbineRatingMw} MW`;
+  const cod = project.actualCod ?? project.expectedCod ?? "Unknown";
+
+  return [
+    { label: "Capacity", value: formatCapacity(project.capacityMw) ?? "Unknown" },
+    { label: "Turbines", value: turbines ?? "Unknown" },
+    { label: "Distance", value: project.distanceOffshore ?? "Unknown" },
+    {
+      label: "FID",
+      value: shortFidStatus(intelligence.fidStatus).replace(/^FID /, ""),
+    },
+    { label: "COD", value: cod },
+  ];
+}
+
+function parseReadinessRows(items: string[]): ReadinessRow[] {
+  return items.map((item) => {
+    const match = item.match(/^(.+?)\s+-\s+([A-Z /]+):\s+(.+)$/);
+    if (!match) {
+      return {
+        area: item,
+        state: "UNKNOWN",
+        evidence: "No structured gate evidence is available.",
+      };
+    }
+
+    return {
+      area: match[1],
+      state: match[2],
+      evidence: match[3],
+    };
+  });
+}
+
+function buildProgressGates(
+  project: ProjectWithRelations,
+  readinessRows: ReadinessRow[],
+  intelligence: NonNullable<ProjectWithRelations["intelligence"]>,
+) {
+  const stateFor = (area: string) =>
+    readinessRows.find((row) => row.area === area)?.state ?? "UNKNOWN";
+  const noteFor = (area: string) =>
+    readinessRows.find((row) => row.area === area)?.evidence ?? "Evidence not verified.";
+
+  return [
+    {
+      label: "Development",
+      state: project.normalizedStatus === "concept_early_development" ? "ACTIVE" : "SECURED",
+      note: project.sourceStatus,
+    },
+    { label: "Consent", state: stateFor("Permitting"), note: noteFor("Permitting") },
+    { label: "Revenue", state: stateFor("Revenue"), note: noteFor("Revenue") },
+    { label: "FEED", state: stateFor("Engineering"), note: noteFor("Engineering") },
+    {
+      label: "FID",
+      state: stateFor("Financing / FID"),
+      note: intelligence.fidStatus,
+    },
+    { label: "Procurement", state: stateFor("Procurement"), note: noteFor("Procurement") },
+    { label: "Construction", state: executionState(project), note: noteFor("Execution") },
+    {
+      label: "Operation",
+      state: project.normalizedStatus === "operational" ? "SECURED" : "NOT STARTED",
+      note:
+        project.actualCod === null
+          ? "No actual COD is verified."
+          : `Actual COD: ${project.actualCod}.`,
+    },
+  ];
+}
+
+function buildStorySteps(
+  project: ProjectWithRelations,
+  intelligence: NonNullable<ProjectWithRelations["intelligence"]>,
+) {
+  return [
+    {
+      label: "Original thesis",
+      text: project.sourceStatus,
+    },
+    {
+      label: "Major de-risking",
+      text: intelligence.confirmedFacts[0]?.text ?? "Material source-backed facts are recorded.",
+    },
+    {
+      label: "Turning point",
+      text:
+        intelligence.editorialInferences[0]?.text ??
+        "Current assessment follows from the verified milestones.",
+    },
+    {
+      label: "Current state",
+      text: intelligence.currentAssessment,
+    },
+  ];
+}
+
+function parseWatchpoint(item: string) {
+  const [title, ...rest] = item.split(":");
+  return {
+    title: title.trim(),
+    why: rest.join(":").trim() || "Would materially change the project assessment.",
+  };
+}
+
+function shortFidStatus(value: string): string {
+  if (value.startsWith("FID confirmed")) {
+    return "FID confirmed";
+  }
+  if (value.startsWith("FID not verified")) {
+    return "FID not verified";
+  }
+  if (value.startsWith("FID not reached")) {
+    return "FID not reached";
+  }
+  return "FID UNKNOWN";
+}
+
+function whereStandsHeading(
+  project: ProjectWithRelations,
+  intelligence: NonNullable<ProjectWithRelations["intelligence"]>,
+) {
+  if (project.normalizedStatus === "operational") {
+    return "Operating asset; remaining questions are evidence gaps";
+  }
+  if (intelligence.fidStatus.startsWith("FID not verified")) {
+    return "De-risked, but not committed to construction";
+  }
+  if (intelligence.fidStatus.startsWith("FID not reached")) {
+    return "Early stage; execution is not yet committed";
+  }
+  return "Current evidence defines the next gate";
+}
+
+function executionState(project: ProjectWithRelations): string {
+  if (["operational", "commissioning"].includes(project.normalizedStatus)) {
+    return "SECURED";
+  }
+  if (project.normalizedStatus === "under_construction") {
+    return "ACTIVE";
+  }
+  return "NOT STARTED";
 }
 
 function formatPlatformType(value: string): string | null {

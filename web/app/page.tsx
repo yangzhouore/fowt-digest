@@ -12,18 +12,11 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const engineeringBriefings = getAllEngineeringBriefings();
-  const engineeringBySlug = new Map(
-    engineeringBriefings.map((briefing) => [briefing.slug, briefing]),
-  );
-  const homepageEditions = getAllDigests().flatMap((digest) => {
-    const engineeringBriefing = engineeringBySlug.get(digest.slug);
-    if (!engineeringBriefing) {
-      return [];
-    }
-
-    return [{ digest, engineeringBriefing }];
-  });
+  const digest = getAllDigests()[0];
+  const engineeringBriefing = getAllEngineeringBriefings()[0];
+  const homepageEditions = digest && engineeringBriefing
+    ? [{ digest, engineeringBriefing }]
+    : [];
 
   return (
     <main>

@@ -1,0 +1,948 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-09-21",
+  "weekEnd": "2026-09-27",
+  "generatedAt": "2026-10-05T12:00:00Z",
+  "checkedResultCount": 4,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-09-27-gazelle-18mw-typhoon-testing",
+      "candidateStatus": "candidate",
+      "sourceType": "company_announcement",
+      "publisher": "Gazelle Wind Power",
+      "title": "Gazelle Wind Power develops breakthrough floating platform design for 18MW+ wind turbines in extreme conditions",
+      "sourceUrl": "https://gazellewindpower.com/news/2026/09/gazelle-wind-power-develops-breakthrough-floating-platform-design-for-18mw-wind-turbines-in-extreme-conditions/",
+      "publishedDate": "2026-09-21",
+      "retrievedAt": "2026-10-05T12:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Gazelle Wind Power announced that it developed and tested a floating platform design for 18 MW+ turbines in extreme offshore conditions as part of work with a major utility at a typhoon-prone site. Gazelle says simulations covered survival and power-production cases, with roll and pitch below five degrees, and basin testing was completed to calibrate models.",
+      "licenseNote": "Public company webpage; reuse terms not yet reviewed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-09-27-ny-california-lease-buyout-lawsuits",
+      "candidateStatus": "candidate",
+      "sourceType": "government_announcement",
+      "publisher": "New York Attorney General",
+      "title": "Attorney General James and Governor Hochul Announce Lawsuit Challenging Trump Administration's Illegal Offshore Wind Deals",
+      "sourceUrl": "https://ag.ny.gov/press-release/2026/attorney-general-james-and-governor-hochul-announce-lawsuit-challenging-trump",
+      "publishedDate": "2026-09-22",
+      "retrievedAt": "2026-10-05T12:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "New York Attorney General Letitia James and Governor Kathy Hochul announced lawsuits challenging Trump Administration offshore wind deals with Bluepoint Wind and Invenergy. The announcement says the lawsuits argue the deals misuse taxpayer dollars and undermine states' ability to meet energy demand.",
+      "licenseNote": "Public government webpage; reuse terms not yet reviewed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-09-27-california-invenergy-lawsuit",
+      "candidateStatus": "supporting_provenance",
+      "sourceType": "government_announcement",
+      "publisher": "California Department of Justice",
+      "title": "During Climate Week, Attorney General Bonta Announces Second Lawsuit Challenging Unlawful Trump Administration Offshore Wind Deal",
+      "sourceUrl": "https://www.oag.ca.gov/news/press-releases/during-climate-week-attorney-general-bonta-announces-second-lawsuit-challenging",
+      "publishedDate": "2026-09-22",
+      "retrievedAt": "2026-10-05T12:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "California Attorney General Rob Bonta and the California Energy Commission filed a lawsuit against the Trump Administration and Invenergy over the buyout of Invenergy's California offshore wind lease in the Morro Bay Wind Energy Area. California says the agreement would reallocate more than USD 111 million in federal taxpayer funds to pay Invenergy to abandon the lease.",
+      "licenseNote": "Public government webpage; reuse terms not yet reviewed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-09-27-worldwidewind-mirdc-craft-demo",
+      "candidateStatus": "candidate",
+      "sourceType": "company_announcement",
+      "publisher": "World Wide Wind",
+      "title": "PRESS RELEASE: 18th of September 2026. The Norwegian company World Wide Wind's technology for floating offshore wind will be built and tested for Taiwanese waters in cooperation with MIRDC",
+      "sourceUrl": "https://worldwidewind.no/blogs/news/press-release-18th-of-september-2026-the-norwegian-company-world-wide-wind-s-technology-for-floating-offshore-wind-will-be-built-and-tested-for-taiwanese-waters-in-cooperation-with-mirdc",
+      "publishedDate": "2026-09-21",
+      "retrievedAt": "2026-10-05T12:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "World Wide Wind announced technical cooperation with Taiwan's Metal Industries Research & Development Center for further development and testing of its CRAFT floating offshore wind turbine technology. The source says funding for a 1.2 MW demonstration unit has been secured, and that work will include numerical analysis, model testing, construction, installation, operation and performance validation under Taiwanese offshore conditions.",
+      "licenseNote": "Public company webpage; reuse terms not yet reviewed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-09-27-sumitomo-albatross-fawt-partnership",
+      "candidateStatus": "candidate",
+      "sourceType": "company_announcement",
+      "publisher": "Sumitomo Heavy Industries",
+      "title": "Capital and Operational Partnership with Albatross Technology for Deployment of Floating Offshore Wind Turbines into Society",
+      "sourceUrl": "https://www.shi.co.jp/english/info/2026/6kgpsq00000044eq.html",
+      "publishedDate": "2026-09-24",
+      "retrievedAt": "2026-10-05T12:00:00Z",
+      "collectionMethod": "manual",
+      "sourceText": "Sumitomo Heavy Industries and Albatross Technology agreed a capital and operational partnership to accelerate technical development and social implementation of next-generation floating offshore wind turbine systems. The source says the partnership will combine design, manufacturing and business-development capabilities to complete next-generation Floating Axis Wind Turbines and support domestic supply-chain, production, installation and maintenance capabilities.",
+      "licenseNote": "Public company webpage; reuse terms not yet reviewed."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-09-27-04",
+      "title": "Sumitomo and Albatross partner on floating-axis turbine rollout",
+      "oneLineSummary": "Sumitomo Heavy Industries and Albatross Technology formed a capital and operational partnership to advance Floating Axis Wind Turbine development and deployment.",
+      "category": "technology",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-09-27-sumitomo-albatross-fawt-partnership"
+      ],
+      "sourceUrl": "https://www.shi.co.jp/english/info/2026/6kgpsq00000044eq.html",
+      "explanation": "The partnership targets technical development, social implementation, domestic supply-chain development, mass production and lifecycle capabilities for next-generation FAWT systems.",
+      "whyItMatters": "Industrial partnerships are a key step between prototype floating turbine concepts and manufacturable, maintainable offshore wind systems.",
+      "engineeringTopics": [
+        "Floating turbine",
+        "Manufacturing",
+        "Supply chain"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-09-27-03",
+      "title": "World Wide Wind moves CRAFT toward 1.2 MW Taiwan demo",
+      "oneLineSummary": "World Wide Wind and MIRDC will test the CRAFT floating wind turbine concept for Taiwanese waters, with funding secured for a 1.2 MW demonstration unit.",
+      "category": "technology",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-09-27-worldwidewind-mirdc-craft-demo"
+      ],
+      "sourceUrl": "https://worldwidewind.no/blogs/news/press-release-18th-of-september-2026-the-norwegian-company-world-wide-wind-s-technology-for-floating-offshore-wind-will-be-built-and-tested-for-taiwanese-waters-in-cooperation-with-mirdc",
+      "explanation": "The work combines numerical analysis, scaled model testing, ABS certification scope and a funded 1.2 MW demonstration step for the counter-rotating CRAFT turbine.",
+      "whyItMatters": "Floating wind turbine concepts need basin, simulation and demonstrator evidence before they can move toward utility-scale deployment.",
+      "engineeringTopics": [
+        "Floating turbine",
+        "Model testing",
+        "Technology demonstration"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-09-27-02",
+      "title": "New York and California expand offshore wind buyout lawsuits",
+      "oneLineSummary": "New York and California filed new lawsuits over federal offshore wind lease buyouts, including California's Morro Bay floating lease case.",
+      "category": "policy",
+      "region": "North America",
+      "sourceRecordIds": [
+        "eng-src-2026-09-27-ny-california-lease-buyout-lawsuits",
+        "eng-src-2026-09-27-california-invenergy-lawsuit"
+      ],
+      "sourceUrl": "https://ag.ny.gov/press-release/2026/attorney-general-james-and-governor-hochul-announce-lawsuit-challenging-trump",
+      "explanation": "The primary sources cover the New York-led coalition lawsuits over Bluepoint and Invenergy deals and California's separate lawsuit over Invenergy's Morro Bay lease.",
+      "whyItMatters": "Lease litigation affects whether US offshore wind areas, including California floating wind areas, remain available for port, grid and supply-chain development.",
+      "engineeringTopics": [
+        "Floating wind leasing",
+        "Project pipeline",
+        "Port readiness"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-09-27-01",
+      "title": "Gazelle tests 18 MW-class platform in typhoon conditions",
+      "oneLineSummary": "Gazelle reported simulations and basin-test work for an 18 MW-class floating platform under extreme wind and wave conditions.",
+      "category": "technology",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-09-27-gazelle-18mw-typhoon-testing"
+      ],
+      "sourceUrl": "https://gazellewindpower.com/news/2026/09/gazelle-wind-power-develops-breakthrough-floating-platform-design-for-18mw-wind-turbines-in-extreme-conditions/",
+      "explanation": "The concept uses a central counterweight and articulated mooring frames with near-vertical mooring lines to provide passive restoring force.",
+      "whyItMatters": "Large-turbine floating platforms must prove motion and load performance in extreme regional metocean conditions before project use.",
+      "engineeringTopics": [
+        "Floating platform",
+        "Mooring system",
+        "Extreme conditions"
+      ]
+    }
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "approved_source_candidate_pool",
+    "collectionAudit": {
+      "weekStart": "2026-09-21",
+      "weekEnd": "2026-09-27",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceRegistry": "web/data/engineering-source-registry.json",
+      "sourceUniverse": "Approved Engineering source classes are defined in the machine-readable Engineering source registry.",
+      "sourcesAttempted": 42,
+      "sourcesSuccessfullyCollected": 0,
+      "sourcesFailed": 42,
+      "rawItemsCollected": 0,
+      "itemsAfterDateFiltering": 0,
+      "itemsAfterFowtRelevanceFiltering": 0,
+      "duplicateEventOverlapsRemoved": 0,
+      "candidatePoolSize": 4,
+      "notes": [
+        "The pool is a manual, source-policy collection for a completed weekly window, not an automated scrape or commercial database copy.",
+        "All 42 approved registry sources were rechecked for the exact weekly publication window during the primary-source audit.",
+        "Trade-press discovery was replaced with primary provenance where a government, project, developer, supplier, certification-body, or research-institution source directly supported the same event.",
+        "The second registry-breadth audit added two primary-source floating turbine technology candidates that were missed by the earlier offshoreWIND.biz-heavy discovery pass."
+      ],
+      "attemptedSources": [
+        {
+          "sourceId": "boem-renewable-energy",
+          "publisher": "Bureau of Ocean Energy Management",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "crown-estate-scotland-news",
+          "publisher": "Crown Estate Scotland",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "japan-mlit-press",
+          "publisher": "Japan Ministry of Land, Infrastructure, Transport and Tourism",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "gwerthwchigymru-procurement",
+          "publisher": "GwerthwchiGymru / Associated British Ports",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "cierco-energy-news",
+          "publisher": "Cierco Energy",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "sumitomo-corporation-news",
+          "publisher": "Sumitomo Corporation",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "cnooc-news",
+          "publisher": "CNOOC",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "ge-vernova-news",
+          "publisher": "GE Vernova",
+          "sourceClass": "turbine_oems",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "vestas-news",
+          "publisher": "Vestas",
+          "sourceClass": "turbine_oems",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "mingyang-news",
+          "publisher": "Mingyang Smart Energy",
+          "sourceClass": "turbine_oems",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "principle-power-news",
+          "publisher": "Principle Power",
+          "sourceClass": "floating_platform_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "bw-ideol-news",
+          "publisher": "BW Ideol",
+          "sourceClass": "floating_platform_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "aikido-technologies-news",
+          "publisher": "Aikido Technologies",
+          "sourceClass": "floating_platform_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "encomara-news",
+          "publisher": "Encomara",
+          "sourceClass": "mooring_anchor_suppliers",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "mooreast-news",
+          "publisher": "Mooreast",
+          "sourceClass": "mooring_anchor_suppliers",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "prysmian-news",
+          "publisher": "Prysmian",
+          "sourceClass": "cable_electrical_grid_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "nexans-news",
+          "publisher": "Nexans",
+          "sourceClass": "cable_electrical_grid_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "hitachi-energy-news",
+          "publisher": "Hitachi Energy",
+          "sourceClass": "cable_electrical_grid_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "brestport-news",
+          "publisher": "BrestPort",
+          "sourceClass": "ports_fabrication",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "haventus-news",
+          "publisher": "Haventus",
+          "sourceClass": "ports_fabrication",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "heerema-news",
+          "publisher": "Heerema Marine Contractors",
+          "sourceClass": "installation_vessel_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "boskalis-news",
+          "publisher": "Boskalis",
+          "sourceClass": "installation_vessel_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "dnv-news",
+          "publisher": "DNV",
+          "sourceClass": "certification_standards",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "abs-news",
+          "publisher": "ABS",
+          "sourceClass": "certification_standards",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "asme-omae",
+          "publisher": "ASME OMAE",
+          "sourceClass": "certification_standards",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "cognite-news",
+          "publisher": "Cognite",
+          "sourceClass": "engineering_software_digital",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "rewind-news",
+          "publisher": "ReWind",
+          "sourceClass": "engineering_software_digital",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "carbon-trust-news",
+          "publisher": "Carbon Trust",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "bretagne-ocean-power-news",
+          "publisher": "Bretagne Ocean Power",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "aivp-news",
+          "publisher": "AIVP",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "scio-xinhua",
+          "publisher": "SCIO / Xinhua",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "offshorewind-biz",
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "deepwind",
+          "publisher": "DeepWind",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "energy-global-wind",
+          "publisher": "Energy Global",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "ocean-news-technology",
+          "publisher": "Ocean News & Technology",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "offshore-magazine",
+          "publisher": "Offshore Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "wind-systems-magazine",
+          "publisher": "Wind Systems Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "stanford-events",
+          "publisher": "Stanford University",
+          "sourceClass": "conferences_universities",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "baird-maritime",
+          "publisher": "Baird Maritime",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "eco-magazine",
+          "publisher": "ECO Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "offshore-source",
+          "publisher": "Offshore Source",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        },
+        {
+          "sourceId": "korea-offshore-wind-intelligence",
+          "publisher": "Korea Offshore Wind Intelligence",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "result": "no_in_window_fowt_item_retained",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "note": "Registry source was attempted; no source record met the exact weekly date, FOWT relevance and provenance requirements."
+        }
+      ],
+      "duplicateEventGroups": []
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-09-27-sumitomo-albatross-fawt-partnership",
+        "sourceRecordId": "eng-src-2026-09-27-sumitomo-albatross-fawt-partnership",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-09-27-04",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 53,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 25,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: installation, manufacturing"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 6,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: support, partnership"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 10,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: installation",
+                "technology signal: fabrication"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 4,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: supply chain",
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Sumitomo Heavy Industries",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-09-27-worldwidewind-mirdc-craft-demo",
+        "sourceRecordId": "eng-src-2026-09-27-worldwidewind-mirdc-craft-demo",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-09-27-03",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 38,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: installation"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: installation"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "World Wide Wind",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-09-27-ny-california-lease-buyout-lawsuits",
+        "sourceRecordId": "eng-src-2026-09-27-ny-california-lease-buyout-lawsuits",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-09-27-02",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 22,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 5,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 7,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government",
+                "government source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 10,
+              "maxScore": 10,
+              "evidence": [
+                "government announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "New York Attorney General",
+          "projectGroup": null,
+          "topicGroup": "policy",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-09-27-gazelle-18mw-typhoon-testing",
+        "sourceRecordId": "eng-src-2026-09-27-gazelle-18mw-typhoon-testing",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-09-27-01",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 17,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 2,
+              "maxScore": 30,
+              "evidence": [
+                "engineering signals: platform"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: floating platforms"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Gazelle Wind Power",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
+}

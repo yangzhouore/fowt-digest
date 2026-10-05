@@ -1,3 +1,8 @@
+import briefing20261004Json from "./briefings/2026-10-04.json";
+import briefing20260927Json from "./briefings/2026-09-27.json";
+import briefing20260920Json from "./briefings/2026-09-20.json";
+import briefing20260913Json from "./briefings/2026-09-13.json";
+import briefing20260906Json from "./briefings/2026-09-06.json";
 import briefing20260830Json from "./briefings/2026-08-30.json";
 import briefing20260823Json from "./briefings/2026-08-23.json";
 import briefing20260816Json from "./briefings/2026-08-16.json";
@@ -263,6 +268,11 @@ export type EngineeringBriefing = {
 };
 
 const engineeringBriefingJsonFiles = [
+  briefing20261004Json,
+  briefing20260927Json,
+  briefing20260920Json,
+  briefing20260913Json,
+  briefing20260906Json,
   briefing20260830Json,
   briefing20260823Json,
   briefing20260816Json,

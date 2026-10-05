@@ -17,6 +17,8 @@ Repository: https://github.com/yangzhouore/fowt-digest
 - Static source-backed Engineering Briefing editions committed under
   `web/data/briefings/`.
 - Static source-backed Projects data committed under `web/data/projects/`.
+- Project Intelligence across all 48 projects: current state, FID gates, sourced
+  facts and separate editorial inferences, readiness, and watchpoints.
 - A curated Industry Map under `web/data/industry/`.
 - Fourteen source-backed Digital & AI Signals under `web/data/digital-ai/`,
   presented as evidence for AI × offshore-wind lifecycle and energy pathways.
@@ -68,6 +70,19 @@ The workflow publishes an existing `weekly_digest.json`, runs repository and
 website validation, and prints a summary report. It does not run the pipeline,
 commit, push, deploy, or choose whether a digest should be published.
 
+## Routes and Content Workflows
+
+- `/`: paired Engineering/Research weeks, newest first, with a multi-week timeline.
+- `/engineering`, `/engineering/[slug]`, `/engineering/[slug]/candidates`.
+- `/archive`, `/weekly/[slug]`, `/weekly/[slug]/candidates`, `/papers/[slug]`.
+- `/projects`, `/projects/[slug]`, `/industry`, `/digital-ai`.
+- `/methodology` and `/about`.
+
+Weekly Research and Engineering work uses `skills/fowt-paper/SKILL.md` and
+`skills/fowt-news/SKILL.md`; project audits use
+`skills/fowt-project-intelligence/SKILL.md`. See
+`docs/WEBSITE_PUBLISHING_WORKFLOW.md` for publication and candidate registration.
+
 ## Technology Stack
 
 - Python standard-library pipeline modules with pytest coverage.
@@ -87,10 +102,14 @@ fowt-digest/
   docs/                # Durable references and docs/archive history
   pipeline/            # Deterministic Python pipeline and tests
   tools/               # Repository workflow helpers
+  skills/              # Research, Engineering news, and Project Intelligence skills
   web/                 # Static Next.js website and committed data
 ```
 
 ## Local Development
+
+Install dependencies first: `python -m pip install pytest` and, from `web/`,
+`npm.cmd ci`. CI uses Python 3.14 and Node 24.
 
 Run pipeline tests from the repository root:
 
@@ -140,8 +159,8 @@ second deployment system.
   an explicit translated field exists.
 - New data publication is a manual accepted-change workflow.
 - There is no backend, database, CMS, API, scheduler, semantic search, or
-  automatic source collection.
-- The site does not provide AI-generated summaries, findings, limitations,
+  automatic Engineering/project collection. Research collection runs locally via OpenAlex.
+- The site does not generate AI summaries, findings, limitations,
   scores, or editorial analysis.
 - Paper content is displayed from deterministic pipeline output and is not
   rewritten or repaired by the website.

@@ -105,9 +105,9 @@ Optional `region` values for Homepage presentation:
 - `Asia-Pacific`
 - `North America`
 - `Africa`
-- `Global`
+- `Unspecified`
 
-Use `Global` only for genuinely cross-regional standards, software releases, or corporate technical developments.
+Use `Unspecified` for global or non-specific items without a supported region.
 
 Rules:
 
@@ -139,7 +139,7 @@ Rules:
 
 - `weekStart`, `weekEnd`, and `generatedAt` must be valid ISO dates or datetimes.
 - `weekStart` must be on or before `weekEnd`.
-- `briefingItems` should contain approximately five items, but validation should
+- `briefingItems` should contain up to five highlights, but validation should
   allow fewer when fewer accepted items exist.
 - `sourceRecords` must include every source referenced by `briefingItems`.
 - Briefing JSON is committed under `web/data/briefings/` after validation and
@@ -147,7 +147,7 @@ Rules:
 
 ## Publication-Blocking Validation Rules
 
-The static Engineering validator must block publication when:
+Structural validation or editorial review must block publication when:
 
 - `schemaVersion` is missing or unsupported;
 - required fields are missing, empty, or the wrong type;
@@ -161,6 +161,15 @@ The static Engineering validator must block publication when:
 - Engineering Briefing data references Research Digest paper IDs as source
   records;
 - briefing copy claims cannot be traced to stored source records during review.
+
+Optional `engineeringSelection` contains `candidatePoolType`, `selectionModel`,
+`candidates`, and `collectionAudit`. Candidate records
+preserve scoring components, ranks, selected state, diversity signals/reasons,
+and source references. See `docs/SELECTION_TRANSPARENCY.md`; the executable
+contract is `web/scripts/validate-static-briefings.js`.
+
+Automated validation checks structure and references. Source accessibility,
+reuse rights, and factual support still require editorial review.
 
 ## Boundary for Future AI Assistance
 

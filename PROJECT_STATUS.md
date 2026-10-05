@@ -1,16 +1,15 @@
 # Project Status
 
-Last updated: 2026-08-26
+Last updated: 2026-10-05
 
 ## Current State
 
 - Current stable branch: `main`
 - Active milestone: none
-- Current documentation branch: `docs/repository-sync`
-- Latest merged work: English / Simplified Chinese interface toggle (PR #22)
+- Latest merged work: Research catch-up through 2026-10-04 and restored homepage multi-week timeline (PRs #33-34)
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Immediate next task: await review of the repository documentation sync.
+- Next work: follow the next accepted task; no feature milestone is active.
 
 ## Current Capabilities
 
@@ -30,7 +29,7 @@ The repository contains five independent static content areas:
 The website supports:
 
 - Homepage with a concise weekly briefing across Engineering and Research, plus
-  a static week selector;
+  a multi-week timeline defaulting to the newest paired Engineering/Research week;
 - current and archived Research Digest pages;
 - Paper Detail pages;
 - Research Archive with static client-side search;
@@ -42,6 +41,9 @@ The website supports:
 - Projects index and detail pages for 48 source-backed floating offshore wind
   project records, with region/country/status filtering, technical facts,
   verified ecosystem roles, source-backed timelines and provenance links;
+- Project Intelligence on all 48 project detail pages, including current
+  assessment, explicit FID status, lifecycle progress, project story, qualitative
+  readiness gates, watchpoints, and separate sourced facts/editorial inferences;
 - Digital & AI page centered on how AI affects the offshore-wind lifecycle and
   how offshore wind may power land, coastal, offshore, and flexible compute;
 - reader-facing Methodology and About pages;
@@ -78,10 +80,10 @@ committed `main` through Git integration.
 
 ## Current Data Baseline
 
-- Static Research Digest editions: 33 selected representative editions.
-- Static Research candidate-pool files: 20 retained or reconstructed weekly
+- Static Research Digest editions: 39 editions, latest week ending 2026-10-04.
+- Static Research candidate-pool files: 26 retained or reconstructed weekly
   candidate pools.
-- Static Engineering Briefing editions: 33 selected representative editions.
+- Static Engineering Briefing editions: 39 editions, latest week ending 2026-10-04.
 - Static Engineering source registry: 42 approved source records.
 - Static Industry Map companies: 47 curated organisations.
 - Static Projects records: 48 source-backed floating offshore wind project
@@ -100,19 +102,20 @@ committed `main` through Git integration.
 
 ## Latest Accepted Validation Baseline
 
-Latest local accepted baseline:
+Local validation for this documentation audit (2026-10-05; Python 3.14.5, Node 24.19.0):
 
 ```text
 python -m pytest pipeline/tests -> 210 passed
 npm.cmd run validate:data -> passed
-npm.cmd run test:data -> 77 passed
+npm.cmd run test:data -> 78 passed
 npm.cmd run lint -> passed
-npm.cmd run build -> passed, 355 static pages
+npm.cmd run build -> passed, 409 static pages
 git diff --check -> passed
 ```
 
-The current branch passed this baseline locally. Pushes and pull requests to
-`main` trigger the corresponding GitHub CI checks.
+All checks passed locally. Python tests used the installed Python executable
+and required access to pytest's existing temporary directory. Pushes and pull
+requests to `main` trigger the corresponding GitHub CI checks.
 
 ## Reference Map
 

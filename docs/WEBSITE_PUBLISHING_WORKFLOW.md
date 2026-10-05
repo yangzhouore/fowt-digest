@@ -2,7 +2,7 @@
 
 ## Purpose
 
-M4 is complete and accepted. It connects deterministic pipeline output to the
+The local publisher connects deterministic pipeline output to the
 existing static website data structure. It does not add website features,
 backend services, databases, CMS
 integration, schedulers, APIs, or deployment automation.
@@ -29,19 +29,6 @@ Website Consumption
 
 `weekly_digest.json` is already the website-ready digest contract. Publishing
 does not transform, summarise, re-rank, repair, or reinterpret paper data.
-
-## Previous Manual Steps
-
-Publishing a new static weekly edition previously required:
-
-1. Find the pipeline run directory that contains `weekly_digest.json`.
-2. Inspect the digest's `weekEnd`.
-3. Copy `weekly_digest.json` into `web/data/digests/<weekEnd>.json`.
-4. Add a matching JSON import to `web/data/digest-adapter.ts`.
-5. Add the imported digest variable to `digestJsonFiles`.
-6. Run website data validation and build checks.
-
-The copy and adapter-registration steps were repetitive and easy to miss.
 
 ## Publishing Command
 
@@ -70,8 +57,8 @@ python -m pipeline.website_publisher pipeline\data\runs\<run_id> --overwrite
 
 ## Publication Workflow Command
 
-M5 adds one deterministic entry point that runs the accepted local publication
-workflow from the repository root:
+The workflow helper runs the accepted local publication workflow from the
+repository root:
 
 ```powershell
 python -m tools.publication_workflow pipeline\data\runs\<run_id>
@@ -108,6 +95,30 @@ Digital & AI static-data validators. For Research, it verifies that every
 committed digest JSON file is registered by the static adapter and satisfies the
 digest guardrails.
 
+## Weekly Content and Project Workflows
+
+- Research: use `skills/fowt-paper/SKILL.md`, collect the exact publication
+  window, classify/score/rank with the existing pipeline, and select up to the
+  configured limit (weekly workflow: five). Publish the accepted digest. Retain
+  or reconstruct the candidate pool separately under
+  `web/data/research-candidates/<weekEnd>.json` and register it in
+  `web/data/research-candidate-adapter.ts`; the publisher does not do this.
+- Engineering: use `skills/fowt-news/SKILL.md`, discover registry-bounded weekly
+  candidates before scoring and diversity-aware selection. Commit source
+  records, candidates, diagnostics, and up to five highlights under
+  `web/data/briefings/<weekEnd>.json`; register the edition in
+  `web/data/engineering-briefing-adapter.ts`. There is no Engineering publisher CLI.
+- Project Intelligence: use `skills/fowt-project-intelligence/SKILL.md` for
+  requested project audits/batches in `web/data/projects/projects.json`. Keep
+  factual identity, timelines, and relationships separate from optional sourced
+  assessment/inferences, FID status, readiness gates, and watchpoints.
+- Review provenance and selection consistency, run the full baseline, inspect
+  the diff, and commit/push/open a PR only when authorized. Merge requires an
+  explicit request after acceptance. Vercel Git integration deploys merged main.
+
+Reconstructed pools must be labelled as reconstructions, not original retained
+weekly collections. Never pad sparse weeks or fabricate missing evidence.
+
 ## Boundaries
 
 The publishing tool is deterministic repository tooling. It does not:
@@ -121,6 +132,7 @@ The publishing tool is deterministic repository tooling. It does not:
 - generate editorial text;
 - add reader-facing behavior.
 
-Homepage, Archive, Weekly Digest, and Paper Detail behavior are preserved. The
-newest registered digest remains the homepage digest because the existing
-adapter sorts editions newest first.
+The digest adapter sorts newest first. The homepage includes only weeks with
+both a registered Research digest and Engineering briefing, defaults to the
+newest paired week, and retains the multi-week timeline. Publishing Research
+alone does not guarantee a new homepage week.

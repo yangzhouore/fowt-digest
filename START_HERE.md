@@ -5,16 +5,16 @@ Use this file as the resume entry point for a new Codex session.
 ## Stable State
 
 - Current stable branch: `main`
-- Current documentation branch: `docs/repository-sync`
-- Active milestone: none; current work is documentation continuity
-- Latest merged work: English / Simplified Chinese interface toggle (PR #22)
+- Active milestone: none; next scope requires an accepted task
+- Latest merged work: Research catch-up through 2026-10-04 and restored homepage multi-week timeline (PRs #33-34)
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Immediate next action: await review of the repository documentation sync.
+- Next work: follow the next accepted task; no feature milestone is active.
 
-Stable `main` includes Digital & AI, the Methodology rewrite, and the bilingual
-interface. It is expected to pass the baseline unless `PROJECT_STATUS.md` says
-otherwise.
+Stable `main` includes Digital & AI, Methodology, the bilingual interface,
+Project Intelligence across all 48 projects, and weekly catch-up through
+2026-10-04. It is expected to pass the baseline unless `PROJECT_STATUS.md`
+says otherwise.
 
 ## Normal Reading Path
 
@@ -57,8 +57,8 @@ Open only when relevant:
 
 The Projects MVP is implemented and accepted: `/projects` and
 `/projects/[slug]` render 48 source-backed floating offshore wind project
-records with region/country/status filtering, verified technical facts,
-project-company roles, source-backed timelines, and provenance links. Projects
+records with region/country/status filtering, Project Intelligence, verified
+technical facts, project-company roles, source-backed timelines, and provenance links. Projects
 are intentionally static. No geographic map, automatic project collection,
 automatic updates, or Project-to-Industry deep integration exists yet; those
 belong to a future dedicated milestone.
@@ -71,7 +71,8 @@ score breakdowns and source links. `/engineering` shows all selected highlights
 for each edition with selected/candidate/source counts.
 
 The Homepage now presents the weekly Engineering and Research selections with a
-week selector. Engineering and Research archive pages support static search over
+multi-week timeline selecting the newest week with both Engineering and Research
+data by default. Engineering and Research archive pages support static search over
 committed records. The website is a static presentation layer over committed
 JSON and TypeScript fixtures. It does not run the pipeline, query OpenAlex,
 collect engineering sources, deploy itself, or use AI-generated summaries.
@@ -83,6 +84,15 @@ source-backed Signals as supporting evidence. The interface and fixed editorial
 copy can switch between English and Simplified Chinese; source-backed titles,
 abstracts, project/company facts, publishers, proper nouns, and URLs remain in
 their original language unless an explicit Chinese field exists.
+
+## Repository Skills
+
+- `skills/fowt-paper/SKILL.md`: deterministic weekly Research collection, scoring,
+  selection, and candidate-pool reconstruction/audit.
+- `skills/fowt-news/SKILL.md`: registry-bounded Engineering candidate discovery,
+  scoring, diversity-aware selection, and transparency.
+- `skills/fowt-project-intelligence/SKILL.md`: sourced project-state audits, FID
+  gates, fact/inference separation, readiness, and watchpoints.
 
 ## Standard Workflow
 

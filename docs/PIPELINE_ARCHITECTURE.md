@@ -1,339 +1,87 @@
 # Pipeline Architecture
 
-## 1. Purpose
+## Implemented Scope
 
-This document defines the high-level architecture for the FOWT Research Digest
-paper-processing pipeline. The implemented deterministic pipeline covers source
-collection through scored weekly selection, digest assembly, orchestration, and
-local static-website publishing.
+The local Python pipeline produces deterministic OpenAlex Research Digest data.
+It does not use AI classification, scoring, writing, or review. The website
+consumes committed static JSON; it never executes the pipeline.
 
-The pipeline uses `research_selection_score_v1`; it does not use AI for
-classification, scoring, selection, or published copy. AI-assisted editorial
-writing and AI review remain unimplemented design concepts.
+`pipeline/orchestrator.py::run_weekly_pipeline` sequences the existing stages.
+It is a Python function, not a scheduler or a publication command. Date windows,
+timestamps, and selection limits are explicit inputs. Collection uses OpenAlex
+publication dates; historical reconstructions use current upstream metadata and
+must be labelled accordingly.
 
-## 2. Scope
+## Stages and Contracts
 
-The implemented workflow is:
-
-```text
-Paper sources
-  -> Collection
-  -> Metadata normalisation
-  -> Deduplication
-  -> FOWT relevance classification
-  -> Deterministic scoring, ranking and selection
-  -> Weekly digest assembly
-  -> Pipeline orchestration
-```
-
-The implemented pipeline runs locally, reads and writes structured JSON files,
-and includes a thin orchestrator over accepted stage contracts. The local
-publishing workflow copies an accepted `weekly_digest.json` into
-`web/data/digests/` and refreshes adapter registration. Automatic publication,
-website-driven pipeline execution, and deployment automation do not exist.
-
-## 3. Non-goals
-
-The first pipeline design does not include:
-
-- FastAPI or another web API;
-- a database;
-- browser scraping as the default collection method;
-- autonomous agents;
-- CrewAI, AutoGen, LangGraph, or other orchestration frameworks;
-- direct frontend orchestration of pipeline tasks;
-- automatic publication without human approval;
-- production ingestion guarantees;
-- user accounts, authentication, or admin dashboards.
-
-## 4. High-level workflow
-
-1. Paper sources provide candidate records from OpenAlex first. Crossref, arXiv, and selected conference or publication APIs remain future sources.
-2. Collection retrieves raw metadata and stores source-specific records without trying to interpret them too early.
-3. Metadata normalisation converts raw records into a consistent internal format.
-4. Deduplication groups duplicate records using deterministic exact rules.
-5. FOWT relevance classification applies deterministic rules to label records as `Relevant`, `Possibly Relevant`, or `Not Relevant`.
-6. Scoring, ranking and selection applies `research_selection_score_v1`, stable
-   tie-breakers, and the weekly selection limit without AI or website execution.
-7. Weekly digest assembly copies selected ranked records into a minimal digest data product.
-8. Pipeline orchestration sequences the accepted deterministic stages without changing stage behavior or creating new JSON products.
-9. The local publishing workflow can copy accepted digest output into committed
-   website data; it does not commit, push, deploy, or automate approval.
-
-## 5. Module responsibilities
-
-### Source collectors
-
-Receives: source configuration, date window, search terms, and source API credentials if needed.
-
-Produces: raw source records grouped by source and collection run.
-
-Needs AI: no.
-
-Can run independently: yes, per source.
-
-Failure behaviour: record the failed source, HTTP status or exception, retry transient failures with backoff, and allow the run to continue with successful sources.
-
-### Metadata normaliser
-
-Receives: raw source records from collectors.
-
-Produces: normalised candidate records with consistent fields such as title, authors, source, publication date, DOI or source URL where available, abstract, source name, and paper type.
-
-Needs AI: no for field mapping; possibly later for difficult source-specific cleanup, but not in the first prototype.
-
-Can run independently: yes, once raw records exist.
-
-Failure behaviour: quarantine malformed records with a reason instead of stopping the full run.
-
-### Deduplicator
-
-Receives: normalised candidate records.
-
-Produces: deduplicated paper candidates with source provenance preserved.
-
-Needs AI: no for the first version. Use deterministic matching on DOI, title normalisation, source URL, arXiv ID, and publication metadata.
-
-Can run independently: yes.
-
-Failure behaviour: keep uncertain duplicate groups for human or later review rather than deleting records.
-
-### Relevance classifier
-
-Receives: deduplicated papers with title, abstract, and topic tags.
-
-Produces: relevance decision, confidence, reason, and topic tags.
-
-Needs AI: no for the implemented M3E stage. It uses deterministic keyword rules only; AI-assisted classification remains future work if separately scoped.
-
-Can run independently: yes, after deduplication.
-
-Failure behaviour: validation failures should be explicit; malformed inputs are rejected instead of silently repaired.
-
-### Scorer
-
-Receives: relevant candidates, metadata, abstract or full text availability, topic tags, and classifier output.
-
-Produces: scores and rationale for dimensions such as FOWT relevance, novelty, technical rigour, engineering value, evidence quality, and information completeness.
-
-Needs AI: yes for semantic assessment and rationale. Deterministic code should calculate any mechanical fields.
-
-Can run independently: yes, for each candidate.
-
-Failure behaviour: mark scoring as incomplete and prevent the paper from being selected without manual override.
-
-### Ranker and selector
-
-Receives: classified papers and a selection limit.
-
-Produces: ranked papers plus an aggregate ranking result.
-
-Needs AI: no. The ranker uses the deterministic 100-point
-`research_selection_score_v1`, then relevance, publication date, and paper ID as
-stable ordering inputs.
-
-Can run independently: yes, once classification output exists.
-
-Failure behaviour: reject invalid classified input instead of silently repairing it.
-
-### Weekly digest assembler
-
-Receives: ranked papers with already-selected records.
-
-Produces: weekly digest output plus an aggregate digest result.
-
-Needs AI: no. The implemented M3G stage copies selected ranked records only and does not add summaries, editorial content, Markdown, HTML, or website integration.
-
-Can run independently: yes, once ranking output exists.
-
-Failure behaviour: reject invalid ranked input instead of sorting, re-ranking, re-selecting, or silently repairing it.
-
-### Writer
-
-Receives: selected papers, metadata, abstract, available full-text notes if legally accessible, scoring rationale, and analysis level.
-
-Produces: draft editorial entries with summary, research problem, methodology, key findings, engineering relevance, limitations, and analysis level.
-
-Needs AI: yes.
-
-Can run independently: yes, per selected paper.
-
-Failure behaviour: keep the paper selected but mark its draft as `writing_failed` or `draft_required`.
-
-Important rule: the writer must clearly distinguish abstract-only analysis from full-text analysis. It must not imply full-paper review when only metadata or abstract text was available.
-
-### Reviewer
-
-Receives: draft editorial entries, source metadata, abstracts, available full-text notes, score rationale, and selected paper records.
-
-Produces: review findings, required corrections, approval recommendation, and unresolved concerns.
-
-Needs AI: yes, but as a reviewer/checker rather than a rewriter.
-
-Can run independently: yes, per drafted entry.
-
-Failure behaviour: block publication for the affected entry until review succeeds or a human explicitly overrides it.
-
-Important rule: the reviewer must identify unsupported claims, incorrect numbers, missing limitations, metadata inconsistencies, and mismatches between evidence level and editorial wording. It should not simply rewrite content.
-
-### Publisher/exporter
-
-Receives: human-approved entries and edition metadata.
-
-Produces: publication JSON consumed by the website.
-
-Needs AI: no.
-
-Can run independently: yes, after approval.
-
-Failure behaviour: do not overwrite the last known-good publication output unless the new export validates successfully.
-
-### Orchestrator
-
-Receives: run configuration, date range, source list, output paths, and pipeline stage options.
-
-Produces: a run directory containing stage outputs, logs, review artifacts, approval state, and final publication data.
-
-Needs AI: no. It coordinates deterministic code and calls AI-assisted modules through explicit, code-controlled sequencing.
-
-Can run independently: yes, as the pipeline entry point.
-
-Failure behaviour: stop at defined boundaries, write a clear run status, and support rerunning from the last valid stage where practical.
-
-## 6. Deterministic steps versus AI-assisted steps
-
-Deterministic Python should handle:
-
-- source API requests;
-- response persistence;
-- metadata field mapping;
-- date filtering;
-- duplicate detection using stable identifiers and normalised strings;
-- file writing;
-- run logging;
-- local static-website publication;
-- validation of required fields once schemas are defined.
-
-AI-assisted steps should be limited to cases requiring semantic judgement or writing:
-
-- future AI-assisted FOWT relevance classification if deterministic rules become insufficient;
-- any future semantic scoring rationale outside the deterministic selection
-  score;
-- topic interpretation;
-- editorial summaries;
-- factual and consistency review.
-
-AI outputs should be treated as draft or advisory data until reviewed by deterministic checks and human approval.
-
-## 7. Inputs and outputs of each stage
-
-| Stage | Input | Output |
+| Module | Responsibility | Run outputs |
 | --- | --- | --- |
-| Collection | Date range, source config, query terms | Raw source records |
-| Metadata normalisation | Raw source records | Normalised candidate records |
-| Deduplication | Normalised records | Deduplicated paper records with provenance |
-| Relevance classification | Deduplicated papers | Classified papers and aggregate classification result |
-| Ranking and selection | Classified papers | Ranked papers and aggregate ranking result |
-| Weekly digest assembly | Ranked papers | Weekly digest and aggregate digest result |
-| Scoring | Relevant candidates and evidence text | Score dimensions and rationale |
-| Editorial writing | Selected papers and evidence | Draft editorial entries |
-| Factual review | Draft entries and source evidence | Review findings and required corrections |
-| Human approval | Drafts and review findings | Approved, rejected, or held entries |
-| Publication export | Approved entries and edition metadata | Website-ready JSON publication data |
+| `openalex_query.py`, `openalex_client.py`, `openalex_collector.py` | Build queries, retrieve and retain raw pages and collection diagnostics | `raw_openalex.json`, `run_summary.json` |
+| `normaliser.py` | Map successful raw works, reconstruct available abstracts, retain rejection reasons/provenance | `candidates.json`, `normalised.json` |
+| `deduplicator.py` | Exact deterministic matching and provenance-preserving merging | `deduplicated_papers.json`, `deduplication_result.json` |
+| `relevance_classifier.py` | Keyword-based Relevant / Possibly Relevant / Not Relevant classification | `classified_papers.json`, `classification_result.json` |
+| `ranker.py` | Compute `research_selection_score_v1`, rank and select eligible papers | `ranked_papers.json`, `ranking_result.json` |
+| `weekly_digest.py` | Copy selected ranked records without rewriting or re-selection | `weekly_digest.json`, `weekly_digest_result.json` |
 
-## 8. Failure and retry strategy
+Outputs are flat files under `pipeline/data/runs/<run_id>/`, managed by
+`run_storage.py`. The orchestrator returns stage results without adding new
+writing, review, approval, or publication-state artifacts.
 
-Failures should be explicit and recoverable where possible.
+The 100-point Research score uses relevance (35), technical specificity (25),
+research value (15), venue quality (10), metadata quality (10), and recency (5).
+Ranking uses total score descending, relevance classification, publication date
+descending, then stable paper ID. Selection excludes Not Relevant records and
+respects the configured limit; the weekly skill uses up to five. There is no
+journal-impact-factor input, LLM score, or Research diversity balancing.
 
-- Collection should retry transient API failures but not hide source outages.
-- Normalisation should quarantine malformed records.
-- Deduplication should preserve uncertain matches rather than deleting records.
-- Classification, ranking, and weekly digest assembly should reject invalid input contracts instead of silently repairing them.
-- Scoring failures should mark records as pending or incomplete once scoring exists.
-- Writing failures should not remove selected papers from the run.
-- Review failures should block publication for affected entries.
-- Export should write to a temporary output first, validate required fields, then replace publication data only after success.
+See `PIPELINE_DATA_MODEL.md` for stage shapes and
+`SELECTION_TRANSPARENCY.md` for scoring and reconstruction rules.
 
-Each run should keep enough intermediate files to audit how a paper moved through the pipeline.
+## Failure Handling
 
-## 9. Human approval boundary
+Collection records failed requests/pages and retries transient failures. The
+normaliser reads successful pages and records rejected candidates/metadata with
+raw provenance. Downstream stages reject malformed contracts rather than
+silently repairing them. Local JSON writes use atomic replacement; multi-output
+stages retain rollback handling where implemented. Check collection diagnostics
+and coverage before accepting an edition; a completed run does not establish
+complete global research coverage.
 
-Human approval is the publication boundary. No paper entry should become publication data until a human has reviewed:
+## Publication Boundary
 
-- metadata accuracy;
-- evidence availability;
-- score rationale;
-- editorial summary;
-- limitations;
-- review findings;
-- whether the analysis is abstract-only or full-text based.
+`python -m pipeline.website_publisher pipeline\data\runs\<run_id>` copies an
+existing digest byte-for-byte and refreshes explicit digest registration. A
+different existing edition requires `--overwrite` to replace it.
 
-The pipeline may prepare drafts and recommendations, but it must not publish autonomously.
+`python -m tools.publication_workflow pipeline\data\runs\<run_id>` publishes
+that existing digest and runs the accepted validation baseline, stopping on the
+first failure. Neither command collects new papers, approves content, commits,
+pushes, schedules, or deploys. Approval is a repository review process, not an
+implemented per-record approval state machine.
 
-## 10. Initial local-file architecture
+Research candidate pools and their adapter registration are separate reviewed
+static artifacts. The publisher does not export them. See
+`WEBSITE_PUBLISHING_WORKFLOW.md` for the operational workflow.
 
-The first prototype can use local files instead of a database:
+## Repository Responsibilities
 
-```text
-pipeline/
-  runs/
-    2026-08-09/
-      01_raw/
-      02_normalised/
-      03_deduplicated/
-      04_classified/
-      05_scored/
-      06_selected/
-      07_drafts/
-      08_reviewed/
-      09_approved/
-      10_publication/
-```
+- `pipeline/`: deterministic Research data production and tests.
+- `tools/`: local publication/validation helper.
+- `web/`: static Next.js presentation, committed data, adapters, and validators.
+- `skills/`: operational Research, Engineering news, and Project Intelligence
+  instructions; these do not add website automation.
+- `.github/workflows/ci.yml`: Python tests and website data tests, lint, build,
+  and whitespace validation for PRs/pushes to main; manual dispatch is supported.
 
-The website should not read the pipeline run directory directly or execute the pipeline. The current website uses selected static digest JSON files under `web/data/digests/` as presentation inputs published from deterministic pipeline output.
+Engineering Briefing, Industry, Projects/Project Intelligence, and Digital & AI
+are independent curated website datasets. Engineering has its own deterministic
+selection helper and source registry; it does not reuse Research ranking.
+Project Intelligence separates source-backed facts from editorial inferences,
+FID status, qualitative readiness gates, and watchpoints. Methodology explains
+these distinctions. English/Simplified Chinese interface state and Light/Dark
+theme remain local presentation concerns; source records are not rewritten.
 
-This keeps the frontend independent from collection, scoring, writing, and review logic.
-
-## 11. Possible future evolution
-
-The architecture can evolve safely if complexity justifies it:
-
-- Add formal JSON schemas after the first stable data model is proven.
-- Add persistent storage when local files become hard to query or audit.
-- Add scheduled execution after manual runs are reliable.
-- Add a small approval interface only if file-based review becomes inefficient.
-- Add source-specific rate limiting and caching.
-- Add full-text handling where access rights allow it.
-- Add stronger evaluation of AI outputs against human review decisions.
-
-FastAPI, databases, queues, or orchestration frameworks should remain later decisions, not defaults.
-
-## 12. Open questions
-
-- What date window defines a weekly edition: publication date, indexing date, or discovery date?
-- What exact query strategy should be used for OpenAlex, Crossref, and arXiv?
-- Which conferences and journals should be treated as selected sources?
-- What is the minimum evidence required for scoring: title only, abstract, or full text?
-- How should scoring dimensions be weighted?
-- How should topic diversity be enforced in weekly selection?
-- What is the final publication JSON shape consumed by the website?
-- Where should human approval state be recorded in the first prototype?
-- How should corrections from review feed back into scoring and writing?
-- What standards should be used for logging, run IDs, and audit trails?
-
-## 13. Recommended implementation order
-
-1. Freeze a minimal publication data model for website consumption.
-2. Define a minimal candidate paper record for pipeline internals.
-3. Implement one deterministic collector, preferably OpenAlex first.
-4. Add metadata normalisation for that source.
-5. Add deterministic deduplication using identifiers and normalised titles.
-6. Add a basic relevance classifier with explicit inputs and outputs.
-7. Add scoring only after relevance classification is inspectable.
-8. Add deterministic weekly selection using score and topic diversity.
-9. Add AI-assisted writer output with strict analysis-level labels.
-10. Add reviewer output focused on unsupported claims and metadata consistency.
-11. Add a manual approval artifact.
-12. Add publication export to website-ready JSON.
-
-This order keeps the system useful at each step without introducing premature infrastructure.
+Vercel Git integration deploys committed main. No backend, database, CMS, API
+routes, scheduled collection/publication, semantic search, runtime translation,
+or runtime AI writing is implemented. AI editorial records in the data-model
+document are unimplemented design references requiring separately accepted scope.

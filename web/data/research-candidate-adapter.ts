@@ -1,3 +1,8 @@
+import researchCandidates20261004Json from "./research-candidates/2026-10-04.json";
+import researchCandidates20260927Json from "./research-candidates/2026-09-27.json";
+import researchCandidates20260920Json from "./research-candidates/2026-09-20.json";
+import researchCandidates20260913Json from "./research-candidates/2026-09-13.json";
+import researchCandidates20260906Json from "./research-candidates/2026-09-06.json";
 import researchCandidates20260830Json from "./research-candidates/2026-08-30.json";
 import researchCandidates20260823Json from "./research-candidates/2026-08-23.json";
 import researchCandidates20260809Json from "./research-candidates/2026-08-09.json";
@@ -19,8 +24,6 @@ import researchCandidates20260426Json from "./research-candidates/2026-04-26.jso
 import researchCandidates20260419Json from "./research-candidates/2026-04-19.json";
 import researchCandidates20260412Json from "./research-candidates/2026-04-12.json";
 import researchCandidates20260405Json from "./research-candidates/2026-04-05.json";
-
-
 
 type PipelineResearchCandidatePool = {
   schemaVersion: string;
@@ -126,6 +129,11 @@ export type ResearchCandidate = {
 };
 
 const researchCandidateJsonFiles = [
+  researchCandidates20261004Json,
+  researchCandidates20260927Json,
+  researchCandidates20260920Json,
+  researchCandidates20260913Json,
+  researchCandidates20260906Json,
   researchCandidates20260830Json,
   researchCandidates20260823Json,
   researchCandidates20260809Json,

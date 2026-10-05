@@ -1,3 +1,8 @@
+import digest20261004Json from "./digests/2026-10-04.json";
+import digest20260927Json from "./digests/2026-09-27.json";
+import digest20260920Json from "./digests/2026-09-20.json";
+import digest20260913Json from "./digests/2026-09-13.json";
+import digest20260906Json from "./digests/2026-09-06.json";
 import digest20260830Json from "./digests/2026-08-30.json";
 import digest20260823Json from "./digests/2026-08-23.json";
 import digest20260816Json from "./digests/2026-08-16.json";
@@ -32,7 +37,6 @@ import digest20250420Json from "./digests/2025-04-20.json";
 import digest20250316Json from "./digests/2025-03-16.json";
 import digest20250216Json from "./digests/2025-02-16.json";
 import digest20250119Json from "./digests/2025-01-19.json";
-
 
 type PipelineDigest = {
   schemaVersion: string;
@@ -131,6 +135,11 @@ export type DigestPaperResult = {
 };
 
 const digestJsonFiles = [
+  digest20261004Json,
+  digest20260927Json,
+  digest20260920Json,
+  digest20260913Json,
+  digest20260906Json,
   digest20260830Json,
   digest20260823Json,
   digest20260816Json,

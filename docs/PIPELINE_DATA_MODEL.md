@@ -20,7 +20,7 @@ explicit deterministic pipeline modules.
 - Do not require a database, CMS, repository layer, or validation framework for the first prototype.
 - Prefer additive version fields over a generic versioning system.
 
-## Shared Field Conventions
+## Design-only Shared Field Conventions
 
 | Field | Type | Required | Source | Generation | Purpose |
 | --- | --- | --- | --- | --- | --- |
@@ -28,6 +28,9 @@ explicit deterministic pipeline modules.
 | `createdAt` | ISO datetime string | Yes | Orchestrator | Deterministic | Records when the object was first created. |
 | `updatedAt` | ISO datetime string | Yes | Orchestrator | Deterministic | Records when the object was last changed. |
 | `processingStatus` | string | Yes where applicable | Owning module | Deterministic or human-edited | Tracks current workflow state. |
+
+These shared conventions describe later design records, not mandatory fields
+on every implemented stage output. Use each stage contract below.
 
 Use ISO 8601 timestamps. Use `null` for known missing optional values. Avoid inventing source metadata.
 
@@ -215,7 +218,7 @@ A `PaperCandidate` is the collected OpenAlex work reference before metadata norm
 | `discoveryDate` | ISO datetime string | Yes | Run summary or normaliser clock | Deterministic | Use collection run `startedAt` when available. |
 | `processingStatus` | string | Yes | Normaliser | Deterministic | Always `collected` when written by M3C. |
 
-If OpenAlex ID, source URL, and title plus published date are all missing, no deterministic `candidateId` can be created. Reject the candidate and record the reason in the normalisation result when that reporting exists.
+If OpenAlex ID, source URL, and title plus published date are all missing, no deterministic `candidateId` can be created. Reject the candidate and record the reason in `candidates.json.rejectedCandidates`.
 
 ## 3. PaperMetadata
 
@@ -347,9 +350,10 @@ M3F reads `classified_papers.json` and writes two local JSON outputs:
 - `ranked_papers.json`
 - `ranking_result.json`
 
-The first M3F implementation is deterministic and uses only existing classified
-paper metadata. Do not use citation counts, scores, weights, AI, embeddings,
-semantic search, diversity balancing, digest generation, or website data in M3F.
+The current ranker computes `research_selection_score_v1` from classified
+metadata before ranking. It uses deterministic component weights, not citation
+counts, journal impact factors, AI, embeddings, semantic search, or diversity
+balancing. See `docs/SELECTION_TRANSPARENCY.md` for weights and evidence rules.
 
 ### M3F output file shape
 
@@ -368,6 +372,10 @@ Each `rankedRecords[]` item directly extends one classified paper record. Do
 not wrap the classified record inside a nested `paper` object. Every input paper
 must receive one unique continuous global `rank` starting at 1.
 
+`ranked_papers.json` also carries `scoreModel`; `ranking_result.json` carries
+`scoreModelId`. Each ranked record adds `selectionScore` with `modelId`, `total`,
+`maxScore`, and `components` (`componentId`, `label`, `score`, `maxScore`, `evidence`).
+
 Each ranked record must add:
 
 | Field | Type | Required | Source | Generation | Purpose |
@@ -378,9 +386,10 @@ Each ranked record must add:
 
 Rank records using exactly this sort order:
 
-1. `relevanceAssessment.classification` priority: `Relevant`, then `Possibly Relevant`, then `Not Relevant`.
-2. `publishedDate` descending.
-3. `paperId` ascending.
+1. `selectionScore.total` descending.
+2. `relevanceAssessment.classification` priority: `Relevant`, then `Possibly Relevant`, then `Not Relevant`.
+3. `publishedDate` descending.
+4. `paperId` ascending.
 
 Selection is separate from ranking. Select only `Relevant` and
 `Possibly Relevant` records, respect `selectionLimit`, and never select
@@ -466,6 +475,12 @@ rank values.
 
 In M3G, `selectedCount` and `digestPaperCount` must always be equal. Do not
 duplicate paper records or per-paper digest records in `weekly_digest_result.json`.
+
+## Design-only Records
+
+Sections 7-11, later workflow states, and their fictional examples are
+unimplemented editorial/approval designs. `PaperScore` is not the implemented
+`selectionScore`; do not use these designs as current publication contracts.
 
 ## 7. PaperScore
 

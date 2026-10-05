@@ -27,6 +27,10 @@ Keep boundaries explicit:
 - `web/` owns static website presentation and committed JSON consumption.
 - Engineering Briefing data is independent static source-backed website data.
 - Industry, Projects, and Digital & AI are independent curated static datasets.
+- Project Intelligence is optional curated data within Projects: keep factual
+  records separate from sourced editorial inferences, FID status, qualitative
+  readiness gates, and watchpoints.
+- Methodology explains the source and selection boundaries; it is presentation copy.
 - Language switching is a local presentation concern; it must not rewrite
   source-backed records or introduce runtime translation services.
 - The website must not run collection, scoring, summarisation, scheduling, or

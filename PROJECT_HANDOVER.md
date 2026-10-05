@@ -11,6 +11,7 @@ pipeline/  deterministic Research Digest pipeline and tests
 web/       static Next.js website, adapters, validation scripts, committed data
 docs/      durable reference docs plus archived historical notes
 tools/     repository workflow helpers
+skills/    fowt-paper, fowt-news, and fowt-project-intelligence workflows
 .github/   GitHub Actions validation workflow
 ```
 
@@ -35,11 +36,13 @@ Website:
 - `web/app/page.tsx`
 - `web/app/site-header.tsx`
 - `web/app/weekly/[slug]/page.tsx`
+- `web/app/weekly/[slug]/candidates/page.tsx`
 - `web/app/papers/[slug]/page.tsx`
 - `web/app/archive/page.tsx`
 - `web/app/archive/archive-search.tsx`
 - `web/app/engineering/page.tsx`
 - `web/app/engineering/[slug]/page.tsx`
+- `web/app/engineering/[slug]/candidates/page.tsx`
 - `web/app/industry/page.tsx`
 - `web/app/projects/page.tsx`
 - `web/app/projects/[slug]/page.tsx`
@@ -53,8 +56,11 @@ Static website data:
 
 - `web/data/digests/*.json`
 - `web/data/digest-adapter.ts`
+- `web/data/research-candidates/*.json`
+- `web/data/research-candidate-adapter.ts`
 - `web/data/briefings/*.json`
 - `web/data/engineering-briefing-adapter.ts`
+- `web/data/engineering-source-registry.json`
 - `web/data/industry/industry-map.ts`
 - `web/data/projects/projects.json`
 - `web/data/project-adapter.ts`
@@ -76,6 +82,12 @@ Repository workflow:
 
 - `tools/publication_workflow.py`
 - `.github/workflows/ci.yml`
+
+Project records may include optional `intelligence` (populated on all current
+records): current assessment, FID status, sourced confirmed facts and separate
+editorial inferences, qualitative gates, watchpoints, and uncertainties. The
+project detail route renders intelligence pages, with a dedicated Green Volt
+layout and a factual fallback for records without intelligence.
 
 ## Durable Reference Docs
 

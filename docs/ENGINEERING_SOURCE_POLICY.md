@@ -107,7 +107,9 @@ research paper content from the Research Digest.
 
 ## Publication-Blocking Policy Rules
 
-The static Engineering validator must block publication when:
+Publication review must block the following conditions. The static validator
+enforces structural provenance and references; source accessibility, licensing,
+relevance, and claim support require editorial review:
 
 - any source record lacks required provenance;
 - any source URL is empty or invalid;

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { formatPublicationDate } from "../../../format-publication-date";
 import { notFound } from "next/navigation";
 import { SiteHeader } from "../../../site-header";
 import { SiteFooter } from "../../../site-footer";
@@ -181,13 +182,4 @@ export default async function ResearchCandidatesPage({
       <SiteFooter />
     </main>
   );
-}
-
-function formatPublicationDate(value: string): string {
-  return new Intl.DateTimeFormat("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(`${value}T00:00:00Z`));
 }

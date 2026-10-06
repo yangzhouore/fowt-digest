@@ -314,9 +314,9 @@ const engineeringBriefings = engineeringBriefingJsonFiles
   .map(adaptEngineeringBriefing)
   .sort((a, b) => b.slug.localeCompare(a.slug));
 
-export const currentEngineeringBriefing: EngineeringBriefing = firstBriefing(
-  engineeringBriefings,
-);
+if (!engineeringBriefings[0]) {
+  throw new Error("at least one engineering briefing JSON file is required");
+}
 
 export function getAllEngineeringBriefings(): EngineeringBriefing[] {
   return engineeringBriefings;
@@ -326,14 +326,6 @@ export function getEngineeringBriefingBySlug(
   slug: string,
 ): EngineeringBriefing | undefined {
   return engineeringBriefings.find((briefing) => briefing.slug === slug);
-}
-
-function firstBriefing(values: EngineeringBriefing[]): EngineeringBriefing {
-  const briefing = values[0];
-  if (!briefing) {
-    throw new Error("at least one engineering briefing JSON file is required");
-  }
-  return briefing;
 }
 
 function adaptEngineeringBriefing(

@@ -92,16 +92,6 @@ export const digitalAiMaturityLabels: Record<DigitalAiMaturity, string> = {
   unknown: "Unknown",
 };
 
-export const digitalAiSourceClassLabels: Record<DigitalAiSourceClass, string> = {
-  government_regulator: "Government / Regulator",
-  public_research_lab: "Public Research Lab",
-  eu_programme: "EU Programme",
-  research_technical_body: "Research / Technical Body",
-  industry_project: "Industry Project",
-  space_agency: "Space Agency",
-  international_agency: "International Agency",
-};
-
 export function getAllDigitalAiSignals(): DigitalAiSignalWithSources[] {
   return [...signalDataset.signals]
     .sort((a, b) => b.sortDate.localeCompare(a.sortDate) || a.title.localeCompare(b.title))
@@ -110,10 +100,6 @@ export function getAllDigitalAiSignals(): DigitalAiSignalWithSources[] {
 
 export function getDigitalAiSignalCount(): number {
   return signalDataset.signals.length;
-}
-
-export function getDigitalAiDatasetDate(): string {
-  return signalDataset.generatedDate;
 }
 
 export function getDigitalAiOptions() {
@@ -132,10 +118,6 @@ export function formatDigitalAiTopic(topic: DigitalAiTopic): string {
 
 export function formatDigitalAiMaturity(maturity: DigitalAiMaturity): string {
   return digitalAiMaturityLabels[maturity];
-}
-
-export function formatDigitalAiSourceClass(sourceClass: DigitalAiSourceClass): string {
-  return digitalAiSourceClassLabels[sourceClass];
 }
 
 function withSources(signal: DigitalAiSignal): DigitalAiSignalWithSources {

@@ -22,7 +22,7 @@ const PROJECT_STATUSES = new Set([
   "decommissioned",
 ]);
 
-test("project index loads accepted M10C project count", () => {
+test("project dataset retains the accepted 48-project baseline", () => {
   assert.equal(projectDataset.projects.length, 48);
 });
 

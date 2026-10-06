@@ -6,7 +6,7 @@ Last updated: 2026-10-05
 
 - Current stable branch: `main`
 - Active milestone: none
-- Latest merged work: Research catch-up through 2026-10-04 and restored homepage multi-week timeline (PRs #33-34)
+- Latest merged work: repository documentation sync (PR #35); Engineering and Research are published through 2026-10-04
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Next work: follow the next accepted task; no feature milestone is active.

@@ -181,7 +181,9 @@ const digests = digestJsonFiles
   .map(adaptDigest)
   .sort((a, b) => b.slug.localeCompare(a.slug));
 
-export const currentDigest: DigestEdition = firstDigest(digests);
+if (!digests[0]) {
+  throw new Error("at least one weekly digest JSON file is required");
+}
 
 export function getAllDigests(): DigestEdition[] {
   return digests;
@@ -193,20 +195,8 @@ export function getAllDigestPaperResults(): DigestPaperResult[] {
   );
 }
 
-function firstDigest(values: DigestEdition[]): DigestEdition {
-  const digest = values[0];
-  if (!digest) {
-    throw new Error("at least one weekly digest JSON file is required");
-  }
-  return digest;
-}
-
 export function getDigestBySlug(slug: string): DigestEdition | undefined {
   return digests.find((digest) => digest.slug === slug);
-}
-
-export function getDigestPaperBySlug(slug: string): DigestPaper | undefined {
-  return getDigestPaperWithEditionBySlug(slug)?.paper;
 }
 
 export function getDigestPaperWithEditionBySlug(

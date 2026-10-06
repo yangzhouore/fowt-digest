@@ -33,13 +33,16 @@ const engineeringBriefingDir = path.join(__dirname, "..", "data", "briefings");
 const engineeringSourceRegistry = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "data", "engineering-source-registry.json"), "utf8"),
 );
-const engineeringBriefing = JSON.parse(
-  fs.readFileSync(path.join(engineeringBriefingDir, "2026-08-30.json"), "utf8"),
-);
-const engineeringBackfillBriefings = fs.readdirSync(engineeringBriefingDir)
-  .filter((fileName) => fileName >= "2026-04-05.json" && fileName <= "2026-08-30.json")
+const engineeringBriefings = fs.readdirSync(engineeringBriefingDir)
+  .filter((fileName) => fileName.endsWith(".json"))
   .sort()
   .map((fileName) => JSON.parse(fs.readFileSync(path.join(engineeringBriefingDir, fileName), "utf8")));
+const august30Briefing = engineeringBriefings.find((briefing) => briefing.weekEnd === "2026-08-30");
+const latestEngineeringBriefing = engineeringBriefings.at(-1);
+const scoredEngineeringBriefings = engineeringBriefings.filter((briefing) => briefing.engineeringSelection);
+const engineeringBackfillBriefings = engineeringBriefings.filter(
+  (briefing) => briefing.weekEnd >= "2026-04-05" && briefing.weekEnd <= "2026-08-30",
+);
 
 const expectedScoreComponents = new Set([
   "fowt_relevance",
@@ -123,7 +126,7 @@ test("research candidate pools distinguish retained and reconstructed history", 
   }
 });
 
-test("research candidate counts match retained ranked candidates and digest counts", () => {
+test("research candidate counts match stored pools and weekly digests", () => {
   for (const pool of researchPools) {
     const digest = researchDigests.get(pool.weekEnd);
     assert.ok(digest, `missing digest ${pool.weekEnd}`);
@@ -228,18 +231,18 @@ test("research candidates keep compact source provenance", () => {
   }
 });
 
-test("engineering latest candidate transparency stores an audited multi-source candidate pool", () => {
-  const selection = engineeringBriefing.engineeringSelection;
+test("engineering 2026-08-30 regression fixture stores an audited multi-source candidate pool", () => {
+  const selection = august30Briefing.engineeringSelection;
   const sourceIds = new Set(
-    engineeringBriefing.sourceRecords.map((source) => source.sourceRecordId),
+    august30Briefing.sourceRecords.map((source) => source.sourceRecordId),
   );
-  const itemIds = new Set(engineeringBriefing.briefingItems.map((item) => item.briefingItemId));
+  const itemIds = new Set(august30Briefing.briefingItems.map((item) => item.briefingItemId));
 
   assert.ok(selection);
   assert.equal(selection.candidatePoolType, "approved_source_candidate_pool");
   assert.equal(selection.selectionModel.id, SCORE_MODEL_ID);
-  assert.equal(engineeringBriefing.sourceRecords.length, 3);
-  assert.equal(engineeringBriefing.checkedResultCount, 2);
+  assert.equal(august30Briefing.sourceRecords.length, 3);
+  assert.equal(august30Briefing.checkedResultCount, 2);
   assert.equal(selection.collectionAudit.candidatePoolSize, 2);
   assert.equal(selection.collectionAudit.sourcesAttempted, 42);
   assert.equal(selection.collectionAudit.sourcesSuccessfullyCollected, 2);
@@ -255,7 +258,7 @@ test("engineering latest candidate transparency stores an audited multi-source c
   assert.ok(candidateSourceIds.has("eng-src-2026-08-30-bw-ideol-floatgen-40gwh"));
   assert.ok(!candidateSourceIds.has("eng-src-2026-08-30-encomara-squid-offshorewind"));
 
-  for (const source of engineeringBriefing.sourceRecords) {
+  for (const source of august30Briefing.sourceRecords) {
     if (source.candidateStatus === "candidate") {
       assert.ok(candidateSourceIds.has(source.sourceRecordId));
     }
@@ -284,15 +287,50 @@ test("engineering source registry covers approved source classes", () => {
   }
 });
 
+test("latest engineering edition has consistent candidates, counts, and selected highlights", () => {
+  assert.ok(latestEngineeringBriefing, "at least one engineering edition is required");
+  const selection = latestEngineeringBriefing.engineeringSelection;
+  assert.ok(selection, `latest edition ${latestEngineeringBriefing.weekEnd} requires candidate transparency`);
+  assert.equal(selection.selectionModel.id, SCORE_MODEL_ID);
+  assert.equal(latestEngineeringBriefing.checkedResultCount, selection.candidates.length);
+  assert.equal(selection.collectionAudit.candidatePoolSize, selection.candidates.length);
+
+  const sourcesById = new Map(
+    latestEngineeringBriefing.sourceRecords.map((source) => [source.sourceRecordId, source]),
+  );
+  const selected = selection.candidates.filter((candidate) => candidate.selected)
+    .sort((a, b) => a.finalRank - b.finalRank);
+  assert.ok(selected.length <= 5);
+  assert.deepEqual(
+    selected.map((candidate) => candidate.selectedBriefingItemId),
+    latestEngineeringBriefing.briefingItems.map((item) => item.briefingItemId),
+  );
+  assert.deepEqual(selected.map((candidate) => candidate.finalRank), selected.map((_, index) => index + 1));
+
+  for (const candidate of selection.candidates) {
+    assert.ok(sourcesById.has(candidate.sourceRecordId));
+    assertEngineeringScore(candidate.engineeringSelectionScore);
+    if (candidate.selected) {
+      const item = latestEngineeringBriefing.briefingItems.find(
+        (item) => item.briefingItemId === candidate.selectedBriefingItemId,
+      );
+      assert.ok(item.sourceRecordIds.includes(candidate.sourceRecordId));
+    } else {
+      assert.equal(candidate.selectedBriefingItemId, null);
+      assert.equal(candidate.finalRank, null);
+    }
+  }
+});
+
 test("engineering latest collection audit is backed by registry source records", () => {
-  const audit = engineeringBriefing.engineeringSelection.collectionAudit;
+  const audit = latestEngineeringBriefing.engineeringSelection.collectionAudit;
   const registryIds = new Set(engineeringSourceRegistry.sources.map((source) => source.sourceId));
 
   assert.deepEqual(
     validateRegistryBackedCollectionAudit(
       audit,
       engineeringSourceRegistry,
-      "2026-08-23.json: engineeringSelection",
+      `${latestEngineeringBriefing.weekEnd}.json: engineeringSelection`,
     ),
     [],
   );
@@ -304,13 +342,15 @@ test("engineering latest collection audit is backed by registry source records",
     audit.sourcesSuccessfullyCollected,
   );
 });
-test("engineering persisted latest pool matches regenerated scoring output", () => {
-  const regenerated = buildEngineeringCandidatePool(engineeringBriefing);
-
-  assert.deepEqual(
-    engineeringBriefing.engineeringSelection.candidates,
-    regenerated.candidates,
-  );
+test("all scored engineering editions match regenerated scoring output", () => {
+  for (const briefing of scoredEngineeringBriefings) {
+    const regenerated = buildEngineeringCandidatePool(briefing);
+    assert.deepEqual(
+      briefing.engineeringSelection.candidates,
+      regenerated.candidates,
+      `candidate pool mismatch for ${briefing.weekEnd}`,
+    );
+  }
 });
 test("engineering scoring is deterministic and tolerates sparse metadata", () => {
   const source = {
@@ -330,7 +370,7 @@ test("engineering scoring is deterministic and tolerates sparse metadata", () =>
 });
 
 test("engineering scored candidates are raw-ranked by score with source ID tie-breaker", () => {
-  const { candidates } = buildEngineeringCandidatePool(engineeringBriefing);
+  const { candidates } = buildEngineeringCandidatePool(august30Briefing);
 
   for (let index = 1; index < candidates.length; index += 1) {
     const previous = candidates[index - 1];
@@ -344,10 +384,10 @@ test("engineering scored candidates are raw-ranked by score with source ID tie-b
 });
 
 test("engineering diversity layer does not pad a two-candidate week", () => {
-  const { candidates } = buildEngineeringCandidatePool(engineeringBriefing);
+  const { candidates } = buildEngineeringCandidatePool(august30Briefing);
   const selected = candidates.filter((candidate) => candidate.selected);
   const selectedIds = selected.map((candidate) => candidate.sourceRecordId);
-  const selectedBriefingSourceIds = engineeringBriefing.briefingItems.map(
+  const selectedBriefingSourceIds = august30Briefing.briefingItems.map(
     (item) => item.sourceRecordIds[0],
   );
 
@@ -361,7 +401,7 @@ test("engineering diversity layer does not pad a two-candidate week", () => {
   assert.ok(selectedIds.includes("eng-src-2026-08-30-bw-ideol-floatgen-40gwh"));
   assert.ok(selected.every((candidate) => candidate.diversityReason));
 });
-test("engineering historical backfilled weeks retain scored reconstructed candidate pools", () => {
+test("engineering historical backfill fixtures retain their expected candidate counts and provenance", () => {
   const expectedCounts = new Map([
     ["2026-04-05", 2],
     ["2026-04-12", 2],
@@ -406,9 +446,6 @@ test("engineering historical backfilled weeks retain scored reconstructed candid
       );
       assert.ok(briefing.briefingItems.length <= 5);
     }
-
-    const regenerated = buildEngineeringCandidatePool(briefing);
-    assert.deepEqual(briefing.engineeringSelection.candidates, regenerated.candidates);
 
     for (const candidate of briefing.engineeringSelection.candidates) {
       assertEngineeringScore(candidate.engineeringSelectionScore);

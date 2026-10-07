@@ -12,6 +12,7 @@ import {
   formatStatus,
   getAllProjects,
   getProjectBySlug,
+  relationshipContextLabel,
   type ProjectCompanyRelationship,
   type ProjectWithRelations,
 } from "../../../data/project-adapter";
@@ -172,6 +173,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   {relationships.map((relationship) => (
                     <li key={relationship.id}>
                       <p>{relationship.companyName}</p>
+                      <span><LocalizedCopy
+                        {...relationshipContextLabel(relationship)}
+                      /></span>
+                      {relationship.sourceStatusText && <span>{relationship.sourceStatusText}</span>}
                       {relationship.roleDetail ? (
                         <span>{relationship.roleDetail}</span>
                       ) : null}
@@ -465,6 +470,10 @@ function ProjectIntelligenceDetailPage({
                   {relationships.map((relationship) => (
                     <li key={relationship.id}>
                       <p>{relationship.companyName}</p>
+                      <span><LocalizedCopy
+                        {...relationshipContextLabel(relationship)}
+                      /></span>
+                      {relationship.sourceStatusText && <span>{relationship.sourceStatusText}</span>}
                       {relationship.roleDetail ? (
                         <span>{relationship.roleDetail}</span>
                       ) : null}
@@ -799,6 +808,10 @@ function GreenVoltProjectDetailPage({
                   {relationships.map((relationship) => (
                     <li key={relationship.id}>
                       <p>{relationship.companyName}</p>
+                      <span><LocalizedCopy
+                        {...relationshipContextLabel(relationship)}
+                      /></span>
+                      {relationship.sourceStatusText && <span>{relationship.sourceStatusText}</span>}
                       {relationship.roleDetail ? (
                         <span>{relationship.roleDetail}</span>
                       ) : null}

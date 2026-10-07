@@ -6,6 +6,8 @@ import {
   getProjectCount,
   getProjectIndexItems,
   getProjectOptions,
+  readinessAreas,
+  readinessStates,
 } from "../../data/project-adapter";
 import { ProjectFilters } from "./project-filters";
 import { LocalizedCopy } from "../i18n/localized-copy";
@@ -29,7 +31,7 @@ export default function ProjectsPage() {
         <p className="eyebrow"><LocalizedCopy en="Project Intelligence" zh="项目信息" /></p>
         <h1 id="projects-heading"><LocalizedCopy en="Global FOWT Projects" zh="全球浮式海上风电项目" /></h1>
         <p>
-          <LocalizedCopy en="A curated, source-backed static dataset of known floating offshore wind projects. Coverage is representative rather than mathematically complete, and missing facts remain absent until verified." zh="经筛选且有来源依据的已知浮式海上风电项目静态数据集。覆盖具有代表性而非绝对完整；缺失事实将在核实前保持空缺。" />
+          <LocalizedCopy en="Compare lifecycle, FID evidence, readiness and next observable signals across floating offshore wind projects. Curated coverage is representative; assessments follow the evidence stored in each project profile." zh="比较浮式海上风电项目的生命周期、FID 证据、准备度及下一步可观察信号。精选项目具有代表性；评估依据各项目档案中记录的证据。" />
         </p>
         <dl className="project-hero-stats" aria-label="Project dataset coverage">
           <div>
@@ -48,6 +50,8 @@ export default function ProjectsPage() {
       </section>
 
       <ProjectFilters
+        readinessAreas={readinessAreas}
+        readinessStates={readinessStates}
         projects={projects}
         regions={options.regions}
         countries={options.countries}
@@ -60,7 +64,7 @@ export default function ProjectsPage() {
       <section aria-labelledby="project-data-notice-heading">
         <h2 id="project-data-notice-heading"><LocalizedCopy en="Data notice" zh="数据说明" /></h2>
         <p>
-          <LocalizedCopy en="Project records are static, source-backed JSON under web/data/projects/. The website does not run collection, scraping, scoring, AI summarisation, geospatial services, a backend, a database, or a CMS." zh="项目记录是 web/data/projects/ 下有来源依据的静态 JSON。网站不运行采集、抓取、评分、AI 摘要、地理空间服务、后端、数据库或 CMS。" />
+          <LocalizedCopy en="This is a curated snapshot, not live project monitoring. Capacity may describe a proposed envelope rather than installed capacity; read each profile for its scope and sources. Consent, support awards and FEED do not prove FID. UNKNOWN and NOT VERIFIED identify evidence boundaries." zh="这是精选项目的静态快照，并非实时监测。容量可能表示拟建规模而非已安装容量；各档案列明范围和来源。许可、支持奖励和 FEED 并不能证明 FID。UNKNOWN（未知）和 NOT VERIFIED（未核实）明确标示证据边界。" />
         </p>
       </section>
 

@@ -250,7 +250,7 @@ export function getProjectIndexItems() {
   return getAllProjects().map((project) => {
     const relationships = relationshipsByProject.get(project.id) ?? [];
     const developers = relationships
-      .filter((relationship) => relationship.role === "developer_owner")
+      .filter((relationship) => relationship.role === "developer_owner" && (relationship.status === "active" || relationship.status === "announced"))
       .map((relationship) => relationship.companyName);
 
     return {
@@ -264,8 +264,106 @@ export function getProjectIndexItems() {
       capacityMw: project.capacityMw,
       floatingTechnology: project.floatingTechnology,
       developers: unique(developers),
+      supplyChain: buildSupplyChain(relationships),
+      ...buildOverviewIntelligence(project),
     };
   });
+}
+
+export const readinessAreas = ["Permitting", "Revenue", "Engineering", "Procurement", "Financing / FID", "Execution"] as const;
+export const readinessStates = ["SECURED", "ACTIVE", "NOT VERIFIED", "NOT STARTED", "UNKNOWN"] as const;
+export type ReadinessState = (typeof readinessStates)[number];
+export type OverviewFidStatus = "confirmed" | "not_reached" | "not_verified" | "unknown";
+export type OverviewReadiness = { area: string; state: ReadinessState; evidence: string };
+export type ProjectIndexItem = ReturnType<typeof getProjectIndexItems>[number];
+
+export function relationshipContextLabel(relationship: Pick<ProjectCompanyRelationship, "role" | "status">) {
+  if (relationship.role === "developer_owner") {
+    if (relationship.status === "active") return { en: "Current owner / developer", zh: "当前业主 / 开发商" };
+    if (relationship.status === "past") return { en: "Former / historical owner or developer", zh: "前任 / 历史业主或开发商" };
+    if (relationship.status === "announced") return { en: "Announced owner / developer role", zh: "已公布的业主 / 开发商角色" };
+  }
+  // Relationship status alone cannot establish selection, a contract award or delivery.
+  if (relationship.status === "past") return { en: "Historical role", zh: "历史角色" };
+  if (relationship.status === "announced") return { en: "Announced role", zh: "已公布的角色" };
+  if (relationship.status === "active") return { en: "Recorded role", zh: "已记录的角色" };
+  return { en: "Relationship status unknown", zh: "关系状态未知" };
+}
+
+const supplyChainCategories = [
+  { key: "owner", label: "Owner / Developer", roles: ["developer_owner"] },
+  { key: "turbine", label: "Turbine", roles: ["wind_turbine_oem"] },
+  { key: "platform", label: "Floating Platform", roles: ["floating_platform_technology_provider", "platform_engineering", "fabrication"] },
+  { key: "cable", label: "Cable", roles: ["dynamic_cable", "inter_array_cable", "export_cable"] },
+  { key: "mooring", label: "Mooring / Anchoring", roles: ["mooring", "anchoring"] },
+  { key: "installation", label: "Marine Installation", roles: ["marine_installation"] },
+];
+
+export function buildSupplyChain(relationships: ProjectCompanyRelationship[]) {
+  return supplyChainCategories.map((category) => ({
+    key: category.key,
+    label: category.label,
+    groups: (category.key === "cable" || category.key === "mooring"
+      ? category.roles.map((role) => [role]) : [category.roles]).map((roles) => ({
+      label: category.key === "cable" || category.key === "mooring" ? formatRole(roles[0]) : null,
+      entries: relationships.filter((relationship) => roles.includes(relationship.role))
+        .sort((a, b) => Number(a.status === "past") - Number(b.status === "past") || compareRelationships(a, b))
+        .flatMap((relationship) => {
+        const sources = relationship.sourceIds.map((id) => sourceById.get(id)).filter((source): source is SourceRecord => Boolean(source));
+        // A company name or a project technology string alone is not supply-chain evidence.
+        if (!sources.length) return [];
+        return [{
+          id: relationship.id, companyName: relationship.companyName,
+          industryCompanyId: relationship.industryCompanyId,
+          roleLabel: formatRole(relationship.role), detail: relationship.roleDetail,
+          contextLabel: relationshipContextLabel(relationship),
+          status: relationship.status, scope: relationship.sourceStatusText,
+          sources: sources.map(({ sourceId, title, url }) => ({ sourceId, title, url })),
+        }];
+      }),
+    })),
+  }));
+}
+
+function buildOverviewIntelligence(project: Project) {
+  const intelligence = project.intelligence;
+  const fidEvidence = intelligence?.fidStatus ?? "UNKNOWN";
+  // Green Volt uses an explicit negative verification statement rather than the standard prefix.
+  const fid: OverviewFidStatus = fidEvidence.startsWith("FID confirmed") ? "confirmed"
+    : fidEvidence.startsWith("FID not reached") ? "not_reached"
+    : fidEvidence.startsWith("FID not verified") || /^No public FID or financial close announcement verified/.test(fidEvidence)
+      ? "not_verified" : "unknown";
+  const readiness: OverviewReadiness[] = readinessAreas.map((area) => {
+    const raw = intelligence?.currentGates.find((gate) => gate.startsWith(`${area} - `));
+    const match = raw?.match(/^(.+?)\s+-\s+(SECURED|ACTIVE|NOT VERIFIED|NOT STARTED|UNKNOWN):\s+(.+)$/);
+    return { area, state: (match?.[2] ?? "UNKNOWN") as ReadinessState, evidence: match?.[3] ?? "No structured gate evidence is available." };
+  });
+  // Preserve the existing bespoke detail-page assessment; do not derive states from free-text gates.
+  if (project.id === "green-volt") {
+    const detailReadiness: [ReadinessState, string][] = [
+      ["SECURED", "Onshore and offshore consent granted."],
+      ["SECURED", "400 MW AR6 CfD secured; oil-and-gas offtake is unresolved."],
+      ["ACTIVE", "Worley FEED and 2026 survey work support detailed design."],
+      ["UNKNOWN", "Major supply and EPCI awards are not verified."],
+      ["NOT VERIFIED", "No public FID or financial close announcement verified."],
+      ["NOT STARTED", "No fabrication, construction, or installation start verified."],
+    ];
+    readiness.forEach((gate, index) => { [gate.state, gate.evidence] = detailReadiness[index]; });
+  }
+  const events = [...(eventsByProject.get(project.id) ?? [])].sort(compareEvents);
+  const latest = events.at(-1);
+  return {
+    fid, fidEvidence, readiness,
+    assessment: intelligence?.currentAssessment ?? null,
+    unstructuredGates: (intelligence?.currentGates ?? []).filter((gate) =>
+      !/^(.+?)\s+-\s+(SECURED|ACTIVE|NOT VERIFIED|NOT STARTED|UNKNOWN):\s+(.+)$/.test(gate)),
+    watchpoints: intelligence?.watchpoints ?? [],
+    nextSignal: intelligence?.watchpoints[0]?.split(":")[0] ?? null,
+    latestMilestone: latest ? {
+      title: latest.title, description: latest.description, date: latest.date,
+      dateLabel: formatDate(latest.date, latest.datePrecision),
+    } : null,
+  };
 }
 
 export function getProjectWithRelations(project: Project): ProjectWithRelations {

@@ -1,0 +1,1064 @@
+{
+  "generatedAt": "2026-10-12T07:28:04.035311Z",
+  "runId": "run_20261012_072804_openalex",
+  "schemaVersion": "pipeline-data-0.1",
+  "selectedPapers": [
+    {
+      "abstract": "The processed data supporting the figures in this study, including the plotting datasets for Figs. 2–8, are available in Zenodo. The repository contains the numerical data required to reproduce the reported restoring characteristics, modal frequencies, participation metrics, degradation-observability measures, operator-sensitivity pathways, and first-order closure results. Raw OpenFAST time-history and linearization files are not included in this plotting-data archive.",
+      "authors": [
+        "Zhen Guo"
+      ],
+      "candidateIds": [
+        "candidate_openalex_eeddc286218fad28"
+      ],
+      "doi": "https://doi.org/10.5281/zenodo.23262915",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "green",
+      "paperId": "paper_doi_d8f98b6e9c549f65",
+      "processingStatus": "classified",
+      "publicationSource": "Zenodo (CERN European Organization for Nuclear Research)",
+      "publicationType": "unknown",
+      "publishedDate": "2026-10-09",
+      "rank": 1,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 4,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_d8f98b6e9c549f65",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-10-12T07:28:04.035311Z",
+        "modelName": null,
+        "paperId": "paper_doi_d8f98b6e9c549f65",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Structural Health Monitoring Techniques",
+          "Modal",
+          "Observability",
+          "Tower",
+          "Closure (psychology)",
+          "Turbine",
+          "Linearization",
+          "Engineering",
+          "Wind power",
+          "Computer science",
+          "Modal analysis",
+          "Raw data",
+          "Stability (learning theory)",
+          "Marine engineering",
+          "Structural engineering",
+          "Environmental science",
+          "Work (physics)",
+          "Control theory (sociology)",
+          "State (computer science)",
+          "Degradation (telecommunications)",
+          "Data collection",
+          "Data modeling",
+          "Control engineering",
+          "Operational Modal Analysis"
+        ]
+      },
+      "runId": "run_20261012_072804_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "floating and wind terms in title",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 35
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: hydrodynamics",
+              "technical signal: station keeping",
+              "technical signal: structures",
+              "technical signal: controls",
+              "technical signal: numerical methods"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: dataset",
+              "research signal: modelling",
+              "research signal: optimization",
+              "research signal: design",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 15
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "publication type: unknown",
+              "research repository or dataset source"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 6
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "1 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 4
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 95
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5281/zenodo.23262915",
+        "openalexId": "https://openalex.org/W7221126921"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.23262915",
+      "title": "Supporting data for Mooring-Controlled Modal Interaction and Tower Degradation Observability in Floating Wind Turbines",
+      "topicTags": [
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Structural Health Monitoring Techniques",
+        "Modal",
+        "Observability",
+        "Tower",
+        "Closure (psychology)",
+        "Turbine",
+        "Linearization",
+        "Engineering",
+        "Wind power",
+        "Computer science",
+        "Modal analysis",
+        "Raw data",
+        "Stability (learning theory)",
+        "Marine engineering",
+        "Structural engineering",
+        "Environmental science",
+        "Work (physics)",
+        "Control theory (sociology)",
+        "State (computer science)",
+        "Degradation (telecommunications)",
+        "Data collection",
+        "Data modeling",
+        "Control engineering",
+        "Operational Modal Analysis"
+      ]
+    },
+    {
+      "abstract": "Vibration mitigation of the IEA 15-MW Floating Offshore Wind Turbine (FOWT) on the UMaine VolturnUS-S semi-submersible platform is investigated using Vibration Control Systems (VCS), substantially attenuating the coupled tower-platform pitch response and reducing structural loads. A novel application of negative stiffness (NS) KDamper-based absorbers to FOWT is proposed, comprising the KDamper and its extensions, benchmarked against the Tuned Mass Damper. A reduced-order finite element model of the coupled tower-platform system accounts for platform pitch kinematics and second-order geometric effects, validated against OpenFAST through free-decay simulations and under wind-wave loading. The KDamper VCS are formulated via a unified NS network parameterisation, dimensioned through component sizing, and optimised via constrained Harmony Search to determine absorber parameters. VCS performance is assessed, under open-loop loads extracted from fully-coupled OpenFAST simulations, across three combined wind-wave load cases of increasing severity. The EKD and EKDI achieve reductions of up to 42% in tower-top displacement and 37% in platform pitch energy-integral metrics, relative to the baseline, requiring one-tenth the TMD added mass through NS inertia amplification.",
+      "authors": [
+        "Konstantinos A. Kapasakalis",
+        "A.E. Kampitsis"
+      ],
+      "candidateIds": [
+        "candidate_openalex_2c705b398118c276"
+      ],
+      "doi": "https://doi.org/10.1016/j.engstruct.2026.123867",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "hybrid",
+      "paperId": "paper_doi_658dea96e5bd9000",
+      "processingStatus": "classified",
+      "publicationSource": "Engineering Structures",
+      "publicationType": "unknown",
+      "publishedDate": "2026-10-06",
+      "rank": 2,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 0,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 6,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 0,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 1,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_658dea96e5bd9000",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-10-12T07:28:04.035311Z",
+        "modelName": null,
+        "paperId": "paper_doi_658dea96e5bd9000",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Added mass",
+          "Component (thermodynamics)",
+          "Computer science",
+          "Control system",
+          "Displacement (psychology)",
+          "Engineering",
+          "Finite element method",
+          "Fluid–structure interaction",
+          "Frequency response",
+          "Harmony search",
+          "Inertia",
+          "Kinematics",
+          "Marine engineering",
+          "Offshore wind power",
+          "Pitch control",
+          "Stiffness",
+          "Structural engineering",
+          "Structural load",
+          "Submarine pipeline",
+          "Torsional vibration",
+          "Turbine",
+          "Vibration",
+          "Vibration Control and Rheological Fluids",
+          "Vibration and Dynamic Analysis",
+          "Vibration control",
+          "Wave and Wind Energy Systems",
+          "Wind engineering",
+          "Wind power",
+          "Wind speed"
+        ]
+      },
+      "runId": "run_20261012_072804_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "direct FOWT phrase in abstract",
+              "floating and wind terms in title",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 35
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: hydrodynamics",
+              "technical signal: structures",
+              "technical signal: controls",
+              "technical signal: platform",
+              "technical signal: numerical methods"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: validation",
+              "research signal: modelling",
+              "research signal: optimization",
+              "research signal: design",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 15
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "publication type: unknown",
+              "technical venue/source proxy"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 6
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "4 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 1
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 92
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.engstruct.2026.123867",
+        "openalexId": "https://openalex.org/W7220676622"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1016/j.engstruct.2026.123867",
+      "title": "Vibration control of floating offshore wind turbines using optimally designed negative stiffness absorbers",
+      "topicTags": [
+        "Added mass",
+        "Component (thermodynamics)",
+        "Computer science",
+        "Control system",
+        "Displacement (psychology)",
+        "Engineering",
+        "Finite element method",
+        "Fluid–structure interaction",
+        "Frequency response",
+        "Harmony search",
+        "Inertia",
+        "Kinematics",
+        "Marine engineering",
+        "Offshore wind power",
+        "Pitch control",
+        "Stiffness",
+        "Structural engineering",
+        "Structural load",
+        "Submarine pipeline",
+        "Torsional vibration",
+        "Turbine",
+        "Vibration",
+        "Vibration Control and Rheological Fluids",
+        "Vibration and Dynamic Analysis",
+        "Vibration control",
+        "Wave and Wind Energy Systems",
+        "Wind engineering",
+        "Wind power",
+        "Wind speed"
+      ]
+    },
+    {
+      "abstract": "Wet-towing is a critical stage in the transportation and installation of floating offshore wind turbines (FOWTs), yet rapid and reliable methods for predicting towing resistance remain limited. This study develops an empirical framework for resistance prediction of large-scale semi-submersible FOWTs in calm-water and waves. The configuration-dependent drag coefficients are assigned separately to the columns and pontoon. The column coefficient is expressed as a linear function for the ratio of submerged height to diameter, and distinct pontoon coefficients are introduced for single-column-forward and double-column-forward towing. For wave conditions, the calm-water formulation is extended by defining an effective velocity that combines the towing speed with the averaged area root mean square (RMS) horizontal wave-particle velocity, together with a wave correction coefficient. The framework is further assessed against experimental measurements for the INO WINDMOOR 12 MW FOWT, OC4-DeepCwind FOWT and Computational Fluid Dynamics (CFD) results for different speeds, drafts, configurations, and wave conditions. The predicted resistance reproduces the experimental and CFD trends with substantially lower computational effort. Subsequently, this method is applied to predict the towing resistance of the International Energy Agency (IEA) 15 MW FOWT. In calm-water, most relative errors remain within 5%, with an approximately 8% deviation for the double-column-forward case at 20 m draft. Under wave conditions, all deviations remain within ±5%, and the maximum absolute error is 4.7%. Resistance increases nonlinearly with speed and rises with draft, while the double-column-forward configuration generally produces greater resistance. Component decomposition shows that the pontoon is the dominant resistance contributor, with average drag coefficients of 1.17 and 1.01 for double- and single-column-forward, respectively. A database of 50 towing cases is additionally compiled to establish a practical drag coefficient envelope. According to the available effective towing force of the tugboat, the towing speed under head-wave is recommended not to exceed 4 kn, and a moderate towing draft of 8-12 m is recommended. The proposed framework supports rapid towing resistance assessment, draft and speed selection, and preliminary design.",
+      "authors": [
+        "Yichang Tang",
+        "Mingsheng Chen",
+        "Jinkun Shi",
+        "Ning Yu",
+        "Jiaxi Wu",
+        "Xingyu Jiang",
+        "Fukai Song",
+        "Saishuai Dai"
+      ],
+      "candidateIds": [
+        "candidate_openalex_42bff463c7af20df"
+      ],
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.128569",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "hybrid",
+      "paperId": "paper_doi_8d21481440855a79",
+      "processingStatus": "classified",
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "unknown",
+      "publishedDate": "2026-10-05",
+      "rank": 3,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 16,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 5,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 9,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_8d21481440855a79",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-10-12T07:28:04.035311Z",
+        "modelName": null,
+        "paperId": "paper_doi_8d21481440855a79",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Added mass",
+          "Approximation error",
+          "Computational fluid dynamics",
+          "Critical speed",
+          "Drag",
+          "Drag coefficient",
+          "Engineering",
+          "Environmental science",
+          "Function (biology)",
+          "Hull",
+          "Marine engineering",
+          "Mean squared error",
+          "Mechanics",
+          "Morison equation",
+          "Naval architecture",
+          "Offshore Engineering and Technologies",
+          "Offshore geotechnical engineering",
+          "Offshore wind power",
+          "Operability",
+          "Relative wind",
+          "Root mean square",
+          "Seakeeping",
+          "Ship Hydrodynamics and Maneuverability",
+          "Structural engineering",
+          "Submarine pipeline",
+          "Towing",
+          "Wake",
+          "Wave and Wind Energy Systems",
+          "Wave height",
+          "Wind power",
+          "Wind speed",
+          "Wind wave"
+        ]
+      },
+      "runId": "run_20261012_072804_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "direct FOWT phrase in abstract",
+              "floating and wind terms in title",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 35
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: aerodynamics",
+              "technical signal: hydrodynamics",
+              "technical signal: structures",
+              "technical signal: platform",
+              "technical signal: numerical methods"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: validation",
+              "research signal: modelling",
+              "research signal: optimization",
+              "research signal: design",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 15
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "publication type: unknown",
+              "technical venue/source proxy"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 6
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "5 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 0
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 91
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.128569",
+        "openalexId": "https://openalex.org/W7220420145"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.128569",
+      "title": "An empirical framework for predicting the design towing resistance for floating wind turbines with application on the design of towing system",
+      "topicTags": [
+        "Added mass",
+        "Approximation error",
+        "Computational fluid dynamics",
+        "Critical speed",
+        "Drag",
+        "Drag coefficient",
+        "Engineering",
+        "Environmental science",
+        "Function (biology)",
+        "Hull",
+        "Marine engineering",
+        "Mean squared error",
+        "Mechanics",
+        "Morison equation",
+        "Naval architecture",
+        "Offshore Engineering and Technologies",
+        "Offshore geotechnical engineering",
+        "Offshore wind power",
+        "Operability",
+        "Relative wind",
+        "Root mean square",
+        "Seakeeping",
+        "Ship Hydrodynamics and Maneuverability",
+        "Structural engineering",
+        "Submarine pipeline",
+        "Towing",
+        "Wake",
+        "Wave and Wind Energy Systems",
+        "Wave height",
+        "Wind power",
+        "Wind speed",
+        "Wind wave"
+      ]
+    },
+    {
+      "abstract": "This dataset contains processed numerical data supporting the study entitled “Multi-Objective Optimization of Bend–Twist Coupled Blades for Passive Load Alleviation in a Large Floating Wind Turbine.” The study investigates the passive load-alleviation performance of bend–twist coupled (BTC) blades for the IEA 15 MW VolturnUS-S floating wind turbine. Bend–twist coupling is introduced through modifications to the composite layup angles and blade pre-twist, and a multi-objective optimization framework combining OpenFAST simulations, Kriging surrogate models, and the NSGA-II algorithm is employed to identify improved blade designs. The deposited files contain selected processed data used for surrogate-model development, multi-objective optimization, and numerical verification. Depending on the corresponding file, the dataset includes blade design variables, statistical response quantities obtained from OpenFAST simulations, surrogate-model prediction and validation results, Pareto-optimal solutions, and numerical results for selected optimized blade configurations. The response quantities considered in the study include blade-root bending moments, blade-tip deformation, generator power, and other response metrics relevant to evaluating blade load alleviation and aerodynamic–structural performance. The original IEA 15 MW reference wind turbine and VolturnUS-S floating-platform models are publicly available through their respective official repositories. The present dataset provides the processed numerical data generated and used in the analyses reported in the associated manuscript rather than a complete copy of the original reference models or the full raw OpenFAST simulation files.",
+      "authors": [
+        "JingFeng He"
+      ],
+      "candidateIds": [
+        "candidate_openalex_b9789b8642fb337c"
+      ],
+      "doi": "https://doi.org/10.5281/zenodo.23164035",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "green",
+      "paperId": "paper_doi_99fe70baba28f1c3",
+      "processingStatus": "classified",
+      "publicationSource": "Zenodo (CERN European Organization for Nuclear Research)",
+      "publicationType": "unknown",
+      "publishedDate": "2026-10-05",
+      "rank": 4,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 3,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 9,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_99fe70baba28f1c3",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-10-12T07:28:04.035311Z",
+        "modelName": null,
+        "paperId": "paper_doi_99fe70baba28f1c3",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Advanced Multi-Objective Optimization Algorithms",
+          "Aeroelasticity and Vibration Control",
+          "Bending",
+          "Blade (archaeology)",
+          "Computational fluid dynamics",
+          "Computer science",
+          "Computer simulation",
+          "Coupling (piping)",
+          "Design of experiments",
+          "Engineering",
+          "Experimental data",
+          "Generator (circuit theory)",
+          "Kriging",
+          "Marine engineering",
+          "Minification",
+          "Numerical analysis",
+          "Raw data",
+          "Reference data",
+          "Spar",
+          "Structural engineering",
+          "Surrogate model",
+          "Turbine",
+          "Turbine blade",
+          "Wind Energy Research and Development",
+          "Wind power",
+          "Wind speed"
+        ]
+      },
+      "runId": "run_20261012_072804_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "direct FOWT phrase in abstract",
+              "floating and wind terms in title",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 35
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: aerodynamics",
+              "technical signal: structures",
+              "technical signal: controls",
+              "technical signal: platform",
+              "technical signal: numerical methods"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: validation",
+              "research signal: dataset",
+              "research signal: modelling",
+              "research signal: optimization",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 15
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "publication type: unknown",
+              "research repository or dataset source"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 6
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "5 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 0
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 91
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5281/zenodo.23164035",
+        "openalexId": "https://openalex.org/W7220452357"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.23164035",
+      "title": "Supporting Data for \"Multi-Objective Optimization of Bend–Twist Coupled Blades for Passive Load Alleviation in a Large Floating Wind Turbine\"",
+      "topicTags": [
+        "Advanced Multi-Objective Optimization Algorithms",
+        "Aeroelasticity and Vibration Control",
+        "Bending",
+        "Blade (archaeology)",
+        "Computational fluid dynamics",
+        "Computer science",
+        "Computer simulation",
+        "Coupling (piping)",
+        "Design of experiments",
+        "Engineering",
+        "Experimental data",
+        "Generator (circuit theory)",
+        "Kriging",
+        "Marine engineering",
+        "Minification",
+        "Numerical analysis",
+        "Raw data",
+        "Reference data",
+        "Spar",
+        "Structural engineering",
+        "Surrogate model",
+        "Turbine",
+        "Turbine blade",
+        "Wind Energy Research and Development",
+        "Wind power",
+        "Wind speed"
+      ]
+    },
+    {
+      "abstract": "Floating Offshore Wind Turbines (FOWTs) are being upscaled toward larger rated capacities to enhance offshore wind resource utilization and reduce the Levelized Cost of Energy (LCOE). However, upscaling FOWT introduces complex nonlinear coupled dynamics that are poorly captured by potential-flow approaches under extreme ocean environmental conditions. This study presents a CFD-based high-fidelity, two-way coupled simulation framework integrating OpenFAST, OpenFOAM, and MoorDyn to quantify Aero-Hydro-Servo-Elastic-Mooring (AHSEM) coupling in the upscaled VolturnUS-UMaine platform with IEA 22 MW turbine across multiple Design Load Cases (DLCs). OpenFAST resolves rotor aerodynamics, blade-tower elastic deformations, and pitch-torque servo controls, transferring tower-base loads to OpenFOAM via a Dynamic Link Library (DLL). OpenFOAM applies a RANS-based k-ω SST turbulence model to capture viscous drag, wave diffraction, and water run-up under different environmental conditions. In addition, MoorDyn is coupled with OpenFOAM via a DLL interface and computes mooring dynamics using a Lumped-Mass Model (LMM). The framework is validated against OC3, OC4, and VolturnUS-UMaine benchmarks. Parametric upscaling comparisons spanning 5 MW to 22 MW reveal that responses of upscaled FOWTs are governed by strong nonlinear hydrodynamic–mooring–rotor coupling effects, with CFD-based AHSEM responses noticeably lower than potential-flow-based AHSEM. Therefore, the CFD-based AHSEM framework, which explicitly accounts for flow separation, vortex shedding, and viscous drag, yields accurate predictions for upscaled FOWTs. This framework eliminates over-conservative structural design, reduces material usage, and effectively lowers the LCOE of large-scale FOWTs.",
+      "authors": [
+        "Mahdi Bandizadeh Sharif",
+        "Yutao Guo",
+        "Binbin Li",
+        "Hassan Ghassemi"
+      ],
+      "candidateIds": [
+        "candidate_openalex_c28ff2c24e87bdae"
+      ],
+      "doi": "https://doi.org/10.1016/j.oceaneng.2026.128422",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "hybrid",
+      "paperId": "paper_doi_ff01139590438ed1",
+      "processingStatus": "classified",
+      "publicationSource": "Ocean Engineering",
+      "publicationType": "unknown",
+      "publishedDate": "2026-10-05",
+      "rank": 5,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 9,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 12,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 6,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 10,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261012_072804_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_ff01139590438ed1",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-10-12T07:28:04.035311Z",
+        "modelName": null,
+        "paperId": "paper_doi_ff01139590438ed1",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aerospace engineering",
+          "Computational fluid dynamics",
+          "Computer science",
+          "Cost of electricity by source",
+          "Coupling (piping)",
+          "Engineering",
+          "Environmental science",
+          "Flow (mathematics)",
+          "Marine engineering",
+          "Mooring",
+          "Nonlinear system",
+          "Offshore geotechnical engineering",
+          "Offshore wind power",
+          "Parametric statistics",
+          "Rotor (electric)",
+          "Servo",
+          "Ship Hydrodynamics and Maneuverability",
+          "Submarine pipeline",
+          "Turbine",
+          "Turbulence",
+          "Turbulence modeling",
+          "Vortex",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind power"
+        ]
+      },
+      "runId": "run_20261012_072804_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "direct FOWT phrase in abstract",
+              "floating and wind terms in title",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 35
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: aerodynamics",
+              "technical signal: hydrodynamics",
+              "technical signal: station keeping",
+              "technical signal: structures",
+              "technical signal: controls"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: validation",
+              "research signal: modelling",
+              "research signal: optimization",
+              "research signal: design",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 15
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "publication type: unknown",
+              "technical venue/source proxy"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 6
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "5 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 0
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 91
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.1016/j.oceaneng.2026.128422",
+        "openalexId": "https://openalex.org/W7220393242"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2026.128422",
+      "title": "CFD-based hybrid-fidelity aero-hydro-servo-elastic-mooring analysis for upscaling floating offshore wind turbines to 22 MW",
+      "topicTags": [
+        "Aerospace engineering",
+        "Computational fluid dynamics",
+        "Computer science",
+        "Cost of electricity by source",
+        "Coupling (piping)",
+        "Engineering",
+        "Environmental science",
+        "Flow (mathematics)",
+        "Marine engineering",
+        "Mooring",
+        "Nonlinear system",
+        "Offshore geotechnical engineering",
+        "Offshore wind power",
+        "Parametric statistics",
+        "Rotor (electric)",
+        "Servo",
+        "Ship Hydrodynamics and Maneuverability",
+        "Submarine pipeline",
+        "Turbine",
+        "Turbulence",
+        "Turbulence modeling",
+        "Vortex",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind power"
+      ]
+    }
+  ],
+  "sourceName": "openalex",
+  "weekEnd": "2026-10-11",
+  "weekStart": "2026-10-05",
+  "checkedResultCount": 105
+}

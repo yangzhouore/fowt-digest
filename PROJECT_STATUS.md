@@ -1,15 +1,26 @@
 # Project Status
 
-Last updated: 2026-10-05
+Last updated: 2026-10-21 (current milestone only; release baseline below is unchanged)
 
 ## Current State
 
 - Current stable branch: `main`
-- Active milestone: none
+- Active milestone: Projects Public Evidence & Review History MVP; accepted, implementation in progress
 - Latest merged work: repository documentation sync (PR #35); Engineering and Research are published through 2026-10-04
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Next work: follow the next accepted task; no feature milestone is active.
+- Next work: implement the accepted design, validate, and leave an open PR for manual merge.
+
+## Accepted Current MVP
+
+- Scope and measurable acceptance: `docs/PROJECTS_PUBLIC_EVIDENCE_MVP.md`.
+- Design self-review: `docs/PROJECTS_PUBLIC_EVIDENCE_DESIGN_REVIEW.md`.
+- Branch: `feat/projects-public-evidence-mvp`.
+- Goals: area-specific public evidence, explicit uncertainty, substantive review dates and change history across Projects.
+- Pilot public-source assessment reviews: Green Volt, Hywind Tampen and CampionWind.
+- Papers and Research remain outside scope.
+- User accepted the design on 2026-10-21. Full implementation validation and final PR CI verification are future gates.
+- Final delivery will be an open PR for the user to merge manually.
 
 ## Current Capabilities
 

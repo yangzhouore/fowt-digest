@@ -5,11 +5,11 @@ Use this file as the resume entry point for a new Codex session.
 ## Stable State
 
 - Current stable branch: `main`
-- Active milestone: none; next scope requires an accepted task
+- Active milestone: Projects Public Evidence & Review History MVP; accepted, implementation in progress
 - Latest merged work: repository documentation sync (PR #35); Engineering and Research are published through 2026-10-04
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Next work: follow the next accepted task; no feature milestone is active.
+- Next work: implement the accepted `docs/PROJECTS_PUBLIC_EVIDENCE_MVP.md`, validate, and leave an open PR for manual merge.
 
 Stable `main` includes Digital & AI, Methodology, the bilingual interface,
 Project Intelligence across all 48 projects, and weekly catch-up through
@@ -29,6 +29,11 @@ Do not read historical docs under `docs/archive/` by default. Open archived docs
 only when historical context is specifically required.
 
 ## Reference Docs
+
+Current accepted milestone:
+
+- Objectives, design, acceptance criteria and delivery gates: `docs/PROJECTS_PUBLIC_EVIDENCE_MVP.md`
+- Design self-review and user acceptance record: `docs/PROJECTS_PUBLIC_EVIDENCE_DESIGN_REVIEW.md`
 
 Open only when relevant:
 

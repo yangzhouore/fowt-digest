@@ -325,6 +325,10 @@ export function buildSupplyChain(relationships: ProjectCompanyRelationship[]) {
   }));
 }
 
+export function getProjectReadiness(project: Project): OverviewReadiness[] {
+  return buildOverviewIntelligence(project).readiness;
+}
+
 function buildOverviewIntelligence(project: Project) {
   const intelligence = project.intelligence;
   const fidEvidence = intelligence?.fidStatus ?? "UNKNOWN";
@@ -339,7 +343,7 @@ function buildOverviewIntelligence(project: Project) {
     return { area, state: (match?.[2] ?? "UNKNOWN") as ReadinessState, evidence: match?.[3] ?? "No structured gate evidence is available." };
   });
   // Preserve the existing bespoke detail-page assessment; do not derive states from free-text gates.
-  if (project.id === "green-volt") {
+  if (project.id === "green-volt" && intelligence) {
     const detailReadiness: [ReadinessState, string][] = [
       ["SECURED", "Onshore and offshore consent granted."],
       ["SECURED", "400 MW AR6 CfD secured; oil-and-gas offtake is unresolved."],

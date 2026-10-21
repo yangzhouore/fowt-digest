@@ -4185,3 +4185,42 @@ dd {
 
 @media (max-width: 1000px) { .project-supply-chain-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .project-supply-chain-grid { grid-template-columns: 1fr; } }
+
+/* Projects public evidence: shared by standard and bespoke profiles. */
+.project-review-date { color: var(--muted); font-size: 0.72rem; }
+.project-review-strip { border-block: 1px solid var(--border); margin: 20px 0 32px; padding: 16px 0; }
+.project-review-strip h2 { font-size: 1rem; margin: 0 0 8px; }
+.project-review-strip p { margin: 6px 0; font-size: 0.85rem; }
+.project-review-strip p:last-child { color: var(--muted); }
+.project-evidence-header, .project-evidence-row { display: grid; grid-template-columns: 110px 130px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+.project-evidence-header { font-size: 0.75rem; color: var(--muted); }
+.project-evidence-row { scroll-margin-top: 24px; }
+.project-evidence-row:target { outline: 2px solid var(--accent); outline-offset: 6px; }
+.project-evidence-row > div { min-width: 0; }
+.project-evidence-row h3 { margin: 0; font-size: 0.95rem; }
+.project-evidence-assessment { margin: 0 0 12px; font-size: 0.85rem; }
+.project-evidence-disclosure summary, .project-review-history summary { cursor: pointer; font-size: 0.85rem; padding: 8px 0; color: var(--accent); }
+.project-public-evidence :focus-visible, .project-review-history :focus-visible, .project-review-strip :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.project-evidence-content { padding: 8px 0 4px; overflow-wrap: anywhere; }
+.project-evidence-content h4 { margin: 18px 0 8px; font-size: 0.85rem; }
+.project-evidence-content p, .project-evidence-content li, .project-review-findings { font-size: 0.85rem; line-height: 1.65; }
+.project-evidence-items { padding-left: 18px; margin: 8px 0; }
+.project-evidence-items > li { margin-bottom: 20px; }
+.project-evidence-items p { margin: 6px 0; }
+.project-evidence-sources { list-style: none; border-left: 2px solid var(--border); padding-left: 12px; margin: 10px 0 16px; }
+.project-evidence-sources li { margin-bottom: 12px; overflow-wrap: anywhere; }
+.project-evidence-meta { color: var(--muted); font-size: 0.72rem !important; line-height: 1.6; }
+.project-evidence-count { color: var(--muted); }
+.project-review-list { list-style: none; padding: 0; }
+.project-review-list > li { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.project-review-list h3 { font-size: 1rem; margin: 0 0 12px; }
+.project-review-list p { font-size: 0.85rem; overflow-wrap: anywhere; }
+.project-review-findings div { margin: 12px 0; }
+.project-review-findings dt, .project-change-values dt { font-weight: 700; margin-bottom: 4px; }
+.project-review-findings dd, .project-change-values dd { margin: 0; }
+.project-change-values { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.85rem; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .project-evidence-header { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .project-evidence-row { grid-template-columns: 1fr; gap: 10px; }
+  .project-change-values { grid-template-columns: 1fr; }
+}

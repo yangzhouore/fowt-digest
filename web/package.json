@@ -8,8 +8,8 @@
     "start": "next start",
     "test:smoke": "playwright test",
     "lint": "eslint .",
-    "validate:data": "node scripts/validate-static-digests.js && node scripts/validate-static-briefings.js && node scripts/validate-static-projects.js && node scripts/validate-static-digital-ai.js",
-    "test:data": "node --test scripts/validate-static-digests.test.js scripts/validate-static-briefings.test.js scripts/validate-static-projects.test.js scripts/validate-static-digital-ai.test.js scripts/project-pages.test.js scripts/selection-transparency.test.js scripts/digital-ai-pages.test.js"
+    "validate:data": "node scripts/validate-static-digests.js && node scripts/validate-static-briefings.js && node scripts/validate-static-projects.js && node scripts/validate-static-digital-ai.js && node scripts/validate-project-public-evidence.js",
+    "test:data": "node --test scripts/validate-static-digests.test.js scripts/validate-static-briefings.test.js scripts/validate-static-projects.test.js scripts/validate-static-digital-ai.test.js scripts/project-pages.test.js scripts/selection-transparency.test.js scripts/digital-ai-pages.test.js scripts/project-public-evidence.test.js"
   },
   "dependencies": {
     "next": "16.2.10",

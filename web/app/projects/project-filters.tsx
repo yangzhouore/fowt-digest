@@ -4,9 +4,10 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { ProjectIndexItem, ProjectStatus, ReadinessState } from "../../data/project-adapter";
 import { useLanguage } from "../i18n/language-context";
+import type { getProjectReviewSummary } from "../../data/project-public-evidence-adapter";
 
 type ProjectFiltersProps = {
-  projects: ProjectIndexItem[];
+  projects: (ProjectIndexItem & ReturnType<typeof getProjectReviewSummary>)[];
   regions: string[];
   countries: string[];
   statuses: { value: ProjectStatus; label: string }[];
@@ -85,7 +86,7 @@ export function ProjectFilters({ projects, regions, countries, statuses, readine
         {filteredProjects.map((project) => <li key={project.id}>
           <article className="project-comparison-row" aria-labelledby={`name-${project.id}`}>
             <div className="project-comparison-cells">
-              <div><h3 id={`name-${project.id}`}><Link href={`/projects/${project.slug}`}>{project.name}</Link></h3><p>{project.country} / {project.region}</p><p>{project.capacityMw === null ? copy("Capacity UNKNOWN", "容量未知") : `${new Intl.NumberFormat("en-GB", { maximumFractionDigits: 2 }).format(project.capacityMw)} MW`}</p></div>
+              <div><h3 id={`name-${project.id}`}><Link href={`/projects/${project.slug}`}>{project.name}</Link></h3><p>{project.country} / {project.region}</p><p>{project.capacityMw === null ? copy("Capacity UNKNOWN", "容量未知") : `${new Intl.NumberFormat("en-GB", { maximumFractionDigits: 2 }).format(project.capacityMw)} MW`}</p><p className="project-review-date">{project.reviewedOn ? <>{copy("Assessment reviewed", "评估复核日期")}: <time dateTime={project.reviewedOn}>{project.reviewedOn}</time></> : copy("Assessment review: not recorded", "评估复核：未记录")}</p></div>
               <div><span className="project-mobile-label">{copy("Lifecycle", "生命周期")}</span><span className={`project-status project-status-${project.normalizedStatus}`}>{zh ? projectStatusZh(project.normalizedStatus) : project.statusLabel}</span></div>
               <div><span className="project-mobile-label">FID</span><strong>{fidLabels[project.fid][zh ? 1 : 0]}</strong></div>
               <dl className="project-overview-key-gates">{project.readiness.filter((g) => ["Permitting", "Revenue", "Execution"].includes(g.area)).map((g) => <div key={g.area}><dt>{zh ? areaZh[g.area] : g.area}</dt><dd>{gateState(g.state)}</dd></div>)}</dl>
@@ -98,7 +99,10 @@ export function ProjectFilters({ projects, regions, countries, statuses, readine
                   <h4>{copy("Latest recorded milestone", "最新记录的里程碑")}</h4>
                   {project.latestMilestone ? <><p><time dateTime={project.latestMilestone.date}>{project.latestMilestone.dateLabel}</time> — {project.latestMilestone.title}</p><p>{project.latestMilestone.description}</p></> : <p>{copy("UNKNOWN", "未知")}</p>}
                 </div>
-                <div><h4>{copy("Readiness and evidence", "准备度与证据")}</h4><dl className="project-overview-all-gates">{project.readiness.map((g) => <div key={g.area}><dt>{zh ? areaZh[g.area] : g.area} {gateState(g.state)}</dt><dd>{g.evidence}</dd></div>)}</dl>
+                <div><h4>{copy("Readiness and evidence", "准备度与证据")}</h4><dl className="project-overview-all-gates">{project.readiness.map((g) => {
+                  const evidence = project.evidenceCounts.find((entry) => entry.area === g.area)!;
+                  return <div key={g.area}><dt>{zh ? areaZh[g.area] : g.area} {gateState(g.state)}</dt><dd>{g.evidence}<br /><Link href={`/projects/${project.slug}#${evidence.anchor}`} aria-label={`${copy("Public evidence", "公开证据")} — ${project.name} — ${zh ? areaZh[g.area] : g.area}`}>{evidence.count ? `${copy("Linked evidence records", "已关联证据记录")}: ${evidence.count}` : copy("No linked evidence recorded", "未记录关联证据")}</Link></dd></div>;
+                })}</dl>
                   {project.unstructuredGates.length > 0 && <><h4>{copy("Current gates", "当前门槛")}</h4><ul>{project.unstructuredGates.map((g) => <li key={g}>{g}</li>)}</ul></>}
                 </div>
                 <div><h4>{copy("What to watch next", "下一步观察点")}</h4><ul>{project.watchpoints.length ? project.watchpoints.map((w) => <li key={w}>{w}</li>) : <li>{copy("UNKNOWN", "未知")}</li>}</ul><Link href={`/projects/${project.slug}`}>{copy("Full intelligence & sources", "完整情报与来源")} →</Link></div>
@@ -108,7 +112,7 @@ export function ProjectFilters({ projects, regions, countries, statuses, readine
           </article>
         </li>)}
       </ol> : <p className="archive-search-empty">{copy("No projects match these filters.", "没有符合这些筛选条件的项目。")}</p>}
-      <p className="project-muted-note">{copy("Freshness: material review dates are not recorded per project. Milestone dates describe events, including recorded expectations, and do not indicate when an assessment was reviewed or updated.", "时效性：当前未逐项目记录实质审查日期。里程碑日期描述事件（包括记录的预期事项），并不表示评估的审查或更新日期。")}</p>
+      <p className="project-muted-note">{copy("Assessment review dates describe completed public-source reviews. Unrecorded dates remain explicit. Event dates and source access dates do not establish assessment freshness; evidence gaps do not prove inactivity.", "评估复核日期表示已完成的公开来源审查；未记录的日期保持明确标注。事件日期与来源查阅日期不代表评估时效；证据缺失不等于项目停滞。")}</p>
     </section>
   </>;
 }

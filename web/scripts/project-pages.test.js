@@ -156,6 +156,11 @@ test("construction and commissioning without intelligence retain unknown evidenc
   }
 });
 
+test("a Green Volt record without intelligence does not inherit the bespoke assessment", () => {
+  const project = { ...projectDataset.projects.find((project) => project.id === "green-volt"), intelligence: undefined };
+  assert.ok(overviewAdapter.getProjectReadiness(project).every((gate) => gate.state === "UNKNOWN"));
+});
+
 test("all 48 supply chains retain six categories, cable and anchor sub-roles, and valid provenance", () => {
   const sources = new Map(projectDataset.sources.map((s) => [s.sourceId, s]));
   for (const project of overviewAdapter.getProjectIndexItems()) {
@@ -240,8 +245,13 @@ function renderOverview(language) {
   } };
   vm.runInNewContext(compiled.outputText, context);
   const options = overviewAdapter.getProjectOptions();
+  const evidenceFile = path.join(__dirname, "..", "data", "project-public-evidence-adapter.ts");
+  const evidenceModule = { exports: {}, require: () => require("../data/projects/public-evidence.json") };
+  vm.runInNewContext(ts.transpileModule(fs.readFileSync(evidenceFile, "utf8"), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true },
+  }).outputText, evidenceModule);
   return renderToStaticMarkup(React.createElement(context.exports.ProjectFilters, {
-    projects: overviewAdapter.getProjectIndexItems(), ...options,
+    projects: overviewAdapter.getProjectIndexItems().map((project) => ({ ...project, ...evidenceModule.exports.getProjectReviewSummary(project.id) })), ...options,
     statuses: options.statuses.map((value) => ({ value, label: overviewAdapter.formatStatus(value) })),
     readinessAreas: overviewAdapter.readinessAreas, readinessStates: overviewAdapter.readinessStates,
   }));

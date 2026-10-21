@@ -1691,6 +1691,36 @@
       "publishedDate": null,
       "accessedDate": "2026-10-07",
       "licenseNote": "Public source; factual attribution and link only."
+    },
+    {
+      "sourceId": "src-green-volt-survey-completion-2026",
+      "title": "Green Volt completes major survey campaign",
+      "publisher": "Green Volt Offshore Windfarm",
+      "url": "https://greenvoltoffshorewind.com/green-volt-completes-major-survey-campaign/",
+      "sourceTier": 2,
+      "publishedDate": "2026-09-16",
+      "accessedDate": "2026-10-21",
+      "licenseNote": "Public source; concise factual attribution and provenance only."
+    },
+    {
+      "sourceId": "src-equinor-tampen-fid-2019",
+      "title": "Investing in Hywind Tampen development",
+      "publisher": "Equinor",
+      "url": "https://www.equinor.com/news/archive/2019-10-11-hywind-tampen",
+      "sourceTier": 2,
+      "publishedDate": "2019-10-11",
+      "accessedDate": "2026-10-21",
+      "licenseNote": "Public source; concise factual attribution and provenance only."
+    },
+    {
+      "sourceId": "src-ces-campionwind-termination-2026",
+      "title": "ScotWind developers set out latest multi-billion-pound supply chain commitments",
+      "publisher": "Crown Estate Scotland",
+      "url": "https://www.crownestatescotland.com/news/scotwind-developers-set-out-latest-multi-billion-pound-supply-chain-commitments",
+      "sourceTier": 1,
+      "publishedDate": null,
+      "accessedDate": "2026-10-21",
+      "licenseNote": "Public source; concise factual attribution and provenance only."
     }
   ],
   "projects": [
@@ -1856,7 +1886,8 @@
       "sourceIds": [
         "src-equinor-hywind-tampen",
         "src-equinor-hywind-tampen-contracts",
-        "src-supply-tampen-current-owners"
+        "src-supply-tampen-current-owners",
+        "src-equinor-tampen-fid-2019"
       ],
       "factClaims": [
         {
@@ -1904,10 +1935,11 @@
       ],
       "intelligence": {
         "currentAssessment": "Operational oil-and-gas electrification project. Hywind Tampen reached full operation in 2023 as a 94.6 MW floating wind farm supplying the Snorre and Gullfaks fields.",
-        "fidStatus": "FID confirmed. Equinor's 2019 contract announcement is used as evidence for the project partners' investment decision and major contract awards.",
+        "fidStatus": "FID confirmed. Equinor explicitly announced the partners' final investment decision on 11 October 2019; the later contract announcement records procurement.",
         "sourceIds": [
           "src-equinor-hywind-tampen",
-          "src-equinor-hywind-tampen-contracts"
+          "src-equinor-hywind-tampen-contracts",
+          "src-equinor-tampen-fid-2019"
         ],
         "confirmedFacts": [
           {
@@ -1937,6 +1969,13 @@
               "src-equinor-hywind-tampen-contracts"
             ],
             "confidence": "high"
+          },
+          {
+            "text": "Equinor announced on 11 October 2019 that the Snorre and Gullfaks partners had made the final investment decision for Hywind Tampen.",
+            "sourceIds": [
+              "src-equinor-tampen-fid-2019"
+            ],
+            "confidence": "high"
           }
         ],
         "editorialInferences": [
@@ -1961,7 +2000,7 @@
           "Revenue - SECURED: The project has a defined field-electrification use case for Snorre and Gullfaks.",
           "Engineering - SECURED: Capacity, turbine count, water depth, and Hywind technology are verified.",
           "Procurement - SECURED: Major turbine, substructure, cable, and installation contracts were awarded.",
-          "Financing / FID - SECURED: Investment decision evidence is present in the stored Equinor contract source.",
+          "Financing / FID - SECURED: Equinor explicitly announced the partners' investment decision on 11 October 2019.",
           "Execution - SECURED: First production and full operation are verified."
         ],
         "watchpoints": [
@@ -3699,7 +3738,8 @@
         "src-energyvoice-green-volt-buzzard-2025",
         "src-ofgem-green-volt-land-access-2026",
         "src-green-volt-surveys-2026",
-        "src-sdi-green-volt-2026"
+        "src-sdi-green-volt-2026",
+        "src-green-volt-survey-completion-2026"
       ],
       "factClaims": [
         {
@@ -3753,8 +3793,8 @@
         }
       ],
       "intelligence": {
-        "currentAssessment": "Active / Pre-FID. Green Volt has full onshore and offshore consent, a Crown Estate Scotland option agreement, and a 400 MW AR6 CfD, while 2025-2026 FEED, land-access, and survey activity show continuing development. Construction is not yet committed because no public FID or financial close announcement was verified and oil-and-gas offtake remains a material open gate after Buzzard electrification was reportedly dropped.",
-        "fidStatus": "No public FID or financial close announcement verified as of 2026-09-02; latest public evidence still frames FID as a future 2026 decision rather than an achieved milestone.",
+        "currentAssessment": "Active development / FID not verified in the reviewed public sources. Green Volt has onshore and offshore consent, a lease option and 400 MW of AR6 CfD support. Its September 2026 survey-completion announcement supports continuing engineering work. Current oil-and-gas offtake, major supply awards and construction commitment remain unverified within this review.",
+        "fidStatus": "No public FID or financial close announcement verified in the sources reviewed on 2026-10-21; development activity and target dates do not establish an investment decision.",
         "sourceIds": [
           "src-green-volt-consent",
           "src-crown-estate-scotland-intog",
@@ -3763,7 +3803,8 @@
           "src-energyvoice-green-volt-buzzard-2025",
           "src-ofgem-green-volt-land-access-2026",
           "src-green-volt-surveys-2026",
-          "src-sdi-green-volt-2026"
+          "src-sdi-green-volt-2026",
+          "src-green-volt-survey-completion-2026"
         ],
         "confirmedFacts": [
           {
@@ -3805,6 +3846,13 @@
             "text": "Green Volt reported continuing 2026 onshore and nearshore survey work to inform civil, cable, system, and construction methodology design.",
             "sourceIds": [
               "src-green-volt-surveys-2026"
+            ],
+            "confidence": "high"
+          },
+          {
+            "text": "Green Volt reported completion of its nearshore survey campaign on 16 September 2026; the results will inform export-cable route design.",
+            "sourceIds": [
+              "src-green-volt-survey-completion-2026"
             ],
             "confidence": "high"
           }
@@ -5625,7 +5673,8 @@
       "sourceIds": [
         "src-scotgov-owps-2026",
         "src-marramwind-planning-2026",
-        "src-supply-scottishpower-swap"
+        "src-supply-scottishpower-swap",
+        "src-ces-campionwind-termination-2026"
       ],
       "factClaims": [
         {
@@ -5665,11 +5714,12 @@
         }
       ],
       "intelligence": {
-        "currentAssessment": "Cancelled ScotWind floating project. CampionWind was awarded ScotWind seabed rights, but the lease was subsequently handed back to Crown Estate Scotland while ScottishPower continues MarramWind; the project has no current consent, revenue, FID, procurement, or execution path.",
+        "currentAssessment": "Cancelled ScotWind floating project. Crown Estate Scotland confirms Shell terminated the CampionWind option agreement in late 2025. Public records support the cancellation assessment; they do not disclose all internal engineering, commercial or closure arrangements.",
         "fidStatus": "FID not reached. The project was relinquished before a verified investment decision.",
         "sourceIds": [
           "src-scotgov-owps-2026",
-          "src-marramwind-planning-2026"
+          "src-marramwind-planning-2026",
+          "src-ces-campionwind-termination-2026"
         ],
         "confirmedFacts": [
           {
@@ -5692,6 +5742,13 @@
               "src-scotgov-owps-2026"
             ],
             "confidence": "medium"
+          },
+          {
+            "text": "Crown Estate Scotland states that Shell terminated the CampionWind option agreement in late 2025.",
+            "sourceIds": [
+              "src-ces-campionwind-termination-2026"
+            ],
+            "confidence": "high"
           }
         ],
         "editorialInferences": [
@@ -18607,14 +18664,15 @@
       "date": "2025",
       "datePrecision": "year",
       "eventType": "lease_relinquishment",
-      "title": "CampionWind lease handed back",
-      "description": "Offshore Wind Scotland reported Shell handed back the CampionWind lease to Crown Estate Scotland.",
+      "title": "CampionWind option agreement terminated",
+      "description": "Crown Estate Scotland records termination of the CampionWind option agreement by Shell in late 2025; the exact effective day is not established.",
       "companyNames": [
         "Shell",
         "Crown Estate Scotland"
       ],
       "sourceIds": [
-        "src-marramwind-planning-2026"
+        "src-marramwind-planning-2026",
+        "src-ces-campionwind-termination-2026"
       ],
       "factClaims": [
         {
@@ -19113,6 +19171,56 @@
           "path": "title",
           "value": "BOEM lists processed lease cancellation and relinquishment",
           "sourceId": "src-supply-canopy-cancelled",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "green-volt-nearshore-survey-completed-2026-09-16",
+      "projectId": "green-volt",
+      "date": "2026-09-16",
+      "datePrecision": "day",
+      "eventType": "other_verified_event",
+      "title": "Nearshore survey campaign completed",
+      "description": "The developer reported survey completion to inform export-cable route design; this is engineering activity, not a construction start.",
+      "companyNames": [
+        "Green Volt"
+      ],
+      "sourceIds": [
+        "src-green-volt-survey-completion-2026"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "other_verified_event",
+          "sourceId": "src-green-volt-survey-completion-2026",
+          "note": null,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-fid-2019-10-11",
+      "projectId": "hywind-tampen",
+      "date": "2019-10-11",
+      "datePrecision": "day",
+      "eventType": "fid",
+      "title": "Partners made final investment decision",
+      "description": "Equinor explicitly announced the Snorre and Gullfaks partners' final investment decision.",
+      "companyNames": [
+        "Equinor",
+        "Snorre partners",
+        "Gullfaks partners"
+      ],
+      "sourceIds": [
+        "src-equinor-tampen-fid-2019"
+      ],
+      "factClaims": [
+        {
+          "path": "eventType",
+          "value": "fid",
+          "sourceId": "src-equinor-tampen-fid-2019",
           "note": null,
           "confidence": "high"
         }

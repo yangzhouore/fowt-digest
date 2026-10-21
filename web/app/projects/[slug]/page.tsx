@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ProjectPublicEvidence, ProjectReviewStrip, ProjectReviewHistory } from "../project-public-evidence";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "../../site-footer";
@@ -140,6 +141,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </p>
           ) : null}
         </section>
+
+        <ProjectReviewStrip project={project} />
+        <ProjectPublicEvidence project={project} />
+        <ProjectReviewHistory project={project} />
 
         <section className="project-technical" aria-labelledby="technical-heading">
           <h2 id="technical-heading"><LocalizedCopy en="Technical configuration" zh="技术配置" /></h2>
@@ -324,6 +329,8 @@ function ProjectIntelligenceDetailPage({
           </div>
         </section>
 
+        <ProjectReviewStrip project={project} />
+
         <section className="project-intel-section project-intel-progress-section" aria-labelledby="progress-heading">
           <div className="project-section-copy">
             <p className="eyebrow">Project progress</p>
@@ -377,23 +384,7 @@ function ProjectIntelligenceDetailPage({
           </ol>
         </section>
 
-        <section className="project-intel-section" aria-labelledby="readiness-heading">
-          <div className="project-section-copy">
-            <p className="eyebrow">Readiness</p>
-            <h2 id="readiness-heading">What is secured, active, or still missing</h2>
-          </div>
-          <div className="project-intel-readiness" role="table" aria-label={`${project.name} readiness matrix`}>
-            {readinessRows.map((row) => (
-              <div key={row.area} role="row">
-                <p role="cell">{row.area}</p>
-                <strong className={`project-intel-state-pill project-intel-state-${stateClass(row.state)}`} role="cell">
-                  {row.state}
-                </strong>
-                <span role="cell">{row.evidence}</span>
-              </div>
-            ))}
-          </div>
-        </section>
+        <ProjectPublicEvidence project={project} />
 
         <section className="project-intel-section" aria-labelledby="watch-heading">
           <div className="project-section-copy">
@@ -508,6 +499,8 @@ function ProjectIntelligenceDetailPage({
           </ol>
         </section>
 
+        <ProjectReviewHistory project={project} />
+
         <section className="project-intel-section project-intel-secondary" aria-labelledby="project-navigation-heading">
           <h2 id="project-navigation-heading">Project index</h2>
           <p className="text-link-row">
@@ -597,38 +590,7 @@ function GreenVoltProjectDetailPage({
       text: "Green Volt remains active and pre-construction, but FID, offtake, and procurement are still gating decisions.",
     },
   ];
-  const readinessRows = [
-    {
-      area: "Permitting",
-      state: "SECURED",
-      evidence: "Onshore and offshore consent granted.",
-    },
-    {
-      area: "Revenue",
-      state: "SECURED",
-      evidence: "400 MW AR6 CfD secured; oil-and-gas offtake is unresolved.",
-    },
-    {
-      area: "Engineering",
-      state: "ACTIVE",
-      evidence: "Worley FEED and 2026 survey work support detailed design.",
-    },
-    {
-      area: "Procurement",
-      state: "UNKNOWN",
-      evidence: "Major supply and EPCI awards are not verified.",
-    },
-    {
-      area: "Financing / FID",
-      state: "NOT VERIFIED",
-      evidence: "No public FID or financial close announcement verified.",
-    },
-    {
-      area: "Execution",
-      state: "NOT STARTED",
-      evidence: "No fabrication, construction, or installation start verified.",
-    },
-  ];
+
   const watchpoints = [
     {
       title: "FID / financial close",
@@ -679,6 +641,8 @@ function GreenVoltProjectDetailPage({
             </dl>
           </div>
         </section>
+
+        <ProjectReviewStrip project={project} />
 
         <section className="green-volt-section green-volt-progress-section" aria-labelledby="progress-heading">
           <div className="project-section-copy">
@@ -734,23 +698,7 @@ function GreenVoltProjectDetailPage({
           </ol>
         </section>
 
-        <section className="green-volt-section" aria-labelledby="readiness-heading">
-          <div className="project-section-copy">
-            <p className="eyebrow">Readiness</p>
-            <h2 id="readiness-heading">What is secured, active, or still missing</h2>
-          </div>
-          <div className="green-volt-readiness" role="table" aria-label="Green Volt readiness matrix">
-            {readinessRows.map((row) => (
-              <div key={row.area} role="row">
-                <p role="cell">{row.area}</p>
-                <strong className={`green-volt-state-pill green-volt-state-${stateClass(row.state)}`} role="cell">
-                  {row.state}
-                </strong>
-                <span role="cell">{row.evidence}</span>
-              </div>
-            ))}
-          </div>
-        </section>
+        <ProjectPublicEvidence project={project} />
 
         <section className="green-volt-section" aria-labelledby="watch-heading">
           <div className="project-section-copy">
@@ -845,6 +793,8 @@ function GreenVoltProjectDetailPage({
             ))}
           </ol>
         </section>
+
+        <ProjectReviewHistory project={project} />
 
         <section className="green-volt-section green-volt-secondary" aria-labelledby="project-navigation-heading">
           <h2 id="project-navigation-heading">Project index</h2>

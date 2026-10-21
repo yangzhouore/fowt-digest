@@ -90,3 +90,56 @@ test("language switches to Chinese, persists on navigation, and switches back", 
   await page.getByRole("button", { name: "EN", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Project landscape", exact: true })).toBeVisible();
 });
+
+test("project evidence links navigate to bounded sources and preserve review date distinctions", async ({ page }) => {
+  await page.goto("/projects");
+  const project = page.getByRole("article", { name: "Green Volt", exact: true });
+  await expect(project.getByText("Assessment reviewed", { exact: false })).toBeVisible();
+  await project.getByText("Assessment, gates & milestones", { exact: true }).click();
+  await project.getByRole("link", { name: "Public evidence — Green Volt — Engineering", exact: true }).click();
+  await expect(page).toHaveURL(/\/projects\/green-volt#evidence-engineering$/);
+  const engineering = page.locator("#evidence-engineering");
+  const disclosure = engineering.locator("summary");
+  await disclosure.focus();
+  await page.keyboard.press("Enter");
+  await expect(engineering.getByRole("heading", { name: "Recorded public evidence", exact: true })).toBeVisible();
+  const source = engineering.getByRole("link", { name: "Green Volt completes major survey campaign", exact: true });
+  await expect(source).toHaveAttribute("href", "https://greenvoltoffshorewind.com/green-volt-completes-major-survey-campaign/");
+  await expect(engineering.getByText("Public webpage inspected", { exact: false }).first()).toBeVisible();
+  await engineering.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/project-evidence-desktop.png" });
+  await page.getByRole("link", { name: "Review history & changes", exact: true }).click();
+  await expect(page).toHaveURL(/#review-history$/);
+  await expect(page.getByRole("heading", { name: /Completed public-source review/ })).toBeVisible();
+  await page.getByText("Recorded changes", { exact: false }).last().click();
+  await expect(page.getByText("Before", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("After", { exact: true }).first()).toBeVisible();
+});
+
+test("legacy profiles show unrecorded reviews and stored evidence, with explicit empty areas", async ({ page }) => {
+  await page.goto("/projects/hywind-scotland");
+  await expect(page.getByText("Assessment review: not recorded", { exact: true })).toBeVisible();
+  await expect(page.getByText("No assessment review history recorded", { exact: true })).toBeVisible();
+  await page.locator("#evidence-permitting summary").click();
+  await expect(page.locator("#evidence-permitting").getByText("No linked evidence recorded", { exact: true })).toBeVisible();
+  await page.locator("#evidence-engineering summary").click();
+  await expect(page.locator("#evidence-engineering").getByText("Stored source-backed record", { exact: true }).first()).toBeVisible();
+});
+
+test("public evidence stays accessible on mobile in Chinese and dark theme", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/projects/hywind-tampen");
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "各准备度领域的公开证据", exact: true })).toBeVisible();
+  const gate = page.locator("#evidence-financing-fid");
+  await gate.locator("summary").click();
+  await expect(gate.getByRole("link", { name: "Investing in Hywind Tampen development", exact: true })).toBeVisible();
+  await expect(gate.getByText("已查阅公开网页", { exact: false })).toBeVisible();
+  await page.locator('label[for="theme-dark"]').click();
+  await expect(page.locator("#theme-dark")).toBeChecked();
+  await gate.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/project-evidence-mobile-zh-dark.png" });
+  await page.reload();
+  await expect(page.getByRole("heading", { name: "各准备度领域的公开证据", exact: true })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});

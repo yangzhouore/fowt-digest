@@ -1,0 +1,3567 @@
+{
+  "schemaVersion": "fowt-project-public-evidence.v1",
+  "projects": [
+    {
+      "projectId": "hywind-scotland",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Equinor identifies Hywind Scotland as a 30 MW floating wind farm with five 6 MW turbines off Peterhead."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project uses spar floating foundations in 95-120 m water depth."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major repowering or retrofit announcement: Would change the technical and commercial assessment of the operating reference asset."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Siemens supplied the five 6 MW wind turbines."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The stored project timeline records first power in 2017."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Life-extension or decommissioning decision: Would define the next material asset-state change after the pilot operating period.",
+            "Updated operating-performance disclosure: Would strengthen the assessment of floating wind reliability and bankability lessons."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "hywind-tampen",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": "Operation is not a substitute for a linked permitting decision; no specific permit decision is mapped here.",
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The project supplies electricity to the Snorre and Gullfaks oil and gas fields."
+            }
+          ],
+          "boundary": "Field-electrification evidence does not disclose complete project economics or internal power-allocation agreements.",
+          "watchpointRefs": [
+            "Field electrification or ownership change: Would alter the commercial context of the operating asset."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Equinor describes Hywind Tampen as an 11-turbine, 94.6 MW floating wind farm in 260-300 m water depth."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Operating-performance update: Would change the reference value of Hywind Tampen for larger floating wind projects."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The 2019 source records major contracts covering turbines, substructures, cables, and marine installation."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Equinor announced on 11 October 2019 that the Snorre and Gullfaks partners had made the final investment decision for Hywind Tampen."
+            }
+          ],
+          "boundary": "The investment decision is explicit in Equinor's announcement; financial-close documentation was not inspected.",
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Equinor records first production in 2022 and full operation in 2023."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major maintenance, retrofit, or decommissioning plan: Would mark the next material execution-stage change."
+          ]
+        }
+      ],
+      "reviews": [
+        {
+          "id": "hywind-tampen-review-2026-10-21",
+          "date": "2026-10-21",
+          "outcome": "completed",
+          "scope": [
+            "Permitting",
+            "Revenue",
+            "Engineering",
+            "Procurement",
+            "Financing / FID",
+            "Execution"
+          ],
+          "coverage": [
+            "Current assessment",
+            "FID",
+            "Timeline",
+            "Roles",
+            "Watchpoints"
+          ],
+          "sources": [
+            {
+              "sourceId": "src-equinor-hywind-tampen",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "Operator page supports operating status, system configuration and field-power use."
+            },
+            {
+              "sourceId": "src-equinor-hywind-tampen-contracts",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "Named contracts provide procurement evidence; the release states regulatory approval conditions."
+            },
+            {
+              "sourceId": "src-equinor-tampen-fid-2019",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "The partners' investment decision is explicit in this earlier announcement."
+            },
+            {
+              "sourceId": "src-supply-tampen-current-owners",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "The operator's later account confirms operating context; it is not an independent ownership audit."
+            }
+          ],
+          "findings": [
+            {
+              "area": "Permitting",
+              "note": "The procurement release records an approval condition. No final permitting decision was inspected; the legacy qualitative state is retained with this limit.",
+              "sourceIds": [
+                "src-equinor-hywind-tampen-contracts"
+              ]
+            },
+            {
+              "area": "Revenue",
+              "note": "Field-power use was checked; internal revenue and power-allocation contracts were not available.",
+              "sourceIds": [
+                "src-equinor-hywind-tampen"
+              ]
+            },
+            {
+              "area": "Engineering",
+              "note": "The operator reports the configuration and system capacity. Engineering calculations and certification deliverables were not inspected.",
+              "sourceIds": [
+                "src-equinor-hywind-tampen"
+              ]
+            },
+            {
+              "area": "Procurement",
+              "note": "The public award announcement was checked. Historical supplier roles retain their original scope.",
+              "sourceIds": [
+                "src-equinor-hywind-tampen-contracts"
+              ]
+            },
+            {
+              "area": "Financing / FID",
+              "note": "An explicit investment-decision announcement now supports the existing confirmed classification.",
+              "sourceIds": [
+                "src-equinor-tampen-fid-2019"
+              ]
+            },
+            {
+              "area": "Execution",
+              "note": "The operator records full operation; later operating context was also checked. Detailed availability and maintenance records were not inspected.",
+              "sourceIds": [
+                "src-equinor-hywind-tampen",
+                "src-supply-tampen-current-owners"
+              ]
+            }
+          ],
+          "summary": "Operating assessment retained. Strengthened FID provenance with the explicit 2019 decision and added that decision to the timeline.",
+          "limitations": "This is a public-source assessment review, not a financial, permit-compliance or engineering audit. Specialist historical supplier documents were retained as stored evidence and were not all reopened."
+        }
+      ],
+      "changes": [
+        {
+          "id": "hywind-tampen-change-1",
+          "date": "2026-10-21",
+          "kind": "fact",
+          "reviewId": "hywind-tampen-review-2026-10-21",
+          "area": "Financing / FID",
+          "target": "timelineEvents.hywind-tampen-fid-2019-10-11",
+          "before": "FID was supported by the later contract source.",
+          "after": "Added the explicit 11 October 2019 investment-decision source and milestone.",
+          "rationale": "Strengthen direct investment-decision provenance.",
+          "sourceIds": [
+            "src-equinor-tampen-fid-2019"
+          ]
+        },
+        {
+          "id": "hywind-tampen-change-2",
+          "date": "2026-10-21",
+          "kind": "assessment",
+          "reviewId": "hywind-tampen-review-2026-10-21",
+          "area": "Financing / FID",
+          "target": "intelligence.fidStatus",
+          "before": "FID confirmed. Equinor's 2019 contract announcement is used as evidence for the project partners' investment decision and major contract awards.",
+          "after": "FID confirmed. Equinor explicitly announced the partners' final investment decision on 11 October 2019; the later contract announcement records procurement.",
+          "rationale": "Retain confirmed FID while using direct decision evidence.",
+          "sourceIds": [
+            "src-equinor-tampen-fid-2019"
+          ]
+        }
+      ]
+    },
+    {
+      "projectId": "kincardine-offshore-wind-farm",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Ownership or O&M responsibility change: Would alter the active company-relationship map."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Principle Power identifies Kincardine as a 50 MW operational floating wind project using WindFloat semi-submersible technology."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project is located about 15 km offshore Aberdeen in 60-80 m water depth."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Operating-performance disclosure: Would update the value of Kincardine as a WindFloat reference project."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "MHI Vestas supplied five V164-9.5 MW turbines for the project expansion."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Bourbon source records marine installation, anchoring, mooring, and dynamic cable work."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Repowering, life-extension, or decommissioning decision: Would materially change the asset lifecycle assessment."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "windfloat-atlantic",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Principle Power identifies WindFloat Atlantic as a 25 MW project using three WindFloat semi-submersible units."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project site is about 20 km offshore Viana do Castelo in roughly 100 m water depth."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Transfer of lessons to follow-on commercial projects: Would affect the strategic assessment of WindFloat Atlantic."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "MHI Vestas supplied three V164-8.4 MW turbines."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The project generated first power in 2020 and became fully operational in 2020."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Operating-performance or availability update: Would change the benchmark value of the project for floating wind scale-up.",
+            "Life-extension, repowering, or decommissioning decision: Would define the next asset-lifecycle gate."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "provence-grand-large",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The official project source identifies Provence Grand Large as a 25 MW, three-turbine project about 17 km offshore."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Prysmian source records the dynamic cable work and RTE grid connection context."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Follow-on French floating wind procurement linkage: Would change the strategic relevance of the pilot."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "EDF announced full commissioning of the floating offshore wind farm in June 2025."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "SBM Offshore announced successful installation of the three floating wind units."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Operating-performance disclosure: Would update the assessment of tension-leg floating wind at pilot scale.",
+            "Life-extension or decommissioning decision: Would mark the next asset-lifecycle gate."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "eolmed",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Eolmed is a 30 MW project with three 10 MW turbines off Gruissan and Port-La Nouvelle."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "BW Ideol records a May 2022 final investment decision and 2022 construction start."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "TotalEnergies announced the start of construction for the first French floating offshore wind farm in 2022."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BW Ideol records first power in April 2026 and full capacity in May 2026."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Early operating-performance update: Would change the assessment of Damping Pool technology after commissioning.",
+            "O&M or reliability disclosure: Would affect how the project informs larger French floating wind delivery.",
+            "Life-extension or decommissioning plan: Would become the next material asset-lifecycle gate."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "demosath",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "RWE describes DemoSATH as a 2 MW demonstrator at the BiMEP test site off the Basque coast."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project uses Saitec's SATH concrete twin-hull floating structure."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Published demonstration results: Would change the technical-readiness assessment of SATH technology.",
+            "Follow-on commercial project using SATH: Would show whether the demonstrator is translating into scale-up."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The stored timeline records operation beginning in September 2023."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Saitec reported two years of DemoSATH floating offshore wind operation in Spain."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "End-of-test, life-extension, or decommissioning decision: Would define the next lifecycle state."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "pentland-floating-offshore-wind-farm",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The project source records offshore consents as approved."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Stiesdal source records a CfD award and TetraSub as selected foundation technology."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Updated COD or CfD delivery milestone: Would change the schedule-risk assessment."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Stiesdal source records a CfD award and TetraSub as selected foundation technology."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, mooring, or EPCI awards: Would strengthen the delivery-chain assessment."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would convert Pentland from pre-FID into a committed construction case."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Construction or fabrication start: Would show execution has begun."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "erebus-floating-wind-farm",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Welsh Government granted consent for a 100 MW floating wind project off Pembrokeshire."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Updated CfD or COD evidence: Would clarify schedule confidence around the 2030 first-power expectation."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The consent source describes seven turbines and offshore distance of about 40 km."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Principle Power identifies WindFloat technology for Erebus and states a delivery expectation around 2029/30 with first power in 2030."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The current dataset records Bureau Veritas certification assurance as an announced relationship."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major supplier or EPCI awards: Would turn the delivery chain from announced technology into contracted execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would determine whether Erebus has become a committed construction project."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Construction or fabrication start: Would materially change the lifecycle status."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "gulf-of-maine-research-array",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM executed the State of Maine research lease on August 19, 2024."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Research Activities Plan or BOEM approval milestone: Would advance the project from lease award into a more defined permitting pathway."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Funding, offtake, or power-sale agreement: Would clarify whether the research array has a bankable revenue or cost-recovery route."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM describes the potential project as up to 12 floating turbines and up to 144 MW."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The state source identifies the Research Array as using University of Maine VolturnUS floating platform technology."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, mooring, or installation awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Construction or offshore installation start: Would move the project into execution."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "goto-offshore-wind-farm",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Goto area received public occupancy plan certification in April 2022 and an occupancy permit with offshore construction start in August 2022."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Chubu Electric Power records commercial operation beginning on 5 January 2026 and identifies eight 2.1 MW floating units."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Replication in Japan offshore wind tenders: Would indicate whether Goto is influencing follow-on commercial floating projects."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Toda designed and built the hybrid spar-type floater used for the project."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "INPEX identifies Goto as a 16.8 MW project in commercial operation through Goto Floating Wind Farm LLC."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Chubu Electric Power records commercial operation beginning on 5 January 2026 and identifies eight 2.1 MW floating units."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Operating performance disclosure: Would show whether Japan first commercial floating wind farm is meeting availability and production expectations.",
+            "Major maintenance or retrofit announcement: Would change the operating-asset risk profile."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "haiyou-guanlan",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "CNOOC records the site as 136 km offshore in 120 m water depth with 7.25 MW installed capacity."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Follow-on CNOOC floating wind deployment: Would show whether the demonstrator is being replicated."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "CNOOC announced grid-connected power generation for the Wenchang deep-sea floating wind demonstration project on 20 May 2023."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Offshore Oil Engineering identifies the project as CNOOC Guanlan and records completion in June 2023."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Operating-performance disclosure: Would clarify reliability in deep-water oilfield-power service.",
+            "Major retrofit or decommissioning plan: Would define the next material asset-state change."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "windfloat-pacific",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM states it is no longer processing the Principle Power lease request after the project no longer retained non-competitive interest status."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project received Approval in Principle and advanced early federal permitting work before discontinuation."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Formal revival or replacement lease path: Would be required to change the cancelled assessment.",
+            "BOEM Oregon commercial leasing outcome: Would provide context for successor floating wind development, not restart WindFloat Pacific by itself."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Principle Power records the original concept as a 24 MW project using 8 MW turbines in deep Oregon waters, while its data table lists 25 MW and 8.4 MW."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Principle Power reuse of WindFloat Pacific lessons: Would affect the historical value of the project record."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Principle Power describes WindFloat Pacific as a DOE-supported Oregon floating wind demonstration project that was eventually discontinued."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "culzean-demo-floating-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Scottish Government January 2026 offshore wind project map lists Culzean Demo as consented."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "TotalEnergies launched a 3 MW floating wind pilot to supply renewable power to the Culzean offshore platform."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The turbine is planned 2 km west of Culzean, about 220 km off eastern Scotland."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The pilot uses an Ocergy modular semi-submersible floater hull according to TotalEnergies."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Ocergy reports TotalEnergies FID for the Culzean OCG-Wind pilot in its August 2024 construction announcement."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Commissioning or first-power confirmation: Would move the pilot from consented/launched to operational.",
+            "Verified construction or installation milestone: Would strengthen the execution assessment if operation remains unconfirmed.",
+            "Operating data from Culzean power supply: Would show whether the hybrid offshore-platform power concept is working."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "green-volt",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Scottish Ministers granted offshore consent and marine licences on 19 April 2024; Aberdeenshire Council granted onshore infrastructure consent on 21 March 2024."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Crown Estate Scotland entered into an Option Agreement with Flotation Energy and Vårgrønn for Green Volt on 19 April 2024."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Ofgem granted consent in January 2026 for Green Volt to exercise statutory rights of entry for survey work on remaining land along the planned cable corridor."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Crown Estate Scotland lease step-through for Green Volt"
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "DESNZ AR6 results awarded Green Volt Offshore Windfarm (GV01) 400 MW of Floating Offshore Wind CfD support for delivery year 2028/29 at 139.93 GBP/MWh in 2012 prices."
+            }
+          ],
+          "boundary": "The recorded 400 MW CfD award does not establish all revenue or oil-and-gas offtake arrangements for the up-to-560 MW project.",
+          "watchpointRefs": [
+            "Named replacement or confirmed oil-and-gas offtake agreement"
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Green Volt awarded Worley the onshore substation FEED contract in July 2025."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Green Volt reported continuing 2026 onshore and nearshore survey work to inform civil, cable, system, and construction methodology design."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Green Volt reported completion of its nearshore survey campaign on 16 September 2026; the results will inform export-cable route design."
+            }
+          ],
+          "boundary": "FEED and survey announcements establish engineering activity; they do not establish completed design acceptance, FID or construction.",
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": "No major supply or EPCI award is linked here. This does not establish that no private agreement exists.",
+          "watchpointRefs": [
+            "Turbine, floater, cable, mooring, or EPCI contract awards"
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": "No investment-decision announcement was identified within the reviewed source set. SDI describes a target, not an achieved FID.",
+          "watchpointRefs": [
+            "FID or financial close announcement"
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Start of fabrication, onshore substation construction, or offshore installation"
+          ]
+        }
+      ],
+      "reviews": [
+        {
+          "id": "green-volt-review-2026-10-21",
+          "date": "2026-10-21",
+          "outcome": "completed",
+          "scope": [
+            "Permitting",
+            "Revenue",
+            "Engineering",
+            "Procurement",
+            "Financing / FID",
+            "Execution"
+          ],
+          "coverage": [
+            "Current assessment",
+            "FID",
+            "Timeline",
+            "Roles",
+            "Watchpoints"
+          ],
+          "sources": [
+            {
+              "sourceId": "src-green-volt-overview",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "Developer page continues to frame the project as development with a future first-power target."
+            },
+            {
+              "sourceId": "src-green-volt-consent",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "Onshore and offshore consent dates are explicitly recorded."
+            },
+            {
+              "sourceId": "src-crown-estate-scotland-intog",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "Green Volt option agreement is recorded; progression into a full lease is conditional."
+            },
+            {
+              "sourceId": "src-green-volt-cfd-ar6-govuk",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "The AR6 table lists 400 MW of support; this is an award record, not FID."
+            },
+            {
+              "sourceId": "src-green-volt-worley-feed-2025",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "The award concerns onshore-substation FEED, not the full construction package."
+            },
+            {
+              "sourceId": "src-green-volt-survey-completion-2026",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "September survey completion supports ongoing design work, not construction commencement."
+            },
+            {
+              "sourceId": "src-sdi-green-volt-2026",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "The opportunity page describes development and an estimated FID year; it does not announce a completed FID."
+            }
+          ],
+          "findings": [
+            {
+              "area": "Permitting",
+              "note": "Developer consent and seabed-authority option evidence were checked; discharge of every condition and a full lease are not established.",
+              "sourceIds": [
+                "src-green-volt-consent",
+                "src-crown-estate-scotland-intog"
+              ]
+            },
+            {
+              "area": "Revenue",
+              "note": "The government award was checked. Current oil-and-gas counterparties and the complete revenue structure remain unverified.",
+              "sourceIds": [
+                "src-green-volt-cfd-ar6-govuk"
+              ]
+            },
+            {
+              "area": "Engineering",
+              "note": "FEED and survey completion were checked. Final design acceptance is not established.",
+              "sourceIds": [
+                "src-green-volt-worley-feed-2025",
+                "src-green-volt-survey-completion-2026"
+              ]
+            },
+            {
+              "area": "Procurement",
+              "note": "Reviewed project material identifies FEED activity; no firm major-equipment or full EPCI award was identified in this source set.",
+              "sourceIds": [
+                "src-green-volt-worley-feed-2025",
+                "src-green-volt-overview"
+              ]
+            },
+            {
+              "area": "Financing / FID",
+              "note": "Development descriptions and an estimated FID year are not confirmation of FID or financial close.",
+              "sourceIds": [
+                "src-sdi-green-volt-2026"
+              ]
+            },
+            {
+              "area": "Execution",
+              "note": "The latest material update reviewed describes completed surveys and further design, not a verified construction start.",
+              "sourceIds": [
+                "src-green-volt-survey-completion-2026"
+              ]
+            }
+          ],
+          "summary": "All six public-evidence areas and the assessment, FID, timeline, roles and watchpoints were reviewed. Added survey completion and bounded the current assessment.",
+          "limitations": "Limited to the named public pages and targeted announcement searches. Private offtake, finance, contracts, internal design and site progress were not inspected. Historical Buzzard reporting was not freshly verified; current offtake is left unverified."
+        }
+      ],
+      "changes": [
+        {
+          "id": "green-volt-change-1",
+          "date": "2026-10-21",
+          "kind": "fact",
+          "reviewId": "green-volt-review-2026-10-21",
+          "area": "Engineering",
+          "target": "timelineEvents.green-volt-nearshore-survey-completed-2026-09-16",
+          "before": "Latest recorded survey activity: July 2026.",
+          "after": "Added the developer's September 2026 nearshore survey-completion announcement.",
+          "rationale": "Material update to the evidence of ongoing engineering.",
+          "sourceIds": [
+            "src-green-volt-survey-completion-2026"
+          ]
+        },
+        {
+          "id": "green-volt-change-2",
+          "date": "2026-10-21",
+          "kind": "assessment",
+          "reviewId": "green-volt-review-2026-10-21",
+          "area": "Project",
+          "target": "intelligence.currentAssessment",
+          "before": "Active / Pre-FID. Green Volt has full onshore and offshore consent, a Crown Estate Scotland option agreement, and a 400 MW AR6 CfD, while 2025-2026 FEED, land-access, and survey activity show continuing development. Construction is not yet committed because no public FID or financial close announcement was verified and oil-and-gas offtake remains a material open gate after Buzzard electrification was reportedly dropped.",
+          "after": "Active development / FID not verified in the reviewed public sources. Green Volt has onshore and offshore consent, a lease option and 400 MW of AR6 CfD support. Its September 2026 survey-completion announcement supports continuing engineering work. Current oil-and-gas offtake, major supply awards and construction commitment remain unverified within this review.",
+          "rationale": "Separate current public verification limits from the earlier reported offtake setback.",
+          "sourceIds": [
+            "src-green-volt-overview",
+            "src-green-volt-survey-completion-2026"
+          ]
+        },
+        {
+          "id": "green-volt-change-3",
+          "date": "2026-10-21",
+          "kind": "assessment",
+          "reviewId": "green-volt-review-2026-10-21",
+          "area": "Financing / FID",
+          "target": "intelligence.fidStatus",
+          "before": "No public FID or financial close announcement verified as of 2026-09-02; latest public evidence still frames FID as a future 2026 decision rather than an achieved milestone.",
+          "after": "No public FID or financial close announcement verified in the sources reviewed on 2026-10-21; development activity and target dates do not establish an investment decision.",
+          "rationale": "Refresh the assessment scope without treating target dates as FID.",
+          "sourceIds": [
+            "src-sdi-green-volt-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "projectId": "salamander-floating-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Scottish Government January 2026 project map lists Salamander as consented."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Crown Estate Scotland lease progression: Would confirm movement beyond exclusivity toward seabed lease rights."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or other revenue award: Would materially improve bankability for the pre-commercial project."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Salamander project is a proposed 100 MW floating wind farm with a 100 MW onshore battery off Peterhead."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project has adopted Odfjell Oceanwind Deepsea Star semi-submersible steel foundation technology."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "ayre-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Qair announced onshore infrastructure planning consent for Ayre on 17 March 2026."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The Ayre document library records offshore consent application documents and onshore consent application documents in 2025."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Offshore consent determination: Would move the permitting gate from active to secured."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would create a clearer revenue route before FID."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Qair describes Ayre as in the development phase with environmental and technical studies progressing."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "buchan-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Aberdeenshire Council granted onshore planning consent in May 2026."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The offshore planning application was submitted to Scottish Ministers in August 2025 and remains under consideration."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Offshore consent determination: Would complete the main current permitting gate."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD auction participation or award: Would establish a revenue route."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Buchan describes the project as up to 70 turbines on BW Ideol Damping Pool floating foundations."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Buchan appointed Kent as Owner's Engineer in 2026 to support the next phase toward FEED."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "marramwind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Offshore Wind Scotland reported ScottishPower Renewables submitted the MarramWind Section 36 planning application on 23 January 2026."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The developer page records earlier EIA scoping submitted in January 2023."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Consent determination: Would move the project beyond the main current permitting gate."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would clarify the revenue path after consent."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "MarramWind is a proposed up to 3 GW floating offshore wind farm about 75 km off northeast Scotland."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "muir-mhor",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The developer says onshore planning consent is secured and advanced supply-chain engagement is underway."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "A January 2026 public notice states Muir Mhor Offshore Wind Farm Limited applied to Scottish Ministers for Section 36 consent and marine licences."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The Scottish Government January 2026 project map lists Muir Mhor as in planning with 1005 MW capacity."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Offshore consent determination: Would secure the key remaining permitting gate."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would define the revenue route."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Muir Mhor is described by the developer as a 1 GW floating offshore wind farm located 63 km off Peterhead."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "ossian",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Ossian submitted the wind farm array consent application to the Scottish Government in June 2024, with additional information submitted in 2025 and early 2026."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project has separate generation and transmission infrastructure consent pathways."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Ossian says it is pausing Lincolnshire DCO work to focus on the Scottish grid connection after NESO design changes."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Array consent determination: Would materially de-risk the generation asset.",
+            "Scottish transmission consent route and grid connection updates: Would clarify the redesigned export path."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would define revenue support for the very large project."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "arven-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The project timeline records ScotWind lease option award in 2022, baseline surveys in 2023, offshore scoping in 2024, and onshore scoping planned for 2026."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The Scottish Government January 2026 map lists Arven as lease awarded."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Consent application submission: Would move Arven from lease/scoping into formal permitting.",
+            "Grid/export-route confirmation: Would clarify a critical Shetland project interface."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake route: Would establish commercial support."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Arven is a 2.3 GW floating wind development about 30 km from Mainland Shetland, spanning 1.8 GW and 500 MW sites."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major procurement awards: Would show the project moving toward execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major procurement awards: Would show the project moving toward execution."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "bellrock-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Bellrock submitted Section 36 and Marine Licence applications for its Wind Farm Development Area in April 2026."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The consent application covers up to 132 floating turbines plus substructures, moorings, anchors, inter-array cables, and supporting offshore infrastructure."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Wind Farm Development Area consent determination: Would materially de-risk the generation asset.",
+            "Transmission infrastructure consent progress: Would define the export path."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would establish the commercial route."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Bellrock is a proposed 1.8 GW floating project about 120 km east of Stonehaven."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Nadara appointed Aker Solutions group companies for electrical infrastructure studies in July 2026."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark movement toward execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark movement toward execution."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "broadshore-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Scottish Government January 2026 map lists Broadshore as lease awarded."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Consent application submission: Would move the project into formal permitting.",
+            "Grid/export-route selection: Would clarify a core development constraint."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would define revenue support."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Broadshore is being developed by Nadara as an up to 900 MW floating wind farm 47 km north of Fraserburgh."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The developer states the site is in water depths up to 100 m and has an array area of 134 square km."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project page records recent wind/metocean campaign completion and community engagement updates."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would indicate transition from development to delivery."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would indicate transition from development to delivery."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "havbredey-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Offshore scoping opinion or consent application: Would advance the permitting path.",
+            "Grid connection and transmission-route evidence: Would clarify a major delivery interface."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would establish revenue support."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Havbredey is a proposed 1.5 GW floating wind farm about 27 km northwest of Cape Wrath."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The developer describes up to 110 wind turbines and 75-116 m water depth."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "stoura-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The developer page states seabed development rights were awarded to ESB in 2022 through ScotWind."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The Scottish Government January 2026 map lists Stoura as lease awarded with 500 MW capacity."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Scoping or consent application submission: Would show movement beyond lease-stage development.",
+            "Grid/export-route evidence: Would clarify the Shetland delivery pathway."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would establish revenue support."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Stoura is a large-scale floating wind farm project currently in development off the east coast of Shetland."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major engineering/procurement awards: Would indicate maturation toward delivery."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major engineering/procurement awards: Would indicate maturation toward delivery."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "stromar-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The project page says the joint venture partners signed an option agreement with Crown Estate Scotland in April 2022."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Stromar submitted EIA scoping and HRA screening reports in January 2024 and held statutory consultation in late 2024."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Consent application submission: Would move Stromar into formal determination.",
+            "Grid connection and export-route evidence: Would clarify delivery readiness."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Stromar is a floating offshore wind development off Caithness, around 50 km from shore, in roughly 60-100 m water depth."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The current project website states Stromar could generate up to 1.5 GW and is led by Nadara."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Confirmed project capacity/design envelope: Would resolve the 1 GW versus up to 1.5 GW evidence tension."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would indicate transition toward execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would indicate transition toward execution."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "talisk-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Consent application submission: Would move Talisk beyond lease-stage development."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Talisk is a 495 MW floating project in Scotland N3, 35 km offshore from the Western Isles."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project page lists a base case of 33 x 15 MW turbines in 106-125 m water depth."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Talisk states site investigations and supply-chain engagement are ongoing, with EIA preparation as the next step."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Grid and port route confirmation: Would strengthen the delivery case."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD/FID or major supplier awards: Would materially change bankability and execution readiness."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD/FID or major supplier awards: Would materially change bankability and execution readiness."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "campionwind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Scottish Government January 2026 map lists CampionWind under lease relinquished with Shell as developer and 3000 MW capacity."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Offshore Wind Scotland reported that Shell handed back the CampionWind lease to Crown Estate Scotland as ScottishPower continued MarramWind."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Crown Estate Scotland states that Shell terminated the CampionWind option agreement in late 2025."
+            }
+          ],
+          "boundary": "The option termination is public. The exact effective day and any successor rights or transfer of prior work are not established here.",
+          "watchpointRefs": [
+            "Crown Estate Scotland re-award or new leasing action: Would be needed for any successor project assessment.",
+            "Developer statement on project closure or asset transfer: Would strengthen the cancellation provenance."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [
+        {
+          "id": "campionwind-review-2026-10-21",
+          "date": "2026-10-21",
+          "outcome": "completed",
+          "scope": [
+            "Permitting",
+            "Revenue",
+            "Engineering",
+            "Procurement",
+            "Financing / FID",
+            "Execution"
+          ],
+          "coverage": [
+            "Current assessment",
+            "FID",
+            "Timeline",
+            "Roles",
+            "Watchpoints"
+          ],
+          "sources": [
+            {
+              "sourceId": "src-scotgov-owps-2026",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "The government table lists relinquished status and a historical 3000 MW envelope."
+            },
+            {
+              "sourceId": "src-marramwind-planning-2026",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "The reported return is consistent with cancellation, but this article uses a different 2 GW capacity description."
+            },
+            {
+              "sourceId": "src-ces-campionwind-termination-2026",
+              "accessedDate": "2026-10-21",
+              "material": "public_webpage",
+              "finding": "The seabed authority directly records late-2025 option termination by Shell."
+            }
+          ],
+          "findings": [
+            {
+              "area": "Permitting",
+              "note": "The option termination supports closure of the recorded rights pathway; an exact day is not established.",
+              "sourceIds": [
+                "src-ces-campionwind-termination-2026"
+              ]
+            },
+            {
+              "area": "Revenue",
+              "note": "No active revenue agreement was established in the reviewed cancellation material; private closure arrangements remain unknown.",
+              "sourceIds": []
+            },
+            {
+              "area": "Engineering",
+              "note": "No active successor engineering programme was established; treatment of historical studies is unresolved.",
+              "sourceIds": []
+            },
+            {
+              "area": "Procurement",
+              "note": "No active supply chain was established in the reviewed records. Historical ownership roles were retained.",
+              "sourceIds": []
+            },
+            {
+              "area": "Financing / FID",
+              "note": "No investment decision was identified before termination; the existing classification remains a bounded assessment.",
+              "sourceIds": [
+                "src-ces-campionwind-termination-2026"
+              ]
+            },
+            {
+              "area": "Execution",
+              "note": "Cancellation evidence was checked; internal demobilisation or asset-transfer arrangements were not inspected.",
+              "sourceIds": [
+                "src-ces-campionwind-termination-2026"
+              ]
+            }
+          ],
+          "summary": "Cancellation retained. Strengthened provenance using the seabed authority and clarified option-agreement terminology in the assessment and timeline.",
+          "limitations": "The reviewed sources do not disclose all closure arrangements, internal studies or supplier settlements. Public capacity descriptions differ (government map 3000 MW, trade account 2 GW); the historical factual envelope is retained and the discrepancy is explicit."
+        }
+      ],
+      "changes": [
+        {
+          "id": "campionwind-change-1",
+          "date": "2026-10-21",
+          "kind": "assessment",
+          "reviewId": "campionwind-review-2026-10-21",
+          "area": "Project",
+          "target": "intelligence.currentAssessment",
+          "before": "Cancelled ScotWind floating project. CampionWind was awarded ScotWind seabed rights, but the lease was subsequently handed back to Crown Estate Scotland while ScottishPower continues MarramWind; the project has no current consent, revenue, FID, procurement, or execution path.",
+          "after": "Cancelled ScotWind floating project. Crown Estate Scotland confirms Shell terminated the CampionWind option agreement in late 2025. Public records support the cancellation assessment; they do not disclose all internal engineering, commercial or closure arrangements.",
+          "rationale": "Use direct termination evidence and bound statements about internal arrangements.",
+          "sourceIds": [
+            "src-ces-campionwind-termination-2026"
+          ]
+        },
+        {
+          "id": "campionwind-change-2",
+          "date": "2026-10-21",
+          "kind": "fact",
+          "reviewId": "campionwind-review-2026-10-21",
+          "area": "Permitting",
+          "target": "timelineEvents.campionwind-lease-relinquishment-2025",
+          "before": "Offshore Wind Scotland reported Shell handed back the CampionWind lease to Crown Estate Scotland.",
+          "after": "Crown Estate Scotland records termination of the CampionWind option agreement by Shell in late 2025; the exact effective day is not established.",
+          "rationale": "Distinguish a terminated option agreement from a full operating lease.",
+          "sourceIds": [
+            "src-ces-campionwind-termination-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "projectId": "cenos-offshore-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Cenos submitted its offshore consent application to MD-LOT on 26 February 2025."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The Cenos document library lists Section 36 consent application and EIA materials."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Consent determination: Would move the main permitting gate from active to secured."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or confirmed oil-and-gas offtake: Would clarify the revenue model and bankability."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Cenos is a joint venture project between Flotation Energy and Vargronn with nominal capacity up to 1,350 MW."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project comprises up to 95 floating turbine units and is designed to supply selected oil and gas installations with excess power exported to the UK grid."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, mooring, or EPCI awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "celtic-sea-round5-equinor-pda",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Crown Estate states Equinor entered an agreement for lease for a Celtic Sea Round 5 floating wind project on 7 October 2025."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The Crown Estate says developers must complete initial requirements before applying for leases to build and operate."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Planning consent application: Would move the project from seabed-rights development into formal permitting.",
+            "Grid connection and landfall evidence: Would clarify a core delivery interface in the Celtic Sea."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would establish a revenue route."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Round 5 provides three Project Development Areas, each with up to 1.5 GW potential capacity."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "celtic-sea-round5-gwynt-glas-pda",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Crown Estate states Gwynt Glas entered an agreement for lease for a Celtic Sea Round 5 floating wind project on 7 October 2025."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Planning consent application: Would move the project from seabed-rights development into formal permitting.",
+            "Grid connection and landfall evidence: Would clarify a core delivery interface in the Celtic Sea."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would establish a revenue route."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Each Round 5 PDA has up to 1.5 GW potential capacity."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "celtic-sea-round5-ocean-winds-pda",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Crown Estate states Ocean Winds entered an agreement for lease on 3 March 2026 for a 1.5 GW Celtic Sea floating wind project."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Planning consent application: Would move the project from seabed-rights development into formal permitting.",
+            "Grid connection and landfall evidence: Would clarify a core delivery interface in the Celtic Sea."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "CfD or offtake award: Would establish a revenue route."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Crown Estate says Ocean Winds will focus on project designs, surveys, EIAs, engagement, and planning consents."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "canopy-offshore-wind-ocs-p-0561",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM records the relevant California OCS-P leases as commercial wind leases executed in 2023."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM states Construction and Operations Plans drive later site-specific environmental review."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The earlier BOEM lease table listed OCS-P 0561 as Canopy Offshore Wind, LLC and active; BOEM's subsequent cancellation record supersedes that status."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "RWE announced a settlement with DOI involving relinquishment of offshore wind leases off California."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM has cancelled OCS-P 0561 and processed its relinquishment."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Lease-status reversal: Any official reinstatement or new lease would change the cancelled-project position.",
+            "New development award: A separate future award would require its own source-backed assessment."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "california-north-floating-ocs-p-0562",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM records the relevant California OCS-P leases as commercial wind leases executed in 2023."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM states Construction and Operations Plans drive later site-specific environmental review."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM lists OCS-P 0562 as California North Floating LLC and active."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "COP or Site Assessment Plan filing: Would move the lease into formal project review.",
+            "Federal wind-permitting review outcome: Would clarify whether approvals can proceed."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Offtake or California procurement signal: Would establish revenue context."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "atlas-offshore-wind-ocs-p-0563",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM records the relevant California OCS-P leases as commercial wind leases executed in 2023."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM states Construction and Operations Plans drive later site-specific environmental review."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM lists OCS-P 0563 as Atlas Offshore Wind LLC and active."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM says Atlas was originally Equinor Wind US LLC before record title changed."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "COP or Site Assessment Plan filing: Would move Atlas into formal project review.",
+            "Federal wind-permitting review outcome: Would clarify approval timing."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Offtake or California procurement signal: Would establish revenue context."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "golden-state-wind-ocs-p-0564",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM states DOI will cancel and rescind Lease OCS-P 0564 upon demonstration that Golden State Wind has made required U.S. oil and gas investments."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "DOI announced on 27 April 2026 that Golden State Wind agreed to voluntarily end its California offshore wind lease."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM says Golden State Wind has not submitted a COP."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "BOEM cancellation/rescission letter: Would move the project from paused to cancelled.",
+            "California/DOI litigation outcome: Would determine whether the settlement path is blocked or implemented.",
+            "COP submission or developer reversal: Would be needed to restore a development pathway."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "invenergy-california-offshore-ocs-p-0565",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM states DOI cancelled and rescinded Lease OCS-P 0565 on 12 June 2026."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "BOEM lease information lists OCS-P 0565 as cancelled."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "BOEM or court action reversing cancellation: Would be required to change the cancelled assessment.",
+            "New California lease award: Would be a successor market event, not continuation by itself."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "utsira-nord-equinor-vargronn-area-3",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Equinor states Utsira Nord Havvind DA was awarded Project Area 3 on 13 February 2026."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "NVE says it received notifications in late March and sent the Utsira Nord notifications to public hearing with a deadline of 18 June 2026."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "NVE impact-assessment program decision: Would define the evidence required for concession application.",
+            "Concession application submission: Would move the project into the next permitting gate."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Rights holders may compete for state support after the project-area process."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "State-aid competition result: Would determine whether this project receives capex support."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "utsira-nord-harald-harfagre",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Ministry/NVE process identifies Harald Harfagre AS, owned by Deep Wind Offshore Norway and EDF Renewables International, as a Utsira Nord rights holder."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "NVE lists Project Area 2 as a 500 MW offshore wind notification with up to 35 turbines."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Deep Wind Offshore says the consortium was awarded its preferred Utsira Nord area in 2025."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "NVE impact-assessment program decision: Would define the concession evidence path.",
+            "Concession application submission: Would advance the permitting gate."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "NVE states the rights holders may compete for state support and one will receive support."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "State-aid competition result: Would decide support eligibility."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or major supplier awards: Would mark transition toward execution."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "efgl",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Principle Power identifies EFGL as three WindFloat foundations carrying Vestas V164 10 MW turbines."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The project is 16 km offshore in 70-100 m water depth with a planned 20-year operating life."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Transfer of lessons to EFLO or other commercial projects: Would affect the strategic assessment."
+          ]
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "EFGL announced full operation on 10 July 2026."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "ENGIE reported first power from EFGL on 4 May 2026."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Operating-performance disclosure: Would change the benchmark value of EFGL for Mediterranean floating wind scale-up.",
+            "Major maintenance or retrofit event: Would alter the operating-asset risk profile."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "eflo-narbonnaise",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The maritime prefecture states an Instance de concertation et de suivi for EFLO was installed in July 2026."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Permitting or authorisation decision: Would move the project closer to construction readiness.",
+            "RTE grid-connection milestone: Would clarify export readiness."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Ocean Winds and Banque des Territoires were awarded the 250 MW EFLO project under French AO6 on 27 December 2024."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "RTE is responsible for the EFLO grid connection."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, or EPCI awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "mediterranee-grand-large",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "RTE records a June 2026 consultation/follow-up meeting for Mediterranee Grand Large."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Project authorisation and permitting decisions: Would materially de-risk development."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "RTE states Eoliennes Mediterranee Grand Large, with EDF Renewables and Maple Power as shareholders, was named winner for the 250 MW AO6 Fos project."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "RTE is responsible for a mutualised connection for the 250 MW AO6 Fos project and a later 500 MW extension."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, or EPCI awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "RTE grid-connection orders or construction start: Would advance the export path."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "seven-seas-med",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "MASE records the 7SEAS med S.r.l. floating offshore wind project in the Strait of Sicily."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Divento states 7 Seas Med received its VIA decree on 21 March 2024."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Single authorisation or concession completion: Would materially de-risk permitting."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FER2 tariff/auction award: Would clarify the revenue route."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Saipem says its STAR 1 floating foundation collaboration covers 7 Seas Med and that the project is in development awaiting the regulatory framework and FER2 auctions."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Divento describes about 250 MW using 21 floating turbines of 12 MW each."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major turbine, floater, cable, or EPCI awards: Would convert collaboration into delivery contracts."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "med-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The Med Wind site timeline lists EIA application in 2024 and concession application in 2025, with later authorisation and tariff milestones as targets."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "MASE records technical review for Med Wind Scirocco lot Sud-Est at 698.25 MW."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "EIA or concession decision for Med Wind Scirocco: Would materially advance the first section."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FER2 tariff or support award: Would clarify revenue bankability."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Renexia describes Med Wind as about 2.8 GW, more than 80 km off western Sicily, with 190 floating turbines."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "Renexia and Mingyang signed FEED for Med Wind in October 2024."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major cable, floater, port, or EPCI awards: Would complete the delivery chain beyond FEED."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or notice to proceed: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "munmubaram",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The MunmuBaram Korean project page states final EIA approval was completed in August 2024 and a transmission-facility use contract with KEPCO was completed."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The existing project source records regulatory approval procedures and development status."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Remaining construction permits: Would complete a key readiness gate."
+          ]
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Korean offshore wind auction result: Would clarify revenue support and bankability."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Major floater, turbine, cable, or EPCI awards: Would establish the delivery chain."
+          ]
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "FID or financial close: Would mark construction commitment."
+          ]
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "firefly-floating-wind",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "Equinor Korea announced on 22 May 2026 that it decided to stop the Bandibuli project."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": [
+            "Government auction or offtake reform: Would provide context, but not revive Firefly without developer evidence."
+          ]
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "The legacy dataset records earlier Firefly FEED and EIA work."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    },
+    {
+      "projectId": "hibiki-floating-demonstrator",
+      "areas": [
+        {
+          "area": "Permitting",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Revenue",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Engineering",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Procurement",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Financing / FID",
+          "recordRefs": [],
+          "boundary": null,
+          "watchpointRefs": []
+        },
+        {
+          "area": "Execution",
+          "recordRefs": [
+            {
+              "kind": "confirmed_fact",
+              "key": "NEDO announced an opening ceremony for the start of demonstration operations on 24 May 2019."
+            },
+            {
+              "kind": "confirmed_fact",
+              "key": "The NEDO demonstration ended in March 2024 and commercial operation under Hibiki Floating Wind Power LLC began on 22 April 2025."
+            }
+          ],
+          "boundary": null,
+          "watchpointRefs": [
+            "Commercial operating-performance results: Would document operation under the new owner after April 2025.",
+            "Published operating-performance results: Would increase the project value as a reference asset.",
+            "Decommissioning or repowering evidence: Would define the next asset-lifecycle state."
+          ]
+        }
+      ],
+      "reviews": [],
+      "changes": []
+    }
+  ]
+}

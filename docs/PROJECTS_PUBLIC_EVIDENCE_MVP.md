@@ -1,6 +1,6 @@
 # Projects Public Evidence & Review History MVP
 
-Status: accepted by the user on 2026-10-21; implementation in progress.
+Status: accepted by the user on 2026-10-21; implementation and local validation complete, awaiting PR CI verification and manual merge.
 
 Acceptance: user replied "yes please do the work" to the documented design and scope, including all 48 profiles and the three pilot reviews.
 
@@ -9,6 +9,8 @@ Design prepared: 2026-10-21.
 Branch: `feat/projects-public-evidence-mvp`.
 
 Design review: [PROJECTS_PUBLIC_EVIDENCE_DESIGN_REVIEW.md](PROJECTS_PUBLIC_EVIDENCE_DESIGN_REVIEW.md).
+
+Implementation/review evidence: [PROJECTS_PUBLIC_EVIDENCE_IMPLEMENTATION.md](PROJECTS_PUBLIC_EVIDENCE_IMPLEMENTATION.md).
 
 ## 1. Objective
 

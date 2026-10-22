@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "project-engineering-links.v1",
+  "links": [
+    {
+      "id": "eolmed-first-turbine-2025-12",
+      "projectId": "eolmed",
+      "editionSlug": "2025-12-14",
+      "briefingItemId": "eng-item-2025-12-14-01",
+      "basis": {
+        "type": "project_specific_coverage",
+        "sourceRecordId": "eng-src-2025-12-14-eolmed-first-turbine",
+        "storedExcerpt": "turbines left Port-La Nouvelle for installation at the EolMed floating offshore wind farm.",
+        "projectMention": "EolMed"
+      },
+      "mappingReviewedOn": "2026-10-22"
+    },
+    {
+      "id": "efgl-first-power-2026-05",
+      "projectId": "efgl",
+      "editionSlug": "2026-05-10",
+      "briefingItemId": "eng-item-2026-05-10-01",
+      "basis": {
+        "type": "project_specific_coverage",
+        "sourceRecordId": "eng-src-2026-05-10-efgl-first-power",
+        "storedExcerpt": "Ocean Winds started electricity production at the 30 MW EFGL floating offshore wind farm in southern France.",
+        "projectMention": "EFGL"
+      },
+      "mappingReviewedOn": "2026-10-22"
+    },
+    {
+      "id": "efgl-full-power-2026-07",
+      "projectId": "efgl",
+      "editionSlug": "2026-07-19",
+      "briefingItemId": "eng-item-2026-07-19-01",
+      "basis": {
+        "type": "project_specific_coverage",
+        "sourceRecordId": "jul-oceanwinds-efgl-fullpower",
+        "storedExcerpt": "Ocean Winds reached full power at the 30 MW EFGL floating offshore wind farm",
+        "projectMention": "EFGL"
+      },
+      "mappingReviewedOn": "2026-10-22"
+    },
+    {
+      "id": "efgl-foundations-om-2026-07",
+      "projectId": "efgl",
+      "editionSlug": "2026-07-19",
+      "briefingItemId": "eng-item-2026-07-19-02",
+      "basis": {
+        "type": "project_specific_coverage",
+        "sourceRecordId": "jul-principle-efgl-om",
+        "storedExcerpt": "Principle Power won Operations and Maintenance support contract for the 30 MW EFGL floating offshore wind project",
+        "projectMention": "EFGL"
+      },
+      "mappingReviewedOn": "2026-10-22"
+    },
+    {
+      "id": "green-volt-survey-notice-2026-07",
+      "projectId": "green-volt",
+      "editionSlug": "2026-07-26",
+      "briefingItemId": "eng-item-2026-07-26-05",
+      "basis": {
+        "type": "project_specific_coverage",
+        "sourceRecordId": "eng-src-2026-07-26-green-volt-surveys",
+        "storedExcerpt": "Green Volt issued a notice to mariners for environmental and geophysical surveys",
+        "projectMention": "Green Volt"
+      },
+      "mappingReviewedOn": "2026-10-22"
+    },
+    {
+      "id": "pentland-anchor-engineering-2026-10",
+      "projectId": "pentland-floating-offshore-wind-farm",
+      "editionSlug": "2026-10-11",
+      "briefingItemId": "eng-item-2026-10-11-pentland-anchor-engineering",
+      "basis": {
+        "type": "project_specific_coverage",
+        "sourceRecordId": "eng-src-2026-10-11-pentland-anchor-engineering",
+        "storedExcerpt": "Subsea Micropiles announced collaboration with Pentland Floating Offshore Wind Farm on site investigation, anchor design",
+        "projectMention": "Pentland Floating Offshore Wind Farm"
+      },
+      "mappingReviewedOn": "2026-10-22"
+    }
+  ]
+}

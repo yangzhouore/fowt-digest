@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { SiteHeader } from "../../site-header";
 import { SiteFooter } from "../../site-footer";
 import { LocalizedCopy } from "../../i18n/localized-copy";
+import { EngineeringProjectContext } from "../../connected-project-context";
+import { engineeringItemAnchor } from "../../../data/context-navigation";
 import {
   getAllEngineeringBriefings,
   getEngineeringBriefingBySlug,
@@ -93,7 +95,7 @@ export default async function EngineeringBriefingPage({
         <ol className="engineering-list">
           {briefing.items.map((item) => (
             <li key={item.id}>
-              <article className="engineering-item">
+              <article className="engineering-item" id={engineeringItemAnchor(item.id)}>
                 <p className="paper-number">
                   {String(item.number).padStart(2, "0")}
                 </p>
@@ -130,6 +132,7 @@ export default async function EngineeringBriefingPage({
                 <p className="text-link-row">
                   <a href={item.sourceUrl}>Open source</a>
                 </p>
+                <EngineeringProjectContext editionSlug={briefing.slug} itemId={item.id} />
               </article>
             </li>
           ))}

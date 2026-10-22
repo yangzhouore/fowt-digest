@@ -1,6 +1,8 @@
 # Connected Project Context MVP
 
-Status: accepted by the user on 2026-10-22; implementation in progress.
+Status: accepted by the user on 2026-10-22; implementation and local acceptance complete.
+Final-head CI and the preview are recorded in the feature PR, which must remain
+open for manual merge. Evidence: [CONNECTED_PROJECT_CONTEXT_IMPLEMENTATION.md](CONNECTED_PROJECT_CONTEXT_IMPLEMENTATION.md).
 
 Acceptance: user replied "yes please continue" to the documented objectives,
 design, self-review and scope. No scope changes were requested.

@@ -1,10 +1,12 @@
 # Browser smoke tests
 
-Seven Chromium tests protect homepage / latest-edition navigation, Projects
+Ten Chromium tests protect homepage / latest-edition navigation, Projects
 filtering and expansion, project-detail navigation, language switching, public
-evidence navigation, honest review states, and mobile Chinese / dark presentation.
+evidence navigation, honest review states, connected Project / Engineering / Industry
+journeys, unique company anchors, and mobile Chinese / dark presentation.
 They use visible reader-facing content, not dataset counts or fixed edition dates.
-Uncaught browser errors and console errors fail the tests.
+Uncaught browser errors and console errors fail the tests. Decorative Google
+company favicons are stubbed so third-party availability cannot affect acceptance.
 
 From `web/`, run:
 
@@ -21,7 +23,7 @@ CI installs Chromium's system dependencies with `--with-deps`. Only Chromium
 is configured, with one worker and no retries. Failed tests retain traces and
 screenshots in ignored `test-results/`; CI uploads them only on failure.
 
-The public-evidence tests also save desktop and mobile Chinese/dark screenshots
+The public-evidence and connected-context tests also save desktop and mobile Chinese/dark screenshots
 in `test-results/` for visual review. These are local QA artifacts, not golden
 image comparisons. External source links are checked by destination without
 depending on a third-party website being available during CI.

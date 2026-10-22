@@ -10,6 +10,8 @@ import {
   type IndustryCompany,
 } from "../../data/industry/industry-map";
 import { LocalizedCopy } from "../i18n/localized-copy";
+import { CompanyProjectContext } from "../connected-project-context";
+import { industryCompanyAnchor } from "../../data/context-navigation";
 
 export const metadata: Metadata = {
   title: "Industry Map",
@@ -19,6 +21,14 @@ export const metadata: Metadata = {
 
 const industryMap = getIndustryMap();
 const companies = getIndustryCompanies();
+const canonicalCategoryByCompany = new Map<string, string>();
+for (const stage of industryMap) {
+  for (const category of stage.categories) {
+    for (const company of category.companies) {
+      if (!canonicalCategoryByCompany.has(company.id)) canonicalCategoryByCompany.set(company.id, category.id);
+    }
+  }
+}
 const roleCount = companies.reduce((total, company) => total + company.roles.length, 0);
 
 const roleLabels: Record<string, string> = {
@@ -247,8 +257,8 @@ export default function IndustryPage() {
                   </div>
                   <ul className="industry-company-list">
                     {category.companies.map((company) => (
-                      <li className="industry-company" key={`${category.id}-${company.id}`}>
-                        <details>
+                      <li className="industry-company" key={`${category.id}-${company.id}`} id={canonicalCategoryByCompany.get(company.id) === category.id ? industryCompanyAnchor(company.id) : undefined} data-industry-company={company.id}>
+                        <details id={`industry-${category.id}-${company.id}`}>
                           <summary>
                             <span className="industry-company-mark" aria-hidden="true">
                               {companyInitials(company.name)}
@@ -290,6 +300,7 @@ export default function IndustryPage() {
                             <Link className="industry-source-link" href={company.sourceUrl}>
                               <LocalizedCopy en="Source" zh="来源" />
                             </Link>
+                            <CompanyProjectContext companyId={company.id} instanceId={`${category.id}-${company.id}`} />
                           </div>
                         </details>
                       </li>

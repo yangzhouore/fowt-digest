@@ -5,23 +5,25 @@ Last updated: 2026-10-22 (current milestone only; historical release baseline be
 ## Current State
 
 - Current stable branch: `main`
-- Active milestone: Connected Project Context MVP; accepted, implementation in progress
+- Active milestone: Connected Project Context MVP; implemented and locally validated, pending manual merge
 - Latest merged work: Projects Public Evidence & Review History MVP (PR #41), merged into main at `e88d325`
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Next work: implement the accepted Connected Project Context design, validate and leave an open PR for manual merge.
+- Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
 
 ## Accepted Current MVP
 
 - Objectives and acceptance: `docs/CONNECTED_PROJECT_CONTEXT_MVP.md`.
 - Design self-review: `docs/CONNECTED_PROJECT_CONTEXT_DESIGN_REVIEW.md`.
+- Implementation and validation evidence: `docs/CONNECTED_PROJECT_CONTEXT_IMPLEMENTATION.md`.
 - Branch: `feat/connected-project-context-mvp`.
 - Scope: Projects <-> Engineering coverage and Projects <-> existing Industry entries.
-- Initial Engineering coverage: six proposed links across Eolmed, EFGL, Green Volt and Pentland.
+- Initial Engineering coverage: six audited links across Eolmed, EFGL, Green Volt and Pentland; all 48 profiles have coverage or an explicit empty state.
 - Company coverage: existing valid `industryCompanyId` roles only; no inferred matches.
 - Papers and all authoritative datasets remain unchanged.
-- User accepted the design on 2026-10-22 ("yes please continue"); implementation is in progress.
-- After acceptance: full validation, final-head CI and an open PR for manual merge.
+- User accepted the design on 2026-10-22 ("yes please continue"); implementation and local acceptance are complete.
+- Local validation: 210 Python tests, data validation, 148 data tests, lint, 427-page build and ten browser tests passed. All 121 protected files match the base by Git-normalized content hash.
+- Delivery gate: final-head CI recorded in the open PR; merge remains manual. The stable main baseline above is unchanged until merge.
 
 ## Previous Completed MVP
 
@@ -122,9 +124,9 @@ committed `main` through Git integration.
 - Current Engineering Homepage items use controlled region labels, with
   global/non-specific items classified as `Unspecified`.
 - Projects filtering is limited to region, country and normalized lifecycle
-  status. No geographic map, GIS data, automatic project collection/update or
-  Project-to-Industry deep integration exists yet; those belong to a future
-  dedicated milestone.
+  status. The Connected Project Context feature branch adds navigation to
+  existing Industry entries through recorded company IDs. Geographic maps, GIS
+  data and automatic project collection/update remain outside scope.
 
 ## Latest Accepted Validation Baseline
 

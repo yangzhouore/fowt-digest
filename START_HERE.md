@@ -5,11 +5,11 @@ Use this file as the resume entry point for a new Codex session.
 ## Stable State
 
 - Current stable branch: `main`
-- Active milestone: Projects Public Evidence & Review History MVP delivered in PR #41; awaiting manual merge
-- Latest merged work: repository documentation sync (PR #35); Engineering and Research are published through 2026-10-04
+- Active milestone: Connected Project Context MVP; accepted, implementation in progress
+- Latest merged work: Projects Public Evidence & Review History MVP (PR #41), merged into main at `e88d325`
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Next work: user reviews and manually merges https://github.com/yangzhouore/fowt-digest/pull/41 after checking its current head CI.
+- Next work: implement `docs/CONNECTED_PROJECT_CONTEXT_MVP.md`, validate and leave an open PR for manual merge.
 
 Stable `main` includes Digital & AI, Methodology, the bilingual interface,
 Project Intelligence across all 48 projects, and weekly catch-up through
@@ -31,6 +31,11 @@ only when historical context is specifically required.
 ## Reference Docs
 
 Current accepted milestone:
+
+- Objectives, design and acceptance gates: `docs/CONNECTED_PROJECT_CONTEXT_MVP.md`
+- Design self-review and approval item: `docs/CONNECTED_PROJECT_CONTEXT_DESIGN_REVIEW.md`
+
+Previous merged milestone (PR #41):
 
 - Objectives, design, acceptance criteria and delivery gates: `docs/PROJECTS_PUBLIC_EVIDENCE_MVP.md`
 - Design self-review and user acceptance record: `docs/PROJECTS_PUBLIC_EVIDENCE_DESIGN_REVIEW.md`

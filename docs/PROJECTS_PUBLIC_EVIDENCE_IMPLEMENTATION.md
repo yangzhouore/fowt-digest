@@ -9,8 +9,8 @@ Branch: `feat/projects-public-evidence-mvp`.
 
 ## Delivery state
 
-Implementation and final local validation are complete. Remote PR CI
-verification is the remaining delivery gate. The PR will remain open for manual merge.
+Implementation and final local validation are complete. [PR #41](https://github.com/yangzhouore/fowt-digest/pull/41)
+is open for manual merge. Final-head CI verification is recorded in the PR.
 
 Implementation commit: `4ce260ab436d69bb73b800e13d31491d11a3a3cf`.
 Final delivery head and CI links are recorded in the PR description/checks;
@@ -165,7 +165,10 @@ The new sidecar validator and data tests are part of `validate:data` and
 
 ## PR and CI
 
-Local verification is complete. The final PR description records its delivery
-head and CI results, and links to the exact workflow run. Before reporting
-delivery, verify Pipeline validation, Website validation, Browser smoke and any
-other applicable PR checks for that final head. Do not merge automatically.
+Local verification is complete. All three CI jobs passed for delivery checkpoint
+`00a36be618368d16d8c91f60dfbdc9dff00d55c0` in
+[CI run 39621391226](https://github.com/yangzhouore/fowt-digest/actions/runs/39621391226).
+The subsequent documentation-only completion commit is also subject to the same
+checks; the PR description records its exact final delivery head and run results.
+No application code changed after the verified implementation commit.
+The PR remains open and must be merged manually by the user.

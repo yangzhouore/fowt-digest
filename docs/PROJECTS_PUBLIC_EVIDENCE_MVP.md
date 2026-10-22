@@ -1,6 +1,6 @@
 # Projects Public Evidence & Review History MVP
 
-Status: accepted by the user on 2026-10-21; implementation and local validation complete, awaiting PR CI verification and manual merge.
+Status: accepted by the user on 2026-10-21; implemented and delivered in [PR #41](https://github.com/yangzhouore/fowt-digest/pull/41), awaiting manual merge. Final-head CI verification is recorded in the PR.
 
 Acceptance: user replied "yes please do the work" to the documented design and scope, including all 48 profiles and the three pilot reviews.
 

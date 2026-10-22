@@ -5,11 +5,11 @@ Use this file as the resume entry point for a new Codex session.
 ## Stable State
 
 - Current stable branch: `main`
-- Active milestone: Projects Public Evidence & Review History MVP; locally validated, awaiting PR CI verification and manual merge
+- Active milestone: Projects Public Evidence & Review History MVP delivered in PR #41; awaiting manual merge
 - Latest merged work: repository documentation sync (PR #35); Engineering and Research are published through 2026-10-04
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Next work: verify the final PR checks for `docs/PROJECTS_PUBLIC_EVIDENCE_MVP.md`; leave merging to the user.
+- Next work: user reviews and manually merges https://github.com/yangzhouore/fowt-digest/pull/41 after checking its current head CI.
 
 Stable `main` includes Digital & AI, Methodology, the bilingual interface,
 Project Intelligence across all 48 projects, and weekly catch-up through

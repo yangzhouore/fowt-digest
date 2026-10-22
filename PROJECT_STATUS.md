@@ -1,15 +1,29 @@
 # Project Status
 
-Last updated: 2026-10-05
+Last updated: 2026-10-21 (current milestone only; release baseline below is unchanged)
 
 ## Current State
 
 - Current stable branch: `main`
-- Active milestone: none
+- Active milestone: Projects Public Evidence & Review History MVP delivered in PR #41; awaiting manual merge
 - Latest merged work: repository documentation sync (PR #35); Engineering and Research are published through 2026-10-04
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Next work: follow the next accepted task; no feature milestone is active.
+- Next work: user reviews and manually merges PR #41 after checking its current head CI.
+
+## Accepted Current MVP
+
+- Scope and measurable acceptance: `docs/PROJECTS_PUBLIC_EVIDENCE_MVP.md`.
+- Design self-review: `docs/PROJECTS_PUBLIC_EVIDENCE_DESIGN_REVIEW.md`.
+- Implementation and validation evidence: `docs/PROJECTS_PUBLIC_EVIDENCE_IMPLEMENTATION.md`.
+- Branch: `feat/projects-public-evidence-mvp`.
+- Goals: area-specific public evidence, explicit uncertainty, substantive review dates and change history across Projects.
+- Pilot public-source assessment reviews: Green Volt, Hywind Tampen and CampionWind.
+- Papers and Research remain outside scope.
+- User accepted the design on 2026-10-21. Local validation passed: 210 Python tests, static data validation, 118 data tests, lint, 427-page build and seven browser tests.
+- All 48 profiles have explicit evidence areas; three pilot public-source assessment reviews are recorded. Other historical review dates remain unrecorded.
+- Pipeline validation, Website validation and Browser smoke passed on implementation-delivery head `00a36be`; the PR records verification of its final head.
+- Delivery: https://github.com/yangzhouore/fowt-digest/pull/41 remains open for the user to merge manually.
 
 ## Current Capabilities
 

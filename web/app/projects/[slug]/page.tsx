@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ProjectEngineeringCoverage, IndustryEntryLink } from "../../connected-project-context";
 import { ProjectPublicEvidence, ProjectReviewStrip, ProjectReviewHistory } from "../project-public-evidence";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -178,6 +179,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   {relationships.map((relationship) => (
                     <li key={relationship.id}>
                       <p>{relationship.companyName}</p>
+                      <IndustryEntryLink companyId={relationship.industryCompanyId} companyName={relationship.companyName} />
                       <span><LocalizedCopy
                         {...relationshipContextLabel(relationship)}
                       /></span>
@@ -192,6 +194,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             ))}
           </div>
         </section>
+
+        <ProjectEngineeringCoverage projectId={project.id} />
 
         <section className="project-timeline-section" aria-labelledby="timeline-heading">
           <div className="project-section-copy">
@@ -401,6 +405,8 @@ function ProjectIntelligenceDetailPage({
           </ol>
         </section>
 
+        <ProjectEngineeringCoverage projectId={project.id} />
+
         <section className="project-timeline-section project-intel-section project-intel-secondary" aria-labelledby="timeline-heading">
           <div className="project-section-copy">
             <p className="eyebrow">Material timeline</p>
@@ -461,6 +467,7 @@ function ProjectIntelligenceDetailPage({
                   {relationships.map((relationship) => (
                     <li key={relationship.id}>
                       <p>{relationship.companyName}</p>
+                      <IndustryEntryLink companyId={relationship.industryCompanyId} companyName={relationship.companyName} />
                       <span><LocalizedCopy
                         {...relationshipContextLabel(relationship)}
                       /></span>
@@ -715,6 +722,8 @@ function GreenVoltProjectDetailPage({
           </ol>
         </section>
 
+        <ProjectEngineeringCoverage projectId={project.id} />
+
         <section className="project-timeline-section green-volt-section green-volt-secondary" aria-labelledby="timeline-heading">
           <div className="project-section-copy">
             <p className="eyebrow">Material timeline</p>
@@ -756,6 +765,7 @@ function GreenVoltProjectDetailPage({
                   {relationships.map((relationship) => (
                     <li key={relationship.id}>
                       <p>{relationship.companyName}</p>
+                      <IndustryEntryLink companyId={relationship.industryCompanyId} companyName={relationship.companyName} />
                       <span><LocalizedCopy
                         {...relationshipContextLabel(relationship)}
                       /></span>

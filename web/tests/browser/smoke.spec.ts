@@ -4,6 +4,8 @@ import { test as base, expect } from "@playwright/test";
 const test = base.extend<{ runtimeErrors: void }>({
   runtimeErrors: [async ({ page }, use) => {
     const errors: string[] = [];
+    // Company favicons are decorative third-party images, outside the app contract.
+    await page.route("https://www.google.com/s2/favicons?**", (route) => route.fulfill({ status: 200, contentType: "image/svg+xml", body: '<svg xmlns="http://www.w3.org/2000/svg"/>' }));
     page.on("pageerror", (error) => errors.push(error.message));
     page.on("console", (message) => {
       if (message.type() === "error") errors.push(message.text());
@@ -11,6 +13,91 @@ const test = base.extend<{ runtimeErrors: void }>({
     await use();
     expect(errors, "Browser runtime and console errors").toEqual([]);
   }, { auto: true }],
+});
+
+test("project coverage opens the exact Engineering item and returns to its project", async ({ page }) => {
+  await page.goto("/projects/pentland-floating-offshore-wind-farm");
+  const coverage = page.getByRole("region", { name: "Engineering coverage", exact: true });
+  await expect(coverage.getByText("Source date", { exact: false })).toBeVisible();
+  const why = coverage.locator("summary").first();
+  await why.focus();
+  await page.keyboard.press("Enter");
+  await expect(coverage.getByText(/The extract below comes from the stored source record/)).toBeVisible();
+  await coverage.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/connected-context-desktop.png" });
+  await coverage.getByRole("link", { name: /^Read Engineering item/ }).click();
+  await expect(page).toHaveURL(/\/engineering\/2026-10-11#item-eng-item-2026-10-11-pentland-anchor-engineering$/);
+  const item = page.locator("#item-eng-item-2026-10-11-pentland-anchor-engineering");
+  await expect(item).toBeInViewport();
+  await item.getByRole("link", { name: "Pentland Floating Offshore Wind Farm", exact: true }).click();
+  await expect(page).toHaveURL("/projects/pentland-floating-offshore-wind-farm");
+  await page.goto("/projects/hywind-scotland");
+  await expect(page.getByText("No project-specific Engineering coverage linked", { exact: true })).toBeVisible();
+  await page.goto("/projects/green-volt");
+  await expect(page.getByRole("link", { name: /^Industry entry/ })).toHaveCount(0);
+});
+
+test("recorded participants connect Projects to canonical Industry entries and other projects", async ({ page }) => {
+  await page.goto("/projects");
+  const project = page.getByRole("article", { name: "Hywind Tampen", exact: true });
+  await project.getByText("Assessment, gates & milestones", { exact: true }).click();
+  await project.getByRole("link", { name: "Industry entry — Equinor", exact: true }).first().click();
+  await expect(page).toHaveURL(/\/industry#company-equinor$/);
+  const company = page.locator("#company-equinor");
+  await expect(company).toBeInViewport();
+  const summary = company.locator("details > summary").first();
+  await summary.focus();
+  await page.keyboard.press("Enter");
+  await expect(company.getByRole("heading", { name: /^Project records/ })).toBeVisible();
+  await expect(company.getByText(/A link does not establish a current supply contract/)).toBeVisible();
+  const more = company.locator("summary").filter({ hasText: "Show all project records" });
+  if (await more.count()) await more.click();
+  await company.getByRole("link", { name: "Hywind Scotland", exact: true }).click();
+  await expect(page).toHaveURL("/projects/hywind-scotland");
+  await expect(page.getByRole("link", { name: "Industry entry — Equinor", exact: true }).first()).toBeVisible();
+  await page.goto("/industry");
+  const ids = await page.locator("[id]").evaluateAll((elements) => elements.map((element) => element.id));
+  expect(new Set(ids).size).toBe(ids.length);
+  await expect(page.locator('[id^="company-"]')).toHaveCount(47);
+  const cables = page.locator("#company-jdr-cables");
+  await cables.locator("details > summary").first().click();
+  const cableRoles = cables.locator('[data-context-relationship^="rel-supply-efgl-jdr-"]');
+  await expect(cableRoles).toHaveCount(2);
+  for (const role of await cableRoles.all()) {
+    await expect(role.getByText("Historical role", { exact: false })).toBeVisible();
+    await expect(role.getByText("Delivered cables", { exact: true })).toBeVisible();
+  }
+  await cableRoles.first().locator("summary").click();
+  await expect(cableRoles.first().getByRole("link").first()).toHaveAttribute("href", /^https:\/\//);
+  await cables.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/connected-industry-desktop.png" });
+});
+
+test("connected context works in mobile Chinese and dark theme without translating source records", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/projects/efgl");
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await page.locator('label[for="theme-dark"]').click();
+  const coverage = page.getByRole("region", { name: "工程报道", exact: true });
+  await expect(coverage.getByRole("link", { name: /^阅读工程条目/ })).toHaveCount(3);
+  await coverage.locator("summary").first().click();
+  await expect(coverage.getByText(/此已发布条目报道该项目的活动/).first()).toBeVisible();
+  await expect(coverage.locator(".context-stored-excerpt").first()).toContainText("EFGL");
+  await coverage.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/connected-context-mobile-zh-dark.png" });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await coverage.getByRole("link", { name: /^阅读工程条目/ }).first().click();
+  await expect(page.getByText("项目背景", { exact: true }).first()).toBeVisible();
+  await page.goto("/industry#company-equinor");
+  await page.locator('label[for="theme-dark"]').click();
+  const company = page.locator("#company-equinor");
+  await company.locator("details > summary").first().click();
+  await expect(company.getByRole("heading", { name: /^项目记录/ })).toBeVisible();
+  await expect(company.locator(".context-company-role summary").first()).toHaveCSS("display", "list-item");
+  await expect(page.locator("#theme-dark")).toBeChecked();
+  await company.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/connected-industry-mobile-zh-dark.png" });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
 test("homepage renders the latest briefing and its Engineering / Research links work", async ({ page }) => {

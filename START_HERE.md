@@ -5,11 +5,11 @@ Use this file as the resume entry point for a new Codex session.
 ## Stable State
 
 - Current stable branch: `main`
-- Active milestone: Projects Public Evidence & Review History MVP delivered in PR #41; awaiting manual merge
-- Latest merged work: repository documentation sync (PR #35); Engineering and Research are published through 2026-10-04
+- Active milestone: Connected Project Context MVP; implemented and locally validated, pending manual merge
+- Latest merged work: Projects Public Evidence & Review History MVP (PR #41), merged into main at `e88d325`
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Next work: user reviews and manually merges https://github.com/yangzhouore/fowt-digest/pull/41 after checking its current head CI.
+- Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
 
 Stable `main` includes Digital & AI, Methodology, the bilingual interface,
 Project Intelligence across all 48 projects, and weekly catch-up through
@@ -31,6 +31,12 @@ only when historical context is specifically required.
 ## Reference Docs
 
 Current accepted milestone:
+
+- Objectives, design and acceptance gates: `docs/CONNECTED_PROJECT_CONTEXT_MVP.md`
+- Design self-review and approval item: `docs/CONNECTED_PROJECT_CONTEXT_DESIGN_REVIEW.md`
+- Implementation and validation evidence: `docs/CONNECTED_PROJECT_CONTEXT_IMPLEMENTATION.md`
+
+Previous merged milestone (PR #41):
 
 - Objectives, design, acceptance criteria and delivery gates: `docs/PROJECTS_PUBLIC_EVIDENCE_MVP.md`
 - Design self-review and user acceptance record: `docs/PROJECTS_PUBLIC_EVIDENCE_DESIGN_REVIEW.md`
@@ -65,9 +71,10 @@ The Projects MVP is implemented and accepted: `/projects` and
 `/projects/[slug]` render 48 source-backed floating offshore wind project
 records with region/country/status filtering, Project Intelligence, verified
 technical facts, project-company roles, source-backed timelines, and provenance links. Projects
-are intentionally static. No geographic map, automatic project collection,
-automatic updates, or Project-to-Industry deep integration exists yet; those
-belong to a future dedicated milestone.
+are intentionally static. The Connected Project Context feature branch adds
+explicit Project / Engineering reading links and navigation through existing
+Industry company IDs. Geographic maps and automatic project collection or updates
+remain outside scope.
 
 Selection transparency is implemented for Research and Engineering where
 candidate-pool data exists. Weekly Research candidate pages expose deterministic

@@ -12,6 +12,7 @@ import {
 import { ProjectFilters } from "./project-filters";
 import { LocalizedCopy } from "../i18n/localized-copy";
 import { getProjectReviewSummary } from "../../data/project-public-evidence-adapter";
+import { connectProjectIndexItem } from "../../data/connected-context-adapter";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  const projects = getProjectIndexItems().map((project) => ({ ...project, ...getProjectReviewSummary(project.id) }));
+  const projects = getProjectIndexItems().map((project) => ({ ...connectProjectIndexItem(project), ...getProjectReviewSummary(project.id) }));
   const options = getProjectOptions();
   const countryCount = options.countries.length;
 

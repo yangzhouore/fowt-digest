@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import type { ProjectIndexItem, ProjectStatus, ReadinessState } from "../../data/project-adapter";
+import type { ProjectStatus, ReadinessState } from "../../data/project-adapter";
+import type { ConnectedProjectIndexItem } from "../../data/connected-context-adapter";
 import { useLanguage } from "../i18n/language-context";
 import type { getProjectReviewSummary } from "../../data/project-public-evidence-adapter";
 
 type ProjectFiltersProps = {
-  projects: (ProjectIndexItem & ReturnType<typeof getProjectReviewSummary>)[];
+  projects: (ConnectedProjectIndexItem & ReturnType<typeof getProjectReviewSummary>)[];
   regions: string[];
   countries: string[];
   statuses: { value: ProjectStatus; label: string }[];
@@ -117,7 +118,7 @@ export function ProjectFilters({ projects, regions, countries, statuses, readine
   </>;
 }
 
-function VerifiedProjectRoles({ project, zh }: { project: ProjectIndexItem; zh: boolean }) {
+function VerifiedProjectRoles({ project, zh }: { project: ConnectedProjectIndexItem; zh: boolean }) {
   const copy = (en: string, chinese: string) => zh ? chinese : en;
   const labels: Record<string, string> = { owner: "业主 / 开发商", turbine: "风机", platform: "浮式平台", cable: "电缆", mooring: "系泊 / 锚固", installation: "海上安装", "Dynamic Cable": "动态电缆", "Inter-array Cable": "阵列间电缆", "Export Cable": "送出电缆", Mooring: "系泊", Anchoring: "锚固", "Wind Turbine OEM": "风机 OEM", "Platform / Technology": "平台 / 技术", "Platform Engineering": "平台工程", Fabrication: "制造", "Marine Installation": "海上安装" };
   const missing = copy("N/A — not verified", "N/A — 未核实");
@@ -134,6 +135,7 @@ function VerifiedProjectRoles({ project, zh }: { project: ProjectIndexItem; zh: 
           {entry.scope && <p className="project-supply-chain-scope"><strong>{entry.scope}</strong></p>}
           {category.key !== "owner" && !group.label && <p className="project-supply-chain-stage">{zh ? labels[entry.roleLabel] ?? entry.roleLabel : entry.roleLabel}</p>}
           <p>{entry.detail ?? entry.roleLabel}</p>
+          {entry.industryHref && <Link className="context-industry-link" href={entry.industryHref}>{copy("Industry entry", "产业条目")}<span className="context-sr-only"> — {entry.companyName}</span></Link>}
           <span className="project-supply-chain-sources">{copy("Evidence", "证据")}: {entry.sources.map((source, index) => <a key={source.sourceId} href={source.url} title={source.title} aria-label={`${copy("Evidence", "证据")} ${index + 1}: ${entry.companyName} — ${source.title}`}>{index + 1}</a>)}</span>
         </li>)}</ul>}
       </div>)}</dd>

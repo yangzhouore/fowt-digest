@@ -4219,6 +4219,32 @@ dd {
 .project-review-findings dt, .project-change-values dt { font-weight: 700; margin-bottom: 4px; }
 .project-review-findings dd, .project-change-values dd { margin: 0; }
 .project-change-values { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.85rem; overflow-wrap: anywhere; }
+.context-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.context-coverage-list, .context-company-projects { list-style: none; margin: 16px 0; padding: 0; }
+.context-coverage-card { margin: 0 0 20px; padding: 16px; border: 1px solid var(--border); overflow-wrap: anywhere; }
+.context-coverage-card h3 { margin: 0 0 10px; font-size: 1rem; }
+.context-coverage-card p, .context-coverage-card a { font-size: 0.85rem; }
+.context-meta { color: var(--muted); font-size: 0.75rem; line-height: 1.6; }
+.context-link-basis { margin-top: 10px; }
+.context-link-basis summary, .context-more > summary, .context-company-role summary { cursor: pointer; color: var(--accent); font-size: 0.85rem; padding: 8px 0; }
+.context-stored-excerpt { padding-left: 12px; border-left: 2px solid var(--border); }
+.context-industry-link { display: inline-block; margin: 4px 0 8px; font-size: 0.78rem; }
+.engineering-project-context { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
+.engineering-project-context p { margin: 0; }
+.engineering-project-context ul { padding-left: 18px; }
+.engineering-item[id], .industry-company[id] { scroll-margin-top: 28px; }
+.engineering-item[id]:target, .industry-company[id]:target { outline: 2px solid var(--accent); outline-offset: 6px; }
+.company-project-context { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--border); }
+.company-project-context h4 { font-size: 0.9rem; margin: 0 0 8px; }
+.context-company-projects > li { padding: 12px 0; border-bottom: 1px solid var(--border); overflow-wrap: anywhere; }
+.context-company-role { margin: 10px 0; }
+.context-company-role p { margin: 5px 0; }
+.context-company-role ul { padding-left: 18px; }
+.company-project-context summary { display: list-item; min-height: auto; list-style: disclosure-closed inside; }
+.company-project-context details[open] > summary { list-style-type: disclosure-open; }
+.industry-company .company-project-context details > summary::after { content: none; }
+.company-project-context summary::-webkit-details-marker { display: inline; }
+.connected-project-context :focus-visible, .company-project-context :focus-visible, .engineering-project-context :focus-visible, .context-industry-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 600px) {
   .project-evidence-header { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   .project-evidence-row { grid-template-columns: 1fr; gap: 10px; }

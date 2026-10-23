@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { UKSystemGuide } from "./uk-system-guide";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "../site-footer";
@@ -16,7 +17,7 @@ import { industryCompanyAnchor } from "../../data/context-navigation";
 export const metadata: Metadata = {
   title: "Industry Map",
   description:
-    "A static editorial map of the floating offshore wind value chain, from project owners to turbines, platforms, moorings, cables, installation, grid, certification, and engineering support.",
+    "A source-backed guide to the UK floating offshore wind supply chain, project development, permissions, electricity and money, with an international company reference map.",
 };
 
 const industryMap = getIndustryMap();
@@ -88,152 +89,17 @@ export default function IndustryPage() {
     <main className="industry-page">
       <SiteHeader />
 
-      <section className="industry-hero" aria-labelledby="industry-heading">
-        <p className="eyebrow"><LocalizedCopy en="Industry Map" zh="产业图谱" /></p>
-        <h1 id="industry-heading"><LocalizedCopy en="Who builds floating offshore wind?" zh="谁在建设浮式海上风电？" /></h1>
-        <p>
-          <LocalizedCopy en="A static value-chain map for reading floating offshore wind as a project delivery system: clients first, then turbines, floating platforms, station keeping, electrical connection, installation, assurance, and engineering tools." zh="以项目交付体系呈现浮式海上风电的静态价值链图谱：从客户开始，依次涵盖风机、浮式平台、定位保持、电气连接、安装、认证保障和工程工具。" />
-        </p>
-        <dl className="industry-stats" aria-label="Industry map coverage">
-          <div>
-            <dt><LocalizedCopy en="Companies" zh="企业" /></dt>
-            <dd>{industryCompanyCount}</dd>
-          </div>
-          <div>
-            <dt><LocalizedCopy en="Value-chain stages" zh="价值链环节" /></dt>
-            <dd>{industryMap.length}</dd>
-          </div>
-          <div>
-            <dt><LocalizedCopy en="Verified role links" zh="已核实角色关联" /></dt>
-            <dd>{roleCount}</dd>
-          </div>
+      <UKSystemGuide />
+
+      <section className="industry-hero" id="industry-catalogue" aria-labelledby="industry-heading">
+        <p className="eyebrow"><LocalizedCopy en="International company reference" zh="国际企业参考目录" /></p>
+        <h2 id="industry-heading"><LocalizedCopy en="Explore the delivery ecosystem" zh="探索交付生态" /></h2>
+        <p><LocalizedCopy en="This existing international catalogue complements the UK guide. A listing is not proof of UK manufacturing, current procurement, or a contract on a particular project. Expand a company for its recorded project roles and evidence." zh="此现有国际目录补充英国指南。收录不代表英国制造、当前采购或某项目合同。展开企业可查看记录的项目角色与证据。" /></p>
+        <dl className="industry-stats" aria-label="International catalogue coverage">
+          <div><dt><LocalizedCopy en="Companies in this catalogue" zh="目录内企业" /></dt><dd>{industryCompanyCount}</dd></div>
+          <div><dt><LocalizedCopy en="Catalogue stages" zh="目录阶段" /></dt><dd>{industryMap.length}</dd></div>
+          <div><dt><LocalizedCopy en="Recorded catalogue roles" zh="目录角色记录" /></dt><dd>{roleCount}</dd></div>
         </dl>
-      </section>
-
-      <section className="industry-system" aria-labelledby="industry-system-heading">
-        <div className="industry-system-copy">
-          <p className="eyebrow"><LocalizedCopy en="FOWT System" zh="浮式海上风电系统" /></p>
-          <h2 id="industry-system-heading"><LocalizedCopy en="Components first, supply chain second." zh="先看系统组件，再看供应链。" /></h2>
-          <p>
-            <LocalizedCopy en="The physical floating wind asset and the organisations that deliver it are related, but they are easier to read as two separate sectors: one for the offshore system components, and one for the delivery chain behind those components." zh="浮式风电实体资产与交付这些资产的机构相互关联，但分为两个部分更易理解：海上系统组件，以及组件背后的交付链。" />
-          </p>
-        </div>
-
-        <div className="industry-system-maps">
-          <div className="industry-map-panel" aria-label="Floating offshore wind system component sector">
-            <div className="industry-map-panel-copy">
-              <h3><LocalizedCopy en="Floating offshore wind system components" zh="浮式海上风电系统组件" /></h3>
-              <p>
-                <LocalizedCopy en="The platform is the offshore interface. It carries the turbine, connects to station-keeping hardware, and routes electrical export through dynamic cable and grid connection subsystems." zh="平台是海上接口，承载风机、连接定位保持装置，并通过动态海缆和并网子系统输送电力。" />
-              </p>
-            </div>
-            <div className="fowt-component-map">
-              <div className="industry-map-node industry-chain-owner">
-                Wind Turbine
-                <span>Turbine aerodynamics / control</span>
-              </div>
-              <div className="industry-map-arrow" aria-hidden="true">v</div>
-              <div className="industry-map-node industry-platform-node">
-                Floating Platform
-                <span>Floater hydrodynamics / stability</span>
-              </div>
-              <div className="industry-subsystem-row" aria-label="Floating platform subsystems">
-                <div className="industry-subsystem">
-                  <p>Station Keeping Subsystem</p>
-                  <div className="industry-map-node">
-                    Mooring & Anchoring
-                    <span>Mooring dynamics / soil interaction</span>
-                  </div>
-                </div>
-                <div className="industry-subsystem">
-                  <p>Electrical Export Subsystem</p>
-                  <div className="industry-map-node">
-                    Dynamic Cable
-                    <span>Cable fatigue / motion response</span>
-                  </div>
-                  <div className="industry-map-arrow" aria-hidden="true">v</div>
-                  <div className="industry-map-node">
-                    Offshore Electrical / Grid
-                    <span>Grid integration / power systems</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="industry-map-panel" aria-label="Floating offshore wind supply chain sector">
-            <div className="industry-map-panel-copy">
-              <h3><LocalizedCopy en="Supply chain and industry roles" zh="供应链与产业角色" /></h3>
-              <p>
-                <LocalizedCopy en="The delivery chain starts with project ownership and major equipment, then moves through platform-led subsystems, installation, grid connection, and assurance support." zh="交付链始于项目所有权和主要设备，随后延伸至平台相关子系统、安装、并网和认证保障支持。" />
-              </p>
-            </div>
-            <div className="industry-chain-map">
-              <div className="industry-map-node industry-chain-owner">
-                Project Owner / Developer
-              </div>
-              <div className="industry-map-arrow" aria-hidden="true">v</div>
-              <div className="industry-chain-row">
-                <div className="industry-map-node">Wind Turbine OEM</div>
-                <div className="industry-map-node industry-platform-node">
-                  Floating Platform
-                </div>
-              </div>
-              <div className="industry-map-arrow" aria-hidden="true">v</div>
-              <div className="industry-subsystem-row" aria-label="Platform-led supply chain subsystems">
-                <div className="industry-subsystem">
-                  <p>Station Keeping Subsystem</p>
-                  <div className="industry-map-node">Mooring & Anchoring</div>
-                  <div className="industry-map-node">Marine Installation</div>
-                </div>
-                <div className="industry-subsystem">
-                  <p>Electrical Export Subsystem</p>
-                  <div className="industry-map-node">Cable Systems</div>
-                  <div className="industry-map-arrow" aria-hidden="true">v</div>
-                  <div className="industry-map-node">Grid Technology</div>
-                </div>
-              </div>
-              <div className="industry-map-arrow" aria-hidden="true">v</div>
-              <div className="industry-chain-row">
-                <div className="industry-map-node">EPCI / Subsea</div>
-                <div className="industry-map-node">Offshore Electrical</div>
-                <div className="industry-map-node">Certification / Assurance</div>
-                <div className="industry-map-node">Engineering / Simulation</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="industry-world-map" aria-labelledby="industry-world-map-heading">
-        <p className="eyebrow"><LocalizedCopy en="Offshore Wind Map" zh="海上风电地图" /></p>
-        <h2 id="industry-world-map-heading"><LocalizedCopy en="Offshore wind around the world" zh="全球海上风电" /></h2>
-        <p>
-          <LocalizedCopy en="Scan global offshore wind project locations and market geography." zh="浏览全球海上风电项目位置与市场分布。" />
-        </p>
-        <p className="text-link-row">
-          <Link href="https://map.tgs4c.com/offshorewind/">
-            <LocalizedCopy en="Open TGS4C offshore wind map" zh="打开 TGS4C 海上风电地图" /> -&gt;
-          </Link>
-        </p>
-        <p className="industry-source-note">Source: TGS4C.</p>
-      </section>
-
-      <section className="industry-orientation" aria-label="How to read the map">
-        <div>
-          <p className="eyebrow"><LocalizedCopy en="Project Side / Clients" zh="项目方 / 客户" /></p>
-          <h2><LocalizedCopy en="Who owns the project?" zh="谁拥有项目？" /></h2>
-          <p>
-            <LocalizedCopy en="Developers, project owners, utilities, and infrastructure sponsors originate the project and procure the technical delivery chain." zh="开发商、项目业主、公用事业企业和基础设施投资方发起项目，并采购技术交付链。" />
-          </p>
-        </div>
-        <div>
-          <p className="eyebrow"><LocalizedCopy en="Delivery / Supply Chain" zh="交付 / 供应链" /></p>
-          <h2><LocalizedCopy en="Who delivers the system?" zh="谁交付系统？" /></h2>
-          <p>
-            <LocalizedCopy en="OEMs, platform designers, mooring and cable suppliers, offshore contractors, grid specialists, certifiers, and engineering tool providers turn the lease into an operating floating wind asset." zh="OEM、平台设计方、系泊与海缆供应商、海上承包商、电网专家、认证机构和工程工具提供商共同将租赁海域转化为运行中的浮式风电资产。" />
-          </p>
-        </div>
       </section>
 
       <section className="industry-map" aria-label="Floating offshore wind value chain">
@@ -315,6 +181,12 @@ export default function IndustryPage() {
             ) : null}
           </section>
         ))}
+      </section>
+
+      <section className="industry-world-map" aria-labelledby="industry-world-map-heading">
+        <h2 id="industry-world-map-heading"><LocalizedCopy en="Further geographic reference" zh="更多地理参考" /></h2>
+        <p><LocalizedCopy en="The external TGS4C map covers global offshore wind. It is separate from the UK explanation and its dated evidence." zh="外部 TGS4C 地图覆盖全球海上风电，与英国说明及其有日期的证据分开。" /></p>
+        <Link href="https://map.tgs4c.com/offshorewind/"><LocalizedCopy en="Open the global TGS4C map" zh="打开 TGS4C 全球地图" /></Link>
       </section>
 
       <SiteFooter />

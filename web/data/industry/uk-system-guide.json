@@ -1,0 +1,4196 @@
+{
+  "schemaVersion": "uk-fowt-guide.v1",
+  "reviewedOn": "2026-10-22",
+  "scope": "UK supply chain; GB electricity system and market",
+  "topics": [
+    {
+      "id": "uk-topic-01",
+      "number": 1,
+      "chapter": "chain",
+      "title": {
+        "en": "The complete chain: four maps, not one hierarchy",
+        "zh": "完整产业链：四种关系分开看"
+      },
+      "kinds": [
+        "typical",
+        "interpretation"
+      ],
+      "sourceIds": [
+        "src-56c4963050f4",
+        "src-22a787b58ebd",
+        "src-a191796e5ee5",
+        "src-3bb1ba763554",
+        "src-fe51f9978a35",
+        "src-1ad5436d088b",
+        "src-db4b893b8dfb",
+        "src-4df884e37d75",
+        "src-e51101ddd162",
+        "src-2fb52a45001f",
+        "src-2b71d2d7cf11",
+        "src-331a595c6a41",
+        "src-20231d79f059",
+        "src-fcbe9571f203",
+        "src-7e46785ca5a2",
+        "src-27d2dc252ef0",
+        "src-9e4e0b9f9320",
+        "src-6d4a8d484248",
+        "src-9e3a6357de6a",
+        "src-dc9d7ff3eb06"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "diagram",
+            "text": "INDUSTRIAL DELIVERY\nMaterials → Components → Subsystems → Engineered/manufactured packages\n          → Installation and integration → Operating wind farm\n\nPROJECT DEVELOPMENT\nRights + surveys + consent + design + grid + revenue + finance\n          → Investment decision → Construction → Operation → Decommissioning\n\nPERMISSIONS AND COORDINATION — alongside the delivery chain\nSeabed manager · consenting authorities · environmental advisers\nGovernment · Ofgem · NESO · industry codes\n\nELECTRICITY AND ITS MARKET — two separate flows\nPhysical: Wind farm → Network → Consumers\nMoney:    Buyers → Generator; LCCC ↔ Generator; Network users → Network revenue"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Typical practice / interpretation.** The table below describes normal customers and risks, not a universal contract structure. A developer can buy directly or through package contractors. EPCI means *engineer, procure, construct and install*; using it transfers some delivery risk for a price, rather than eliminating risk. [Procurement structures — BVG/ORE guide](https://guidetofloatingoffshorewind.com/procurement-structures/)."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Level",
+              "What it supplies next",
+              "Who normally pays whom",
+              "Main exposure",
+              "Examples / evidence"
+            ],
+            "rows": [
+              [
+                "Materials",
+                "Steel products, copper/aluminium, concrete inputs, composite fibres/resins",
+                "Component maker pays materials processor; processor buys feedstock",
+                "Commodity price, energy cost, provenance, grade/quality",
+                "Tata Steel UK participates in a floating-platform steel R&D collaboration; that is not a commercial farm supply award. [Tata Steel](https://www.tatasteeluk.com/corporate/news/industrial-collaboration-to-develop-strip-steel-floating-offshore-wind-platforms)"
+              ],
+              [
+                "Components",
+                "Fabricated plates, chain, rope, cable cores, connectors, blades, bearings",
+                "Subsystem supplier pays specialist manufacturer",
+                "Fatigue quality, defects, qualification, delivery slots",
+                "Bridon-Bekaert and Lankhorst supply mooring-line products; the line designer specifies the system. [Mooring lines guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-3-mooring-system/b-3-2-mooring-lines/)"
+              ],
+              [
+                "Subsystems",
+                "Turbine electrical equipment, station keeping, dynamic cable assemblies",
+                "OEM or package lead pays subsystem suppliers",
+                "Compatibility, loads, thermal performance, certification evidence",
+                "Electrical component firms supply into turbine packages; OEM integration matters. [Turbine electrical guide](https://guidetofloatingoffshorewind.com/guide/t-wind-turbine/t-4-electrical-system/)"
+              ],
+              [
+                "Packages",
+                "Designed turbine, floater, mooring spread, electrical network",
+                "Project company pays OEM/fabricator/package contractor",
+                "Design changes, warranties, fabrication rate, cost escalation",
+                "Principle Power supplies floating technology; fabricators and contractors build/deliver structures under the chosen scope. [Floater guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-2-floating-substructure/)"
+              ],
+              [
+                "Integration / marine delivery",
+                "An installed, connected and tested system",
+                "Project company or package lead pays ports, installers and vessel contractors",
+                "Weather, vessel availability, damage, schedule interfaces",
+                "Boskalis documents transport/installation work at Kincardine. [Contractor case study](https://boskalis.com/media/jgldcrcn/kincardine.pdf)"
+              ],
+              [
+                "Developer / project company",
+                "A permitted, financed generation business and coordinated contracts",
+                "Sponsors fund development/equity; lenders may fund construction; project company pays suppliers",
+                "Unbuilt-project losses, interface gaps, revenue and completion",
+                "A special-purpose vehicle (SPV) holds the project and contracts specialist work. [Development services guide](https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-1-development-and-consenting-services/)"
+              ],
+              [
+                "Transmission infrastructure",
+                "Available connection capacity between offshore generation and the wider grid",
+                "Under traditional generator-build OFTO arrangements, OFTO buys assessed assets; licensed revenue supports ownership/O&M",
+                "Cable failure, availability, asset transfer, repair",
+                "OFTO is a licensed asset owner, not the purchaser of generated electricity. [DESNZ OFTO explanation](https://www.gov.uk/government/calls-for-evidence/offshore-transmission-owner-ofto-regime/offshore-transmission-owner-regime-ofto-call-for-evidence-accessible-webpage)"
+              ],
+              [
+                "Electricity system / market",
+                "Real-time balancing, network access and commercial settlement",
+                "Buyers pay generators; network charges and balancing/settlement cashflows follow separate rules",
+                "Forecast error, constraints, outages, price exposure",
+                "NESO balances; Elexon administers BSC settlement. [NESO BM](https://www.neso.energy/what-we-do/systems-operations/what-balancing-mechanism), [Elexon trading](https://www.elexon.co.uk/bsc/about/trading-electricty-market/)"
+              ],
+              [
+                "Public coordination / regulation",
+                "Rights, permissions, licences, policy and consumer protection",
+                "Applicants may pay fees/rent; this is not an equipment-purchase tier",
+                "Environmental acceptability, statutory compliance, policy change",
+                "Seabed manager, consenting authority, Ofgem and DESNZ have different jobs. See jurisdiction and market sections below."
+              ]
+            ]
+          }
+        ],
+        "zh": [
+          {
+            "type": "diagram",
+            "text": "工业交付：材料 → 零部件 → 子系统 → 工程／制造包 → 安装集成 → 风电场\n项目开发：海域权利＋调查＋许可＋设计＋并网＋收入＋资金 → 投资决定 → 建造 → 运行 → 退役\n许可协调：海床管理方、审批机关、环境顾问、政府、Ofgem、NESO、市场规则\n电力实物流：风电场 → 网络 → 用户\n商业资金流：购电方 → 发电商；LCCC ↔ 发电商；网络收费另行结算"
+          },
+          {
+            "type": "paragraph",
+            "text": "**通常做法／工程解读。** 下表是常见客户与责任关系，不是统一合同模板。开发商可以直接采购，也可以通过总包方采购。EPCI 指工程、采购、建造与安装；交给总包方的是约定范围内的责任，并非所有风险。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "层级",
+              "向下一环节交付什么",
+              "通常谁向谁付款",
+              "主要风险",
+              "机构／企业示例与边界"
+            ],
+            "rows": [
+              [
+                "材料",
+                "钢材、铜／铝、混凝土原料、复合材料纤维与树脂",
+                "零部件厂向材料加工方付款；加工方采购原料",
+                "价格、能源成本、来源与材料等级",
+                "Tata Steel UK 参与浮式平台钢材研发；研发合作不等于风场供货合同"
+              ],
+              [
+                "零部件",
+                "钢板构件、链条、绳索、缆芯、连接器、叶片和轴承",
+                "子系统供应商向专业制造商付款",
+                "疲劳质量、缺陷、认证与交期",
+                "Bridon-Bekaert、Lankhorst 提供系泊线产品；系统规格由设计方确定"
+              ],
+              [
+                "子系统",
+                "风机电气、定位保持、动态海缆组件",
+                "OEM 或设备包牵头方向子系统供应商付款",
+                "兼容性、载荷、温升与验证",
+                "电气部件进入风机包后仍需 OEM 集成"
+              ],
+              [
+                "工程／制造包",
+                "成套风机、浮体、系泊系统、电气网络",
+                "项目公司向 OEM、制造厂或承包商付款",
+                "设计变更、质保、生产节拍、成本",
+                "Principle Power 提供浮式技术；制造与交付范围由合同确定"
+              ],
+              [
+                "集成与海上交付",
+                "已安装、连接并测试的系统",
+                "项目公司或设备包承包方向港口、安装商、船东付款",
+                "天气、船期、损坏与接口进度",
+                "Boskalis 有 Kincardine 运输安装案例"
+              ],
+              [
+                "开发商／项目公司",
+                "获许可、有资金、合同协调完整的发电业务",
+                "股东投入开发资金／股权；贷款方可提供债务；项目公司支付采购款",
+                "开发失败、接口遗漏、收入和完工",
+                "SPV 是持有项目和合同的特殊目的公司"
+              ],
+              [
+                "输电设施",
+                "风场到电网的可用输电连接",
+                "传统开发商建设模式下，OFTO 按评估价值收购资产，以许可收入支持运营",
+                "海缆故障、可用率、移交与维修",
+                "OFTO 是输电资产所有者，不是电力买家"
+              ],
+              [
+                "电力系统与市场",
+                "实时平衡、网络接入与商业结算",
+                "买家向发电商付款；网络、平衡与偏差另有规则",
+                "预测误差、阻塞、停运与价格",
+                "NESO 负责系统平衡；Elexon 管理 BSC 结算"
+              ],
+              [
+                "公共协调与监管",
+                "权利、许可、政策与消费者保护",
+                "申请方可能支付费用或租金；监管方不是设备采购链顶端客户",
+                "环境可接受性、合规与政策变化",
+                "海床管理、建设审批、能源监管与政策制定是不同职责"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-02",
+      "number": 2,
+      "chapter": "develop",
+      "title": {
+        "en": "The developer is the project integrator",
+        "zh": "开发商是项目集成方"
+      },
+      "kinds": [
+        "typical",
+        "interpretation"
+      ],
+      "sourceIds": [
+        "src-679f75c20596",
+        "src-7f379f42577b"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Terms.** An OEM is an original equipment manufacturer. PMO means project management office; HSE means health, safety and environment. These functions may be internal or contracted."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Typical practice.** The developer does not manufacture every item. It makes separately designed packages deliver one buildable, operable business. Functions may be internal, seconded, shared across a joint venture or outsourced; these are responsibilities, not a mandatory organisation chart."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Function group",
+              "Teams included",
+              "What they coordinate"
+            ],
+            "rows": [
+              [
+                "Development and delivery control",
+                "Project development; project management / PMO (project management office)",
+                "Scope, programme, budget, decisions and change control"
+              ],
+              [
+                "Integrated technical design",
+                "Engineering; turbine; floating structure; mooring; dynamic cables",
+                "Common loads, motion limits, interfaces and design basis"
+              ],
+              [
+                "Electrical delivery",
+                "Electrical systems; grid connection",
+                "Array/export architecture, protection, compliance and connection works"
+              ],
+              [
+                "Permission and people",
+                "Consenting/environment; fisheries/stakeholders; HSE (health, safety and environment)",
+                "Acceptable design envelope, consultation, safe design and safe work"
+              ],
+              [
+                "Commercial commitments",
+                "Procurement/supply chain; commercial/CfD; project finance; legal/contracts",
+                "Prices, responsibilities, warranties, revenue, funding and contingencies"
+              ],
+              [
+                "Build and handover",
+                "Construction; marine operations; commissioning",
+                "Port and vessel plans, installation, tests, energisation and handover"
+              ],
+              [
+                "Long-term ownership",
+                "Operations and asset management",
+                "Availability, inspections, repair logistics, integrity and lifetime obligations"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The grouping above is our explanatory model. FEED is *front-end engineering and design*: it develops the integrated design and procurement basis. Project management links technical packages to budgets, construction and power-sales arrangements. [Engineering/FEED guide](https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-5-engineering-and-consultancy/), [Project management guide](https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-6-project-management/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Interpretation example.** A larger turbine can change floater loads, mooring tension, cable excursions, crane requirements, consent dimensions and financing costs. The technical team cannot approve it independently of the commercial, consenting, port and operations teams. The developer needs one controlled interface register and a way to assess changes across packages."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**术语。** OEM 指原始设备制造商；PMO 是项目管理办公室；HSE 是健康、安全与环境。这些职能可以自有或外包。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**通常做法。** 开发商不制造全部设备，而是使独立设备包构成一个能够建设、运行并获得收入的项目。以下是职责分组，不要求每个开发商有同样的部门；工作可以自有、借调、合资共享或外包。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "职责组",
+              "涉及团队",
+              "协调内容"
+            ],
+            "rows": [
+              [
+                "开发与交付控制",
+                "项目开发、项目管理／PMO（项目管理办公室）",
+                "范围、进度、预算、决策与变更控制"
+              ],
+              [
+                "一体化技术设计",
+                "工程、风机、浮式结构、系泊、动态海缆",
+                "共同设计基础、载荷、运动限值和接口"
+              ],
+              [
+                "电气交付",
+                "电气系统、并网",
+                "阵列／送出网络、保护、合规与接入工程"
+              ],
+              [
+                "许可与相关方",
+                "许可和环境、渔业和利益相关方、HSE（健康安全环境）",
+                "设计包络、沟通、安全设计和安全作业"
+              ],
+              [
+                "商业承诺",
+                "采购供应链、商业／CfD、项目融资、法律合同",
+                "价格、范围、责任、质保、收入、资金和预备金"
+              ],
+              [
+                "建造与移交",
+                "施工、海上作业、调试",
+                "港口船舶、安装、测试、送电与移交"
+              ],
+              [
+                "长期资产责任",
+                "运维、资产管理",
+                "可用率、检查、维修物流、完整性和寿命责任"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "FEED 是前端工程设计：形成整体方案和采购基础。项目管理把技术包、预算、建设与售电安排连接起来。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**工程解读。** 更大的风机会改变浮体载荷、系泊张力、海缆偏移、起重能力、许可尺寸和融资成本。工程团队不能脱离商业、港口、审批和运维团队单独决定；应使用受控接口清单和跨团队变更评估。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-03",
+      "number": 3,
+      "chapter": "develop",
+      "title": {
+        "en": "The lifecycle: chronological decisions, parallel work",
+        "zh": "项目生命周期：决策有先后，工作常并行"
+      },
+      "kinds": [
+        "typical",
+        "interpretation"
+      ],
+      "sourceIds": [
+        "src-83b1652cff09",
+        "src-81e559076db0",
+        "src-5f61696cdce7",
+        "src-2b71d2d7cf11",
+        "src-331a595c6a41",
+        "src-20231d79f059",
+        "src-fcbe9571f203",
+        "src-7e46785ca5a2",
+        "src-27d2dc252ef0",
+        "src-9e4e0b9f9320",
+        "src-6d4a8d484248",
+        "src-9e3a6357de6a",
+        "src-dc9d7ff3eb06",
+        "src-16dcb454c610",
+        "src-84e659d553c3",
+        "src-0096785f6554",
+        "src-699305abe5ef",
+        "src-aaf47ba40b12",
+        "src-193fbab538e2",
+        "src-e5d538af057c",
+        "src-73c204163516",
+        "src-b387091ff3d4",
+        "src-6463f661bed9",
+        "src-85d29297643f",
+        "src-bab71a06695f",
+        "src-8c6025fd6baf",
+        "src-8fb1edbf438b",
+        "src-a4f397ab5f02",
+        "src-80b9eeeb1905",
+        "src-3db5fafc68c8",
+        "src-4005f31bb90c",
+        "src-9dbeb0387f83"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Terms.** FID means final investment decision. FEED means front-end engineering and design. A PPA is a power purchase agreement; CfD means Contract for Difference. TO means transmission owner; DNO means distribution network operator."
+          },
+          {
+            "type": "paragraph",
+            "text": "This is a typical decision sequence, not a statutory checklist. Surveys, consenting, grid, revenue and procurement overlap and may loop back. Early reservations or enabling works can precede FID, with explicit risk acceptance."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Stage / objective",
+              "Main technical activity",
+              "Main commercial activity",
+              "Authority or decision-maker",
+              "Gate to the next commitment"
+            ],
+            "rows": [
+              [
+                "Seabed leasing: obtain development rights",
+                "Screen sites and constraints",
+                "Bid, option/agreement-for-lease terms",
+                "The Crown Estate or Crown Estate Scotland",
+                "Appropriate rights and conditions understood; no construction permission implied"
+              ],
+              [
+                "Site investigation: characterise the site",
+                "Wind/waves/current, ecology, bathymetry, geophysics, soil samples",
+                "Commission surveys and data rights",
+                "Survey permissions and environmental authorities where needed",
+                "Adequate, quality-checked data for the next design/assessment stage"
+              ],
+              [
+                "Concept selection: choose a feasible system",
+                "Turbine/floater/mooring/cable/layout options",
+                "Compare whole-life cost and deliverability",
+                "Developer, advisers; engage authorities early",
+                "Preferred concept and alternatives fit site, port and consent constraints"
+              ],
+              [
+                "FEED: define an investable scope",
+                "Coupled loads, electrical studies, design interfaces",
+                "Tender basis, contracting strategy, risk allocation",
+                "Developer/package teams; independent assurance as selected",
+                "Design and cost sufficiently defined for bids and major decisions"
+              ],
+              [
+                "Consenting: obtain lawful permissions",
+                "EIA, habitats assessment inputs, mitigation",
+                "Land/access agreements and consent conditions",
+                "Jurisdiction-specific authorities; see Who controls seabed rights and permissions?",
+                "Required decisions and an achievable condition-discharge plan"
+              ],
+              [
+                "Grid connection: secure a workable export route",
+                "Connection design, studies, reinforcements",
+                "Connection offer, charges, securities and dates",
+                "NESO plus relevant TO/DNO",
+                "Applicable offer/connection obligations and delivery dependencies understood"
+              ],
+              [
+                "Route to market: establish revenue",
+                "Yield and loss forecasts",
+                "CfD auction where pursued; power-sale/PPA terms",
+                "DESNZ policy, NESO allocation delivery, LCCC counterparty; commercial buyers",
+                "Credible revenue/offtake case; CfD is not the physical sale"
+              ],
+              [
+                "Procurement: obtain deliverable contracts",
+                "Specifications, interfaces and qualification",
+                "Negotiate packages, reservations, liabilities and warranties",
+                "Project company and suppliers",
+                "Sufficiently robust price, scope, schedule and capacity commitments"
+              ],
+              [
+                "Financing: fund the plan",
+                "Independent technical diligence and downside cases",
+                "Equity/debt terms, insurance and security",
+                "Investors/lenders and their advisers",
+                "Funding and conditions precedent sufficiently agreed"
+              ],
+              [
+                "FID: authorise investment",
+                "Confirm design maturity and delivery plan",
+                "Approve risk-adjusted business case and capital",
+                "Sponsor/project-company investment governance",
+                "Investment authorised; unresolved conditions have owners and credible closure plans"
+              ],
+              [
+                "Manufacturing: make qualified equipment",
+                "Detailed design, QA, fabrication, factory tests",
+                "Milestone payments and change control",
+                "Suppliers/project company; certifier as contracted",
+                "Accepted equipment and traceable quality evidence"
+              ],
+              [
+                "Port integration: assemble the turbine/floater",
+                "Heavy lifts, ballast, interfaces, pre-commissioning",
+                "Berth/crane/wet-storage and logistics contracts",
+                "Port/harbour authorities and delivery team",
+                "Stable, tested unit and approved tow/hook-up readiness"
+              ],
+              [
+                "Installation: secure/connect offshore",
+                "Anchors, moorings, cables, tow and hook-up",
+                "Vessel execution, weather risk, claims",
+                "Marine consent/harbour/safety bodies as applicable",
+                "Installed system and inspection/test evidence"
+              ],
+              [
+                "Commissioning: prove functions",
+                "Protection, communications, electrical/mechanical tests",
+                "Acceptance, performance and handover terms",
+                "Asset parties and network compliance processes",
+                "Safe energisation permissions and completed required tests"
+              ],
+              [
+                "Generation: export commercial output",
+                "Metering, dispatch/control and performance",
+                "Market/BSC registration, sales and CfD conditions",
+                "Network/market bodies; LCCC where relevant",
+                "Revenue operation under the applicable agreements"
+              ],
+              [
+                "Operation: maintain safe availability",
+                "Monitor/inspect/repair turbine and subsea assets",
+                "O&M contracts, insurance, lifecycle reserves",
+                "Owner/operator and relevant regulators",
+                "Continuing integrity and compliance; not a one-time gate"
+              ],
+              [
+                "Decommissioning: discharge end-of-life obligations",
+                "Removal/retention assessment, waste and monitoring",
+                "Cost provisions, security and contracts",
+                "DESNZ for England/Wales; Scottish arrangements separately",
+                "Approved programme, obligations and funding; plan starts during development"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Evidence for development workstreams: [environmental surveys](https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-2-environmental-surveys/), [resource/metocean](https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-3-resource-and-metocean-assessment/), [geological/hydrographical surveys](https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-4-geological-and-hydrographical-surveys/). Permission, connection, revenue, installation and end-of-life evidence is detailed in the corresponding permissions, grid, CfD, ports, installation and O&M topics. The exit gates are our engineering/commercial interpretation, not claims that a regulator signs off every stage."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**术语。** FID 是最终投资决定；FEED 是前端工程设计；PPA 是购电协议；CfD 是差价合约；TO 是输电业主；DNO 是配电网运营方。"
+          },
+          {
+            "type": "paragraph",
+            "text": "这是一种典型决策顺序，不是法定清单。调查、许可、并网、收入与采购相互重叠，必要时返回前一步。部分预订或先期工程可在 FID 前进行，但应明确承担风险。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "阶段／目标",
+              "技术活动",
+              "商业活动",
+              "主管机构或决策者",
+              "进入下一项承诺前的条件"
+            ],
+            "rows": [
+              [
+                "海床租赁：取得开发权利",
+                "场址与约束筛选",
+                "投标及选择权／租赁协议",
+                "The Crown Estate 或 Crown Estate Scotland",
+                "明确权利和条件；不代表建设许可"
+              ],
+              [
+                "场址调查：认识场址",
+                "风浪流、生态、水深、地球物理和取土",
+                "委托调查及数据使用权",
+                "适用的调查许可与环境机构",
+                "数据质量足以支持下一阶段设计与评估"
+              ],
+              [
+                "概念选择：选可交付系统",
+                "风机／浮体／系泊／海缆／布置方案",
+                "比较全寿命成本与可交付性",
+                "开发商及顾问，并提前咨询主管方",
+                "优选方案与场址、港口和许可约束相容"
+              ],
+              [
+                "FEED：明确投资范围",
+                "耦合载荷、电气研究、接口设计",
+                "招标基础、合同策略和风险分配",
+                "开发商及设备包团队，按需独立审查",
+                "设计与成本足以支持报价和重大决策"
+              ],
+              [
+                "许可：依法获准",
+                "环评、栖息地评估资料、减缓措施",
+                "土地权利与许可条件",
+                "各司法辖区主管方",
+                "获得必要决定，并有可执行的条件落实计划"
+              ],
+              [
+                "并网：获得可行送出路径",
+                "接入设计、研究、网络加强",
+                "接入报价、费用、担保和日期",
+                "NESO 与相应 TO／DNO",
+                "明确实际协议义务和交付依赖"
+              ],
+              [
+                "售电路径：建立收入",
+                "发电量及损耗预测",
+                "可选 CfD 竞拍、售电／PPA",
+                "DESNZ 政策、NESO 分配执行、LCCC 对手方及商业买家",
+                "收入安排可信；CfD 不等于实物售电"
+              ],
+              [
+                "采购：取得可交付合同",
+                "技术规格、接口与验证",
+                "价格、范围、预订、责任和质保",
+                "项目公司及供应商",
+                "范围、价格、进度与产能承诺足够可靠"
+              ],
+              [
+                "融资：为计划筹资",
+                "技术尽调与不利情景",
+                "股权／债务条款、保险和担保",
+                "投资者、贷款方及顾问",
+                "资金及先决条件已充分落实"
+              ],
+              [
+                "FID：授权投资",
+                "确认设计成熟度和交付计划",
+                "审批风险调整商业方案与资本",
+                "股东／项目公司投资治理",
+                "授权投资，剩余条件有人负责且可落实"
+              ],
+              [
+                "制造：产出合格设备",
+                "详细设计、质量控制、制造和出厂测试",
+                "里程碑付款与变更控制",
+                "供应商、项目公司及约定认证方",
+                "设备验收与质量追溯证据"
+              ],
+              [
+                "港口集成：组装风机和浮体",
+                "吊装、压载、接口与预调试",
+                "泊位、起重、湿储和物流合同",
+                "港务／港口机构及交付团队",
+                "稳定、经测试且可安全拖航和连接"
+              ],
+              [
+                "安装：海上固定与连接",
+                "锚、系泊、海缆、拖航和连接",
+                "船舶执行、天气风险和索赔",
+                "适用海事许可、港务与安全主管方",
+                "安装完成并有检查测试证据"
+              ],
+              [
+                "调试：验证功能",
+                "保护、通信、机电测试",
+                "验收、性能与移交",
+                "资产方及电网合规流程",
+                "安全送电授权与必要测试完成"
+              ],
+              [
+                "发电：商业输出",
+                "计量、控制与性能",
+                "市场／BSC 注册、售电及 CfD 条件",
+                "网络和市场机构，必要时 LCCC",
+                "按适用协议开展收入运行"
+              ],
+              [
+                "运行：长期安全可用",
+                "风机和水下资产监测、检查、维修",
+                "运维合同、保险与寿命储备",
+                "业主、运营方与相应监管机构",
+                "持续完整性和合规，不是一次性关卡"
+              ],
+              [
+                "退役：履行寿命末责任",
+                "拆除／保留评估、废物和监测",
+                "费用计提、担保与合同",
+                "英格兰／威尔士 DESNZ；苏格兰另有安排",
+                "按规定获批的方案、责任和资金，开发期即开始规划"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "关卡是工程和商业解读，不表示每一阶段都由监管方签字。来源包括调查、许可、接入、收入、安装与退役的对应指导。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-04",
+      "number": 4,
+      "chapter": "develop",
+      "title": {
+        "en": "Who controls seabed rights and permissions?",
+        "zh": "海床权利与建设许可由谁管理？"
+      },
+      "kinds": [
+        "confirmed",
+        "changing"
+      ],
+      "sourceIds": [
+        "src-2b71d2d7cf11",
+        "src-331a595c6a41",
+        "src-20231d79f059",
+        "src-fcbe9571f203",
+        "src-7e46785ca5a2",
+        "src-27d2dc252ef0"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Terms.** MD-LOT is the Marine Directorate Licensing Operations Team. MMO is the Marine Management Organisation; NRW is Natural Resources Wales. DCO means Development Consent Order; NSIP means Nationally Significant Infrastructure Project; PEDW is Planning and Environment Decisions Wales."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Confirmed distinction:** an option, agreement for lease or lease is a property/ development-rights agreement. Consent authorises specified activities under law. Neither automatically supplies grid access, a CfD or financing. [Crown Estate Scotland's explanation](https://www.crownestatescotland.com/news/foi-382scotwind-revenue)."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Jurisdiction",
+              "Seabed rights",
+              "Offshore authorisation",
+              "Onshore works and environmental advice"
+            ],
+            "rows": [
+              [
+                "Scotland",
+                "Crown Estate Scotland manages relevant Scottish seabed rights",
+                "Scottish Ministers; MD-LOT processes relevant marine licences and section 36 consents",
+                "Onshore planning is a separate workstream through the relevant route/local authority; NatureScot/JNCC provide nature-conservation advice within their remits"
+              ],
+              [
+                "England",
+                "The Crown Estate",
+                "For NSIPs, Planning Inspectorate examination and Secretary of State decision through a DCO; MMO determines relevant marine licences or administers deemed-licence functions",
+                "Onshore works may be within a DCO or need separate planning permission; Natural England and other bodies advise"
+              ],
+              [
+                "Wales",
+                "The Crown Estate",
+                "NRW is the marine licensing authority on behalf of Welsh Ministers; generation consent may use devolved infrastructure consent or the reserved NSIP route, with transitional/project-specific treatment",
+                "PEDW/Welsh Ministers and local planning authorities have roles under the applicable route; NRW and JNCC provide environmental advice within their remits"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Scottish requirements are explained in [MD-LOT guidance, updated 29 September 2026](https://www.gov.scot/publications/marine-licensing-and-consenting-offshore-renewable-energy-projects/pages/licensing-and-consenting-requirements/). Environmental advisers inform the decision; they are not interchangeable with the seabed landlord or the consenting authority. [JNCC responsibilities](https://jncc.defra.gov.uk/our-work/ornithology-renewables/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Changing arrangements.** England's [MMO guidance, updated 3 August 2026](https://www.gov.uk/guidance/offshore-energy-generation-consents) explicitly warns against choosing the consent route from capacity alone. Wales' Significant Infrastructure Projects (SIP) regime commenced in December 2025; current [SIP guidance](https://www.gov.wales/significant-infrastructure-projects-sip-what-submit-your-application) includes provisions for deemed marine licences. The [UK NSIP guidance](https://www.gov.uk/guidance/nationally-significant-infrastructure-projects-development-consent-legislation) explains reserved/devolved boundaries, including the 350 MW offshore-generation boundary for Wales. Site location, cross-border infrastructure, directions and transitional rules still matter. Do not reuse the 2023 Welsh flowchart as a complete current decision tree."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**术语。** MD-LOT 是苏格兰海洋局许可业务团队；MMO 是海洋管理组织；NRW 是威尔士自然资源局；DCO 是开发许可令；NSIP 是国家重大基础设施项目；PEDW 是威尔士规划和环境决策机构。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**已确认职责。** 选择权、租赁意向协议和租约属于财产权利／开发安排；建设许可依据法律批准特定活动。它们都不会自动提供并网、CfD 或资金。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "地区",
+              "海床开发权利",
+              "海上许可",
+              "陆上工程与环境意见"
+            ],
+            "rows": [
+              [
+                "苏格兰",
+                "Crown Estate Scotland 管理相关苏格兰海床权利",
+                "Scottish Ministers；MD-LOT 办理相应海事许可和《电力法》第 36 条同意",
+                "陆上审批另走适用程序；地方规划机关参与；NatureScot／JNCC 在各自范围提供自然保护意见"
+              ],
+              [
+                "英格兰",
+                "The Crown Estate",
+                "NSIP 由 Planning Inspectorate 审查、国务大臣决定 DCO；MMO 负责适用海事许可或视同许可相关管理",
+                "陆上工程可能纳入 DCO，或另需规划许可；Natural England 等提供意见"
+              ],
+              [
+                "威尔士",
+                "The Crown Estate",
+                "NRW 代表 Welsh Ministers 处理海事许可；发电审批可能走下放的基础设施许可或保留的 NSIP 路径，并考虑过渡安排",
+                "PEDW、Welsh Ministers、地方规划机关按程序参与；NRW／JNCC 提供各自范围的环境意见"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "**制度变化。** 苏格兰 MD-LOT 指导更新于 2026-09-29；英格兰 MMO 指导于 2026-08-03 明确不能只按容量选择程序。威尔士 SIP 制度于 2025 年 12 月启动，当前指导涉及视同海事许可；英国 NSIP 指导解释威尔士海上发电 350 MW 边界等权限范围。位置、跨境设施、指令和过渡规则同样重要，不能把 2023 年流程图当成完整现行规则。"
+          },
+          {
+            "type": "paragraph",
+            "text": "环境顾问为审批提供意见，不等于海床出租方或最终决策机关。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-05",
+      "number": 5,
+      "chapter": "machine",
+      "title": {
+        "en": "From rotor to seabed",
+        "zh": "从转子到海床"
+      },
+      "kinds": [
+        "typical"
+      ],
+      "sourceIds": [
+        "src-9d74d1d4b4a8",
+        "src-fe51f9978a35",
+        "src-40364877bde8",
+        "src-6879eb65f09b"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "diagram",
+            "text": "Wind → blades + hub (rotor) → drivetrain / generator inside the nacelle\n                            → power converter → transformer → cable\n                    │\n                  tower\n                    │\n                 floater\n             ┌──────┴────────┐\n        mooring lines    dynamic power cable\n             │               │\n           anchors        seabed cable/network\n             │\n        seabed / soil"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Typical physical functions.** Blades extract aerodynamic energy; the rotor turns the drivetrain. The generator converts mechanical power into electrical power. Designs may be geared or direct drive. The nacelle encloses major machinery; the tower carries rotor/nacelle loads to the floater. [US Department of Energy — first-principles explanation](https://www.energy.gov/cmei/systems/how-do-wind-turbines-work)."
+          },
+          {
+            "type": "paragraph",
+            "text": "The floater supplies buoyancy/stability; moorings limit movement; anchors transmit mooring loads into the soil. The seabed is a design input, not another manufactured component. Cable and mooring geometry must leave room for motion and installation. [Floating substructure guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-2-floating-substructure/), [anchor guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-3-mooring-system/b-3-1-anchors/)."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Concept",
+              "How it stays stable",
+              "Consequences to examine, not universal rankings"
+            ],
+            "rows": [
+              [
+                "Semi-submersible",
+                "Buoyancy distributed across separated columns/pontoons",
+                "Often compatible with quayside turbine integration; wide footprint, structural fabrication and port space matter; compliant moorings allow motion that cables must accommodate"
+              ],
+              [
+                "Spar",
+                "A deep, slender, ballasted body lowers the centre of gravity",
+                "Large draft can constrain assembly/towing ports and require deep sheltered integration water; motions and station keeping still need site-specific analysis"
+              ],
+              [
+                "TLP: tension-leg platform",
+                "Excess buoyancy is restrained by tensioned tendons",
+                "Can reduce some motions but introduces tendon/anchor uplift demands; stability during transport/installation may need temporary support; cable design still depends on actual response"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These are mechanism-based tradeoffs. Steel/concrete, fabrication method, water depth, turbine size, port access and installation strategy can outweigh the headline concept. There is no universally cheapest or most scalable winner. [Floating technology guide](https://guidetofloatingoffshorewind.com/floating-technology/)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "diagram",
+            "text": "风 → 叶片＋轮毂（转子） → 机舱内传动链／发电机 → 变流器 → 变压器 → 海缆\n                          │\n                         塔架\n                          │\n                         浮体\n                    ┌─────┴─────┐\n                  系泊线      动态海缆\n                    │            │\n                    锚         海床电缆／网络\n                    │\n                 海床／土体"
+          },
+          {
+            "type": "paragraph",
+            "text": "**通常原理。** 叶片捕获空气动力能，转子带动传动链，发电机把机械能转为电能。机型可有齿轮箱，也可直驱。机舱容纳主要机械，塔架把上部载荷传到浮体。"
+          },
+          {
+            "type": "paragraph",
+            "text": "浮体提供浮力和稳定性，系泊限制位移，锚把载荷传入土体。海床是设计条件，不是制造部件；海缆和系泊必须留出运动及安装空间。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "概念",
+              "稳定机制",
+              "需要权衡的后果，而非统一排名"
+            ],
+            "rows": [
+              [
+                "半潜式",
+                "分开的立柱／浮筒提供分布浮力",
+                "通常适合码头集成；占地、结构制造与港口空间重要；柔顺系泊允许的运动需由海缆承受"
+              ],
+              [
+                "Spar 深吃水柱式",
+                "深长结构与压载降低重心",
+                "大吃水限制港口和拖航，可能需要深水避风水域集成；运动和定位仍需场址分析"
+              ],
+              [
+                "TLP 张力腿式",
+                "过剩浮力由预张紧筋腱约束",
+                "可限制部分运动，但锚和筋腱承受上拔；运输安装阶段可能需临时稳定措施，海缆仍按实际响应设计"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "钢或混凝土、制造方式、水深、风机尺寸、港口和安装方法都影响结果。不存在对所有项目最便宜或最容易规模化的概念。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-06",
+      "number": 6,
+      "chapter": "power",
+      "title": {
+        "en": "Follow the electricity: typical voltages and ownership",
+        "zh": "沿电力路径走：电压与资产责任"
+      },
+      "kinds": [
+        "typical"
+      ],
+      "sourceIds": [
+        "src-3bb1ba763554",
+        "src-7be13e548b82",
+        "src-31935cfbe545",
+        "src-78fdd0c33bf6",
+        "src-099b568b34f0",
+        "src-6ebbe369e07f"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Terms.** A kilovolt (kV) is 1,000 volts. MWh measures energy, not instantaneous power. TO means transmission owner; DNO means distribution network operator. Ownership boundaries must be established from the actual project agreements."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Typical architecture, not every project's single-line diagram.** Voltage values are examples, not requirements. Wind, rotor and landfall do not themselves have an electrical voltage rating. Generator/converter arrangement and transformer location depend on the turbine design."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Section",
+              "Purpose / equipment",
+              "Typical voltage context",
+              "Owner/operator and engineering issue"
+            ],
+            "rows": [
+              [
+                "Wind → rotor",
+                "Blades turn aerodynamic power into torque",
+                "Not electrical",
+                "Generation owner/OEM; variable wind, wakes and loads"
+              ],
+              [
+                "Generator → converter",
+                "Generate electricity and control electrical output",
+                "Turbine-internal; guide examples 0.69–3.3 kV",
+                "Generation owner/OEM; cooling, fault response and controls"
+              ],
+              [
+                "Turbine transformer",
+                "Match turbine voltage to array network",
+                "Example step-up to 66 kV",
+                "Generation asset; mass, access, insulation and replacement"
+              ],
+              [
+                "Dynamic array cable",
+                "Bridge moving floater to network",
+                "Same nominal array voltage, often 66 kV",
+                "Normally generation system; bending/tension fatigue"
+              ],
+              [
+                "Array cable network",
+                "Collect turbine strings/circuits",
+                "66 kV common; older/larger/new designs differ",
+                "Generation system; circuit rating, losses, protection and outage exposure"
+              ],
+              [
+                "Offshore substation, if used",
+                "Collect circuits, step up AC or convert to DC",
+                "HVAC example 66 → 220 kV",
+                "Often transmission-side under a traditional OFTO scope; heavy equipment and maintainability"
+              ],
+              [
+                "Offshore export cable",
+                "Deliver bulk power towards shore",
+                "HVAC example 220 kV; HVDC uses its own design rating",
+                "Transmission-scope case: developer then OFTO; losses, cable charging for AC, repair"
+              ],
+              [
+                "Landfall → onshore cable",
+                "Cross shore and continue inland",
+                "Usually export-circuit voltage until transformation",
+                "Cable-system owner; joints, civil works, access, heating and sensitive habitats"
+              ],
+              [
+                "Onshore substation",
+                "Transform/filter/control, or convert DC back to AC",
+                "Grid interface may be 132/275/400 kV depending on location",
+                "Project/OFTO-side plant versus TO-side bay must be identified"
+              ],
+              [
+                "Grid connection point",
+                "Defined electrical and contractual interface",
+                "As specified in connection agreement",
+                "Relevant asset parties; protection, metering and compliance"
+              ],
+              [
+                "GB transmission",
+                "Move bulk power through the interconnected network",
+                "Commonly 275/400 kV; also 132 kV in Scotland",
+                "NGET / SSEN Transmission / SP Transmission; capacity and constraints"
+              ],
+              [
+                "Distribution → consumers",
+                "Step down and deliver locally",
+                "Multiple lower-voltage levels; final supply depends on customer",
+                "DNOs then customer installations; local capacity and protection"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Sources: [turbine electrical examples](https://guidetofloatingoffshorewind.com/guide/t-wind-turbine/t-4-electrical-system/), [array cable](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-1-cables/b-1-1-array-cable/), [export cable](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-1-cables/b-1-2-export-cable/), [onshore substation](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-5-onshore-substation/), [National Grid network explanation](https://www.nationalgrid.com/stories/energy-explained/electricity-transmission-vs-electricity-distribution), [SSEN network methodology](https://www.ssen-transmission.co.uk/globalassets/documents/a-network-for-net-zero/supporting-evidence/network-asset-risk-noms-methodology-.pdf)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Important branches:** some smaller farms connect to distribution or export without an offshore substation. Offshore oil-and-gas electrification can have a different destination entirely. This diagram is not proof that every UK floating project uses an OFTO or every consumer is reached through the same network path."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**术语。** 千伏（kV）等于 1,000 伏；MWh 是能量单位，不是瞬时功率。TO 为输电业主，DNO 为配电网运营方；产权边界需查看实际协议。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**典型架构，并非每个项目的单线图。** 以下电压是示例，不是强制值。风、转子和海缆登陆点本身没有独立电压等级；变流器架构和变压器位置取决于机型。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "环节",
+              "目的／设备",
+              "常见电压背景",
+              "资产方及工程问题"
+            ],
+            "rows": [
+              [
+                "风 → 转子",
+                "叶片把风能转为扭矩",
+                "尚未产生电能",
+                "发电业主／OEM；风变化、尾流和载荷"
+              ],
+              [
+                "发电机 → 变流器",
+                "发电与电气输出控制",
+                "风机内部，指导示例 0.69–3.3 kV",
+                "发电资产；冷却、故障响应和控制"
+              ],
+              [
+                "风机变压器",
+                "匹配阵列网络电压",
+                "例如升到 66 kV",
+                "发电资产；质量、通道、绝缘和更换"
+              ],
+              [
+                "动态阵列海缆",
+                "连接运动浮体与网络",
+                "与阵列额定电压相同，常见 66 kV",
+                "通常属发电系统；弯曲、张力和疲劳"
+              ],
+              [
+                "阵列海缆网络",
+                "汇集各风机回路",
+                "66 kV 常见，旧／新设计可不同",
+                "发电系统；载流、损耗、保护和故障影响范围"
+              ],
+              [
+                "海上升压站（如有）",
+                "汇集、升压或变换为直流",
+                "交流示例 66 → 220 kV",
+                "传统 OFTO 范围下常在输电侧；设备重量与维护"
+              ],
+              [
+                "海上送出海缆",
+                "向岸输送总功率",
+                "交流示例 220 kV；直流另定额定值",
+                "输电案例中先由开发商持有，再移交 OFTO；损耗、交流充电与维修"
+              ],
+              [
+                "登陆点 → 陆上电缆",
+                "穿越海岸并继续向内陆送电",
+                "通常保持送出回路电压直至变压",
+                "电缆资产方；接头、土建、热、通行和栖息地"
+              ],
+              [
+                "陆上变电站",
+                "变压、滤波、控制或直流转交流",
+                "接入可为 132／275／400 kV 等",
+                "须分清项目／OFTO 侧与 TO 侧间隔"
+              ],
+              [
+                "并网点",
+                "规定的电气与合同接口",
+                "依接入协议",
+                "各资产方；保护、计量与合规"
+              ],
+              [
+                "GB 输电网",
+                "互联网络输送大规模电力",
+                "常见 275／400 kV，苏格兰也有 132 kV",
+                "NGET／SSEN Transmission／SP Transmission；容量与阻塞"
+              ],
+              [
+                "配电 → 用户",
+                "降压并送至本地",
+                "多级较低电压，终端取决于用户",
+                "DNO（配电网运营方）及用户设施；局部容量和保护"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "**分支。** 部分小型风场接入配电网，或不设海上站直接送出；油气设施电气化也可能另有电力终点。不能据此认定所有英国浮式项目都使用 OFTO 或相同用户路径。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-07",
+      "number": 7,
+      "chapter": "machine",
+      "title": {
+        "en": "Why dynamic cables are a system problem",
+        "zh": "动态海缆为何必须从系统角度分析？"
+      },
+      "kinds": [
+        "typical",
+        "interpretation"
+      ],
+      "sourceIds": [
+        "src-83ad6ce367d4",
+        "src-298a2e8a5c08",
+        "src-ee09616c9461"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "diagram",
+            "text": "Floater cable hang-off + bend control\n      ↓ suspended/free-hanging length\n      ↑ buoyancy-supported arch (lazy wave example)\n      ↓ lower suspended section\nTouchdown zone ↔ changing contact with seabed\n      → static cable section / joint, where used → array network"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Typical practice.** The hang-off carries the cable into the floater; bend control limits local curvature. Buoyancy modules shape the suspended cable so motion is absorbed across a compliant configuration. Lazy wave is one solution, not the only geometry. The touchdown zone is where contact with the seabed changes as the system moves. A dynamic-to-static transition may be included; some designs use longer dynamic lengths instead. [Cable connection study — ORE Catapult](https://ore.catapult.org.uk/resource-hub/analysis-reports/cornwall-flow-accelerator-optimised-cable-connection-options-for-floating-offshore-wind), [dynamic cable qualification report](https://ore.catapult.org.uk/wp-content/uploads/2022/10/Dynamic-Cable-Technology-Qualification-Oct-2022.pdf)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Engineering interpretation:** floater motion changes the cable-end position; mooring stiffness and pretension change the floater's excursion; cable geometry then changes curvature, tension and seabed interaction. Design checks therefore need compatible coupled response and load cases, including extreme conditions, fatigue and relevant faults. Moorings are station-keeping equipment; the power cable is not a substitute mooring line. [Mooring-system response and cable excursion](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-3-mooring-system/)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "diagram",
+            "text": "浮体挂点＋弯曲控制\n    ↓ 自由悬垂段\n    ↑ 浮力模块托起的拱段（懒波形示例）\n    ↓ 下部悬垂段\n触地点区域 ↔ 随运动改变的海床接触\n    → 静态海缆段／接头（如采用） → 阵列网络"
+          },
+          {
+            "type": "paragraph",
+            "text": "**通常做法。** 挂点承接海缆，弯曲控制装置限制局部曲率；浮力模块塑造柔顺外形以吸收运动。懒波形只是方案之一。触地区域的接触位置随运动变化；动态到静态的过渡并非每个方案都有。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**工程解读。** 浮体改变海缆端部位置；系泊刚度、预张力影响偏移；海缆形状再影响曲率、张力和海床作用。因此必须使用相容的耦合响应、极端载荷、疲劳和适用故障工况。系泊负责定位，电缆不能当系泊线。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-08",
+      "number": 8,
+      "chapter": "machine",
+      "title": {
+        "en": "Array and export architecture",
+        "zh": "阵列与送出网络"
+      },
+      "kinds": [
+        "typical"
+      ],
+      "sourceIds": [
+        "src-7be13e548b82",
+        "src-7ecaa16cb671",
+        "src-ac6c52023ef5",
+        "src-1ad32ae83a18"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Typical practice.** Several turbines connect along a string; multiple strings feed collection points. Network topology, protection and switching decide which output is lost when a cable section fails. A dynamic section accommodates the floater; static seabed sections carry power where motion requirements permit. 66 kV is a common array design point, not a law or a statement about every installed project. [Array cable guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-1-cables/b-1-1-array-cable/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "HVAC means high-voltage alternating current. Longer AC cables introduce reactive power/charging constraints. HVDC means high-voltage direct current: converters add cost and complexity, but DC can suit long/high-capacity export. The choice depends on capacity, distance, losses, network design and available equipment; there is no single universal distance where DC becomes compulsory. [HVAC system](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-4-offshore-substation/b-4-1-hvac-electrical-system/), [HVDC system](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-4-offshore-substation/b-4-2-hvdc-electrical-system/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Burial/protection needs route surveys and ground assessment. Crossings can need agreements and engineered separation/protection. Installation includes laying, pull-in, termination and testing; a laid cable is not yet a commissioned circuit. [Offshore cable installation guide](https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-2-offshore-cable-installation/)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**通常做法。** 多台风机组成回路，多个回路接入汇集点。拓扑、开关和保护决定故障会切掉多少发电量。运动端需要动态段，允许静态敷设的位置可使用海床静态段。66 kV 是常见设计点，不是法规，也不代表全部已建项目。"
+          },
+          {
+            "type": "paragraph",
+            "text": "HVAC 为高压交流，较长电缆会带来无功和充电效应；HVDC 为高压直流，需要较昂贵复杂的换流设备，但可能适合长距离或大容量送出。选择取决于容量、距离、损耗、网络设计和设备，没有统一的距离分界线。"
+          },
+          {
+            "type": "paragraph",
+            "text": "埋设与防护需调查地层和路由；交叉段可能需要协议、间距和专项防护。敷缆、牵入、终端连接和测试都是工作范围，敷完不等于已调试可用。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-09",
+      "number": 9,
+      "chapter": "power",
+      "title": {
+        "en": "What substations actually do",
+        "zh": "变电站实际做什么？"
+      },
+      "kinds": [
+        "typical"
+      ],
+      "sourceIds": [
+        "src-bbca4ffd7bee",
+        "src-04ee5b986657",
+        "src-5323dec6c520"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Typical practice.** An offshore substation joins array circuits to export circuits. Transformers change AC voltage; switchgear isolates equipment; protection detects faults and trips the right equipment. Reactive-power equipment helps manage AC network conditions. Control, communications, auxiliary power and metering support operation. An HVDC design adds conversion equipment. [Offshore substation guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-4-offshore-substation/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "The onshore substation conditions power for the connection point, with equipment depending on AC/DC choice. It is distinct from the adjacent TO network plant, even when physically close. [Onshore electrical system](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-5-onshore-substation/b-5-1-electrical-system/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Do not infer a floating substation from floating turbines.** Alternatives include a fixed substation at a suitable location, direct export for a suitable smaller scheme, or a project-specific connection to other offshore infrastructure. The BVG/ORE reference case itself assumes a fixed substation. [Reference-design assumptions](https://guidetofloatingoffshorewind.com/guide/1-2-assumptions-used-in-this-guide/)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**通常做法。** 海上站连接阵列与送出回路。变压器改变交流电压；开关设备隔离电路；保护识别故障并切除适当设备；无功设备管理交流网络状态；控制、通信、辅助电源和计量支持运行。直流方案还需要换流。"
+          },
+          {
+            "type": "paragraph",
+            "text": "陆上站把电力调节到并网所需状态；它与相邻 TO 设施即使在同一地区，也可能有不同产权和责任。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**不能从“风机是浮式”推导“海上站必须浮式”。** 可以采用适当位置的固定站、适合小型项目的直接送出，或连接其他海上设施。BVG／ORE 参考方案本身采用固定海上站。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-10",
+      "number": 10,
+      "chapter": "power",
+      "title": {
+        "en": "OFTO: owning the offshore transmission connection",
+        "zh": "OFTO：拥有海上输电连接"
+      },
+      "kinds": [
+        "typical",
+        "project",
+        "changing"
+      ],
+      "sourceIds": [
+        "src-4df884e37d75",
+        "src-14fafa89306d",
+        "src-03d39a48371c"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Terms.** OFTO means Offshore Transmission Owner: a licensed owner of specified offshore transmission assets."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Traditional generator-build model:**"
+          },
+          {
+            "type": "diagram",
+            "text": "Developer builds generation + relevant transmission assets\n              ↓\nOfgem assesses transfer value and runs competitive OFTO tender\n              ↓\nSelected licensed OFTO purchases relevant transmission assets\n              ↓\nOFTO owns/manages those assets under licence and revenue arrangements"
+          },
+          {
+            "type": "paragraph",
+            "text": "Generation normally includes turbines and their collection system. The offshore transmission scope commonly includes export connection infrastructure, relevant substation equipment and onshore connection assets up to the agreed boundary. The exact boundary follows licences, technical classification and asset-transfer documents—not a universal line at the shoreline. [DESNZ generator-build explanation](https://www.gov.uk/government/calls-for-evidence/offshore-transmission-owner-ofto-regime/offshore-transmission-owner-regime-ofto-call-for-evidence-accessible-webpage)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Project example:** Greater Gabbard OFTO connects a fixed-bottom wind farm; its published portfolio description identifies availability-based revenue and a separate O&M operator. It illustrates the ownership business model, not a floating wind award. [Equitix portfolio](https://equitix.com/portfolio/greater-gabbard-ofto/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Changing arrangements:** Ofgem's May 2026 early/late competition OFTO-build consultation is listed as closed awaiting decision at this review. Coordinated offshore networks may be procured and delivered differently from a single developer-built radial cable. Do not present consultation proposals as final rules or assume every future offshore asset is transferred the same way. [Ofgem consultation and status](https://www.ofgem.gov.uk/consultation/ofto-build-early-and-late-competition-models)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**术语。** OFTO 是 Offshore Transmission Owner，即持有许可指定海上输电资产的业主。"
+          },
+          {
+            "type": "diagram",
+            "text": "开发商建设发电设施及相关输电设施\n       ↓\nOfgem 评估移交价值并组织 OFTO 竞争招标\n       ↓\n获许可 OFTO 收购指定输电资产\n       ↓\n依许可和收入安排持有、管理这些资产"
+          },
+          {
+            "type": "paragraph",
+            "text": "**传统开发商建设模式。** 发电范围通常包括风机与汇集系统；输电范围常包括送出连接、相关变电设备和至约定边界的陆上资产。边界依许可、技术分类和移交文件，不是固定在海岸线。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**项目示例。** Greater Gabbard OFTO 服务的是固定式风场。Equitix 说明其收入与资产可用性相关，并列出独立运维方；这是产权商业模式示例，不是浮式项目订单。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**制度变化。** Ofgem 2026 年 5 月早期／后期竞争 OFTO-build 咨询在本次复核时仍标为关闭、待决定。协调海上网络可能采用不同采购和交付方式；咨询方案不是已生效统一规则，也不能假设未来资产全走同样移交路径。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-11",
+      "number": 11,
+      "chapter": "power",
+      "title": {
+        "en": "Developer, OFTO, TO and NESO are different jobs",
+        "zh": "开发商、OFTO、TO 与 NESO 各做什么？"
+      },
+      "kinds": [
+        "confirmed",
+        "changing"
+      ],
+      "sourceIds": [
+        "src-9e4e0b9f9320",
+        "src-6d4a8d484248",
+        "src-9e3a6357de6a",
+        "src-dc9d7ff3eb06"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Terms.** NESO is the National Energy System Operator. NGET is National Grid Electricity Transmission. TO means transmission owner. Ofgem is the energy regulator; NESO is the system operator, not the regulator or network owner."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Organisation",
+              "Owns / does",
+              "Does not imply"
+            ],
+            "rows": [
+              [
+                "Developer / generation project company",
+                "Develops and owns/contracts the wind-farm business",
+                "Ownership of the whole GB grid"
+              ],
+              [
+                "OFTO",
+                "Licensed owner of specified offshore transmission assets",
+                "Wind-farm ownership or a power-purchase contract"
+              ],
+              [
+                "Onshore transmission owner (TO)",
+                "Builds, maintains and owns its physical transmission network",
+                "Dispatch/balancing of the whole GB system"
+              ],
+              [
+                "NESO",
+                "Operates the GB electricity system, coordinates connections and plans system needs",
+                "Ownership of the transmission network or purchase of all electricity"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "NGET covers England/Wales; SSEN Transmission covers northern Scotland; SP Transmission covers central/southern Scotland. NESO works with these owners. [National Grid connection roles](https://www.nationalgrid.com/electricity-transmission/connections/article/distribution-and-transmission-connections), [NESO Scottish network boundaries](https://www.neso.energy/publications/electricity-ten-year-statement-etys/electricity-transmission-network-requirements/scottish-boundaries)."
+          },
+          {
+            "type": "paragraph",
+            "text": "NESO balances supply/demand and uses response, reserve and the Balancing Mechanism to maintain secure operation and frequency around 50 Hz. Constraints mean power cannot always be moved from the available generator to demand. [NESO control-centre explanation](https://www.neso.energy/what-we-do/systems-operations/what-does-electricity-national-control-centre-do)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Changing arrangements:** connections reform assesses readiness and strategic alignment. Gate 1 does not supply a confirmed connection date; eligible Gate 2 projects can secure dates/points/queue positions through the relevant process. Even then, inspect the actual offer and reinforcement obligations. [NESO evidence handbook](https://www.neso.energy/industry-information/connections-reform/evidence-handbook-and-other-g2wq-submission-resources)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**术语。** NESO 是国家能源系统运营方；NGET 是 National Grid Electricity Transmission。TO 指输电业主。Ofgem 是能源监管机构，NESO 是系统运营方，不是监管机构或网络业主。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "角色",
+              "负责什么",
+              "不代表什么"
+            ],
+            "rows": [
+              [
+                "开发商／项目公司",
+                "开发并持有或组织风场发电业务",
+                "不代表拥有 GB 电网"
+              ],
+              [
+                "OFTO",
+                "持有许可指定的海上输电资产",
+                "不代表拥有风场或购买其电力"
+              ],
+              [
+                "陆上 TO",
+                "建设、维护并拥有自身输电网络",
+                "不等于统筹全 GB 调度和平衡"
+              ],
+              [
+                "NESO",
+                "运行 GB 电力系统、协调接入并规划系统需求",
+                "不拥有输电网络，也不购买全部电力"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "NGET 负责英格兰和威尔士；SSEN Transmission 负责苏格兰北部；SP Transmission 负责苏格兰中南部。NESO 与这些资产方协作，使用响应、备用和平衡机制等手段，维持安全运行及约 50 Hz 频率。网络阻塞会限制发电侧向需求侧送电。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**制度变化。** 并网改革评估项目是否准备就绪、是否符合战略需求。Gate 1 不提供确定接入日期；符合 Gate 2 的项目可通过相应程序取得日期、接入点及队列位置，但仍须查看实际报价和网络加强义务。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-12",
+      "number": 12,
+      "chapter": "power",
+      "title": {
+        "en": "Physical flow and financial flow",
+        "zh": "电力实物流与资金流"
+      },
+      "kinds": [
+        "confirmed",
+        "typical",
+        "changing"
+      ],
+      "sourceIds": [
+        "src-2fb52a45001f",
+        "src-e51101ddd162",
+        "src-d425a3645e7d"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "diagram",
+            "text": "PHYSICAL: Generator → interconnected network → demand\n\nCOMMERCIAL:\nPower buyer / trader / supplier → Generator (market sale or PPA)\nGenerator ↔ LCCC (eligible CfD difference payment)\nMarket participants ↔ BSC settlement (contracted versus metered positions)\nNetwork charging / regulated revenue (separate from buying the energy)"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Typical retail route.** Consumers pay their electricity supplier. The supplier buys energy directly or through trading arrangements and faces network and scheme costs as well as its own operating costs. Corporate PPAs and trading intermediaries can change the commercial route; they do not create a dedicated physical cable to that customer."
+          },
+          {
+            "type": "paragraph",
+            "text": "A PPA is a power purchase agreement. Generators sell power through market/ contract arrangements; a commercial buyer is not a dedicated physical route for individual electrons. Forecasts inform sold volumes. Actual output may differ; imbalance settlement accounts for the discrepancy under the Balancing and Settlement Code (BSC), administered by Elexon. Settlement periods are half-hourly; this does not mean the physical system balances only every half hour. [Elexon trading/settlement explanation](https://www.elexon.co.uk/bsc/about/trading-electricty-market/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "NESO's Balancing Mechanism accepts changes in generation or demand to operate the system in real time. Congestion may require output to be reduced in one area and replaced elsewhere; curtailment payments depend on the applicable action and arrangements. [NESO BM explanation](https://www.neso.energy/what-we-do/systems-operations/what-balancing-mechanism)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Negative wholesale prices can occur; they do not guarantee that every generator continues to receive its CfD strike price. Current government guidance explains negative day-ahead price restrictions on difference payments for contracts from AR4 onward. Contract version and settlement rules matter. [DESNZ market-design update](https://www.gov.uk/government/publications/reformed-national-pricing-rnp-delivery-plan/reformed-national-pricing-rnp-delivery-plan-accessible-webpage)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "diagram",
+            "text": "实物：发电 → 互联网络 → 用电需求\n商业：购电方／交易商／售电商 → 发电商（售电或 PPA）\n      发电商 ↔ LCCC（符合条件的 CfD 差额）\n      市场参与方 ↔ BSC 偏差结算\n      网络收费与监管收入另行安排"
+          },
+          {
+            "type": "paragraph",
+            "text": "**典型零售路径。** 用户向售电商付电费；售电商直接或通过交易安排购电，并承担网络、有关机制及自身运营成本。企业 PPA 与交易中间方会改变商业路径，但不会为该客户形成一条专用物理电缆。"
+          },
+          {
+            "type": "paragraph",
+            "text": "PPA 是购电协议。商业买家并不拥有一条供特定电子专用的物理路径。预测用于安排售电，实发与合同头寸可能不同；Elexon 管理的 BSC（平衡与结算规则）用于核算偏差。结算以半小时为周期，不表示物理平衡每半小时才做一次。"
+          },
+          {
+            "type": "paragraph",
+            "text": "NESO 的 Balancing Mechanism 接受发电／用电变化以实时运行系统。阻塞可能要求某地减发、另一地补发；限制发电的付款取决于具体行动与规则。"
+          },
+          {
+            "type": "paragraph",
+            "text": "批发电价可以为负，但不保证所有发电商仍收到执行价。政府指导说明 AR4 起合同对负日前价格时段的差额支付有限制；具体合同版本与结算规则必须核对。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-13",
+      "number": 13,
+      "chapter": "power",
+      "title": {
+        "en": "CfD: revenue stabilisation, not government power purchase",
+        "zh": "CfD：稳定收入，不是政府包购电力"
+      },
+      "kinds": [
+        "confirmed",
+        "changing",
+        "project",
+        "illustrative"
+      ],
+      "sourceIds": [
+        "src-16dcb454c610",
+        "src-84e659d553c3",
+        "src-0096785f6554",
+        "src-699305abe5ef",
+        "src-aaf47ba40b12"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Terms.** CfD means Contract for Difference. DESNZ is the Department for Energy Security and Net Zero; LCCC is the Low Carbon Contracts Company. AR means allocation round; CPI is the consumer prices index."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Confirmed structure.** DESNZ sets scheme policy; NESO is the auction Delivery Body; LCCC is the government-owned contract counterparty. The generator still arranges physical power sales. CfD payments settle the eligible difference between a strike price and a specified market reference price. [DESNZ scheme](https://www.gov.uk/government/collections/contracts-for-difference), [LCCC clarification on power sales](https://www.lowcarboncontracts.uk/documents/243/Introduction_to_the_Contracts_for_Difference_Scheme_QA_.pdf)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Funding the CfD.** Electricity suppliers fund the scheme through a statutory supplier obligation. LCCC makes or receives the contractual difference payments; this is separate from the generator selling electricity. [LCCC funding and settlement explanation](https://www.lowcarboncontracts.uk/documents/203/Binary_Carbon_Webinar_-_9.7.2024.pdf)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Illustrative arithmetic only:** assume 1 eligible MWh, strike £100/MWh and a realised sale price equal to the reference price. Ignore losses, fees, indexation and payment exclusions solely for this example."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Reference / assumed sale price",
+              "CfD settlement",
+              "Simplified combined revenue"
+            ],
+            "rows": [
+              [
+                "£60/MWh",
+                "LCCC pays generator £40",
+                "£60 + £40 = £100"
+              ],
+              [
+                "£140/MWh",
+                "Generator pays LCCC £40",
+                "£140 − £40 = £100"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "If realised sales differ from the reference price, combined revenue differs too. CfD reduces one revenue risk; wind resource, outages, negative-price exclusions, imbalance costs and delivery obligations remain. Lower revenue uncertainty can support investment, but a CfD is not a financing decision. [LCCC mechanism presentation](https://www.lowcarboncontracts.uk/documents/203/Binary_Carbon_Webinar_-_9.7.2024.pdf)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Changing contract terms:** DESNZ confirms 20-year CPI-indexed contracts from AR7 for relevant wind/solar technologies, including floating offshore wind. Do not describe all CfDs as 15-year contracts. [DESNZ 2025 scheme update](https://www.gov.uk/government/publications/contracts-for-difference-and-capacity-market-scheme-update-2025/contracts-for-difference-and-capacity-market-scheme-update-2025-accessible-webpage)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Dated award example:** DESNZ's 14 January 2026 AR7 results list Pentland 92.5 MW and Erebus 100 MW in the floating category. These are awarded capacities, not proof of FID or operational generation, and not necessarily the whole project's consent envelope. [Official AR7 results](https://assets.publishing.service.gov.uk/media/6966861de8c04eb2919f773a/contracts-for-difference-allocation-round-7-results-.pdf)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**术语。** CfD 为差价合约；DESNZ 为英国能源安全与净零部；LCCC 为低碳合同公司；AR 指分配轮次；CPI 指消费者价格指数。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**已确认结构。** DESNZ 制定政策，NESO 执行分配竞拍，LCCC 是政府持有的合同对手方。发电商仍需安排实物售电；CfD 按执行价与指定市场参考价的差额结算。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**CfD 资金来源。** 售电商通过法定供应商缴费义务为机制提供资金；LCCC 支付或收取合同差额。这与发电商另行出售电力分开。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**仅作算术示例。** 假设 1 MWh 符合支付条件，执行价 £100/MWh，实际售电价恰好等于参考价。为说明原理暂不计损耗、费用、指数调整及支付排除规则。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "参考价／假定售电价",
+              "CfD 差额",
+              "简化合计收入"
+            ],
+            "rows": [
+              [
+                "£60/MWh",
+                "LCCC 向发电商支付 £40",
+                "£60＋£40＝£100"
+              ],
+              [
+                "£140/MWh",
+                "发电商向 LCCC 支付 £40",
+                "£140－£40＝£100"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "实际售电价不等于参考价时，合计收入也会不同。CfD 减少一种价格风险，但风资源、停机、负价排除、偏差成本和交付义务仍在；CfD 本身不是融资决定。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**合同变化。** DESNZ 确认 AR7 起包括浮式风电在内的有关风能／太阳能采用 20 年 CPI（消费者价格指数）调整合同；不能把所有 CfD 都称为 15 年合同。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**有日期的结果。** 2026-01-14 AR7 官方结果列出 Pentland 92.5 MW、Erebus 100 MW 浮式获配容量；这不是已 FID 或已发电的证据，也不一定等于项目全部许可容量。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-14",
+      "number": 14,
+      "chapter": "develop",
+      "title": {
+        "en": "Financing and FID: can this technical design be funded?",
+        "zh": "融资与 FID：技术方案能否获得资金？"
+      },
+      "kinds": [
+        "typical",
+        "interpretation",
+        "project"
+      ],
+      "sourceIds": [
+        "src-56c4963050f4",
+        "src-9f9702056ca7"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Typical practice / commercial interpretation.** Sponsors fund at-risk development. Equity bears ownership risk; debt providers expect repayment and test downside cashflows. Project finance relies substantially on the project and its contracts/cashflows; balance-sheet funding uses the sponsor's wider capacity. Not every project must use the same financing structure."
+          },
+          {
+            "type": "paragraph",
+            "text": "Before a major investment commitment, decision-makers normally seek sufficiently mature consent/land rights, credible grid timing, deliverable technology, contracted or understood CAPEX (capital expenditure), viable revenue/offtake, construction and O&M plans, allocated interfaces, insurance and contingency. Some conditions remain to be discharged after FID; maturity does not mean every risk is gone. Contract packaging affects the risk retained by the developer. [Procurement and financing tradeoffs](https://guidetofloatingoffshorewind.com/procurement-structures/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Project example:** Great British Energy describes early investment alongside the National Wealth Fund and Scottish National Investment Bank in Pentland in November 2025. Such investment supports development; it should not be relabelled as completed construction finance or FID without further evidence. [GBE investment announcement](https://www.gbe.gov.uk/blog/major-floating-offshore-wind-project-secures-backing-great-british-energy-national-wealth-fund)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**通常做法／商业解读。** 股东承担有风险的前期开发支出；股权承担所有者风险，贷款方关注还款和不利现金流情景。项目融资主要依赖项目合同与现金流，资产负债表融资则依靠股东更广泛的财力，并非所有项目采用同一种结构。"
+          },
+          {
+            "type": "paragraph",
+            "text": "重大投资前通常需使许可和土地权利、并网时序、技术、CAPEX（资本支出）、收入／购电、建造、运维、接口分工、保险和预备金足够成熟。FID 后仍可能有待落实条件；“成熟”不等于“没有风险”。合同打包方式改变开发商承担的风险。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**项目示例。** GBE 说明其于 2025 年 11 月与 National Wealth Fund、Scottish National Investment Bank 等共同投资 Pentland。早期资金支持开发，不能在无更多证据时称为已完成建设融资或 FID。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-15",
+      "number": 15,
+      "chapter": "develop",
+      "title": {
+        "en": "Ports and manufacturing: the production line meets the sea",
+        "zh": "港口与制造：生产线连接海洋"
+      },
+      "kinds": [
+        "typical",
+        "project"
+      ],
+      "sourceIds": [
+        "src-193fbab538e2",
+        "src-e5d538af057c",
+        "src-73c204163516",
+        "src-b387091ff3d4",
+        "src-6463f661bed9"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "diagram",
+            "text": "Floater manufacture / assembly → quayside or wet storage\n→ tower → nacelle → blades → pre-commissioning\n→ wet storage as needed → tow-out"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Typical sequence for a suitable integrated-tow design.** Assembly can use landside heavy cranes or other engineered lifting arrangements. Component delivery, structural completion, lifting, ballast control and tests must be coordinated. Spars and TLPs can require different integration/transport solutions. [Floating turbine assembly guide](https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-5-floating-offshore-wind-turbine-assembly/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Port suitability is a bundle: crane capacity/reach, quay bearing pressure, water depth and tides, unobstructed tow route, laydown area, wet storage/moorings, workforce and repeatable throughput. A large quay alone is insufficient. A manufacturing port, integration port, marshalling port and O&M base need not be the same place. [Construction-port guide](https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-8-construction-port/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**UK examples, not reserved project ports:** DESNZ announced support for Cromarty Firth port expansion in March 2025. In March 2026, government announced up to £64 million for Port Talbot design/engineering work. Neither announcement alone proves all future capacity is built or allocated. [Cromarty Firth](https://www.gov.uk/government/news/government-unlocks-floating-offshore-wind-with-major-investment-for-scottish-port), [Port Talbot](https://www.gov.uk/government/news/64-million-for-port-talbot-offshore-wind-hub-in-the-celtic-sea). Haventus describes Ardersier's energy-transition facility and phased development. Use phase-specific evidence when discussing available facilities. [Ardersier developer](https://www.haventus.com/port-page/ardersier-energy-transition-facility/)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "diagram",
+            "text": "浮体制造／组装 → 码头或湿储\n→ 塔架 → 机舱 → 叶片 → 预调试\n→ 必要的湿储 → 拖出"
+          },
+          {
+            "type": "paragraph",
+            "text": "**适用于可整体拖航方案的典型流程。** 可使用岸上重吊等经设计的吊装方案；部件到港、结构完工、吊装、压载与测试需要协调。Spar 和 TLP 可能需要不同运输和集成方法。"
+          },
+          {
+            "type": "paragraph",
+            "text": "港口适配是多项条件同时满足：吊重和幅度、码头承载、水深潮位、无障碍拖航通道、堆场、湿储及系泊、人员和重复生产节拍。制造港、集成港、中转港和运维基地不必是同一处。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**英国例子，不代表已预订。** DESNZ 于 2025 年 3 月宣布支持 Cromarty Firth 扩建；2026 年 3 月宣布对 Port Talbot 设计工程支持最高 £64 million。公告本身不证明全部未来产能已建成或分配。Haventus 对 Ardersier 的设施描述也应区分开发阶段。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-16",
+      "number": 16,
+      "chapter": "develop",
+      "title": {
+        "en": "Offshore installation: two work fronts converge",
+        "zh": "海上安装：两条工作面汇合"
+      },
+      "kinds": [
+        "typical",
+        "interpretation"
+      ],
+      "sourceIds": [
+        "src-85d29297643f",
+        "src-bab71a06695f",
+        "src-8c6025fd6baf"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "diagram",
+            "text": "OFFSHORE: survey / route clearance\n            ├→ anchors → mooring pre-installation / tests ───┐\n            └→ cable / substation works as designed ────────┤\nPORT:     assembly → tests → tow-out ────────────────────────┤\n                                                           ↓\n        mooring hook-up → dynamic cable hook-up\n        → electrical commissioning → authorised energisation"
+          },
+          {
+            "type": "paragraph",
+            "text": "This is typical logic, not a fixed vessel schedule. Anchor-handling vessels, tugs, cable-lay vessels, ROVs (remotely operated underwater vehicles), survey vessels and specialist technicians serve different tasks. The chosen anchors, cables and platform determine installation equipment and sequence. [Mooring pre-installation](https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-4-anchor-and-mooring-pre-installation/), [turbine installation](https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-6-floating-offshore-wind-turbine-installation/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Interpretation:** tow-out is only ready when site readiness, port release, weather windows, safe tow route, mooring/cable connection and contingency plans align. Installing the turbine before a usable export system risks stranded generation. Weather windows need duration and sea-state suitability, not just a single wind-speed limit. [Installation overview](https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "diagram",
+            "text": "海上调查／清理 ─┬→ 锚 → 预装系泊／测试 ─┐\n               └→ 海缆／变电站工程 ─────┤\n港口：组装 → 测试 → 拖出 ───────────────┤\n                                      ↓\n系泊连接 → 动态海缆连接 → 电气调试 → 获授权送电"
+          },
+          {
+            "type": "paragraph",
+            "text": "这是典型逻辑，不是固定船期。拖轮、起锚／锚处理船、敷缆船、调查船、ROV（水下遥控机器人）及专业技术人员承担不同任务；锚、海缆和浮体设计决定具体设备与顺序。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**工程解读。** 拖航前应使海上准备、港口放行、天气窗口、拖航路线、系泊／海缆连接和应急方案一致。若送出系统未就绪，已安装风机也可能无法交付电力；作业窗口取决于持续时间及海况，而不只一个风速限值。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-17",
+      "number": 17,
+      "chapter": "develop",
+      "title": {
+        "en": "O&M and end of life",
+        "zh": "运维与寿命末责任"
+      },
+      "kinds": [
+        "typical",
+        "project"
+      ],
+      "sourceIds": [
+        "src-8fb1edbf438b",
+        "src-a4f397ab5f02",
+        "src-80b9eeeb1905",
+        "src-3db5fafc68c8",
+        "src-4005f31bb90c",
+        "src-9dbeb0387f83"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Typical operating chain.** SCADA (*supervisory control and data acquisition*) and condition monitoring identify performance changes and faults. Turbine service is only one workstream: inspect floater structure, corrosion protection, marine growth, moorings, anchors and dynamic cables; use subsea inspection/ROVs and plan repair vessels, spares and access. Different asset owners can have separate responsibilities and service contracts. [O&M overview](https://guidetofloatingoffshorewind.com/guide/o-operations-and-maintenance/), [maintenance guide](https://guidetofloatingoffshorewind.com/guide/o-operations-and-maintenance/o-2-maintenance/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Floating-specific issue:** a major component replacement may be done offshore or by disconnecting and towing to port. Neither strategy is automatic: safe disconnection/reconnection, standby mooring/cable arrangements, suitable draft, port/crane slots and downtime must be considered. Principle Power reports both in-situ and tow-to-port major exchanges at Kincardine. [Kincardine operator/technology account](https://www.principlepower.com/projects/kincardine-offshore-wind-farm), [major repair guide](https://guidetofloatingoffshorewind.com/guide/o-operations-and-maintenance/o-3-major-repair/)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Decommissioning is a funded lifecycle obligation, not a surprise at the end. England/Wales and Scotland have separate guidance. Removal, any justified retention, monitoring and financial security follow the approved programme and applicable requirements. Do not promise that every anchor/cable is always removed. [DESNZ England/Wales guidance](https://www.gov.uk/government/publications/decommissioning-offshore-renewable-energy-installations), [Scottish guidance](https://www.gov.scot/publications/offshore-renewable-energy-decommissioning-guidance-scottish-waters/documents/)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**通常做法。** SCADA（监控与数据采集）和状态监测识别性能变化及故障。还需检查浮体、腐蚀保护、海生物、系泊、锚和动态海缆；利用 ROV、水下检查、维修船、备件和通道维持完整性。不同资产方可能各有服务合同。"
+          },
+          {
+            "type": "paragraph",
+            "text": "**浮式特点。** 大部件更换可在海上进行，也可断开后拖回港口；两者都需检查断接和重连、临时系泊／海缆安排、吃水、港口吊机档期与停机损失。Principle Power 报告 Kincardine 有原位及拖回港口的大部件更换经验。"
+          },
+          {
+            "type": "paragraph",
+            "text": "退役从开发期即应规划费用和责任。英格兰／威尔士与苏格兰指导不同；拆除、合理保留、监测和资金担保依获批方案和适用规则，不能保证每根锚和海缆都必然拆除。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-18",
+      "number": 18,
+      "chapter": "actors",
+      "title": {
+        "en": "UK geography: opportunity is not installed capacity",
+        "zh": "英国地理：开发机会不等于已装机"
+      },
+      "kinds": [
+        "project"
+      ],
+      "sourceIds": [
+        "src-6d6660df0f3e",
+        "src-7115b4bc1904",
+        "src-347148ec114a",
+        "src-cb679ae7b024",
+        "src-aa54401e804b",
+        "src-f6ba92795260",
+        "src-90a1c4b7b2c5",
+        "src-9ea9db6d7b80",
+        "src-da0f5092998c",
+        "src-e63065e04ebd"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Evidence snapshot reviewed 22 October 2026; individual source dates remain visible."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Cluster / example",
+              "Capacity and stage evidence",
+              "What the supply chain should ask"
+            ],
+            "rows": [
+              [
+                "Scottish ScotWind and INTOG floating pipeline",
+                "Scottish Enterprise's Offshore Wind Scotland describes just over 23.5 GW after accounting for named lease returns; this is a development pipeline, not operating output",
+                "Which projects have achievable grid, consent and investment dates rather than only seabed rights?"
+              ],
+              [
+                "East Scotland: Ossian",
+                "Developer describes up to 3.6 GW, SSE Renewables/Marubeni/CIP JV and an array application; its separate English-connection page says Lincolnshire work is paused following grid-design changes",
+                "How do revised export connections change packaging, procurement and manufacturing timing?"
+              ],
+              [
+                "Shetland: Arven",
+                "Ocean Winds' UK portfolio lists 1.8 GW and says the additional 500 MW Arven South site is being handed back",
+                "How do distance, ports, grid and reduced project scope affect the addressable demand?"
+              ],
+              [
+                "North Sea INTOG",
+                "Round includes innovation and targeted oil/gas electrification; Green Volt 560 MW is a named example. Culzean's 3 MW project entered a lease in March 2026",
+                "Is power intended for offshore facilities, GB grid export, or both? What is actually contracted?"
+              ],
+              [
+                "North/west Scottish waters",
+                "Scottish Government's January 2026 inventory identifies Havbredey 1.5 GW (Northland/ESB) and Talisk 495 MW among floating proposals",
+                "Which local/deepwater integration and logistics options fit the actual design? The January list is a dated baseline, not proof of unchanged ownership or stage today"
+              ],
+              [
+                "Celtic Sea Round 5",
+                "The Crown Estate's March 2026 update completes agreements for lease across three areas, up to 4.5 GW total: Gwynt Glas (EDF/ESB), Equinor and Ocean Winds",
+                "What consent/grid/revenue/port conditions stand between seabed rights and orders?"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Sources: [Scottish floating pipeline with lease-return notes](https://www.offshorewindscotland.org.uk/the-offshore-wind-market-in-scotland/floating-offshore-wind-in-scotland/), [Ossian project](https://www.ossianwindfarm.com/), [Ossian English connection update](https://www.ossianwindfarm.com/english-connection), [Ocean Winds UK portfolio](https://www.oceanwinds.com/uk/), [Crown Estate Scotland INTOG updates](https://www.crownestatescotland.com/scotlands-property/offshore-wind/intog-leasing-round), [dated Scottish inventory](https://www.gov.scot/publications/update-2020-offshore-wind-policy-statement-scotlands-offshore-wind-ambition-2/pages/4/), [Round 5 final agreement announcement](https://www.thecrownestate.co.uk/news/final-site-progressing-for-round-5), [Welsh Government confirmation of all three developers](https://www.gov.wales/written-statement-offshore-wind-action-plan-update)."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Discrepancy example:** Arven's individual Ocean Winds and Mainstream pages still describe 2.3 GW while Ocean Winds' UK portfolio describes 1.8 GW and the 500 MW return. Show the scope difference and sources; do not quietly add both sites to a “current” total. [Ocean Winds project page](https://www.oceanwinds.com/projects/arven/), [Mainstream project page](https://www.mainstreamrp.com/markets-projects/europe/united-kingdom/arven-scotwind-wind-farm/)."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "证据复核日期为 2026-10-22，各条仍保留自身来源日期与范围。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "区域／例子",
+              "容量及阶段证据",
+              "供应链应追问什么"
+            ],
+            "rows": [
+              [
+                "苏格兰 ScotWind／INTOG 浮式储备",
+                "Offshore Wind Scotland 考虑所列退还地块后描述略超过 23.5 GW；属于开发储备，不是运行输出",
+                "哪些项目已有可信并网、许可和投资时点，而非仅海床权利？"
+              ],
+              [
+                "苏格兰东部 Ossian",
+                "开发商描述最高 3.6 GW，由 SSE Renewables／Marubeni／CIP 合资开发，已提交阵列申请；英文接入页面说明因电网设计变化暂停 Lincolnshire 工作",
+                "出口方案改变如何影响设备包、采购与制造时序？"
+              ],
+              [
+                "Shetland 的 Arven",
+                "Ocean Winds 英国组合页面列出 1.8 GW，并说明额外 500 MW Arven South 正在退还",
+                "距离、港口、并网与范围缩减如何改变需求？"
+              ],
+              [
+                "北海 INTOG",
+                "包含创新与油气电气化；Green Volt 560 MW 是例子，Culzean 3 MW 于 2026 年 3 月进入租赁",
+                "向油气设施、GB 电网还是两者供电？实际合同是什么？"
+              ],
+              [
+                "苏格兰北部／西部",
+                "苏格兰政府 2026 年 1 月清单列出 Havbredey 1.5 GW（Northland／ESB）、Talisk 495 MW 等浮式提案",
+                "哪些深水港口与物流适配设计？一月清单不证明今日产权和阶段未变"
+              ],
+              [
+                "凯尔特海 Round 5",
+                "The Crown Estate 2026 年 3 月更新完成三个区域租赁意向协议，合计最高 4.5 GW；开发方包括 Gwynt Glas（EDF／ESB）、Equinor、Ocean Winds",
+                "从海床权利到订单，还差哪些许可、并网、收入及港口条件？"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "**来源差异示例。** Arven 个别项目页仍写 2.3 GW；Ocean Winds 英国组合页则写 1.8 GW 及 500 MW 退还。应保留来源与范围区别，不能悄悄将两块都加进“当前”总量。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-19",
+      "number": 19,
+      "chapter": "actors",
+      "title": {
+        "en": "A practical organisation map",
+        "zh": "实用企业与机构图谱"
+      },
+      "kinds": [
+        "typical",
+        "project"
+      ],
+      "sourceIds": [
+        "src-f8876d42b80e",
+        "src-80b9eeeb1905",
+        "src-22a787b58ebd",
+        "src-a191796e5ee5",
+        "src-40364877bde8",
+        "src-4e93e8b0a2c0",
+        "src-1f5b3a7f0397",
+        "src-04ee5b986657",
+        "src-bbca4ffd7bee",
+        "src-679f75c20596",
+        "src-c0dfbae8429e",
+        "src-8c6025fd6baf",
+        "src-1ad32ae83a18",
+        "src-83b1652cff09",
+        "src-85d29297643f",
+        "src-14fafa89306d",
+        "src-e8680f3c1361",
+        "src-7115b4bc1904",
+        "src-cb679ae7b024",
+        "src-73c204163516",
+        "src-b387091ff3d4",
+        "src-6463f661bed9",
+        "src-9e4e0b9f9320",
+        "src-6d4a8d484248",
+        "src-fcbe9571f203",
+        "src-331a595c6a41",
+        "src-7e46785ca5a2",
+        "src-e51101ddd162",
+        "src-2fb52a45001f",
+        "src-16dcb454c610"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "These are representative roles, not an approved bidder list or guaranteed UK content. International experience is labelled as such. Capability does not prove a contract award. Existing international company cards remain useful references."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Role",
+              "Examples and actual contribution",
+              "Evidence / UK relevance boundary"
+            ],
+            "rows": [
+              [
+                "Developers / project companies",
+                "Equinor; Ocean Winds; SSE Renewables and partners integrate projects and procurement",
+                "Specific UK examples are in the UK geography topic; ownership is project-specific"
+              ],
+              [
+                "Turbine OEMs",
+                "Siemens Gamesa and Vestas supply turbine systems and service capability",
+                "Floating-project supplier guide identifies experience; do not infer selection for future UK farms. [Supplier guide](https://guidetofloatingoffshorewind.com/supply-chain/)"
+              ],
+              [
+                "Platform technology",
+                "Principle Power designs WindFloat technology and supports operating assets",
+                "Kincardine is a documented UK example. [Project account](https://www.principlepower.com/projects/kincardine-offshore-wind-farm)"
+              ],
+              [
+                "Materials / fabrication",
+                "Tata Steel UK, Marine Power Systems and Ledwood participate in a steel/platform innovation collaboration",
+                "R&D participation, not an awarded Round 5 fabrication package. [Collaboration](https://www.tatasteeluk.com/corporate/news/industrial-collaboration-to-develop-strip-steel-floating-offshore-wind-platforms)"
+              ],
+              [
+                "Mooring-line products",
+                "Bridon-Bekaert; Lankhorst: rope/line products specified by mooring designers",
+                "Representative product role; no specific UK farm award asserted. [Mooring-line guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-3-mooring-system/b-3-2-mooring-lines/)"
+              ],
+              [
+                "Anchors",
+                "Bruce Anchor; Delmar Vryhof; Subsea Micropiles: anchor technologies/design capability",
+                "Anchor choice depends on soil/load; a study contract is not installed hardware. [Anchor guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-3-mooring-system/b-3-1-anchors/)"
+              ],
+              [
+                "Dynamic cable manufacture",
+                "JDR; Nexans: cable systems for floating applications",
+                "Qualification must match voltage, fatigue duty and accessories; do not treat every cable product as dynamic-qualified. [Cable guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-1-cables/)"
+              ],
+              [
+                "Static / export cables",
+                "Prysmian; NKT; Nexans; Sumitomo Electric",
+                "Sumitomo announced a Nigg factory opening ceremony on 19 October 2026. The announcement is not proof of a particular UK floating export-cable award or completed qualification. [Sumitomo](https://sumitomoelectric.com/press/2026/10/prs044)"
+              ],
+              [
+                "Electrical equipment",
+                "Hitachi Energy; Siemens Energy: transformers, switchgear/conversion-system packages",
+                "Representative electrical-system suppliers; contract scope and current product offerings need project procurement evidence. [Onshore electrical guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-5-onshore-substation/b-5-1-electrical-system/)"
+              ],
+              [
+                "Offshore substations",
+                "Electrical-system suppliers plus structural yards and integrators supply different parts",
+                "A substation is a package, not one universal supplier; the turbine floater supplier need not supply it. [Substation guide](https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-4-offshore-substation/)"
+              ],
+              [
+                "Engineering consultancy",
+                "Xodus; Kent; Arup; Mott MacDonald: design, analysis and package integration services",
+                "Guide lists capabilities; a consultancy role does not establish construction scope. [Engineering guide](https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-5-engineering-and-consultancy/)"
+              ],
+              [
+                "Certification / assurance",
+                "DNV provides floating wind certification services",
+                "Independent assurance of specified scope; not the marine consenting authority. [DNV service](https://www.dnv.com/services/renewables-certification/certification-of-floating-wind-energy/)"
+              ],
+              [
+                "EPCI lead contractors",
+                "Boskalis; Subsea 7; Saipem: combinations of engineering and marine delivery",
+                "Packages vary; do not assume one contractor covers the whole project. [Installation guide](https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/)"
+              ],
+              [
+                "Marine / cable contractors",
+                "DEME; DeepOcean; Van Oord: installation-related capability",
+                "Cable lay, burial, protection and testing are separately scoped. [Cable installation guide](https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-2-offshore-cable-installation/)"
+              ],
+              [
+                "Survey organisations",
+                "Fugro; Gardline; Ocean Infinity: relevant survey/data services",
+                "Geotechnical/geophysical and ecological surveys answer different questions. [Environmental survey guide](https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-2-environmental-surveys/)"
+              ],
+              [
+                "Vessels and marine logistics",
+                "Tugs, anchor handlers, CLVs and ROV spreads are task-specific assets supplied/chartered by marine firms",
+                "Vessel availability must match equipment/workability; company name alone is insufficient. [Mooring installation guide](https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-4-anchor-and-mooring-pre-installation/)"
+              ],
+              [
+                "Ports",
+                "Port of Cromarty Firth; ABP Port Talbot; Haventus Ardersier",
+                "Different development phases and services; see sourced status in Ports and manufacturing"
+              ],
+              [
+                "O&M",
+                "Generation owners, OEM service teams and specialist subsea/floater providers",
+                "Principle Power describes UK Kincardine services and repair experience. [Kincardine](https://www.principlepower.com/projects/kincardine-offshore-wind-farm)"
+              ],
+              [
+                "OFTO investors / operators",
+                "Equitix portfolio vehicles; specialist O&M operators",
+                "Greater Gabbard example demonstrates asset ownership versus service operation. [OFTO example](https://equitix.com/portfolio/greater-gabbard-ofto/)"
+              ],
+              [
+                "Transmission owners",
+                "NGET; SSEN Transmission; SP Transmission",
+                "Physical network assets and connection delivery; see Developer, OFTO, TO and NESO are different jobs"
+              ],
+              [
+                "Seabed / consenting / regulation",
+                "The Crown Estate; Crown Estate Scotland; MD-LOT; MMO; NRW; Ofgem; DESNZ",
+                "Different powers and jurisdictions; see the permissions and electricity-market topics"
+              ],
+              [
+                "System and market institutions",
+                "NESO; Elexon; LCCC",
+                "System operation/planning, BSC settlement and CfD counterparty respectively"
+              ],
+              [
+                "Research / skills / testing",
+                "ORE Catapult; universities and industry collaborations",
+                "Catapult's FOW Centre of Excellence and FLOWIC support technology/commercial development, not consent approval. [ORE Catapult](https://ore.catapult.org.uk/products-services/floating-offshore-wind)"
+              ]
+            ]
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "以下为代表性角色，不是合格投标人清单，也不保证英国本地含量。国际经验不等于英国合同；能力不等于订单。现有国际企业目录继续作为补充参考。"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "角色",
+              "企业／机构及实际贡献",
+              "英国相关性与证据边界"
+            ],
+            "rows": [
+              [
+                "开发商／项目公司",
+                "Equinor、Ocean Winds、SSE Renewables 及伙伴组织开发采购",
+                "英国例子见区域表，产权按项目分别核验"
+              ],
+              [
+                "风机 OEM",
+                "Siemens Gamesa、Vestas 提供风机系统及服务能力",
+                "有浮式经验，不代表未来英国项目已选定"
+              ],
+              [
+                "浮式平台技术",
+                "Principle Power 设计 WindFloat 并支持运行资产",
+                "Kincardine 为英国案例"
+              ],
+              [
+                "材料／制造",
+                "Tata Steel UK、Marine Power Systems、Ledwood 参与钢材／平台创新",
+                "研发合作，不等于 Round 5 制造订单"
+              ],
+              [
+                "系泊线产品",
+                "Bridon-Bekaert、Lankhorst 提供绳索／线材",
+                "按系统设计规格供货，此处未断言具体英国合同"
+              ],
+              [
+                "锚",
+                "Bruce Anchor、Delmar Vryhof、Subsea Micropiles",
+                "技术依土体与载荷，研究合同不等于安装实绩"
+              ],
+              [
+                "动态海缆制造",
+                "JDR、Nexans 提供浮式应用电缆系统",
+                "需核验电压、疲劳与附件，不能把全部电缆都认作动态合格"
+              ],
+              [
+                "静态／送出海缆",
+                "Prysmian、NKT、Nexans、Sumitomo Electric",
+                "Sumitomo 2026-10-19 宣布 Nigg 开厂仪式，不证明某浮式送出订单或全部验证已完成"
+              ],
+              [
+                "电气设备",
+                "Hitachi Energy、Siemens Energy 提供变压、开关或换流系统",
+                "代表性系统供应角色，实际产品和合同另核验"
+              ],
+              [
+                "海上变电站",
+                "电气供应商、结构制造厂与集成商共同交付",
+                "风机浮体技术方不一定交付变电站"
+              ],
+              [
+                "工程顾问",
+                "Xodus、Kent、Arup、Mott MacDonald 等提供设计与分析",
+                "咨询角色不等于建设范围"
+              ],
+              [
+                "认证／保障",
+                "DNV 提供浮式风电认证服务",
+                "对约定范围独立审查，不是海事许可机关"
+              ],
+              [
+                "EPCI 牵头方",
+                "Boskalis、Subsea 7、Saipem 组合工程和海上交付",
+                "设备包范围各异，不假设一家公司交付全场"
+              ],
+              [
+                "海事／敷缆承包商",
+                "DEME、DeepOcean、Van Oord 等具相关能力",
+                "敷设、埋设、防护与测试分别确定范围"
+              ],
+              [
+                "调查",
+                "Fugro、Gardline、Ocean Infinity 等提供数据服务",
+                "岩土、地球物理和生态调查回答不同问题"
+              ],
+              [
+                "船舶与物流",
+                "拖轮、锚处理船、敷缆船和 ROV 作业组",
+                "设备、作业能力和档期需实际匹配，公司名字不足以证明可用"
+              ],
+              [
+                "港口",
+                "Cromarty Firth、ABP Port Talbot、Haventus Ardersier",
+                "服务与开发阶段不同，见港口证据"
+              ],
+              [
+                "运维",
+                "发电业主、OEM 服务团队、专业水下与浮体服务方",
+                "Kincardine 说明了技术方服务和维修实践"
+              ],
+              [
+                "OFTO 投资／运营",
+                "Equitix 资产载体与专业运维方",
+                "Greater Gabbard 说明资产所有权和服务运营可以分开"
+              ],
+              [
+                "输电资产方",
+                "NGET、SSEN Transmission、SP Transmission",
+                "负责实体网络与接入工程"
+              ],
+              [
+                "海床／审批／监管",
+                "The Crown Estate、Crown Estate Scotland、MD-LOT、MMO、NRW、Ofgem、DESNZ",
+                "各自权限与地区不同"
+              ],
+              [
+                "系统及市场",
+                "NESO、Elexon、LCCC",
+                "分别侧重系统运行规划、BSC 结算、CfD 对手方"
+              ],
+              [
+                "研发／技能／测试",
+                "ORE Catapult、大学与产业合作",
+                "FOWCoE、FLOWIC 支持技术商业发展，不批准建设许可"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-20",
+      "number": 20,
+      "chapter": "risks",
+      "title": {
+        "en": "Interfaces: where individually good packages can fail together",
+        "zh": "接口：单项合格也可能整体失效"
+      },
+      "kinds": [
+        "interpretation"
+      ],
+      "sourceIds": [
+        "src-679f75c20596",
+        "src-7f379f42577b",
+        "src-83ad6ce367d4",
+        "src-298a2e8a5c08",
+        "src-ee09616c9461",
+        "src-7be13e548b82",
+        "src-7ecaa16cb671",
+        "src-ac6c52023ef5",
+        "src-1ad32ae83a18"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "**Engineering interpretation, not findings about named projects:**"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Interface",
+              "What teams must agree",
+              "What can go wrong"
+            ],
+            "rows": [
+              [
+                "Turbine ↔ floater",
+                "Loads, controls, mass, tower interface, access",
+                "Unacceptable motions/accelerations or control interaction"
+              ],
+              [
+                "Floater ↔ mooring",
+                "Fairleads, restoring behaviour, excursions, failures",
+                "Excess drift, connector overload or poor access"
+              ],
+              [
+                "Floater ↔ dynamic cable",
+                "Hang-off, motion envelope, bend limits, pull-in",
+                "Fatigue, over-bending, excess tension or difficult repair"
+              ],
+              [
+                "Mooring ↔ seabed",
+                "Soil model, load direction, cyclic capacity",
+                "Inadequate holding capacity or impractical installation"
+              ],
+              [
+                "Cable ↔ seabed",
+                "Route, burial/protection, mobility, crossings",
+                "Exposure, abrasion, free spans or third-party damage"
+              ],
+              [
+                "Array ↔ substation",
+                "Voltage, protection, ratings, earthing, control",
+                "Fault discrimination or rating mismatch"
+              ],
+              [
+                "Offshore network ↔ OFTO",
+                "Asset boundary, test records, warranties, access",
+                "Transfer delay or unowned responsibility"
+              ],
+              [
+                "OFTO ↔ onshore TO",
+                "Protection, availability, switching and interfaces",
+                "Export unavailable despite a functioning wind farm"
+              ],
+              [
+                "Developer ↔ NESO/network owners",
+                "Connection terms, compliance, reinforcement timing",
+                "Commissioned asset with unusable/delayed export"
+              ],
+              [
+                "Developer ↔ authorities/stakeholders",
+                "Design envelope, evidence, mitigation, conditions",
+                "Redesign or consent-condition delay"
+              ],
+              [
+                "Developer ↔ ports/installers",
+                "Draft, dimensions, throughput, tow windows",
+                "Units queue at port or vessels wait offshore"
+              ],
+              [
+                "Developer ↔ financiers",
+                "Downside case, risk allocation, reserves, conditions",
+                "Finance cannot close despite technical feasibility"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Basis: integrated engineering and project-management practice described in the technical references above. These failure modes are our synthesis. They are questions to investigate, not scored risk assessments or allegations."
+          }
+        ],
+        "zh": [
+          {
+            "type": "paragraph",
+            "text": "**工程解读，不是对任何具名项目的故障判断。**"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "接口",
+              "必须协调什么",
+              "可能出错什么"
+            ],
+            "rows": [
+              [
+                "风机 ↔ 浮体",
+                "载荷、控制、质量、塔架连接、通道",
+                "运动／加速度超限或控制相互作用"
+              ],
+              [
+                "浮体 ↔ 系泊",
+                "导缆点、恢复力、偏移与故障",
+                "漂移过大、连接过载或通行困难"
+              ],
+              [
+                "浮体 ↔ 动态海缆",
+                "挂点、运动包络、弯曲限值、牵入",
+                "疲劳、过弯、过拉或维修困难"
+              ],
+              [
+                "系泊 ↔ 海床",
+                "土体、载荷方向、循环承载",
+                "锚固不足或无法施工"
+              ],
+              [
+                "海缆 ↔ 海床",
+                "路由、防护、海床迁移、交叉",
+                "暴露、磨损、悬跨或外力损伤"
+              ],
+              [
+                "阵列 ↔ 变电站",
+                "电压、保护、额定值、接地与控制",
+                "保护选择性或容量不匹配"
+              ],
+              [
+                "海上网络 ↔ OFTO",
+                "边界、测试、质保与通道",
+                "移交延迟或责任空缺"
+              ],
+              [
+                "OFTO ↔ 陆上 TO",
+                "保护、可用性、开关操作",
+                "风场正常但送出不可用"
+              ],
+              [
+                "开发商 ↔ NESO／网络方",
+                "接入条件、合规、加强工程时序",
+                "已建资产无法按时送电"
+              ],
+              [
+                "开发商 ↔ 主管方／相关方",
+                "设计包络、证据、减缓与条件",
+                "重设计或条件落实延误"
+              ],
+              [
+                "开发商 ↔ 港口／安装商",
+                "吃水、尺寸、节拍、拖航窗口",
+                "港口排队或船舶等待"
+              ],
+              [
+                "开发商 ↔ 资金方",
+                "不利情景、风险分工、储备和条件",
+                "技术可行但融资无法完成"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "这些是由整体工程与项目管理原理形成的调查问题，不是量化风险评分。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-21",
+      "number": 21,
+      "chapter": "risks",
+      "title": {
+        "en": "Bottlenecks: evidenced pressure, not a universal shortage score",
+        "zh": "瓶颈：区分证据与推断"
+      },
+      "kinds": [
+        "confirmed",
+        "interpretation"
+      ],
+      "sourceIds": [
+        "src-fb065f84919c",
+        "src-1d704d3b68ce",
+        "src-a36a8b928fc0",
+        "src-a1f25059914e",
+        "src-73fec1c2b922"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "table",
+            "headers": [
+              "Constraint",
+              "Evidence supports",
+              "What must still be checked for an individual project"
+            ],
+            "rows": [
+              [
+                "Grid",
+                "NESO is reforming queue allocation around readiness and system need",
+                "Actual offer, reinforcement dependency, liabilities and dates—not a historic queue position"
+              ],
+              [
+                "Port / manufacturing scale",
+                "Government's 2026 supply-chain study describes limited established floating production capacity and candidate integration ports",
+                "Operational phase, available slots, design-specific draft/lift limits and throughput"
+              ],
+              [
+                "Steel / fabrication",
+                "Study highlights heavy-plate constraints and differences between steelmaking and fabrication capacity",
+                "Required product grade/thickness, weld/QA capability and reserved production"
+              ],
+              [
+                "Mooring / anchors",
+                "Technical guides show design/soil/material dependencies and high-volume system requirements",
+                "Qualified suppliers, manufacturing slots, tests and installation spread; do not assert a quantified UK-wide shortage without data"
+              ],
+              [
+                "Dynamic cables / skills",
+                "ORE Catapult's workforce study identifies capability/training needs across the cable lifecycle",
+                "Qualified voltage/fatigue envelope, accessories, factory capacity and competent technicians"
+              ],
+              [
+                "Cable / installation vessels",
+                "Installation practice requires specialised equipment and suitable weather windows",
+                "Actual charter commitments, simultaneous regional demand and repair contingency; no unsupported fleet-shortage number"
+              ],
+              [
+                "Finance / bankability",
+                "Public development investment and contract-risk choices show that technology readiness alone is insufficient",
+                "Bankable scope, revenue, capital cost, downside cover and closure conditions"
+              ],
+              [
+                "Consent / environment",
+                "Authorities require impact assessments; advisers must be engaged early",
+                "Birds, mammals, benthic habitat, fisheries, cumulative impacts, mitigation and conditions"
+              ],
+              [
+                "Localisation",
+                "CES publishes supply-chain development statements and an outlook dashboard",
+                "Distinguish ambition/commitment/outlook from realised spend and delivered UK content"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Sources: [NESO reform](https://www.neso.energy/industry-information/connections/connections-reform), [DESNZ-commissioned 2026 supply-chain study](https://assets.publishing.service.gov.uk/media/69ef36b020a498c16734afcc/UK-renewables-deployment-supply-chain-readiness-study-2026-update.pdf), [ORE Catapult dynamic-cable capability study](https://ore.catapult.org.uk/resource-hub/analysis-reports/supply-chain-capability-requirements-for-uk-floating-offshore-wind-farms), [environmental assessment/compensation guidance](https://www.gov.uk/government/publications/offshore-wind-compensating-for-environmental-harm/part-1-when-and-how-to-compensate-for-environmental-harm-offshore-wind), [CES supply-chain dashboard and evidence scope](https://crownestatescotland.com/supply-chain-information). Other rows are explicitly bounded engineering/commercial interpretations from the referenced system and procurement explanations, not a ranked market forecast."
+          }
+        ],
+        "zh": [
+          {
+            "type": "table",
+            "headers": [
+              "约束",
+              "证据能支持什么",
+              "项目仍需核验什么"
+            ],
+            "rows": [
+              [
+                "电网",
+                "NESO 按准备程度与系统需求改革接入队列",
+                "实际报价、加强工程、责任与日期"
+              ],
+              [
+                "港口／制造规模",
+                "2026 年政府委托研究指出成熟浮式生产能力有限，并列候选港口",
+                "设施实际阶段、档期、吃水、吊重和节拍"
+              ],
+              [
+                "钢材／制造",
+                "研究区分厚板、钢材生产与结构制造能力",
+                "材料等级、厚度、焊接质量与预订产能"
+              ],
+              [
+                "系泊／锚",
+                "技术指导说明设计、材料和土体依赖及数量需求",
+                "合格供应商、产能、测试和安装资源；不编造全国缺口数量"
+              ],
+              [
+                "动态海缆／人员",
+                "ORE Catapult 研究指出电缆全寿命技能和培训需求",
+                "电压／疲劳验证、附件、工厂及合格技术人员"
+              ],
+              [
+                "海缆／安装船",
+                "专业设备与适当天气窗口不可少",
+                "实际租船、区域同时需求与维修预案；不杜撰船队短缺数字"
+              ],
+              [
+                "资金／可融资性",
+                "前期投资及合同风险选择说明技术成熟度不够决定投资",
+                "收入、范围、成本、不利情景和融资条件"
+              ],
+              [
+                "许可／环境",
+                "需要影响评估并提前获得顾问意见",
+                "鸟类、海兽、底栖、渔业、累积影响与条件"
+              ],
+              [
+                "本地化",
+                "CES 提供供应链发展声明与展望看板",
+                "把愿景、承诺、预测与已发生支出／已交付含量分开"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "这些不是统一的短缺排名或市场预测。各结论必须使用相应研究和主管方证据，单个项目要再查自身合同与时序。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uk-topic-22",
+      "number": 22,
+      "chapter": "risks",
+      "title": {
+        "en": "A mental model and fifteen useful questions",
+        "zh": "记忆框架与十五个问题"
+      },
+      "kinds": [
+        "interpretation"
+      ],
+      "sourceIds": [
+        "src-56c4963050f4",
+        "src-9f9702056ca7",
+        "src-8fb1edbf438b",
+        "src-a4f397ab5f02",
+        "src-80b9eeeb1905",
+        "src-3db5fafc68c8",
+        "src-4005f31bb90c",
+        "src-9dbeb0387f83"
+      ],
+      "content": {
+        "en": [
+          {
+            "type": "diagram",
+            "text": "SEABED RIGHTS + CONSENT + GRID + REVENUE + FINANCE\n       + DELIVERABLE TECHNOLOGY + SUPPLY CHAIN + PORT / MARINE PLAN\n                                  ↓\n                    FINAL INVESTMENT DECISION\n                                  ↓\n                 MANUFACTURE → INTEGRATE → INSTALL\n                                  ↓\n                     COMMISSION → GENERATE\n                                  ↓\n                TRANSMIT / DISTRIBUTE → CUSTOMERS\n\nAlongside: separate electricity sales, network charges, CfD and settlement\nThroughout: safety, stakeholders, asset integrity, O&M and end-of-life funding"
+          },
+          {
+            "type": "paragraph",
+            "text": "This is an explanatory framework, not a universal legal sequence. Operation is a multi-decade responsibility; design life, lease duration and support-contract duration are different quantities and must be checked for the particular asset."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Who holds the seabed rights, and what conditions attach to them?",
+              "Who owns the project company and who manages development?",
+              "Which offshore and onshore permissions exist, and what remains conditional?",
+              "What connection point, capacity and date does the current grid offer provide?",
+              "Where will the electricity physically go, and who buys it commercially?",
+              "Is there a CfD, for which capacity/round/terms, and does it cover the full project?",
+              "What turbine is specified, selected or merely assumed?",
+              "What floater concept fits the site and available ports?",
+              "What mooring/anchor design is supported by the soil and coupled-load evidence?",
+              "What cable system is qualified for the voltage, motion and fatigue duty?",
+              "Which ports and vessels are actually available or contracted?",
+              "How do integration, tow-out, hook-up and energisation fit together?",
+              "Which assets are generation, OFTO or TO assets, and where are the boundaries?",
+              "What evidence shows finance maturity/FID rather than development funding alone?",
+              "How will inspection, major repair, cable failure and decommissioning be funded and delivered?"
+            ]
+          }
+        ],
+        "zh": [
+          {
+            "type": "diagram",
+            "text": "海床权利＋许可＋电网＋收入＋资金\n＋可交付技术＋供应链＋港口／海上方案\n                 ↓\n             最终投资决定\n                 ↓\n       制造 → 集成 → 安装\n                 ↓\n           调试 → 发电\n                 ↓\n         输电／配电 → 用户\n资金流另看：售电、网络收费、CfD 与偏差结算\n全程贯穿：安全、相关方、资产完整性、运维和退役资金"
+          },
+          {
+            "type": "paragraph",
+            "text": "这是解释框架，不是统一法定顺序。运维是跨数十年的责任，设计寿命、租约期限和补贴合同期限是不同数字，需按项目核验。"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "谁持有海床权利，有什么附带条件？",
+              "谁拥有项目公司，谁负责开发？",
+              "海上与陆上许可哪些已有、哪些仍有条件？",
+              "当前并网协议提供什么接入点、容量和日期？",
+              "电力物理上送去哪里，商业上卖给谁？",
+              "是否有 CfD，覆盖哪个容量、轮次和合同条件？",
+              "风机是已明确、已选择还是仅假设？",
+              "什么浮体概念适配场址与港口？",
+              "土体和耦合载荷是否支持系泊／锚方案？",
+              "海缆是否满足电压、运动与疲劳要求？",
+              "哪些港口和船舶实际可用或已有合同？",
+              "集成、拖航、连接与送电怎样衔接？",
+              "发电、OFTO、TO 的资产边界在哪里？",
+              "什么证据说明融资／FID 成熟，而不仅是获得开发资金？",
+              "如何为检查、大修、海缆故障和退役提供资金与交付安排？"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-56c4963050f4",
+      "title": "Procurement structures — BVG/ORE guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/procurement-structures/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        14,
+        22
+      ],
+      "claimScope": "EPCI versus multi-contracting, retained interface risk and financing tradeoffs."
+    },
+    {
+      "id": "src-22a787b58ebd",
+      "title": "Tata Steel",
+      "publisher": "Tata Steel UK",
+      "url": "https://www.tatasteeluk.com/corporate/news/industrial-collaboration-to-develop-strip-steel-floating-offshore-wind-platforms",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        19
+      ],
+      "claimScope": "Steel/platform innovation collaboration involving Tata Steel UK, MPS and partners; not a wind-farm supply award."
+    },
+    {
+      "id": "src-a191796e5ee5",
+      "title": "Mooring lines guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-3-mooring-system/b-3-2-mooring-lines/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        19
+      ],
+      "claimScope": "Mooring-line function, materials, product suppliers and designer specifications."
+    },
+    {
+      "id": "src-3bb1ba763554",
+      "title": "Turbine electrical guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/t-wind-turbine/t-4-electrical-system/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        6
+      ],
+      "claimScope": "Turbine converter/transformer functions and illustrative internal-to-array voltage conversion."
+    },
+    {
+      "id": "src-fe51f9978a35",
+      "title": "Floater guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-2-floating-substructure/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        5
+      ],
+      "claimScope": "Floater buoyancy, stability, interfaces and technology/fabrication roles."
+    },
+    {
+      "id": "src-1ad5436d088b",
+      "title": "Contractor case study",
+      "publisher": "Boskalis",
+      "url": "https://boskalis.com/media/jgldcrcn/kincardine.pdf",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1
+      ],
+      "claimScope": "Boskalis's Kincardine transport and installation scope."
+    },
+    {
+      "id": "src-db4b893b8dfb",
+      "title": "Development services guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-1-development-and-consenting-services/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1
+      ],
+      "claimScope": "Project SPV and developer-led consenting, specialist services and development responsibilities."
+    },
+    {
+      "id": "src-4df884e37d75",
+      "title": "DESNZ OFTO explanation",
+      "publisher": "DESNZ / UK Government",
+      "url": "https://www.gov.uk/government/calls-for-evidence/offshore-transmission-owner-ofto-regime/offshore-transmission-owner-regime-ofto-call-for-evidence-accessible-webpage",
+      "documentDate": "2025-10-28",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        10
+      ],
+      "claimScope": "Traditional generator-build OFTO cost assessment, tender and asset-transfer model."
+    },
+    {
+      "id": "src-e51101ddd162",
+      "title": "NESO BM",
+      "publisher": "NESO",
+      "url": "https://www.neso.energy/what-we-do/systems-operations/what-balancing-mechanism",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "GB",
+      "supportsTopics": [
+        1,
+        12,
+        19
+      ],
+      "claimScope": "NESO Balancing Mechanism actions for real-time supply/demand balance."
+    },
+    {
+      "id": "src-2fb52a45001f",
+      "title": "Elexon trading",
+      "publisher": "Elexon",
+      "url": "https://www.elexon.co.uk/bsc/about/trading-electricty-market/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "GB",
+      "supportsTopics": [
+        1,
+        12,
+        19
+      ],
+      "claimScope": "Power contracting, half-hourly settlement periods, imbalance and Elexon's BSC role."
+    },
+    {
+      "id": "src-679f75c20596",
+      "title": "Engineering/FEED guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-5-engineering-and-consultancy/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        2,
+        19,
+        20
+      ],
+      "claimScope": "Integrated FEED, multidisciplinary interfaces and engineering-consultancy scope."
+    },
+    {
+      "id": "src-7f379f42577b",
+      "title": "Project management guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-6-project-management/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        2,
+        20
+      ],
+      "claimScope": "Development, construction and financial project-management functions."
+    },
+    {
+      "id": "src-83b1652cff09",
+      "title": "environmental surveys",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-2-environmental-surveys/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        19
+      ],
+      "claimScope": "Environmental survey scope and representative service providers."
+    },
+    {
+      "id": "src-81e559076db0",
+      "title": "resource/metocean",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-3-resource-and-metocean-assessment/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3
+      ],
+      "claimScope": "Wind/resource and metocean data used for design, yield and marine planning."
+    },
+    {
+      "id": "src-5f61696cdce7",
+      "title": "geological/hydrographical surveys",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/p-development-and-project-management/p-4-geological-and-hydrographical-surveys/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3
+      ],
+      "claimScope": "Geological, geotechnical and hydrographical investigation activities."
+    },
+    {
+      "id": "src-2b71d2d7cf11",
+      "title": "Crown Estate Scotland's explanation",
+      "publisher": "Crown Estate Scotland",
+      "url": "https://www.crownestatescotland.com/news/foi-382scotwind-revenue",
+      "documentDate": "2025-05-30",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "Scotland",
+      "supportsTopics": [
+        1,
+        3,
+        4
+      ],
+      "claimScope": "ScotWind rights, progression to lease and separation of supply-chain commitments from rent."
+    },
+    {
+      "id": "src-331a595c6a41",
+      "title": "MD-LOT guidance, updated 29 September 2026",
+      "publisher": "Scottish Government",
+      "url": "https://www.gov.scot/publications/marine-licensing-and-consenting-offshore-renewable-energy-projects/pages/licensing-and-consenting-requirements/",
+      "documentDate": "2026-09-29",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "Scotland",
+      "supportsTopics": [
+        1,
+        3,
+        4,
+        19
+      ],
+      "claimScope": "MD-LOT-administered Scottish offshore consent/licensing requirements and decommissioning obligations."
+    },
+    {
+      "id": "src-20231d79f059",
+      "title": "JNCC responsibilities",
+      "publisher": "JNCC",
+      "url": "https://jncc.defra.gov.uk/our-work/ornithology-renewables/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        3,
+        4
+      ],
+      "claimScope": "JNCC and delegated nature-conservation advice for offshore renewable development."
+    },
+    {
+      "id": "src-fcbe9571f203",
+      "title": "MMO guidance, updated 3 August 2026",
+      "publisher": "Marine Management Organisation (MMO)",
+      "url": "https://www.gov.uk/guidance/offshore-energy-generation-consents",
+      "documentDate": "2026-08-03",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        3,
+        4,
+        19
+      ],
+      "claimScope": "MMO guidance on English consent routes, marine licences and project-specific route selection."
+    },
+    {
+      "id": "src-7e46785ca5a2",
+      "title": "SIP guidance",
+      "publisher": "Welsh Government",
+      "url": "https://www.gov.wales/significant-infrastructure-projects-sip-what-submit-your-application",
+      "documentDate": "2026-10-13",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "Wales",
+      "supportsTopics": [
+        1,
+        3,
+        4,
+        19
+      ],
+      "claimScope": "Current Welsh SIP application requirements, including draft orders and deemed marine licences."
+    },
+    {
+      "id": "src-27d2dc252ef0",
+      "title": "UK NSIP guidance",
+      "publisher": "UK Government",
+      "url": "https://www.gov.uk/guidance/nationally-significant-infrastructure-projects-development-consent-legislation",
+      "documentDate": "2026-07-29",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        3,
+        4
+      ],
+      "claimScope": "NSIP legislation and relevant reserved/devolved generation-consenting boundaries."
+    },
+    {
+      "id": "src-9d74d1d4b4a8",
+      "title": "US Department of Energy — first-principles explanation",
+      "publisher": "US Department of Energy",
+      "url": "https://www.energy.gov/cmei/systems/how-do-wind-turbines-work",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        5
+      ],
+      "claimScope": "Aerodynamic conversion, rotor/generator operation and geared versus direct-drive arrangements."
+    },
+    {
+      "id": "src-40364877bde8",
+      "title": "anchor guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-3-mooring-system/b-3-1-anchors/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        5,
+        19
+      ],
+      "claimScope": "Anchor types, load/soil dependencies and representative suppliers."
+    },
+    {
+      "id": "src-6879eb65f09b",
+      "title": "Floating technology guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/floating-technology/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        5
+      ],
+      "claimScope": "Floating-platform stability concepts and transport/installation tradeoffs."
+    },
+    {
+      "id": "src-7be13e548b82",
+      "title": "array cable",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-1-cables/b-1-1-array-cable/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        6,
+        8,
+        20
+      ],
+      "claimScope": "Array topology, dynamic cable configurations and typical 66 kV arrays."
+    },
+    {
+      "id": "src-31935cfbe545",
+      "title": "export cable",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-1-cables/b-1-2-export-cable/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        6
+      ],
+      "claimScope": "Export-cable function, architecture and voltage examples."
+    },
+    {
+      "id": "src-78fdd0c33bf6",
+      "title": "onshore substation",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-5-onshore-substation/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        6
+      ],
+      "claimScope": "Onshore substation transformation, metering and project-side/grid-side plant."
+    },
+    {
+      "id": "src-099b568b34f0",
+      "title": "National Grid network explanation",
+      "publisher": "National Grid",
+      "url": "https://www.nationalgrid.com/stories/energy-explained/electricity-transmission-vs-electricity-distribution",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        6
+      ],
+      "claimScope": "Transmission/distribution functions and voltage context in England and Wales."
+    },
+    {
+      "id": "src-6ebbe369e07f",
+      "title": "SSEN network methodology",
+      "publisher": "SSEN Transmission",
+      "url": "https://www.ssen-transmission.co.uk/globalassets/documents/a-network-for-net-zero/supporting-evidence/network-asset-risk-noms-methodology-.pdf",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        6
+      ],
+      "claimScope": "GB transmission ownership regions and 400/275/132 kV network context."
+    },
+    {
+      "id": "src-83ad6ce367d4",
+      "title": "Cable connection study — ORE Catapult",
+      "publisher": "ORE Catapult",
+      "url": "https://ore.catapult.org.uk/resource-hub/analysis-reports/cornwall-flow-accelerator-optimised-cable-connection-options-for-floating-offshore-wind",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        7,
+        20
+      ],
+      "claimScope": "Lazy-wave cable connection options and floating-specific electrical interface issues."
+    },
+    {
+      "id": "src-298a2e8a5c08",
+      "title": "dynamic cable qualification report",
+      "publisher": "ORE Catapult",
+      "url": "https://ore.catapult.org.uk/wp-content/uploads/2022/10/Dynamic-Cable-Technology-Qualification-Oct-2022.pdf",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        7,
+        20
+      ],
+      "claimScope": "Dynamic-cable qualification framework and an explicitly assumed 66 kV lazy-wave case."
+    },
+    {
+      "id": "src-ee09616c9461",
+      "title": "Mooring-system response and cable excursion",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-3-mooring-system/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        7,
+        20
+      ],
+      "claimScope": "Mooring restoring behaviour, excursion and implications for dynamic cables."
+    },
+    {
+      "id": "src-7ecaa16cb671",
+      "title": "HVAC system",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-4-offshore-substation/b-4-1-hvac-electrical-system/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        8,
+        20
+      ],
+      "claimScope": "HVAC substation electrical functions and reactive-power equipment."
+    },
+    {
+      "id": "src-ac6c52023ef5",
+      "title": "HVDC system",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-4-offshore-substation/b-4-2-hvdc-electrical-system/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        8,
+        20
+      ],
+      "claimScope": "HVDC conversion equipment and export architecture considerations."
+    },
+    {
+      "id": "src-1ad32ae83a18",
+      "title": "Offshore cable installation guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-2-offshore-cable-installation/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        8,
+        19,
+        20
+      ],
+      "claimScope": "Cable-lay, burial/protection, crossings, pull-in, termination and testing scope."
+    },
+    {
+      "id": "src-bbca4ffd7bee",
+      "title": "Offshore substation guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-4-offshore-substation/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        9,
+        19
+      ],
+      "claimScope": "Offshore substation functions and possible fixed/direct-export architecture branches."
+    },
+    {
+      "id": "src-04ee5b986657",
+      "title": "Onshore electrical system",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-5-onshore-substation/b-5-1-electrical-system/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        9,
+        19
+      ],
+      "claimScope": "Onshore switchgear, transformers/converters, reactive compensation and earthing."
+    },
+    {
+      "id": "src-5323dec6c520",
+      "title": "Reference-design assumptions",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/1-2-assumptions-used-in-this-guide/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        9
+      ],
+      "claimScope": "The technical guide's chosen reference design, including a fixed offshore substation; not a universal design."
+    },
+    {
+      "id": "src-14fafa89306d",
+      "title": "Equitix portfolio",
+      "publisher": "Equitix",
+      "url": "https://equitix.com/portfolio/greater-gabbard-ofto/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        10,
+        19
+      ],
+      "claimScope": "Greater Gabbard OFTO ownership, availability-based revenue and separate O&M provider."
+    },
+    {
+      "id": "src-03d39a48371c",
+      "title": "Ofgem consultation and status",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/consultation/ofto-build-early-and-late-competition-models",
+      "documentDate": "2026-05-07",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "GB",
+      "supportsTopics": [
+        10
+      ],
+      "claimScope": "May 2026 OFTO-build consultation proposals and its published awaiting-decision status."
+    },
+    {
+      "id": "src-9e4e0b9f9320",
+      "title": "National Grid connection roles",
+      "publisher": "National Grid",
+      "url": "https://www.nationalgrid.com/electricity-transmission/connections/article/distribution-and-transmission-connections",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        1,
+        3,
+        11,
+        19
+      ],
+      "claimScope": "Onshore transmission-owner geography and distribution/transmission connection distinction."
+    },
+    {
+      "id": "src-6d4a8d484248",
+      "title": "NESO Scottish network boundaries",
+      "publisher": "NESO",
+      "url": "https://www.neso.energy/publications/electricity-ten-year-statement-etys/electricity-transmission-network-requirements/scottish-boundaries",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "GB",
+      "supportsTopics": [
+        1,
+        3,
+        11,
+        19
+      ],
+      "claimScope": "SSEN/SP Transmission ownership and Scottish network boundaries."
+    },
+    {
+      "id": "src-9e3a6357de6a",
+      "title": "NESO control-centre explanation",
+      "publisher": "NESO",
+      "url": "https://www.neso.energy/what-we-do/systems-operations/what-does-electricity-national-control-centre-do",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "GB",
+      "supportsTopics": [
+        1,
+        3,
+        11
+      ],
+      "claimScope": "NESO control-centre role, system frequency, response, reserve and balancing tools."
+    },
+    {
+      "id": "src-dc9d7ff3eb06",
+      "title": "NESO evidence handbook",
+      "publisher": "NESO",
+      "url": "https://www.neso.energy/industry-information/connections-reform/evidence-handbook-and-other-g2wq-submission-resources",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "GB",
+      "supportsTopics": [
+        1,
+        3,
+        11
+      ],
+      "claimScope": "Gate 1/Gate 2 readiness and strategic-alignment evidence and offer distinction."
+    },
+    {
+      "id": "src-d425a3645e7d",
+      "title": "DESNZ market-design update",
+      "publisher": "UK Government",
+      "url": "https://www.gov.uk/government/publications/reformed-national-pricing-rnp-delivery-plan/reformed-national-pricing-rnp-delivery-plan-accessible-webpage",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        12
+      ],
+      "claimScope": "Market-design reform and negative-price restrictions on CfD difference payments."
+    },
+    {
+      "id": "src-16dcb454c610",
+      "title": "DESNZ scheme",
+      "publisher": "DESNZ / UK Government",
+      "url": "https://www.gov.uk/government/collections/contracts-for-difference",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        13,
+        19
+      ],
+      "claimScope": "CfD scheme institutions and LCCC counterparty role; contract duration uses the separate AR7 update."
+    },
+    {
+      "id": "src-84e659d553c3",
+      "title": "LCCC clarification on power sales",
+      "publisher": "LCCC",
+      "url": "https://www.lowcarboncontracts.uk/documents/243/Introduction_to_the_Contracts_for_Difference_Scheme_QA_.pdf",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "GB",
+      "supportsTopics": [
+        3,
+        13
+      ],
+      "claimScope": "CfD is a financial agreement; generators remain responsible for physical power sales."
+    },
+    {
+      "id": "src-0096785f6554",
+      "title": "LCCC mechanism presentation",
+      "publisher": "LCCC",
+      "url": "https://www.lowcarboncontracts.uk/documents/203/Binary_Carbon_Webinar_-_9.7.2024.pdf",
+      "documentDate": "2024-07-09",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "GB",
+      "supportsTopics": [
+        3,
+        13
+      ],
+      "claimScope": "Two-way strike/reference-price settlement and supplier-obligation funding."
+    },
+    {
+      "id": "src-699305abe5ef",
+      "title": "DESNZ 2025 scheme update",
+      "publisher": "DESNZ / UK Government",
+      "url": "https://www.gov.uk/government/publications/contracts-for-difference-and-capacity-market-scheme-update-2025/contracts-for-difference-and-capacity-market-scheme-update-2025-accessible-webpage",
+      "documentDate": "2025-12-17",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        13
+      ],
+      "claimScope": "20-year CPI-indexed contracts from AR7 for the specified wind and solar technologies."
+    },
+    {
+      "id": "src-aaf47ba40b12",
+      "title": "Official AR7 results",
+      "publisher": "UK Government / DESNZ",
+      "url": "https://assets.publishing.service.gov.uk/media/6966861de8c04eb2919f773a/contracts-for-difference-allocation-round-7-results-.pdf",
+      "documentDate": "2026-01-14",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        13
+      ],
+      "claimScope": "14 January 2026 AR7 awarded capacities, including Pentland 92.5 MW and Erebus 100 MW."
+    },
+    {
+      "id": "src-9f9702056ca7",
+      "title": "GBE investment announcement",
+      "publisher": "Great British Energy",
+      "url": "https://www.gbe.gov.uk/blog/major-floating-offshore-wind-project-secures-backing-great-british-energy-national-wealth-fund",
+      "documentDate": "2025-11-18",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        14,
+        22
+      ],
+      "claimScope": "November 2025 public investment announcement for Pentland; not proof of FID or completed construction finance."
+    },
+    {
+      "id": "src-193fbab538e2",
+      "title": "Floating turbine assembly guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-5-floating-offshore-wind-turbine-assembly/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        15
+      ],
+      "claimScope": "Quayside turbine integration, component lifts, pre-commissioning and wet storage."
+    },
+    {
+      "id": "src-e5d538af057c",
+      "title": "Construction-port guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-8-construction-port/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        15
+      ],
+      "claimScope": "Construction-port roles, depth, quay/lifting, space, wet storage and access needs."
+    },
+    {
+      "id": "src-73c204163516",
+      "title": "Cromarty Firth",
+      "publisher": "UK Government",
+      "url": "https://www.gov.uk/government/news/government-unlocks-floating-offshore-wind-with-major-investment-for-scottish-port",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        15,
+        19
+      ],
+      "claimScope": "March 2025 government support announcement for Cromarty Firth port expansion."
+    },
+    {
+      "id": "src-b387091ff3d4",
+      "title": "Port Talbot",
+      "publisher": "UK Government",
+      "url": "https://www.gov.uk/government/news/64-million-for-port-talbot-offshore-wind-hub-in-the-celtic-sea",
+      "documentDate": "2026-03-26",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        15,
+        19
+      ],
+      "claimScope": "March 2026 announcement of up to GBP 64 million for Port Talbot development design/engineering."
+    },
+    {
+      "id": "src-6463f661bed9",
+      "title": "Ardersier developer",
+      "publisher": "Haventus",
+      "url": "https://www.haventus.com/port-page/ardersier-energy-transition-facility/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        15,
+        19
+      ],
+      "claimScope": "Haventus's description of Ardersier and phased facility development."
+    },
+    {
+      "id": "src-85d29297643f",
+      "title": "Mooring pre-installation",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-4-anchor-and-mooring-pre-installation/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        16,
+        19
+      ],
+      "claimScope": "Anchor/mooring pre-installation activities, installation equipment and readiness."
+    },
+    {
+      "id": "src-bab71a06695f",
+      "title": "turbine installation",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/i-6-floating-offshore-wind-turbine-installation/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        16
+      ],
+      "claimScope": "Tow-out, mooring/cable hook-up and final floating-turbine commissioning scope."
+    },
+    {
+      "id": "src-8c6025fd6baf",
+      "title": "Installation overview",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/i-installation-and-commissioning/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        16,
+        19
+      ],
+      "claimScope": "Marine installation packages, work fronts, weather windows and contractor roles."
+    },
+    {
+      "id": "src-8fb1edbf438b",
+      "title": "O&M overview",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/o-operations-and-maintenance/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        17,
+        22
+      ],
+      "claimScope": "Owner/OEM O&M roles, monitoring, access and lifetime operations."
+    },
+    {
+      "id": "src-a4f397ab5f02",
+      "title": "maintenance guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/o-operations-and-maintenance/o-2-maintenance/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        17,
+        22
+      ],
+      "claimScope": "Scheduled and corrective turbine/balance-of-plant maintenance activities."
+    },
+    {
+      "id": "src-80b9eeeb1905",
+      "title": "Kincardine operator/technology account",
+      "publisher": "Principle Power",
+      "url": "https://www.principlepower.com/projects/kincardine-offshore-wind-farm",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        17,
+        19,
+        22
+      ],
+      "claimScope": "Kincardine WindFloat experience, O&M services and in-situ/tow-to-port major exchanges."
+    },
+    {
+      "id": "src-3db5fafc68c8",
+      "title": "major repair guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/o-operations-and-maintenance/o-3-major-repair/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        17,
+        22
+      ],
+      "claimScope": "Major-repair and component-exchange planning for floating assets."
+    },
+    {
+      "id": "src-4005f31bb90c",
+      "title": "DESNZ England/Wales guidance",
+      "publisher": "UK Government",
+      "url": "https://www.gov.uk/government/publications/decommissioning-offshore-renewable-energy-installations",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        3,
+        17,
+        22
+      ],
+      "claimScope": "England/Wales offshore-renewables decommissioning guidance and separate Scottish jurisdiction."
+    },
+    {
+      "id": "src-9dbeb0387f83",
+      "title": "Scottish guidance",
+      "publisher": "Scottish Government",
+      "url": "https://www.gov.scot/publications/offshore-renewable-energy-decommissioning-guidance-scottish-waters/documents/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "Scotland",
+      "supportsTopics": [
+        3,
+        17,
+        22
+      ],
+      "claimScope": "Scottish offshore-renewables decommissioning obligations and guidance."
+    },
+    {
+      "id": "src-6d6660df0f3e",
+      "title": "Scottish floating pipeline with lease-return notes",
+      "publisher": "Scottish Enterprise / Offshore Wind Scotland",
+      "url": "https://www.offshorewindscotland.org.uk/the-offshore-wind-market-in-scotland/floating-offshore-wind-in-scotland/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "Scotland",
+      "supportsTopics": [
+        18
+      ],
+      "claimScope": "Scottish floating development-pipeline snapshot with stated lease-return adjustments."
+    },
+    {
+      "id": "src-7115b4bc1904",
+      "title": "Ossian project",
+      "publisher": "Ossian",
+      "url": "https://www.ossianwindfarm.com/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        18,
+        19
+      ],
+      "claimScope": "Ossian's stated up-to-3.6 GW proposal, developer partnership and array-application context."
+    },
+    {
+      "id": "src-347148ec114a",
+      "title": "Ossian English connection update",
+      "publisher": "Ossian",
+      "url": "https://www.ossianwindfarm.com/english-connection",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        18
+      ],
+      "claimScope": "Ossian's stated pause of Lincolnshire connection work following grid-design changes."
+    },
+    {
+      "id": "src-cb679ae7b024",
+      "title": "Ocean Winds UK portfolio",
+      "publisher": "Ocean Winds",
+      "url": "https://www.oceanwinds.com/uk/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        18,
+        19
+      ],
+      "claimScope": "Ocean Winds UK portfolio's 1.8 GW Arven scope and stated 500 MW Arven South return."
+    },
+    {
+      "id": "src-aa54401e804b",
+      "title": "Crown Estate Scotland INTOG updates",
+      "publisher": "Crown Estate Scotland",
+      "url": "https://www.crownestatescotland.com/scotlands-property/offshore-wind/intog-leasing-round",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "Scotland",
+      "supportsTopics": [
+        18
+      ],
+      "claimScope": "INTOG purpose and named Green Volt/Culzean examples, including dated lease progression."
+    },
+    {
+      "id": "src-f6ba92795260",
+      "title": "dated Scottish inventory",
+      "publisher": "Scottish Government",
+      "url": "https://www.gov.scot/publications/update-2020-offshore-wind-policy-statement-scotlands-offshore-wind-ambition-2/pages/4/",
+      "documentDate": "2026-01-28",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "Scotland",
+      "supportsTopics": [
+        18
+      ],
+      "claimScope": "January 2026 Scottish project inventory only; not confirmation that every listed status remains current."
+    },
+    {
+      "id": "src-90a1c4b7b2c5",
+      "title": "Round 5 final agreement announcement",
+      "publisher": "The Crown Estate",
+      "url": "https://www.thecrownestate.co.uk/news/final-site-progressing-for-round-5",
+      "documentDate": "2026-03-03",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        18
+      ],
+      "claimScope": "Ocean Winds' March 2026 1.5 GW Round 5 agreement for lease."
+    },
+    {
+      "id": "src-9ea9db6d7b80",
+      "title": "Welsh Government confirmation of all three developers",
+      "publisher": "Welsh Government",
+      "url": "https://www.gov.wales/written-statement-offshore-wind-action-plan-update",
+      "documentDate": "2026-03-12",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "Wales",
+      "supportsTopics": [
+        18
+      ],
+      "claimScope": "Welsh Government's March 2026 account of all three Round 5 developers and agreements for lease."
+    },
+    {
+      "id": "src-da0f5092998c",
+      "title": "Ocean Winds project page",
+      "publisher": "Ocean Winds",
+      "url": "https://www.oceanwinds.com/projects/arven/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        18
+      ],
+      "claimScope": "Arven individual project page's 2.3 GW figure, retained as conflicting scope evidence."
+    },
+    {
+      "id": "src-e63065e04ebd",
+      "title": "Mainstream project page",
+      "publisher": "Mainstream Renewable Power",
+      "url": "https://www.mainstreamrp.com/markets-projects/europe/united-kingdom/arven-scotwind-wind-farm/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        18
+      ],
+      "claimScope": "Mainstream's Arven page still describing combined 2.3 GW scope, retained with discrepancy note."
+    },
+    {
+      "id": "src-f8876d42b80e",
+      "title": "Supplier guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/supply-chain/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        19
+      ],
+      "claimScope": "Representative floating-project supplier experience; not future UK contract awards."
+    },
+    {
+      "id": "src-4e93e8b0a2c0",
+      "title": "Cable guide",
+      "publisher": "BVG Associates / ORE Catapult",
+      "url": "https://guidetofloatingoffshorewind.com/guide/b-balance-of-plant/b-1-cables/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        19
+      ],
+      "claimScope": "Array/export cable functions and representative cable-system manufacturers."
+    },
+    {
+      "id": "src-1f5b3a7f0397",
+      "title": "Sumitomo",
+      "publisher": "Sumitomo Electric",
+      "url": "https://sumitomoelectric.com/press/2026/10/prs044",
+      "documentDate": "2026-10-19",
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        19
+      ],
+      "claimScope": "19 October 2026 Nigg factory-opening ceremony and stated product intentions, not a particular farm award."
+    },
+    {
+      "id": "src-c0dfbae8429e",
+      "title": "DNV service",
+      "publisher": "DNV",
+      "url": "https://www.dnv.com/services/renewables-certification/certification-of-floating-wind-energy/",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        19
+      ],
+      "claimScope": "DNV floating-wind certification service scope, distinct from statutory consent."
+    },
+    {
+      "id": "src-e8680f3c1361",
+      "title": "ORE Catapult",
+      "publisher": "ORE Catapult",
+      "url": "https://ore.catapult.org.uk/products-services/floating-offshore-wind",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        19
+      ],
+      "claimScope": "ORE Catapult's floating-wind innovation, research and collaboration activities."
+    },
+    {
+      "id": "src-fb065f84919c",
+      "title": "NESO reform",
+      "publisher": "NESO",
+      "url": "https://www.neso.energy/industry-information/connections/connections-reform",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "GB",
+      "supportsTopics": [
+        21
+      ],
+      "claimScope": "NESO connections-reform rationale, readiness/system need and programme context."
+    },
+    {
+      "id": "src-1d704d3b68ce",
+      "title": "DESNZ-commissioned 2026 supply-chain study",
+      "publisher": "UK Government / DESNZ",
+      "url": "https://assets.publishing.service.gov.uk/media/69ef36b020a498c16734afcc/UK-renewables-deployment-supply-chain-readiness-study-2026-update.pdf",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        21
+      ],
+      "claimScope": "2026 study's floating manufacturing/port readiness assessment and heavy-plate constraints; not project-specific capacity reservations."
+    },
+    {
+      "id": "src-a36a8b928fc0",
+      "title": "ORE Catapult dynamic-cable capability study",
+      "publisher": "ORE Catapult",
+      "url": "https://ore.catapult.org.uk/resource-hub/analysis-reports/supply-chain-capability-requirements-for-uk-floating-offshore-wind-farms",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        21
+      ],
+      "claimScope": "Dynamic-cable lifecycle workforce, capability and training needs."
+    },
+    {
+      "id": "src-a1f25059914e",
+      "title": "environmental assessment/compensation guidance",
+      "publisher": "UK Government",
+      "url": "https://www.gov.uk/government/publications/offshore-wind-compensating-for-environmental-harm/part-1-when-and-how-to-compensate-for-environmental-harm-offshore-wind",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "UK / technical reference",
+      "supportsTopics": [
+        21
+      ],
+      "claimScope": "Environmental assessment/compensation and early nature-conservation-adviser engagement."
+    },
+    {
+      "id": "src-73fec1c2b922",
+      "title": "CES supply-chain dashboard and evidence scope",
+      "publisher": "Crown Estate Scotland",
+      "url": "https://crownestatescotland.com/supply-chain-information",
+      "documentDate": null,
+      "reviewedOn": "2026-10-22",
+      "jurisdiction": "Scotland",
+      "supportsTopics": [
+        21
+      ],
+      "claimScope": "Supply-chain development statements and outlook data, distinguished from realised spend."
+    }
+  ],
+  "organisationEvidence": [
+    {
+      "id": "developers",
+      "rowIndex": 0,
+      "kind": "project",
+      "sourceIds": [
+        "src-7115b4bc1904",
+        "src-cb679ae7b024"
+      ],
+      "role": {
+        "en": "Developers / project companies",
+        "zh": "开发商／项目公司"
+      }
+    },
+    {
+      "id": "turbines",
+      "rowIndex": 1,
+      "kind": "capability",
+      "sourceIds": [
+        "src-f8876d42b80e"
+      ],
+      "role": {
+        "en": "Turbine OEMs",
+        "zh": "风机 OEM"
+      }
+    },
+    {
+      "id": "platforms",
+      "rowIndex": 2,
+      "kind": "project",
+      "sourceIds": [
+        "src-80b9eeeb1905"
+      ],
+      "role": {
+        "en": "Platform technology",
+        "zh": "浮式平台技术"
+      }
+    },
+    {
+      "id": "materials-fabrication",
+      "rowIndex": 3,
+      "kind": "research",
+      "sourceIds": [
+        "src-22a787b58ebd"
+      ],
+      "role": {
+        "en": "Materials / fabrication",
+        "zh": "材料／制造"
+      }
+    },
+    {
+      "id": "mooring",
+      "rowIndex": 4,
+      "kind": "capability",
+      "sourceIds": [
+        "src-a191796e5ee5"
+      ],
+      "role": {
+        "en": "Mooring-line products",
+        "zh": "系泊线产品"
+      }
+    },
+    {
+      "id": "anchors",
+      "rowIndex": 5,
+      "kind": "capability",
+      "sourceIds": [
+        "src-40364877bde8"
+      ],
+      "role": {
+        "en": "Anchors",
+        "zh": "锚"
+      }
+    },
+    {
+      "id": "dynamic-cables",
+      "rowIndex": 6,
+      "kind": "capability",
+      "sourceIds": [
+        "src-4e93e8b0a2c0"
+      ],
+      "role": {
+        "en": "Dynamic cable manufacture",
+        "zh": "动态海缆制造"
+      }
+    },
+    {
+      "id": "export-cables",
+      "rowIndex": 7,
+      "kind": "announcement",
+      "sourceIds": [
+        "src-4e93e8b0a2c0",
+        "src-1f5b3a7f0397"
+      ],
+      "role": {
+        "en": "Static / export cables",
+        "zh": "静态／送出海缆"
+      }
+    },
+    {
+      "id": "electrical-equipment",
+      "rowIndex": 8,
+      "kind": "capability",
+      "sourceIds": [
+        "src-04ee5b986657"
+      ],
+      "role": {
+        "en": "Electrical equipment",
+        "zh": "电气设备"
+      }
+    },
+    {
+      "id": "substations",
+      "rowIndex": 9,
+      "kind": "typical",
+      "sourceIds": [
+        "src-bbca4ffd7bee"
+      ],
+      "role": {
+        "en": "Offshore substations",
+        "zh": "海上变电站"
+      }
+    },
+    {
+      "id": "engineering",
+      "rowIndex": 10,
+      "kind": "capability",
+      "sourceIds": [
+        "src-679f75c20596"
+      ],
+      "role": {
+        "en": "Engineering consultancy",
+        "zh": "工程顾问"
+      }
+    },
+    {
+      "id": "certification",
+      "rowIndex": 11,
+      "kind": "capability",
+      "sourceIds": [
+        "src-c0dfbae8429e"
+      ],
+      "role": {
+        "en": "Certification / assurance",
+        "zh": "认证／保障"
+      }
+    },
+    {
+      "id": "epci",
+      "rowIndex": 12,
+      "kind": "capability",
+      "sourceIds": [
+        "src-8c6025fd6baf"
+      ],
+      "role": {
+        "en": "EPCI lead contractors",
+        "zh": "EPCI 牵头方"
+      }
+    },
+    {
+      "id": "marine-contractors",
+      "rowIndex": 13,
+      "kind": "capability",
+      "sourceIds": [
+        "src-1ad32ae83a18"
+      ],
+      "role": {
+        "en": "Marine / cable contractors",
+        "zh": "海事／敷缆承包商"
+      }
+    },
+    {
+      "id": "survey",
+      "rowIndex": 14,
+      "kind": "capability",
+      "sourceIds": [
+        "src-83b1652cff09"
+      ],
+      "role": {
+        "en": "Survey organisations",
+        "zh": "调查"
+      }
+    },
+    {
+      "id": "vessels",
+      "rowIndex": 15,
+      "kind": "typical",
+      "sourceIds": [
+        "src-85d29297643f"
+      ],
+      "role": {
+        "en": "Vessels and marine logistics",
+        "zh": "船舶与物流"
+      }
+    },
+    {
+      "id": "ports",
+      "rowIndex": 16,
+      "kind": "announcement",
+      "sourceIds": [
+        "src-73c204163516",
+        "src-b387091ff3d4",
+        "src-6463f661bed9"
+      ],
+      "role": {
+        "en": "Ports",
+        "zh": "港口"
+      }
+    },
+    {
+      "id": "operations",
+      "rowIndex": 17,
+      "kind": "project",
+      "sourceIds": [
+        "src-80b9eeeb1905"
+      ],
+      "role": {
+        "en": "O&M",
+        "zh": "运维"
+      }
+    },
+    {
+      "id": "ofto",
+      "rowIndex": 18,
+      "kind": "project",
+      "sourceIds": [
+        "src-14fafa89306d"
+      ],
+      "role": {
+        "en": "OFTO investors / operators",
+        "zh": "OFTO 投资／运营"
+      }
+    },
+    {
+      "id": "transmission-owners",
+      "rowIndex": 19,
+      "kind": "confirmed",
+      "sourceIds": [
+        "src-9e4e0b9f9320",
+        "src-6d4a8d484248"
+      ],
+      "role": {
+        "en": "Transmission owners",
+        "zh": "输电资产方"
+      }
+    },
+    {
+      "id": "authorities",
+      "rowIndex": 20,
+      "kind": "confirmed",
+      "sourceIds": [
+        "src-fcbe9571f203",
+        "src-331a595c6a41",
+        "src-7e46785ca5a2"
+      ],
+      "role": {
+        "en": "Seabed / consenting / regulation",
+        "zh": "海床／审批／监管"
+      }
+    },
+    {
+      "id": "market-institutions",
+      "rowIndex": 21,
+      "kind": "confirmed",
+      "sourceIds": [
+        "src-e51101ddd162",
+        "src-2fb52a45001f",
+        "src-16dcb454c610"
+      ],
+      "role": {
+        "en": "System and market institutions",
+        "zh": "系统及市场"
+      }
+    },
+    {
+      "id": "research",
+      "rowIndex": 22,
+      "kind": "capability",
+      "sourceIds": [
+        "src-e8680f3c1361"
+      ],
+      "role": {
+        "en": "Research / skills / testing",
+        "zh": "研发／技能／测试"
+      }
+    }
+  ]
+}

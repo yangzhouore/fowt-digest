@@ -1,18 +1,33 @@
 # Project Status
 
-Last updated: 2026-10-23. Product baseline: merged main `da48422`.
+Last updated: 2026-10-23. Product baseline: merged main `b409213`.
 
 ## Current State
 
 - Current stable branch: `main`
-- Latest completed product milestone: International Industry Guides (PR #44), merged into main at `da48422`
+- Latest completed product milestone: Digital & AI practical use-case cards (PR #46), merged into main at `b409213`
 - Next product MVP: not yet scoped or accepted
-- Current feature work: Digital & AI practical use-case cards; design accepted on 2026-10-23, local implementation validated, awaiting PR review/manual merge.
+- Current feature work: Digital & AI internal evidence reader and pathway comparison; implementation authorised on 2026-10-23, locally validated, awaiting PR review/manual merge.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
 
-## Current Feature: Digital & AI Practical Cards
+## Current Feature: Digital & AI Evidence Reader and Pathway Comparison
+
+- Branch: `feat/digital-ai-evidence-pathways`, based on main `b409213`.
+- User authorised recommendations 2 and 3 without another approval gate.
+- Scope/design: `web/app/digital-ai/design/EVIDENCE_PATHWAYS_MVP.md`.
+- Source review/validation: `web/app/digital-ai/design/EVIDENCE_PATHWAYS_IMPLEMENTATION.md`.
+- Fourteen static internal reading pages expose original records and provenance,
+  separate editorial relevance/source notes, and link back to exact page contexts.
+- Four pathways compare physical routing, procurement, continuity and evidence;
+  coverage labels replace broad maturity badges. Context is not deployment proof.
+- Local acceptance: 210 Python tests, static data validation, 155 data tests, lint,
+  445-page build (14 reader routes) and 17 browser journeys passed.
+- Original Signals/use-case records, papers, pipeline and unrelated datasets are
+  unchanged. Final-head CI and preview status are recorded in the open PR.
+
+## Merged Digital & AI Practical Cards (PR #46)
 
 - Branch: `feat/digital-ai-use-case-cards`, based on main `963e891`.
 - Accepted design: `web/app/digital-ai/design/USE_CASE_CARDS_MVP.md`.
@@ -24,11 +39,12 @@ Last updated: 2026-10-23. Product baseline: merged main `da48422`.
 - Local acceptance: 210 Python tests, data validation, 151 data tests, lint,
   431-page build and 14 browser journeys passed. The original 14 Signals,
   authoritative datasets and other product sections are unchanged.
-- PR final-head CI and preview are recorded in the PR description. Leave the PR
-  open for manual merge. The internal evidence reader and pathway-comparison
-  recommendations have not been implemented.
+- [PR #46](https://github.com/yangzhouore/fowt-digest/pull/46) was merged manually
+  into main at `b409213`. Pipeline validation, Website validation and Browser smoke
+  passed on implementation head `91b77c5` in
+  [CI run #77](https://github.com/yangzhouore/fowt-digest/actions/runs/39967078082).
 
-## Latest Completed Product Milestone
+## Merged International Industry Guides
 
 - International Industry Guides: [PR #44](https://github.com/yangzhouore/fowt-digest/pull/44), merged at `da48422`.
 - Objectives, design/self-review, implementation and acceptance:

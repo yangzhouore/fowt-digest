@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "1.0",
+  "notes": [
+    { "signalId": "dtwo-federated-offshore-wind-digital-twins", "sourceId": "src-cordis-dtwo", "reviewedDate": "2026-10-23", "claim": { "en": "The CORDIS objective describes integrating simulation assets and real-time data through a federated architecture. An objective is not proof that every proposed module or decision workflow is operational.", "zh": "CORDIS 项目目标介绍了通过联邦式架构集成仿真资产与实时数据；目标本身不能证明所有拟议模块与决策流程均已投入运行。" } },
+    { "signalId": "iea-ai-energy-supply-data-centres-renewables", "sourceId": "src-iea-energy-ai", "reviewedDate": "2026-10-23", "claim": { "en": "IEA distinguishes physical electricity supply from operators' contractual mix. Its system-level analysis does not identify a dedicated FOWT-to-AI contract in this collection.", "zh": "IEA 区分实际供电与运营商的合同采购组合；本资料集中的系统层面分析未识别具体浮式风电到 AI 的专用合同。" } }
+  ]
+}

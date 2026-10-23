@@ -1,6 +1,8 @@
 "use client";
 
-import { Fragment, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { PathwayComparison } from "./pathway-comparison";
 import { UseCaseCard, useCases } from "./use-case-card";
 import styles from "./use-case-card.module.css";
 import type {
@@ -97,48 +99,6 @@ const impactAreas: ImpactArea[] = [
 
 const lifecycleStages = ["Develop", "Design", "Manufacture", "Install", "Operate", "Connect"];
 
-const energyPathways = [
-  {
-    id: "land",
-    number: "01",
-    label: "Power AI on land",
-    maturity: "Established",
-    flow: ["Offshore wind", "Grid", "Land-based AI / data centre"],
-    note: "Grid-connected offshore wind contributes to the clean electricity mix serving compute infrastructure.",
-    signalIds: ["iea-ai-energy-supply-data-centres-renewables"],
-  },
-  {
-    id: "coastal",
-    number: "02",
-    label: "Co-locate compute",
-    maturity: "Emerging",
-    flow: ["Offshore wind", "Coastal energy hub", "Nearby data centre"],
-    note: "A possible siting pathway near grid landing points. No project evidence is present in this dataset.",
-    signalIds: [],
-  },
-  {
-    id: "offshore",
-    number: "03",
-    label: "Offshore compute",
-    maturity: "Experimental",
-    flow: ["Offshore wind", "Direct connection", "Offshore AI compute"],
-    note: "A conceptual direct-power pathway, not a mature offshore-wind business model in this evidence set.",
-    signalIds: [],
-  },
-  {
-    id: "flexible",
-    number: "04",
-    label: "Flexible compute + energy",
-    maturity: "Emerging",
-    flow: ["Offshore wind", "Grid + storage", "Flexible AI load"],
-    note: "Variable generation, storage and shiftable compute could interact as one energy system. The records below support the component context, not a deployed combined model.",
-    signalIds: [
-      "iea-ai-energy-supply-data-centres-renewables",
-      "flexiwind-virtual-offshore-wind-farm-control",
-    ],
-  },
-];
-
 export function DigitalAiExperience({
   signalCount,
   signals,
@@ -148,17 +108,30 @@ export function DigitalAiExperience({
 }: DigitalAiExperienceProps) {
   const { language } = useLanguage();
   const [selectedImpactId, setSelectedImpactId] = useState(impactAreas[0].id);
-  const [selectedPathwayId, setSelectedPathwayId] = useState(energyPathways[0].id);
   const [topic, setTopic] = useState("All");
   const [maturity, setMaturity] = useState("All");
   const [region, setRegion] = useState("All");
+
+  useEffect(() => {
+    const selectFromHash = () => {
+      const hash = window.location.hash;
+      const id = hash.replace(/^#application-/, "");
+      if (impactAreas.some((area) => area.id === id)) setSelectedImpactId(id);
+      if (hash === "#digital-ai-evidence-heading") {
+        const drawer = document.getElementById("digital-ai-all-evidence");
+        if (drawer instanceof HTMLDetailsElement) drawer.open = true;
+      }
+    };
+    selectFromHash();
+    window.addEventListener("hashchange", selectFromHash);
+    return () => window.removeEventListener("hashchange", selectFromHash);
+  }, []);
 
   const signalById = useMemo(
     () => new Map(signals.map((signal) => [signal.id, signal])),
     [signals],
   );
   const selectedImpact = impactAreas.find((area) => area.id === selectedImpactId)!;
-  const selectedPathway = energyPathways.find((pathway) => pathway.id === selectedPathwayId)!;
   const filteredSignals = useMemo(
     () => signals.filter((signal) => (
       (topic === "All" || signal.topic === topic) &&
@@ -195,6 +168,7 @@ export function DigitalAiExperience({
                     <button
                       className={selectedImpact.id === area.id ? "is-active" : ""}
                       key={area.id}
+                      id={`application-${area.id}`}
                       type="button"
                       aria-pressed={selectedImpact.id === area.id}
                       aria-controls="digital-ai-use-case"
@@ -222,34 +196,7 @@ export function DigitalAiExperience({
           </div>
         </header>
 
-        <div className="digital-ai-pathways" aria-label="Potential offshore wind to AI infrastructure pathways">
-          {energyPathways.map((pathway) => (
-            <button
-              className={selectedPathway.id === pathway.id ? "is-active" : ""}
-              key={pathway.id}
-              type="button"
-              aria-pressed={selectedPathway.id === pathway.id}
-              onClick={() => setSelectedPathwayId(pathway.id)}
-            >
-              <span>{pathway.number}</span>
-              <strong>{digitalCopy(pathway.label, language)}</strong>
-              <small>{digitalCopy(pathway.maturity, language)}</small>
-            </button>
-          ))}
-        </div>
-
-        <div className="digital-ai-pathway-detail" aria-live="polite">
-          <div className="digital-ai-energy-flow">
-            {selectedPathway.flow.map((step, index) => (
-              <span key={step}>
-                <strong>{digitalCopy(step, language)}</strong>
-                {index < selectedPathway.flow.length - 1 ? <i aria-hidden="true">→</i> : null}
-              </span>
-            ))}
-          </div>
-          <p>{language === "zh" ? pathwayNoteZh[selectedPathway.id] : selectedPathway.note}</p>
-          <EvidenceLinks ids={selectedPathway.signalIds} signalById={signalById} emptyLabel={language === "zh" ? "证据仍在形成" : "Evidence emerging"} />
-        </div>
+        <PathwayComparison language={language} signals={signalById} />
       </section>
 
       <section className="digital-ai-evidence" aria-labelledby="digital-ai-evidence-heading">
@@ -261,8 +208,8 @@ export function DigitalAiExperience({
           </div>
         </header>
 
-        <details className="digital-ai-evidence-drawer">
-          <summary>Explore all evidence <span aria-hidden="true">↓</span></summary>
+        <details id="digital-ai-all-evidence" className="digital-ai-evidence-drawer">
+          <summary>{language === "zh" ? "浏览全部证据" : "Explore all evidence"} <span aria-hidden="true">↓</span></summary>
           <div className="digital-ai-filter-controls">
             <label>
               <span>{language === "zh" ? "主题" : "Topic"}</span>
@@ -288,6 +235,10 @@ export function DigitalAiExperience({
           </div>
 
           <p className="digital-ai-results-count">{language === "zh" ? `显示 ${filteredSignals.length} 条` : `${filteredSignals.length} shown`}</p>
+          {filteredSignals.length === 0 ? <p>
+            {language === "zh" ? "没有匹配这些筛选条件的记录。" : "No records match these filters."}{" "}
+            <button type="button" onClick={() => { setTopic("All"); setMaturity("All"); setRegion("All"); }}>{language === "zh" ? "清除筛选" : "Clear filters"}</button>
+          </p> : null}
           <ol className="digital-ai-evidence-list">
             {filteredSignals.map((signal) => (
               <li key={signal.id}>
@@ -315,32 +266,11 @@ export function DigitalAiExperience({
   );
 }
 
-function EvidenceLinks({ ids, signalById, emptyLabel }: {
-  ids: string[];
-  signalById: Map<string, SignalListItem>;
-  emptyLabel: string;
-}) {
-  if (ids.length === 0) return <p className="digital-ai-emerging">{emptyLabel}</p>;
-
-  return (
-    <ul className="digital-ai-evidence-links">
-      {ids.map((id) => {
-        const signal = signalById.get(id);
-        if (!signal) return null;
-        return (
-          <li key={id}>
-            <strong>{signal.title}</strong>
-            <SourceLinks signal={signal} />
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
 function SourceLinks({ signal }: { signal: SignalListItem }) {
+  const { language } = useLanguage();
   return (
     <span className="digital-ai-source-links">
+      <Link href={`/digital-ai/signals/${signal.slug}`}>{language === "zh" ? "阅读证据" : "Read evidence"} →</Link>
       {signal.sources.map((source) => (
         <a key={source.sourceId} href={source.url} target="_blank" rel="noreferrer">
           {source.publisher} <span aria-hidden="true">↗</span>
@@ -349,13 +279,6 @@ function SourceLinks({ signal }: { signal: SignalListItem }) {
     </span>
   );
 }
-
-const pathwayNoteZh: Record<string, string> = {
-  land: "并网海上风电可为服务算力基础设施的清洁电力组合作出贡献。",
-  coastal: "靠近电网登陆点的潜在选址路径；当前数据集尚无项目证据。",
-  offshore: "概念性的直接供电路径；在本证据集中并非成熟的海上风电商业模式。",
-  flexible: "可变发电、储能与可转移算力负荷可能构成同一能源系统。下方记录支持各组成部分的背景，并不证明已部署的组合模式。",
-};
 
 function digitalCopy(text: string, language: "en" | "zh"): string {
   if (language === "en") return text;

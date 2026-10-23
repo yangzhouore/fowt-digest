@@ -1,4 +1,5 @@
 import dataset from "../../data/digital-ai/use-cases.json";
+import Link from "next/link";
 import type { DigitalAiSignalWithSources } from "../../data/digital-ai-adapter";
 import styles from "./use-case-card.module.css";
 
@@ -31,6 +32,7 @@ export function UseCaseCard({ id, signals, language, maturityLabel }: {
           {" · "}{label("Record date / period", "记录日期 / 时段")}: {signal.dateLabel}
         </p>
         <a href={source.url} target="_blank" rel="noreferrer">{source.publisher} · {label("Original source", "原始来源")} ↗</a>
+        <p><Link href={`/digital-ai/signals/${signal.slug}`}>{label("Read evidence", "阅读证据")} →</Link></p>
         <p className={styles.meta}>
           {label("Source published", "来源发布日期")}: {source.publishedDate ?? label("Not recorded", "未记录")}
           {" · "}{label("Stored access date", "已存访问日期")}: {source.accessedDate}

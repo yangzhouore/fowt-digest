@@ -53,7 +53,8 @@ test("keyboard selection announces a short title and resets expanded evidence", 
   await more.focus();
   await page.keyboard.press("Enter");
   await expect(card.getByText(/Exact sensor inventories/)).toBeVisible();
-  await expect(card.getByRole("link")).toHaveCount(3);
+  await expect(card.getByRole("link", { name: /Original source/ })).toHaveCount(3);
+  await expect(card.getByRole("link", { name: /^Read evidence/ })).toHaveCount(3);
   await page.locator('[data-impact-id="autonomy"]').click();
   await expect(card.locator("details")).not.toHaveAttribute("open", "");
   await expect(card.getByText(/Robotic inspection does not demonstrate autonomous repair/)).toBeVisible();
@@ -110,4 +111,89 @@ test("unverified context stays qualified and existing power pathways and filters
   await page.getByRole("combobox", { name: /^Maturity/ }).selectOption("pilot_demonstration");
   await page.getByRole("combobox", { name: /^Region/ }).selectOption("Europe");
   expect(await page.locator(".digital-ai-evidence-list > li").count()).toBeGreaterThan(0);
+});
+
+test("internal reading links return to the exact application and preserve source boundaries", async ({ page, request }) => {
+  await page.locator('[data-impact-id="twin"]').click();
+  await page.locator("#digital-ai-use-case").getByRole("link", { name: /^Read evidence/ }).click();
+  await expect(page).toHaveURL(/\/digital-ai\/signals\/subsee-4d-floating-wind-mooring-digital-twin$/);
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("SUBSEE");
+  await expect(page.getByRole("heading", { name: "Stored editorial relevance", exact: true })).toBeVisible();
+  await expect(page.getByText(/not full papers or private project documentation/)).toBeVisible();
+  await expect(page.getByRole("link", { name: /SUBSEE 4D: A digital twin/ })).toHaveAttribute("href", /^https:\/\//);
+  await page.screenshot({ path: "test-results/digital-ai-reader-desktop-en-light.png" });
+  await page.getByRole("link", { name: "Investigate mooring condition", exact: true }).click();
+  await expect(page.locator("#digital-ai-use-case")).toHaveAttribute("data-use-case", "twin");
+  await expect(page.locator('[data-impact-id="twin"]')).toHaveAttribute("aria-pressed", "true");
+  const response = await request.get("/digital-ai/signals/not-a-real-signal");
+  expect(response.status()).toBe(404);
+  await page.locator('[data-impact-id="cable"]').click();
+  await page.locator("#digital-ai-use-case").getByRole("link", { name: /^Read evidence/ }).click();
+  await expect(page.getByText("Stored context · source not rechecked", { exact: true })).toBeVisible();
+  await page.getByRole("link", { name: /Back to all evidence/ }).click();
+  await expect(page.locator("#digital-ai-all-evidence")).toHaveAttribute("open", "");
+  const record = page.locator(".digital-ai-evidence-list > li").first();
+  await record.locator("summary").click();
+  await record.getByRole("link", { name: /^Read evidence/ }).click();
+  await expect(page).toHaveURL(/\/digital-ai\/signals\//);
+});
+
+test("all pathways compare physical routes, procurement and contextual evidence", async ({ page }) => {
+  for (const id of ["land", "coastal", "offshore", "flexible"]) {
+    const button = page.locator(`#pathway-${id}`);
+    await button.focus();
+    await page.keyboard.press("Enter");
+    await expect(button).toBeFocused();
+    await expect(button).toHaveAttribute("aria-pressed", "true");
+    const detail = page.locator("#digital-ai-pathway-selected");
+    await expect(detail.getByText("Possible procurement", { exact: true })).toBeVisible();
+    if (["coastal", "offshore"].includes(id)) {
+      await expect(detail.getByText("No supporting project example recorded in this collection.", { exact: true })).toBeVisible();
+      await expect(detail.getByRole("link")).toHaveCount(0);
+    }
+  }
+  await expect(page.locator("#digital-ai-pathway-selected")).toContainText("Neither establishes a deployed");
+  await page.locator("#digital-ai-pathway-selected").getByRole("link", { name: /^Read supporting context/ }).first().click();
+  await page.getByRole("link", { name: "Flexible compute + energy · Context only", exact: true }).click();
+  await expect(page.locator("#pathway-flexible")).toHaveAttribute("aria-pressed", "true");
+  const comparison = page.locator("summary").filter({ hasText: "Compare all four pathways" });
+  await comparison.focus();
+  await page.keyboard.press("Enter");
+  const table = page.getByRole("table", { name: /Wind-to-compute/ });
+  await expect(table.getByRole("columnheader")).toHaveCount(5);
+  await expect(table.getByRole("rowheader")).toHaveCount(5);
+  await page.getByRole("region", { name: "Pathway comparison table", exact: true }).screenshot({ path: "test-results/digital-ai-pathways-desktop-en-light.png" });
+});
+
+test("reader and bounded comparison work on mobile in Chinese and dark theme", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await page.locator('label[for="theme-dark"]').click();
+  await page.locator("summary").filter({ hasText: "比较全部四条路径" }).click();
+  const region = page.getByRole("region", { name: "路径比较表", exact: true });
+  await region.focus();
+  expect(await region.evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(true);
+  await page.keyboard.press("ArrowRight");
+  await expect.poll(() => region.evaluate((element) => element.scrollLeft)).toBeGreaterThan(0);
+  await region.screenshot({ path: "test-results/digital-ai-pathways-mobile-zh-dark.png" });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.locator("#pathway-land").click();
+  await page.locator("#digital-ai-pathway-selected").getByRole("link", { name: /^阅读背景证据/ }).click();
+  await expect(page.getByRole("heading", { name: "证据范围与局限", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("IEA");
+  // Existing theme radios belong to each page header; this feature does not
+  // introduce a site-wide theme persistence service.
+  await page.locator('label[for="theme-dark"]').click();
+  await expect(page.locator("#theme-dark")).toBeChecked();
+  await page.getByRole("heading", { level: 1 }).scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/digital-ai-reader-mobile-zh-dark.png" });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.getByRole("link", { name: /返回全部证据/ }).click();
+  await expect(page.locator("#digital-ai-all-evidence")).toHaveAttribute("open", "");
+  await expect(page.locator("#digital-ai-all-evidence > summary")).toContainText("浏览全部证据");
+  await page.getByRole("combobox", { name: /^主题/ }).selectOption("digital_twin");
+  await page.getByRole("combobox", { name: /^地区/ }).selectOption("Global");
+  await expect(page.getByText(/没有匹配这些筛选条件的记录/)).toBeVisible();
+  await page.getByRole("button", { name: "清除筛选", exact: true }).click();
+  await expect(page.locator(".digital-ai-evidence-list > li")).toHaveCount(14);
 });

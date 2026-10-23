@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "basis": "illustrative_comparison",
+  "reviewedDate": "2026-10-23",
+  "context": [
+    { "signalId": "iea-ai-energy-supply-data-centres-renewables", "sourceId": "src-iea-energy-ai", "claim": { "en": "IEA distinguishes the physical electricity mix from operators' contractual mix and discusses renewable procurement. This is energy-system context, not evidence of a named FOWT-powered AI facility.", "zh": "IEA 区分实际供电组合与运营商的合同采购组合，并讨论可再生能源采购。这是能源系统背景，不是具体浮式风电供能 AI 设施的证据。" } },
+    { "signalId": "flexiwind-virtual-offshore-wind-farm-control", "sourceId": "src-fraunhofer-flexiwind", "claim": { "en": "FlexiWind describes virtual wind-farm control evaluation. This supports the wind-control component only; it does not establish integrated compute-load or storage operation.", "zh": "FlexiWind 介绍了虚拟风场控制评估，仅支持风电控制环节的背景，不能证明已实现算力负荷或储能协同运行。" } }
+  ],
+  "pathways": [
+    {
+      "id": "land",
+      "title": { "en": "Power AI on land", "zh": "为陆上 AI 供能" },
+      "coverage": { "en": "System context", "zh": "系统背景" },
+      "flow": [{ "en": "Offshore wind", "zh": "海上风电" }, { "en": "Electricity grid", "zh": "电网" }, { "en": "Land-based compute", "zh": "陆上算力设施" }],
+      "location": { "en": "Land-based data centre connected to a power system.", "zh": "接入电力系统的陆上数据中心。" },
+      "procurement": { "en": "Possible model: a retailer or power purchase agreement (PPA, an electricity supply contract). A renewable contract and the local physical supply mix are different measures.", "zh": "可能模式：售电商供电或购电协议（PPA，即电力采购合同）。可再生能源合同与本地实际供电组合属于不同衡量口径。" },
+      "continuity": { "en": "What grid capacity, supply continuity and backup arrangements would the workload require?", "zh": "该工作负荷需要哪些电网容量、持续供电与备用安排？" },
+      "checks": { "en": "Check the connection point, procurement terms, delivery periods, network capacity, fibre links and cooling design.", "zh": "核查接入点、采购条款、供电时段、电网容量、光纤连接与冷却设计。" },
+      "boundary": { "en": "The collection has renewable/grid supply context, not a named FOWT-to-AI supply contract or proof of continuous wind-only supply.", "zh": "资料集提供可再生能源与电网供电背景，未记录具体浮式风电到 AI 的供电合同，也未证明可持续仅靠风电供能。" },
+      "signalIds": ["iea-ai-energy-supply-data-centres-renewables"]
+    },
+    {
+      "id": "coastal",
+      "title": { "en": "Co-locate compute", "zh": "邻近布局算力设施" },
+      "coverage": { "en": "No project example", "zh": "暂无项目案例" },
+      "flow": [{ "en": "Offshore wind", "zh": "海上风电" }, { "en": "Coastal grid / energy hub", "zh": "沿海电网 / 能源枢纽" }, { "en": "Nearby compute", "zh": "邻近算力设施" }],
+      "location": { "en": "Illustrative onshore compute site near an energy landing point.", "zh": "示意：靠近能源登陆点的陆上算力场址。" },
+      "procurement": { "en": "Specify a grid-supply contract or a separately designed private connection. Proximity alone does not define the contract or ownership boundary.", "zh": "需明确电网供电合同或另行设计的专线连接；地理邻近本身不能确定合同与资产边界。" },
+      "continuity": { "en": "Would this location have sufficient network capacity and a defined plan for low-wind periods?", "zh": "该位置是否具备足够的电网容量，并明确了低风时段供能方案？" },
+      "checks": { "en": "Check land, planning permissions, grid access, fibre, cooling and the actual electrical route before treating proximity as an advantage.", "zh": "核查土地、规划许可、电网接入、光纤、冷却与实际电气路径，再判断邻近布局是否具有优势。" },
+      "boundary": { "en": "No supporting project example is recorded in this collection. Near a cable landfall does not establish a dedicated supply arrangement.", "zh": "本资料集未记录支持项目案例；邻近海缆登陆点不能证明存在专用供电安排。" },
+      "signalIds": []
+    },
+    {
+      "id": "offshore",
+      "title": { "en": "Offshore compute", "zh": "海上算力设施" },
+      "coverage": { "en": "No project example", "zh": "暂无项目案例" },
+      "flow": [{ "en": "Offshore wind", "zh": "海上风电" }, { "en": "Proposed direct connection", "zh": "拟议直接连接" }, { "en": "Offshore compute", "zh": "海上算力设施" }],
+      "location": { "en": "Illustrative compute equipment located offshore; no specific platform design is assumed.", "zh": "示意：算力设备布置于海上，不预设具体平台设计。" },
+      "procurement": { "en": "Define generation ownership, electricity sales, cable ownership and any grid fallback. No contract is documented here.", "zh": "需明确发电资产归属、电力销售、海缆归属与备用电网方案；此处未记录合同。" },
+      "continuity": { "en": "How would the workload operate during low wind, turbine outages or electrical maintenance?", "zh": "低风、风机停机或电气检修时，工作负荷如何运行？" },
+      "checks": { "en": "Resolve offshore access, repair/replacement, marine permissions, communications, cooling and electrical protection before claiming feasibility.", "zh": "在论证可行性前，需解决海上通达、维修更换、海域许可、通信、冷却与电气保护问题。" },
+      "boundary": { "en": "A conceptual direct-power pathway, not a mature offshore-wind business model in this evidence set. No supporting project example is recorded in this collection.", "zh": "在本证据集中，这是概念性的直接供电路径，不能视为成熟海上风电商业模式；本资料集未记录支持项目案例。" },
+      "signalIds": []
+    },
+    {
+      "id": "flexible",
+      "title": { "en": "Flexible compute + energy", "zh": "灵活算力与能源" },
+      "coverage": { "en": "Component context", "zh": "环节背景" },
+      "flow": [{ "en": "Offshore wind", "zh": "海上风电" }, { "en": "Grid + optional storage", "zh": "电网与可选储能" }, { "en": "Shiftable compute load", "zh": "可转移算力负荷" }],
+      "location": { "en": "A workload-scheduling option that could overlap with an onshore siting choice.", "zh": "一种工作负荷调度选项，可与陆上选址方案重叠。" },
+      "procurement": { "en": "Specify electricity procurement and any flexibility-service agreement separately. No revenue stream or market eligibility is assumed.", "zh": "需分别明确电力采购与可能的灵活性服务协议，不预设收入来源或市场准入资格。" },
+      "continuity": { "en": "Which tasks can shift in time, within what deadlines, and what must run continuously?", "zh": "哪些任务可在多大期限内转移运行时间，哪些任务必须持续运行？" },
+      "checks": { "en": "Check workload deadlines, user service commitments, control authority and any storage duration. Do not assume all AI work is interruptible.", "zh": "核查任务期限、用户服务承诺、控制权限与储能时长，不能假设所有 AI 工作均可中断。" },
+      "boundary": { "en": "IEA supplies energy-system context and FlexiWind supplies wind-control context. Neither establishes a deployed FOWT + storage + flexible-compute system.", "zh": "IEA 提供能源系统背景，FlexiWind 提供风电控制背景；两者均不能证明已部署浮式风电、储能与灵活算力一体化系统。" },
+      "signalIds": ["iea-ai-energy-supply-data-centres-renewables", "flexiwind-virtual-offshore-wind-farm-control"]
+    }
+  ]
+}

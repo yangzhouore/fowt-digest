@@ -1,0 +1,34 @@
+.intro { max-width: 760px; font: 0.9rem/1.65 ui-sans-serif, system-ui, sans-serif; color: var(--muted); }
+.detail.detail { display: block; min-width: 0; font: 0.88rem/1.6 ui-sans-serif, system-ui, sans-serif; overflow-wrap: anywhere; }
+.detail h3 { margin: 0 0 18px; font-size: 1.35rem; }
+.detail h4 { margin-bottom: 8px; }
+.kicker { color: var(--accent); font-size: 0.75rem; font-weight: 700; }
+.flow { display: flex; align-items: center; padding: 0; margin: 12px 0 24px; list-style: none; }
+.flow li { display: flex; align-items: center; flex: 1; min-width: 0; gap: 12px; }
+.flow strong { flex: 1; border: 1px solid var(--border); padding: 14px; text-align: center; }
+.flow span { margin-right: 12px; color: var(--accent); }
+.facts { display: grid; gap: 14px; }
+.facts > div { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 18px; }
+.facts dt { font-weight: 600; color: var(--accent); }
+.facts dd { margin: 0; }
+.meta { color: var(--muted); font-size: 0.76rem; line-height: 1.6; }
+.evidence { margin-top: 22px; border-top: 1px solid var(--border); padding-top: 10px; }
+.evidence li { margin: 16px 0; }
+.evidence a { color: var(--accent); text-underline-offset: 3px; }
+.comparison { margin-top: 24px; font: 0.85rem/1.6 ui-sans-serif, system-ui, sans-serif; }
+.comparison summary { color: var(--accent); font-weight: 700; cursor: pointer; }
+.tableRegion { max-width: 100%; overflow-x: auto; border: 1px solid var(--border); }
+.tableRegion table { width: 100%; min-width: 940px; table-layout: fixed; border-collapse: collapse; }
+.tableRegion caption { text-align: left; padding: 14px; color: var(--muted); }
+.tableRegion :is(th, td) { padding: 14px; border: 1px solid var(--border); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tableRegion th { background: var(--paper); }
+.tableRegion th:first-child { width: 140px; position: sticky; left: 0; z-index: 1; }
+.comparison :is(summary, .tableRegion):focus-visible, .detail a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.announcement { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 600px) {
+  .facts > div { grid-template-columns: 1fr; gap: 5px; }
+  .flow { flex-direction: column; align-items: stretch; }
+  .flow li { flex-direction: column; gap: 4px; }
+  .flow strong { width: 100%; box-sizing: border-box; }
+  .flow span { margin: 0; transform: rotate(90deg); }
+}

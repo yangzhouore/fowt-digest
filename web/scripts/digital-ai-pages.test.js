@@ -3,6 +3,10 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const test = require("node:test");
+const vm = require("node:vm");
+const ts = require("typescript");
+const React = require("react");
+const { renderToStaticMarkup } = require("react-dom/server");
 
 const dataset = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "data", "digital-ai", "signals.json"), "utf8"),
@@ -11,6 +15,102 @@ const dataset = JSON.parse(
 const useCaseDataset = JSON.parse(fs.readFileSync(
   path.join(__dirname, "..", "data", "digital-ai", "use-cases.json"), "utf8",
 ));
+const pathways = require("../data/digital-ai/pathways.json");
+const readerNotes = require("../data/digital-ai/reader-notes.json");
+
+// Load the actual static route/reader with framework shells substituted only.
+function readerLoader(language = "en") {
+  const cache = new Map();
+  function load(file) {
+    if (file.endsWith(".json")) return JSON.parse(fs.readFileSync(file, "utf8"));
+    if (file.endsWith(".css")) return {};
+    if (file.endsWith("/i18n/language-context.tsx")) return { useLanguage: () => ({ language }) };
+    if (/\/site-(header|footer)\.tsx$/.test(file)) return { SiteHeader: () => null, SiteFooter: () => null };
+    if (cache.has(file)) return cache.get(file);
+    const context = { exports: {}, require: (name) => {
+      if (name === "next/link") return function TestLink(props) { return React.createElement("a", props, props.children); };
+      if (name === "next/navigation") return { notFound: () => { throw Error("not found"); } };
+      if (!name.startsWith(".")) return require(name);
+      let target = path.resolve(path.dirname(file), name).replaceAll("\\", "/");
+      if (!path.extname(target)) target = [".ts", ".tsx", ".json"].map((ext) => target + ext).find(fs.existsSync);
+      if (!target) throw Error(`Unresolved import ${name}`);
+      return load(target);
+    } };
+    cache.set(file, context.exports);
+    vm.runInNewContext(ts.transpileModule(fs.readFileSync(file, "utf8"), {
+      compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true },
+    }).outputText, context, { filename: file });
+    return context.exports;
+  }
+  return (relative) => load(path.resolve(__dirname, "..", relative).replaceAll("\\", "/"));
+}
+
+test("all existing Signals have static reader routes and unknown slugs are rejected", async () => {
+  const route = readerLoader()("app/digital-ai/signals/[slug]/page.tsx");
+  assert.equal(route.dynamicParams, false);
+  assert.deepEqual(Array.from(route.generateStaticParams(), (item) => item.slug).sort(), dataset.signals.map((item) => item.slug).sort());
+  for (const signal of dataset.signals) {
+    const props = { params: Promise.resolve({ slug: signal.slug }) };
+    assert.equal((await route.generateMetadata(props)).title, signal.title);
+    const html = renderToStaticMarkup(await route.default(props));
+    assert.ok(html.includes('id="signal-title"'));
+    for (const id of signal.sourceIds) assert.ok(html.includes(dataset.sources.find((item) => item.sourceId === id).url));
+  }
+  await assert.rejects(() => route.default({ params: Promise.resolve({ slug: "unknown-signal" }) }), /not found/);
+});
+
+test("reader preserves record content and separates dates, editorial relevance and public-source boundaries in both languages", () => {
+  const original = JSON.stringify(dataset);
+  for (const language of ["en", "zh"]) {
+    const { SignalReader } = readerLoader(language)("app/digital-ai/signal-reader.tsx");
+    for (const signal of dataset.signals) {
+      const sources = dataset.sources.filter((source) => signal.sourceIds.includes(source.sourceId));
+      const html = renderToStaticMarkup(React.createElement(SignalReader, { signal: { ...signal, sources } }));
+      const textMarkup = renderToStaticMarkup(React.createElement("span", null, signal.shortDescription)).slice(6, -7);
+      assert.ok(html.includes(textMarkup), `${signal.id}: changed original summary`);
+      assert.ok(html.includes(language === "zh" ? "已存编辑关联说明" : "Stored editorial relevance"));
+      assert.ok(html.includes(language === "zh" ? "不提供论文全文" : "not full papers"));
+      assert.ok(html.includes(language === "zh" ? "已存访问日期" : "Stored access date"));
+      assert.ok(html.includes(language === "zh" ? "记录日期 / 时段" : "Record date / period"));
+      const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+      assert.equal(new Set(ids).size, ids.length);
+    }
+  }
+  assert.equal(JSON.stringify(dataset), original);
+});
+
+test("reader notes cover all 14 Signals without changing existing review provenance", () => {
+  const notes = [...useCaseDataset.evidence, ...readerNotes.notes];
+  assert.equal(new Set(notes.map((item) => item.signalId)).size, 14);
+  assert.equal(notes.length, 14);
+  for (const item of notes) {
+    const signal = dataset.signals.find((record) => record.id === item.signalId);
+    assert.ok(signal.sourceIds.includes(item.sourceId));
+    assert.ok(item.claim.en && item.claim.zh);
+  }
+});
+
+test("four pathways use bilingual design questions and collection-specific evidence coverage", () => {
+  assert.equal(pathways.basis, "illustrative_comparison");
+  assert.deepEqual(pathways.pathways.map((item) => item.id), ["land", "coastal", "offshore", "flexible"]);
+  for (const item of pathways.pathways) {
+    assert.equal(item.maturity, undefined);
+    for (const field of ["title", "coverage", "location", "procurement", "continuity", "checks", "boundary"]) {
+      assert.ok(item[field].en.trim());
+      assert.match(item[field].zh, /[\u3400-\u9fff]/);
+    }
+    assert.equal(item.flow.length, 3);
+    for (const step of item.flow) assert.ok(step.en && step.zh);
+    for (const id of item.signalIds) {
+      const context = pathways.context.find((entry) => entry.signalId === id);
+      const signal = dataset.signals.find((entry) => entry.id === id);
+      assert.ok(context && signal && signal.sourceIds.includes(context.sourceId));
+    }
+  }
+  assert.deepEqual(pathways.pathways.filter((item) => !item.signalIds.length).map((item) => item.id), ["coastal", "offshore"]);
+  assert.match(pathways.pathways.find((item) => item.id === "flexible").boundary.en, /Neither establishes a deployed/);
+  assert.match(pathways.pathways.find((item) => item.id === "land").procurement.en, /different measures/);
+});
 
 test("practical cards cover all ten applications with complete bilingual workflows", () => {
   assert.equal(useCaseDataset.workflowBasis, "illustrative");

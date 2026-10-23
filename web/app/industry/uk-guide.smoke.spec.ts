@@ -9,7 +9,7 @@ const test = base.extend<{ errors: void }>({ errors: [async ({ page }, use) => {
 }, { auto: true }] });
 
 test("bottom-up chain keeps coordination alongside delivery and opens by keyboard", async ({ page }) => {
-  await page.goto("/industry");
+  await page.goto("/industry/uk");
   await expect(page.getByRole("heading", { level: 1, name: "From materials to megawatt-hours." })).toBeVisible();
   await page.screenshot({ path: "test-results/uk-industry-hero-desktop.png" });
   await expect(page.getByRole("heading", { name: "Permissions and coordination · alongside", exact: true })).toBeVisible();
@@ -25,7 +25,7 @@ test("bottom-up chain keeps coordination alongside delivery and opens by keyboar
 });
 
 test("electricity, OFTO and CfD explanations retain the important boundaries and dates", async ({ page }) => {
-  await page.goto("/industry#uk-power");
+  await page.goto("/industry/uk#uk-power");
   const power = page.locator("#uk-topic-06"); await power.locator(":scope > summary").click();
   await expect(power.locator(".uk-en tbody tr")).toHaveCount(12);
   await expect(power.getByText(/some smaller farms connect to distribution/)).toBeVisible();
@@ -41,7 +41,7 @@ test("electricity, OFTO and CfD explanations retain the important boundaries and
 });
 
 test("lifecycle and organisations preserve decision fields and existing project navigation", async ({ page }) => {
-  await page.goto("/industry#uk-develop");
+  await page.goto("/industry/uk#uk-develop");
   const lifecycle = page.locator("#uk-topic-03"); await lifecycle.locator(":scope > summary").click();
   await expect(lifecycle.locator(".uk-en tbody tr")).toHaveCount(17);
   await expect(lifecycle.getByText(/investor|Sponsor\/project-company investment governance/).first()).toBeVisible();
@@ -61,7 +61,7 @@ test("lifecycle and organisations preserve decision fields and existing project 
 });
 
 test("Chinese mobile guide stays readable in dark theme with isolated table scrolling", async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 }); await page.goto("/industry");
+  await page.setViewportSize({ width: 390, height: 844 }); await page.goto("/industry/uk");
   await page.getByRole("button", { name: "中文", exact: true }).click();
   await page.locator('label[for="theme-dark"]').click();
   await expect(page.getByRole("heading", { level: 1, name: "从材料到兆瓦时。" })).toBeVisible();
@@ -81,7 +81,7 @@ test("Chinese mobile guide stays readable in dark theme with isolated table scro
 });
 
 test("machine schematic has text alternatives and readable mobile scrolling", async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 }); await page.goto("/industry#uk-machine");
+  await page.setViewportSize({ width: 390, height: 844 }); await page.goto("/industry/uk#uk-machine");
   const diagram = page.locator(".uk-machine");
   await expect(diagram.getByRole("img", { name: /Turbine, floater, mooring and cable interfaces/ })).toBeVisible();
   await expect(diagram.getByText(/Moorings carry station-keeping loads/)).toBeVisible();

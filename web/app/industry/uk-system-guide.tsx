@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 import guideData from "../../data/industry/uk-system-guide.json";
 import { assertUKGuide, type GuideBlock, type GuideTopic } from "../../data/industry/uk-guide-validator";
@@ -165,7 +166,7 @@ export function UKSystemGuide() {
       <p className="uk-lead"><Copy en="A floating wind farm is a machine, a development project and an electricity business. See how the UK system fits together—and who is responsible at each interface." zh="浮式风电场既是一套机器，也是一个开发项目和电力业务。了解英国体系如何衔接，以及每个接口由谁负责。" /></p>
       <div className="uk-hero-bottom"><p><Copy en="UK supply chain · GB electricity system and market" zh="英国供应链 · GB 电力系统与市场" /><br /><Copy en="Evidence reviewed" zh="证据复核" /> <time dateTime={guide.reviewedOn}>{guide.reviewedOn}</time></p><a href="#uk-chain"><Copy en="Start with the complete chain" zh="从完整产业链开始" /> ↓</a></div>
     </header>
-    <nav className="uk-chapter-nav" aria-label="UK floating wind guide"><a href="#uk-chain"><Copy en="The complete chain" zh="完整产业链" /></a>{chapters.map((chapter) => <a href={`#uk-${chapter.id}`} key={chapter.id}><span>{chapter.number}</span> <Copy en={chapter.en} zh={chapter.zh} /></a>)}<a href="#industry-catalogue"><Copy en="Company reference" zh="企业参考目录" /></a></nav>
+    <nav className="uk-chapter-nav" aria-label="UK floating wind guide"><a href="#uk-chain"><Copy en="The complete chain" zh="完整产业链" /></a>{chapters.map((chapter) => <a href={`#uk-${chapter.id}`} key={chapter.id}><span>{chapter.number}</span> <Copy en={chapter.en} zh={chapter.zh} /></a>)}<Link href="/industry#industry-catalogue"><Copy en="Company reference" zh="企业参考目录" /></Link></nav>
     <div className="uk-lenses">{[
       ["01", "Equipment", "设备", "Who supplies what?", "谁交付什么？"],
       ["02", "Development", "开发", "What must be ready?", "哪些条件须就绪？"],

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { UKSystemGuide } from "./uk-system-guide";
+import { CountryOverview } from "./country-overview";
+import { CountryNavigation } from "./country-navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "../site-footer";
@@ -17,7 +18,7 @@ import { industryCompanyAnchor } from "../../data/context-navigation";
 export const metadata: Metadata = {
   title: "Industry Map",
   description:
-    "A source-backed guide to the UK floating offshore wind supply chain, project development, permissions, electricity and money, with an international company reference map.",
+    "Compare the UK, Germany, Norway and China floating wind supply chains, project development, permissions, electricity and money, with a sourced international company directory.",
 };
 
 const industryMap = getIndustryMap();
@@ -89,12 +90,13 @@ export default function IndustryPage() {
     <main className="industry-page">
       <SiteHeader />
 
-      <UKSystemGuide />
+      <CountryNavigation />
+      <CountryOverview />
 
       <section className="industry-hero" id="industry-catalogue" aria-labelledby="industry-heading">
         <p className="eyebrow"><LocalizedCopy en="International company reference" zh="国际企业参考目录" /></p>
         <h2 id="industry-heading"><LocalizedCopy en="Explore the delivery ecosystem" zh="探索交付生态" /></h2>
-        <p><LocalizedCopy en="This existing international catalogue complements the UK guide. A listing is not proof of UK manufacturing, current procurement, or a contract on a particular project. Expand a company for its recorded project roles and evidence." zh="此现有国际目录补充英国指南。收录不代表英国制造、当前采购或某项目合同。展开企业可查看记录的项目角色与证据。" /></p>
+        <p><LocalizedCopy en="This international catalogue complements the four country guides. A listing does not prove local manufacturing, current procurement or a contract on a particular project. Expand a company for its recorded project roles and evidence." zh="此国际目录补充四国指南。收录不代表本地制造、当前采购或某项目合同。展开企业可查看记录的项目角色与证据。" /></p>
         <dl className="industry-stats" aria-label="International catalogue coverage">
           <div><dt><LocalizedCopy en="Companies in this catalogue" zh="目录内企业" /></dt><dd>{industryCompanyCount}</dd></div>
           <div><dt><LocalizedCopy en="Catalogue stages" zh="目录阶段" /></dt><dd>{industryMap.length}</dd></div>
@@ -185,7 +187,7 @@ export default function IndustryPage() {
 
       <section className="industry-world-map" aria-labelledby="industry-world-map-heading">
         <h2 id="industry-world-map-heading"><LocalizedCopy en="Further geographic reference" zh="更多地理参考" /></h2>
-        <p><LocalizedCopy en="The external TGS4C map covers global offshore wind. It is separate from the UK explanation and its dated evidence." zh="外部 TGS4C 地图覆盖全球海上风电，与英国说明及其有日期的证据分开。" /></p>
+        <p><LocalizedCopy en="The external TGS4C map covers global offshore wind. It is separate from these country investigations and their dated evidence." zh="外部 TGS4C 地图覆盖全球海上风电，与各国调查及其有日期的证据分开。" /></p>
         <Link href="https://map.tgs4c.com/offshorewind/"><LocalizedCopy en="Open the global TGS4C map" zh="打开 TGS4C 全球地图" /></Link>
       </section>
 

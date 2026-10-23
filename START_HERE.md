@@ -7,6 +7,7 @@ Use this file as the resume entry point for a new Codex session.
 - Current stable branch: `main`
 - Latest completed product milestone: International Industry Guides (PR #44), merged into main at `da48422`
 - Next product MVP: not yet scoped or accepted; define its objectives, design and acceptance criteria before implementation
+- Current feature work: Digital & AI practical use-case cards; design accepted on 2026-10-23, local implementation validated, awaiting PR review/manual merge.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
@@ -30,6 +31,13 @@ Do not read historical docs under `docs/archive/` by default. Open archived docs
 only when historical context is specifically required.
 
 ## Reference Docs
+
+Current Digital & AI feature:
+
+- Accepted scope and design: `web/app/digital-ai/design/USE_CASE_CARDS_MVP.md`
+- Source review and validation: `web/app/digital-ai/design/USE_CASE_CARDS_IMPLEMENTATION.md`
+- Ten bilingual practical cards; original 14 Signals unchanged. Internal evidence
+  reader and compute-pathway comparisons remain deferred.
 
 Latest merged product milestone (PR #44):
 

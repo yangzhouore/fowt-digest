@@ -1,6 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
+import { UseCaseCard, useCases } from "./use-case-card";
+import styles from "./use-case-card.module.css";
 import type {
   DigitalAiMaturity,
   DigitalAiSignalWithSources,
@@ -28,9 +30,6 @@ type ImpactArea = {
   stage: string;
   label: string;
   asset: string;
-  detail: string;
-  outcome: string;
-  signalIds: string[];
 };
 
 const impactAreas: ImpactArea[] = [
@@ -39,107 +38,60 @@ const impactAreas: ImpactArea[] = [
     stage: "Develop",
     label: "AI Forecasting",
     asset: "Site + metocean",
-    detail: "Weather + resource data → forecast → siting and production decisions",
-    outcome: "Better Forecasting",
-    signalIds: [
-      "airu-wrf-ai-offshore-wind-forecasting-grid",
-      "ecmwf-dtwo-offshore-wind-modelling-modules",
-    ],
   },
   {
     id: "engineering",
     stage: "Design",
     label: "AI Engineering",
     asset: "Turbine + floater",
-    detail: "Engineering models → surrogate models → faster design exploration",
-    outcome: "Faster Design",
-    signalIds: ["ace-fwicc-sciml-floating-wind-system"],
   },
   {
     id: "vision",
     stage: "Manufacture",
     label: "AI Vision",
     asset: "Fabrication + quality",
-    detail: "Images + production data → defect detection → quality assurance",
-    outcome: "Earlier Detection",
-    signalIds: [],
   },
   {
     id: "planning",
     stage: "Install",
     label: "AI Planning",
     asset: "Port + vessels",
-    detail: "Weather + vessel + logistics data → installation planning",
-    outcome: "Safer Installation",
-    signalIds: [],
   },
   {
     id: "control",
     stage: "Operate",
     label: "Smart Control",
     asset: "Turbine + wind farm",
-    detail: "Live conditions → control decisions → loads, wake and performance",
-    outcome: "Smarter Operations",
-    signalIds: ["flexiwind-virtual-offshore-wind-farm-control"],
   },
   {
     id: "twin",
     stage: "Operate",
     label: "Digital Twin",
     asset: "Platform + moorings",
-    detail: "Simulation + live data → prediction → structural health and fatigue insight",
-    outcome: "Earlier Detection",
-    signalIds: [
-      "digifloat-windfloat-atlantic-digital-twin",
-      "dionysos-floating-wind-hybrid-monitoring",
-      "subsee-4d-floating-wind-mooring-digital-twin",
-    ],
   },
   {
     id: "predictive",
     stage: "Operate",
     label: "Predictive AI",
     asset: "Inspection + O&M",
-    detail: "Condition data → anomaly prediction → maintenance decisions",
-    outcome: "Earlier Detection",
-    signalIds: [
-      "nextwind-california-offshore-wind-digital-twin",
-      "eproa-ai-digital-platform-floating-wind-om",
-    ],
   },
   {
     id: "autonomy",
     stage: "Operate",
     label: "Autonomy",
     asset: "Drone + robot",
-    detail: "Remote sensing + computer vision → offshore inspection",
-    outcome: "Safer Inspection",
-    signalIds: [
-      "atlantis-autonomous-robots-windfloat-atlantic",
-      "saturnx-autonomous-drone-offshore-wind-inspection",
-      "umass-lowell-ai-blade-monitoring-offshore-wind",
-    ],
   },
   {
     id: "cable",
     stage: "Connect",
     label: "Smart Monitoring",
     asset: "Cable + electrical",
-    detail: "Inspection data → anomaly detection → cable condition insight",
-    outcome: "Earlier Detection",
-    signalIds: ["eproa-ai-digital-platform-floating-wind-om"],
   },
   {
     id: "grid",
     stage: "Connect",
     label: "AI Forecasting",
     asset: "Offshore + onshore grid",
-    detail: "Generation forecasts → dispatch and flexible grid operation",
-    outcome: "Flexible Power",
-    signalIds: [
-      "airu-wrf-ai-offshore-wind-forecasting-grid",
-      "flexiwind-virtual-offshore-wind-farm-control",
-    ],
   },
 ];
 
@@ -227,32 +179,38 @@ export function DigitalAiExperience({
           </div>
         </header>
 
-        <div className="digital-ai-lifecycle" aria-label="Offshore wind lifecycle from development to grid connection">
+        <p className={styles.announcement} role="status" aria-live="polite" aria-atomic="true">
+          {useCases.find((item) => item.id === selectedImpactId)!.title[language]}
+        </p>
+        <div className={`digital-ai-lifecycle ${styles.lifecycle}`} aria-label={language === "zh" ? "\u6d77\u4e0a\u98ce\u7535\u5e94\u7528\u9886\u57df" : "Offshore wind application areas"}>
           {lifecycleStages.map((stage, stageIndex) => (
-            <div className="digital-ai-stage" key={stage}>
-              <div className="digital-ai-stage-marker" aria-hidden="true">
-                <span>{String(stageIndex + 1).padStart(2, "0")}</span>
+            <Fragment key={stage}>
+              <div className="digital-ai-stage" data-stage={stage}>
+                <div className="digital-ai-stage-marker" aria-hidden="true">
+                  <span>{String(stageIndex + 1).padStart(2, "0")}</span>
+                </div>
+                <h3>{digitalCopy(stage, language)}</h3>
+                <div className="digital-ai-impact-buttons">
+                  {impactAreas.filter((area) => area.stage === stage).map((area) => (
+                    <button
+                      className={selectedImpact.id === area.id ? "is-active" : ""}
+                      key={area.id}
+                      type="button"
+                      aria-pressed={selectedImpact.id === area.id}
+                      aria-controls="digital-ai-use-case"
+                      data-impact-id={area.id}
+                      onClick={() => setSelectedImpactId(area.id)}
+                    >
+                      <strong>{digitalCopy(area.label, language)}</strong>
+                      <span>{digitalCopy(area.asset, language)}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
-              <h3>{digitalCopy(stage, language)}</h3>
-              <div className="digital-ai-impact-buttons">
-                {impactAreas.filter((area) => area.stage === stage).map((area) => (
-                  <button
-                    className={selectedImpact.id === area.id ? "is-active" : ""}
-                    key={area.id}
-                    type="button"
-                    aria-pressed={selectedImpact.id === area.id}
-                    onClick={() => setSelectedImpactId(area.id)}
-                  >
-                    <strong>{digitalCopy(area.label, language)}</strong>
-                    <span>{digitalCopy(area.asset, language)}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
+              {selectedImpact.stage === stage ? <UseCaseCard id={selectedImpact.id} signals={signalById} language={language} maturityLabel={digitalCopy} /> : null}
+            </Fragment>
           ))}
         </div>
-
-        <ImpactDetail area={selectedImpact} signalById={signalById} language={language} />
       </section>
 
       <section className="digital-ai-story digital-ai-power-story" aria-labelledby="wind-to-ai-heading">
@@ -357,23 +315,6 @@ export function DigitalAiExperience({
   );
 }
 
-function ImpactDetail({ area, signalById, language }: { area: ImpactArea; signalById: Map<string, SignalListItem>; language: "en" | "zh" }) {
-  return (
-    <div className="digital-ai-impact-detail" aria-live="polite">
-      <div>
-        <p className="eyebrow">{language === "zh" ? "应用领域" : "Application area"}</p>
-        <h3>{digitalCopy(area.label, language)}</h3>
-        <p>{language === "zh" ? impactDetailZh[area.id] : area.detail}</p>
-      </div>
-      <strong className="digital-ai-outcome">{digitalCopy(area.outcome, language)}</strong>
-      <div>
-        <p className="eyebrow">{language === "zh" ? "现实证据" : "Real-world evidence"}</p>
-        <EvidenceLinks ids={area.signalIds} signalById={signalById} emptyLabel={language === "zh" ? "证据仍在形成" : "Evidence emerging"} />
-      </div>
-    </div>
-  );
-}
-
 function EvidenceLinks({ ids, signalById, emptyLabel }: {
   ids: string[];
   signalById: Map<string, SignalListItem>;
@@ -408,14 +349,6 @@ function SourceLinks({ signal }: { signal: SignalListItem }) {
     </span>
   );
 }
-
-const impactDetailZh: Record<string, string> = {
-  forecasting: "天气与资源数据 → 预测 → 场址与发电决策", engineering: "工程模型 → 代理模型 → 更快探索设计空间",
-  vision: "图像与生产数据 → 缺陷识别 → 质量保证", planning: "天气、船舶与物流数据 → 安装规划",
-  control: "实时工况 → 控制决策 → 载荷、尾流与性能", twin: "仿真与实时数据 → 预测 → 结构健康与疲劳分析",
-  predictive: "状态数据 → 异常预测 → 维护决策", autonomy: "遥感与计算机视觉 → 海上检测",
-  cable: "检测数据 → 异常识别 → 海缆状态分析", grid: "发电预测 → 调度与灵活电网运行",
-};
 
 const pathwayNoteZh: Record<string, string> = {
   land: "并网海上风电可为服务算力基础设施的清洁电力组合作出贡献。",

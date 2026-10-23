@@ -7,9 +7,26 @@ Last updated: 2026-10-23. Product baseline: merged main `da48422`.
 - Current stable branch: `main`
 - Latest completed product milestone: International Industry Guides (PR #44), merged into main at `da48422`
 - Next product MVP: not yet scoped or accepted
+- Current feature work: Digital & AI practical use-case cards; design accepted on 2026-10-23, local implementation validated, awaiting PR review/manual merge.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
+
+## Current Feature: Digital & AI Practical Cards
+
+- Branch: `feat/digital-ai-use-case-cards`, based on main `963e891`.
+- Accepted design: `web/app/digital-ai/design/USE_CASE_CARDS_MVP.md`.
+- Source review and validation: `web/app/digital-ai/design/USE_CASE_CARDS_IMPLEMENTATION.md`.
+- Ten bilingual application cards explain problem, inputs, method, output, human
+  decision, evidence and limitations. Illustrative workflows and documented
+  examples are labelled separately. Two areas retain explicit evidence gaps;
+  inaccessible EPROA evidence is labelled as stored context, not freshly verified.
+- Local acceptance: 210 Python tests, data validation, 151 data tests, lint,
+  431-page build and 14 browser journeys passed. The original 14 Signals,
+  authoritative datasets and other product sections are unchanged.
+- PR final-head CI and preview are recorded in the PR description. Leave the PR
+  open for manual merge. The internal evidence reader and pathway-comparison
+  recommendations have not been implemented.
 
 ## Latest Completed Product Milestone
 

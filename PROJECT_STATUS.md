@@ -1,17 +1,45 @@
 # Project Status
 
-Last updated: 2026-10-22 (current milestone only; historical release baseline below is unchanged)
+Last updated: 2026-10-23. Product baseline: merged main `da48422`.
 
 ## Current State
 
 - Current stable branch: `main`
-- Active milestone: Connected Project Context MVP; implemented and locally validated, pending manual merge
-- Latest merged work: Projects Public Evidence & Review History MVP (PR #41), merged into main at `e88d325`
+- Latest completed product milestone: International Industry Guides (PR #44), merged into main at `da48422`
+- Next product MVP: not yet scoped or accepted
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
 
-## Accepted Current MVP
+## Latest Completed Product Milestone
+
+- International Industry Guides: [PR #44](https://github.com/yangzhouore/fowt-digest/pull/44), merged at `da48422`.
+- Objectives, design/self-review, implementation and acceptance:
+  `web/app/industry/design/INTERNATIONAL_INDUSTRY_GUIDES.md`.
+- `/industry` provides four country entry points, a sourced responsibility
+  comparison and the unchanged international company directory.
+- `/industry/uk` retains the UK guide delivered in
+  [PR #43](https://github.com/yangzhouore/fowt-digest/pull/43), merged at `84c8e69`.
+  UK design/evidence: `web/app/industry/design/UK_FOWT_SYSTEM_DESIGN.md` and
+  `web/app/industry/design/UK_FOWT_SYSTEM_IMPLEMENTATION.md`.
+- `/industry/germany`, `/industry/norway` and `/industry/china` each use the
+  22-topic structure: nine chain levels, 17 lifecycle stages, 12 grouped power
+  steps, 15 investigation questions and 16 organisation-role cards.
+- New-country coverage has 64 primary/public technical source records. This is
+  representative dated coverage, not a complete national supplier register or
+  real-time project tracker. The UK guide retains its independent source dataset.
+- Distinguish industrial delivery, development, permissions and electricity/money;
+  distinguish capability, R&D, announced plans and documented project scopes.
+- The original 47-company registry, canonical anchors, Project backlinks, paper
+  records and authoritative Projects data were preserved.
+- Final implementation head `db8cae9` passed Pipeline validation, Website
+  validation and Browser smoke in
+  [PR CI run #73](https://github.com/yangzhouore/fowt-digest/actions/runs/39927826616).
+- The next product implementation needs a new feature branch and an accepted
+  objective/design/validation scope; no new product MVP is implied by this
+  handover/CI maintenance task.
+
+## Merged Connected Project Context MVP
 
 - Objectives and acceptance: `docs/CONNECTED_PROJECT_CONTEXT_MVP.md`.
 - Design self-review: `docs/CONNECTED_PROJECT_CONTEXT_DESIGN_REVIEW.md`.
@@ -23,7 +51,7 @@ Last updated: 2026-10-22 (current milestone only; historical release baseline be
 - Papers and all authoritative datasets remain unchanged.
 - User accepted the design on 2026-10-22 ("yes please continue"); implementation and local acceptance are complete.
 - Local validation: 210 Python tests, data validation, 148 data tests, lint, 427-page build and ten browser tests passed. All 121 protected files match the base by Git-normalized content hash.
-- Delivery gate: final-head CI recorded in the open PR; merge remains manual. The stable main baseline above is unchanged until merge.
+- Delivery: [PR #42](https://github.com/yangzhouore/fowt-digest/pull/42) was merged manually and is present in main at `2e3a0cc`.
 
 ## Previous Completed MVP
 
@@ -47,8 +75,8 @@ The repository contains five independent static content areas:
   JSON under `web/data/digests/`.
 - Engineering Briefing: manual source-backed static JSON under
   `web/data/briefings/`.
-- Industry Map: curated static FOWT value-chain data under
-  `web/data/industry/`.
+- Industry Map: independent curated country-system guides, evidence and an
+  international company registry under `web/data/industry/`.
 - Projects: curated source-backed floating offshore wind project data under
   `web/data/projects/`.
 - Digital & AI: 14 curated source-backed Signals under `web/data/digital-ai/`,
@@ -65,7 +93,8 @@ The website supports:
 - Engineering candidate transparency pages with deterministic
   `engineering_selection_score_v1`, source-registry diagnostics, selected
   state, score breakdowns and source links for supported weeks;
-- Industry Map page explaining the FOWT value chain and curated companies;
+- Industry overview comparing four countries, UK/Germany/Norway/China system
+  guides, and the original company directory with canonical project navigation;
 - Projects index and detail pages for 48 source-backed floating offshore wind
   project records, with region/country/status filtering, technical facts,
   verified ecosystem roles, source-backed timelines and provenance links;
@@ -108,10 +137,10 @@ committed `main` through Git integration.
 
 ## Current Data Baseline
 
-- Static Research Digest editions: 39 editions, latest week ending 2026-10-04.
-- Static Research candidate-pool files: 26 retained or reconstructed weekly
+- Static Research Digest editions: 41 editions, latest week ending 2026-10-18.
+- Static Research candidate-pool files: 28 retained or reconstructed weekly
   candidate pools.
-- Static Engineering Briefing editions: 39 editions, latest week ending 2026-10-04.
+- Static Engineering Briefing editions: 41 editions, latest week ending 2026-10-18.
 - Static Engineering source registry: 42 approved source records.
 - Static Industry Map companies: 47 curated organisations.
 - Static Projects records: 48 source-backed floating offshore wind project
@@ -124,26 +153,50 @@ committed `main` through Git integration.
 - Current Engineering Homepage items use controlled region labels, with
   global/non-specific items classified as `Unspecified`.
 - Projects filtering is limited to region, country and normalized lifecycle
-  status. The Connected Project Context feature branch adds navigation to
+  status. Merged Connected Project Context adds navigation to
   existing Industry entries through recorded company IDs. Geographic maps, GIS
   data and automatic project collection/update remain outside scope.
 
 ## Latest Accepted Validation Baseline
 
-Local validation for this documentation audit (2026-10-05; Python 3.14.5, Node 24.19.0):
+Fresh local validation of merged main `da48422` on 2026-10-23
+(Python 3.14.5, Node 24.19.0):
 
 ```text
 python -m pytest pipeline/tests -> 210 passed
 npm.cmd run validate:data -> passed
-npm.cmd run test:data -> 78 passed
-npm.cmd run lint -> passed
-npm.cmd run build -> passed, 409 static pages
+npm.cmd run test:data -> 148 passed
+node --test data/industry/country-guides.test.js data/industry/uk-guide.test.js -> 62 passed
+npm.cmd run lint -> passed, zero errors
+npm.cmd run build -> passed, 431 static pages
 git diff --check -> passed
 ```
 
-All checks passed locally. Python tests used the installed Python executable
-and required access to pytest's existing temporary directory. Pushes and pull
-requests to `main` trigger the corresponding GitHub CI checks.
+Python tests used the installed Python executable and an ignored local pytest
+temporary directory. Lint reported six pre-existing warnings in ignored local
+prior-MVP pytest fixtures; tracked source had no lint errors. The feature's
+accepted browser runs also passed 12 Industry journeys and 10 shared regression
+journeys; see the Industry implementation document for exact commands.
+
+Pushes and pull requests to `main` trigger CI. The focused 62 Industry checks and
+12 Industry browser journeys are additional direct local checks, not new CI jobs.
+Record final-head maintenance CI in its PR description. The first browser attempt
+of merged-main [run 39928920732](https://github.com/yangzhouore/fowt-digest/actions/runs/39928920732)
+was cancelled before the build/tests: its log records 25.9 MB of Ubuntu dependency
+downloads taking 9 minutes 40 seconds. This was setup delay, not a failed browser
+assertion. A retry of the cancelled browser job also ended during installation,
+without running the build or tests. The old main workflow therefore still needs
+the maintenance change to be merged; rerunning the old installer does not apply
+the fix. The maintenance PR records its own final-head checks separately.
+
+Browser CI now uses the official Playwright Noble image, pinned to the locked
+`@playwright/test` version 1.63.0 and an immutable image digest, with browsers and
+OS dependencies preinstalled. An explicit installed-package version check fails
+if the package is upgraded without updating the image/check. Update all three
+together; do not restore unbounded per-run OS package installation or treat
+skipped setup/tests as passing. The ten-minute job limit and failure-diagnostic
+upload remain in place. See [Playwright's Docker guidance](https://playwright.dev/docs/docker)
+for image contents and version compatibility.
 
 ## Reference Map
 

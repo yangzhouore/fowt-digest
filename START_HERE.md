@@ -5,16 +5,17 @@ Use this file as the resume entry point for a new Codex session.
 ## Stable State
 
 - Current stable branch: `main`
-- Active milestone: Connected Project Context MVP; implemented and locally validated, pending manual merge
-- Latest merged work: Projects Public Evidence & Review History MVP (PR #41), merged into main at `e88d325`
+- Latest completed product milestone: International Industry Guides (PR #44), merged into main at `da48422`
+- Next product MVP: not yet scoped or accepted; define its objectives, design and acceptance criteria before implementation
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
 
-Stable `main` includes Digital & AI, Methodology, the bilingual interface,
-Project Intelligence across all 48 projects, and weekly catch-up through
-2026-10-04. It is expected to pass the baseline unless `PROJECT_STATUS.md`
-says otherwise.
+The product baseline at `da48422` includes Digital & AI, Methodology, the bilingual
+interface, Project Intelligence across all 48 projects, Connected Project Context,
+the UK/Germany/Norway/China Industry guides, and weekly data through 2026-10-18.
+Read `PROJECT_STATUS.md` for validation and CI evidence; a previously pending job
+must be checked by run/commit, not treated as a permanent repository problem.
 
 ## Normal Reading Path
 
@@ -30,13 +31,21 @@ only when historical context is specifically required.
 
 ## Reference Docs
 
-Current accepted milestone:
+Latest merged product milestone (PR #44):
+
+- Objectives, design/self-review, implementation and local acceptance:
+  `web/app/industry/design/INTERNATIONAL_INDUSTRY_GUIDES.md`
+- UK guide design and implementation:
+  `web/app/industry/design/UK_FOWT_SYSTEM_DESIGN.md` and
+  `web/app/industry/design/UK_FOWT_SYSTEM_IMPLEMENTATION.md`
+
+Merged Connected Project Context MVP (PR #42, `2e3a0cc`):
 
 - Objectives, design and acceptance gates: `docs/CONNECTED_PROJECT_CONTEXT_MVP.md`
 - Design self-review and approval item: `docs/CONNECTED_PROJECT_CONTEXT_DESIGN_REVIEW.md`
 - Implementation and validation evidence: `docs/CONNECTED_PROJECT_CONTEXT_IMPLEMENTATION.md`
 
-Previous merged milestone (PR #41):
+Merged Projects Public Evidence MVP (PR #41, `e88d325`):
 
 - Objectives, design, acceptance criteria and delivery gates: `docs/PROJECTS_PUBLIC_EVIDENCE_MVP.md`
 - Design self-review and user acceptance record: `docs/PROJECTS_PUBLIC_EVIDENCE_DESIGN_REVIEW.md`
@@ -71,10 +80,18 @@ The Projects MVP is implemented and accepted: `/projects` and
 `/projects/[slug]` render 48 source-backed floating offshore wind project
 records with region/country/status filtering, Project Intelligence, verified
 technical facts, project-company roles, source-backed timelines, and provenance links. Projects
-are intentionally static. The Connected Project Context feature branch adds
+are intentionally static. Merged Connected Project Context provides
 explicit Project / Engineering reading links and navigation through existing
 Industry company IDs. Geographic maps and automatic project collection or updates
 remain outside scope.
+
+Industry Map now starts at `/industry` with four country entry points, a sourced
+responsibility comparison and the original international company directory.
+The detailed guides live at `/industry/uk`, `/industry/germany`,
+`/industry/norway` and `/industry/china`. Existing company anchors and project
+backlinks stay on `/industry`. Guide evidence is independent of authoritative
+Projects and paper records; capability, R&D, plans and project awards remain
+distinct. The UK guide covers the GB electricity market, not Northern Ireland.
 
 Selection transparency is implemented for Research and Engineering where
 candidate-pool data exists. Weekly Research candidate pages expose deterministic
@@ -134,3 +151,17 @@ cd ..
 git diff --check
 git status
 ```
+
+Additional merged Industry acceptance checks (from `web/`):
+
+```powershell
+node --test data/industry/country-guides.test.js data/industry/uk-guide.test.js
+npx.cmd playwright test --config=app/industry/browser.playwright.config.ts
+npm.cmd run test:smoke
+```
+
+The focused Industry commands are local acceptance checks, not extra CI jobs.
+Existing CI validates the guide assertions through build and server-render tests
+and runs the separate shared browser regression suite. Preserve that distinction
+when reporting checks. On Windows, Playwright may need normal process permissions
+to shut down its local production server cleanly.

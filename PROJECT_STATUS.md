@@ -1,18 +1,38 @@
 # Project Status
 
-Last updated: 2026-10-23. Product baseline: merged main `b409213`.
+Last updated: 2026-10-26. Product baseline: merged main `710bba5`.
 
 ## Current State
 
 - Current stable branch: `main`
-- Latest completed product milestone: Digital & AI practical use-case cards (PR #46), merged into main at `b409213`
+- Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
 - Next product MVP: not yet scoped or accepted
-- Current feature work: Digital & AI internal evidence reader and pathway comparison; implementation authorised on 2026-10-23, locally validated, awaiting PR review/manual merge.
+- Current work: weekly Research and Engineering update for 2026-10-19 through 2026-10-25; locally validated, awaiting PR review/manual merge.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
 
-## Current Feature: Digital & AI Evidence Reader and Pathway Comparison
+## Current Weekly Update: 19-25 October 2026
+
+- Branch: `data/weekly-digest-2026-10-25`, based on main `710bba5`.
+- Skills: `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md`.
+- Collection/selection/validation record: `docs/weekly/2026-10-25.md`.
+- Research: 207 obtained raw records -> 83 deduplicated candidates -> five selected
+  by the unchanged deterministic model. Coverage is partial: two HTTP 401
+  continuation failures persisted on retry, and the configured cap was reached.
+  The candidate-page note preserves these limitations.
+- Engineering: 42 registry-domain attempts; eight retained reviewed inventory.
+  Eighteen source records -> 16 in-window -> 11 eligible reports -> six same-event
+  overlaps removed -> five independent candidates and five highlights. Primary
+  candidate records represent five publishers. Counts are not exhaustive coverage.
+- Both editions and candidate transparency are registered; the homepage defaults
+  to the newly paired week. Historical records and product behaviour are unchanged.
+- Local validation: 210 Python tests, data validation, 155 data tests, lint,
+  454 static routes and 17 browser journeys passed, plus focused local weekly
+  navigation/count/coverage-note and 390px checks. Final-head CI/preview are in the
+  open PR description; leave merging to the user.
+
+## Merged Digital & AI Evidence Reader and Pathway Comparison (PR #47)
 
 - Branch: `feat/digital-ai-evidence-pathways`, based on main `b409213`.
 - User authorised recommendations 2 and 3 without another approval gate.
@@ -24,8 +44,10 @@ Last updated: 2026-10-23. Product baseline: merged main `b409213`.
   coverage labels replace broad maturity badges. Context is not deployment proof.
 - Local acceptance: 210 Python tests, static data validation, 155 data tests, lint,
   445-page build (14 reader routes) and 17 browser journeys passed.
-- Original Signals/use-case records, papers, pipeline and unrelated datasets are
-  unchanged. Final-head CI and preview status are recorded in the open PR.
+- Original Signals/use-case records, papers, pipeline and unrelated datasets were
+  unchanged by this feature. [PR #47](https://github.com/yangzhouore/fowt-digest/pull/47)
+  was merged manually into main at `710bba5`. All three CI jobs passed on feature
+  head `55cc536` in [run #79](https://github.com/yangzhouore/fowt-digest/actions/runs/39972100167).
 
 ## Merged Digital & AI Practical Cards (PR #46)
 
@@ -170,10 +192,10 @@ committed `main` through Git integration.
 
 ## Current Data Baseline
 
-- Static Research Digest editions: 41 editions, latest week ending 2026-10-18.
-- Static Research candidate-pool files: 28 retained or reconstructed weekly
+- Static Research Digest editions: 42 editions, latest week ending 2026-10-25.
+- Static Research candidate-pool files: 29 retained or reconstructed weekly
   candidate pools.
-- Static Engineering Briefing editions: 41 editions, latest week ending 2026-10-18.
+- Static Engineering Briefing editions: 42 editions, latest week ending 2026-10-25.
 - Static Engineering source registry: 42 approved source records.
 - Static Industry Map companies: 47 curated organisations.
 - Static Projects records: 48 source-backed floating offshore wind project
@@ -190,7 +212,7 @@ committed `main` through Git integration.
   existing Industry entries through recorded company IDs. Geographic maps, GIS
   data and automatic project collection/update remain outside scope.
 
-## Latest Accepted Validation Baseline
+## Earlier Industry Validation Baseline
 
 Fresh local validation of merged main `da48422` on 2026-10-23
 (Python 3.14.5, Node 24.19.0):

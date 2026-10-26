@@ -7,16 +7,17 @@ Use this file as the resume entry point for a new Codex session.
 - Current stable branch: `main`
 - Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
 - Next product MVP: not yet scoped or accepted; define its objectives, design and acceptance criteria before implementation
-- Current work: weekly Research and Engineering update for 2026-10-19 through 2026-10-25; locally validated, awaiting PR review/manual merge.
+- Current work: section-by-section code review and maintenance documentation on `chore/codebase-review-documentation`; see `docs/WEBSITE_MAINTENANCE.md`.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
+- Delivery: create the maintenance PR after local acceptance and leave it open for manual merge; record remote CI/preview separately from local results.
 
 The product baseline at `710bba5` includes Digital & AI, Methodology, the bilingual
 interface, Project Intelligence across all 48 projects, Connected Project Context,
 the UK/Germany/Norway/China Industry guides, ten practical Digital & AI cards,
-14 internal evidence readers and the four-pathway comparison. This branch adds
-weekly data through 2026-10-25: five Research papers from 83 obtained candidates
+14 internal evidence readers and the four-pathway comparison. Merged weekly
+PR #48 (`580a83e`) adds data through 2026-10-25: five Research papers from
+83 obtained candidates
 (partial OpenAlex coverage), and five Engineering highlights from five independent
 candidates after registry-bounded discovery and event grouping.
 Read `PROJECT_STATUS.md` for validation and CI evidence; a previously pending job
@@ -36,13 +37,19 @@ only when historical context is specifically required.
 
 ## Reference Docs
 
-Current weekly update:
+Current maintenance review:
+
+- Scope, section ownership, findings and validation: `docs/WEBSITE_MAINTENANCE.md`
+- Browser acceptance: `web/tests/browser/README.md`
+- Preserve the existing presentation and committed source records.
+
+Latest merged weekly update:
 
 - Collection/selection/validation record: `docs/weekly/2026-10-25.md`
 - Follow `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md` for weekly work.
 - Preserve the visible partial Research coverage note; two OpenAlex continuation
   requests failed with HTTP 401 and the configured collection cap was reached.
-- Leave the PR open for manual merge; final-head CI/preview are in its description.
+- Weekly PR #48 was merged at `580a83e`; this review does not republish the week.
 
 Merged Digital & AI evidence reader and comparison (PR #47, `710bba5`):
 

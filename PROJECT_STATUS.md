@@ -1,20 +1,21 @@
 # Project Status
 
-Last updated: 2026-10-26. Product baseline: merged main `710bba5`.
+Last updated: 2026-10-26. Review base: merged main `580a83e` (weekly PR #48);
+latest product feature baseline: `710bba5` (PR #47).
 
 ## Current State
 
 - Current stable branch: `main`
 - Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
 - Next product MVP: not yet scoped or accepted
-- Current work: weekly Research and Engineering update for 2026-10-19 through 2026-10-25; locally validated, awaiting PR review/manual merge.
+- Current work: section-by-section code review and maintenance documentation on `chore/codebase-review-documentation`; see `docs/WEBSITE_MAINTENANCE.md`.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
+- Delivery: create the maintenance PR after local acceptance and leave it open for manual merge; record remote CI/preview separately from local results.
 
-## Current Weekly Update: 19-25 October 2026
+## Latest Merged Weekly Update: 19-25 October 2026 (PR #48)
 
-- Branch: `data/weekly-digest-2026-10-25`, based on main `710bba5`.
+- Branch: `data/weekly-digest-2026-10-25`, based on main `710bba5`; merged manually into main at `580a83e` (PR #48).
 - Skills: `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md`.
 - Collection/selection/validation record: `docs/weekly/2026-10-25.md`.
 - Research: 207 obtained raw records -> 83 deduplicated candidates -> five selected
@@ -30,7 +31,7 @@ Last updated: 2026-10-26. Product baseline: merged main `710bba5`.
 - Local validation: 210 Python tests, data validation, 155 data tests, lint,
   454 static routes and 17 browser journeys passed, plus focused local weekly
   navigation/count/coverage-note and 390px checks. Final-head CI/preview are in the
-  open PR description; leave merging to the user.
+  weekly PR #48 description; that PR is now merged.
 
 ## Merged Digital & AI Evidence Reader and Pathway Comparison (PR #47)
 
@@ -207,8 +208,8 @@ committed `main` through Git integration.
 - Homepage Research cards do not show abstract previews.
 - Current Engineering Homepage items use controlled region labels, with
   global/non-specific items classified as `Unspecified`.
-- Projects filtering is limited to region, country and normalized lifecycle
-  status. Merged Connected Project Context adds navigation to
+- Projects filtering includes region, country, lifecycle, FID, capacity and
+  paired readiness area/state. Merged Connected Project Context adds navigation to
   existing Industry entries through recorded company IDs. Geographic maps, GIS
   data and automatic project collection/update remain outside scope.
 
@@ -235,14 +236,9 @@ journeys; see the Industry implementation document for exact commands.
 
 Pushes and pull requests to `main` trigger CI. The focused 62 Industry checks and
 12 Industry browser journeys are additional direct local checks, not new CI jobs.
-Record final-head maintenance CI in its PR description. The first browser attempt
-of merged-main [run 39928920732](https://github.com/yangzhouore/fowt-digest/actions/runs/39928920732)
-was cancelled before the build/tests: its log records 25.9 MB of Ubuntu dependency
-downloads taking 9 minutes 40 seconds. This was setup delay, not a failed browser
-assertion. A retry of the cancelled browser job also ended during installation,
-without running the build or tests. The old main workflow therefore still needs
-the maintenance change to be merged; rerunning the old installer does not apply
-the fix. The maintenance PR records its own final-head checks separately.
+Historical pre-maintenance browser runs stalled during OS dependency installation;
+the current workflow below already includes the container fix. Those old runs
+do not describe current branch health. Record new final-head CI in its PR.
 
 Browser CI now uses the official Playwright Noble image, pinned to the locked
 `@playwright/test` version 1.63.0 and an immutable image digest, with browsers and
@@ -252,6 +248,17 @@ together; do not restore unbounded per-run OS package installation or treat
 skipped setup/tests as passing. The ten-minute job limit and failure-diagnostic
 upload remain in place. See [Playwright's Docker guidance](https://playwright.dev/docs/docker)
 for image contents and version compatibility.
+
+## Current Maintenance Review
+
+- Scope, section map, findings and acceptance: `docs/WEBSITE_MAINTENANCE.md`.
+- Fixed Engineering edition-date/year search without changing the page layout.
+- Added three shared browser journeys for Engineering search, Research provenance
+  navigation, and Methodology/About mobile bilingual reading.
+- Updated routes, ownership, publication checks and browser CI documentation.
+- Source-backed data, styling, pipeline and scoring remain unchanged.
+- Local results are in the review document; remote CI and preview status must be
+  checked against the eventual PR head.
 
 ## Reference Map
 

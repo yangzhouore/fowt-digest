@@ -128,6 +128,66 @@ test("homepage renders the latest briefing and its Engineering / Research links 
   await expect(page.getByRole("region", { name: "Selected papers" }).getByRole("heading", { level: 3 }).first()).toBeVisible();
 });
 
+test("Engineering search matches edition dates and combines with region filters", async ({ page }) => {
+  await page.goto("/engineering");
+  const editions = page.locator(".engineering-briefing-editions > li");
+  const initialCount = await editions.count();
+  const firstDate = await editions.first().locator(".engineering-briefing-card-meta > p").first().innerText();
+  const year = firstDate.match(/\b\d{4}\b/)![0];
+  const expectedCount = await editions.filter({ has: page.locator(".engineering-briefing-card-meta > p:first-child", { hasText: year }) }).count();
+  const input = page.getByRole("searchbox");
+  await input.fill(year);
+  await expect(editions).toHaveCount(expectedCount);
+  await input.fill(firstDate);
+  await expect(editions).toHaveCount(1);
+  await page.getByRole("button", { name: "Europe", exact: true }).click();
+  for (const context of await page.locator(".engineering-news-copy > p").allTextContents()) {
+    expect(context).toContain("Europe");
+  }
+  await page.getByRole("button", { name: "Clear filters", exact: true }).click();
+  await expect(input).toHaveValue("");
+  await expect(editions).toHaveCount(initialCount);
+  await input.fill("no-such-engineering-record-xyz");
+  await expect(page.getByText("No matching news in the engineering archive.", { exact: true })).toBeVisible();
+});
+
+test("Research search opens a paper, its edition and candidate provenance", async ({ page, request }) => {
+  await page.goto("/archive");
+  const title = await page.locator(".research-archive-item-copy > a").first().innerText();
+  const input = page.getByRole("searchbox");
+  await input.fill(title);
+  const result = page.locator(".archive-search-results > li").first();
+  const editionPath = await result.getByRole("link", { name: "View weekly digest", exact: true }).getAttribute("href");
+  await result.getByRole("heading").getByRole("link").click();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
+  await expect(page.getByRole("heading", { name: "Abstract", exact: true })).toBeVisible();
+  await page.getByRole("link", { name: "Back to the weekly digest", exact: true }).click();
+  await expect(page).toHaveURL(editionPath!);
+  await page.getByRole("link", { name: /candidates reviewed/ }).click();
+  await expect(page.getByRole("heading", { name: "Ranked candidates", exact: true })).toBeVisible();
+  await expect(page.locator(".candidate-source a").first()).toHaveAttribute("href", /^https:\/\//);
+  expect((await request.get("/papers/not-a-real-paper")).status()).toBe(404);
+  await page.goto("/archive");
+  await page.getByRole("searchbox").fill("no-such-research-record-xyz");
+  await expect(page.getByText("No matching papers in the static archive.", { exact: true })).toBeVisible();
+});
+
+test("Methodology and About render bilingual static reading paths on mobile", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  for (const path of ["/methodology", "/about"]) {
+    expect((await page.goto(path))?.status()).toBe(200);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await page.getByRole("button", { name: "中文", exact: true }).click();
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
+    await page.locator('label[for="theme-dark"]').click();
+    await expect(page.locator("#theme-dark")).toBeChecked();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await page.screenshot({ path: `test-results/${path.slice(1)}-mobile-zh-dark.png` });
+    await page.getByRole("button", { name: "EN", exact: true }).click();
+    await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  }
+});
+
 test("Projects lifecycle filter changes results and expanded roles expose missing evidence", async ({ page }) => {
   const response = await page.goto("/projects");
   expect(response?.status()).toBe(200);

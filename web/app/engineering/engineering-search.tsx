@@ -98,7 +98,9 @@ export function EngineeringSearch({
     .map((briefing) => {
       const matchingItems = briefing.items.filter((item) => {
         const matchesQuery =
-          !normalisedQuery || searchText(item).includes(normalisedQuery);
+          !normalisedQuery ||
+          `${searchText(item)} ${briefing.dateRange} ${briefing.slug}`
+            .toLowerCase().includes(normalisedQuery);
         const matchesRegion =
           !hasRegionFilter || item.displayRegion === selectedRegion;
         return matchesQuery && matchesRegion;

@@ -76,12 +76,16 @@ commit, push, deploy, or choose whether a digest should be published.
 - `/engineering`, `/engineering/[slug]`, `/engineering/[slug]/candidates`.
 - `/archive`, `/weekly/[slug]`, `/weekly/[slug]/candidates`, `/papers/[slug]`.
 - `/projects`, `/projects/[slug]`, `/industry`, `/digital-ai`.
+- `/industry/uk`, `/industry/germany`, `/industry/norway`, `/industry/china`.
+- `/digital-ai/signals/[slug]`: fourteen static evidence readers.
 - `/methodology` and `/about`.
 
 Weekly Research and Engineering work uses `skills/fowt-paper/SKILL.md` and
 `skills/fowt-news/SKILL.md`; project audits use
 `skills/fowt-project-intelligence/SKILL.md`. See
 `docs/WEBSITE_PUBLISHING_WORKFLOW.md` for publication and candidate registration.
+For section ownership, presentation behavior, review findings and verification,
+see [Website maintenance and code review](docs/WEBSITE_MAINTENANCE.md).
 
 ## Technology Stack
 
@@ -126,6 +130,11 @@ npm.cmd run lint
 npm.cmd run build
 npm.cmd run dev
 ```
+
+Use `http://localhost:3000` for development. To inspect the production build,
+stop the development server, run `npm.cmd run build` and `npm.cmd run start`
+from `web/`. Browser acceptance commands and their prerequisites are documented
+in [the browser test guide](web/tests/browser/README.md).
 
 Full accepted validation baseline:
 

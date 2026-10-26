@@ -1,3 +1,4 @@
+import digest20261025Json from "./digests/2026-10-25.json";
 import digest20261018Json from "./digests/2026-10-18.json";
 import digest20261011Json from "./digests/2026-10-11.json";
 import digest20261004Json from "./digests/2026-10-04.json";
@@ -39,6 +40,7 @@ import digest20250420Json from "./digests/2025-04-20.json";
 import digest20250316Json from "./digests/2025-03-16.json";
 import digest20250216Json from "./digests/2025-02-16.json";
 import digest20250119Json from "./digests/2025-01-19.json";
+
 
 type PipelineDigest = {
   schemaVersion: string;
@@ -137,6 +139,7 @@ export type DigestPaperResult = {
 };
 
 const digestJsonFiles = [
+  digest20261025Json,
   digest20261018Json,
   digest20261011Json,
   digest20261004Json,

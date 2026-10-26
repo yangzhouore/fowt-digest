@@ -5,17 +5,20 @@ Use this file as the resume entry point for a new Codex session.
 ## Stable State
 
 - Current stable branch: `main`
-- Latest completed product milestone: Digital & AI practical use-case cards (PR #46), merged into main at `b409213`
+- Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
 - Next product MVP: not yet scoped or accepted; define its objectives, design and acceptance criteria before implementation
-- Current feature work: Digital & AI internal evidence reader and pathway comparison; implementation authorised on 2026-10-23, locally validated, awaiting PR review/manual merge.
+- Current work: weekly Research and Engineering update for 2026-10-19 through 2026-10-25; locally validated, awaiting PR review/manual merge.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
 
-The product baseline at `b409213` includes Digital & AI, Methodology, the bilingual
+The product baseline at `710bba5` includes Digital & AI, Methodology, the bilingual
 interface, Project Intelligence across all 48 projects, Connected Project Context,
 the UK/Germany/Norway/China Industry guides, ten practical Digital & AI cards,
-and weekly data through 2026-10-18.
+14 internal evidence readers and the four-pathway comparison. This branch adds
+weekly data through 2026-10-25: five Research papers from 83 obtained candidates
+(partial OpenAlex coverage), and five Engineering highlights from five independent
+candidates after registry-bounded discovery and event grouping.
 Read `PROJECT_STATUS.md` for validation and CI evidence; a previously pending job
 must be checked by run/commit, not treated as a permanent repository problem.
 
@@ -33,12 +36,19 @@ only when historical context is specifically required.
 
 ## Reference Docs
 
-Current Digital & AI feature:
+Current weekly update:
+
+- Collection/selection/validation record: `docs/weekly/2026-10-25.md`
+- Follow `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md` for weekly work.
+- Preserve the visible partial Research coverage note; two OpenAlex continuation
+  requests failed with HTTP 401 and the configured collection cap was reached.
+- Leave the PR open for manual merge; final-head CI/preview are in its description.
+
+Merged Digital & AI evidence reader and comparison (PR #47, `710bba5`):
 
 - Scope, design and self-review: `web/app/digital-ai/design/EVIDENCE_PATHWAYS_MVP.md`
 - Implementation/source review/validation: `web/app/digital-ai/design/EVIDENCE_PATHWAYS_IMPLEMENTATION.md`
-- Fourteen static evidence readers and four-pathway comparison. The user waived
-  another implementation approval gate; leave the final PR open for manual merge.
+- Fourteen static evidence readers and four-pathway comparison; merged manually.
 
 Merged practical cards (PR #46, `b409213`):
 
@@ -46,7 +56,7 @@ Merged practical cards (PR #46, `b409213`):
 - Source review and validation: `web/app/digital-ai/design/USE_CASE_CARDS_IMPLEMENTATION.md`
 - Ten bilingual practical cards; original 14 Signals unchanged.
 
-Latest merged product milestone (PR #44):
+Merged International Industry Guides (PR #44):
 
 - Objectives, design/self-review, implementation and local acceptance:
   `web/app/industry/design/INTERNATIONAL_INDUSTRY_GUIDES.md`

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require("node:fs");
 const path = require("node:path");
+const { validateEnergyContextFile } = require("./validate-energy-context.js");
 
 const SIGNAL_TOPICS = new Set([
   "ai_for_engineering",
@@ -46,9 +47,9 @@ const CONNECTION_TERMS = [
 ];
 
 function validateRepository(rootDir = process.cwd()) {
-  return validateStaticDigitalAi({
+  return [...validateStaticDigitalAi({
     dataPath: path.join(rootDir, "data", "digital-ai", "signals.json"),
-  });
+  }), ...validateEnergyContextFile(path.join(rootDir, "data", "digital-ai", "energy-context.json"))];
 }
 
 function validateStaticDigitalAi({ dataPath }) {
@@ -278,12 +279,12 @@ function isRecord(value) {
 function main() {
   const errors = validateRepository();
   if (errors.length === 0) {
-    console.log("Static Digital & AI signal data validation passed.");
+    console.log("Static Digital & AI signal and energy-context validation passed.");
     process.exitCode = 0;
     return;
   }
 
-  console.error("Static Digital & AI signal data validation failed:");
+  console.error("Static Digital & AI signal and energy-context validation failed:");
   for (const error of errors) {
     console.error(`- ${error}`);
   }

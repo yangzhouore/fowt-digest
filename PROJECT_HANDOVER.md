@@ -48,6 +48,7 @@ Website:
 - `web/app/projects/[slug]/page.tsx`
 - `web/app/digital-ai/page.tsx`
 - `web/app/digital-ai/signal-filters.tsx`
+- `web/app/digital-ai/energy-system.tsx` and `energy-system.module.css`
 - `web/app/methodology/page.tsx`
 - `web/app/i18n/`
 - `web/app/globals.css`
@@ -66,6 +67,7 @@ Static website data:
 - `web/data/project-adapter.ts`
 - `web/data/digital-ai/signals.json`
 - `web/data/digital-ai-adapter.ts`
+- `web/data/digital-ai/energy-context.json` (independent broader energy context)
 
 Website validation scripts:
 
@@ -77,6 +79,7 @@ Website validation scripts:
 - `web/scripts/validate-static-projects.test.js`
 - `web/scripts/validate-static-digital-ai.js`
 - `web/scripts/validate-static-digital-ai.test.js`
+- `web/scripts/validate-energy-context.js` (called by Digital & AI validation)
 
 Repository workflow:
 
@@ -101,6 +104,8 @@ Open only when relevant:
 - Engineering briefing contract: `docs/ENGINEERING_BRIEFING_DATA_MODEL.md`
 - Selection transparency: `docs/SELECTION_TRANSPARENCY.md`
 - Digital & AI scope and evidence rules: `docs/M11_DIGITAL_AI_SIGNALS_DESIGN.md`
+- AI × Energy extension scope/source review: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`
+  and `ENERGY_SYSTEM_IMPLEMENTATION.md` in the same directory
 
 Historical milestone and early-design records live under `docs/archive/` and
 should normally remain outside active context.

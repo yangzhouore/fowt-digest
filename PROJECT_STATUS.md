@@ -1,18 +1,35 @@
 # Project Status
 
-Last updated: 2026-10-26. Product baseline: merged main `710bba5`.
+Last updated: 2026-10-27. Feature base: main `580a83e` (weekly PR #48);
+latest merged product feature: `710bba5` (PR #47).
 
 ## Current State
 
 - Current stable branch: `main`
 - Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
-- Next product MVP: not yet scoped or accepted
-- Current work: weekly Research and Engineering update for 2026-10-19 through 2026-10-25; locally validated, awaiting PR review/manual merge.
+- Current work: AI × Energy explanation on `feat/ai-energy-explainer`, requested by the user to broaden context beyond FOWT and clarify present/future relationships.
+- Scope: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`.
+- Source review and acceptance: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
 - Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
 
-## Current Weekly Update: 19-25 October 2026
+## Current AI × Energy Explainer
+
+- `/digital-ai` starts with three relationships and two illustrative flow diagrams:
+  electricity supply and information supporting decisions.
+- Seven fields connect computing, weather, wind assets, solar/storage/hybrids,
+  grids, floating wind and electricity procurement. Reader/developer perspectives
+  explain questions to ask and illustrative workflows to evaluate.
+- Six terms, six dated 2026 developments and three conditional editorial scenarios
+  separate publication dates, review dates, contracts, operations, research and
+  projections. Ten primary public source pages are recorded in separate context data.
+- Original fourteen Signals/readers, ten wind cards, four pathways and unrelated
+  source datasets stay unchanged. No runtime AI, news collection or automation.
+- Local acceptance: 210 Python tests, all static-data validation, 172 data tests,
+  lint, 454-page production build and 20 shared Chromium journeys passed.
+
+## Latest Merged Weekly Update: 19-25 October 2026 (PR #48)
 
 - Branch: `data/weekly-digest-2026-10-25`, based on main `710bba5`.
 - Skills: `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md`.
@@ -30,7 +47,7 @@ Last updated: 2026-10-26. Product baseline: merged main `710bba5`.
 - Local validation: 210 Python tests, data validation, 155 data tests, lint,
   454 static routes and 17 browser journeys passed, plus focused local weekly
   navigation/count/coverage-note and 390px checks. Final-head CI/preview are in the
-  open PR description; leave merging to the user.
+  weekly PR #48 description; that PR was merged at `580a83e`.
 
 ## Merged Digital & AI Evidence Reader and Pathway Comparison (PR #47)
 
@@ -156,8 +173,8 @@ The website supports:
 - Project Intelligence on all 48 project detail pages, including current
   assessment, explicit FID status, lifecycle progress, project story, qualitative
   readiness gates, watchpoints, and separate sourced facts/editorial inferences;
-- Digital & AI page centered on how AI affects the offshore-wind lifecycle and
-  how offshore wind may power land, coastal, offshore, and flexible compute;
+- Digital & AI page explaining the wider AI/energy system, with offshore-wind
+  lifecycle applications and land, coastal, offshore and flexible compute pathways;
 - reader-facing Methodology and About pages;
 - persistent English / Simplified Chinese interface and fixed-copy switching,
   independent from the Light / Dark theme control.

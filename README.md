@@ -22,6 +22,10 @@ Repository: https://github.com/yangzhouore/fowt-digest
 - A curated Industry Map under `web/data/industry/`.
 - Fourteen source-backed Digital & AI Signals under `web/data/digital-ai/`,
   presented as evidence for AI × offshore-wind lifecycle and energy pathways.
+- An AI × Energy guide connecting computing, weather, wind, solar/storage,
+  grids and renewable procurement, with reader/developer perspectives, dated
+  developments and conditional future pathways. Sources and review scope:
+  `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
 - Homepage, Engineering, Research, Industry Map, Projects, Digital & AI,
   Methodology, About, paper detail, and selection-transparency reading paths.
 - A reader-facing Methodology that separates Research and Engineering methods,

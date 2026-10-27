@@ -1,6 +1,6 @@
 # Browser smoke tests
 
-Twenty Chromium tests protect homepage / latest-edition navigation, Projects
+Twenty-three Chromium tests protect homepage / latest-edition navigation, Projects
 filtering and expansion, project-detail navigation, language switching, public
 evidence navigation, honest review states, connected Project / Engineering / Industry
 journeys, unique company anchors, and mobile Chinese / dark presentation.
@@ -8,6 +8,9 @@ They also cover all ten Digital & AI application cards, evidence filters,
 four pathways and comparison scrolling, internal evidence readers and exact
 return contexts, Engineering date/year search and region filters, Research
 search/paper/edition/candidate navigation, and Methodology/About mobile reading.
+The broader AI × Energy guide adds seven-field reader/developer selection,
+related wind-example navigation, dated developments, conditional future pathways
+and English/Chinese desktop/mobile presentation.
 They use visible reader-facing content, not dataset counts or fixed edition dates.
 Uncaught browser errors and console errors fail the tests. Decorative Google
 company favicons are stubbed so third-party availability cannot affect acceptance.

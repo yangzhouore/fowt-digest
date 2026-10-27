@@ -10,11 +10,12 @@ import {
 } from "../../data/digital-ai-adapter";
 import { DigitalAiExperience } from "./signal-filters";
 import { LocalizedCopy } from "../i18n/localized-copy";
+import { EnergySystemOverview, EnergyOutlook } from "./energy-system";
 
 export const metadata: Metadata = {
   title: "Digital & AI",
   description:
-    "How AI could change offshore wind, and how offshore wind could power AI infrastructure.",
+    "Understand how AI, wind, solar, storage, grids and computing connect, with dated evidence and conditional future pathways.",
 };
 
 export default function DigitalAiPage() {
@@ -27,9 +28,11 @@ export default function DigitalAiPage() {
 
       <section className="digital-ai-hero" aria-labelledby="digital-ai-heading">
         <p className="eyebrow"><LocalizedCopy en="Digital & AI" zh="数字化与 AI" /></p>
-        <h1 id="digital-ai-heading">AI <span aria-hidden="true">×</span> Offshore Wind</h1>
-        <p><LocalizedCopy en="Two forces reshaping each other." zh="两股力量，相互塑造。" /></p>
+        <h1 id="digital-ai-heading">AI <span aria-hidden="true">×</span> <LocalizedCopy en="Energy" zh="能源" /></h1>
+        <p><LocalizedCopy en="Understand the wider system. Find where wind fits." zh="理解更大的系统，找到风电的位置。" /></p>
       </section>
+
+      <EnergySystemOverview />
 
       <DigitalAiExperience
         signalCount={getDigitalAiSignalCount()}
@@ -48,6 +51,8 @@ export default function DigitalAiPage() {
         }))}
         regions={options.regions}
       />
+
+      <EnergyOutlook />
 
       <SiteFooter />
     </main>

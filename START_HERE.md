@@ -6,11 +6,12 @@ Use this file as the resume entry point for a new Codex session.
 
 - Current stable branch: `main`
 - Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
-- Next product MVP: not yet scoped or accepted; define its objectives, design and acceptance criteria before implementation
-- Current work: section-by-section code review and maintenance documentation on `chore/codebase-review-documentation`; see `docs/WEBSITE_MAINTENANCE.md`.
+- Current product work: user-requested AI × Energy explainer on `feat/ai-energy-explainer`; broader energy context, plain-language logic, reader/developer perspectives, dated developments and conditional futures.
+- Scope and acceptance: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`.
+- Source review and implementation: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: create the maintenance PR after local acceptance and leave it open for manual merge; record remote CI/preview separately from local results.
+- Delivery: leave AI × Energy PR #50 open for manual merge; record remote CI/preview separately from local results. Maintenance PR #49 is merged at `20533eb`.
 
 The product baseline at `710bba5` includes Digital & AI, Methodology, the bilingual
 interface, Project Intelligence across all 48 projects, Connected Project Context,
@@ -37,7 +38,15 @@ only when historical context is specifically required.
 
 ## Reference Docs
 
-Current maintenance review:
+Current AI × Energy work:
+
+- Independent context data: `web/data/digital-ai/energy-context.json`.
+- Presentation: `web/app/digital-ai/energy-system.tsx` and its CSS module.
+- Preserve original fourteen Signals, ten wind application cards, four pathways
+  and existing reader routes. Context sources do not update their recorded status.
+- No live news, AI runtime, collection, new pipeline stages or automatic publishing.
+
+Merged maintenance review (PR #49, `20533eb`):
 
 - Scope, section ownership, findings and validation: `docs/WEBSITE_MAINTENANCE.md`
 - Browser acceptance: `web/tests/browser/README.md`
@@ -49,7 +58,7 @@ Latest merged weekly update:
 - Follow `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md` for weekly work.
 - Preserve the visible partial Research coverage note; two OpenAlex continuation
   requests failed with HTTP 401 and the configured collection cap was reached.
-- Weekly PR #48 was merged at `580a83e`; this review does not republish the week.
+- PR #48 was merged at `580a83e`; keep the new AI × Energy PR open for manual merge.
 
 Merged Digital & AI evidence reader and comparison (PR #47, `710bba5`):
 

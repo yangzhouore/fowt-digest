@@ -16,6 +16,74 @@ test.beforeEach(async ({ page }) => {
   await page.goto("/digital-ai");
 });
 
+test("energy guide explains all seven fields from reader and developer perspectives", async ({ page }) => {
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("AI × Energy");
+  await page.screenshot({ path: "test-results/ai-energy-overview-desktop.png", fullPage: false });
+  const field = page.locator("#energy-field-detail");
+  for (const id of ["compute", "weather", "wind", "hybrids", "grid", "floating", "procurement"]) {
+    const button = page.locator(`#energy-${id}`);
+    await button.focus();
+    await page.keyboard.press("Enter");
+    await expect(button).toBeFocused();
+    await expect(button).toHaveAttribute("aria-pressed", "true");
+    await expect(field).toHaveAttribute("data-field", id);
+    await expect(field.getByRole("heading", { name: "What to ask", exact: true })).toBeVisible();
+    await page.getByRole("button", { name: "I build or evaluate tools", exact: true }).click();
+    await expect(field.getByText(/^Illustrative starting point:/)).toBeVisible();
+    await expect(field.getByRole("link").first()).toHaveAttribute("href", /^https:\/\//);
+    await page.getByRole("button", { name: "I want to understand", exact: true }).click();
+  }
+  await page.locator("#energy-floating").click();
+  await field.getByRole("link", { name: "Explore the related wind example", exact: false }).click();
+  await expect(page.locator("#digital-ai-use-case")).toHaveAttribute("data-use-case", "twin");
+  await page.goto("/digital-ai#energy-procurement");
+  await expect(field).toHaveAttribute("data-field", "procurement");
+  await expect(field.getByText(/Annual renewable matching and hourly matching/)).toBeVisible();
+  await field.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/ai-energy-fields-desktop.png" });
+});
+
+test("dated developments distinguish projections, contracts and conditional future pathways", async ({ page }) => {
+  const updates = page.locator("#energy-updates");
+  await expect(updates.locator("ol > li")).toHaveCount(6);
+  await expect(updates.locator("li > p").filter({ hasText: "Conditional projection" })).toBeVisible();
+  for (const item of await updates.locator("ol > li").all()) {
+    await expect(item.locator("time")).toHaveAttribute("datetime", /^2026-/);
+    await item.locator("summary").click();
+    await expect(item.getByText("Does not establish", { exact: false })).toBeVisible();
+    await expect(item.getByRole("link").first()).toHaveAttribute("href", /^https:\/\//);
+  }
+  await page.getByRole("navigation", { name: "AI and energy reading guide" }).getByRole("link", { name: "What could come next" }).click();
+  await expect(page.getByRole("heading", { name: "Three pathways, with conditions attached" })).toBeInViewport();
+  const future = page.locator("#energy-future");
+  await expect(future.getByRole("article")).toHaveCount(3);
+  await expect(future.getByText(/not deployment forecasts/)).toBeVisible();
+  await expect(future.getByText(/No integrated FOWT-to-AI deployment is established/)).toBeVisible();
+  await page.screenshot({ path: "test-results/ai-energy-outlook-desktop.png" });
+});
+
+test("energy system stays readable on mobile in Chinese and dark theme", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await page.locator('label[for="theme-dark"]').click();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("AI × 能源");
+  await page.screenshot({ path: "test-results/ai-energy-overview-mobile-zh-dark.png", fullPage: false });
+  await page.getByRole("button", { name: "我开发或评估工具", exact: true }).click();
+  for (const id of ["compute", "weather", "wind", "hybrids", "grid", "floating", "procurement"]) {
+    await page.locator(`#energy-${id}`).click();
+    await expect(page.locator("#energy-field-detail").getByText(/^示意起点：/)).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  }
+  await page.getByText("读懂新闻标题的六组术语", { exact: true }).click();
+  await expect(page.getByText("年度 / 逐时匹配", { exact: true })).toBeVisible();
+  await page.locator("#energy-fields-heading").scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/ai-energy-fields-mobile-zh-dark.png" });
+  await page.getByRole("navigation", { name: "AI 与能源阅读导航" }).getByRole("link", { name: "未来可能怎样" }).click();
+  await expect(page.getByRole("heading", { name: "三条带有前提条件的路径" })).toBeInViewport();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.screenshot({ path: "test-results/ai-energy-outlook-mobile-zh-dark.png" });
+});
+
 test("all ten applications explain inputs, decisions and evidence without runtime errors", async ({ page }) => {
   const card = page.locator("#digital-ai-use-case");
   const ids = ["forecasting", "engineering", "vision", "planning", "control", "twin", "predictive", "autonomy", "cable", "grid"];

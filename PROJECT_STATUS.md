@@ -1,17 +1,35 @@
 # Project Status
 
-Last updated: 2026-10-26. Review base: merged main `580a83e` (weekly PR #48);
-latest product feature baseline: `710bba5` (PR #47).
+Last updated: 2026-10-27. Feature base: main `580a83e` (weekly PR #48),
+updated with maintenance main `20533eb` (PR #49);
+latest merged product feature: `710bba5` (PR #47).
 
 ## Current State
 
 - Current stable branch: `main`
 - Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
-- Next product MVP: not yet scoped or accepted
-- Current work: section-by-section code review and maintenance documentation on `chore/codebase-review-documentation`; see `docs/WEBSITE_MAINTENANCE.md`.
+- Current work: AI × Energy explanation on `feat/ai-energy-explainer`, requested by the user to broaden context beyond FOWT and clarify present/future relationships.
+- Scope: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`.
+- Source review and acceptance: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: create the maintenance PR after local acceptance and leave it open for manual merge; record remote CI/preview separately from local results.
+- Delivery: leave AI × Energy PR #50 open for manual merge; record remote CI/preview separately from local results. Maintenance PR #49 is merged at `20533eb`.
+
+## Current AI × Energy Explainer
+
+- `/digital-ai` starts with three relationships and two illustrative flow diagrams:
+  electricity supply and information supporting decisions.
+- Seven fields connect computing, weather, wind assets, solar/storage/hybrids,
+  grids, floating wind and electricity procurement. Reader/developer perspectives
+  explain questions to ask and illustrative workflows to evaluate.
+- Six terms, six dated 2026 developments and three conditional editorial scenarios
+  separate publication dates, review dates, contracts, operations, research and
+  projections. Ten primary public source pages are recorded in separate context data.
+- Original fourteen Signals/readers, ten wind cards, four pathways and unrelated
+  source datasets stay unchanged. No runtime AI, news collection or automation.
+- Local acceptance: 210 Python tests, all static-data validation, 172 data tests,
+  lint, 454-page production build and 23 shared Chromium journeys passed after
+  incorporating maintenance main `20533eb`.
 
 ## Latest Merged Weekly Update: 19-25 October 2026 (PR #48)
 
@@ -31,7 +49,7 @@ latest product feature baseline: `710bba5` (PR #47).
 - Local validation: 210 Python tests, data validation, 155 data tests, lint,
   454 static routes and 17 browser journeys passed, plus focused local weekly
   navigation/count/coverage-note and 390px checks. Final-head CI/preview are in the
-  weekly PR #48 description; that PR is now merged.
+  weekly PR #48 description; that PR was merged at `580a83e`.
 
 ## Merged Digital & AI Evidence Reader and Pathway Comparison (PR #47)
 
@@ -157,8 +175,8 @@ The website supports:
 - Project Intelligence on all 48 project detail pages, including current
   assessment, explicit FID status, lifecycle progress, project story, qualitative
   readiness gates, watchpoints, and separate sourced facts/editorial inferences;
-- Digital & AI page centered on how AI affects the offshore-wind lifecycle and
-  how offshore wind may power land, coastal, offshore, and flexible compute;
+- Digital & AI page explaining the wider AI/energy system, with offshore-wind
+  lifecycle applications and land, coastal, offshore and flexible compute pathways;
 - reader-facing Methodology and About pages;
 - persistent English / Simplified Chinese interface and fixed-copy switching,
   independent from the Light / Dark theme control.
@@ -249,7 +267,7 @@ skipped setup/tests as passing. The ten-minute job limit and failure-diagnostic
 upload remain in place. See [Playwright's Docker guidance](https://playwright.dev/docs/docker)
 for image contents and version compatibility.
 
-## Current Maintenance Review
+## Merged Maintenance Review (PR #49, `20533eb`)
 
 - Scope, section map, findings and acceptance: `docs/WEBSITE_MAINTENANCE.md`.
 - Fixed Engineering edition-date/year search without changing the page layout.

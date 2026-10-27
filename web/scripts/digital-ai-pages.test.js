@@ -17,6 +17,55 @@ const useCaseDataset = JSON.parse(fs.readFileSync(
 ));
 const pathways = require("../data/digital-ai/pathways.json");
 const readerNotes = require("../data/digital-ai/reader-notes.json");
+const energyContext = require("../data/digital-ai/energy-context.json");
+const { validateEnergyContext } = require("./validate-energy-context.js");
+
+test("AI energy context preserves complete bilingual explanations and dated provenance", () => {
+  assert.deepEqual(validateEnergyContext(energyContext, "2026-10-27"), []);
+  assert.deepEqual(energyContext.fields.map((field) => field.id), ["compute", "weather", "wind", "hybrids", "grid", "floating", "procurement"]);
+  assert.equal(energyContext.scenarioBasis, "editorial_conditional");
+  assert.equal(energyContext.developments.find((item) => item.id === "iea-update").kind, "projection");
+  assert.equal(energyContext.developments.find((item) => item.id === "google-contracts").kind, "company_contract");
+});
+
+for (const [name, mutate, expected] of [
+  ["unsupported schema", (d) => d.schemaVersion = "other", /schema unsupported/],
+  ["future review", (d) => d.reviewedOn = "2099-01-01", /review date invalid/],
+  ["duplicate source", (d) => d.sources.push(d.sources[0]), /source ID missing\/duplicate/],
+  ["credential URL", (d) => d.sources[0].url = "https://user:secret@example.com", /credential-free HTTPS/],
+  ["impossible publication date", (d) => d.sources[0].publishedOn = "2026-02-30", /publication date invalid/],
+  ["missing source scope", (d) => d.sources[0].scope = "", /scope required/],
+  ["unknown source", (d) => d.fields[0].sourceIds = ["missing"], /unknown source/],
+  ["missing Chinese explanation", (d) => d.fields[0].mechanism.zh = "", /bilingual text required/],
+  ["missing developer context", (d) => delete d.fields[0].developer, /bilingual text required/],
+  ["duplicate field ID", (d) => d.fields[1].id = d.fields[0].id, /invalid\/duplicate ID/],
+  ["undated news", (d) => d.sources.find((s) => s.id === "edna-flex").publishedOn = null, /needs publication date/],
+  ["unsupported news status", (d) => d.developments[0].kind = "proven_everywhere", /unsupported development kind/],
+  ["scenario presented as forecast", (d) => d.scenarioBasis = "prediction", /must be editorial_conditional/],
+  ["missing future condition", (d) => delete d.scenarios[0].requires, /bilingual text required/],
+  ["broken application link", (d) => d.fields[1].relatedHref = "/digital-ai#missing", /invalid reading-context link/],
+]) {
+  test(`AI energy context rejects ${name}`, () => {
+    const changed = structuredClone(energyContext);
+    mutate(changed);
+    assert.ok(validateEnergyContext(changed, "2026-10-27").some((error) => expected.test(error)));
+  });
+}
+
+test("actual AI energy components render bilingual context, original sources and scenario limits", () => {
+  for (const language of ["en", "zh"]) {
+    const { EnergySystemOverview, EnergyOutlook } = readerLoader(language)("app/digital-ai/energy-system.tsx");
+    const html = renderToStaticMarkup(React.createElement(React.Fragment, null,
+      React.createElement(EnergySystemOverview), React.createElement(EnergyOutlook)));
+    assert.ok(html.includes(language === "en" ? "AI uses energy." : "AI 消耗能源"));
+    assert.ok(html.includes(language === "en" ? "not deployment forecasts" : "并非部署预测"));
+    for (const source of energyContext.sources) assert.ok(html.includes(source.url));
+    assert.ok(html.includes("950 TWh"));
+    assert.ok(html.includes(language === "en" ? "not AI-only demand" : "不是 AI 单独用电量"));
+    const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+    assert.equal(ids.length, new Set(ids).size);
+  }
+});
 
 // Load the actual static route/reader with framework shells substituted only.
 function readerLoader(language = "en") {

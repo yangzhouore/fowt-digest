@@ -44,11 +44,17 @@ Website:
 - `web/app/engineering/[slug]/page.tsx`
 - `web/app/engineering/[slug]/candidates/page.tsx`
 - `web/app/industry/page.tsx`
+- `web/app/industry/uk/page.tsx` and `web/app/industry/[country]/page.tsx`
+- `web/app/industry/uk-system-guide.tsx` and `country-system-guide.tsx`
 - `web/app/projects/page.tsx`
 - `web/app/projects/[slug]/page.tsx`
 - `web/app/digital-ai/page.tsx`
 - `web/app/digital-ai/signal-filters.tsx`
 - `web/app/digital-ai/energy-system.tsx` and `energy-system.module.css`
+- `web/app/digital-ai/use-case-card.tsx` and `pathway-comparison.tsx`
+- `web/app/digital-ai/signals/[slug]/page.tsx` and `signal-reader.tsx`
+- `web/app/connected-project-context.tsx`
+- `web/app/projects/project-public-evidence.tsx`
 - `web/app/methodology/page.tsx`
 - `web/app/i18n/`
 - `web/app/globals.css`
@@ -65,9 +71,16 @@ Static website data:
 - `web/data/industry/industry-map.ts`
 - `web/data/projects/projects.json`
 - `web/data/project-adapter.ts`
+- `web/data/projects/public-evidence.json`
+- `web/data/project-public-evidence-adapter.ts`
+- `web/data/context/project-engineering-links.json`
+- `web/data/connected-context-adapter.ts` and `context-navigation.ts`
+- `web/data/industry/country-guides.ts` and `country-guide-*.ts`
+- `web/data/industry/uk-system-guide.json` (independent UK guide fixture)
 - `web/data/digital-ai/signals.json`
 - `web/data/digital-ai-adapter.ts`
 - `web/data/digital-ai/energy-context.json` (independent broader energy context)
+- `web/data/digital-ai/use-cases.json`, `pathways.json`, `reader-notes.json`
 
 Website validation scripts:
 
@@ -80,6 +93,11 @@ Website validation scripts:
 - `web/scripts/validate-static-digital-ai.js`
 - `web/scripts/validate-static-digital-ai.test.js`
 - `web/scripts/validate-energy-context.js` (called by Digital & AI validation)
+- `web/scripts/validate-project-public-evidence.js`
+- `web/scripts/validate-connected-context.js`
+- `web/data/industry/country-guides.test.js` and `uk-guide.test.js`
+- `web/tests/browser/` and `web/playwright.config.ts`
+- `web/app/industry/*.smoke.spec.ts` and `browser.playwright.config.ts`
 
 Repository workflow:
 
@@ -100,6 +118,7 @@ Open only when relevant:
 - Research pipeline architecture: `docs/PIPELINE_ARCHITECTURE.md`
 - Research pipeline contracts: `docs/PIPELINE_DATA_MODEL.md`
 - Website publishing workflow: `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
+- Section maintenance and code review: `docs/WEBSITE_MAINTENANCE.md`
 - Engineering source policy: `docs/ENGINEERING_SOURCE_POLICY.md`
 - Engineering briefing contract: `docs/ENGINEERING_BRIEFING_DATA_MODEL.md`
 - Selection transparency: `docs/SELECTION_TRANSPARENCY.md`

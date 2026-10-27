@@ -11,7 +11,7 @@ Use this file as the resume entry point for a new Codex session.
 - Source review and implementation: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
+- Delivery: leave AI × Energy PR #50 open for manual merge; record remote CI/preview separately from local results. Maintenance PR #49 is merged at `20533eb`.
 
 The product baseline at `710bba5` includes Digital & AI, Methodology, the bilingual
 interface, Project Intelligence across all 48 projects, Connected Project Context,
@@ -45,6 +45,12 @@ Current AI × Energy work:
 - Preserve original fourteen Signals, ten wind application cards, four pathways
   and existing reader routes. Context sources do not update their recorded status.
 - No live news, AI runtime, collection, new pipeline stages or automatic publishing.
+
+Merged maintenance review (PR #49, `20533eb`):
+
+- Scope, section ownership, findings and validation: `docs/WEBSITE_MAINTENANCE.md`
+- Browser acceptance: `web/tests/browser/README.md`
+- Preserve the existing presentation and committed source records.
 
 Latest merged weekly update:
 

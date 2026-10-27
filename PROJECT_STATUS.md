@@ -1,6 +1,7 @@
 # Project Status
 
-Last updated: 2026-10-27. Feature base: main `580a83e` (weekly PR #48);
+Last updated: 2026-10-27. Feature base: main `580a83e` (weekly PR #48),
+updated with maintenance main `20533eb` (PR #49);
 latest merged product feature: `710bba5` (PR #47).
 
 ## Current State
@@ -12,7 +13,7 @@ latest merged product feature: `710bba5` (PR #47).
 - Source review and acceptance: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: leave the feature PR open for manual merge; final-head CI and preview are recorded in its description.
+- Delivery: leave AI × Energy PR #50 open for manual merge; record remote CI/preview separately from local results. Maintenance PR #49 is merged at `20533eb`.
 
 ## Current AI × Energy Explainer
 
@@ -27,11 +28,12 @@ latest merged product feature: `710bba5` (PR #47).
 - Original fourteen Signals/readers, ten wind cards, four pathways and unrelated
   source datasets stay unchanged. No runtime AI, news collection or automation.
 - Local acceptance: 210 Python tests, all static-data validation, 172 data tests,
-  lint, 454-page production build and 20 shared Chromium journeys passed.
+  lint, 454-page production build and 23 shared Chromium journeys passed after
+  incorporating maintenance main `20533eb`.
 
 ## Latest Merged Weekly Update: 19-25 October 2026 (PR #48)
 
-- Branch: `data/weekly-digest-2026-10-25`, based on main `710bba5`.
+- Branch: `data/weekly-digest-2026-10-25`, based on main `710bba5`; merged manually into main at `580a83e` (PR #48).
 - Skills: `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md`.
 - Collection/selection/validation record: `docs/weekly/2026-10-25.md`.
 - Research: 207 obtained raw records -> 83 deduplicated candidates -> five selected
@@ -224,8 +226,8 @@ committed `main` through Git integration.
 - Homepage Research cards do not show abstract previews.
 - Current Engineering Homepage items use controlled region labels, with
   global/non-specific items classified as `Unspecified`.
-- Projects filtering is limited to region, country and normalized lifecycle
-  status. Merged Connected Project Context adds navigation to
+- Projects filtering includes region, country, lifecycle, FID, capacity and
+  paired readiness area/state. Merged Connected Project Context adds navigation to
   existing Industry entries through recorded company IDs. Geographic maps, GIS
   data and automatic project collection/update remain outside scope.
 
@@ -252,14 +254,9 @@ journeys; see the Industry implementation document for exact commands.
 
 Pushes and pull requests to `main` trigger CI. The focused 62 Industry checks and
 12 Industry browser journeys are additional direct local checks, not new CI jobs.
-Record final-head maintenance CI in its PR description. The first browser attempt
-of merged-main [run 39928920732](https://github.com/yangzhouore/fowt-digest/actions/runs/39928920732)
-was cancelled before the build/tests: its log records 25.9 MB of Ubuntu dependency
-downloads taking 9 minutes 40 seconds. This was setup delay, not a failed browser
-assertion. A retry of the cancelled browser job also ended during installation,
-without running the build or tests. The old main workflow therefore still needs
-the maintenance change to be merged; rerunning the old installer does not apply
-the fix. The maintenance PR records its own final-head checks separately.
+Historical pre-maintenance browser runs stalled during OS dependency installation;
+the current workflow below already includes the container fix. Those old runs
+do not describe current branch health. Record new final-head CI in its PR.
 
 Browser CI now uses the official Playwright Noble image, pinned to the locked
 `@playwright/test` version 1.63.0 and an immutable image digest, with browsers and
@@ -269,6 +266,17 @@ together; do not restore unbounded per-run OS package installation or treat
 skipped setup/tests as passing. The ten-minute job limit and failure-diagnostic
 upload remain in place. See [Playwright's Docker guidance](https://playwright.dev/docs/docker)
 for image contents and version compatibility.
+
+## Merged Maintenance Review (PR #49, `20533eb`)
+
+- Scope, section map, findings and acceptance: `docs/WEBSITE_MAINTENANCE.md`.
+- Fixed Engineering edition-date/year search without changing the page layout.
+- Added three shared browser journeys for Engineering search, Research provenance
+  navigation, and Methodology/About mobile bilingual reading.
+- Updated routes, ownership, publication checks and browser CI documentation.
+- Source-backed data, styling, pipeline and scoring remain unchanged.
+- Local results are in the review document; remote CI and preview status must be
+  checked against the eventual PR head.
 
 ## Reference Map
 

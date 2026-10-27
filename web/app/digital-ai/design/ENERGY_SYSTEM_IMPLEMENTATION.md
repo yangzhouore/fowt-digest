@@ -2,6 +2,10 @@
 
 Date: 2026-10-27. Branch: `feat/ai-energy-explainer`. Base: main `580a83e`.
 Scope and acceptance were recorded before implementation in `ENERGY_SYSTEM_MVP.md`.
+After initial acceptance, remote main advanced to `20533eb` with maintenance PR
+#49. That main was merged into this feature branch; documentation keeps both
+the completed review and current AI × Energy scope. The combined shared browser
+suite includes the maintenance PR's three additional journeys.
 
 ## Delivered reading experience
 
@@ -69,7 +73,7 @@ adds seventeen positive, malformed-data and real-component rendering checks.
 Three new browser journeys exercise all fields and both perspectives, keyboard
 selection, related wind-example/hash navigation, dated developments, scenario
 conditions, Chinese/dark 390px rendering, glossary and horizontal overflow.
-The seventeen existing shared journeys protect application cards, fourteen
+The twenty existing shared journeys after PR #49 protect application cards, fourteen
 readers, four pathways, source caveats and other site areas.
 
 The first browser run identified a same-page Next.js Link/hash interaction:
@@ -86,7 +90,7 @@ npm.cmd run validate:data -> passed (including the new context validator)
 npm.cmd run test:data -> 172 passed
 npm.cmd run lint -> passed
 npm.cmd run build -> passed, 454 static pages
-npm.cmd run test:smoke -> 20 passed (26.8 seconds)
+npm.cmd run test:smoke -> 23 passed (29.7 seconds), including merged maintenance journeys
 Final overview screenshot capture / affected journeys -> 2 passed
 git diff --check -> passed
 Protected source-record diff -> unchanged
@@ -98,6 +102,12 @@ They are local QA artifacts, not golden-image comparisons. The initial failures
 were resolved before acceptance. The expected unknown-reader request still
 returns 404 with the existing Next.js server `NoFallbackError` diagnostic;
 browser runtime/console assertions pass.
+
+The full baseline and shared browser suite above were rerun after incorporating
+main `20533eb`; all passed. The earlier feature-only browser run had 20 journeys.
+The merged maintenance feature's Engineering date search and three reading-path
+journeys are preserved. Documentation conflicts were reconciled without taking
+either task's completed work out of the branch.
 
 No live source requests are needed by the website or test suite. Third-party
 source availability is not an application regression criterion. The focused

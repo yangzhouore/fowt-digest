@@ -51,6 +51,7 @@ Website:
 - `web/app/digital-ai/page.tsx`
 - `web/app/digital-ai/signal-filters.tsx`
 - `web/app/digital-ai/energy-system.tsx` and `energy-system.module.css`
+- `web/app/digital-ai/guide-structure.ts` (explicit topic/workflow reading mappings)
 - `web/app/digital-ai/use-case-card.tsx` and `pathway-comparison.tsx`
 - `web/app/digital-ai/signals/[slug]/page.tsx` and `signal-reader.tsx`
 - `web/app/connected-project-context.tsx`
@@ -125,6 +126,8 @@ Open only when relevant:
 - Digital & AI scope and evidence rules: `docs/M11_DIGITAL_AI_SIGNALS_DESIGN.md`
 - AI × Energy extension scope/source review: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`
   and `ENERGY_SYSTEM_IMPLEMENTATION.md` in the same directory
+- Unified guide review, scope and acceptance: `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md`
+  and `UNIFIED_GUIDE_IMPLEMENTATION.md` in the same directory
 
 Historical milestone and early-design records live under `docs/archive/` and
 should normally remain outside active context.

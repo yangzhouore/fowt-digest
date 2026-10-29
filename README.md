@@ -26,6 +26,9 @@ Repository: https://github.com/yangzhouore/fowt-digest
   grids and renewable procurement, with reader/developer perspectives, dated
   developments and conditional future pathways. Sources and review scope:
   `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
+- A unified Digital & AI reading sequence connects those explanations directly
+  to practical wind workflows, supply comparisons, developments, futures and
+  a final evidence library; see `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
 - Homepage, Engineering, Research, Industry Map, Projects, Digital & AI,
   Methodology, About, paper detail, and selection-transparency reading paths.
 - A reader-facing Methodology that separates Research and Engineering methods,

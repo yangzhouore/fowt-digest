@@ -1,4 +1,4 @@
-import { test as base, expect } from "@playwright/test";
+import { test as base, expect, type Page } from "@playwright/test";
 
 const test = base.extend<{ runtimeErrors: void }>({
   runtimeErrors: [async ({ page }, use) => {
@@ -11,6 +11,16 @@ const test = base.extend<{ runtimeErrors: void }>({
     expect(errors, "Digital & AI runtime and console errors").toEqual([]);
   }, { auto: true }],
 });
+
+// Expected reading hierarchy: choose the topic before its concrete task.
+async function selectWorkflow(page: Page, id: string) {
+  const field = id === "forecasting" ? "weather" : ["twin", "cable"].includes(id) ? "floating" : id === "grid" ? "grid" : "wind";
+  const topic = page.locator(`#energy-${field}`);
+  if (await topic.getAttribute("aria-pressed") !== "true") await topic.click();
+  const button = page.locator(`[data-impact-id="${id}"]`);
+  await button.click();
+  return button;
+}
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/digital-ai");
@@ -34,7 +44,7 @@ test("energy guide explains all seven fields from reader and developer perspecti
     await page.getByRole("button", { name: "I want to understand", exact: true }).click();
   }
   await page.locator("#energy-floating").click();
-  await field.getByRole("link", { name: "Explore the related wind example", exact: false }).click();
+  await selectWorkflow(page, "twin");
   await expect(page.locator("#digital-ai-use-case")).toHaveAttribute("data-use-case", "twin");
   await page.goto("/digital-ai#energy-procurement");
   await expect(field).toHaveAttribute("data-field", "procurement");
@@ -51,7 +61,8 @@ test("dated developments distinguish projections, contracts and conditional futu
     await expect(item.locator("time")).toHaveAttribute("datetime", /^2026-/);
     await item.locator("summary").click();
     await expect(item.getByText("Does not establish", { exact: false })).toBeVisible();
-    await expect(item.getByRole("link").first()).toHaveAttribute("href", /^https:\/\//);
+    await expect(item.locator('a[href^="https://"]').first()).toBeVisible();
+    await expect(item.getByRole("link", { name: "Explore this topic", exact: false })).toHaveAttribute("href", /^#energy-/);
   }
   await page.getByRole("navigation", { name: "AI and energy reading guide" }).getByRole("link", { name: "What could come next" }).click();
   await expect(page.getByRole("heading", { name: "Three pathways, with conditions attached" })).toBeInViewport();
@@ -88,8 +99,7 @@ test("all ten applications explain inputs, decisions and evidence without runtim
   const card = page.locator("#digital-ai-use-case");
   const ids = ["forecasting", "engineering", "vision", "planning", "control", "twin", "predictive", "autonomy", "cable", "grid"];
   for (const id of ids) {
-    const button = page.locator(`[data-impact-id="${id}"]`);
-    await button.click();
+    const button = await selectWorkflow(page, id);
     await expect(button).toBeFocused();
     await expect(button).toHaveAttribute("aria-pressed", "true");
     await expect(card).toHaveCount(1);
@@ -110,6 +120,7 @@ test("all ten applications explain inputs, decisions and evidence without runtim
 });
 
 test("keyboard selection announces a short title and resets expanded evidence", async ({ page }) => {
+  await page.locator("#energy-floating").click();
   const button = page.locator('[data-impact-id="twin"]');
   await button.focus();
   await page.keyboard.press("Enter");
@@ -123,9 +134,10 @@ test("keyboard selection announces a short title and resets expanded evidence", 
   await expect(card.getByText(/Exact sensor inventories/)).toBeVisible();
   await expect(card.getByRole("link", { name: /Original source/ })).toHaveCount(3);
   await expect(card.getByRole("link", { name: /^Read evidence/ })).toHaveCount(3);
-  await page.locator('[data-impact-id="autonomy"]').click();
+  await selectWorkflow(page, "autonomy");
   await expect(card.locator("details")).not.toHaveAttribute("open", "");
   await expect(card.getByText(/Robotic inspection does not demonstrate autonomous repair/)).toBeVisible();
+  await page.locator("#energy-fields").screenshot({ path: "test-results/unified-topic-workflow-desktop.png" });
   await card.scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/digital-ai-desktop-en-light.png" });
   await page.locator('label[for="theme-dark"]').click();
@@ -133,31 +145,34 @@ test("keyboard selection announces a short title and resets expanded evidence", 
   await page.screenshot({ path: "test-results/digital-ai-desktop-en-dark.png" });
 });
 
-test("mobile bilingual cards follow the selected stage without duplicate content or overflow", async ({ page }) => {
+test("mobile bilingual workflows follow their topic without duplicate content or overflow", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   for (const language of ["en", "zh"]) {
     if (language === "zh") await page.getByRole("button", { name: "中文", exact: true }).click();
     for (const id of ["forecasting", "engineering", "vision", "planning", "control", "twin", "predictive", "autonomy", "cable", "grid"]) {
-      await page.locator(`[data-impact-id="${id}"]`).click();
+      await selectWorkflow(page, id);
       const card = page.locator("#digital-ai-use-case");
       await expect(card).toHaveCount(1);
       const layout = await card.evaluate((element) => {
-        const previous = element.previousElementSibling!;
-        return { previousSelected: Boolean(previous.querySelector('button[aria-pressed="true"]')), gap: element.getBoundingClientRect().top - previous.getBoundingClientRect().bottom };
+        const section = element.closest("#energy-fields")!;
+        const explanation = section.querySelector("#energy-field-detail")!;
+        return { selected: section.querySelectorAll('button[data-impact-id][aria-pressed="true"]').length,
+          belowExplanation: element.getBoundingClientRect().top >= explanation.getBoundingClientRect().bottom };
       });
-      expect(layout.previousSelected).toBe(true);
-      expect(Math.abs(layout.gap)).toBeLessThanOrEqual(2);
+      expect(layout.selected).toBe(1);
+      expect(layout.belowExplanation).toBe(true);
       await expect(card.getByText(language === "zh" ? "人工决策" : "Human decision", { exact: true })).toBeVisible();
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     }
   }
-  await page.locator('[data-impact-id="twin"]').click();
+  await selectWorkflow(page, "twin");
   const card = page.locator("#digital-ai-use-case");
   await expect(card.getByRole("heading", { level: 3 })).toHaveText("研究系泊系统状态");
   await expect(card.getByRole("heading", { level: 4 })).toContainText("SUBSEE");
   await card.locator("summary").click();
   await expect(card.getByText(/具体传感器清单/)).toBeVisible();
+  await page.locator("#energy-fields").screenshot({ path: "test-results/unified-topic-workflow-mobile-zh.png" });
   await card.scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/digital-ai-mobile-zh-light.png" });
   await page.locator('label[for="theme-dark"]').click();
@@ -165,8 +180,59 @@ test("mobile bilingual cards follow the selected stage without duplicate content
   await page.screenshot({ path: "test-results/digital-ai-mobile-zh-dark.png" });
 });
 
+test("one chapter sequence connects topics, workflows and both evidence collections", async ({ page }) => {
+  const nav = page.getByRole("navigation", { name: "AI and energy reading guide" });
+  await expect(nav).toHaveCount(1);
+  await expect(nav.getByRole("link")).toHaveCount(6);
+  expect(await nav.getByRole("link").evaluateAll((items) => items.map((item) => item.getAttribute("href"))))
+    .toEqual(["#energy-system", "#energy-fields", "#wind-to-ai-heading", "#energy-updates", "#energy-future", "#digital-ai-evidence-heading"]);
+  await expect(page.locator(".digital-ai-lifecycle")).toHaveCount(0);
+  await expect(page.locator("#digital-ai-use-case")).toHaveCount(0);
+  await page.locator("#energy-wind").click();
+  await expect(page.locator("[data-impact-id]")).toHaveCount(6);
+  await selectWorkflow(page, "autonomy");
+  await page.locator("#energy-floating").click();
+  await expect(page.locator("[data-impact-id]")).toHaveCount(2);
+  await expect(page.locator("#digital-ai-use-case")).toHaveAttribute("data-use-case", "twin");
+  await selectWorkflow(page, "cable");
+  await page.locator("#energy-grid").click();
+  await expect(page.locator("#digital-ai-use-case")).toHaveAttribute("data-use-case", "grid");
+  await page.locator("#energy-compute").click();
+  await expect(page.locator("#digital-ai-use-case")).toHaveCount(0);
+  await expect(page.getByText(/^This topic provides wider energy-system context/)).toBeVisible();
+  await nav.getByRole("link", { name: "Evidence", exact: true }).click();
+  await expect(page.locator("#digital-ai-all-evidence")).toHaveAttribute("open", "");
+  await page.getByText("Energy-system sources: dates and review scope", { exact: true }).click();
+  await expect(page.getByRole("link", { name: "Data Centres and Flexibility", exact: true })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Inspect the evidence behind the guide" }).getByText(/14 workflow and supply records describe the examples/)).toBeVisible();
+  await page.screenshot({ path: "test-results/unified-evidence-desktop.png" });
+});
+
+test("legacy deep links and development links restore the right topic with browser history", async ({ page }) => {
+  // Enter the first deep link from another route, as a reader returning from a
+  // detail page would; subsequent links exercise same-document hash navigation.
+  await page.goto("/about");
+  for (const [field, id] of [["weather", "forecasting"], ["wind", "engineering"], ["wind", "vision"], ["wind", "planning"], ["wind", "control"], ["floating", "twin"], ["wind", "predictive"], ["wind", "autonomy"], ["floating", "cable"], ["grid", "grid"]]) {
+    await page.goto(`/digital-ai#application-${id}`);
+    await expect(page.locator("#energy-field-detail")).toHaveAttribute("data-field", field);
+    await expect(page.locator("#digital-ai-use-case")).toHaveAttribute("data-use-case", id);
+    await expect(page.locator(`#application-${id}`)).toBeInViewport();
+  }
+  await page.goto("/digital-ai#application-twin");
+  const google = page.locator("#energy-updates li").filter({ has: page.getByRole("heading", { name: "Computing flexibility enters utility contracts" }) });
+  await google.getByRole("link", { name: "Explore this topic", exact: false }).click();
+  await expect(page.locator("#energy-field-detail")).toHaveAttribute("data-field", "grid");
+  await page.goBack();
+  await expect(page.locator("#digital-ai-use-case")).toHaveAttribute("data-use-case", "twin");
+  await page.goForward();
+  await expect(page.locator("#energy-field-detail")).toHaveAttribute("data-field", "grid");
+  const coordination = page.locator("#energy-future article").filter({ has: page.getByRole("heading", { name: "Coordinate renewables, storage and computing" }) });
+  await coordination.getByRole("link", { name: "Compare the related supply option", exact: false }).click();
+  await expect(page.locator("#pathway-flexible")).toHaveAttribute("aria-pressed", "true");
+});
+
 test("unverified context stays qualified and existing power pathways and filters work", async ({ page }) => {
-  await page.locator('[data-impact-id="cable"]').click();
+  await selectWorkflow(page, "cable");
   await expect(page.locator("#digital-ai-use-case").getByText("Stored context · source not rechecked", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: /Offshore compute/ }).click();
   await expect(page.locator(".digital-ai-pathway-detail")).toContainText("A conceptual direct-power pathway");
@@ -182,7 +248,7 @@ test("unverified context stays qualified and existing power pathways and filters
 });
 
 test("internal reading links return to the exact application and preserve source boundaries", async ({ page, request }) => {
-  await page.locator('[data-impact-id="twin"]').click();
+  await selectWorkflow(page, "twin");
   await page.locator("#digital-ai-use-case").getByRole("link", { name: /^Read evidence/ }).click();
   await expect(page).toHaveURL(/\/digital-ai\/signals\/subsee-4d-floating-wind-mooring-digital-twin$/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("SUBSEE");
@@ -195,7 +261,7 @@ test("internal reading links return to the exact application and preserve source
   await expect(page.locator('[data-impact-id="twin"]')).toHaveAttribute("aria-pressed", "true");
   const response = await request.get("/digital-ai/signals/not-a-real-signal");
   expect(response.status()).toBe(404);
-  await page.locator('[data-impact-id="cable"]').click();
+  await selectWorkflow(page, "cable");
   await page.locator("#digital-ai-use-case").getByRole("link", { name: /^Read evidence/ }).click();
   await expect(page.getByText("Stored context · source not rechecked", { exact: true })).toBeVisible();
   await page.getByRole("link", { name: /Back to all evidence/ }).click();
@@ -258,7 +324,7 @@ test("reader and bounded comparison work on mobile in Chinese and dark theme", a
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.getByRole("link", { name: /返回全部证据/ }).click();
   await expect(page.locator("#digital-ai-all-evidence")).toHaveAttribute("open", "");
-  await expect(page.locator("#digital-ai-all-evidence > summary")).toContainText("浏览全部证据");
+  await expect(page.locator("#digital-ai-all-evidence > summary")).toContainText("浏览流程与供电记录");
   await page.getByRole("combobox", { name: /^主题/ }).selectOption("digital_twin");
   await page.getByRole("combobox", { name: /^地区/ }).selectOption("Global");
   await expect(page.getByText(/没有匹配这些筛选条件的记录/)).toBeVisible();

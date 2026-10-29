@@ -1,215 +1,121 @@
 "use client";
 
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { PathwayComparison } from "./pathway-comparison";
 import { UseCaseCard, useCases } from "./use-case-card";
-import styles from "./use-case-card.module.css";
-import type {
-  DigitalAiMaturity,
-  DigitalAiSignalWithSources,
-  DigitalAiTopic,
-} from "../../data/digital-ai-adapter";
+import { EnergyIntroduction, EnergyFieldExplorer, EnergyOutlook, EnergySourceRegistry, GuideNavigation } from "./energy-system";
+import { fieldWorkflows, fieldForWorkflow } from "./guide-structure";
+import context from "../../data/digital-ai/energy-context.json";
+import styles from "./energy-system.module.css";
+import type { DigitalAiMaturity, DigitalAiSignalWithSources, DigitalAiTopic } from "../../data/digital-ai-adapter";
 import { useLanguage } from "../i18n/language-context";
 
-type SignalListItem = DigitalAiSignalWithSources & {
-  topicLabel: string;
-  maturityLabel: string;
-};
-
+type SignalListItem = DigitalAiSignalWithSources & { topicLabel: string; maturityLabel: string };
 type Option<T extends string> = { value: T; label: string };
-
 type DigitalAiExperienceProps = {
-  signalCount: number;
-  signals: SignalListItem[];
-  topics: Option<DigitalAiTopic>[];
-  maturities: Option<DigitalAiMaturity>[];
-  regions: string[];
+  signalCount: number; signals: SignalListItem[]; topics: Option<DigitalAiTopic>[];
+  maturities: Option<DigitalAiMaturity>[]; regions: string[];
 };
 
-type ImpactArea = {
-  id: string;
-  stage: string;
-  label: string;
-  asset: string;
-};
-
-const impactAreas: ImpactArea[] = [
-  {
-    id: "forecasting",
-    stage: "Develop",
-    label: "AI Forecasting",
-    asset: "Site + metocean",
-  },
-  {
-    id: "engineering",
-    stage: "Design",
-    label: "AI Engineering",
-    asset: "Turbine + floater",
-  },
-  {
-    id: "vision",
-    stage: "Manufacture",
-    label: "AI Vision",
-    asset: "Fabrication + quality",
-  },
-  {
-    id: "planning",
-    stage: "Install",
-    label: "AI Planning",
-    asset: "Port + vessels",
-  },
-  {
-    id: "control",
-    stage: "Operate",
-    label: "Smart Control",
-    asset: "Turbine + wind farm",
-  },
-  {
-    id: "twin",
-    stage: "Operate",
-    label: "Digital Twin",
-    asset: "Platform + moorings",
-  },
-  {
-    id: "predictive",
-    stage: "Operate",
-    label: "Predictive AI",
-    asset: "Inspection + O&M",
-  },
-  {
-    id: "autonomy",
-    stage: "Operate",
-    label: "Autonomy",
-    asset: "Drone + robot",
-  },
-  {
-    id: "cable",
-    stage: "Connect",
-    label: "Smart Monitoring",
-    asset: "Cable + electrical",
-  },
-  {
-    id: "grid",
-    stage: "Connect",
-    label: "AI Forecasting",
-    asset: "Offshore + onshore grid",
-  },
-];
-
-const lifecycleStages = ["Develop", "Design", "Manufacture", "Install", "Operate", "Connect"];
-
-export function DigitalAiExperience({
-  signalCount,
-  signals,
-  topics,
-  maturities,
-  regions,
-}: DigitalAiExperienceProps) {
+export function DigitalAiExperience({ signalCount, signals, topics, maturities, regions }: DigitalAiExperienceProps) {
   const { language } = useLanguage();
-  const [selectedImpactId, setSelectedImpactId] = useState(impactAreas[0].id);
+  const copy = (en: string, zh: string) => language === "zh" ? zh : en;
+  const [fieldId, setFieldId] = useState("compute");
+  const [selectedImpactId, setSelectedImpactId] = useState("forecasting");
+  const [hashRequest, setHashRequest] = useState("");
   const [topic, setTopic] = useState("All");
   const [maturity, setMaturity] = useState("All");
   const [region, setRegion] = useState("All");
+  const selectField = useCallback((id: string) => {
+    setFieldId(id);
+    setSelectedImpactId(fieldWorkflows[id][0] ?? "");
+    setHashRequest("");
+  }, []);
 
   useEffect(() => {
     const selectFromHash = () => {
       const hash = window.location.hash;
-      const id = hash.replace(/^#application-/, "");
-      if (impactAreas.some((area) => area.id === id)) setSelectedImpactId(id);
+      const application = hash.replace(/^#application-/, "");
+      const field = hash.replace(/^#energy-/, "");
+      const parent = fieldForWorkflow(application);
+      if (parent) { setFieldId(parent); setSelectedImpactId(application); }
+      else if (hash === "#ai-to-wind-heading") { setFieldId("weather"); setSelectedImpactId("forecasting"); }
+      else if (context.fields.some((entry) => entry.id === field)) {
+        setFieldId(field); setSelectedImpactId(fieldWorkflows[field][0] ?? "");
+      }
       if (hash === "#digital-ai-evidence-heading") {
         const drawer = document.getElementById("digital-ai-all-evidence");
         if (drawer instanceof HTMLDetailsElement) drawer.open = true;
       }
+      setHashRequest(hash);
     };
-    selectFromHash();
     window.addEventListener("hashchange", selectFromHash);
-    return () => window.removeEventListener("hashchange", selectFromHash);
+    window.addEventListener("popstate", selectFromHash);
+    selectFromHash();
+    return () => {
+      window.removeEventListener("hashchange", selectFromHash);
+      window.removeEventListener("popstate", selectFromHash);
+    };
   }, []);
 
-  const signalById = useMemo(
-    () => new Map(signals.map((signal) => [signal.id, signal])),
-    [signals],
-  );
-  const selectedImpact = impactAreas.find((area) => area.id === selectedImpactId)!;
-  const filteredSignals = useMemo(
-    () => signals.filter((signal) => (
-      (topic === "All" || signal.topic === topic) &&
-      (maturity === "All" || signal.maturity === maturity) &&
-      (region === "All" || signal.region === region)
-    )),
-    [maturity, region, signals, topic],
-  );
+  // Legacy application anchors may only exist after selecting their parent topic.
+  useEffect(() => {
+    if (!hashRequest) return;
+    document.getElementById(hashRequest.slice(1))?.scrollIntoView({ block: "nearest" });
+  }, [hashRequest, fieldId, selectedImpactId]);
 
-  return (
-    <>
-      <section className="digital-ai-story" aria-labelledby="ai-to-wind-heading">
-        <header className="digital-ai-section-heading">
-          <span>01</span>
-          <div>
-            <p className="eyebrow">{language === "zh" ? "AI 将如何" : "How will AI"}</p>
-            <h2 id="ai-to-wind-heading">{language === "zh" ? "改变海上风电？" : "Change offshore wind?"}</h2>
+  const signalById = useMemo(() => new Map(signals.map((signal) => [signal.id, signal])), [signals]);
+  const workflowIds = fieldWorkflows[fieldId];
+  const selectedWorkflow = workflowIds.includes(selectedImpactId) ? selectedImpactId : workflowIds[0];
+  const selectedCase = useCases.find((item) => item.id === selectedWorkflow);
+  const filteredSignals = useMemo(() => signals.filter((signal) => (
+    (topic === "All" || signal.topic === topic) && (maturity === "All" || signal.maturity === maturity) &&
+    (region === "All" || signal.region === region)
+  )), [maturity, region, signals, topic]);
+
+  return <>
+    <GuideNavigation />
+    <EnergyIntroduction />
+    <EnergyFieldExplorer fieldId={fieldId} onFieldChange={selectField}>
+      <div id="ai-to-wind-heading" className={styles.workflows}>
+        {workflowIds.length ? <>
+          <p className={styles.kicker}>{copy("Put this topic into a wind workflow", "将本主题放入风电工作流程")}</p>
+          <p>{copy("Each illustrative task keeps its documented examples or explicit evidence gap. Select a task to follow inputs, method, output and human decision.", "每项示意任务分别保留已有案例或明确证据空缺。选择任务，依次理解输入、方法、输出与人工决策。")}</p>
+          <div className={styles.workflowButtons} role="group" aria-label={copy("Related wind workflows", "相关风电流程")}>
+            {workflowIds.map((id) => {
+              const item = useCases.find((entry) => entry.id === id)!;
+              return <button key={id} id={`application-${id}`} data-impact-id={id} type="button"
+                aria-pressed={id === selectedWorkflow} aria-controls="digital-ai-use-case"
+                onClick={() => { setSelectedImpactId(id); setHashRequest(""); }}>{item.title[language]}</button>;
+            })}
           </div>
-        </header>
-
-        <p className={styles.announcement} role="status" aria-live="polite" aria-atomic="true">
-          {useCases.find((item) => item.id === selectedImpactId)!.title[language]}
-        </p>
-        <div className={`digital-ai-lifecycle ${styles.lifecycle}`} aria-label={language === "zh" ? "\u6d77\u4e0a\u98ce\u7535\u5e94\u7528\u9886\u57df" : "Offshore wind application areas"}>
-          {lifecycleStages.map((stage, stageIndex) => (
-            <Fragment key={stage}>
-              <div className="digital-ai-stage" data-stage={stage}>
-                <div className="digital-ai-stage-marker" aria-hidden="true">
-                  <span>{String(stageIndex + 1).padStart(2, "0")}</span>
-                </div>
-                <h3>{digitalCopy(stage, language)}</h3>
-                <div className="digital-ai-impact-buttons">
-                  {impactAreas.filter((area) => area.stage === stage).map((area) => (
-                    <button
-                      className={selectedImpact.id === area.id ? "is-active" : ""}
-                      key={area.id}
-                      id={`application-${area.id}`}
-                      type="button"
-                      aria-pressed={selectedImpact.id === area.id}
-                      aria-controls="digital-ai-use-case"
-                      data-impact-id={area.id}
-                      onClick={() => setSelectedImpactId(area.id)}
-                    >
-                      <strong>{digitalCopy(area.label, language)}</strong>
-                      <span>{digitalCopy(area.asset, language)}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-              {selectedImpact.stage === stage ? <UseCaseCard id={selectedImpact.id} signals={signalById} language={language} maturityLabel={digitalCopy} /> : null}
-            </Fragment>
-          ))}
-        </div>
-      </section>
-
-      <section className="digital-ai-story digital-ai-power-story" aria-labelledby="wind-to-ai-heading">
-        <header className="digital-ai-section-heading">
-          <span>02</span>
-          <div>
-            <p className="eyebrow">{language === "zh" ? "海上风电将如何" : "How will offshore wind"}</p>
-            <h2 id="wind-to-ai-heading">{language === "zh" ? "为 AI 供能？" : "Power AI?"}</h2>
-          </div>
-        </header>
-
-        <PathwayComparison language={language} signals={signalById} />
-      </section>
-
+          <p className={styles.announcement} role="status" aria-live="polite" aria-atomic="true">{selectedCase?.title[language]}</p>
+          <UseCaseCard id={selectedWorkflow} signals={signalById} language={language} maturityLabel={digitalCopy} />
+        </> : <p className={styles.contextNote}>{copy("This topic provides wider energy-system context. The detailed wind workflows are under Weather, Wind project work, Grids and Floating wind; compare electricity-supply choices in the next chapter.", "本主题提供更广的能源系统背景。风电详细流程位于天气、风电项目工作、电网与浮式风电主题；下一章比较供电选择。")}</p>}
+      </div>
+    </EnergyFieldExplorer>
+    <section className={`digital-ai-story digital-ai-power-story ${styles.supply}`} aria-labelledby="wind-to-ai-heading">
+      <header className="digital-ai-section-heading"><span>03</span><div>
+        <p className="eyebrow">{copy("Energy for AI", "能源为 AI 供电")}</p>
+        <h2 id="wind-to-ai-heading">{copy("How could wind supply computing?", "风电如何为计算供电？")}</h2>
+      </div></header>
+      <p>{copy("The previous chapter asks how AI supports energy decisions. Now reverse the question: where does computing get electricity, how is it bought, and what happens when wind output falls? Compare the four reading contexts below.", "上一章讨论 AI 如何支持能源决策。现在反过来问：计算的电力来自哪里、如何采购、风电出力下降时怎么办？下方比较四种阅读背景。")}</p>
+      <PathwayComparison language={language} signals={signalById} />
+    </section>
+    <EnergyOutlook />
       <section className="digital-ai-evidence" aria-labelledby="digital-ai-evidence-heading">
         <header className="digital-ai-section-heading digital-ai-evidence-heading">
-          <span>03</span>
+          <span>06</span>
           <div>
-            <p className="eyebrow">{language === "zh" ? "证据" : "Evidence"}</p>
-            <h2 id="digital-ai-evidence-heading">{language === "zh" ? `${signalCount} 条有来源依据的信号` : `${signalCount} source-backed signals`}</h2>
+            <p className="eyebrow">{language === "zh" ? "查证与继续阅读" : "Check and read further"}</p>
+            <h2 id="digital-ai-evidence-heading">{language === "zh" ? "查看支撑这些说明的证据" : "Inspect the evidence behind the guide"}</h2>
           </div>
         </header>
 
+        <p>{language === "zh" ? `${signalCount} 条流程与供电记录展示已有案例；10 个能源系统来源支持更广的说明。各自保留原始范围和复核日期。` : `${signalCount} workflow and supply records describe the examples; 10 energy-system sources support the wider explanation. Each keeps its own scope and review dates.`}</p>
         <details id="digital-ai-all-evidence" className="digital-ai-evidence-drawer">
-          <summary>{language === "zh" ? "浏览全部证据" : "Explore all evidence"} <span aria-hidden="true">↓</span></summary>
+          <summary>{language === "zh" ? "浏览流程与供电记录" : "Browse workflow and supply records"} <span aria-hidden="true">↓</span></summary>
           <div className="digital-ai-filter-controls">
             <label>
               <span>{language === "zh" ? "主题" : "Topic"}</span>
@@ -261,9 +167,9 @@ export function DigitalAiExperience({
             ))}
           </ol>
         </details>
+        <EnergySourceRegistry />
       </section>
-    </>
-  );
+  </>;
 }
 
 function SourceLinks({ signal }: { signal: SignalListItem }) {

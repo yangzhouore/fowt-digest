@@ -3,6 +3,8 @@ import { test as base, expect } from "@playwright/test";
 const test = base.extend<{ runtimeErrors: void }>({
   runtimeErrors: [async ({ page }, use) => {
     const errors: string[] = [];
+    // Vercel serves this collector only on deployed projects, not next start.
+    await page.route("**/_vercel/insights/script.js", (route) => route.fulfill({ status: 200, contentType: "application/javascript", body: "/* Hosted collector stub: no traffic sent by smoke tests. */" }));
     page.on("pageerror", (error) => errors.push(error.message));
     page.on("console", (message) => {
       if (message.type() === "error") errors.push(message.text());

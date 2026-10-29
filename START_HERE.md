@@ -2,6 +2,14 @@
 
 Use this file as the resume entry point for a new Codex session.
 
+## Active owner request: private analytics
+
+Work is on `feature/private-analytics-dashboard`, from latest fetched `main`.
+Read `docs/private-analytics.md` for scope, configuration, privacy and acceptance.
+Only `/admin/analytics` may render dynamically. The owner accepted implementation
+and authorized committing and pushing this feature branch for deployment review.
+Do not merge to `main` or create a PR without a further owner request.
+
 ## Stable State
 
 - Current stable branch: `main`

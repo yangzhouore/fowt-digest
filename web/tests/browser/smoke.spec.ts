@@ -4,6 +4,8 @@ import { test as base, expect } from "@playwright/test";
 const test = base.extend<{ runtimeErrors: void }>({
   runtimeErrors: [async ({ page }, use) => {
     const errors: string[] = [];
+    // Vercel serves this collector only on deployed projects, not next start.
+    await page.route("**/_vercel/insights/script.js", (route) => route.fulfill({ status: 200, contentType: "application/javascript", body: "/* Hosted collector stub: no traffic sent by smoke tests. */" }));
     // Company favicons are decorative third-party images, outside the app contract.
     await page.route("https://www.google.com/s2/favicons?**", (route) => route.fulfill({ status: 200, contentType: "image/svg+xml", body: '<svg xmlns="http://www.w3.org/2000/svg"/>' }));
     page.on("pageerror", (error) => errors.push(error.message));

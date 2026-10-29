@@ -14,6 +14,9 @@ and English/Chinese desktop/mobile presentation.
 They use visible reader-facing content, not dataset counts or fixed edition dates.
 Uncaught browser errors and console errors fail the tests. Decorative Google
 company favicons are stubbed so third-party availability cannot affect acceptance.
+The Vercel Web Analytics hosted script is also stubbed: local `next start` does
+not serve it, and smoke tests must not send analytics. The SDK still mounts and
+queues page views; actual collection requires an enabled Vercel deployment.
 
 From `web/`, run:
 

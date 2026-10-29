@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { LanguageProvider } from "./i18n/language-context";
 
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><LanguageProvider>{children}</LanguageProvider></body>
+      <body><LanguageProvider>{children}</LanguageProvider><Analytics /></body>
     </html>
   );
 }

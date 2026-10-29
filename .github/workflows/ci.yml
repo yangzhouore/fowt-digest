@@ -55,6 +55,9 @@ jobs:
       - name: Run static digest data tests
         run: npm run test:data
 
+      - name: Test private analytics
+        run: npm run test:admin
+
       - name: Lint website
         run: npm run lint
 

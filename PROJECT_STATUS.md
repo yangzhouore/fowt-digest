@@ -1,5 +1,28 @@
 # Project Status
 
+## Private analytics dashboard (2026-10-29)
+
+- Owner-requested work on `feature/private-analytics-dashboard` from latest main.
+- Scope and operator guide: `docs/private-analytics.md`.
+- HTTP Basic owner authentication; server-side Vercel/GitHub read-only traffic
+  queries; country aggregates only in the dashboard; no cookies or persistence.
+- Official `@vercel/analytics/next` collector added to the root layout at the
+  owner's request. No custom events or Speed Insights. Vercel's standard
+  collection may retain region/city geography and uses a daily visitor hash;
+  country-only reporting is enforced by this dashboard, not provider storage.
+- Public rendering remains static; `/admin/analytics` is the only dynamic page.
+- Provider credentials are absent locally. The owner reports Vercel variables
+  configured and Analytics enabled; live provider/collection checks remain pending.
+- Implementation accepted; owner authorized committing and pushing this feature
+  branch for deployment review. No merge to `main` or PR is authorized.
+- Local acceptance: 210 pipeline tests, all static-data validators, 172 data
+  tests, 10 focused admin tests, lint, a production build with all 454 public
+  static pages preserved, and 24 Chromium smoke tests passed. The initial
+  sandboxed pytest run could not access Windows temporary files; the full run
+  passed with the required filesystem access. `git diff --check` passed.
+- The browser run emitted one existing public-reader `NoFallbackError` server
+  diagnostic while all reader assertions passed; no public reader code changed.
+
 Last updated: 2026-10-27. Feature base: main `580a83e` (weekly PR #48),
 updated with maintenance main `20533eb` (PR #49);
 latest merged product feature: `710bba5` (PR #47).

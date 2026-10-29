@@ -32,6 +32,12 @@
 .audience button[aria-pressed="true"] { background: var(--ink); color: var(--page); }
 .fieldDetail { padding: 24px 28px; background: var(--paper); border-top: 2px solid var(--accent); }
 .fieldDetail h3 { font-size: 1.5rem; }
+.workflows { margin-top: 24px; }
+.workflowButtons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 16px 0; }
+.workflowButtons button { padding: 12px 14px; text-align: left; font: inherit; font-size: 0.83rem; line-height: 1.45; cursor: pointer; background: transparent; color: var(--ink); border: 1px solid var(--border); scroll-margin-top: 20px; }
+.workflowButtons button[aria-pressed="true"] { background: var(--paper); border-color: var(--accent); box-shadow: inset 3px 0 var(--accent); }
+.contextNote { padding: 14px 18px; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.83rem; }
+.supply { margin-top: 0; }
 .action { border-left: 2px solid var(--accent); padding: 4px 18px; margin: 20px 0; }
 .moreLink { display: inline-block; margin-top: 10px; font-size: 0.8rem; }
 .glossary, .registry { border-top: 1px solid var(--border); margin-top: 22px; padding: 16px 0; }
@@ -56,6 +62,7 @@
   .fieldButtons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section { padding: 30px 0; }
   .fieldDetail { padding: 20px 16px; }
+  .workflowButtons { grid-template-columns: 1fr; }
   .navigation { gap: 10px 18px; }
   .relationships, .scenarios { gap: 22px; }
   .systemFlows { padding: 16px; }

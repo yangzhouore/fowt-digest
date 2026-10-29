@@ -1,6 +1,6 @@
 # Browser smoke tests
 
-Twenty-three Chromium tests protect homepage / latest-edition navigation, Projects
+Twenty-five Chromium tests protect homepage / latest-edition navigation, Projects
 filtering and expansion, project-detail navigation, language switching, public
 evidence navigation, honest review states, connected Project / Engineering / Industry
 journeys, unique company anchors, and mobile Chinese / dark presentation.
@@ -11,6 +11,10 @@ search/paper/edition/candidate navigation, and Methodology/About mobile reading.
 The broader AI × Energy guide adds seven-field reader/developer selection,
 related wind-example navigation, dated developments, conditional future pathways
 and English/Chinese desktop/mobile presentation.
+The unified guide additionally checks one ordered chapter navigation, contextual
+workflow selection without stale cards, both evidence collections, all ten task
+deep links, related development links and browser back/forward. Existing workflow
+journeys select the parent topic before its task; the separate lifecycle map is removed.
 They use visible reader-facing content, not dataset counts or fixed edition dates.
 Uncaught browser errors and console errors fail the tests. Decorative Google
 company favicons are stubbed so third-party availability cannot affect acceptance.

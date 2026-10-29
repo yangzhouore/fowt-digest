@@ -5,13 +5,13 @@ Use this file as the resume entry point for a new Codex session.
 ## Stable State
 
 - Current stable branch: `main`
-- Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
-- Current product work: user-requested AI × Energy explainer on `feat/ai-energy-explainer`; broader energy context, plain-language logic, reader/developer perspectives, dated developments and conditional futures.
-- Scope and acceptance: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`.
-- Source review and implementation: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
+- Latest completed product milestone: AI × Energy explainer (PR #50), merged into main at `bb3b06a`.
+- Current product work: user-requested unified Digital & AI guide on `feat/digital-ai-unified-guide`; one reading structure connecting the broader context, practical wind workflows, supply options, developments, futures and evidence.
+- Scope and acceptance: `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md`.
+- Review and implementation: `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: leave AI × Energy PR #50 open for manual merge; record remote CI/preview separately from local results. Maintenance PR #49 is merged at `20533eb`.
+- Delivery: leave the unified-guide PR open for manual merge; record remote CI/preview separately from local results. PR #50 and maintenance PR #49 are merged.
 
 The product baseline at `710bba5` includes Digital & AI, Methodology, the bilingual
 interface, Project Intelligence across all 48 projects, Connected Project Context,
@@ -38,7 +38,15 @@ only when historical context is specifically required.
 
 ## Reference Docs
 
-Current AI × Energy work:
+Current unified Digital & AI work:
+
+- One six-chapter sequence: understand → apply AI → supply computing →
+  developments → conditional futures → evidence.
+- Seven topics replace the competing lifecycle map and contain the ten practical
+  workflows in context. Explicit reading mappings: `web/app/digital-ai/guide-structure.ts`.
+- Existing task/field/pathway/evidence deep links and all source records remain.
+
+Merged AI × Energy context (PR #50, `bb3b06a`):
 
 - Independent context data: `web/data/digital-ai/energy-context.json`.
 - Presentation: `web/app/digital-ai/energy-system.tsx` and its CSS module.
@@ -58,7 +66,7 @@ Latest merged weekly update:
 - Follow `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md` for weekly work.
 - Preserve the visible partial Research coverage note; two OpenAlex continuation
   requests failed with HTTP 401 and the configured collection cap was reached.
-- PR #48 was merged at `580a83e`; keep the new AI × Energy PR open for manual merge.
+- PR #48 was merged at `580a83e`; this work does not republish the week.
 
 Merged Digital & AI evidence reader and comparison (PR #47, `710bba5`):
 
@@ -149,9 +157,10 @@ JSON and TypeScript fixtures. It does not run the pipeline, query OpenAlex,
 collect engineering sources, deploy itself, or use AI-generated summaries.
 
 The primary navigation covers Engineering, Industry Map, Projects, Digital & AI,
-Research, and Methodology. `/digital-ai` presents the two-way AI × offshore-wind
-relationship through an offshore-wind lifecycle map, energy pathways, and 14
-source-backed Signals as supporting evidence. The interface and fixed editorial
+Research, and Methodology. `/digital-ai` uses one six-chapter AI × Energy guide:
+system foundations, topics with practical wind workflows, computing supply,
+developments, conditional futures and an evidence library. Fourteen source-backed
+records support the workflows and supply comparisons. The interface and fixed editorial
 copy can switch between English and Simplified Chinese; source-backed titles,
 abstracts, project/company facts, publishers, proper nouns, and URLs remain in
 their original language unless an explicit Chinese field exists.

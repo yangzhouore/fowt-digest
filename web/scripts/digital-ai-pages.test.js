@@ -54,14 +54,50 @@ for (const [name, mutate, expected] of [
 
 test("actual AI energy components render bilingual context, original sources and scenario limits", () => {
   for (const language of ["en", "zh"]) {
-    const { EnergySystemOverview, EnergyOutlook } = readerLoader(language)("app/digital-ai/energy-system.tsx");
+    const { EnergyIntroduction, EnergyFieldExplorer, EnergyOutlook, EnergySourceRegistry } = readerLoader(language)("app/digital-ai/energy-system.tsx");
     const html = renderToStaticMarkup(React.createElement(React.Fragment, null,
-      React.createElement(EnergySystemOverview), React.createElement(EnergyOutlook)));
+      React.createElement(EnergyIntroduction),
+      React.createElement(EnergyFieldExplorer, { fieldId: "compute", onFieldChange: () => {} }),
+      React.createElement(EnergyOutlook), React.createElement(EnergySourceRegistry)));
     assert.ok(html.includes(language === "en" ? "AI uses energy." : "AI 消耗能源"));
     assert.ok(html.includes(language === "en" ? "not deployment forecasts" : "并非部署预测"));
     for (const source of energyContext.sources) assert.ok(html.includes(source.url));
     assert.ok(html.includes("950 TWh"));
     assert.ok(html.includes(language === "en" ? "not AI-only demand" : "不是 AI 单独用电量"));
+    const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+    assert.equal(ids.length, new Set(ids).size);
+  }
+});
+
+test("unified guide maps all ten workflows once and links every development and scenario to valid context", () => {
+  const structure = readerLoader()("app/digital-ai/guide-structure.ts");
+  const fields = new Set(energyContext.fields.map((field) => field.id));
+  assert.deepEqual(Object.keys(structure.fieldWorkflows).sort(), [...fields].sort());
+  const workflows = Object.values(structure.fieldWorkflows).flat();
+  assert.equal(new Set(workflows).size, workflows.length);
+  assert.deepEqual([...workflows].sort(), useCaseDataset.cases.map((item) => item.id).sort());
+  for (const id of workflows) assert.ok(structure.fieldWorkflows[structure.fieldForWorkflow(id)].includes(id));
+  assert.equal(structure.fieldForWorkflow("unknown"), undefined);
+  assert.deepEqual(Object.keys(structure.developmentTopics).sort(), energyContext.developments.map((item) => item.id).sort());
+  for (const id of Object.values(structure.developmentTopics)) assert.ok(fields.has(id));
+  assert.deepEqual(Object.keys(structure.scenarioTopics).sort(), energyContext.scenarios.map((item) => item.id).sort());
+  for (const entry of Object.values(structure.scenarioTopics)) {
+    assert.ok(fields.has(entry.field));
+    if (entry.pathway) assert.ok(pathways.pathways.some((item) => item.id === entry.pathway));
+  }
+});
+
+test("actual page has one six-chapter guide, with developments and futures before the evidence library", () => {
+  for (const language of ["en", "zh"]) {
+    const route = readerLoader(language)("app/digital-ai/page.tsx");
+    const html = renderToStaticMarkup(React.createElement(route.default));
+    const order = ["energy-system", "energy-fields", "wind-to-ai-heading", "energy-updates", "energy-future", "digital-ai-evidence-heading"];
+    const positions = order.map((id) => html.indexOf(`id="${id}"`));
+    assert.ok(positions.every((position) => position >= 0));
+    assert.deepEqual([...positions].sort((a, b) => a - b), positions);
+    assert.equal((html.match(/aria-label="(?:AI and energy reading guide|AI 与能源阅读导航)"/g) ?? []).length, 1);
+    assert.ok(!html.includes('class="digital-ai-lifecycle'));
+    assert.ok(html.includes(language === "en" ? "Browse workflow and supply records" : "浏览流程与供电记录"));
     const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
     assert.equal(ids.length, new Set(ids).size);
   }

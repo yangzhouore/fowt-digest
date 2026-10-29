@@ -1,21 +1,32 @@
 # Project Status
 
-Last updated: 2026-10-27. Feature base: main `580a83e` (weekly PR #48),
-updated with maintenance main `20533eb` (PR #49);
-latest merged product feature: `710bba5` (PR #47).
+Last updated: 2026-10-29. Current feature base: main `bb3b06a` (PR #50).
 
 ## Current State
 
 - Current stable branch: `main`
-- Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
-- Current work: AI × Energy explanation on `feat/ai-energy-explainer`, requested by the user to broaden context beyond FOWT and clarify present/future relationships.
-- Scope: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`.
-- Source review and acceptance: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
+- Latest completed product milestone: AI × Energy explainer (PR #50), merged at `bb3b06a`.
+- Current work: unified Digital & AI guide on `feat/digital-ai-unified-guide`, requested by the user to synergise earlier wind content and broader energy context.
+- Scope: `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md`.
+- Review and acceptance: `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: leave AI × Energy PR #50 open for manual merge; record remote CI/preview separately from local results. Maintenance PR #49 is merged at `20533eb`.
+- Delivery: leave the unified-guide PR open for manual merge; record remote CI/preview separately from local results. PR #50 and maintenance PR #49 are merged.
 
-## Current AI × Energy Explainer
+## Current Unified Digital & AI Guide
+
+- One chapter sequence joins foundations, seven topics with contextual practical
+  examples, four supply options, dated developments, conditional futures and a
+  final evidence library. The competing standalone lifecycle map is removed.
+- The ten practical workflows are grouped under their relevant topic; changing a
+  topic cannot leave a different topic's task visible. Task titles replace AI labels.
+- Developments and futures explicitly link back to explanation and supply contexts.
+- All fourteen reader routes, legacy task/field/pathway/evidence links and source
+  data remain. Two evidence collections retain their independent provenance.
+- Local acceptance: 210 Python tests, data validation, 174 data tests, lint,
+  454 static pages and 25 shared Chromium journeys passed.
+
+## Merged AI × Energy Explainer (PR #50, `bb3b06a`)
 
 - `/digital-ai` starts with three relationships and two illustrative flow diagrams:
   electricity supply and information supporting decisions.
@@ -154,7 +165,8 @@ The repository contains five independent static content areas:
 - Projects: curated source-backed floating offshore wind project data under
   `web/data/projects/`.
 - Digital & AI: 14 curated source-backed Signals under `web/data/digital-ai/`,
-  used as evidence for the AI × offshore-wind impact maps.
+  used as evidence for the AI × Energy workflows and supply comparisons, alongside
+  the independent broader energy-context dataset.
 
 The website supports:
 

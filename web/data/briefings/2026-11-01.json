@@ -944,7 +944,7 @@
         "\"Siemens Energy\" \"METI\" \"October 2026\"",
         "site:enova.no \"2026\" \"Fortius\" \"Fram\"",
         "site:noc.ac.uk \"2026\" \"Boaty\" \"October\" sensors",
-        "site:energy.or.kr \"2026\" \"???\" \"??\" \"10? 30\""
+        "site:energy.or.kr \"2026\" \"하반기\" \"풍력\" \"10월 30\""
       ]
     },
     "selectionModel": {

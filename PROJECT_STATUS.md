@@ -1,5 +1,25 @@
 # Project Status
 
+## Weekly update: 26 October–1 November 2026
+
+- Branch: `data/weekly-digest-2026-11-01`, from main `bb3b06a` (merged PR #50).
+- Collection, evidence boundaries and selection: `docs/weekly/2026-11-01.md`.
+- Research: 212 obtained raw records → 86 deduplicated candidates → five selected
+  records by the unchanged pipeline. Coverage is partial: three HTTP 401
+  continuation failures persisted on retry; the configured cap was reached.
+  The highest-ranked record is a benchmark dataset; metadata is preserved.
+- Engineering: all 42 registry domains searched; 16 retained source records →
+  14 in-window → 11 eligible reports → six independent candidates → five
+  scored highlights. Five candidate publishers, four selected publishers.
+- Both new editions and candidate transparency are registered. Historical
+  records, scoring, datasets outside the weekly update and page behavior remain
+  unchanged. Separate analytics work is excluded. Leave the PR open for review.
+- Local validation: 210 pipeline tests, all data validators, 172 data tests,
+  lint, a 463-route static production build and 23 browser smoke tests passed.
+  Focused weekly counts, coverage disclosure and mobile Chinese/dark checks
+  passed; `git diff --check` passed. The known reader `NoFallbackError` diagnostic
+  recurred with passing assertions. Remote CI/Preview are recorded in the PR.
+
 Last updated: 2026-10-27. Feature base: main `580a83e` (weekly PR #48),
 updated with maintenance main `20533eb` (PR #49);
 latest merged product feature: `710bba5` (PR #47).
@@ -211,10 +231,10 @@ committed `main` through Git integration.
 
 ## Current Data Baseline
 
-- Static Research Digest editions: 42 editions, latest week ending 2026-10-25.
-- Static Research candidate-pool files: 29 retained or reconstructed weekly
+- Static Research Digest editions: 43 editions, latest week ending 2026-11-01.
+- Static Research candidate-pool files: 30 retained or reconstructed weekly
   candidate pools.
-- Static Engineering Briefing editions: 42 editions, latest week ending 2026-10-25.
+- Static Engineering Briefing editions: 43 editions, latest week ending 2026-11-01.
 - Static Engineering source registry: 42 approved source records.
 - Static Industry Map companies: 47 curated organisations.
 - Static Projects records: 48 source-backed floating offshore wind project

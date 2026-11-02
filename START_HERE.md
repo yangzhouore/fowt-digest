@@ -4,6 +4,12 @@ Use this file as the resume entry point for a new Codex session.
 
 ## Stable State
 
+- Weekly update for 26 October–1 November 2026: branch
+  `data/weekly-digest-2026-11-01`, based on main `bb3b06a`; collection and selection
+  record: `docs/weekly/2026-11-01.md`. Five Research records from 86 obtained
+  candidates (partial OpenAlex coverage), five Engineering highlights from six
+  independent candidates. Leave the weekly PR open for manual review/merge.
+
 - Current stable branch: `main`
 - Latest completed product milestone: Digital & AI evidence reader and pathway comparison (PR #47), merged into main at `710bba5`
 - Current product work: user-requested AI × Energy explainer on `feat/ai-energy-explainer`; broader energy context, plain-language logic, reader/developer perspectives, dated developments and conditional futures.

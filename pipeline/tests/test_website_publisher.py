@@ -147,6 +147,11 @@ def _write_digest(path, *, week_end, title="Published digest"):
 def _write_json(path, payload):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    if path.name == "weekly_digest.json":
+        (path.parent / "run_summary.json").write_text(json.dumps({
+            "runId": payload.get("runId"), "status": "success", "capReached": False,
+            "failedPageCount": 0, "failedQueryCount": 0, "partialQueryCount": 0,
+        }), encoding="utf-8")
 
 
 def _digest(*, week_end, title="Published digest"):

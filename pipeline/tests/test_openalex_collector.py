@@ -252,6 +252,7 @@ def test_run_level_cap_preserves_full_page_and_stops_later_terms(tmp_path):
     assert len(calls) == 4
     assert result["capReached"] is True
     assert summary["capReached"] is True
+    assert result["status"] == summary["status"] == "partial_success"
     assert summary["rawRecordCount"] == RUN_RECORD_LIMIT
     assert len(raw_output["queries"]) == 1
     assert raw_output["queries"][0]["pageCount"] == 4

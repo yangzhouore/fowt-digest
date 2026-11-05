@@ -42,6 +42,9 @@ The publisher:
 
 - reads `pipeline/data/runs/<run_id>/weekly_digest.json`;
 - validates that it is an object with a valid `weekEnd`;
+- requires `run_summary.json` with the same nonempty `runId`, `success` status,
+  explicit `capReached: false`, zero failed/partial query and page counts, and
+  no collection errors before writing anything;
 - copies it byte-for-byte to `web/data/digests/<weekEnd>.json`;
 - refuses to overwrite a different existing digest unless `--overwrite` is
   passed;
@@ -56,6 +59,12 @@ python -m pipeline.website_publisher pipeline\data\runs\<run_id> --overwrite
 ```
 
 ## Publication Workflow Command
+
+Failed, partial, capped, missing, malformed, or mismatched collection summaries
+block publication, including with `--overwrite`. This also protects against old
+digests generated from unsuccessful runs; older artifacts without complete
+diagnostics cannot be published through this command. There is no override for
+incomplete collection. Existing committed editions are not rewritten.
 
 The workflow helper runs the accepted local publication workflow from the
 repository root:

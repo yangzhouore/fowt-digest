@@ -102,7 +102,7 @@ def collect_openalex_raw(
         for page in query["pages"]
         if page["status"] == FAILED_STATUS
     )
-    status = _run_status(successful_page_count, failed_or_partial_query_count)
+    status = _run_status(successful_page_count, failed_or_partial_query_count, cap_reached)
     completed = _normalise_utc(completed_at or datetime.now(UTC))
 
     raw_output = {
@@ -152,6 +152,19 @@ def collect_openalex_raw(
     }
 
 
+def collection_is_complete(collection: Any) -> bool:
+    """Require explicit successful, uncapped diagnostics before production use."""
+    return (
+        isinstance(collection, dict)
+        and collection.get("status") == SUCCESS_STATUS
+        and collection.get("capReached") is False
+        and all(collection.get(field) == 0 for field in (
+            "failedPageCount", "failedQueryCount", "partialQueryCount"
+        ))
+        and not collection.get("errors")
+    )
+
+
 def _collect_query_pages(
     *,
     query_group: str,
@@ -194,6 +207,9 @@ def _collect_query_pages(
                 sleep(request_delay_seconds)
             has_made_request = True
             raw_response = fetch_json(query_url)
+            page_record["rawResponse"] = raw_response
+            if not isinstance(raw_response, dict) or not isinstance(raw_response.get("results"), list):
+                raise ValueError("OpenAlex response requires a results array")
         except Exception as error:
             error_record = _error_record(page_record, error)
             page_record["error"] = error_record["error"]
@@ -205,7 +221,6 @@ def _collect_query_pages(
         results_count = _results_count(raw_response)
         next_cursor = _next_cursor(raw_response)
         page_record["nextCursor"] = next_cursor
-        page_record["rawResponse"] = raw_response
         page_record["recordCount"] = results_count
         page_record["status"] = SUCCESS_STATUS
         pages.append(page_record)
@@ -300,12 +315,12 @@ def _error_record(page_record: dict[str, Any], error: Exception) -> dict[str, An
     }
 
 
-def _run_status(successful_page_count: int, failed_or_partial_query_count: int) -> str:
-    if failed_or_partial_query_count == 0:
-        return SUCCESS_STATUS
-    if successful_page_count == 0:
+def _run_status(successful_page_count: int, failed_or_partial_query_count: int, cap_reached: bool) -> str:
+    if failed_or_partial_query_count and successful_page_count == 0:
         return FAILED_STATUS
-    return PARTIAL_SUCCESS_STATUS
+    if cap_reached or failed_or_partial_query_count:
+        return PARTIAL_SUCCESS_STATUS
+    return SUCCESS_STATUS
 
 
 def _normalise_utc(value: datetime) -> datetime:

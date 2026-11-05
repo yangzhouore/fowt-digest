@@ -155,10 +155,21 @@ Map OpenAlex `type` into the local `publicationType` field as follows:
 | --- | --- |
 | `journal-article` | `journal` |
 | `proceedings-article` | `conference` |
+| `conference-paper` | `conference` (explicit full conference paper, regardless of venue kind) |
 | `preprint` | `preprint` |
+| `article`, `review`, `data-paper`, `software-paper` with `primary_location.source.type: journal` | `journal` |
+| `article` with `primary_location.source.type: conference` | `conference` |
 | anything else, missing, or empty | `unknown` |
 
-Do not infer publication type from source names in M3C.
+The legacy `journal-article` and `proceedings-article` values remain supported for
+retained raw output. Current mappings follow the documented OpenAlex
+[work types](https://help.openalex.org/data/work-types/) and
+[source types](https://help.openalex.org/data/source-types/). A preprint stays a
+preprint even if its venue metadata says journal. Conference abstracts, deposited
+datasets/software, dissertations, and article-like works without the required
+primary venue metadata remain `unknown`. Do not infer publication type from
+titles, venue names, or secondary locations. This changes normalization inputs,
+not scoring weights, and does not rewrite published editions.
 
 ### Topic tag mapping
 

@@ -5,6 +5,8 @@ import { translate, type Language, type TranslationKey } from "./translations";
 
 const STORAGE_KEY = "fowt-digest-language";
 const LANGUAGE_EVENT = "fowt-digest-language-change";
+let memoryLanguage: Language = "en";
+let storageUnavailable = false;
 type LanguageContextValue = { language: Language; setLanguage: (language: Language) => void; t: (key: TranslationKey) => string };
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
@@ -16,7 +18,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [language]);
 
   const setLanguage = useCallback((next: Language) => {
-    window.localStorage.setItem(STORAGE_KEY, next);
+    memoryLanguage = next;
+    accessLanguageStorage(() => window.localStorage.setItem(STORAGE_KEY, next));
     window.dispatchEvent(new Event(LANGUAGE_EVENT));
   }, []);
   const value = useMemo(() => ({ language, setLanguage, t: (key: TranslationKey) => translate(language, key) }), [language, setLanguage]);
@@ -33,7 +36,24 @@ function subscribe(onStoreChange: () => void): () => void {
 }
 
 function getLanguageSnapshot(): Language {
-  return window.localStorage.getItem(STORAGE_KEY) === "zh" ? "zh" : "en";
+  accessLanguageStorage(() => {
+    memoryLanguage = window.localStorage.getItem(STORAGE_KEY) === "zh" ? "zh" : "en";
+  });
+  return memoryLanguage;
+}
+
+function accessLanguageStorage(operation: () => void): void {
+  if (storageUnavailable) return;
+  try {
+    operation();
+  } catch (error) {
+    if (!(error instanceof DOMException) || !["SecurityError", "QuotaExceededError"].includes(error.name)) {
+      throw error;
+    }
+    // Keep the current preference in memory, including after a failed write.
+    // Otherwise a readable but stale saved value would undo the user's toggle.
+    storageUnavailable = true;
+  }
 }
 
 export function useLanguage(): LanguageContextValue {

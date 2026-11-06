@@ -4,25 +4,41 @@ Use this file as the resume entry point for a new Codex session.
 
 ## Stable State
 
-- Current stable branch: `main`
-- Latest completed product milestone: AI × Energy explainer (PR #50), merged into main at `bb3b06a`.
-- Current product work: user-requested unified Digital & AI guide on `feat/digital-ai-unified-guide`; one reading structure connecting the broader context, practical wind workflows, supply options, developments, futures and evidence.
-- Scope and acceptance: `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md`.
-- Review and implementation: `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
+Verified against GitHub on 2026-11-06.
+
+- Current stable branch: `main` at `cab926b` (merged handover PR #57).
+- Latest completed product milestone: AI × Energy explainer, PR #50, merged
+  at `bb3b06a`. Scope and acceptance: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`;
+  source review: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
+- Latest weekly update: 26 October–1 November 2026, PR #52, merged at `0a03771`.
+  Record: `docs/weekly/2026-11-01.md`. Five Research records from 86 obtained
+  candidates (partial coverage), five Engineering highlights from six candidates.
+- Subsequent merged fixes: Next.js 16.4.5 (#53), OpenAlex publication types (#54),
+  incomplete-collection publication guard (#55), and language-storage resilience (#56).
+- Pending product work: Digital & AI unified guide on `feat/digital-ai-unified-guide`,
+  [PR #51](https://github.com/yangzhouore/fowt-digest/pull/51), still open.
+  Current main `cab926b` is incorporated into the feature branch. Scope and
+  implementation documents are
+  `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md` and `UNIFIED_GUIDE_IMPLEMENTATION.md`.
+- Separate unmerged work: `feature/private-analytics-dashboard` at `7a0ecd0`.
+  Its branch-local `docs/private-analytics.md` records scope and remaining live checks.
 - Latest release tag: `v1.4.0`
 - Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: leave the unified-guide PR open for manual merge; record remote CI/preview separately from local results. PR #50 and maintenance PR #49 are merged.
 
-The product baseline at `710bba5` includes Digital & AI, Methodology, the bilingual
+The merged product includes Digital & AI, Methodology, the bilingual
 interface, Project Intelligence across all 48 projects, Connected Project Context,
 the UK/Germany/Norway/China Industry guides, ten practical Digital & AI cards,
-14 internal evidence readers and the four-pathway comparison. Merged weekly
-PR #48 (`580a83e`) adds data through 2026-10-25: five Research papers from
-83 obtained candidates
-(partial OpenAlex coverage), and five Engineering highlights from five independent
-candidates after registry-bounded discovery and event grouping.
-Read `PROJECT_STATUS.md` for validation and CI evidence; a previously pending job
-must be checked by run/commit, not treated as a permanent repository problem.
+14 internal evidence readers, four supply pathways and the broader AI × Energy
+explainer. PR #51's unified presentation and private analytics are not in main.
+
+Integrated PR #51 local acceptance is complete; leave it open for manual review/merge.
+Check the PR for CI/preview results on its final integration commit. Next,
+establish complete OpenAlex collection before the next Research
+publication; review analytics separately. PR #55 blocks incomplete or capped
+collection but does not fix the earlier HTTP 401 failures or collection cap.
+Preserve historical published records and their partial-coverage disclosures.
+Read `PROJECT_STATUS.md` for validation evidence and the ordered follow-up work.
+Check CI by run/commit; historical success does not validate a new integration.
 
 ## Normal Reading Path
 
@@ -38,15 +54,15 @@ only when historical context is specifically required.
 
 ## Reference Docs
 
-Current unified Digital & AI work:
+Current unified Digital & AI work (PR #51, not yet merged):
 
 - One six-chapter sequence: understand → apply AI → supply computing →
   developments → conditional futures → evidence.
-- Seven topics replace the competing lifecycle map and contain the ten practical
-  workflows in context. Explicit reading mappings: `web/app/digital-ai/guide-structure.ts`.
+- Seven topics contain the ten practical workflows in context, replacing the
+  competing lifecycle map. Reading mappings: `web/app/digital-ai/guide-structure.ts`.
 - Existing task/field/pathway/evidence deep links and all source records remain.
 
-Merged AI × Energy context (PR #50, `bb3b06a`):
+Merged AI × Energy explainer (PR #50, `bb3b06a`):
 
 - Independent context data: `web/data/digital-ai/energy-context.json`.
 - Presentation: `web/app/digital-ai/energy-system.tsx` and its CSS module.
@@ -62,11 +78,14 @@ Merged maintenance review (PR #49, `20533eb`):
 
 Latest merged weekly update:
 
-- Collection/selection/validation record: `docs/weekly/2026-10-25.md`
+- Collection/selection/validation record: `docs/weekly/2026-11-01.md`
 - Follow `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md` for weekly work.
-- Preserve the visible partial Research coverage note; two OpenAlex continuation
+- Preserve the visible partial Research coverage note; three OpenAlex continuation
   requests failed with HTTP 401 and the configured collection cap was reached.
-- PR #48 was merged at `580a83e`; this work does not republish the week.
+- PR #52 was merged at `0a03771`. The current publisher requires complete,
+  successful, uncapped collection diagnostics matching the run; see
+  `docs/WEBSITE_PUBLISHING_WORKFLOW.md`. Historical partial publication is not
+  permission to bypass the new guard.
 
 Merged Digital & AI evidence reader and comparison (PR #47, `710bba5`):
 
@@ -157,11 +176,11 @@ JSON and TypeScript fixtures. It does not run the pipeline, query OpenAlex,
 collect engineering sources, deploy itself, or use AI-generated summaries.
 
 The primary navigation covers Engineering, Industry Map, Projects, Digital & AI,
-Research, and Methodology. `/digital-ai` uses one six-chapter AI × Energy guide:
-system foundations, topics with practical wind workflows, computing supply,
-developments, conditional futures and an evidence library. Fourteen source-backed
-records support the workflows and supply comparisons. The interface and fixed editorial
-copy can switch between English and Simplified Chinese; source-backed titles,
+Research, and Methodology. `/digital-ai` explains the broader AI × Energy system
+through seven fields, dated developments and conditional futures, alongside
+offshore-wind applications, energy pathways and 14 source-backed Signals.
+The interface and fixed editorial copy can switch between English and Simplified
+Chinese; source-backed titles,
 abstracts, project/company facts, publishers, proper nouns, and URLs remain in
 their original language unless an explicit Chinese field exists.
 

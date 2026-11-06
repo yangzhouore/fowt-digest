@@ -147,7 +147,8 @@ def test_invalid_intermediate_payload_is_not_repaired(tmp_path, monkeypatch):
         run_directory.mkdir(exist_ok=True)
         _write_json(run_directory / "raw_openalex.json", {"malformed": True})
         _write_json(run_directory / "run_summary.json", {"runId": RUN_ID})
-        return {"runId": RUN_ID, "runDirectory": str(run_directory), "status": "success"}
+        return {"runId": RUN_ID, "runDirectory": str(run_directory), "status": "success",
+                "capReached": False, "failedPageCount": 0, "failedQueryCount": 0, "partialQueryCount": 0}
 
     def normalisation(raw_payload, **kwargs):
         calls.append("normalisation")
@@ -263,7 +264,8 @@ def _install_successful_stages(
         run_directory.mkdir(exist_ok=True)
         _write_json(run_directory / "raw_openalex.json", _raw_payload())
         _write_json(run_directory / "run_summary.json", {"runId": RUN_ID, "status": "success"})
-        return {"runId": RUN_ID, "runDirectory": str(run_directory), "status": "success"}
+        return {"runId": RUN_ID, "runDirectory": str(run_directory), "status": "success",
+                "capReached": False, "failedPageCount": 0, "failedQueryCount": 0, "partialQueryCount": 0}
 
     def normalisation(raw_payload, *, run_directory, run_id, raw_source_path, discovery_date):
         calls.append("normalisation")

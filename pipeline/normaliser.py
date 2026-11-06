@@ -317,12 +317,30 @@ def _publication_source(work: dict[str, Any]) -> str | None:
 
 def _publication_type(work: dict[str, Any]) -> str:
     value = _clean_string(work.get("type"))
-    if value == "journal-article":
+    explicit_types = {
+        "journal-article": "journal",  # Retained legacy OpenAlex output.
+        "proceedings-article": "conference",
+        "conference-paper": "conference",
+        "preprint": "preprint",
+    }
+    if value in explicit_types:
+        return explicit_types[value]
+
+    # Current work types: https://help.openalex.org/data/work-types/
+    # Article-like works need an explicit primary venue kind, not a name guess.
+    if value not in {"article", "review", "data-paper", "software-paper"}:
+        return "unknown"
+    primary_location = work.get("primary_location")
+    if not isinstance(primary_location, dict):
+        return "unknown"
+    source = primary_location.get("source")
+    if not isinstance(source, dict):
+        return "unknown"
+    source_type = _clean_string(source.get("type"))
+    if source_type == "journal":
         return "journal"
-    if value == "proceedings-article":
+    if value == "article" and source_type == "conference":
         return "conference"
-    if value == "preprint":
-        return "preprint"
     return "unknown"
 
 

@@ -1,0 +1,1387 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-10-26",
+  "weekEnd": "2026-11-01",
+  "generatedAt": "2026-11-02T14:07:45.314Z",
+  "checkedResultCount": 6,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-11-01-enova-awards",
+      "candidateStatus": "candidate",
+      "sourceType": "government_announcement",
+      "publisher": "Enova",
+      "title": "NOK 3.9 billion for two floating offshore wind projects",
+      "sourceUrl": "https://enova.no/nb/nyheter/19123310/nok-39-billion-for-two-floating-offshore-wind-projects",
+      "publishedDate": "2026-10-30",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Enova awarded NOK 2 billion to Fortius Offshore Wind and NOK 1.94 billion to Fram Wind Solutions. Each project plans two 18.5 MW floating turbines at METCentre off Karmoy within five years. The programme supports testing of floating foundations, mooring and construction and operation methods. Payment depends on project implementation.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-korea-tender",
+      "candidateStatus": "candidate",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "South Korea Launches Second Offshore Wind Tender in 2026",
+      "sourceUrl": "https://www.offshorewind.biz/2026/10/30/south-korea-launches-second-offshore-wind-tender-in-2026",
+      "publishedDate": "2026-10-30",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "South Korea announced a second-half fixed-price offshore wind tender opening on 30 October. Of approximately 2,200 MW, about 500 MW is reserved for floating offshore wind and 1,700 MW for fixed-bottom wind. The reported floating-wind bid price ceiling is KRW 174,003/MWh. This is a tender opening, not an award.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-japan-siemens",
+      "candidateStatus": "candidate",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Japan and Siemens Energy Form Floating Offshore Wind Pact",
+      "sourceUrl": "https://www.offshorewind.biz/2026/10/29/japan-and-siemens-energy-form-floating-offshore-wind-pact",
+      "publishedDate": "2026-10-29",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "METI and Siemens Energy signed a cooperation memorandum addressing floating offshore wind projects in Japan, supply chain development and workforce development. The report also describes a planned Siemens Energy operations and maintenance hub in Hokkaido. No individual wind-farm award is announced.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-fukushima-pilot",
+      "candidateStatus": "candidate",
+      "sourceType": "industry_news",
+      "publisher": "DeepWind",
+      "title": "Tokyo Gas Reportedly Drops 30 MW Fukushima Floating Wind Pilot: Japan Eyes 300 MW for the Next Step",
+      "sourceUrl": "https://deepwind.jp/en/floating-wind/tokyo-gas-fukushima-floating-wind-cancelled/",
+      "publishedDate": "2026-10-27",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "DeepWind cites Nikkei and Fukushima Minyu reporting that Tokyo Gas and Shinobuyama Fukushima Power abandoned their proposed 30 MW floating wind pilot off Naraha and Tomioka amid rising construction costs. The proposed project comprised two 15 MW-class turbines. DeepWind found no company announcement as of 27 October; cancellation and its cause remain attributed press reports.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-ocergy-monitoring",
+      "candidateStatus": "candidate",
+      "sourceType": "company_announcement",
+      "publisher": "Ocergy",
+      "title": "OCG-Wind and OCG-Data Milestones",
+      "sourceUrl": "https://www.ocergy.com/wind-and-data-milestones",
+      "publishedDate": "2026-10-27",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Ocergy reports that its OCG-Data buoy was refurbished and redeployed in September for a three-year MARE environmental monitoring campaign at the Golfe de Fos 1 floating wind site. The update also describes the August tow of its 3 MW Culzean platform. These are earlier operations reported this week, not new October installations.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-noc-frontline",
+      "candidateStatus": "candidate",
+      "sourceType": "company_announcement",
+      "publisher": "National Oceanography Centre",
+      "title": "NOC's Autosub Long Range tests new ocean monitoring technologies for floating offshore wind",
+      "sourceUrl": "https://www.noc.ac.uk/news/nocs-autosub-long-range-tests-new-ocean-monitoring-technologies-floating-offshore-wind",
+      "publishedDate": "2026-10-29",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "NOC reports successful Plymouth trials of an upgraded ALR1500 autonomous underwater vehicle for the Frontline floating offshore wind study. Sensors measured physical, biological and chemical conditions, fish, plankton and underwater sound; satellite observations guided missions. The trials inform planned Celtic Sea surveys in 2027. They do not establish environmental impacts of operating wind farms.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-ow-enova",
+      "candidateStatus": "duplicate_event",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Norway Funds Floating Offshore Wind Projects Featuring 18.5 MW Turbines",
+      "sourceUrl": "https://www.offshorewind.biz/2026/10/30/norway-funds-floating-offshore-wind-projects-featuring-185-mw-turbines",
+      "publishedDate": "2026-10-30",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports the same Enova awards to Fortius and Fram for two floating turbines each at METCentre. Retained as discovery provenance, not an independent candidate.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-ont-ocergy",
+      "candidateStatus": "duplicate_event",
+      "sourceType": "industry_news",
+      "publisher": "Ocean News & Technology",
+      "title": "Ocergy Reaches Commercial Milestones with OCG-Wind and OCG-Data Platforms",
+      "sourceUrl": "https://oceannews.com/news/energy/ocergy-reaches-commercial-milestones-with-ocg-wind-and-ocg-data-platforms/",
+      "publishedDate": "2026-10-28",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports the same Ocergy company update covering the August Culzean tow and September OCG-Data redeployment for MARE. Not an additional weekly event.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-os-ocergy",
+      "candidateStatus": "duplicate_event",
+      "sourceType": "industry_news",
+      "publisher": "Offshore Source",
+      "title": "Ocergy's OCG-Wind Platform Deployed at Culzean in North Sea",
+      "sourceUrl": "https://offshoresource.com/news/renewables/ocergys-ocg-wind-platform-deployed-at-culzean-in-north-sea/",
+      "publishedDate": "2026-10-28",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports the same Ocergy statement and OCG-Data monitoring programme. Earlier deployment dates are preserved; this is not a separate installation milestone.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-ont-frontline",
+      "candidateStatus": "duplicate_event",
+      "sourceType": "industry_news",
+      "publisher": "Ocean News & Technology",
+      "title": "ALR1500 Boaty McBoatface Trials Sensor Suite for Celtic Sea Wind Study",
+      "sourceUrl": "https://oceannews.com/news/science-technology/alr1500-boaty-mcboatface-trials-sensor-suite-for-celtic-sea-wind-study/",
+      "publishedDate": "2026-10-29",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports the same NOC autonomous vehicle sensor trials for Frontline. Primary NOC provenance is retained; the trade article is not another candidate.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-eco-frontline",
+      "candidateStatus": "duplicate_event",
+      "sourceType": "industry_news",
+      "publisher": "ECO Magazine",
+      "title": "Boaty McBoatface Tests Ocean Monitoring Tech for Floating Offshore Wind",
+      "sourceUrl": "https://ecomagazine.com/news/industry/boaty-mcboatface-tests-ocean-monitoring-tech-for-floating-offshore-wind/",
+      "publishedDate": "2026-10-29",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports the same Frontline monitoring trials near Plymouth and planned Celtic Sea surveys. Counted with the NOC event.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-stillstrom-repeat",
+      "candidateStatus": "excluded_low_relevance",
+      "sourceType": "industry_news",
+      "publisher": "Ocean News & Technology",
+      "title": "EU Innovation Fund Selects Stillstrom to Deploy First Commercial Offshore eCharger for Wind Farm Vessels",
+      "sourceUrl": "https://oceannews.com/news/energy/eu-innovation-fund-selects-stillstrom-to-deploy-first-commercial-offshore-echarger-for-wind-farm-vessels/",
+      "publishedDate": "2026-10-27",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Re-reports the Innovation Fund OffshoreCharge selection already retained in the 25 October edition. It does not establish a separate floating-wind project award or a completed offshore charger installation.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-guh-fixed",
+      "candidateStatus": "excluded_low_relevance",
+      "sourceType": "conference_announcement",
+      "publisher": "Ocean News & Technology",
+      "title": "Global Underwater Hub Deepwater Wind Symposium to Unite Foundation Technology Developers in Aberdeen",
+      "sourceUrl": "https://oceannews.com/news/energy/global-underwater-hub-deepwater-wind-symposium-to-unite-foundation-technology-developers-in-aberdeen/",
+      "publishedDate": "2026-10-28",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "The announced symposium focuses on deepwater fixed-bottom foundation technologies, installation and economics. No floating-wind deployment or engineering milestone is established.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-carbon-trust-flexibility",
+      "candidateStatus": "excluded_low_relevance",
+      "sourceType": "trade_association",
+      "publisher": "Carbon Trust",
+      "title": "The Carbon Trust, Arup, Ipsos and Technopolis to lead major UK trial helping consumers make better use of surplus renewable energy",
+      "sourceUrl": "https://www.carbontrust.com/news-and-insights/news/the-carbon-trust-arup-ipsos-and-technopolis-to-lead-major-uk-trial-helping-consumers-make-better-use-of-surplus-renewable-energy",
+      "publishedDate": "2026-10-27",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Announces a UK consumer electricity demand flexibility trial. It does not establish a floating offshore wind project or technology development.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-dnv-prior-week",
+      "candidateStatus": "excluded_out_of_window",
+      "sourceType": "standards_update",
+      "publisher": "DNV",
+      "title": "DNV receives authorization for floating offshore wind rules in Japan",
+      "sourceUrl": "https://www.dnv.com/news/2026/DNV-receives-authorization-for-floating-offshore-wind-rules-in-japan/",
+      "publishedDate": "2026-10-19",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "Japanese authorization of DNV floating wind rules was published on 19 October and covered in the prior edition. Excluded from this publication window.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-01-cvow-next-week",
+      "candidateStatus": "excluded_out_of_window",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "44 Turbines Up at Largest US Offshore Wind Farm",
+      "sourceUrl": "https://www.offshorewind.biz/2026/11/02/44-turbines-up-at-largest-us-offshore-wind-farm",
+      "publishedDate": "2026-11-02",
+      "retrievedAt": "2026-11-02T14:07:45.314Z",
+      "collectionMethod": "manual",
+      "sourceText": "The fixed-bottom CVOW progress article was published on 2 November. Its reference to an earlier company update does not move this article into the completed weekly publication window.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-11-01-enova-awards",
+      "title": "Enova awards conditional support for four floating turbines",
+      "oneLineSummary": "Two METCentre demonstration projects receive NOK 3.94 billion in conditional support.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-11-01-enova-awards",
+        "eng-src-2026-11-01-ow-enova"
+      ],
+      "sourceUrl": "https://enova.no/nb/nyheter/19123310/nok-39-billion-for-two-floating-offshore-wind-projects",
+      "explanation": "Enova awarded NOK 2 billion to Fortius Offshore Wind and NOK 1.94 billion to Fram Wind Solutions. Each project plans two 18.5 MW floating turbines at METCentre off Karmoy within five years. The programme supports testing of floating foundations, mooring and construction and operation methods. Payment depends on project implementation.",
+      "whyItMatters": "The award supports demonstration plans; disbursement depends on implementation.",
+      "engineeringTopics": [
+        "Floating platform",
+        "Mooring",
+        "Demonstration",
+        "Construction"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-11-01-ocergy-monitoring",
+      "title": "Ocergy reports OCG-Data redeployment for MARE monitoring",
+      "oneLineSummary": "The company update describes a September monitoring-buoy redeployment and earlier Culzean tow.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-11-01-ocergy-monitoring",
+        "eng-src-2026-11-01-ont-ocergy",
+        "eng-src-2026-11-01-os-ocergy"
+      ],
+      "sourceUrl": "https://www.ocergy.com/wind-and-data-milestones",
+      "explanation": "Ocergy reports that its OCG-Data buoy was refurbished and redeployed in September for a three-year MARE environmental monitoring campaign at the Golfe de Fos 1 floating wind site. The update also describes the August tow of its 3 MW Culzean platform. These are earlier operations reported this week, not new October installations.",
+      "whyItMatters": "The update preserves actual operation dates and attributes commercial-readiness claims to the supplier.",
+      "engineeringTopics": [
+        "Environmental monitoring",
+        "Floating platform",
+        "Operations"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-11-01-korea-tender",
+      "title": "Korea opens tender with a 500 MW floating-wind allocation",
+      "oneLineSummary": "The second-half offshore wind tender separates floating and fixed-bottom allocations.",
+      "category": "policy",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-11-01-korea-tender"
+      ],
+      "sourceUrl": "https://www.offshorewind.biz/2026/10/30/south-korea-launches-second-offshore-wind-tender-in-2026",
+      "explanation": "South Korea announced a second-half fixed-price offshore wind tender opening on 30 October. Of approximately 2,200 MW, about 500 MW is reserved for floating offshore wind and 1,700 MW for fixed-bottom wind. The reported floating-wind bid price ceiling is KRW 174,003/MWh. This is a tender opening, not an award.",
+      "whyItMatters": "The announcement opens procurement; it does not identify successful bidders.",
+      "engineeringTopics": [
+        "Tender",
+        "Procurement",
+        "Floating wind",
+        "Supply chain"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-11-01-noc-frontline",
+      "title": "NOC tests autonomous monitoring suite for floating-wind surveys",
+      "oneLineSummary": "Plymouth trials combined underwater sensors and satellite-guided mission planning.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-11-01-noc-frontline",
+        "eng-src-2026-11-01-ont-frontline",
+        "eng-src-2026-11-01-eco-frontline"
+      ],
+      "sourceUrl": "https://www.noc.ac.uk/news/nocs-autosub-long-range-tests-new-ocean-monitoring-technologies-floating-offshore-wind",
+      "explanation": "NOC reports successful Plymouth trials of an upgraded ALR1500 autonomous underwater vehicle for the Frontline floating offshore wind study. Sensors measured physical, biological and chemical conditions, fish, plankton and underwater sound; satellite observations guided missions. The trials inform planned Celtic Sea surveys in 2027. They do not establish environmental impacts of operating wind farms.",
+      "whyItMatters": "This is a monitoring-system trial ahead of wider surveys, not a measured impact conclusion.",
+      "engineeringTopics": [
+        "Autonomous survey",
+        "Environmental monitoring",
+        "Sensors"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-11-01-japan-siemens",
+      "title": "Japan and Siemens Energy agree floating-wind cooperation",
+      "oneLineSummary": "The memorandum covers project development, supply chains and workforce training.",
+      "category": "supply_chain",
+      "region": "Asia-Pacific",
+      "sourceRecordIds": [
+        "eng-src-2026-11-01-japan-siemens"
+      ],
+      "sourceUrl": "https://www.offshorewind.biz/2026/10/29/japan-and-siemens-energy-form-floating-offshore-wind-pact",
+      "explanation": "METI and Siemens Energy signed a cooperation memorandum addressing floating offshore wind projects in Japan, supply chain development and workforce development. The report also describes a planned Siemens Energy operations and maintenance hub in Hokkaido. No individual wind-farm award is announced.",
+      "whyItMatters": "The cooperation framework and planned service hub are distinct from a wind-farm contract.",
+      "engineeringTopics": [
+        "Supply chain",
+        "Operations and maintenance",
+        "Workforce"
+      ]
+    }
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "approved_source_candidate_pool",
+    "collectionAudit": {
+      "weekStart": "2026-10-26",
+      "weekEnd": "2026-11-01",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceRegistry": "web/data/engineering-source-registry.json",
+      "sourceUniverse": "All 42 registry domains searched; item-level dates, access and relevance reviewed with primary follow-ups. Counts describe retained reviewed records, not exhaustive scraping or all search hits.",
+      "sourcesAttempted": 42,
+      "rawItemsCollected": 16,
+      "itemsAfterDateFiltering": 14,
+      "itemsAfterFowtRelevanceFiltering": 11,
+      "duplicateEventOverlapsRemoved": 5,
+      "candidatePoolSize": 6,
+      "attemptedSources": [
+        {
+          "sourceId": "boem-renewable-energy",
+          "publisher": "Bureau of Ocean Energy Management",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.boem.gov \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "crown-estate-scotland-news",
+          "publisher": "Crown Estate Scotland",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.crownestatescotland.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "japan-mlit-press",
+          "publisher": "Japan Ministry of Land, Infrastructure, Transport and Tourism",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.mlit.go.jp \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "gwerthwchigymru-procurement",
+          "publisher": "GwerthwchiGymru / Associated British Ports",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.gwerthwchigymru.llyw.cymru \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "cierco-energy-news",
+          "publisher": "Cierco Energy",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.ciercoenergy.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "sumitomo-corporation-news",
+          "publisher": "Sumitomo Corporation",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.sumitomocorp.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "cnooc-news",
+          "publisher": "CNOOC",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.cnooc.com.cn \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "ge-vernova-news",
+          "publisher": "GE Vernova",
+          "sourceClass": "turbine_oems",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.gevernova.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "vestas-news",
+          "publisher": "Vestas",
+          "sourceClass": "turbine_oems",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.vestas.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "mingyang-news",
+          "publisher": "Mingyang Smart Energy",
+          "sourceClass": "turbine_oems",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.myse.com.cn \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "principle-power-news",
+          "publisher": "Principle Power",
+          "sourceClass": "floating_platform_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.principlepower.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "bw-ideol-news",
+          "publisher": "BW Ideol",
+          "sourceClass": "floating_platform_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.bw-ideol.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "aikido-technologies-news",
+          "publisher": "Aikido Technologies",
+          "sourceClass": "floating_platform_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.aikidotechnologies.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "encomara-news",
+          "publisher": "Encomara",
+          "sourceClass": "mooring_anchor_suppliers",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:encomara.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "mooreast-news",
+          "publisher": "Mooreast",
+          "sourceClass": "mooring_anchor_suppliers",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:mooreast.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "prysmian-news",
+          "publisher": "Prysmian",
+          "sourceClass": "cable_electrical_grid_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.prysmian.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "nexans-news",
+          "publisher": "Nexans",
+          "sourceClass": "cable_electrical_grid_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.nexans.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "hitachi-energy-news",
+          "publisher": "Hitachi Energy",
+          "sourceClass": "cable_electrical_grid_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.hitachienergy.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "brestport-news",
+          "publisher": "BrestPort",
+          "sourceClass": "ports_fabrication",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.brest.port.bzh \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "haventus-news",
+          "publisher": "Haventus",
+          "sourceClass": "ports_fabrication",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.haventus.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "heerema-news",
+          "publisher": "Heerema Marine Contractors",
+          "sourceClass": "installation_vessel_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.heerema.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "boskalis-news",
+          "publisher": "Boskalis",
+          "sourceClass": "installation_vessel_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:boskalis.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "dnv-news",
+          "publisher": "DNV",
+          "sourceClass": "certification_standards",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "reviewed_source_records_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-01-dnv-prior-week"
+          ],
+          "searchQuery": "site:www.dnv.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "abs-news",
+          "publisher": "ABS",
+          "sourceClass": "certification_standards",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:ww2.eagle.org \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "asme-omae",
+          "publisher": "ASME OMAE",
+          "sourceClass": "certification_standards",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:omae.secure-platform.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "cognite-news",
+          "publisher": "Cognite",
+          "sourceClass": "engineering_software_digital",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.cognite.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "rewind-news",
+          "publisher": "ReWind",
+          "sourceClass": "engineering_software_digital",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.rewind.energy \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "carbon-trust-news",
+          "publisher": "Carbon Trust",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 0,
+          "result": "reviewed_source_records_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-01-carbon-trust-flexibility"
+          ],
+          "searchQuery": "site:www.carbontrust.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "bretagne-ocean-power-news",
+          "publisher": "Bretagne Ocean Power",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:bretagneoceanpower.fr \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "aivp-news",
+          "publisher": "AIVP",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.aivp.org \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "scio-xinhua",
+          "publisher": "SCIO / Xinhua",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.scio.gov.cn \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "offshorewind-biz",
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 5,
+          "dateWindowItems": 4,
+          "fowtRelevantItems": 4,
+          "result": "reviewed_source_records_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-01-enova-awards",
+            "eng-src-2026-11-01-korea-tender",
+            "eng-src-2026-11-01-japan-siemens",
+            "eng-src-2026-11-01-ow-enova",
+            "eng-src-2026-11-01-cvow-next-week"
+          ],
+          "searchQuery": "site:www.offshorewind.biz \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "deepwind",
+          "publisher": "DeepWind",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "result": "reviewed_source_records_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-01-fukushima-pilot"
+          ],
+          "searchQuery": "site:deepwind.jp \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "energy-global-wind",
+          "publisher": "Energy Global",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.energyglobal.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "ocean-news-technology",
+          "publisher": "Ocean News & Technology",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 6,
+          "dateWindowItems": 6,
+          "fowtRelevantItems": 4,
+          "result": "reviewed_source_records_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-01-ocergy-monitoring",
+            "eng-src-2026-11-01-noc-frontline",
+            "eng-src-2026-11-01-ont-ocergy",
+            "eng-src-2026-11-01-ont-frontline",
+            "eng-src-2026-11-01-stillstrom-repeat",
+            "eng-src-2026-11-01-guh-fixed"
+          ],
+          "searchQuery": "site:oceannews.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "offshore-magazine",
+          "publisher": "Offshore Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.offshore-mag.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "wind-systems-magazine",
+          "publisher": "Wind Systems Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.windsystemsmag.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "stanford-events",
+          "publisher": "Stanford University",
+          "sourceClass": "conferences_universities",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:events.stanford.edu \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "baird-maritime",
+          "publisher": "Baird Maritime",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.bairdmaritime.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "eco-magazine",
+          "publisher": "ECO Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "result": "reviewed_source_records_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-01-eco-frontline"
+          ],
+          "searchQuery": "site:www.ecomagazine.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "offshore-source",
+          "publisher": "Offshore Source",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 1,
+          "result": "reviewed_source_records_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-01-os-ocergy"
+          ],
+          "searchQuery": "site:www.offshoresource.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        },
+        {
+          "sourceId": "korea-offshore-wind-intelligence",
+          "publisher": "Korea Offshore Wind Intelligence",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain search attempted. Counts cover retained dated inventory, including exclusions; zero does not establish publisher absence or outage. Primary follow-ups are attributed to the discovery registry source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:www.koreaoffshorewind.com \"wind\" \"October\" \"2026\" after:2026-10-25 before:2026-11-02"
+        }
+      ],
+      "sourcesSuccessfullyCollected": 7,
+      "sourcesFailed": 35,
+      "duplicateEventGroups": [
+        {
+          "eventGroup": "enova-awards",
+          "primarySourceRecordId": "eng-src-2026-11-01-enova-awards",
+          "duplicateSourceRecordIds": [
+            "eng-src-2026-11-01-ow-enova"
+          ],
+          "note": "One event; secondary reports are supporting provenance, not independent candidates."
+        },
+        {
+          "eventGroup": "ocergy-monitoring",
+          "primarySourceRecordId": "eng-src-2026-11-01-ocergy-monitoring",
+          "duplicateSourceRecordIds": [
+            "eng-src-2026-11-01-ont-ocergy",
+            "eng-src-2026-11-01-os-ocergy"
+          ],
+          "note": "One event; secondary reports are supporting provenance, not independent candidates."
+        },
+        {
+          "eventGroup": "noc-frontline",
+          "primarySourceRecordId": "eng-src-2026-11-01-noc-frontline",
+          "duplicateSourceRecordIds": [
+            "eng-src-2026-11-01-ont-frontline",
+            "eng-src-2026-11-01-eco-frontline"
+          ],
+          "note": "One event; secondary reports are supporting provenance, not independent candidates."
+        }
+      ],
+      "coverageNotes": [
+        "Search/index coverage is incomplete and not exhaustive. Branded crewing content was rejected without storing it as an accepted source.",
+        "METI primary URL returned HTTP 403 in both browser retrieval and direct HTTP verification. The Japan candidate remains attributed trade reporting. Korea primary-source search did not return an accessible dated notice; no official-primary confirmation is claimed.",
+        "DeepWind explicitly reports the Fukushima cancellation from press accounts and found no company notice as of 27 October. Its editorial cost model is not adopted.",
+        "Ocergy page publication date is 27 October; its dateline is 26 October. August tow and September buoy redeployment are not described as events that occurred this week.",
+        "Enova and NOC primary records were obtained through approved trade-source discovery; the registry itself is unchanged.",
+        "Additional focused discovery and primary verification queries followed the broad registry pass."
+      ],
+      "followUpQueries": [
+        "site:offshorewind.biz/2026/10/ floating after:2026-10-25 before:2026-11-02",
+        "site:offshorewind.biz/2026/10/ \"floating\" \"2026\" \"29\"",
+        "site:offshorewind.biz/2026/10/ \"Enova\"",
+        "site:offshoresource.com \"2026\" \"Ocergy\"",
+        "\"Siemens Energy\" \"METI\" \"October 2026\"",
+        "site:enova.no \"2026\" \"Fortius\" \"Fram\"",
+        "site:noc.ac.uk \"2026\" \"Boaty\" \"October\" sensors",
+        "site:energy.or.kr \"2026\" \"하반기\" \"풍력\" \"10월 30\""
+      ]
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-11-01-enova-awards",
+        "sourceRecordId": "eng-src-2026-11-01-enova-awards",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-11-01-enova-awards",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 43,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 23,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal",
+                "engineering signals: mooring"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 7,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: government",
+                "government source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 10,
+              "maxScore": 10,
+              "evidence": [
+                "government announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Enova",
+          "projectGroup": null,
+          "topicGroup": "policy",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-11-01-ocergy-monitoring",
+        "sourceRecordId": "eng-src-2026-11-01-ocergy-monitoring",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-11-01-ocergy-monitoring",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 35,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 20,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "engineering signals: platform, tow"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 5,
+              "maxScore": 20,
+              "evidence": [
+                "technology signal: installation"
+              ]
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Ocergy",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-11-01-korea-tender",
+        "sourceRecordId": "eng-src-2026-11-01-korea-tender",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-11-01-korea-tender",
+        "rawRank": 3,
+        "finalRank": 3,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 32,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: tender"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: tender"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Asia-Pacific"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-11-01-noc-frontline",
+        "sourceRecordId": "eng-src-2026-11-01-noc-frontline",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-11-01-noc-frontline",
+        "rawRank": 4,
+        "finalRank": 4,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 31,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "National Oceanography Centre",
+          "projectGroup": "port_talbot_celtic_sea",
+          "topicGroup": "engineering",
+          "regionHint": "Europe"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-11-01-japan-siemens",
+        "sourceRecordId": "eng-src-2026-11-01-japan-siemens",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-11-01-japan-siemens",
+        "rawRank": 5,
+        "finalRank": 5,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 29,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 21,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal",
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "policy/market signals: supply chain"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": "japan_port_planning",
+          "topicGroup": "engineering",
+          "regionHint": "Asia-Pacific"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-11-01-fukushima-pilot",
+        "sourceRecordId": "eng-src-2026-11-01-fukushima-pilot",
+        "selected": false,
+        "selectedBriefingItemId": null,
+        "rawRank": 6,
+        "finalRank": null,
+        "selectionReason": "not_selected_after_diversity",
+        "diversityReason": null,
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 25,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 16,
+              "maxScore": 30,
+              "evidence": [
+                "floating wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: project"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "DeepWind",
+          "projectGroup": "japan_port_planning",
+          "topicGroup": "engineering",
+          "regionHint": "Asia-Pacific"
+        }
+      }
+    ]
+  }
+}

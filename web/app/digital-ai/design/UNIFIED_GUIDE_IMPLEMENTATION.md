@@ -1,7 +1,7 @@
 # Digital & AI unified guide: review and implementation
 
-Started: 2026-10-27. Final validation: 2026-10-29.
-Base: main `bb3b06a` (merged PR #50).
+Started: 2026-10-27. Original validation: 2026-10-29; integration: 2026-11-06.
+Original base: main `bb3b06a` (merged PR #50); integrated base: `cab926b` (PR #57).
 Branch: `feat/digital-ai-unified-guide`.
 Scope and review findings: `UNIFIED_GUIDE_MVP.md`.
 
@@ -55,7 +55,7 @@ popstate listeners keep browser history in sync. They support browser
 back/forward. A reader return opens the wind evidence catalogue inside the final
 chapter. The energy-system provenance registry is separately labelled beside it.
 
-## Validation
+## Original Validation (2026-10-29)
 
 ```text
 python -m pytest pipeline/tests -> 210 passed
@@ -95,6 +95,49 @@ light/dark themes and 390px overflow. Screenshots are local QA artifacts, not
 golden-image comparisons. The known Next.js diagnostic for the deliberately
 unknown reader route accompanies its expected HTTP 404; browser error assertions
 pass.
+
+## Integration Acceptance (2026-11-06)
+
+Merged current main `cab926b` into the existing PR #51 branch. The only conflicts
+were `START_HERE.md` and `PROJECT_STATUS.md`: retain the accepted PR #57 status,
+weekly #52 and fixes #53–#56, then add the current guide scope and new acceptance.
+No guide runtime or regression-test changes were necessary. Browser documentation
+now counts 29 shared tests, including the four language-storage cases from main.
+
+```text
+python -m pytest pipeline/tests -q -> 258 passed
+npm.cmd run validate:data -> passed
+npm.cmd run test:data -> 174 passed
+npm.cmd run lint -> passed
+npm.cmd run build -> passed, Next.js 16.4.5 Turbopack, 463 static pages
+npm.cmd run test:smoke -> 29 passing assertions; exited 0 after server cleanup
+git diff --check -> passed
+```
+
+The browser assertions all passed, but Windows server teardown stalled after
+the last test. Stopping only the exact Next.js process started by this run
+released the runner, which reported `29 passed (2.8m)` and exited 0. No assertion,
+timeout, retry or Playwright configuration was changed. This local run does not
+demonstrate unattended teardown; verify that separately in hosted CI on the
+final integration commit. No failing test was retried or counted as passing.
+
+Visually inspected desktop English and 390px Chinese workflow screenshots in
+light/dark themes. The suite also passed legacy deep links, back/forward,
+keyboard focus, both evidence collections, source boundaries, pathways,
+no-overflow checks, current weekly navigation and language-storage regressions.
+No new external source audit or production UI verification is claimed.
+
+Protected-content comparison against `cab926b`: pipeline, all `web/data`,
+dependency files, CI and the language provider are unchanged. Comparison against
+the existing guide head `d0d5f5c`: runtime and feature regression tests are unchanged.
+The build rewrote `web/next-env.d.ts`; its exact pre-existing bytes were restored
+and remain excluded from the integration commit. Other local diagnostic logs and
+screenshots are ignored artifacts. Industry-only suites were not rerun because
+the integration does not change Industry; shared cross-site coverage passed.
+
+Delivery remains the existing PR #51, open for manual review and merge. Record
+remote CI and Vercel status on its final integration commit in the PR description;
+earlier CI on `d0d5f5c` is historical evidence only.
 
 ## Remaining boundaries
 

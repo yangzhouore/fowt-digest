@@ -12,6 +12,8 @@ import re
 import tempfile
 from typing import Any
 
+from pipeline.openalex_collector import collection_is_complete
+
 
 @dataclass(frozen=True)
 class PublishResult:
@@ -36,6 +38,7 @@ def publish_weekly_digest(
     source_path = run_directory / "weekly_digest.json"
     digest = _read_digest(source_path)
     week_end = _validated_week_end(digest)
+    _require_complete_collection(run_directory, digest)
 
     digest_dir = web_root / "data" / "digests"
     adapter_path = web_root / "data" / "digest-adapter.ts"
@@ -58,6 +61,21 @@ def publish_weekly_digest(
         wrote_digest=wrote_digest,
         updated_adapter=updated_adapter,
     )
+
+
+def _require_complete_collection(run_directory: Path, digest: dict[str, Any]) -> None:
+    try:
+        with (run_directory / "run_summary.json").open("r", encoding="utf-8") as file:
+            summary = json.load(file)
+    except (OSError, ValueError) as error:
+        raise ValueError("website publishing requires a complete successful collection summary") from error
+    if (
+        not collection_is_complete(summary)
+        or not isinstance(summary.get("runId"), str)
+        or not summary["runId"]
+        or summary["runId"] != digest.get("runId")
+    ):
+        raise ValueError("website publishing requires a complete successful collection summary matching the digest runId")
 
 
 def update_digest_adapter(*, adapter_path: str | Path, digest_dir: str | Path) -> bool:

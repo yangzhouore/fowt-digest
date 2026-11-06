@@ -11,6 +11,9 @@ from typing import Any, Callable
 from pipeline.openalex_client import fetch_openalex_json
 from pipeline.openalex_collector import (
     DEFAULT_REQUEST_DELAY_SECONDS,
+    FAILED_STATUS,
+    PARTIAL_SUCCESS_STATUS,
+    collection_is_complete,
     collect_openalex_raw,
 )
 from pipeline.normaliser import write_normalisation_outputs
@@ -51,6 +54,17 @@ def run_weekly_pipeline(
     )
     run_id = collection_result["runId"]
     run_directory = Path(collection_result["runDirectory"])
+
+    if not collection_is_complete(collection_result):
+        return {
+            "runId": run_id,
+            "runDirectory": run_directory,
+            "status": FAILED_STATUS if collection_result.get("status") == FAILED_STATUS else PARTIAL_SUCCESS_STATUS,
+            "publishable": False,
+            "stageResults": {"collection": collection_result},
+            "weeklyDigest": None,
+            "weeklyDigestResult": None,
+        }
 
     raw_path = run_file_path(run_directory, "raw_openalex.json")
     raw_payload = _read_json(raw_path)
@@ -100,6 +114,7 @@ def run_weekly_pipeline(
         "runId": run_id,
         "runDirectory": run_directory,
         "status": "completed",
+        "publishable": True,
         "stageResults": {
             "collection": collection_result,
             "normalisation": normalisation_result,

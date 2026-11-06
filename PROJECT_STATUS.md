@@ -1,30 +1,133 @@
 # Project Status
 
-Last updated: 2026-10-29. Current feature base: main `bb3b06a` (PR #50).
+Last updated: 2026-11-06. Verified stable main: `cab926b` (merged handover PR #57).
 
 ## Current State
 
-- Current stable branch: `main`
-- Latest completed product milestone: AI × Energy explainer (PR #50), merged at `bb3b06a`.
-- Current work: unified Digital & AI guide on `feat/digital-ai-unified-guide`, requested by the user to synergise earlier wind content and broader energy context.
-- Scope: `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md`.
-- Review and acceptance: `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
-- Latest release tag: `v1.4.0`
-- Production website: https://fowt-digest-oegd.vercel.app/
-- Delivery: leave the unified-guide PR open for manual merge; record remote CI/preview separately from local results. PR #50 and maintenance PR #49 are merged.
+- Latest completed product milestone: AI × Energy explainer, PR #50, merged at
+  `bb3b06a`. Scope: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`;
+  source review: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
+- Latest paired weekly editions: week ending 2026-11-01, PR #52, merged at `0a03771`.
+- Subsequent fixes #53–#56 are merged; details and validation are below.
+- Pending product work: unified Digital & AI guide, open
+  [PR #51](https://github.com/yangzhouore/fowt-digest/pull/51), now incorporating
+  main `cab926b`. This presentation is not yet in main.
+- Separate unmerged implementation: `feature/private-analytics-dashboard`,
+  head `7a0ecd0`; live provider access and hosted collection remain unverified.
+- Latest release tag: `v1.4.0`.
+- Production website: https://fowt-digest-oegd.vercel.app/.
+  Production rendering was not independently inspected during this status refresh.
 
-## Current Unified Digital & AI Guide
+## Next Work
+
+1. Checkout/handover refresh is complete: PR #57 was accepted and merged at
+   `cab926b`. The pre-existing `web/next-env.d.ts` development-route import
+   remains excluded from feature delivery.
+2. Current main is incorporated into the unified-guide branch; handover conflicts
+   are resolved and local acceptance is complete (details below). Update PR #51,
+   verify CI on the integration commit, then leave it open for manual review
+   and merge. Scope and acceptance documents are
+   `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md` and
+   `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
+   The existing feature head passed [CI run #87](https://github.com/yangzhouore/fowt-digest/actions/runs/40846641690);
+   that result predates the weekly update and recent fixes.
+3. Before the next Research edition, investigate the earlier OpenAlex HTTP 401
+   continuation failures and record cap, then verify a complete collection.
+   The new guard prevents incomplete publication; it does not resolve collection
+   access or coverage. Do not bypass it or silently regenerate historical editions.
+4. Review the analytics branch separately against current main. Its branch-local
+   `docs/private-analytics.md` records an owner-requested exception limited to
+   the private admin route, provider setup and unverified live checks. The static
+   architecture below describes merged main, not this pending branch.
+
+## Recent Merged Fixes
+
+- [PR #53](https://github.com/yangzhouore/fowt-digest/pull/53), `f1079ec`:
+  upgraded Next.js and eslint-config-next to 16.4.5. Its recorded audit still
+  contained unrelated dependency findings; this is not a clean current audit.
+- [PR #54](https://github.com/yangzhouore/fowt-digest/pull/54), `b1cb1d8`:
+  corrected OpenAlex publication-type mapping using explicit source metadata.
+  Scoring weights and Top 5 policy are unchanged. Historical records were not
+  regenerated; the retained latest-pool audit preserved Top 5 membership/order
+  while correcting venue scores and changing other candidate ranks.
+- [PR #55](https://github.com/yangzhouore/fowt-digest/pull/55), `4ef2d5c`:
+  failed, partial or capped collection stops before digest generation with
+  `publishable: false`. Publishing independently requires successful, uncapped
+  collection diagnostics matching the run. Missing/invalid legacy diagnostics
+  and `--overwrite` cannot bypass the guard. Complete zero-result collection
+  remains valid. See `docs/PIPELINE_ARCHITECTURE.md` and
+  `docs/WEBSITE_PUBLISHING_WORKFLOW.md`.
+- [PR #56](https://github.com/yangzhouore/fowt-digest/pull/56), `35b7feb`:
+  expected localStorage security/quota failures fall back to an in-memory
+  language preference for the current document and client navigation. Normal
+  persistence remains; unrelated errors are rethrown. Four browser regressions
+  bring the shared suite to 27 tests.
+
+## Current Validation Evidence
+
+- Integrated unified guide on main `cab926b`, checked 2026-11-06: 258 pipeline
+  tests, all static-data validators, 174 data tests, lint and standard Turbopack
+  build passed (463 static pages). All 29 shared Chromium tests passed their
+  assertions. Windows server teardown stalled; stopping only this run's Next.js
+  server released the runner, which exited 0 with `29 passed`. Record hosted CI
+  separately to verify unattended teardown on the final integration commit.
+- Desktop English and mobile Chinese workflow screenshots were visually inspected
+  in light/dark themes. Browser checks cover keyboard focus, overflow, all ten
+  legacy task links, history, fourteen reader routes' supporting data, evidence
+  boundaries, pathways, weekly navigation and the four storage regressions.
+- The integrated feature leaves pipeline, all `web/data`, dependencies, CI and
+  the language provider identical to main `cab926b`. Guide runtime/test code is
+  unchanged from the existing feature head `d0d5f5c`; integration required only
+  handover conflict resolution and updated validation documentation. The existing
+  `web/next-env.d.ts` bytes were restored after build generation and remain excluded.
+- Fresh local status-review checks on 2026-11-06 at `eab2c97`: 258 pipeline tests,
+  all static-data validators, 172 website data tests, lint and `git diff --check`
+  passed. This commit's tracked tree matches merged main `35b7feb`.
+- Full local acceptance recorded in PR #56: the same baseline plus standard
+  Turbopack production build (463 static pages) and 27 browser smoke tests passed.
+- Remote evidence rechecked on 2026-11-06: [PR CI run #97](https://github.com/yangzhouore/fowt-digest/actions/runs/42058606527)
+  for feature head `eab2c97` passed Pipeline validation, Website validation
+  (including build), and Browser smoke. This is PR validation, not a separate
+  verification of the post-merge production deployment.
+- Handover PR #57 changed documentation only. Its validation was limited to
+  reference/status consistency, diff whitespace and preservation of the existing
+  generated-file change. Build, browser suites and the full baseline were not
+  rerun for those documentation edits; those earlier results remain dated evidence.
+
+## Current Unified Digital & AI Guide (PR #51, Not Yet Merged)
 
 - One chapter sequence joins foundations, seven topics with contextual practical
   examples, four supply options, dated developments, conditional futures and a
   final evidence library. The competing standalone lifecycle map is removed.
-- The ten practical workflows are grouped under their relevant topic; changing a
-  topic cannot leave a different topic's task visible. Task titles replace AI labels.
-- Developments and futures explicitly link back to explanation and supply contexts.
-- All fourteen reader routes, legacy task/field/pathway/evidence links and source
-  data remain. Two evidence collections retain their independent provenance.
-- Local acceptance: 210 Python tests, data validation, 174 data tests, lint,
-  454 static pages and 25 shared Chromium journeys passed.
+- Ten practical workflows sit under their relevant topic. Changing topics resets
+  the selected task; task titles replace generic AI labels.
+- Developments and futures link back to explanation and supply contexts.
+- All fourteen reader routes and legacy task/field/pathway/evidence links remain.
+  The two evidence collections retain their independent records and provenance.
+- Scope: `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md`; integration and validation:
+  `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
+
+## Latest Merged Weekly Update: 26 October–1 November 2026 (PR #52)
+
+- Branch: `data/weekly-digest-2026-11-01`, from main `bb3b06a` (merged PR #50).
+- Merged into main at `0a03771` in [PR #52](https://github.com/yangzhouore/fowt-digest/pull/52).
+- Collection, evidence boundaries and selection: `docs/weekly/2026-11-01.md`.
+- Research: 212 obtained raw records → 86 deduplicated candidates → five selected
+  records by the then-current pipeline. Coverage is partial: three HTTP 401
+  continuation failures persisted on retry; the configured cap was reached.
+  The highest-ranked record is a benchmark dataset; metadata is preserved.
+- Engineering: all 42 registry domains searched; 16 retained source records →
+  14 in-window → 11 eligible reports → six independent candidates → five
+  scored highlights. Five candidate publishers, four selected publishers.
+- Both new editions and candidate transparency are registered. Historical
+  records, scoring, datasets outside the weekly update and page behavior remain
+  unchanged. Separate analytics work is excluded. Later pipeline fixes did not
+  regenerate these published records or remove their coverage disclosure.
+- Local validation: 210 pipeline tests, all data validators, 172 data tests,
+  lint, a 463-route static production build and 23 browser smoke tests passed.
+  Focused weekly counts, coverage disclosure and mobile Chinese/dark checks
+  passed; `git diff --check` passed. The known reader `NoFallbackError` diagnostic
+  recurred with passing assertions. Remote CI/Preview are recorded in the PR.
 
 ## Merged AI × Energy Explainer (PR #50, `bb3b06a`)
 
@@ -42,7 +145,7 @@ Last updated: 2026-10-29. Current feature base: main `bb3b06a` (PR #50).
   lint, 454-page production build and 23 shared Chromium journeys passed after
   incorporating maintenance main `20533eb`.
 
-## Latest Merged Weekly Update: 19-25 October 2026 (PR #48)
+## Previous Merged Weekly Update: 19-25 October 2026 (PR #48)
 
 - Branch: `data/weekly-digest-2026-10-25`, based on main `710bba5`; merged manually into main at `580a83e` (PR #48).
 - Skills: `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md`.
@@ -165,8 +268,7 @@ The repository contains five independent static content areas:
 - Projects: curated source-backed floating offshore wind project data under
   `web/data/projects/`.
 - Digital & AI: 14 curated source-backed Signals under `web/data/digital-ai/`,
-  used as evidence for the AI × Energy workflows and supply comparisons, alongside
-  the independent broader energy-context dataset.
+  used as evidence for the AI × offshore-wind impact maps.
 
 The website supports:
 
@@ -190,11 +292,13 @@ The website supports:
 - Digital & AI page explaining the wider AI/energy system, with offshore-wind
   lifecycle applications and land, coastal, offshore and flexible compute pathways;
 - reader-facing Methodology and About pages;
-- persistent English / Simplified Chinese interface and fixed-copy switching,
-  independent from the Light / Dark theme control.
+- English / Simplified Chinese interface and fixed-copy switching, persisted
+  when browser storage is available, with an in-memory fallback for expected
+  storage failures; independent from the Light / Dark theme control.
 
 The local research publishing workflow can copy an accepted pipeline
-`weekly_digest.json` into website data and refresh adapter registration. GitHub
+`weekly_digest.json` into website data and refresh adapter registration only when
+complete successful collection diagnostics match the run. GitHub
 CI validates pushes and pull requests to `main`. Vercel deploys production from
 committed `main` through Git integration.
 
@@ -209,8 +313,9 @@ committed `main` through Git integration.
   Engineering Briefing and Industry Map UI data.
 - Digital & AI data is independent static evidence data; its 14 Signals support
   the impact diagrams and are not a generic AI news feed or ranked pipeline.
-- The language layer is local UI state backed by `localStorage`. It does not use
-  external translation, locale routes, or duplicated source datasets.
+- The language layer is local UI state backed by `localStorage` with an in-memory
+  fallback for expected access/quota failures. It does not use external
+  translation, locale routes, or duplicated source datasets.
 - Archive Search is deterministic, client-side, and uses committed website data.
 - No backend, database, CMS, API routes, scheduler, semantic search, AI writing,
   automatic collection, automatic publication, automatic project updates, stock
@@ -223,10 +328,10 @@ committed `main` through Git integration.
 
 ## Current Data Baseline
 
-- Static Research Digest editions: 42 editions, latest week ending 2026-10-25.
-- Static Research candidate-pool files: 29 retained or reconstructed weekly
+- Static Research Digest editions: 43 editions, latest week ending 2026-11-01.
+- Static Research candidate-pool files: 30 retained or reconstructed weekly
   candidate pools.
-- Static Engineering Briefing editions: 42 editions, latest week ending 2026-10-25.
+- Static Engineering Briefing editions: 43 editions, latest week ending 2026-11-01.
 - Static Engineering source registry: 42 approved source records.
 - Static Industry Map companies: 47 curated organisations.
 - Static Projects records: 48 source-backed floating offshore wind project

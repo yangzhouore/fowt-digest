@@ -39,6 +39,22 @@ See `PIPELINE_DATA_MODEL.md` for stage shapes and
 
 ## Failure Handling
 
+Collection completeness gates orchestration and publication:
+
+| Collection diagnostics | Overall status | Publishable |
+| --- | --- | --- |
+| `success`, uncapped, no failed/partial queries or pages | `completed` after all stages | Yes |
+| `failed` | `failed` | No |
+| `partial_success`, including the run record cap | `partial_success` | No |
+
+The orchestrator returns an explicit `publishable` boolean. Non-complete runs
+retain raw pages and `run_summary.json`, stop before normalization, and return
+null `weeklyDigest` and `weeklyDigestResult` with only the collection stage.
+The cap remains available for diagnostic runs but has no publication override.
+A complete collection with zero results is valid; a malformed response without
+a results array is a failed page, not an empty successful response. Completeness
+uses collector diagnostics, not record count.
+
 Collection records failed requests/pages and retries transient failures. The
 normaliser reads successful pages and records rejected candidates/metadata with
 raw provenance. Downstream stages reject malformed contracts rather than

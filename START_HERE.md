@@ -6,7 +6,7 @@ Use this file as the resume entry point for a new Codex session.
 
 Verified against GitHub on 2026-11-06.
 
-- Current stable branch: `main` at `35b7feb` (merged PR #56).
+- Current stable branch: `main` at `cab926b` (merged handover PR #57).
 - Latest completed product milestone: AI × Energy explainer, PR #50, merged
   at `bb3b06a`. Scope and acceptance: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`;
   source review: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
@@ -17,7 +17,8 @@ Verified against GitHub on 2026-11-06.
   incomplete-collection publication guard (#55), and language-storage resilience (#56).
 - Pending product work: Digital & AI unified guide on `feat/digital-ai-unified-guide`,
   [PR #51](https://github.com/yangzhouore/fowt-digest/pull/51), still open.
-  Its scope and implementation documents are on that branch under
+  Current main `cab926b` is incorporated into the feature branch. Scope and
+  implementation documents are
   `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md` and `UNIFIED_GUIDE_IMPLEMENTATION.md`.
 - Separate unmerged work: `feature/private-analytics-dashboard` at `7a0ecd0`.
   Its branch-local `docs/private-analytics.md` records scope and remaining live checks.
@@ -30,8 +31,9 @@ the UK/Germany/Norway/China Industry guides, ten practical Digital & AI cards,
 14 internal evidence readers, four supply pathways and the broader AI × Energy
 explainer. PR #51's unified presentation and private analytics are not in main.
 
-Next: integrate current main into PR #51 and repeat acceptance before manual
-review/merge; establish complete OpenAlex collection before the next Research
+Integrated PR #51 local acceptance is complete; leave it open for manual review/merge.
+Check the PR for CI/preview results on its final integration commit. Next,
+establish complete OpenAlex collection before the next Research
 publication; review analytics separately. PR #55 blocks incomplete or capped
 collection but does not fix the earlier HTTP 401 failures or collection cap.
 Preserve historical published records and their partial-coverage disclosures.
@@ -51,6 +53,14 @@ Do not read historical docs under `docs/archive/` by default. Open archived docs
 only when historical context is specifically required.
 
 ## Reference Docs
+
+Current unified Digital & AI work (PR #51, not yet merged):
+
+- One six-chapter sequence: understand → apply AI → supply computing →
+  developments → conditional futures → evidence.
+- Seven topics contain the ten practical workflows in context, replacing the
+  competing lifecycle map. Reading mappings: `web/app/digital-ai/guide-structure.ts`.
+- Existing task/field/pathway/evidence deep links and all source records remain.
 
 Merged AI × Energy explainer (PR #50, `bb3b06a`):
 

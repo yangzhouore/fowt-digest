@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-11-06. Verified stable main: `35b7feb` (merged PR #56).
+Last updated: 2026-11-06. Verified stable main: `cab926b` (merged handover PR #57).
 
 ## Current State
 
@@ -10,8 +10,8 @@ Last updated: 2026-11-06. Verified stable main: `35b7feb` (merged PR #56).
 - Latest paired weekly editions: week ending 2026-11-01, PR #52, merged at `0a03771`.
 - Subsequent fixes #53–#56 are merged; details and validation are below.
 - Pending product work: unified Digital & AI guide, open
-  [PR #51](https://github.com/yangzhouore/fowt-digest/pull/51), head `d0d5f5c`.
-  This presentation is not yet in main.
+  [PR #51](https://github.com/yangzhouore/fowt-digest/pull/51), now incorporating
+  main `cab926b`. This presentation is not yet in main.
 - Separate unmerged implementation: `feature/private-analytics-dashboard`,
   head `7a0ecd0`; live provider access and hosted collection remain unverified.
 - Latest release tag: `v1.4.0`.
@@ -20,14 +20,13 @@ Last updated: 2026-11-06. Verified stable main: `35b7feb` (merged PR #56).
 
 ## Next Work
 
-1. Checkout/handover refresh: local main was fast-forwarded to `35b7feb`; this
-   documentation update is on `chore/refresh-handover-2026-11-06`.
-   The pre-existing `web/next-env.d.ts` development-route import is preserved
-   and excluded from the handover edits. Deliver this documentation-only update
-   as a separate PR for manual review and merge.
-2. Integrate current main into the unified-guide branch, resolve integration
-   differences and rerun full baseline/browser acceptance before manual review
-   and merge. Its branch-local scope and acceptance documents are
+1. Checkout/handover refresh is complete: PR #57 was accepted and merged at
+   `cab926b`. The pre-existing `web/next-env.d.ts` development-route import
+   remains excluded from feature delivery.
+2. Current main is incorporated into the unified-guide branch; handover conflicts
+   are resolved and local acceptance is complete (details below). Update PR #51,
+   verify CI on the integration commit, then leave it open for manual review
+   and merge. Scope and acceptance documents are
    `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md` and
    `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
    The existing feature head passed [CI run #87](https://github.com/yangzhouore/fowt-digest/actions/runs/40846641690);
@@ -66,6 +65,21 @@ Last updated: 2026-11-06. Verified stable main: `35b7feb` (merged PR #56).
 
 ## Current Validation Evidence
 
+- Integrated unified guide on main `cab926b`, checked 2026-11-06: 258 pipeline
+  tests, all static-data validators, 174 data tests, lint and standard Turbopack
+  build passed (463 static pages). All 29 shared Chromium tests passed their
+  assertions. Windows server teardown stalled; stopping only this run's Next.js
+  server released the runner, which exited 0 with `29 passed`. Record hosted CI
+  separately to verify unattended teardown on the final integration commit.
+- Desktop English and mobile Chinese workflow screenshots were visually inspected
+  in light/dark themes. Browser checks cover keyboard focus, overflow, all ten
+  legacy task links, history, fourteen reader routes' supporting data, evidence
+  boundaries, pathways, weekly navigation and the four storage regressions.
+- The integrated feature leaves pipeline, all `web/data`, dependencies, CI and
+  the language provider identical to main `cab926b`. Guide runtime/test code is
+  unchanged from the existing feature head `d0d5f5c`; integration required only
+  handover conflict resolution and updated validation documentation. The existing
+  `web/next-env.d.ts` bytes were restored after build generation and remain excluded.
 - Fresh local status-review checks on 2026-11-06 at `eab2c97`: 258 pipeline tests,
   all static-data validators, 172 website data tests, lint and `git diff --check`
   passed. This commit's tracked tree matches merged main `35b7feb`.
@@ -75,10 +89,23 @@ Last updated: 2026-11-06. Verified stable main: `35b7feb` (merged PR #56).
   for feature head `eab2c97` passed Pipeline validation, Website validation
   (including build), and Browser smoke. This is PR validation, not a separate
   verification of the post-merge production deployment.
-- This handover step changes documentation only. Validation is limited to
+- Handover PR #57 changed documentation only. Its validation was limited to
   reference/status consistency, diff whitespace and preservation of the existing
-  generated-file change. Build, browser suites and the full baseline are not
-  rerun for these documentation edits; earlier results above remain dated evidence.
+  generated-file change. Build, browser suites and the full baseline were not
+  rerun for those documentation edits; those earlier results remain dated evidence.
+
+## Current Unified Digital & AI Guide (PR #51, Not Yet Merged)
+
+- One chapter sequence joins foundations, seven topics with contextual practical
+  examples, four supply options, dated developments, conditional futures and a
+  final evidence library. The competing standalone lifecycle map is removed.
+- Ten practical workflows sit under their relevant topic. Changing topics resets
+  the selected task; task titles replace generic AI labels.
+- Developments and futures link back to explanation and supply contexts.
+- All fourteen reader routes and legacy task/field/pathway/evidence links remain.
+  The two evidence collections retain their independent records and provenance.
+- Scope: `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md`; integration and validation:
+  `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
 
 ## Latest Merged Weekly Update: 26 October–1 November 2026 (PR #52)
 

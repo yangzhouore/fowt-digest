@@ -10,7 +10,6 @@ import {
 } from "../../data/digital-ai-adapter";
 import { DigitalAiExperience } from "./signal-filters";
 import { LocalizedCopy } from "../i18n/localized-copy";
-import { EnergySystemOverview, EnergyOutlook } from "./energy-system";
 
 export const metadata: Metadata = {
   title: "Digital & AI",
@@ -29,10 +28,8 @@ export default function DigitalAiPage() {
       <section className="digital-ai-hero" aria-labelledby="digital-ai-heading">
         <p className="eyebrow"><LocalizedCopy en="Digital & AI" zh="数字化与 AI" /></p>
         <h1 id="digital-ai-heading">AI <span aria-hidden="true">×</span> <LocalizedCopy en="Energy" zh="能源" /></h1>
-        <p><LocalizedCopy en="Understand the wider system. Find where wind fits." zh="理解更大的系统，找到风电的位置。" /></p>
+        <p><LocalizedCopy en="Understand the system. Explore the work. Check the evidence." zh="理解系统，探索应用，查验证据。" /></p>
       </section>
-
-      <EnergySystemOverview />
 
       <DigitalAiExperience
         signalCount={getDigitalAiSignalCount()}
@@ -51,8 +48,6 @@ export default function DigitalAiPage() {
         }))}
         regions={options.regions}
       />
-
-      <EnergyOutlook />
 
       <SiteFooter />
     </main>

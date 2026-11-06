@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, type ReactNode } from "react";
+import { developmentTopics, scenarioTopics } from "./guide-structure";
 import context from "../../data/digital-ai/energy-context.json";
 import { useLanguage } from "../i18n/language-context";
 import styles from "./energy-system.module.css";
@@ -15,41 +16,16 @@ function Sources({ ids }: { ids: string[] }) {
   })}</p>;
 }
 
-export function EnergySystemOverview() {
+export function EnergyIntroduction() {
   const { language } = useLanguage();
   const copy = (en: string, zh: string) => language === "zh" ? zh : en;
-  const [fieldId, setFieldId] = useState(context.fields[0].id);
-  const [audience, setAudience] = useState<"reader" | "developer">("reader");
-  useEffect(() => {
-    const readHash = () => {
-      const id = window.location.hash.replace(/^#energy-/, "");
-      if (context.fields.some((field) => field.id === id)) setFieldId(id);
-    };
-    readHash();
-    window.addEventListener("hashchange", readHash);
-    return () => window.removeEventListener("hashchange", readHash);
-  }, []);
-  const field = context.fields.find((item) => item.id === fieldId)!;
-
   return <div className={styles.guide}>
-    <nav className={styles.navigation} aria-label={copy("AI and energy reading guide", "AI 与能源阅读导航")}>
-      {[
-        ["energy-system", "Start here", "从这里开始"],
-        ["energy-fields", "Explore the connections", "探索联系"],
-        ["ai-to-wind-heading", "Wind applications", "风电应用"],
-        ["wind-to-ai-heading", "Power pathways", "供电路径"],
-        ["energy-updates", "Developments", "相关进展"],
-        ["energy-future", "What could come next", "未来可能怎样"],
-      ].map(([id, en, zh]) => <a key={id} href={`#${id}`}>{copy(en, zh)}</a>)}
-    </nav>
-
     <section id="energy-system" aria-labelledby="energy-system-heading" className={styles.section}>
-      <p className={styles.kicker}>{copy("Start with three relationships", "先理解三种关系")}</p>
+      <p className={styles.kicker}>{copy("01 / Understand the system", "01 / 理解系统")}</p>
       <h2 id="energy-system-heading">{copy("AI uses energy. AI can also help manage it.", "AI 消耗能源，也能辅助管理能源。")}</h2>
       <p className={styles.lead}>{copy("Think of a connected system: computing creates a load; wind and other sources supply electricity; grids, storage and operating decisions connect the two.", "把它看作互相连接的系统：计算形成用电负荷，风电等能源提供电力，电网、储能与运行决策把两者连接起来。")}</p>
       <ol className={styles.relationships}>
-        {context.relationships.map((item, index) => <li key={item.id}>
-          <span className={styles.number} aria-hidden="true">0{index + 1}</span>
+        {context.relationships.map((item) => <li key={item.id}>
           <h3>{item.title[language]}</h3><p>{item.text[language]}</p><Sources ids={item.sourceIds} />
         </li>)}
       </ol>
@@ -76,16 +52,31 @@ export function EnergySystemOverview() {
         <p>{copy("In energy, AI may estimate tomorrow's wind or flag an unusual sensor pattern. Physics models and optimization also matter; a digital tool is not automatically AI. Look for the input, the output and the decision it supports.", "在能源领域，AI 可估计明天的风况，或标记异常传感器模式。物理模型与优化同样重要，数字工具不自动等于 AI。应关注它的输入、输出，以及所支持的决策。")}</p>
         <Sources ids={["doe-ai", "nlr-hybrid", "fem-subsee"]} />
       </aside>
+      <details className={styles.glossary}>
+        <summary>{copy("Six terms that make the headlines easier to read", "读懂新闻标题的六组术语")}</summary>
+        <dl>{context.glossary.map((item) => <div key={item.term.en}><dt>{item.term[language]}</dt><dd>{item.meaning[language]}<Sources ids={item.sourceIds} /></dd></div>)}</dl>
+      </details>
     </section>
+  </div>;
+}
 
+export function EnergyFieldExplorer({ fieldId, onFieldChange, children }: {
+  fieldId: string; onFieldChange: (id: string) => void; children?: ReactNode;
+}) {
+  const { language } = useLanguage();
+  const copy = (en: string, zh: string) => language === "zh" ? zh : en;
+  const [audience, setAudience] = useState<"reader" | "developer">("reader");
+  const field = context.fields.find((item) => item.id === fieldId)!;
+  const fieldTitle = fieldId === "wind" ? copy("Wind project work", "风电项目工作") : field.title[language];
+  return <div className={styles.guide}>
     <section id="energy-fields" aria-labelledby="energy-fields-heading" className={styles.section}>
-      <p className={styles.kicker}>{copy("Follow the connections", "沿着联系理解系统")}</p>
-      <h2 id="energy-fields-heading">{copy("From a computing task to a floating turbine", "从一次计算任务，到一台浮式风机")}</h2>
-      <p>{copy("Choose a field. Each one solves a different part of the problem; none replaces the whole energy system.", "选择一个领域。每个领域解决不同问题，任何一个都不能替代整个能源系统。")}</p>
+      <p className={styles.kicker}>{copy("02 / Apply AI to energy decisions", "02 / 将 AI 用于能源决策")}</p>
+      <h2 id="energy-fields-heading">{copy("Choose a topic. Work through a practical example.", "选择一个主题，理解一个实际工作流程。")}</h2>
+      <p>{copy("Start with the explanation, then explore the wind workflows underneath. The reader and developer views share the same evidence.", "先阅读说明，再探索下方相关风电流程。读者与开发者视角使用相同证据。")}</p>
       <div className={styles.fieldButtons} role="group" aria-label={copy("Energy system fields", "能源系统领域")}>
         {context.fields.map((item, index) => <button key={item.id} id={`energy-${item.id}`} type="button"
-          aria-pressed={fieldId === item.id} aria-controls="energy-field-detail" onClick={() => setFieldId(item.id)}>
-          <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>{item.title[language]}
+          aria-pressed={fieldId === item.id} aria-controls="energy-field-detail" onClick={() => onFieldChange(item.id)}>
+          <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>{(item.id === "wind" ? copy("Wind project work", "风电项目工作") : item.title[language])}
         </button>)}
       </div>
       <div className={styles.audience} role="group" aria-label={copy("Choose your reading perspective", "选择阅读视角")}>
@@ -93,22 +84,21 @@ export function EnergySystemOverview() {
         <button type="button" aria-pressed={audience === "reader"} onClick={() => setAudience("reader")}>{copy("I want to understand", "我想理解")}</button>
         <button type="button" aria-pressed={audience === "developer"} onClick={() => setAudience("developer")}>{copy("I build or evaluate tools", "我开发或评估工具")}</button>
       </div>
-      <p className={styles.announcement} aria-live="polite" aria-atomic="true">{field.title[language]}</p>
+      <p className={styles.announcement} aria-live="polite" aria-atomic="true">{fieldTitle}</p>
       <article id="energy-field-detail" className={styles.fieldDetail} aria-labelledby="energy-field-title" data-field={field.id}>
-        <p className={styles.kicker}>{field.step[language]}</p><h3 id="energy-field-title">{field.title[language]}</h3>
-        <p>{field.mechanism[language]}</p>
+        <p className={styles.kicker}>{field.step[language]}</p><h3 id="energy-field-title">{fieldTitle}</h3>
+        <p>{fieldId === "wind" ? copy("Choose a project task below, from design screening and fabrication review to maintenance and inspection. Each example follows the same input, method, output and human-decision pattern.", "从下方选择项目任务，包括设计筛选、制造复核、维护与检查。每个示例都沿用输入、方法、输出及人工决策的同一结构。") : field.mechanism[language]}</p>
         <div className={styles.action}>
           <h4>{audience === "reader" ? copy("What to ask", "应该问什么") : copy("A starting point to evaluate", "可以评估的起点")}</h4>
-          <p>{field[audience][language]}</p>
+          <p>{fieldId === "wind" ? (audience === "reader"
+            ? copy("Ask which task is supported, what data it uses, and what evidence validates the recommendation.", "应问：支持哪项任务？使用什么数据？哪些证据验证了建议？")
+            : copy("Illustrative starting point: choose one task, establish a simple baseline, and compare outputs with known engineering results before changing a design or operating plan.", "示意起点：选择一项任务，建立简单基线；在改变设计或运行计划前，将输出与已知工程结果进行比较。")) : field[audience][language]}</p>
         </div>
-        <p><strong>{copy("Evidence boundary", "证据边界")}: </strong>{field.boundary[language]}</p>
+        <p><strong>{copy("Evidence boundary", "证据边界")}: </strong>{fieldId === "wind" ? copy("Each task has its own example or explicit evidence gap below. Their recorded maturity and findings must be read separately.", "下方各项任务分别列出案例或明确证据空缺，其记录的成熟度与结论应分别解读。") : field.boundary[language]}</p>
         <Sources ids={field.sourceIds} />
-        {"relatedHref" in field ? <a className={styles.moreLink} href={field.relatedHref!}>{copy("Explore the related wind example", "查看相关风电示例")} →</a> : null}
+        {"relatedHref" in field && field.relatedHref?.includes("#pathway-") ? <a className={styles.moreLink} href={field.relatedHref}>{copy("Continue to the related supply option", "继续查看相关供电方案")} →</a> : null}
       </article>
-      <details className={styles.glossary}>
-        <summary>{copy("Six terms that make the headlines easier to read", "读懂新闻标题的六组术语")}</summary>
-        <dl>{context.glossary.map((item) => <div key={item.term.en}><dt>{item.term[language]}</dt><dd>{item.meaning[language]}<Sources ids={item.sourceIds} /></dd></div>)}</dl>
-      </details>
+      {children}
     </section>
   </div>;
 }
@@ -124,7 +114,7 @@ export function EnergyOutlook() {
   const copy = (en: string, zh: string) => language === "zh" ? zh : en;
   return <div className={styles.guide}>
     <section id="energy-updates" aria-labelledby="energy-updates-heading" className={styles.section}>
-      <p className={styles.kicker}>{copy("Dated developments, explained", "理解有日期的相关进展")}</p>
+      <p className={styles.kicker}>{copy("04 / Read developments in context", "04 / 结合背景理解进展")}</p>
       <h2 id="energy-updates-heading">{copy("What is changing across AI and energy?", "AI 与能源领域正在发生什么变化？")}</h2>
       <p>{copy("A selected 2026 reading list, checked on", "2026 年精选阅读，查阅日期：")} <time dateTime={context.reviewedOn}>{context.reviewedOn}</time>. {copy("This is a curated snapshot, not a live or exhaustive news feed.", "这是精选静态快照，并非实时或完整新闻流。")}</p>
       <ol className={styles.updates}>
@@ -137,6 +127,7 @@ export function EnergyOutlook() {
               <p><strong>{copy("Reading implication", "阅读启示")}: </strong>{item.meaning[language]}</p>
               <p><strong>{copy("Does not establish", "尚不能证明")}: </strong>{item.boundary[language]}</p>
             </details>
+            <a className={styles.moreLink} href={`#energy-${developmentTopics[item.id]}`}>{copy("Explore this topic", "探索相关主题")} →</a>
             <Sources ids={[item.sourceId]} />
           </li>;
         })}
@@ -144,7 +135,7 @@ export function EnergyOutlook() {
     </section>
 
     <section id="energy-future" aria-labelledby="energy-future-heading" className={styles.section}>
-      <p className={styles.kicker}>{copy("A future to investigate", "值得持续观察的未来")}</p>
+      <p className={styles.kicker}>{copy("05 / Investigate what could come next", "05 / 观察未来可能的发展")}</p>
       <h2 id="energy-future-heading">{copy("Three pathways, with conditions attached", "三条带有前提条件的路径")}</h2>
       <p>{copy("These are editorial scenarios drawn from the sources below, not deployment forecasts. They can develop together; there is no promised date or probability.", "以下为依据所列来源提出的编辑情景，并非部署预测。三条路径可并行发展，未承诺实现日期或概率。")}</p>
       <div className={styles.scenarios}>
@@ -152,12 +143,22 @@ export function EnergyOutlook() {
           <span className={styles.number} aria-hidden="true">0{index + 1}</span><h3>{item.title[language]}</h3><p>{item.possibility[language]}</p>
           <dl><div><dt>{copy("What must be in place", "需要具备什么")}</dt><dd>{item.requires[language]}</dd></div>
             <div><dt>{copy("What to watch", "观察什么")}</dt><dd>{item.watch[language]}</dd></div></dl>
+          <a className={styles.moreLink} href={`#energy-${scenarioTopics[item.id].field}`}>{copy("Return to the practical context", "返回实际应用背景")} →</a>
+          {scenarioTopics[item.id].pathway ? <p><a href={`#pathway-${scenarioTopics[item.id].pathway}`}>{copy("Compare the related supply option", "比较相关供电方案")} →</a></p> : null}
           <Sources ids={item.sourceIds} />
         </article>)}
       </div>
     </section>
+
+  </div>;
+}
+
+export function EnergySourceRegistry() {
+  const { language } = useLanguage();
+  const copy = (en: string, zh: string) => language === "zh" ? zh : en;
+  return <div className={styles.guide}>
     <details className={styles.registry}>
-      <summary>{copy("Sources, dates and the scope of this review", "来源、日期与本次复核范围")}</summary>
+      <summary>{copy("Energy-system sources: dates and review scope", "能源系统来源：日期与复核范围")}</summary>
       <p>{copy("Public pages and summaries were reviewed. Source dates describe publications; the review date describes this reading check. Older background is not presented as new news. No full licensed reports, private operating data or project-wide audit is implied.", "本次查阅公开网页与摘要。来源日期表示发布，复核日期表示本次查阅；旧背景不作为新消息呈现。未暗示取得完整授权报告、私有运行数据或完成整个项目审查。")}</p>
       <ul>{context.sources.map((source) => <li key={source.id}>
         <a href={source.url}>{source.title}</a><p className={styles.meta}>{source.publisher} · {copy("Published", "发布")}: {source.publishedOn ?? copy("Not recorded on the page", "页面未记录")} · {copy("Reviewed", "复核")}: {source.reviewedOn}</p>
@@ -165,4 +166,18 @@ export function EnergyOutlook() {
       </li>)}</ul>
     </details>
   </div>;
+}
+
+export function GuideNavigation() {
+  const { language } = useLanguage();
+  return <nav className={`${styles.guide} ${styles.navigation}`} aria-label={language === "zh" ? "AI 与能源阅读导航" : "AI and energy reading guide"}>
+    {[
+      ["energy-system", "Understand", "理解系统"],
+      ["energy-fields", "Apply AI", "应用 AI"],
+      ["wind-to-ai-heading", "Supply computing", "为计算供电"],
+      ["energy-updates", "Developments", "相关进展"],
+      ["energy-future", "What could come next", "未来可能怎样"],
+      ["digital-ai-evidence-heading", "Evidence", "证据"],
+    ].map(([id, en, zh], index) => <a key={id} href={`#${id}`}><span aria-hidden="true">0{index + 1} </span>{language === "zh" ? zh : en}</a>)}
+  </nav>;
 }

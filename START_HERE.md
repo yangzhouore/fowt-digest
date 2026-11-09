@@ -4,11 +4,15 @@ Use this file as the resume entry point for a new Codex session.
 
 ## Stable State
 
-Collection maintenance resumed 2026-11-09 on base main `4e743c6` (merged PR #51).
-Current maintenance scope and live-verification boundary:
-`docs/OPENALEX_COLLECTION_READINESS.md`. The key is not yet configured; complete
-authenticated collection must be verified before the next Research publication.
-The earlier handover snapshot below records the pre-merge guide status.
+The 2–8 November 2026 weekly update is prepared locally on
+`data/weekly-digest-2026-11-08`, based on `a1bf8bf` (merged OpenAlex maintenance
+PR #58). Authenticated collection completed all 13 queries without failures or
+a reached cap: 165 ranked Research candidates, five selected records and two
+Engineering highlights. Four selected Research records are parts of one archive;
+see `docs/weekly/2026-11-08.md` for evidence, selection limits and validation.
+The update is prepared for a review PR; merge and deployment await acceptance.
+The earlier dated snapshot below
+records the pre-merge guide status.
 
 Verified against GitHub on 2026-11-06.
 

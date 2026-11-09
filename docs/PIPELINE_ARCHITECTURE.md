@@ -39,6 +39,19 @@ See `PIPELINE_DATA_MODEL.md` for stage shapes and
 
 ## Failure Handling
 
+The HTTP client reads `OPENALEX_API_KEY` from the process environment and sends
+it as an Authorization bearer header to HTTPS `api.openalex.org` only. The
+header is not forwarded on redirects; query URLs and retained collection
+diagnostics contain no added key. HTTP 401/403 messages identify key setup as
+the next action; these authentication errors are not retried.
+
+Both collection and orchestration accept a positive integer `run_record_limit`
+(default 200 raw records, including overlaps between queries). Set an explicit
+larger limit for a weekly run; the actual value is recorded as `runRecordLimit`.
+The limit is checked after a full page is retained and may be exceeded by that
+page. Reaching any configured limit still blocks publication. No unlimited or
+publication-override option is provided.
+
 Collection completeness gates orchestration and publication:
 
 | Collection diagnostics | Overall status | Publishable |

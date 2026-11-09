@@ -5,7 +5,6 @@ import json
 
 import pytest
 
-import pipeline.openalex_collector as collector
 from pipeline.orchestrator import run_weekly_pipeline
 from pipeline.website_publisher import publish_weekly_digest
 from tools.publication_workflow import run_publication_workflow
@@ -21,7 +20,7 @@ def _work():
     }
 
 
-def _run(root, fetcher):
+def _run(root, fetcher, **kwargs):
     return run_weekly_pipeline(
         from_publication_date=date(2026, 10, 26),
         to_publication_date=date(2026, 11, 1),
@@ -31,6 +30,7 @@ def _run(root, fetcher):
         fetch_json=fetcher, sleep=lambda _: None,
         started_at=datetime(2026, 11, 2, tzinfo=UTC),
         completed_at=datetime(2026, 11, 2, tzinfo=UTC),
+        **kwargs,
     )
 
 
@@ -80,12 +80,32 @@ def test_unsuccessful_collection_stops_before_digest_and_preserves_diagnostics(t
     assert _read(run, "raw_openalex.json")["queries"]
 
 
-def test_explicit_diagnostic_cap_is_not_production_complete(tmp_path, monkeypatch):
-    monkeypatch.setattr(collector, "RUN_RECORD_LIMIT", 1)
-    run = _run(tmp_path, lambda _: {"results": [_work()], "meta": {}})
+def test_explicit_diagnostic_cap_is_not_production_complete(tmp_path):
+    run = _run(tmp_path, lambda _: {"results": [_work()], "meta": {}}, run_record_limit=1)
     assert run["status"] == "partial_success"
     assert run["publishable"] is False
     assert _read(run, "run_summary.json")["runRecordLimit"] == 1
+
+
+def test_raised_limit_completes_all_queries_and_deduplicates(tmp_path):
+    def fetch(url):
+        # 20 raw records per query; 260 total exceeds the old diagnostic cap.
+        return {"results": [_work()] * 20, "meta": {"next_cursor": None}}
+
+    run = _run(tmp_path, fetch, run_record_limit=1000)
+    summary = _read(run, "run_summary.json")
+    assert summary["rawRecordCount"] == 260
+    assert summary["queryCount"] == summary["successfulQueryCount"] == 13
+    assert summary["runRecordLimit"] == 1000
+    assert summary["capReached"] is False
+    assert run["publishable"] is True
+    assert len(run["weeklyDigest"]["selectedPapers"]) == 1
+
+
+@pytest.mark.parametrize("limit", [0, -1, True, 1.5, "1000"])
+def test_invalid_limit_rejected_before_collection(tmp_path, limit):
+    with pytest.raises(ValueError, match="positive integer"):
+        _run(tmp_path, lambda _: pytest.fail("network called"), run_record_limit=limit)
 
 
 @pytest.mark.parametrize("response", [None, [], {}, {"error": "bad request"}, {"results": None}])

@@ -35,12 +35,15 @@ def collect_openalex_raw(
     fetch_json: Callable[[str], Any] = fetch_openalex_json,
     sleep: Callable[[float], None] = time.sleep,
     request_delay_seconds: float = DEFAULT_REQUEST_DELAY_SECONDS,
+    run_record_limit: int = RUN_RECORD_LIMIT,
     started_at: datetime | None = None,
     completed_at: datetime | None = None,
 ) -> dict[str, Any]:
     """Run one raw OpenAlex collection pass and write contract output files."""
     if request_delay_seconds < DEFAULT_REQUEST_DELAY_SECONDS:
         raise ValueError("request_delay_seconds must be at least 1.0")
+    if type(run_record_limit) is not int or run_record_limit < 1:
+        raise ValueError("run_record_limit must be a positive integer")
 
     started = _normalise_utc(started_at or datetime.now(UTC))
     run_id = make_run_id(started)
@@ -76,6 +79,7 @@ def collect_openalex_raw(
             fetch_json=fetch_json,
             sleep=sleep,
             request_delay_seconds=request_delay_seconds,
+            run_record_limit=run_record_limit,
             raw_record_count=raw_record_count,
             has_made_request=has_made_request,
         )
@@ -126,7 +130,7 @@ def collect_openalex_raw(
         "queryCount": len(raw_queries),
         "rawRecordCount": raw_record_count,
         "runId": run_id,
-        "runRecordLimit": RUN_RECORD_LIMIT,
+        "runRecordLimit": run_record_limit,
         "sourceName": SOURCE_NAME,
         "startedAt": _utc_isoformat(started),
         "status": status,
@@ -175,6 +179,7 @@ def _collect_query_pages(
     fetch_json: Callable[[str], Any],
     sleep: Callable[[float], None],
     request_delay_seconds: float,
+    run_record_limit: int,
     raw_record_count: int,
     has_made_request: bool,
 ) -> tuple[dict[str, Any], list[dict[str, Any]], int, bool, bool]:
@@ -226,7 +231,7 @@ def _collect_query_pages(
         pages.append(page_record)
         query_record_count += results_count
 
-        if raw_record_count + query_record_count >= RUN_RECORD_LIMIT:
+        if raw_record_count + query_record_count >= run_record_limit:
             cap_reached = True
             break
         if results_count == 0:

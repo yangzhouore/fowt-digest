@@ -3,10 +3,13 @@
 from __future__ import annotations
 
 import json
+import os
 import socket
 import time
 from typing import Any, Callable
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlsplit
+from urllib.request import Request
 from urllib.request import urlopen as urllib_urlopen
 
 DEFAULT_TIMEOUT = 20
@@ -41,23 +44,34 @@ def fetch_openalex_json(
     if not query_url.strip():
         raise ValueError("query_url must not be empty")
 
+    request: str | Request = query_url
+    api_key = os.environ.get("OPENALEX_API_KEY", "").strip()
+    if api_key:
+        target = urlsplit(query_url)
+        if (target.scheme != "https" or target.hostname != "api.openalex.org"
+                or target.port not in (None, 443) or target.username or target.password):
+            raise ValueError("OpenAlex authentication requires https://api.openalex.org")
+        request = Request(query_url)
+        # Do not put credentials in retained URLs or forward them on redirects.
+        request.add_unredirected_header("Authorization", f"Bearer {api_key}")
+
     last_timeout: BaseException | None = None
 
     for attempt in range(len(_RETRY_DELAYS) + 1):
         try:
-            with urlopen(query_url, timeout=timeout) as response:
+            with urlopen(request, timeout=timeout) as response:
                 status = getattr(response, "status", 200)
                 if status < 200 or status >= 300:
                     if _should_retry_http_status(status) and attempt < len(_RETRY_DELAYS):
                         sleep(_RETRY_DELAYS[attempt])
                         continue
-                    raise OpenAlexHTTPError(f"OpenAlex returned HTTP {status}")
+                    raise OpenAlexHTTPError(_http_error_message(status))
 
                 body = response.read().decode("utf-8")
                 return json.loads(body)
         except HTTPError as error:
             if not _should_retry_http_status(error.code) or attempt == len(_RETRY_DELAYS):
-                raise OpenAlexHTTPError(f"OpenAlex returned HTTP {error.code}") from error
+                raise OpenAlexHTTPError(_http_error_message(error.code)) from error
             sleep(_retry_delay(attempt, error))
         except (TimeoutError, socket.timeout) as error:
             last_timeout = error
@@ -76,6 +90,13 @@ def fetch_openalex_json(
             raise OpenAlexJSONError("OpenAlex returned invalid JSON") from error
 
     raise OpenAlexClientError("OpenAlex request failed")
+
+
+def _http_error_message(status: int) -> str:
+    message = f"OpenAlex returned HTTP {status}"
+    if status in (401, 403):
+        message += "; configure a valid activated OPENALEX_API_KEY for cursor pagination"
+    return message
 
 
 def _should_retry_http_status(status: int) -> bool:

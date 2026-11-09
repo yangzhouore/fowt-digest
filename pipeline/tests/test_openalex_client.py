@@ -14,6 +14,11 @@ from pipeline.openalex_client import (
 )
 
 
+@pytest.fixture(autouse=True)
+def isolate_api_key(monkeypatch):
+    monkeypatch.delenv("OPENALEX_API_KEY", raising=False)
+
+
 class FakeResponse:
     def __init__(self, payload, *, status=200):
         self.payload = payload
@@ -221,3 +226,46 @@ def test_non_retryable_response_status_raises_http_error():
 def test_empty_query_url_is_rejected():
     with pytest.raises(ValueError, match="query_url"):
         fetch_openalex_json(" ")
+
+
+def test_key_is_sent_only_in_header_on_every_page_and_retry(monkeypatch):
+    monkeypatch.setenv("OPENALEX_API_KEY", "fixture-only-secret")
+    requests = []
+
+    def fetch(request, *, timeout):
+        requests.append(request)
+        assert request.get_header("Authorization") == "Bearer fixture-only-secret"
+        assert "fixture-only-secret" not in request.full_url
+        if len(requests) == 1:
+            raise make_http_error(503)
+        return FakeResponse({"results": []})
+
+    for cursor in ("*", "continuation"):
+        fetch_openalex_json(f"https://api.openalex.org/works?cursor={cursor}",
+                            urlopen=fetch, sleep=lambda _: None)
+    assert len(requests) == 3
+    from urllib.request import HTTPRedirectHandler
+    redirected = HTTPRedirectHandler().redirect_request(
+        requests[-1], None, 302, "Found", {}, "https://other.test/works")
+    assert redirected.get_header("Authorization") is None
+
+
+@pytest.mark.parametrize("url", ["http://api.openalex.org/works", "https://other.test/works",
+                                  "https://api.openalex.org:444/works"])
+def test_key_is_not_sent_to_untrusted_destination(monkeypatch, url):
+    monkeypatch.setenv("OPENALEX_API_KEY", "fixture-only-secret")
+    with pytest.raises(ValueError, match="authentication requires"):
+        fetch_openalex_json(url, urlopen=lambda *_a, **_k: pytest.fail("network called"))
+
+
+@pytest.mark.parametrize("status", [401, 403])
+def test_auth_failure_has_actionable_message_without_retry(status):
+    calls = []
+
+    def fetch(*args, **kwargs):
+        calls.append(args)
+        raise make_http_error(status)
+
+    with pytest.raises(OpenAlexHTTPError, match="OPENALEX_API_KEY"):
+        fetch_openalex_json("https://api.openalex.org/works", urlopen=fetch)
+    assert len(calls) == 1

@@ -4,6 +4,12 @@ Use this file as the resume entry point for a new Codex session.
 
 ## Stable State
 
+Collection maintenance resumed 2026-11-09 on base main `4e743c6` (merged PR #51).
+Current maintenance scope and live-verification boundary:
+`docs/OPENALEX_COLLECTION_READINESS.md`. The key is not yet configured; complete
+authenticated collection must be verified before the next Research publication.
+The earlier handover snapshot below records the pre-merge guide status.
+
 Verified against GitHub on 2026-11-06.
 
 - Current stable branch: `main` at `cab926b` (merged handover PR #57).

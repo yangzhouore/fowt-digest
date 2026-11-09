@@ -13,6 +13,7 @@ from pipeline.openalex_collector import (
     DEFAULT_REQUEST_DELAY_SECONDS,
     FAILED_STATUS,
     PARTIAL_SUCCESS_STATUS,
+    RUN_RECORD_LIMIT,
     collection_is_complete,
     collect_openalex_raw,
 )
@@ -38,6 +39,7 @@ def run_weekly_pipeline(
     fetch_json: Callable[[str], Any] = fetch_openalex_json,
     sleep: Callable[[float], None] = time.sleep,
     request_delay_seconds: float = DEFAULT_REQUEST_DELAY_SECONDS,
+    run_record_limit: int = RUN_RECORD_LIMIT,
     started_at: datetime | None = None,
     completed_at: datetime | None = None,
 ) -> dict[str, Any]:
@@ -49,6 +51,7 @@ def run_weekly_pipeline(
         fetch_json=fetch_json,
         sleep=sleep,
         request_delay_seconds=request_delay_seconds,
+        run_record_limit=run_record_limit,
         started_at=started_at,
         completed_at=completed_at,
     )

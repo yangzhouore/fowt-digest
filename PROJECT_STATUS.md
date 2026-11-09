@@ -1,5 +1,17 @@
 # Project Status
 
+## Collection Maintenance: 2026-11-09
+
+- Guide PR #51 is merged at `4e743c6`; this is the base of
+  `fix/openalex-collection-readiness`.
+- Added process-environment OpenAlex bearer authentication and configurable
+  positive raw-record limits on collection/orchestration (default 200).
+- The existing publication guard remains mandatory for every configured limit.
+- 270 pipeline tests passed. Live authenticated collection awaits a configured
+  `OPENALEX_API_KEY`; it is not yet verified and no edition has been published.
+- Scope and operating instructions: `docs/OPENALEX_COLLECTION_READINESS.md`.
+- The dated snapshot below retains earlier guide integration evidence.
+
 Last updated: 2026-11-06. Verified stable main: `cab926b` (merged handover PR #57).
 
 ## Current State

@@ -1,5 +1,23 @@
 # Project Status
 
+## Local Weekly Update: 2026-11-09
+
+- Prepared 2–8 November Research and Engineering editions on
+  `data/weekly-digest-2026-11-08`, based on merged maintenance PR #58 (`a1bf8bf`).
+- Authenticated OpenAlex collection succeeded: all 13 queries, 19 pages, 630 raw
+  records, no failed/partial pages and no reached cap (budget 5,000).
+- Retained 165 ranked Research candidates and five selected records. Four are
+  separate DOI parts of one OpenFAST archive; this concentration is disclosed.
+- Reviewed all 42 Engineering registry domains through search discovery; retained
+  nine dated records, two independent candidates and two highlights. Repeat
+  events were excluded; search/index coverage remains incomplete.
+- Local totals: 44 Research editions, 31 Research candidate pools and 44
+  Engineering editions. Record: `docs/weekly/2026-11-08.md`.
+- Full baseline passed: 270 pipeline tests, data validation, 174 website tests,
+  lint, 472-page production build and diff whitespace checks. No browser suite
+  was rerun for this static-data update. PR delivery was requested; merge and
+  deployment await acceptance.
+
 ## Collection Maintenance: 2026-11-09
 
 - Guide PR #51 is merged at `4e743c6`; this is the base of

@@ -1,0 +1,1026 @@
+{
+  "generatedAt": "2026-11-09T09:09:16.951579Z",
+  "runId": "run_20261109_090916_openalex",
+  "schemaVersion": "pipeline-data-0.1",
+  "selectedPapers": [
+    {
+      "abstract": "Supplementary OpenFAST Simulation Dataset for the NREL 5-MW/OC4-DeepCwind Floating Wind Turbine — Part 2 of 4 Overview This record constitutes Part 2 of 4 of a supplementary OpenFAST dataset for the NREL 5-MW reference wind turbine mounted on the OC4-DeepCwind semisubmersible floating platform. The four-part collection extends the previously published benchmark dataset with near-rated and above-rated wind-speed classes used in the companion research study investigating wave-induced changes in mean generated power and structural-load variability. The supplementary simulations provide additional operating conditions and independent stochastic realizations for assessing the dependence of wave-induced responses on wind-speed regime and the reproducibility of the numerical results. All aggregate simulation counts and archive counts reported in this description refer to the complete four-part collection unless explicitly attributed to Part 2. Contents of Part 2 This record contains four losslessly compressed ZIP/DEFLATE archives, with a combined size of approximately 48.32 GB, comprising: First stochastic realization — 12 and 13 m/s seed1_V12p0_part01.zip seed1_V12p0_part02.zip seed1_V13p0_part01.zip seed1_V13p0_part02.zip The four archives contain wave-forced OpenFAST simulation outputs from the first stochastic realization at 12 and 13 m/s. Each wind-speed class comprises 175 qualified Class-A sea-state conditions, corresponding to 350 expected wave-forced time-history files across these two wind-speed classes. The corresponding second stochastic realizations at 12 and 13 m/s are provided in Part 4. Together, these parts enable paired-seed assessment of wave-induced power and load responses at these wind speeds. The following documentation and reference files are available in Part 1 (DOI: https://doi.org/10.5281/zenodo.22895713): README.md — dataset description and usage information. FILE_MANIFEST.csv — inventory of the 19 compressed archives across the full four-part collection. SHA256SUMS.txt — checksums for all 19 archives. still_water_TEST0_baselines.zip — 11 still-water baseline simulations. The file-count expectation reflects the simulation inventory, not an independent inspection of the compressed archives on Zenodo. Numerical model and environmental conditions The simulations were performed using OpenFAST v4.1.2, with the ROSCO controller in the original tuning configuration adopted for the study. The nacelle-velocity proportional feedback gain was set to Fl_Kp = 0. The numerical configuration considers: Steady, spatially uniform wind inflow. Irregular, unidirectional JONSWAP waves aligned with the wind direction. First-order wave loading, with second-order wave-force QTF contributions disabled. Simulation time step DT = 0.0125 s. Output time step DTout = 0.0125 s. The dataset represents the specified turbine-platform-controller configuration. The use of uniform wind and first-order wave loading should be considered when interpreting the results and their applicability to more general operating environments. Complete four-part dataset Across all four linked Zenodo records, the supplementary collection contains 1,463 wave-forced OpenFAST time-history files and 11 still-water baseline files, corresponding to 1,474 source output files. For wind speeds of 10.5, 11.5, 12 and 13 m/s, the collection contains 175 qualified Class-A sea states at each wind speed, with two independent stochastic realizations for each sea-state/wind-speed combination. This provides: 700 matched sea-state/wind-speed conditions. Two stochastic wave realizations per condition. 1,400 wave-forced simulation outputs across the two seeds. The above-rated diagnostic extensions contain: 32 valid single-seed simulations at 14 m/s. 31 valid single-seed simulations at 15 m/s. These latter extensions are diagnostic datasets and do not support a two-seed statistical robustness assessment. The 11 still-water simulations provide wind-speed-specific reference conditions for evaluating wave-induced incremental responses. Data format and file naming The simulation time histories are distributed as OpenFAST .out files within losslessly compressed archives. Wave-forced output filenames follow the convention: TEST_Hs<Hs>_Tp<Tp>_Seed-<seed>_Hwind<V> where: Hs is the significant wave height in metres. Tp is the spectral peak period in seconds. seed is the integer random seed used for wave generation. V is the nominal wind speed in metres per second. For matched stochastic pairs, the nominal wind speed and sea-state parameters are retained while the wave seed is changed. Archive organization and verification The complete dataset is distributed across 19 compressed archives hosted in four linked Zenodo records: Zenodo part Archive contents Number of archives Part 1 Seed 1 at 10.5 and 11.5 m/s; 14 and 15 m/s diagnostic extensions; still-water baselines 7 Part 2 Seed 1 at 12 and 13 m/s 4 Part 3 Seed 2 at 10.5 and 11.5 m/s 4 Part 4 Seed 2 at 12 and 13 m/s 4 Total Complete supplementary collection 19 Four archives use 7z/LZMA2 solid compression. The remaining 15 archives use ZIP/DEFLATE compression, including the still-water baseline archive. The SHA256SUMS.txt file, available in Part 1 (DOI: https://doi.org/10.5281/zenodo.22895713), provides a checksum for every compressed archive across the complete collection. Users are encouraged to verify checksums after downloading and before extracting or processing the OpenFAST outputs. Relationship to the previously published dataset This collection supplements the previously published qualified and traceable OpenFAST benchmark dataset: Base dataset — Version 2.0.0 DOI: https://doi.org/10.5281/zenodo.21875701 The base dataset provides the underlying 7–11 m/s simulation campaign, including the physical qualification criteria, numerical-integrity screening procedures, input files and data provenance. The supplementary collection should be used together with that dataset when reproducing the complete numerical analysis reported in the companion scientific publication. Companion loading and validation software DOI: https://doi.org/10.5281/zenodo.21829605 The software record provides associated tools for processing and validating the OpenFAST simulation outputs. Scope and limitations The supplementary dataset is intended to support reproducibility and further investigation of wave-induced changes in power production and structural loading for the specified NREL 5-MW/OC4-DeepCwind configuration. The simulations do not include atmospheric turbulence, directional wave spreading, wind–wave misalignment or second-order wave-force QTF contributions. The two-seed replication supports assessment of sensitivity to the investigated stochastic wave realizations but does not constitute a complete uncertainty quantification or experimental validation. The results should therefore not be interpreted as universally transferable to other turbine ratings, floating-platform designs, controller configurations or environmental conditions without additional verification. Related records Base OpenFAST dataset: https://doi.org/10.5281/zenodo.21875701 Companion software: https://doi.org/10.5281/zenodo.21829605 Supplementary dataset — Part 1 of 4 (published): https://doi.org/10.5281/zenodo.22895713 Supplementary dataset — Part 2 of 4 (this record): https://doi.org/10.5281/zenodo.22943451 Supplementary dataset — Part 3 of 4: https://doi.org/10.5281/zenodo.22943551 Supplementary dataset — Part 4 of 4: https://doi.org/10.5281/zenodo.22943555 Parts 1–4 collectively constitute the complete supplementary dataset. The four records should be used together when reproducing the analyses involving both stochastic realizations.",
+      "authors": [
+        "Luana Gurnari",
+        "Pasquale Filianoti",
+        "Sergio Mario Camporeale"
+      ],
+      "candidateIds": [
+        "candidate_openalex_c2d991b0294888c7"
+      ],
+      "doi": "https://doi.org/10.5281/zenodo.22943450",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "green",
+      "paperId": "paper_doi_10eb5f589d8c072f",
+      "processingStatus": "classified",
+      "publicationSource": "Zenodo (CERN European Organization for Nuclear Research)",
+      "publicationType": "unknown",
+      "publishedDate": "2026-11-07",
+      "rank": 1,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 7,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 9,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_10eb5f589d8c072f",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-11-09T09:09:16.951579Z",
+        "modelName": null,
+        "paperId": "paper_doi_10eb5f589d8c072f",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aggregate (composite)",
+          "Benchmark (surveying)",
+          "Class (philosophy)",
+          "Computer science",
+          "Computer simulation",
+          "Data collection",
+          "Data file",
+          "Data mining",
+          "Documentation",
+          "Electricity generation",
+          "Engineering",
+          "Environmental science",
+          "Instrumentation (computer programming)",
+          "Marine engineering",
+          "Meteorology",
+          "Numerical models",
+          "Power (physics)",
+          "Realization (probability)",
+          "Simulation",
+          "Stochastic modelling",
+          "Stochastic process",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind Turbine Control Systems",
+          "Wind power",
+          "Wind speed"
+        ]
+      },
+      "runId": "run_20261109_090916_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "direct FOWT phrase in abstract",
+              "floating and wind terms in title",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 35
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: aerodynamics",
+              "technical signal: hydrodynamics",
+              "technical signal: structures",
+              "technical signal: controls",
+              "technical signal: platform"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: validation",
+              "research signal: dataset",
+              "research signal: modelling",
+              "research signal: optimization",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 15
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "publication type: unknown",
+              "research repository or dataset source"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 6
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "0 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 5
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 96
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5281/zenodo.22943450",
+        "openalexId": "https://openalex.org/W7225451737"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.22943450",
+      "title": "Supplementary near- and above-rated OpenFAST simulation archive for the NREL 5-MW/OC4-DeepCwind floating wind turbine - Part 2 of 4",
+      "topicTags": [
+        "Aggregate (composite)",
+        "Benchmark (surveying)",
+        "Class (philosophy)",
+        "Computer science",
+        "Computer simulation",
+        "Data collection",
+        "Data file",
+        "Data mining",
+        "Documentation",
+        "Electricity generation",
+        "Engineering",
+        "Environmental science",
+        "Instrumentation (computer programming)",
+        "Marine engineering",
+        "Meteorology",
+        "Numerical models",
+        "Power (physics)",
+        "Realization (probability)",
+        "Simulation",
+        "Stochastic modelling",
+        "Stochastic process",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind Turbine Control Systems",
+        "Wind power",
+        "Wind speed"
+      ]
+    },
+    {
+      "abstract": "Supplementary OpenFAST Simulation Dataset for the NREL 5-MW/OC4-DeepCwind Floating Wind Turbine — Part 3 of 4 Overview This record constitutes Part 3 of 4 of a supplementary OpenFAST dataset for the NREL 5-MW reference wind turbine mounted on the OC4-DeepCwind semisubmersible floating platform. The four-part collection extends the previously published benchmark dataset with near-rated and above-rated wind-speed classes used in the companion research study investigating wave-induced changes in mean generated power and structural-load variability. The supplementary simulations provide additional operating conditions and independent stochastic realizations for assessing the dependence of wave-induced responses on wind-speed regime and the reproducibility of the numerical results. All aggregate simulation counts and archive counts reported in this description refer to the complete four-part collection unless explicitly attributed to Part 3. Contents of Part 3 This record contains four losslessly compressed ZIP/DEFLATE archives, with a combined size of approximately 48.34 GB, comprising: Second stochastic realization — 10.5 m/s seed2_V10p5_part01.zip seed2_V10p5_part02.zip Second stochastic realization — 11.5 m/s seed2_V11p5_part01.zip seed2_V11p5_part02.zip The four archives contain wave-forced OpenFAST simulation outputs from the second stochastic realization at 10.5 and 11.5 m/s. Each wind-speed class comprises 175 qualified Class-A sea-state conditions, corresponding to 350 expected wave-forced time-history files across these two wind-speed classes. The corresponding first stochastic realizations at 10.5 and 11.5 m/s are provided in Part 1. Together, Parts 1 and 3 enable paired-seed assessment of wave-induced power and load responses at these wind speeds. The following documentation and reference files are available in Part 1 (DOI: https://doi.org/10.5281/zenodo.22895713): README.md — dataset description and usage information. FILE_MANIFEST.csv — inventory of the 19 compressed archives across the full four-part collection. SHA256SUMS.txt — SHA-256 checksums for all 19 archives. still_water_TEST0_baselines.zip — 11 still-water baseline simulations. The file-count expectation reflects the simulation inventory, not an independent inspection of the compressed archives on Zenodo. Numerical model and environmental conditions The simulations were performed using OpenFAST v4.1.2, with the ROSCO controller in the original tuning configuration adopted for the study. The nacelle-velocity proportional feedback gain was set to Fl_Kp = 0. The numerical configuration considers: Steady, spatially uniform wind inflow. Irregular, unidirectional JONSWAP waves aligned with the wind direction. First-order wave loading, with second-order wave-force QTF contributions disabled. Simulation time step DT = 0.0125 s. Output time step DTout = 0.0125 s. The dataset represents the specified turbine–platform–controller configuration. The use of uniform wind and first-order wave loading should be considered when interpreting the results and their applicability to more general operating environments. Complete four-part dataset Across all four linked Zenodo records, the supplementary collection contains 1,463 wave-forced OpenFAST time-history files and 11 still-water baseline files, corresponding to 1,474 source output files. For wind speeds of 10.5, 11.5, 12 and 13 m/s, the collection contains 175 qualified Class-A sea states at each wind speed, with two independent stochastic realizations for each sea-state/wind-speed combination. This provides: 700 matched sea-state/wind-speed conditions. Two stochastic wave realizations per condition. 1,400 wave-forced simulation outputs across the two seeds. The above-rated diagnostic extensions contain: 32 valid single-seed simulations at 14 m/s. 31 valid single-seed simulations at 15 m/s. These latter extensions are diagnostic datasets and do not support a two-seed statistical robustness assessment. The 11 still-water simulations provide wind-speed-specific reference conditions for evaluating wave-induced incremental responses. Data format and file naming The simulation time histories are distributed as OpenFAST .out files within losslessly compressed archives. Wave-forced output filenames follow the convention: TEST_Hs<Hs>_Tp<Tp>_Seed-<seed>_Hwind<V> where: Hs is the significant wave height in metres. Tp is the spectral peak period in seconds. seed is the integer random seed used for wave generation. V is the nominal wind speed in metres per second. For matched stochastic pairs, the nominal wind speed and sea-state parameters are retained while the wave seed is changed. Archive organization and verification The complete dataset is distributed across 19 compressed archives hosted in four linked Zenodo records: Zenodo part Archive contents Number of archives Part 1 Seed 1 at 10.5 and 11.5 m/s; 14 and 15 m/s diagnostic extensions; still-water baselines 7 Part 2 Seed 1 at 12 and 13 m/s 4 Part 3 Seed 2 at 10.5 and 11.5 m/s 4 Part 4 Seed 2 at 12 and 13 m/s 4 Total Complete supplementary collection 19 Four archives use 7z/LZMA2 solid compression. The remaining 15 archives use ZIP/DEFLATE compression, including the still-water baseline archive. The SHA256SUMS.txt file, available in Part 1 (DOI: https://doi.org/10.5281/zenodo.22895713), provides a checksum for every compressed archive across the complete collection. Users are encouraged to verify the checksums after downloading the files and before extracting or processing the OpenFAST outputs. Relationship to the previously published dataset This collection supplements the previously published qualified and traceable OpenFAST benchmark dataset: Base dataset — Version 2.0.0 DOI: https://doi.org/10.5281/zenodo.21875701 The base dataset provides the underlying 7–11 m/s simulation campaign, including the physical qualification criteria, numerical-integrity screening procedures, input files and data provenance. The supplementary collection should be used together with that dataset when reproducing the complete numerical analysis reported in the companion scientific publication. Companion loading and validation software DOI: https://doi.org/10.5281/zenodo.21829605 The software record provides associated tools for processing and validating the OpenFAST simulation outputs. Scope and limitations The supplementary dataset is intended to support reproducibility and further investigation of wave-induced changes in power production and structural loading for the specified NREL 5-MW/OC4-DeepCwind configuration. The simulations do not include atmospheric turbulence, directional wave spreading, wind–wave misalignment or second-order wave-force QTF contributions. The two-seed replication supports assessment of sensitivity to the investigated stochastic wave realizations but does not constitute a complete uncertainty quantification or experimental validation. The results should therefore not be interpreted as universally transferable to other turbine ratings, floating-platform designs, controller configurations or environmental conditions without additional verification. Related records Base OpenFAST dataset: https://doi.org/10.5281/zenodo.21875701 Companion software: https://doi.org/10.5281/zenodo.21829605 Supplementary dataset — Part 1 of 4 (published): https://doi.org/10.5281/zenodo.22895713 Supplementary dataset — Part 2 of 4: https://doi.org/10.5281/zenodo.22943451 Supplementary dataset — Part 3 of 4 (this record): https://doi.org/10.5281/zenodo.22943551 Supplementary dataset — Part 4 of 4: https://doi.org/10.5281/zenodo.22943555 Parts 1–4 collectively constitute the complete supplementary dataset. The four records should be used together when reproducing the analyses involving both stochastic realizations.",
+      "authors": [
+        "Luana Gurnari",
+        "Pasquale Filianoti",
+        "Sergio Mario Camporeale"
+      ],
+      "candidateIds": [
+        "candidate_openalex_2e90eca190eb8163"
+      ],
+      "doi": "https://doi.org/10.5281/zenodo.22943550",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "green",
+      "paperId": "paper_doi_2e0dc5da119037d0",
+      "processingStatus": "classified",
+      "publicationSource": "Zenodo (CERN European Organization for Nuclear Research)",
+      "publicationType": "unknown",
+      "publishedDate": "2026-11-07",
+      "rank": 2,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 9,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 11,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_2e0dc5da119037d0",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-11-09T09:09:16.951579Z",
+        "modelName": null,
+        "paperId": "paper_doi_2e0dc5da119037d0",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aggregate (composite)",
+          "Benchmark (surveying)",
+          "Class (philosophy)",
+          "Computer science",
+          "Computer simulation",
+          "Data collection",
+          "Data mining",
+          "Documentation",
+          "Electricity generation",
+          "Engineering",
+          "Industrial engineering",
+          "Instrumentation (computer programming)",
+          "Marine engineering",
+          "Numerical models",
+          "Power (physics)",
+          "Realization (probability)",
+          "Simulation",
+          "Stochastic modelling",
+          "Stochastic process",
+          "Stochastic simulation",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind Turbine Control Systems",
+          "Wind engineering",
+          "Wind power",
+          "Wind speed"
+        ]
+      },
+      "runId": "run_20261109_090916_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "direct FOWT phrase in abstract",
+              "floating and wind terms in title",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 35
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: aerodynamics",
+              "technical signal: hydrodynamics",
+              "technical signal: structures",
+              "technical signal: controls",
+              "technical signal: platform"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: validation",
+              "research signal: dataset",
+              "research signal: modelling",
+              "research signal: optimization",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 15
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "publication type: unknown",
+              "research repository or dataset source"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 6
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "0 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 5
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 96
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5281/zenodo.22943550",
+        "openalexId": "https://openalex.org/W7225461327"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.22943550",
+      "title": "Supplementary near- and above-rated OpenFAST simulation archive for the NREL 5-MW/OC4-DeepCwind floating wind turbine - Part 3 of 4",
+      "topicTags": [
+        "Aggregate (composite)",
+        "Benchmark (surveying)",
+        "Class (philosophy)",
+        "Computer science",
+        "Computer simulation",
+        "Data collection",
+        "Data mining",
+        "Documentation",
+        "Electricity generation",
+        "Engineering",
+        "Industrial engineering",
+        "Instrumentation (computer programming)",
+        "Marine engineering",
+        "Numerical models",
+        "Power (physics)",
+        "Realization (probability)",
+        "Simulation",
+        "Stochastic modelling",
+        "Stochastic process",
+        "Stochastic simulation",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind Turbine Control Systems",
+        "Wind engineering",
+        "Wind power",
+        "Wind speed"
+      ]
+    },
+    {
+      "abstract": "Supplementary OpenFAST Simulation Dataset for the NREL 5-MW/OC4-DeepCwind Floating Wind Turbine — Part 4 of 4 Overview This record constitutes Part 4 of 4 of a supplementary OpenFAST dataset for the NREL 5-MW reference wind turbine mounted on the OC4-DeepCwind semisubmersible floating platform. The four-part collection extends the previously published benchmark dataset with near-rated and above-rated wind-speed classes used in the companion research study investigating wave-induced changes in mean generated power and structural-load variability. The supplementary simulations provide additional operating conditions and independent stochastic realizations for assessing the dependence of wave-induced responses on wind-speed regime and the reproducibility of the numerical results. All aggregate simulation counts and archive counts reported in this description refer to the complete four-part collection unless explicitly attributed to Part 4. Contents of Part 4 This record contains four losslessly compressed ZIP/DEFLATE archives, with a combined size of approximately 48.37 GB, comprising: Second stochastic realization — 12 m/s seed2_V12p0_part01.zip seed2_V12p0_part02.zip Second stochastic realization — 13 m/s seed2_V13p0_part01.zip seed2_V13p0_part02.zip The four archives contain wave-forced OpenFAST simulation outputs from the second stochastic realization at 12 and 13 m/s. Each wind-speed class comprises 175 qualified Class-A sea-state conditions, corresponding to 350 expected wave-forced time-history files across these two wind-speed classes. The corresponding first stochastic realizations at 12 and 13 m/s are provided in Part 2 (DOI: https://doi.org/10.5281/zenodo.22943451). Together, Parts 2 and 4 enable paired-seed assessment of wave-induced power and load responses at these wind speeds, including the near-rated and above-rated operating regions. The following documentation and reference files are available in Part 1 (DOI: https://doi.org/10.5281/zenodo.22895713): README.md — dataset description and usage information. FILE_MANIFEST.csv — inventory of the 19 compressed archives across the full four-part collection. SHA256SUMS.txt — SHA-256 checksums for all 19 archives. still_water_TEST0_baselines.zip — 11 still-water baseline simulations. The file-count expectation reflects the simulation inventory, not an independent inspection of the compressed archives on Zenodo. Numerical model and environmental conditions The simulations were performed using OpenFAST v4.1.2, with the ROSCO controller in the original tuning configuration adopted for the study. The nacelle-velocity proportional feedback gain was set to Fl_Kp = 0. The numerical configuration considers: Steady, spatially uniform wind inflow. Irregular, unidirectional JONSWAP waves aligned with the wind direction. First-order wave loading, with second-order wave-force QTF contributions disabled. Simulation time step DT = 0.0125 s. Output time step DTout = 0.0125 s. The dataset represents the specified turbine–platform–controller configuration. The use of uniform wind and first-order wave loading should be considered when interpreting the results and their applicability to more general operating environments. Complete four-part dataset Across all four linked Zenodo records, the supplementary collection contains 1,463 wave-forced OpenFAST time-history files and 11 still-water baseline files, corresponding to 1,474 source output files. For wind speeds of 10.5, 11.5, 12 and 13 m/s, the collection contains 175 qualified Class-A sea states at each wind speed, with two independent stochastic realizations for each sea-state/wind-speed combination. This provides: 700 matched sea-state/wind-speed conditions. Two stochastic wave realizations per condition. 1,400 wave-forced simulation outputs across the two seeds. The above-rated diagnostic extensions contain: 32 valid single-seed simulations at 14 m/s. 31 valid single-seed simulations at 15 m/s. These latter extensions are diagnostic datasets and do not support a two-seed statistical robustness assessment. The 11 still-water simulations provide wind-speed-specific reference conditions for evaluating wave-induced incremental responses. Data format and file naming The simulation time histories are distributed as OpenFAST .out files within losslessly compressed archives. Wave-forced output filenames follow the convention: TEST_Hs<Hs>_Tp<Tp>_Seed-<seed>_Hwind<V> where: Hs is the significant wave height in metres. Tp is the spectral peak period in seconds. seed is the integer random seed used for wave generation. V is the nominal wind speed in metres per second. For matched stochastic pairs, the nominal wind speed and sea-state parameters are retained while the wave seed is changed. Archive organization and verification The complete dataset is distributed across 19 compressed archives hosted in four linked Zenodo records: Zenodo part Archive contents Number of archives Part 1 Seed 1 at 10.5 and 11.5 m/s; 14 and 15 m/s diagnostic extensions; still-water baselines 7 Part 2 Seed 1 at 12 and 13 m/s 4 Part 3 Seed 2 at 10.5 and 11.5 m/s 4 Part 4 Seed 2 at 12 and 13 m/s 4 Total Complete supplementary collection 19 Four archives use 7z/LZMA2 solid compression. The remaining 15 archives use ZIP/DEFLATE compression, including the still-water baseline archive. The SHA256SUMS.txt file, available in Part 1 (DOI: https://doi.org/10.5281/zenodo.22895713), provides a checksum for every compressed archive across the complete collection. Users are encouraged to verify the checksums after downloading the files and before extracting or processing the OpenFAST outputs. Relationship to the previously published dataset This collection supplements the previously published qualified and traceable OpenFAST benchmark dataset: Base dataset — Version 2.0.0 DOI: https://doi.org/10.5281/zenodo.21875701 The base dataset provides the underlying 7–11 m/s simulation campaign, including the physical qualification criteria, numerical-integrity screening procedures, input files and data provenance. The supplementary collection should be used together with that dataset when reproducing the complete numerical analysis reported in the companion scientific publication. Companion loading and validation software DOI: https://doi.org/10.5281/zenodo.21829605 The software record provides associated tools for processing and validating the OpenFAST simulation outputs. Scope and limitations The supplementary dataset is intended to support reproducibility and further investigation of wave-induced changes in power production and structural loading for the specified NREL 5-MW/OC4-DeepCwind configuration. The simulations do not include atmospheric turbulence, directional wave spreading, wind–wave misalignment or second-order wave-force QTF contributions. The two-seed replication supports assessment of sensitivity to the investigated stochastic wave realizations but does not constitute a complete uncertainty quantification or experimental validation. The results should therefore not be interpreted as universally transferable to other turbine ratings, floating-platform designs, controller configurations or environmental conditions without additional verification. Related records Base OpenFAST dataset: https://doi.org/10.5281/zenodo.21875701 Companion software: https://doi.org/10.5281/zenodo.21829605 Supplementary dataset — Part 1 of 4: https://doi.org/10.5281/zenodo.22895713 Supplementary dataset — Part 2 of 4: https://doi.org/10.5281/zenodo.22943451 Supplementary dataset — Part 3 of 4: https://doi.org/10.5281/zenodo.22943551 Supplementary dataset — Part 4 of 4 (this record): https://doi.org/10.5281/zenodo.22943555 Parts 1–4 collectively constitute the complete supplementary dataset. The four records should be used together when reproducing the analyses involving both stochastic realizations.",
+      "authors": [
+        "Luana Gurnari",
+        "Pasquale Filianoti",
+        "Sergio Mario Camporeale"
+      ],
+      "candidateIds": [
+        "candidate_openalex_73d94d8cd30a0d76"
+      ],
+      "doi": "https://doi.org/10.5281/zenodo.22943554",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "green",
+      "paperId": "paper_doi_34f3783ce82bef37",
+      "processingStatus": "classified",
+      "publicationSource": "Zenodo (CERN European Organization for Nuclear Research)",
+      "publicationType": "unknown",
+      "publishedDate": "2026-11-07",
+      "rank": 3,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 8,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 10,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_34f3783ce82bef37",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-11-09T09:09:16.951579Z",
+        "modelName": null,
+        "paperId": "paper_doi_34f3783ce82bef37",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aggregate (composite)",
+          "Benchmark (surveying)",
+          "Class (philosophy)",
+          "Computer science",
+          "Computer simulation",
+          "Data collection",
+          "Documentation",
+          "Electricity generation",
+          "Engineering",
+          "Environmental science",
+          "Instrumentation (computer programming)",
+          "Marine engineering",
+          "Power (physics)",
+          "Realization (probability)",
+          "Simulation",
+          "Stochastic modelling",
+          "Stochastic process",
+          "Stochastic simulation",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind Turbine Control Systems",
+          "Wind power",
+          "Wind speed"
+        ]
+      },
+      "runId": "run_20261109_090916_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "direct FOWT phrase in abstract",
+              "floating and wind terms in title",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 35
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: aerodynamics",
+              "technical signal: hydrodynamics",
+              "technical signal: structures",
+              "technical signal: controls",
+              "technical signal: platform"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: validation",
+              "research signal: dataset",
+              "research signal: modelling",
+              "research signal: optimization",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 15
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "publication type: unknown",
+              "research repository or dataset source"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 6
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "0 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 5
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 96
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5281/zenodo.22943554",
+        "openalexId": "https://openalex.org/W7225462217"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.22943554",
+      "title": "Supplementary near- and above-rated OpenFAST simulation archive for the NREL 5-MW/OC4-DeepCwind floating wind turbine - Part 4 of 4",
+      "topicTags": [
+        "Aggregate (composite)",
+        "Benchmark (surveying)",
+        "Class (philosophy)",
+        "Computer science",
+        "Computer simulation",
+        "Data collection",
+        "Documentation",
+        "Electricity generation",
+        "Engineering",
+        "Environmental science",
+        "Instrumentation (computer programming)",
+        "Marine engineering",
+        "Power (physics)",
+        "Realization (probability)",
+        "Simulation",
+        "Stochastic modelling",
+        "Stochastic process",
+        "Stochastic simulation",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind Turbine Control Systems",
+        "Wind power",
+        "Wind speed"
+      ]
+    },
+    {
+      "abstract": "Supplementary OpenFAST Simulation Dataset for the NREL 5-MW/OC4-DeepCwind Floating Wind Turbine — Part 1 of 4 Overview This record constitutes Part 1 of 4 of a supplementary OpenFAST dataset for the NREL 5-MW reference wind turbine mounted on the OC4-DeepCwind semisubmersible floating platform. The four-part collection extends the previously published benchmark dataset with near-rated and above-rated wind-speed classes used in the companion research study investigating wave-induced changes in mean generated power and structural-load variability. The supplementary simulations provide additional operating conditions and independent stochastic realizations for assessing the dependence of wave-induced responses on wind-speed regime and the reproducibility of the numerical results. All aggregate simulation counts and archive counts reported in this description refer to the complete four-part collection unless explicitly attributed to Part 1. Contents of Part 1 This record contains seven losslessly compressed archives, with a combined size of approximately 36.32 GB, comprising: First stochastic realization — 10.5 m/s seed1_V10p5_part01.7z seed1_V10p5_part02.7z First stochastic realization — 11.5 m/s seed1_V11p5_part01.7z seed1_V11p5_part02.7z Single-seed diagnostic extensions single_V14p0_part01.zip — 14 m/s, 32 valid wave-forced simulations. single_V15p0_part01.zip — 15 m/s, 31 valid wave-forced simulations. Still-water reference simulations still_water_TEST0_baselines.zip — 11 still-water baseline simulations at wind speeds of 7, 8, 9, 10, 10.5, 11, 11.5, 12, 13, 14 and 15 m/s. The four first-seed archives contain simulation outputs at 10.5 and 11.5 m/s. Together, these two wind-speed classes comprise 175 qualified Class-A sea-state conditions per wind speed in the complete first-seed dataset. Part 1 also includes the following documentation files: README.md — dataset description and usage information. FILE_MANIFEST.csv — inventory of the 19 compressed archives distributed across the complete four-part collection. SHA256SUMS.txt — SHA-256 checksums for the 19 archives. The manifest and checksum file document the complete collection, including archives hosted in Parts 2, 3 and 4. Numerical model and environmental conditions The simulations were performed using OpenFAST v4.1.2, with the ROSCO controller in the original tuning configuration adopted for the study. The nacelle-velocity proportional feedback gain was set to Fl_Kp = 0. The numerical configuration considers: Steady, spatially uniform wind inflow. Irregular, unidirectional JONSWAP waves aligned with the wind direction. First-order wave loading, with second-order wave-force QTF contributions disabled. Simulation time step DT = 0.0125 s. Output time step DTout = 0.0125 s. The dataset represents the specified turbine–platform–controller configuration. The use of uniform wind and first-order wave loading should be considered when interpreting the results and their applicability to more general operating environments. Complete four-part dataset Across all four linked Zenodo records, the supplementary collection contains 1,463 wave-forced OpenFAST time-history files and 11 still-water baseline files, corresponding to 1,474 source output files. For wind speeds of 10.5, 11.5, 12 and 13 m/s, the collection contains 175 qualified Class-A sea states at each wind speed, with two independent stochastic realizations for each sea-state/wind-speed combination. This provides: 700 matched sea-state/wind-speed conditions. Two stochastic wave realizations per condition. 1,400 wave-forced simulation outputs across the two seeds. The above-rated diagnostic extensions contain: 32 valid single-seed simulations at 14 m/s. 31 valid single-seed simulations at 15 m/s. These latter extensions are diagnostic datasets and do not support a two-seed statistical robustness assessment. The 11 still-water simulations provide wind-speed-specific reference conditions for evaluating wave-induced incremental responses. Data format and file naming The simulation time histories are distributed as OpenFAST .out files within losslessly compressed archives. Wave-forced output filenames follow the convention: TEST_Hs<Hs>_Tp<Tp>_Seed-<seed>_Hwind<V> where: Hs is the significant wave height in metres. Tp is the spectral peak period in seconds. seed is the integer random seed used for wave generation. V is the nominal wind speed in metres per second. For matched stochastic pairs, the nominal wind speed and sea-state parameters are retained while the wave seed is changed. Archive organization and verification The complete dataset is distributed across 19 compressed archives hosted in four linked Zenodo records: Zenodo part Archive contents Number of archives Part 1 Seed 1 at 10.5 and 11.5 m/s; 14 and 15 m/s diagnostic extensions; still-water baselines 7 Part 2 Seed 1 at 12 and 13 m/s 4 Part 3 Seed 2 at 10.5 and 11.5 m/s 4 Part 4 Seed 2 at 12 and 13 m/s 4 Total **Complete supplementar Four archives use 7z/LZMA2 solid compression. The remaining 15 archives use ZIP/DEFLATE compression, including the still-water baseline archive. The supplied SHA256SUMS.txt file provides a checksum for every compressed archive. Users are encouraged to verify the checksums after downloading the files and before extracting or processing the OpenFAST outputs. Relationship to the previously published dataset This collection supplements the previously published qualified and traceable OpenFAST benchmark dataset: Base dataset — Version 2.0.0 DOI: https://doi.org/10.5281/zenodo.21875701 The base dataset provides the underlying 7–11 m/s simulation campaign, including the physical qualification criteria, numerical-integrity screening procedures, input files and data provenance. The supplementary collection should be used together with that dataset when reproducing the complete numerical analysis reported in the companion scientific publication. Companion loading and validation software DOI: https://doi.org/10.5281/zenodo.21829605 The software record provides associated tools for processing and validating the OpenFAST simulation outputs. Scope and limitations The supplementary dataset is intended to support reproducibility and further investigation of wave-induced changes in power production and structural loading for the specified NREL 5-MW/OC4-DeepCwind configuration. The simulations do not include atmospheric turbulence, directional wave spreading, wind–wave misalignment or second-order wave-force QTF contributions. The two-seed replication supports assessment of sensitivity to the investigated stochastic wave realizations but does not constitute a complete uncertainty quantification or experimental validation. The results should therefore not be interpreted as universally transferable to other turbine ratings, floating-platform designs, controller configurations or environmental conditions without additional verification. Related records Base OpenFAST dataset:https://doi.org/10.5281/zenodo.21875701 Companion software:https://doi.org/10.5281/zenodo.21829605 Supplementary dataset — Parts 2, 3 and 4:DOi Part 2: 10.5281/zenodo.22943451 DOI Part 3: 10.5281/zenodo.22943551 DOI Part 4: 10.5281/zenodo.22943555",
+      "authors": [
+        "Luana Gurnari",
+        "Pasquale Filianoti",
+        "Sergio Mario Camporeale"
+      ],
+      "candidateIds": [
+        "candidate_openalex_078b088b039eadbb"
+      ],
+      "doi": "https://doi.org/10.5281/zenodo.22895712",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "green",
+      "paperId": "paper_doi_e5916d255e4e180c",
+      "processingStatus": "classified",
+      "publicationSource": "Zenodo (CERN European Organization for Nuclear Research)",
+      "publicationType": "unknown",
+      "publishedDate": "2026-11-07",
+      "rank": 4,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 6,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind platform",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 3,
+          "rawResultIndex": 8,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_e5916d255e4e180c",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-11-09T09:09:16.951579Z",
+        "modelName": null,
+        "paperId": "paper_doi_e5916d255e4e180c",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aggregate (composite)",
+          "Baseline (sea)",
+          "Benchmark (surveying)",
+          "Computer science",
+          "Computer simulation",
+          "Data collection",
+          "Documentation",
+          "Engineering",
+          "Environmental science",
+          "Instrumentation (computer programming)",
+          "Marine engineering",
+          "Meteorology",
+          "Numerical models",
+          "Power (physics)",
+          "Realization (probability)",
+          "Simulation",
+          "Simulation modeling",
+          "Stochastic modelling",
+          "Stochastic process",
+          "Turbine",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind Turbine Control Systems",
+          "Wind power",
+          "Wind speed"
+        ]
+      },
+      "runId": "run_20261109_090916_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "direct FOWT phrase in abstract",
+              "floating and wind terms in title",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 35
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: aerodynamics",
+              "technical signal: hydrodynamics",
+              "technical signal: structures",
+              "technical signal: controls",
+              "technical signal: platform"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: validation",
+              "research signal: dataset",
+              "research signal: modelling",
+              "research signal: optimization",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 15
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "publication type: unknown",
+              "research repository or dataset source"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 6
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "0 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 5
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 96
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.5281/zenodo.22895712",
+        "openalexId": "https://openalex.org/W7225467717"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.22895712",
+      "title": "Supplementary near- and above-rated OpenFAST simulation archive for the NREL 5-MW/OC4-DeepCwind floating wind turbine - Part 1 of 4",
+      "topicTags": [
+        "Aggregate (composite)",
+        "Baseline (sea)",
+        "Benchmark (surveying)",
+        "Computer science",
+        "Computer simulation",
+        "Data collection",
+        "Documentation",
+        "Engineering",
+        "Environmental science",
+        "Instrumentation (computer programming)",
+        "Marine engineering",
+        "Meteorology",
+        "Numerical models",
+        "Power (physics)",
+        "Realization (probability)",
+        "Simulation",
+        "Simulation modeling",
+        "Stochastic modelling",
+        "Stochastic process",
+        "Turbine",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind Turbine Control Systems",
+        "Wind power",
+        "Wind speed"
+      ]
+    },
+    {
+      "abstract": "This study presents a comparative fatigue analysis of a semi-submersible floating offshore wind turbine (FOWT), focusing on the HiveWind platform. Two distinct fatigue assessment methodologies—time-domain and frequency-domain—are applied to identical structural locations identified through a global fatigue screening involving over 16,000 hotspots. The time-domain analysis is carried out using high-fidelity simulations in time domain, incorporating full irregular sea states and turbine-generated time series, requiring over 120 TB of RAM and 150 cores for full-scale IEC-compliant simulations. In parallel, the frequency-domain method is implemented using Ansys and post-processed with Miner’s rule and environmental wave data, integrating damage equivalent loads (DELs) from aeroelastic turbine simulations. Results indicate that while frequency-domain analysis significantly reduces computational cost (by over 90%), it tends to underestimate fatigue damage, particularly in regions proximal to the wind turbine tower. As structural distance from the rotor increases, damage predictions between the two methods converge. The observed discrepancies are partially attributed to the DEL input simplifications inherent to the frequency-domain approach. This work underscores the importance of method selection in offshore fatigue analysis and suggests a location-sensitive hybrid strategy, leveraging time-domain simulations near critical dynamic zones and frequency-domain approximations in peripheral regions.",
+      "authors": [
+        "Mario de Vicente",
+        "Arturo Silva-Campillo",
+        "Miguel Taboada Gosalvez",
+        "Albert Monclus Abadal",
+        "Sergi Ametller Malfaz"
+      ],
+      "candidateIds": [
+        "candidate_openalex_b343772e500e34b9"
+      ],
+      "doi": "https://doi.org/10.3390/jmse14212076",
+      "fullTextAvailability": "full_text_available",
+      "indexedDate": null,
+      "openAccessStatus": "gold",
+      "paperId": "paper_doi_56a60f24700888c8",
+      "processingStatus": "classified",
+      "publicationSource": "Journal of Marine Science and Engineering",
+      "publicationType": "journal",
+      "publishedDate": "2026-11-04",
+      "rank": 5,
+      "rawSources": [
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 0,
+          "rawResultIndex": 21,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 1,
+          "rawResultIndex": 25,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "core_fowt",
+          "queryTerm": "floating offshore wind turbine",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 2,
+          "rawResultIndex": 15,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        },
+        {
+          "queryGroup": "platform_and_station_keeping",
+          "queryTerm": "floating wind semi-submersible",
+          "rawPageIndex": 0,
+          "rawQueryIndex": 5,
+          "rawResultIndex": 4,
+          "rawSourcePath": "pipeline\\data\\runs\\run_20261109_090916_openalex\\raw_openalex.json"
+        }
+      ],
+      "relevanceAssessment": {
+        "assessmentId": "relevance_paper_doi_56a60f24700888c8",
+        "classification": "Relevant",
+        "confidence": 0.9,
+        "evidenceBasis": [
+          "title"
+        ],
+        "generatedAt": "2026-11-09T09:09:16.951579Z",
+        "modelName": null,
+        "paperId": "paper_doi_56a60f24700888c8",
+        "promptVersion": null,
+        "reason": "relevant_title_fowt_phrase",
+        "topicTags": [
+          "Aeroelasticity",
+          "Computer science",
+          "Engineering",
+          "Environmental science",
+          "Fatigue testing",
+          "Finite element method",
+          "Marine engineering",
+          "Offshore Engineering and Technologies",
+          "Offshore wind power",
+          "Reliability (semiconductor)",
+          "Reliability engineering",
+          "Response analysis",
+          "Rotor (electric)",
+          "Selection (genetic algorithm)",
+          "Structural engineering",
+          "Structural health monitoring",
+          "Submarine pipeline",
+          "Turbine",
+          "Turbine blade",
+          "Vibration fatigue",
+          "Wave and Wind Energy Systems",
+          "Wind Energy Research and Development",
+          "Wind power",
+          "Work (physics)"
+        ]
+      },
+      "runId": "run_20261109_090916_openalex",
+      "schemaVersion": "pipeline-data-0.1",
+      "selected": true,
+      "selectionReason": "selected_within_limit",
+      "selectionScore": {
+        "components": [
+          {
+            "componentId": "fowt_relevance",
+            "evidence": [
+              "classification: Relevant",
+              "direct FOWT phrase in title",
+              "direct FOWT phrase in abstract",
+              "floating and wind terms across metadata",
+              "classifier confidence 0.9"
+            ],
+            "label": "FOWT relevance",
+            "maxScore": 35,
+            "score": 34
+          },
+          {
+            "componentId": "technical_specificity",
+            "evidence": [
+              "technical signal: aerodynamics",
+              "technical signal: hydrodynamics",
+              "technical signal: structures",
+              "technical signal: platform",
+              "technical signal: economics"
+            ],
+            "label": "Technical specificity",
+            "maxScore": 25,
+            "score": 25
+          },
+          {
+            "componentId": "research_value",
+            "evidence": [
+              "research signal: dataset",
+              "research signal: optimization",
+              "research signal: design",
+              "abstract available"
+            ],
+            "label": "Research value",
+            "maxScore": 15,
+            "score": 12
+          },
+          {
+            "componentId": "venue_quality",
+            "evidence": [
+              "venue/source present",
+              "journal publication type",
+              "technical venue/source proxy"
+            ],
+            "label": "Venue quality",
+            "maxScore": 10,
+            "score": 9
+          },
+          {
+            "componentId": "metadata_quality",
+            "evidence": [
+              "DOI present",
+              "source URL present",
+              "authors present",
+              "publication source present",
+              "abstract present",
+              "topic tags present",
+              "full text or abstract available"
+            ],
+            "label": "Metadata quality",
+            "maxScore": 10,
+            "score": 10
+          },
+          {
+            "componentId": "recency",
+            "evidence": [
+              "3 days behind newest candidate"
+            ],
+            "label": "Recency",
+            "maxScore": 5,
+            "score": 2
+          }
+        ],
+        "maxScore": 100,
+        "modelId": "research_selection_score_v1",
+        "total": 92
+      },
+      "sourceIdentifiers": {
+        "doi": "https://doi.org/10.3390/jmse14212076",
+        "openalexId": "https://openalex.org/W4415597551"
+      },
+      "sourceName": "openalex",
+      "sourceUrl": "https://doi.org/10.3390/jmse14212076",
+      "title": "A Comparative Fatigue Assessment of a Semi-Submersible FOWT Using Time- and Frequency-Domain Methodologies",
+      "topicTags": [
+        "Aeroelasticity",
+        "Computer science",
+        "Engineering",
+        "Environmental science",
+        "Fatigue testing",
+        "Finite element method",
+        "Marine engineering",
+        "Offshore Engineering and Technologies",
+        "Offshore wind power",
+        "Reliability (semiconductor)",
+        "Reliability engineering",
+        "Response analysis",
+        "Rotor (electric)",
+        "Selection (genetic algorithm)",
+        "Structural engineering",
+        "Structural health monitoring",
+        "Submarine pipeline",
+        "Turbine",
+        "Turbine blade",
+        "Vibration fatigue",
+        "Wave and Wind Energy Systems",
+        "Wind Energy Research and Development",
+        "Wind power",
+        "Work (physics)"
+      ]
+    }
+  ],
+  "sourceName": "openalex",
+  "weekEnd": "2026-11-08",
+  "weekStart": "2026-11-02",
+  "checkedResultCount": 165
+}

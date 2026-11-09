@@ -1,0 +1,931 @@
+{
+  "schemaVersion": "engineering-briefing.v1",
+  "weekStart": "2026-11-02",
+  "weekEnd": "2026-11-08",
+  "generatedAt": "2026-11-09T09:11:19.467Z",
+  "checkedResultCount": 2,
+  "sourceRecords": [
+    {
+      "sourceRecordId": "eng-src-2026-11-08-stillstrom-vcu",
+      "candidateStatus": "candidate",
+      "sourceType": "company_announcement",
+      "publisher": "Stillstrom",
+      "title": "Stillstrom builds 11 kV interface unit for charging vessels in offshore wind farms",
+      "sourceUrl": "https://stillstrom.com/news/stillstrom-builds-world-s-first-11-kv-interface-unit-for-charging-vessels-in-offshore-wind-farms",
+      "publishedDate": "2026-11-03",
+      "retrievedAt": "2026-11-09T09:11:19.467Z",
+      "collectionMethod": "manual",
+      "sourceText": "Stillstrom reports completion of its 11 kV vessel-mounted charging unit and factory acceptance testing witnessed by DNV. The modular unit can connect offshore wind infrastructure to service-vessel batteries. The wind-farm interface remains in development; extended trials of the complete system are expected in summer 2027.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-08-denar-survey",
+      "candidateStatus": "candidate",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Turkish Marine Survey Specialist Wins Work on Country’s First Offshore Wind Site Investigation Programme",
+      "sourceUrl": "https://www.offshorewind.biz/2026/11/06/turkish-marine-survey-specialist-wins-work-on-countrys-first-offshore-wind-site-investigation-programme",
+      "publishedDate": "2026-11-06",
+      "retrievedAt": "2026-11-09T09:11:19.467Z",
+      "collectionMethod": "manual",
+      "sourceText": "offshoreWIND.biz reports that MENR selected DenAr for geophysical and geotechnical investigations at two Sea of Marmara areas under NCS-01. Scope includes sonar, seismic and UXO surveys, seabed cone penetration testing, sampling and laboratory work. This is offshore wind site preparation; neither a floating foundation selection nor a wind-farm construction award is established.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-08-ow-stillstrom",
+      "candidateStatus": "duplicate_event",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Stillstrom Completes 11 kV Unit for Vessel Charging at Offshore Wind Farms",
+      "sourceUrl": "https://www.offshorewind.biz/2026/11/04/stillstrom-completes-11-kv-unit-for-vessel-charging-at-offshore-wind-farms",
+      "publishedDate": "2026-11-04",
+      "retrievedAt": "2026-11-09T09:11:19.467Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports the same vessel charging unit factory-test milestone as the Stillstrom announcement. Retained as discovery provenance, not an additional candidate.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-08-fram-grant",
+      "candidateStatus": "excluded_low_relevance",
+      "sourceType": "industry_news",
+      "publisher": "Offshore Source",
+      "title": "Fram Wind Solutions Secures Enova Grant for Floating Offshore Wind Project",
+      "sourceUrl": "https://offshoresource.com/news/renewables/fram-wind-solutions-secures-enova-grant-for-floating-offshore-wind-project/",
+      "publishedDate": "2026-11-02",
+      "retrievedAt": "2026-11-09T09:11:19.467Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports formal confirmation of the Fram Enova grant covered by the 2026-11-01 edition. The grant remains conditional. Excluded from this week’s independent candidates as follow-up reporting of an already selected award, not a new installation or FID.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-08-ont-fram",
+      "candidateStatus": "excluded_low_relevance",
+      "sourceType": "industry_news",
+      "publisher": "Ocean News & Technology",
+      "title": "BW Ideol’s Damping Pool Foundation Targets 18.5 MW Floating Wind Turbines",
+      "sourceUrl": "https://oceannews.com/news/energy/bw-ideols-damping-pool-foundation-targets-18-5-mw-floating-wind-turbines/",
+      "publishedDate": "2026-11-02",
+      "retrievedAt": "2026-11-09T09:11:19.467Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports the same conditional Fram Enova funding award already selected in the prior edition. It is not counted as a new independent weekly event.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-08-ont-frontline",
+      "candidateStatus": "excluded_low_relevance",
+      "sourceType": "industry_news",
+      "publisher": "Ocean News & Technology",
+      "title": "University of Plymouth Leads AUV Sensor Trial to Support Floating Offshore Wind Research",
+      "sourceUrl": "https://oceannews.com/news/science-technology/university-of-plymouth-leads-auv-sensor-trial-to-support-floating-offshore-wind-research/",
+      "publishedDate": "2026-11-02",
+      "retrievedAt": "2026-11-09T09:11:19.467Z",
+      "collectionMethod": "manual",
+      "sourceText": "Further coverage of the Plymouth ALR1500 sensor trials for Frontline already selected in the 2026-11-01 edition. Excluded as a repeat event rather than counted again because of a later article date.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-08-ont-otec",
+      "candidateStatus": "excluded_low_relevance",
+      "sourceType": "industry_news",
+      "publisher": "Ocean News & Technology",
+      "title": "Global OTEC Completes Year-Long Sea Trial of Floating OTEC Prototype",
+      "sourceUrl": "https://oceannews.com/news/energy/global-otec-completes-year-long-sea-trial-of-floating-otec-prototype/",
+      "publishedDate": "2026-11-02",
+      "retrievedAt": "2026-11-09T09:11:19.467Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports an ocean thermal energy conversion prototype trial. Excluded because floating OTEC is not floating offshore wind.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-08-fugro-bsh",
+      "candidateStatus": "excluded_low_relevance",
+      "sourceType": "industry_news",
+      "publisher": "offshoreWIND.biz",
+      "title": "Fugro Nets Multi-Year Offshore Wind Contract in Germany",
+      "sourceUrl": "https://www.offshorewind.biz/2026/11/05/fugro-nets-multi-year-offshore-wind-contract-in-germany",
+      "publishedDate": "2026-11-05",
+      "retrievedAt": "2026-11-09T09:11:19.467Z",
+      "collectionMethod": "manual",
+      "sourceText": "Reports a German North Sea geotechnical framework for offshore wind development. No explicit floating-wind scope is identified; excluded as fixed-bottom market coverage under this week’s relevance review.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    },
+    {
+      "sourceRecordId": "eng-src-2026-11-08-deepwind-birds",
+      "candidateStatus": "excluded_out_of_window",
+      "sourceType": "industry_news",
+      "publisher": "DeepWind",
+      "title": "Wind Turbine Bird Strikes in Hokkaido: Two Years of Daytime Shutdowns, and a Push to Make Mitigation Mandatory",
+      "sourceUrl": "https://deepwind.jp/en/policy-regulations/wind-bird-strike-hokkaido-eagles/",
+      "publishedDate": "2026-10-31",
+      "retrievedAt": "2026-11-09T09:11:19.467Z",
+      "collectionMethod": "manual",
+      "sourceText": "The page explicitly states publication and update on 31 October 2026. Excluded from the 2–8 November window; search crawl dates do not establish publication dates.",
+      "licenseNote": "Public source; concise attributed factual paraphrase and provenance retained, not the full article. No broader republication rights assumed."
+    }
+  ],
+  "briefingItems": [
+    {
+      "briefingItemId": "eng-item-2026-11-08-stillstrom-vcu",
+      "title": "Stillstrom factory-tests offshore vessel charging unit",
+      "oneLineSummary": "DNV witnessed factory testing of the vessel-side 11 kV unit; complete-system sea trials remain planned.",
+      "category": "technology",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-11-08-stillstrom-vcu",
+        "eng-src-2026-11-08-ow-stillstrom"
+      ],
+      "sourceUrl": "https://stillstrom.com/news/stillstrom-builds-world-s-first-11-kv-interface-unit-for-charging-vessels-in-offshore-wind-farms",
+      "explanation": "Stillstrom completed its vessel-mounted charging unit and factory tests. The wind-farm interface remains under development, with extended trials of the complete system expected in summer 2027.",
+      "whyItMatters": "The milestone concerns tested vessel-side hardware; full offshore-system trials are still ahead.",
+      "engineeringTopics": [
+        "Offshore charging",
+        "Electrical interface",
+        "Service vessels",
+        "Factory acceptance testing"
+      ]
+    },
+    {
+      "briefingItemId": "eng-item-2026-11-08-denar-survey",
+      "title": "DenAr selected for Türkiye offshore wind site investigations",
+      "oneLineSummary": "Reported NCS-01 contract covers geophysical and geotechnical work at two Sea of Marmara areas.",
+      "category": "project",
+      "region": "Europe",
+      "sourceRecordIds": [
+        "eng-src-2026-11-08-denar-survey"
+      ],
+      "sourceUrl": "https://www.offshorewind.biz/2026/11/06/turkish-marine-survey-specialist-wins-work-on-countrys-first-offshore-wind-site-investigation-programme",
+      "explanation": "offshoreWIND.biz reports a DenAr site-investigation contract covering sonar, seismic, UXO and seabed testing. The work prepares offshore wind sites; the report does not establish a floating foundation choice or wind-farm construction award.",
+      "whyItMatters": "The reported award concerns site data collection ahead of development decisions.",
+      "engineeringTopics": [
+        "Site investigation",
+        "Geotechnical survey",
+        "Geophysical survey",
+        "UXO"
+      ]
+    }
+  ],
+  "engineeringSelection": {
+    "candidatePoolType": "approved_source_candidate_pool",
+    "collectionAudit": {
+      "weekStart": "2026-11-02",
+      "weekEnd": "2026-11-08",
+      "sourcePolicy": "docs/ENGINEERING_SOURCE_POLICY.md",
+      "sourceRegistry": "web/data/engineering-source-registry.json",
+      "sourceUniverse": "All 42 registry domains included in grouped or focused search discovery. Retained item-level review is not exhaustive scraping or proof of complete publisher coverage.",
+      "sourcesAttempted": 42,
+      "sourcesSuccessfullyCollected": 4,
+      "sourcesFailed": 38,
+      "rawItemsCollected": 9,
+      "itemsAfterDateFiltering": 8,
+      "itemsAfterFowtRelevanceFiltering": 3,
+      "duplicateEventOverlapsRemoved": 1,
+      "candidatePoolSize": 2,
+      "attemptedSources": [
+        {
+          "sourceId": "boem-renewable-energy",
+          "publisher": "Bureau of Ocean Energy Management",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:bretagneoceanpower.fr OR site:aivp.org OR site:boem.gov) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "crown-estate-scotland-news",
+          "publisher": "Crown Estate Scotland",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:gov.uk OR site:thecrownestate.co.uk OR site:crownestatescotland.com) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "japan-mlit-press",
+          "publisher": "Japan Ministry of Land, Infrastructure, Transport and Tourism",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:mlit.go.jp OR site:gwerthwchigymru.llyw.cymru OR site:scio.gov.cn) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "gwerthwchigymru-procurement",
+          "publisher": "GwerthwchiGymru / Associated British Ports",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:mlit.go.jp OR site:gwerthwchigymru.llyw.cymru OR site:scio.gov.cn) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "cierco-energy-news",
+          "publisher": "Cierco Energy",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:ciercoenergy.com OR site:sumitomocorp.com OR site:cnooc.com.cn) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "sumitomo-corporation-news",
+          "publisher": "Sumitomo Corporation",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:ciercoenergy.com OR site:sumitomocorp.com OR site:cnooc.com.cn) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "cnooc-news",
+          "publisher": "CNOOC",
+          "sourceClass": "developers_project_owners",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:ciercoenergy.com OR site:sumitomocorp.com OR site:cnooc.com.cn) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "ge-vernova-news",
+          "publisher": "GE Vernova",
+          "sourceClass": "turbine_oems",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:gevernova.com OR site:vestas.com OR site:myse.com.cn) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "vestas-news",
+          "publisher": "Vestas",
+          "sourceClass": "turbine_oems",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:gevernova.com OR site:vestas.com OR site:myse.com.cn) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "mingyang-news",
+          "publisher": "Mingyang Smart Energy",
+          "sourceClass": "turbine_oems",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:gevernova.com OR site:vestas.com OR site:myse.com.cn) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "principle-power-news",
+          "publisher": "Principle Power",
+          "sourceClass": "floating_platform_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:principlepower.com OR site:bw-ideol.com OR site:aikidotechnologies.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "bw-ideol-news",
+          "publisher": "BW Ideol",
+          "sourceClass": "floating_platform_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:principlepower.com OR site:bw-ideol.com OR site:aikidotechnologies.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "aikido-technologies-news",
+          "publisher": "Aikido Technologies",
+          "sourceClass": "floating_platform_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:principlepower.com OR site:bw-ideol.com OR site:aikidotechnologies.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "encomara-news",
+          "publisher": "Encomara",
+          "sourceClass": "mooring_anchor_suppliers",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:encomara.com OR site:mooreast.com OR site:prysmian.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "mooreast-news",
+          "publisher": "Mooreast",
+          "sourceClass": "mooring_anchor_suppliers",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:encomara.com OR site:mooreast.com OR site:prysmian.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "prysmian-news",
+          "publisher": "Prysmian",
+          "sourceClass": "cable_electrical_grid_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:encomara.com OR site:mooreast.com OR site:prysmian.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "nexans-news",
+          "publisher": "Nexans",
+          "sourceClass": "cable_electrical_grid_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:nexans.com OR site:hitachienergy.com OR site:brest.port.bzh) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "hitachi-energy-news",
+          "publisher": "Hitachi Energy",
+          "sourceClass": "cable_electrical_grid_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:nexans.com OR site:hitachienergy.com OR site:brest.port.bzh) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "brestport-news",
+          "publisher": "BrestPort",
+          "sourceClass": "ports_fabrication",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:nexans.com OR site:hitachienergy.com OR site:brest.port.bzh) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "haventus-news",
+          "publisher": "Haventus",
+          "sourceClass": "ports_fabrication",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:haventus.com OR site:heerema.com OR site:boskalis.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "heerema-news",
+          "publisher": "Heerema Marine Contractors",
+          "sourceClass": "installation_vessel_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:haventus.com OR site:heerema.com OR site:boskalis.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "boskalis-news",
+          "publisher": "Boskalis",
+          "sourceClass": "installation_vessel_companies",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:haventus.com OR site:heerema.com OR site:boskalis.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "dnv-news",
+          "publisher": "DNV",
+          "sourceClass": "certification_standards",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:dnv.com OR site:eagle.org OR site:omae.secure-platform.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "abs-news",
+          "publisher": "ABS",
+          "sourceClass": "certification_standards",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:ww2.eagle.org) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "asme-omae",
+          "publisher": "ASME OMAE",
+          "sourceClass": "certification_standards",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:dnv.com OR site:eagle.org OR site:omae.secure-platform.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "cognite-news",
+          "publisher": "Cognite",
+          "sourceClass": "engineering_software_digital",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:cognite.com OR site:rewind.energy OR site:carbontrust.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "rewind-news",
+          "publisher": "ReWind",
+          "sourceClass": "engineering_software_digital",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:cognite.com OR site:rewind.energy OR site:carbontrust.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "carbon-trust-news",
+          "publisher": "Carbon Trust",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:cognite.com OR site:rewind.energy OR site:carbontrust.com) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "bretagne-ocean-power-news",
+          "publisher": "Bretagne Ocean Power",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:bretagneoceanpower.fr OR site:aivp.org OR site:boem.gov) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "aivp-news",
+          "publisher": "AIVP",
+          "sourceClass": "industry_associations",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:bretagneoceanpower.fr OR site:aivp.org OR site:boem.gov) wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "scio-xinhua",
+          "publisher": "SCIO / Xinhua",
+          "sourceClass": "government_regulator_seabed_authority",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:mlit.go.jp OR site:gwerthwchigymru.llyw.cymru OR site:scio.gov.cn) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "offshorewind-biz",
+          "publisher": "offshoreWIND.biz",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 4,
+          "dateWindowItems": 4,
+          "fowtRelevantItems": 3,
+          "result": "dated_reviewed_inventory_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-08-stillstrom-vcu",
+            "eng-src-2026-11-08-denar-survey",
+            "eng-src-2026-11-08-ow-stillstrom",
+            "eng-src-2026-11-08-fugro-bsh"
+          ],
+          "searchQuery": "site:offshorewind.biz/2026/11/ \"floating\""
+        },
+        {
+          "sourceId": "deepwind",
+          "publisher": "DeepWind",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "dated_reviewed_inventory_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-08-deepwind-birds"
+          ],
+          "searchQuery": "site:deepwind.jp/en/ after:2026-11-01 before:2026-11-09 floating wind"
+        },
+        {
+          "sourceId": "energy-global-wind",
+          "publisher": "Energy Global",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:energyglobal.com/wind/ \"2026\" \"November\" floating"
+        },
+        {
+          "sourceId": "ocean-news-technology",
+          "publisher": "Ocean News & Technology",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 3,
+          "dateWindowItems": 3,
+          "fowtRelevantItems": 0,
+          "result": "dated_reviewed_inventory_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-08-ont-fram",
+            "eng-src-2026-11-08-ont-frontline",
+            "eng-src-2026-11-08-ont-otec"
+          ],
+          "searchQuery": "site:oceannews.com \"2026\" \"November\" floating wind"
+        },
+        {
+          "sourceId": "offshore-magazine",
+          "publisher": "Offshore Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:offshore-mag.com OR site:windsystemsmag.com OR site:events.stanford.edu) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "wind-systems-magazine",
+          "publisher": "Wind Systems Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:offshore-mag.com OR site:windsystemsmag.com OR site:events.stanford.edu) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "stanford-events",
+          "publisher": "Stanford University",
+          "sourceClass": "conferences_universities",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:offshore-mag.com OR site:windsystemsmag.com OR site:events.stanford.edu) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "baird-maritime",
+          "publisher": "Baird Maritime",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:bairdmaritime.com OR site:ecomagazine.com OR site:offshoresource.com) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "eco-magazine",
+          "publisher": "ECO Magazine",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "(site:bairdmaritime.com OR site:ecomagazine.com OR site:offshoresource.com) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "offshore-source",
+          "publisher": "Offshore Source",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "succeeded",
+          "rawItemsDiscovered": 1,
+          "dateWindowItems": 1,
+          "fowtRelevantItems": 0,
+          "result": "dated_reviewed_inventory_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [
+            "eng-src-2026-11-08-fram-grant"
+          ],
+          "searchQuery": "(site:bairdmaritime.com OR site:ecomagazine.com OR site:offshoresource.com) floating wind after:2026-11-01 before:2026-11-09"
+        },
+        {
+          "sourceId": "korea-offshore-wind-intelligence",
+          "publisher": "Korea Offshore Wind Intelligence",
+          "sourceClass": "offshore_wind_trade_press",
+          "collectionStatus": "failed_or_no_weekly_candidate",
+          "rawItemsDiscovered": 0,
+          "dateWindowItems": 0,
+          "fowtRelevantItems": 0,
+          "result": "no_verified_weekly_candidate_retained",
+          "note": "Registry-domain discovery searched, including grouped domain queries and focused follow-ups. Counts describe retained reviewed inventory only. Zero does not establish publisher absence or outage. Primary follow-ups are attributed to the registry discovery source.",
+          "sourceRecordIds": [],
+          "searchQuery": "site:koreaoffshorewind.com floating wind after:2026-11-01 before:2026-11-09"
+        }
+      ],
+      "duplicateEventGroups": [
+        {
+          "eventGroup": "stillstrom-vcu",
+          "primarySourceRecordId": "eng-src-2026-11-08-stillstrom-vcu",
+          "duplicateSourceRecordIds": [
+            "eng-src-2026-11-08-ow-stillstrom"
+          ],
+          "note": "One factory-test milestone with primary and trade provenance."
+        }
+      ],
+      "coverageNotes": [
+        "Sparse reviewed week: two independent offshore engineering candidates, without padding to five. Search/index access and English-language discovery leave coverage gaps.",
+        "Stillstrom primary provenance was found through the approved offshoreWIND.biz discovery source. Its factory-tested vessel unit is not a fully trialled offshore charging system; no floating-specific deployment or cost reduction is claimed.",
+        "DenAr remains attributed trade reporting. The company’s matching social post was corroborative only, not an accepted source record; no accessible dated ministry announcement was found. This is offshore site preparation, with no confirmed floating foundation selection.",
+        "The Fram award and Frontline trials were covered in the prior edition. New article dates do not make them independent new events; retained as excluded_low_relevance with explicit repeat-event reasons.",
+        "Floating OTEC is outside FOWT scope. The German BSH item provides no explicit floating-wind scope. The DeepWind bird article is dated 31 October despite recent search indexing."
+      ]
+    },
+    "selectionModel": {
+      "id": "engineering_selection_score_v1",
+      "label": "Engineering Selection Score",
+      "description": "Deterministic 100-point score computed from source-backed Engineering source records before diversity-aware selection.",
+      "components": [
+        {
+          "componentId": "engineering_relevance",
+          "label": "Engineering relevance",
+          "maxScore": 30
+        },
+        {
+          "componentId": "project_company",
+          "label": "Project / company",
+          "maxScore": 25
+        },
+        {
+          "componentId": "technology",
+          "label": "Technology",
+          "maxScore": 20
+        },
+        {
+          "componentId": "policy_market",
+          "label": "Policy / market",
+          "maxScore": 15
+        },
+        {
+          "componentId": "source_quality",
+          "label": "Source quality",
+          "maxScore": 10
+        }
+      ],
+      "diversityRules": [
+        "Rank candidates by Engineering Selection Score.",
+        "Prefer not to select two primary highlights from the same detected project group when enough alternatives exist.",
+        "Use source record ID as the final deterministic tie-breaker."
+      ]
+    },
+    "candidates": [
+      {
+        "candidateId": "eng-src-2026-11-08-stillstrom-vcu",
+        "sourceRecordId": "eng-src-2026-11-08-stillstrom-vcu",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-11-08-stillstrom-vcu",
+        "rawRank": 1,
+        "finalRank": 1,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 17,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 7,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal",
+                "engineering signals: vessel"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 0,
+              "maxScore": 25,
+              "evidence": []
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 2,
+              "maxScore": 15,
+              "evidence": [
+                "company announcement source type"
+              ]
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 8,
+              "maxScore": 10,
+              "evidence": [
+                "company announcement source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "Stillstrom",
+          "projectGroup": "offshore_vessel_charging",
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      },
+      {
+        "candidateId": "eng-src-2026-11-08-denar-survey",
+        "sourceRecordId": "eng-src-2026-11-08-denar-survey",
+        "selected": true,
+        "selectedBriefingItemId": "eng-item-2026-11-08-denar-survey",
+        "rawRank": 2,
+        "finalRank": 2,
+        "selectionReason": "selected_after_diversity",
+        "diversityReason": "Selected by score while adding source/project coverage.",
+        "engineeringSelectionScore": {
+          "modelId": "engineering_selection_score_v1",
+          "total": 14,
+          "maxScore": 100,
+          "components": [
+            {
+              "componentId": "engineering_relevance",
+              "label": "Engineering relevance",
+              "score": 5,
+              "maxScore": 30,
+              "evidence": [
+                "offshore wind signal"
+              ]
+            },
+            {
+              "componentId": "project_company",
+              "label": "Project / company",
+              "score": 3,
+              "maxScore": 25,
+              "evidence": [
+                "project/company event signals: selected"
+              ]
+            },
+            {
+              "componentId": "technology",
+              "label": "Technology",
+              "score": 0,
+              "maxScore": 20,
+              "evidence": []
+            },
+            {
+              "componentId": "policy_market",
+              "label": "Policy / market",
+              "score": 0,
+              "maxScore": 15,
+              "evidence": []
+            },
+            {
+              "componentId": "source_quality",
+              "label": "Source quality",
+              "score": 6,
+              "maxScore": 10,
+              "evidence": [
+                "industry news source type"
+              ]
+            }
+          ]
+        },
+        "diversitySignals": {
+          "publisher": "offshoreWIND.biz",
+          "projectGroup": null,
+          "topicGroup": "engineering",
+          "regionHint": "Unspecified"
+        }
+      }
+    ]
+  }
+}

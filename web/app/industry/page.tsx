@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
 import { CountryOverview } from "./country-overview";
 import { CountryNavigation } from "./country-navigation";
@@ -86,7 +87,7 @@ function companyLogoUrl(company: IndustryCompany) {
 }
 
 export default function IndustryPage() {
-  return (
+  return localizeServerContent((
     <main className="industry-page">
       <SiteHeader />
 
@@ -193,5 +194,5 @@ export default function IndustryPage() {
 
       <SiteFooter />
     </main>
-  );
+  ));
 }

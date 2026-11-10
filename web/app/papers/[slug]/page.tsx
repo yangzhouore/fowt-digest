@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../../i18n/server-content";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { formatPublicationDate } from "../../format-publication-date";
@@ -58,7 +59,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
   const { edition, paper } = result;
   const hasCandidatePool = hasResearchCandidatePool(edition.slug);
 
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -209,5 +210,5 @@ export default async function PaperPage({ params }: PaperPageProps) {
 
       <SiteFooter />
     </main>
-  );
+  ));
 }

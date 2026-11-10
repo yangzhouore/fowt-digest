@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../../i18n/server-content";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -49,7 +50,7 @@ export default async function EngineeringBriefingPage({
     notFound();
   }
 
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -154,7 +155,7 @@ export default async function EngineeringBriefingPage({
 
       <SiteFooter />
     </main>
-  );
+  ));
 }
 
 function formatPublicationDate(value: string | undefined): string {

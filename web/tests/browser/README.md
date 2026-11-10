@@ -1,6 +1,6 @@
 # Browser smoke tests
 
-Twenty-nine Chromium tests protect homepage / latest-edition navigation, Projects
+Thirty-five Chromium tests protect homepage / latest-edition navigation, Projects
 filtering and expansion, project-detail navigation, language switching, public
 evidence navigation, honest review states, connected Project / Engineering / Industry
 journeys, unique company anchors, and mobile Chinese / dark presentation.
@@ -8,6 +8,9 @@ They also cover all ten Digital & AI application cards, evidence filters,
 four pathways and comparison scrolling, internal evidence readers and exact
 return contexts, Engineering date/year search and region filters, Research
 search/paper/edition/candidate navigation, and Methodology/About mobile reading.
+Chinese content checks additionally cover Project narrative and filter-state
+preservation, About and Digital evidence translations, original news/paper
+exclusions, candidate-page labels and all section entry pages in mobile dark mode.
 The broader AI × Energy guide adds seven-field reader/developer selection,
 related wind-example navigation, dated developments, conditional future pathways
 and English/Chinese desktop/mobile presentation.
@@ -67,9 +70,13 @@ Playwright can stop its production server; a shutdown stall is not a passed run.
 
 Language persists in `localStorage` when available, with an in-memory fallback
 for expected access/quota failures; source records keep their original text.
+Chinese reading translations for Projects, Industry and Digital evidence are
+stored separately from canonical records. Engineering news and Research paper
+content, proper names and original citation titles retain their source language.
+See [the translation audit](../../../docs/CHINESE_TRANSLATION_AUDIT.md) for scope,
+coverage and fallback behaviour.
 Theme uses CSS and the current page header's radio inputs; it resets with a new
 page header and is not a persistent site preference. Exercise English/Chinese
-and light/dark independently. Existing About and legacy metadata/candidate copy
-is partly English even in Chinese mode; these checks do not claim full textual
-translation. See [the maintenance review](../../../docs/WEBSITE_MAINTENANCE.md)
+and light/dark independently. Original sources and identifiers remain unchanged.
+See [the maintenance review](../../../docs/WEBSITE_MAINTENANCE.md)
 for the section map, validation evidence and remaining limits.

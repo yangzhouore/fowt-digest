@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
 import { SiteFooter } from "../site-footer";
 import { SiteHeader } from "../site-header";
@@ -189,7 +190,7 @@ export const metadata: Metadata = {
 };
 
 export default function MethodologyPage() {
-  return (
+  return localizeServerContent((
     <main className="methodology-page">
       <SiteHeader />
 
@@ -332,7 +333,7 @@ export default function MethodologyPage() {
 
       <SiteFooter />
     </main>
-  );
+  ));
 }
 
 function ScoreFormula({
@@ -342,7 +343,7 @@ function ScoreFormula({
   components: Array<{ label: string; points: number; text: string }>;
   label: string;
 }) {
-  return (
+  return localizeServerContent((
     <div className="score-formula" aria-label={label}>
       <dl>
         {components.map((component) => (
@@ -364,5 +365,5 @@ function ScoreFormula({
         ))}
       </div>
     </div>
-  );
+  ));
 }

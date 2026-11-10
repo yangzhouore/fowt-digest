@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../../../i18n/server-content";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { formatPublicationDate } from "../../../format-publication-date";
@@ -51,7 +52,7 @@ export default async function ResearchCandidatesPage({
 
   const selectedCount = pool.candidates.filter((candidate) => candidate.selected).length;
 
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -181,5 +182,5 @@ export default async function ResearchCandidatesPage({
 
       <SiteFooter />
     </main>
-  );
+  ));
 }

@@ -15,6 +15,7 @@ function loader(language = "en") {
     if (cache.has(file)) return cache.get(file);
     if (file.endsWith(".json")) return JSON.parse(fs.readFileSync(file, "utf8"));
     if (file.endsWith("/i18n/localized-copy.tsx")) return { LocalizedCopy: (props) => props[language] };
+    if (file.endsWith("/i18n/language-context.tsx")) return { useLanguage: () => ({ language }) };
     if (/\/site-(header|footer)\.tsx$/.test(file)) return { SiteHeader: () => null, SiteFooter: () => null };
     const context = { exports: {}, URL, require: (name) => {
       if (name === "next/link") return function TestLink(props) { return React.createElement("a", props, props.children); };

@@ -21,6 +21,7 @@ function loader({ language = "en", fallbackSlug } = {}) {
   function load(file) {
     if (cache.has(file)) return cache.get(file);
     if (file.endsWith(".json")) return JSON.parse(fs.readFileSync(file, "utf8"));
+    if (file.endsWith("/i18n/language-context.tsx")) return { useLanguage: () => ({ language }) };
     if (file.endsWith("/i18n/localized-copy.tsx")) return { LocalizedCopy: (props) => props[language] };
     if (file.endsWith("/site-header.tsx") || file.endsWith("/site-footer.tsx")) return { SiteHeader: () => null, SiteFooter: () => null };
     const context = { exports: {}, URL, require: (name) => {

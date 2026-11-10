@@ -234,12 +234,20 @@ function renderOverview(language) {
   const vm = require("node:vm");
   const React = require("react");
   const { renderToStaticMarkup } = require("react-dom/server");
+  const localizer = { exports: {} };
+  vm.runInNewContext(ts.transpileModule(fs.readFileSync(path.join(__dirname, "../app/i18n/render-content.tsx"), "utf8"), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+  }).outputText, {
+    exports: localizer.exports,
+    require: (name) => ["./content-zh.json", "./interface-zh.json"].includes(name) ? require(`../app/i18n/${name.slice(2)}`) : require(name),
+  });
   const file = path.join(__dirname, "..", "app", "projects", "project-filters.tsx");
   const compiled = ts.transpileModule(fs.readFileSync(file, "utf8"), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true },
   });
   const context = { exports: {}, require: (name) => {
     if (name === "../i18n/language-context") return { useLanguage: () => ({ language }) };
+    if (name === "../i18n/render-content") return localizer.exports;
     if (name === "next/link") return function MockLink(props) { return React.createElement("a", props, props.children); };
     return require(name);
   } };

@@ -1,3 +1,4 @@
+import { localizeServerContent } from "./i18n/server-content";
 import Link from "next/link";
 import { getProjectEngineeringCoverage, getEngineeringProjectContext, getIndustryEntryHref, getCompanyProjectRecords } from "../data/connected-context-adapter";
 import { LocalizedCopy as Copy } from "./i18n/localized-copy";
@@ -5,7 +6,7 @@ import { LocalizedCopy as Copy } from "./i18n/localized-copy";
 type Coverage = ReturnType<typeof getProjectEngineeringCoverage>;
 
 function CoverageCard({ link }: { link: Coverage[number] }) {
-  return <li className="context-coverage-card">
+  return localizeServerContent(<li className="context-coverage-card">
     <h3>{link.title}</h3>
     <p className="context-meta"><Copy en="Source date" zh="来源日期" />: <time dateTime={link.publishedDate}>{link.publishedDate}</time> · <Copy en="Briefing week" zh="简报周次" />: {link.dateRange}</p>
     <p className="context-meta"><Copy en="Project-specific coverage" zh="项目专属报道" /> · {link.publisher}</p>
@@ -16,7 +17,7 @@ function CoverageCard({ link }: { link: Coverage[number] }) {
       <p className="context-stored-excerpt">{link.storedExcerpt}</p>
       <p>{link.publisher} · <a href={link.sourceUrl}><Copy en="Original source" zh="原始来源" /></a></p>
     </details>
-  </li>;
+  </li>);
 }
 
 export function EngineeringCoverageList({ coverage }: { coverage: Coverage }) {
@@ -29,20 +30,20 @@ export function EngineeringCoverageList({ coverage }: { coverage: Coverage }) {
 }
 
 export function ProjectEngineeringCoverage({ projectId }: { projectId: string }) {
-  return <section className="project-intel-section connected-project-context" aria-labelledby="engineering-coverage-heading">
+  return localizeServerContent(<section className="project-intel-section connected-project-context" aria-labelledby="engineering-coverage-heading">
     <h2 id="engineering-coverage-heading"><Copy en="Engineering coverage" zh="工程报道" /></h2>
     <p className="project-muted-note"><Copy en="Published coverage may predate the current assessment. These reading links do not update project facts, readiness or assessment review dates." zh="已发布报道可能早于当前评估。这些阅读链接不会更新项目事实、准备度或评估复核日期。" /></p>
     <EngineeringCoverageList coverage={getProjectEngineeringCoverage(projectId)} />
-  </section>;
+  </section>);
 }
 
 export function EngineeringProjectContext({ editionSlug, itemId }: { editionSlug: string; itemId: string }) {
   const links = getEngineeringProjectContext(editionSlug, itemId);
   if (!links.length) return null;
-  return <div className="engineering-project-context">
+  return localizeServerContent(<div className="engineering-project-context">
     <p><strong><Copy en="Project context" zh="项目背景" /></strong></p>
     <ul>{links.map((link) => <li key={link.id}><Link href={`/projects/${link.project.slug}`}>{link.project.name}</Link></li>)}</ul>
-  </div>;
+  </div>);
 }
 
 export function IndustryEntryLink({ companyId, companyName }: { companyId: string | null; companyName: string }) {
@@ -61,7 +62,7 @@ const roleZh: Record<string, string> = {
 };
 
 function CompanyProjectList({ projects }: { projects: ReturnType<typeof getCompanyProjectRecords> }) {
-  return <ul className="context-company-projects">{projects.map((project) => <li key={project.id}>
+  return localizeServerContent(<ul className="context-company-projects">{projects.map((project) => <li key={project.id}>
     <Link href={`/projects/${project.slug}`}>{project.name}</Link>
     {project.roles.map((role) => <div className="context-company-role" key={role.id} data-context-relationship={role.id}>
       <p><strong><Copy en={role.roleLabel} zh={roleZh[role.roleLabel] ?? role.roleLabel} /></strong> · <Copy {...role.contextLabel} /></p>
@@ -71,18 +72,18 @@ function CompanyProjectList({ projects }: { projects: ReturnType<typeof getCompa
         <ul>{role.sources.map((source) => <li key={source.sourceId}><a href={source.url}>{source.title}</a></li>)}</ul>
       </details>
     </div>)}
-  </li>)}</ul>;
+  </li>)}</ul>);
 }
 
 export function CompanyProjectContext({ companyId, instanceId }: { companyId: string; instanceId: string }) {
   const projects = getCompanyProjectRecords(companyId);
   const headingId = `project-context-${instanceId}`;
-  return <section className="company-project-context" aria-labelledby={headingId}>
+  return localizeServerContent(<section className="company-project-context" aria-labelledby={headingId}>
     <h4 id={headingId}><Copy en="Project records" zh="项目记录" /> ({projects.length})</h4>
     <p className="context-meta"><Copy en="Recorded roles retain their evidence scope and history. A link does not establish a current supply contract or the same role on another project." zh="记录的角色保留其证据范围与历史。关联不代表当前供货合同，也不代表在其他项目中承担相同角色。" /></p>
     {projects.length ? <>
       <CompanyProjectList projects={projects.slice(0, 3)} />
       {projects.length > 3 && <details className="context-more"><summary><Copy en={`Show all project records (${projects.length})`} zh={`查看全部项目记录（${projects.length}）`} /></summary><CompanyProjectList projects={projects.slice(3)} /></details>}
     </> : <p><Copy en="No linked project records" zh="未关联项目记录" /></p>}
-  </section>;
+  </section>);
 }

@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
 import { SiteFooter } from "../site-footer";
 import { SiteHeader } from "../site-header";
@@ -21,7 +22,7 @@ export default function DigitalAiPage() {
   const signals = getAllDigitalAiSignals();
   const options = getDigitalAiOptions();
 
-  return (
+  return localizeServerContent((
     <main className="digital-ai-page">
       <SiteHeader />
 
@@ -51,5 +52,5 @@ export default function DigitalAiPage() {
 
       <SiteFooter />
     </main>
-  );
+  ));
 }

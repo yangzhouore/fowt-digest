@@ -1,4 +1,6 @@
 "use client";
+import { localizeContent } from "../i18n/render-content";
+
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -22,7 +24,7 @@ export function PathwayComparison({ language, signals }: {
   }, []);
   const item = dataset.pathways.find((entry) => entry.id === selectedId)!;
   const label = (en: string, zh: string) => language === "zh" ? zh : en;
-  return (
+  return localizeContent((
     <>
       <p className={styles.intro}>{label("Physical electricity supply and renewable procurement are different questions. These routes are illustrative; evidence coverage below describes this collection, not industry-wide readiness.", "实际供电与可再生能源采购是不同问题。以下路径为示意，证据覆盖仅描述本资料集，不代表全行业成熟度。")}</p>
       <div className="digital-ai-pathways" aria-label={label("Wind-to-compute pathways", "风电到算力路径")}>
@@ -85,5 +87,5 @@ export function PathwayComparison({ language, signals }: {
         </div>
       </details>
     </>
-  );
+  ), language);
 }

@@ -1,4 +1,6 @@
 "use client";
+import { localizeContent } from "../i18n/render-content";
+
 
 import { useState, type ReactNode } from "react";
 import { developmentTopics, scenarioTopics } from "./guide-structure";
@@ -10,16 +12,16 @@ const sourceById = new Map(context.sources.map((source) => [source.id, source]))
 
 function Sources({ ids }: { ids: string[] }) {
   const { language } = useLanguage();
-  return <p className={styles.sources}>{language === "zh" ? "依据：" : "Sources: "}{ids.map((id, index) => {
+  return localizeContent(<p className={styles.sources}>{language === "zh" ? "依据：" : "Sources: "}{ids.map((id, index) => {
     const source = sourceById.get(id)!;
     return <span key={id}>{index > 0 ? " · " : ""}<a href={source.url} title={source.title}>{source.publisher}</a></span>;
-  })}</p>;
+  })}</p>, language);
 }
 
 export function EnergyIntroduction() {
   const { language } = useLanguage();
   const copy = (en: string, zh: string) => language === "zh" ? zh : en;
-  return <div className={styles.guide}>
+  return localizeContent(<div className={styles.guide}>
     <section id="energy-system" aria-labelledby="energy-system-heading" className={styles.section}>
       <p className={styles.kicker}>{copy("01 / Understand the system", "01 / 理解系统")}</p>
       <h2 id="energy-system-heading">{copy("AI uses energy. AI can also help manage it.", "AI 消耗能源，也能辅助管理能源。")}</h2>
@@ -57,7 +59,7 @@ export function EnergyIntroduction() {
         <dl>{context.glossary.map((item) => <div key={item.term.en}><dt>{item.term[language]}</dt><dd>{item.meaning[language]}<Sources ids={item.sourceIds} /></dd></div>)}</dl>
       </details>
     </section>
-  </div>;
+  </div>, language);
 }
 
 export function EnergyFieldExplorer({ fieldId, onFieldChange, children }: {
@@ -68,7 +70,7 @@ export function EnergyFieldExplorer({ fieldId, onFieldChange, children }: {
   const [audience, setAudience] = useState<"reader" | "developer">("reader");
   const field = context.fields.find((item) => item.id === fieldId)!;
   const fieldTitle = fieldId === "wind" ? copy("Wind project work", "风电项目工作") : field.title[language];
-  return <div className={styles.guide}>
+  return localizeContent(<div className={styles.guide}>
     <section id="energy-fields" aria-labelledby="energy-fields-heading" className={styles.section}>
       <p className={styles.kicker}>{copy("02 / Apply AI to energy decisions", "02 / 将 AI 用于能源决策")}</p>
       <h2 id="energy-fields-heading">{copy("Choose a topic. Work through a practical example.", "选择一个主题，理解一个实际工作流程。")}</h2>
@@ -100,7 +102,7 @@ export function EnergyFieldExplorer({ fieldId, onFieldChange, children }: {
       </article>
       {children}
     </section>
-  </div>;
+  </div>, language);
 }
 
 const kindLabels: Record<string, [string, string]> = {
@@ -112,7 +114,7 @@ const kindLabels: Record<string, [string, string]> = {
 export function EnergyOutlook() {
   const { language } = useLanguage();
   const copy = (en: string, zh: string) => language === "zh" ? zh : en;
-  return <div className={styles.guide}>
+  return localizeContent(<div className={styles.guide}>
     <section id="energy-updates" aria-labelledby="energy-updates-heading" className={styles.section}>
       <p className={styles.kicker}>{copy("04 / Read developments in context", "04 / 结合背景理解进展")}</p>
       <h2 id="energy-updates-heading">{copy("What is changing across AI and energy?", "AI 与能源领域正在发生什么变化？")}</h2>
@@ -150,13 +152,13 @@ export function EnergyOutlook() {
       </div>
     </section>
 
-  </div>;
+  </div>, language);
 }
 
 export function EnergySourceRegistry() {
   const { language } = useLanguage();
   const copy = (en: string, zh: string) => language === "zh" ? zh : en;
-  return <div className={styles.guide}>
+  return localizeContent(<div className={styles.guide}>
     <details className={styles.registry}>
       <summary>{copy("Energy-system sources: dates and review scope", "能源系统来源：日期与复核范围")}</summary>
       <p>{copy("Public pages and summaries were reviewed. Source dates describe publications; the review date describes this reading check. Older background is not presented as new news. No full licensed reports, private operating data or project-wide audit is implied.", "本次查阅公开网页与摘要。来源日期表示发布，复核日期表示本次查阅；旧背景不作为新消息呈现。未暗示取得完整授权报告、私有运行数据或完成整个项目审查。")}</p>
@@ -165,12 +167,12 @@ export function EnergySourceRegistry() {
         <p>{source.scope}</p>
       </li>)}</ul>
     </details>
-  </div>;
+  </div>, language);
 }
 
 export function GuideNavigation() {
   const { language } = useLanguage();
-  return <nav className={`${styles.guide} ${styles.navigation}`} aria-label={language === "zh" ? "AI 与能源阅读导航" : "AI and energy reading guide"}>
+  return localizeContent(<nav className={`${styles.guide} ${styles.navigation}`} aria-label={language === "zh" ? "AI 与能源阅读导航" : "AI and energy reading guide"}>
     {[
       ["energy-system", "Understand", "理解系统"],
       ["energy-fields", "Apply AI", "应用 AI"],
@@ -179,5 +181,5 @@ export function GuideNavigation() {
       ["energy-future", "What could come next", "未来可能怎样"],
       ["digital-ai-evidence-heading", "Evidence", "证据"],
     ].map(([id, en, zh], index) => <a key={id} href={`#${id}`}><span aria-hidden="true">0{index + 1} </span>{language === "zh" ? zh : en}</a>)}
-  </nav>;
+  </nav>, language);
 }

@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../i18n/server-content";
 import { getProjectReadiness, type ProjectWithRelations } from "../../data/project-adapter";
 import { getProjectPublicEvidence } from "../../data/project-public-evidence-adapter";
 import { LocalizedCopy as Copy } from "../i18n/localized-copy";
@@ -13,17 +14,17 @@ const materialLabels = {
 
 export function ProjectReviewStrip({ project }: { project: ProjectWithRelations }) {
   const evidence = getProjectPublicEvidence(project);
-  return <aside className="project-review-strip" aria-labelledby="review-summary-heading">
+  return localizeServerContent(<aside className="project-review-strip" aria-labelledby="review-summary-heading">
     <h2 id="review-summary-heading"><Copy en="Assessment review" zh="评估复核" /></h2>
     <p>{evidence.reviewedOn ? <><Copy en="Last completed review" zh="最近完成复核" />: <time dateTime={evidence.reviewedOn}>{evidence.reviewedOn}</time> · <Copy en="Public-source assessment review" zh="公开来源评估复核" /></> : <Copy en="Assessment review: not recorded" zh="评估复核：未记录" />}</p>
     <p><Copy en="Public evidence does not disclose complete internal readiness. Review dates, source access dates and event dates describe different things." zh="公开证据无法揭示全部内部准备情况。评估复核日期、来源查阅日期与事件日期具有不同含义。" /> <a href="#review-history"><Copy en="Review history & changes" zh="复核历史与变化" /></a></p>
-  </aside>;
+  </aside>);
 }
 
 export function ProjectPublicEvidence({ project }: { project: ProjectWithRelations }) {
   const evidence = getProjectPublicEvidence(project);
   const readiness = getProjectReadiness(project);
-  return <section className="project-intel-section project-public-evidence" aria-labelledby="readiness-heading">
+  return localizeServerContent(<section className="project-intel-section project-public-evidence" aria-labelledby="readiness-heading">
     <p className="eyebrow"><Copy en="Public evidence" zh="公开证据" /></p>
     <h2 id="readiness-heading"><Copy en="Public evidence by readiness area" zh="各准备度领域的公开证据" /></h2>
     <p className="project-muted-note"><Copy en="Readiness states are editorial assessments. Linked records show their evidence context; counts do not measure completeness or technical quality. Missing evidence does not prove inactivity." zh="准备度状态属于编辑评估。关联记录展示证据背景；数量不代表完整程度或技术质量。证据缺失不等于项目停滞。" /></p>
@@ -64,13 +65,13 @@ export function ProjectPublicEvidence({ project }: { project: ProjectWithRelatio
         </div>;
       })}
     </div>
-  </section>;
+  </section>);
 }
 
 export function ProjectReviewHistory({ project }: { project: ProjectWithRelations }) {
   const evidence = getProjectPublicEvidence(project);
   const changeLabels = { fact: { en: "Factual record change", zh: "事实记录变化" }, assessment: { en: "Editorial assessment change", zh: "编辑评估变化" }, mapping: { en: "Evidence-mapping maintenance", zh: "证据关联维护" } };
-  return <section id="review-history" className="project-intel-section project-review-history" aria-labelledby="review-history-heading">
+  return localizeServerContent(<section id="review-history" className="project-intel-section project-review-history" aria-labelledby="review-history-heading">
     <h2 id="review-history-heading"><Copy en="Review history & changes" zh="复核历史与变化" /></h2>
     <p className="project-muted-note"><Copy en="A review describes the named public evidence and its limits. Partial reviews do not advance the completed assessment date. Mapping maintenance is not a change in real-world project status." zh="复核仅针对列明的公开证据及其边界。部分复核不会更新已完成评估日期。证据关联维护不代表项目现实状态发生变化。" /></p>
     {evidence.reviews.length ? <ol className="project-review-list">{evidence.reviews.map((review) => <li key={review.id}>
@@ -100,5 +101,5 @@ export function ProjectReviewHistory({ project }: { project: ProjectWithRelation
         <ul className="project-evidence-sources">{change.sourceIds.map((id) => <li key={id}><a href={evidence.sourceById[id]?.url}>{evidence.sourceById[id]?.title ?? id}</a></li>)}</ul>
       </li>)}</ol>
     </details>}
-  </section>;
+  </section>);
 }

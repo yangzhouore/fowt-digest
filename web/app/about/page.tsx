@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
 import { SiteHeader } from "../site-header";
 import { SiteFooter } from "../site-footer";
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -85,5 +86,5 @@ export default function AboutPage() {
 
       <SiteFooter />
     </main>
-  );
+  ));
 }

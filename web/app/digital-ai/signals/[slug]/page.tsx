@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../../../i18n/server-content";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllDigitalAiSignals } from "../../../../data/digital-ai-adapter";
@@ -23,11 +24,11 @@ export default async function SignalPage({ params }: Props) {
   const { slug } = await params;
   const signal = getAllDigitalAiSignals().find((item) => item.slug === slug);
   if (!signal) notFound();
-  return (
+  return localizeServerContent((
     <main className="digital-ai-page">
       <SiteHeader />
       <SignalReader signal={signal} />
       <SiteFooter />
     </main>
-  );
+  ));
 }

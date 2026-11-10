@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../../i18n/server-content";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { formatPublicationDate } from "../../format-publication-date";
@@ -48,7 +49,7 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
 
   const hasCandidatePool = hasResearchCandidatePool(digest.slug);
 
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -145,7 +146,7 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
 
       <SiteFooter />
     </main>
-  );
+  ));
 }
 
 function abstractPreview(abstract: string | null): string {

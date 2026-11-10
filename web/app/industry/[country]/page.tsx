@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../../i18n/server-content";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { countryGuides } from "../../../data/industry/country-guides";
@@ -15,5 +16,5 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
 export default async function CountryIndustryPage({ params }: { params: Promise<{ country: string }> }) {
   const { country } = await params; const guide = countryGuides.find((g) => g.slug === country);
   if (!guide) notFound();
-  return <main className="industry-page"><SiteHeader /><CountryNavigation active={country} /><CountrySystemGuide guide={guide} /><SiteFooter /></main>;
+  return localizeServerContent(<main className="industry-page"><SiteHeader /><CountryNavigation active={country} /><CountrySystemGuide guide={guide} /><SiteFooter /></main>);
 }

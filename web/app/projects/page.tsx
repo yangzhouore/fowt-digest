@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
 import { SiteFooter } from "../site-footer";
 import { SiteHeader } from "../site-header";
@@ -25,7 +26,7 @@ export default function ProjectsPage() {
   const options = getProjectOptions();
   const countryCount = options.countries.length;
 
-  return (
+  return localizeServerContent((
     <main className="projects-page">
       <SiteHeader />
 
@@ -72,5 +73,5 @@ export default function ProjectsPage() {
 
       <SiteFooter />
     </main>
-  );
+  ));
 }

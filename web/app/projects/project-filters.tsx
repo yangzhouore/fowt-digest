@@ -1,4 +1,6 @@
 "use client";
+import { localizeContent } from "../i18n/render-content";
+
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -57,7 +59,7 @@ export function ProjectFilters({ projects, regions, countries, statuses, readine
     { label: copy("Readiness state", "准备度状态"), value: state, set: setState, options: readinessStates.map((v) => [v, zh ? `${stateZh[v]} / ${v}` : v]) },
   ];
   const gateState = (value: ReadinessState) => <strong className={`project-intel-state-pill project-intel-state-${value.toLowerCase().replaceAll(" ", "-")}`}>{zh ? `${stateZh[value]} / ${value}` : value}</strong>;
-  return <>
+  return localizeContent(<>
     <section className="project-filter-band" aria-labelledby="project-filter-heading">
       <div className="project-filter-heading">
         <h2 id="project-filter-heading">{copy("Compare project intelligence", "比较项目情报")}</h2>
@@ -115,14 +117,14 @@ export function ProjectFilters({ projects, regions, countries, statuses, readine
       </ol> : <p className="archive-search-empty">{copy("No projects match these filters.", "没有符合这些筛选条件的项目。")}</p>}
       <p className="project-muted-note">{copy("Assessment review dates describe completed public-source reviews. Unrecorded dates remain explicit. Event dates and source access dates do not establish assessment freshness; evidence gaps do not prove inactivity.", "评估复核日期表示已完成的公开来源审查；未记录的日期保持明确标注。事件日期与来源查阅日期不代表评估时效；证据缺失不等于项目停滞。")}</p>
     </section>
-  </>;
+  </>, zh ? "zh" : "en");
 }
 
 function VerifiedProjectRoles({ project, zh }: { project: ConnectedProjectIndexItem; zh: boolean }) {
   const copy = (en: string, chinese: string) => zh ? chinese : en;
   const labels: Record<string, string> = { owner: "业主 / 开发商", turbine: "风机", platform: "浮式平台", cable: "电缆", mooring: "系泊 / 锚固", installation: "海上安装", "Dynamic Cable": "动态电缆", "Inter-array Cable": "阵列间电缆", "Export Cable": "送出电缆", Mooring: "系泊", Anchoring: "锚固", "Wind Turbine OEM": "风机 OEM", "Platform / Technology": "平台 / 技术", "Platform Engineering": "平台工程", Fabrication: "制造", "Marine Installation": "海上安装" };
   const missing = copy("N/A — not verified", "N/A — 未核实");
-  return <section className="project-supply-chain" aria-labelledby={`supply-${project.id}`}>
+  return localizeContent(<section className="project-supply-chain" aria-labelledby={`supply-${project.id}`}>
     <h4 id={`supply-${project.id}`}>{copy("Verified Project Roles", "已核实的项目角色")}</h4>
     <p className="project-muted-note">{copy("Evidence scope distinguishes ownership, technology, engineering, selection, contracts and delivery. An announced or historical role does not itself establish a procurement award or completed delivery. N/A means the role was not verified; installation or engineering evidence does not identify a manufacturer.", "证据范围区分所有权、技术、工程、选择、合同及交付。已公布或历史角色本身不代表采购授标或完成交付。N/A 表示角色尚未核实；安装或工程证据不能据此确认制造商。")}</p>
     <dl className="project-supply-chain-grid">{project.supplyChain.map((category) => <div key={category.key} data-supply-category={category.key}>
@@ -140,7 +142,7 @@ function VerifiedProjectRoles({ project, zh }: { project: ConnectedProjectIndexI
         </li>)}</ul>}
       </div>)}</dd>
     </div>)}</dl>
-  </section>;
+  </section>, zh ? "zh" : "en");
 }
 
 function projectStatusZh(status: ProjectStatus): string {

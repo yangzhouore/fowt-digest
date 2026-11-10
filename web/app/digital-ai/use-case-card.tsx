@@ -1,3 +1,5 @@
+
+import { localizeContent } from "../i18n/render-content";
 import dataset from "../../data/digital-ai/use-cases.json";
 import Link from "next/link";
 import type { DigitalAiSignalWithSources } from "../../data/digital-ai-adapter";
@@ -20,7 +22,7 @@ export function UseCaseCard({ id, signals, language, maturityLabel }: {
     const entry = dataset.evidence.find((record) => record.signalId === signalId)!;
     const signal = signals.get(signalId)!;
     const source = signal.sources.find((record) => record.sourceId === entry.sourceId)!;
-    return (
+    return localizeContent((
       <div className={styles.example} key={signalId} data-evidence-basis={entry.basis}>
         <p className={styles.kicker}>{entry.basis === "stored_context"
           ? label("Stored context · source not rechecked", "已存背景 · 来源未重新核实")
@@ -39,9 +41,9 @@ export function UseCaseCard({ id, signals, language, maturityLabel }: {
           {entry.reviewedDate ? <> · {label("Card source review", "卡片来源复核")}: {entry.reviewedDate}</> : null}
         </p>
       </div>
-    );
+    ), language);
   };
-  return (
+  return localizeContent((
     <article id="digital-ai-use-case" className={styles.card} aria-labelledby="digital-ai-use-case-title" data-use-case={id}>
       <header>
         <p className={styles.kicker}>{label("Illustrative workflow", "示意工作流程")}</p>
@@ -80,5 +82,5 @@ export function UseCaseCard({ id, signals, language, maturityLabel }: {
         {item.signalIds.filter((signalId) => signalId !== item.featuredSignalId).map(evidence)}
       </details>
     </article>
-  );
+  ), language);
 }

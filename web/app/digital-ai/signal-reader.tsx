@@ -1,4 +1,6 @@
 "use client";
+import { localizeContent } from "../i18n/render-content";
+
 
 import Link from "next/link";
 import type { DigitalAiSignalWithSources } from "../../data/digital-ai-adapter";
@@ -26,7 +28,7 @@ export function SignalReader({ signal }: { signal: DigitalAiSignalWithSources })
   const unavailable = note && "basis" in note && note.basis === "stored_context";
   const applications = cards.cases.filter((entry) => entry.signalIds.some((id) => id === signal.id));
   const routes = pathways.pathways.filter((entry) => entry.signalIds.some((id) => id === signal.id));
-  return (
+  return localizeContent((
     <article className={styles.reader} aria-labelledby="signal-title">
       <Link href="/digital-ai#digital-ai-evidence-heading">← {label("Back to all evidence", "返回全部证据")}</Link>
       <header>
@@ -35,7 +37,7 @@ export function SignalReader({ signal }: { signal: DigitalAiSignalWithSources })
         <p className={styles.meta}>{signal.country} / {signal.region} · {label("Record date / period", "记录日期 / 时段")}: {signal.dateLabel}</p>
         <p><strong>{label("Recorded maturity", "已记录成熟度")}:</strong> {maturityNames[signal.maturity][language]}</p>
         <p className={styles.meta}>{label("This describes the dated record, not a fresh project-status audit or the maturity of the whole technology.", "此项描述特定日期的记录，不代表最新项目状态审查或整个技术领域的成熟度。")}</p>
-        {language === "zh" ? <p className={styles.meta}>固定说明已翻译；原始记录标题、概要、机构及来源保留原文。</p> : null}
+        {language === "zh" ? <p className={styles.meta}>中文内容为已存记录的阅读译文；机构名称、原始来源及链接保留原文，事实范围与英文记录一致。</p> : null}
       </header>
       <section aria-labelledby="signal-summary">
         <h2 id="signal-summary">{label("Stored record summary", "已存记录概要")}</h2>
@@ -92,5 +94,5 @@ export function SignalReader({ signal }: { signal: DigitalAiSignalWithSources })
         {!applications.length && !routes.length ? <p>{label("No application or pathway link recorded in this collection.", "本资料集未记录关联应用或路径链接。")}</p> : null}
       </section>
     </article>
-  );
+  ), language);
 }

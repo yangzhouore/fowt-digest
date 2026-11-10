@@ -151,8 +151,11 @@ test("reader preserves record content and separates dates, editorial relevance a
     for (const signal of dataset.signals) {
       const sources = dataset.sources.filter((source) => signal.sourceIds.includes(source.sourceId));
       const html = renderToStaticMarkup(React.createElement(SignalReader, { signal: { ...signal, sources } }));
-      const textMarkup = renderToStaticMarkup(React.createElement("span", null, signal.shortDescription)).slice(6, -7);
-      assert.ok(html.includes(textMarkup), `${signal.id}: changed original summary`);
+      const chinese = require("../app/i18n/content-zh.json");
+      const summary = language === "zh" ? chinese[signal.shortDescription] : signal.shortDescription;
+      assert.ok(summary, `${signal.id}: missing stored translation`);
+      const textMarkup = renderToStaticMarkup(React.createElement("span", null, summary)).slice(6, -7);
+      assert.ok(html.includes(textMarkup), `${signal.id}: missing summary in selected language`);
       assert.ok(html.includes(language === "zh" ? "已存编辑关联说明" : "Stored editorial relevance"));
       assert.ok(html.includes(language === "zh" ? "不提供论文全文" : "not full papers"));
       assert.ok(html.includes(language === "zh" ? "已存访问日期" : "Stored access date"));

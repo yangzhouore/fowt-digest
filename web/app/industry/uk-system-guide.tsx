@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../i18n/server-content";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import guideData from "../../data/industry/uk-system-guide.json";
@@ -61,38 +62,38 @@ const summaries: Record<number, { en: string; zh: string }> = {
 function Inline({ text }: { text: string }): ReactNode {
   return text.split(/(\[[^\]]+\]\(https:\/\/[^)]+\)|\*\*[^*]+\*\*|`[^`]+`)/g).map((part, index) => {
     const link = part.match(/^\[([^\]]+)\]\((https:\/\/[^)]+)\)$/);
-    if (link) return <a key={index} href={link[2]}>{link[1]}</a>;
-    if (part.startsWith("**") && part.endsWith("**")) return <strong key={index}>{part.slice(2, -2)}</strong>;
-    if (part.startsWith("`") && part.endsWith("`")) return <code key={index}>{part.slice(1, -1)}</code>;
-    return part;
+    if (link) return localizeServerContent(<a key={index} href={link[2]}>{link[1]}</a>);
+    if (part.startsWith("**") && part.endsWith("**")) return localizeServerContent(<strong key={index}>{part.slice(2, -2)}</strong>);
+    if (part.startsWith("`") && part.endsWith("`")) return localizeServerContent(<code key={index}>{part.slice(1, -1)}</code>);
+    return localizeServerContent(part);
   });
 }
 
 function Blocks({ blocks, title, organisationCards = false }: { blocks: GuideBlock[]; title: string; organisationCards?: boolean }) {
   return blocks.map((block, index) => {
-    if (block.type === "paragraph") return <p key={index}><Inline text={block.text} /></p>;
-    if (block.type === "diagram") return <pre className="uk-flow-text" key={index}>{block.text}</pre>;
+    if (block.type === "paragraph") return localizeServerContent(<p key={index}><Inline text={block.text} /></p>);
+    if (block.type === "diagram") return localizeServerContent(<pre className="uk-flow-text" key={index}>{block.text}</pre>);
     if (block.type === "list") {
       const List = block.ordered ? "ol" : "ul";
-      return <List key={index}>{block.items.map((item, i) => <li key={i}><Inline text={item} /></li>)}</List>;
+      return localizeServerContent(<List key={index}>{block.items.map((item, i) => <li key={i}><Inline text={item} /></li>)}</List>);
     }
-    if (block.type === "table" && organisationCards) return <div className="uk-organisation-cards" key={index}>{block.rows.map((row, i) => {
+    if (block.type === "table" && organisationCards) return localizeServerContent(<div className="uk-organisation-cards" key={index}>{block.rows.map((row, i) => {
       const evidence = guide.organisationEvidence[i];
       return <article className="uk-organisation-card" key={evidence.id}><h4><Inline text={row[0]} /></h4><p><Inline text={row[1]} /></p><p className="uk-role-boundary"><Inline text={row[2]} /></p>
         <div className="uk-card-evidence"><strong><Copy {...organisationLabels[evidence.kind]} /></strong>
           {evidence.sourceIds.map((id) => { const source = guide.sources.find((source) => source.id === id)!; return <p key={id}><a href={source.url}>{source.title}</a><br />{source.publisher} · {source.documentDate ?? <Copy en="Document date not established" zh="文件日期未确定" />}</p>; })}
         </div></article>;
-    })}</div>;
-    if (block.type === "table") return <div className="uk-table-scroll" key={index} tabIndex={0} role="region" aria-label={title}>
+    })}</div>);
+    if (block.type === "table") return localizeServerContent(<div className="uk-table-scroll" key={index} tabIndex={0} role="region" aria-label={title}>
       <table><caption>{title}</caption><thead><tr>{block.headers.map((header, i) => <th scope="col" key={i}><Inline text={header} /></th>)}</tr></thead>
         <tbody>{block.rows.map((row, i) => <tr key={i}>{row.map((cell, j) => j === 0 ? <th scope="row" key={j}><Inline text={cell} /></th> : <td key={j}><Inline text={cell} /></td>)}</tr>)}</tbody>
-      </table></div>;
+      </table></div>);
     return null;
   });
 }
 
 function Evidence({ topic }: { topic: GuideTopic }) {
-  return <details className="uk-evidence"><summary><Copy en="Sources, dates and claim scope" zh="来源、日期与证据范围" /> ({topic.sourceIds.length})</summary>
+  return localizeServerContent(<details className="uk-evidence"><summary><Copy en="Sources, dates and claim scope" zh="来源、日期与证据范围" /> ({topic.sourceIds.length})</summary>
     <p><Copy en="These records support this topic. Review dates record our source check, not a project assessment or a guarantee that undated material is current." zh="这些记录支持本主题。复核日期表示来源核查，不是项目评估，也不保证未标日期的资料仍然最新。" /></p>
     <ul>{topic.sourceIds.map((id) => {
       const source = guide.sources.find((source) => source.id === id)!;
@@ -102,22 +103,22 @@ function Evidence({ topic }: { topic: GuideTopic }) {
         <p className="uk-source-meta" lang="en"><Copy en="Source claim scope (English)" zh="来源所支持的具体范围（英文）" />: {source.claimScope}</p>
       </li>;
     })}</ul>
-  </details>;
+  </details>);
 }
 
 function Topic({ topic, displayNumber }: { topic: GuideTopic; displayNumber: string }) {
-  return <details className="uk-topic" id={topic.id}>
+  return localizeServerContent(<details className="uk-topic" id={topic.id}>
     <summary><span className="uk-topic-number">{displayNumber}</span><span><h3><Copy {...topic.title} /></h3><span className="uk-topic-summary"><Copy {...summaries[topic.number]} /></span></span><span className="uk-expand" aria-hidden="true">+</span></summary>
     <div className="uk-topic-body"><div className="uk-kinds">{topic.kinds.map((kind) => <span key={kind}><Copy {...labels[kind]} /></span>)}</div>
       <div className="uk-en" lang="en"><Blocks blocks={topic.content.en} title={topic.title.en} organisationCards={topic.number === 19} /></div>
       <div className="uk-zh" lang="zh-CN"><Blocks blocks={topic.content.zh} title={topic.title.zh} organisationCards={topic.number === 19} /></div>
       <Evidence topic={topic} />
     </div>
-  </details>;
+  </details>);
 }
 
 function MachineDiagram() {
-  return <figure className="uk-machine"><div className="uk-machine-scroll" tabIndex={0} role="region" aria-label="Floating system schematic"><svg viewBox="0 0 820 440" role="img" aria-labelledby="uk-machine-title uk-machine-desc">
+  return localizeServerContent(<figure className="uk-machine"><div className="uk-machine-scroll" tabIndex={0} role="region" aria-label="Floating system schematic"><svg viewBox="0 0 820 440" role="img" aria-labelledby="uk-machine-title uk-machine-desc">
     <title id="uk-machine-title">Turbine, floater, mooring and cable interfaces / 风机、浮体、系泊和海缆接口</title>
     <desc id="uk-machine-desc"><Copy en="Schematic, not to scale. The turbine transfers load to the floater; separate mooring lines lead to anchors and a lazy-wave power cable reaches the seabed network." zh="不按比例的示意图。风机把载荷传到浮体；独立系泊线连接锚，懒波形电缆连接海床网络。" /></desc>
     <path className="uk-water" d="M20 237 H800" /><path className="uk-seabed" d="M20 400 H800" />
@@ -134,7 +135,7 @@ function MachineDiagram() {
     <text x="540" y="294"><Copy en="Buoyancy modules" zh="浮力模块" /></text><path className="uk-callout" d="M535 290 L495 286" />
     <text x="580" y="355"><Copy en="Touchdown zone" zh="触地区域" /></text><path className="uk-callout" d="M584 360 L570 387" />
     <text x="25" y="427"><Copy en="Seabed / soil" zh="海床／土体" /></text><text x="580" y="427"><Copy en="Cable → array network" zh="海缆 → 阵列网络" /></text>
-  </svg></div><figcaption><span className="uk-diagram-hint"><Copy en="Scroll the schematic horizontally; keyboard users can focus it and use arrow keys." zh="示意图可横向滚动；键盘用户可聚焦图示后使用方向键。" /></span><Copy en="An interface schematic, not a project design. Moorings carry station-keeping loads; the cable carries electricity and must tolerate motion." zh="这是接口示意，不是项目设计。系泊承担定位载荷；海缆输送电力并承受运动。" /></figcaption></figure>;
+  </svg></div><figcaption><span className="uk-diagram-hint"><Copy en="Scroll the schematic horizontally; keyboard users can focus it and use arrow keys." zh="示意图可横向滚动；键盘用户可聚焦图示后使用方向键。" /></span><Copy en="An interface schematic, not a project design. Moorings carry station-keeping loads; the cable carries electricity and must tolerate motion." zh="这是接口示意，不是项目设计。系泊承担定位载荷；海缆输送电力并承受运动。" /></figcaption></figure>);
 }
 
 function IndustrialChain() {
@@ -142,7 +143,7 @@ function IndustrialChain() {
   const en = topic.content.en.find((block) => block.type === "table");
   const zh = topic.content.zh.find((block) => block.type === "table");
   if (en?.type !== "table" || zh?.type !== "table") return null;
-  return <section className="uk-chain" id="uk-chain" aria-labelledby="uk-chain-heading">
+  return localizeServerContent(<section className="uk-chain" id="uk-chain" aria-labelledby="uk-chain-heading">
     <div className="uk-section-intro"><p className="uk-eyebrow"><Copy en="Start here · four connected maps" zh="从这里开始 · 四种关联图" /></p>
       <h2 id="uk-chain-heading"><Copy en="Build from the bottom up." zh="从产业链底层逐级理解。" /></h2>
       <p><Copy en="First follow what gets delivered. Open a level to see its customer, payment relationship, risks and examples. Network operation and public coordination are different layers." zh="先看交付物。展开每层查看客户、付款关系、风险与例子。网络运行和公共协调属于不同层面。" /></p></div>
@@ -156,11 +157,11 @@ function IndustrialChain() {
     </details>)}</div>)}</div>
     <p className="uk-note"><Copy en="Reading rule: delivery arrows do not imply ownership, regulatory authority or a payment direction. The developer can contract directly or through package leads." zh="阅读规则：交付箭头不代表产权、监管权或付款方向。开发商可以直接采购，也可通过设备包牵头方采购。" /></p>
     <details className="uk-topic"><summary><h3><Copy en="Read the four-chain explanation" zh="阅读四种关系的完整解释" /></h3></summary><div className="uk-topic-body"><div className="uk-en"><Blocks blocks={topic.content.en.filter((b) => b.type !== "table")} title={topic.title.en} /></div><div className="uk-zh"><Blocks blocks={topic.content.zh.filter((b) => b.type !== "table")} title={topic.title.zh} /></div><Evidence topic={topic} /></div></details>
-  </section>;
+  </section>);
 }
 
 export function UKSystemGuide() {
-  return <div className="uk-guide"><style>{guideStyles}</style>
+  return localizeServerContent(<div className="uk-guide"><style>{guideStyles}</style>
     <header className="uk-hero"><p className="uk-eyebrow"><Copy en="Industry Map / UK field guide" zh="产业图谱／英国系统指南" /></p>
       <h1><Copy en="From materials to megawatt-hours." zh="从材料到兆瓦时。" /></h1>
       <p className="uk-lead"><Copy en="A floating wind farm is a machine, a development project and an electricity business. See how the UK system fits together—and who is responsible at each interface." zh="浮式风电场既是一套机器，也是一个开发项目和电力业务。了解英国体系如何衔接，以及每个接口由谁负责。" /></p>
@@ -186,5 +187,5 @@ export function UKSystemGuide() {
       <p><Copy en="Sources and dates sit inside each topic. An example is not a claim about every project. Plans, contracts and operating assets are different states. Our engineering interpretations explain dependencies; they do not update project assessments." zh="各主题内提供来源和日期。个别例子不代表所有项目。计划、合同和运行资产属于不同状态。工程解读解释依赖关系，不更新项目评估。" /></p>
       <p><Copy en="The market guide covers Great Britain; Northern Ireland has separate arrangements. This representative map is not a complete supplier register. Source titles and proper names remain in their original language." zh="市场说明覆盖大不列颠，北爱尔兰另有安排。代表性图谱不是完整供应商名录。来源标题与专有名称保留原文。" /></p>
     </aside>
-  </div>;
+  </div>);
 }

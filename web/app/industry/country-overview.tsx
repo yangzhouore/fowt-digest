@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../i18n/server-content";
 import Link from "next/link";
 import { countryGuides } from "../../data/industry/country-guides";
 import ukData from "../../data/industry/uk-system-guide.json";
@@ -8,7 +9,7 @@ import { internationalStyles } from "./international-styles";
 
 export function CountryOverview() {
   const ukSources = [4, 10, 13].map((n) => ukData.sources.find((s) => s.id === ukData.topics.find((t) => t.number === n)!.sourceIds[0])!);
-  return <div className="uk-guide industry-international"><style>{guideStyles + internationalStyles}</style>
+  return localizeServerContent(<div className="uk-guide industry-international"><style>{guideStyles + internationalStyles}</style>
     <header className="uk-hero"><p className="uk-eyebrow"><Copy en="Industry Map / four country investigations" zh="产业图谱／四国调查" /></p><h1><Copy en="One floating system. Four industry pathways." zh="一套浮式系统，四国产业路径。" /></h1><p className="uk-lead"><Copy en="Understand who supplies the equipment, who makes a project buildable, and how electricity and money move. Choose a country, then follow its chain from materials to long-term operation." zh="了解谁供应设备、谁使项目具备建设条件，以及电力和资金如何流动。选择国家，从材料一路追踪到长期运行。" /></p>
       <div className="uk-hero-bottom"><p><Copy en="UK evidence: 22 October 2026 · Germany, Norway, China: 23 October 2026" zh="英国证据：2026 年 10 月 22 日 · 德国、挪威、中国：10 月 23 日" /><br /><Copy en="Representative, dated public evidence · not a live supplier or project register" zh="有日期的代表性公开证据 · 非实时供应商或项目名录" /></p><a href="#country-comparison"><Copy en="Compare the institutions first" zh="先比较制度与机构" /> ↓</a></div>
     </header>
@@ -26,5 +27,5 @@ export function CountryOverview() {
     </section>
     <section className="uk-boundary" aria-labelledby="reading-rule-heading"><h2 id="reading-rule-heading"><Copy en="Four relationships, kept separate." zh="四种关系，分别理解。" /></h2><div className="country-schematic"><div><strong><Copy en="Industrial delivery" zh="工业交付" /></strong><Copy en="Materials → components → subsystems → packages → marine delivery → project" zh="材料 → 部件 → 子系统 → 设备包 → 海工交付 → 项目" /></div><div><strong><Copy en="Development and permissions" zh="开发与许可" /></strong><Copy en="Rights, design, consent, grid, revenue and finance mature together. Authorities coordinate alongside the chain." zh="权利、设计、许可、电网、收入与融资共同成熟，主管机关在产业链旁协调。" /></div><div><strong><Copy en="Power and money" zh="电力与资金" /></strong><Copy en="Physical electricity follows equipment and networks. Sales, support, imbalance and network payments follow separate rules." zh="物理电流经过设备与网络，售电、支持、偏差及网络付款分别遵循规则。" /></div></div><p><Copy en="Capability, R&D, announced plans, awarded scopes and operating assets are different evidence states. The company directory below preserves existing project links; country guides add context without rewriting those project records." zh="能力、研发、计划、已授予范围与运行资产是不同证据状态。下方企业目录保留现有项目链接；国家指南增加背景，不改写项目记录。" /></p></section>
     <details className="uk-boundary"><summary><Copy en="Looking for the earlier UK chapter links?" zh="寻找原英国章节链接？" /></summary><p><Copy en="The complete UK guide now has its own page. These shortcuts preserve the earlier chapter destinations on this overview." zh="完整英国指南现有独立页面。此处快捷入口保留概览上原章节定位。" /></p><div className="country-links">{[["chain", "Complete chain", "完整产业链"], ["machine", "Machine", "机器"], ["develop", "Development", "开发"], ["power", "Power and money", "电力与资金"], ["actors", "UK actors", "英国主体"], ["risks", "Risks", "风险"]].map(([id, en, zh]) => <Link id={`uk-${id}`} href={`/industry/uk#uk-${id}`} key={id}><Copy en={en} zh={zh} /> →</Link>)}</div></details>
-  </div>;
+  </div>);
 }

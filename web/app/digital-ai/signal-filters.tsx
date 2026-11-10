@@ -1,4 +1,6 @@
 "use client";
+import { localizeContent } from "../i18n/render-content";
+
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
@@ -74,7 +76,7 @@ export function DigitalAiExperience({ signalCount, signals, topics, maturities, 
     (region === "All" || signal.region === region)
   )), [maturity, region, signals, topic]);
 
-  return <>
+  return localizeContent(<>
     <GuideNavigation />
     <EnergyIntroduction />
     <EnergyFieldExplorer fieldId={fieldId} onFieldChange={selectField}>
@@ -135,7 +137,7 @@ export function DigitalAiExperience({ signalCount, signals, topics, maturities, 
               <span>{language === "zh" ? "地区" : "Region"}</span>
               <select value={region} onChange={(event) => setRegion(event.target.value)}>
                 <option value="All">{language === "zh" ? "全部地区" : "All regions"}</option>
-                {regions.map((value) => <option key={value}>{value}</option>)}
+                {regions.map((value) => <option key={value} value={value}>{value}</option>)}
               </select>
             </label>
           </div>
@@ -169,12 +171,12 @@ export function DigitalAiExperience({ signalCount, signals, topics, maturities, 
         </details>
         <EnergySourceRegistry />
       </section>
-  </>;
+  </>, language);
 }
 
 function SourceLinks({ signal }: { signal: SignalListItem }) {
   const { language } = useLanguage();
-  return (
+  return localizeContent((
     <span className="digital-ai-source-links">
       <Link href={`/digital-ai/signals/${signal.slug}`}>{language === "zh" ? "阅读证据" : "Read evidence"} →</Link>
       {signal.sources.map((source) => (
@@ -183,7 +185,7 @@ function SourceLinks({ signal }: { signal: SignalListItem }) {
         </a>
       ))}
     </span>
-  );
+  ), language);
 }
 
 function digitalCopy(text: string, language: "en" | "zh"): string {

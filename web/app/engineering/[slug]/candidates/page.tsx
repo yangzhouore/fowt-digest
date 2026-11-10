@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../../../i18n/server-content";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { formatPublicationDate } from "../../../format-publication-date";
@@ -68,7 +69,7 @@ export default async function EngineeringCandidatesPage({
   const isRetainedRecordReconstructedHistorical =
     briefing.candidatePoolType === "reconstructed_historical_retained_source_records";
 
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -252,7 +253,7 @@ export default async function EngineeringCandidatesPage({
 
       <SiteFooter />
     </main>
-  );
+  ));
 }
 
 function candidatePoolIntro(
@@ -278,7 +279,7 @@ function ManualSourceList({
     briefing.items.flatMap((item) => item.sourceRecords.map((source) => source.id)),
   );
 
-  return (
+  return localizeServerContent((
     <ol className="candidate-list">
       {briefing.sourceRecords.map((source, index) => {
         const selectedItems = briefing.items.filter((item) =>
@@ -318,5 +319,5 @@ function ManualSourceList({
         );
       })}
     </ol>
-  );
+  ));
 }

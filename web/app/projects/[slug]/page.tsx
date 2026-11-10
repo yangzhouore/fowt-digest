@@ -1,3 +1,4 @@
+import { localizeServerContent } from "../../i18n/server-content";
 import Link from "next/link";
 import { ProjectEngineeringCoverage, IndustryEntryLink } from "../../connected-project-context";
 import { ProjectPublicEvidence, ProjectReviewStrip, ProjectReviewHistory } from "../project-public-evidence";
@@ -81,27 +82,27 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   ].filter((fact) => fact.value);
 
   if (project.id === "green-volt" && project.intelligence) {
-    return (
+    return localizeServerContent((
       <GreenVoltProjectDetailPage
         groupedRelationships={groupedRelationships}
         intelligence={project.intelligence}
         project={project}
       />
-    );
+    ));
   }
 
   if (project.intelligence) {
-    return (
+    return localizeServerContent((
       <ProjectIntelligenceDetailPage
         groupedRelationships={groupedRelationships}
         intelligence={project.intelligence}
         project={project}
         technicalFacts={technicalFacts}
       />
-    );
+    ));
   }
 
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -264,7 +265,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
       <SiteFooter />
     </main>
-  );
+  ));
 }
 
 function groupRelationships(
@@ -307,7 +308,7 @@ function ProjectIntelligenceDetailPage({
   const storySteps = buildStorySteps(project, intelligence);
   const watchpoints = intelligence.watchpoints.map(parseWatchpoint);
 
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -518,7 +519,7 @@ function ProjectIntelligenceDetailPage({
 
       <SiteFooter />
     </main>
-  );
+  ));
 }
 
 function GreenVoltProjectDetailPage({
@@ -621,7 +622,7 @@ function GreenVoltProjectDetailPage({
     },
   ];
 
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -816,7 +817,7 @@ function GreenVoltProjectDetailPage({
 
       <SiteFooter />
     </main>
-  );
+  ));
 }
 
 function stateClass(value: string): string {

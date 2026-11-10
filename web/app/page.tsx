@@ -1,3 +1,4 @@
+import { localizeServerContent } from "./i18n/server-content";
 import type { Metadata } from "next";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
@@ -25,7 +26,7 @@ export default function Home() {
     return [{ digest, engineeringBriefing }];
   });
 
-  return (
+  return localizeServerContent((
     <main>
       <SiteHeader />
 
@@ -33,5 +34,5 @@ export default function Home() {
 
       <SiteFooter />
     </main>
-  );
+  ));
 }

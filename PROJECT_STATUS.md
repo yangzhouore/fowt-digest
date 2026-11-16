@@ -1,5 +1,23 @@
 # Project Status
 
+## Weekly Update: 2026-11-16
+
+- Prepared the 9–15 November editions on `data/weekly-digest-2026-11-15`,
+  based on main `cdc5be3` (merged PR #60).
+- Complete authenticated OpenAlex collection: 13 queries, 19 successful pages,
+  481 raw records, no failures/partial pages and no reached cap. Retained 135
+  ranked candidates and five selected records; data-deposit and metadata limits
+  are disclosed in the visible candidate note.
+- Engineering discovery covered all 42 registry domains; six reviewed source
+  records yielded two independent candidates and two primary-backed highlights:
+  the UK–Japan compact and Partrac's Baltic measurement campaign. The latter
+  concerns floating buoys, not floating turbine foundations.
+- Full baseline passed: 270 pipeline tests, data validators, 179 website tests,
+  lint, 481-route build and whitespace checks. Browser suites were not rerun for
+  this static-data update. The owner's existing `next-env.d.ts` edit is excluded.
+- Evidence, exclusions and access limitations: `docs/weekly/2026-11-15.md`.
+  Review PR requested; merge and deployment await acceptance.
+
 ## Local Weekly Update: 2026-11-09
 
 - Prepared 2–8 November Research and Engineering editions on

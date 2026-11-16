@@ -4,15 +4,15 @@ Use this file as the resume entry point for a new Codex session.
 
 ## Stable State
 
-The 2–8 November 2026 weekly update is prepared locally on
-`data/weekly-digest-2026-11-08`, based on `a1bf8bf` (merged OpenAlex maintenance
-PR #58). Authenticated collection completed all 13 queries without failures or
-a reached cap: 165 ranked Research candidates, five selected records and two
-Engineering highlights. Four selected Research records are parts of one archive;
-see `docs/weekly/2026-11-08.md` for evidence, selection limits and validation.
-The update is prepared for a review PR; merge and deployment await acceptance.
-The earlier dated snapshot below
-records the pre-merge guide status.
+The 9–15 November 2026 weekly update is prepared on
+`data/weekly-digest-2026-11-15`, based on main `cdc5be3` (merged PR #60).
+Complete authenticated OpenAlex collection produced 135 ranked candidates and
+five selected records. Engineering retained two independent candidates and two
+primary-backed highlights after registry-wide discovery. Full validation passed,
+including 270 pipeline tests, 179 website tests and a 481-route production build.
+See `docs/weekly/2026-11-15.md` for evidence, coverage and metadata limitations.
+The requested review PR leaves merge and deployment for acceptance. The dated
+snapshots below preserve earlier status and should not be read as current PR state.
 
 Verified against GitHub on 2026-11-06.
 

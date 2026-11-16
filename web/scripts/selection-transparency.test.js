@@ -93,6 +93,7 @@ const expectedResearchCounts = new Map([
   ["2026-10-25", 83],
   ["2026-11-01", 86],
   ["2026-11-08", 165],
+  ["2026-11-15", 135],
 ]);
 
 const retainedWeeks = new Set([
@@ -112,6 +113,7 @@ const retainedWeeks = new Set([
   "2026-10-25",
   "2026-11-01",
   "2026-11-08",
+  "2026-11-15",
 ]);
 
 const failedReconstructionWeeks = new Set(["2026-08-16"]);

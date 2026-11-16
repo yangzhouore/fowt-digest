@@ -1,3 +1,4 @@
+import briefing20261115Json from "./briefings/2026-11-15.json";
 import briefing20261108Json from "./briefings/2026-11-08.json";
 import briefing20261101Json from "./briefings/2026-11-01.json";
 import briefing20261025Json from "./briefings/2026-10-25.json";
@@ -273,6 +274,7 @@ export type EngineeringBriefing = {
 };
 
 const engineeringBriefingJsonFiles = [
+  briefing20261115Json,
   briefing20261108Json,
   briefing20261101Json,
   briefing20261025Json,

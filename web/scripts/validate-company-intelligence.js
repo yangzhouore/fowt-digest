@@ -28,7 +28,7 @@ function loadCompanyIntelligence() {
 if (require.main === module) {
   try {
     loadCompanyIntelligence();
-    console.log("Company Intelligence link validation passed.");
+    console.log("Company Intelligence event and source validation passed.");
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;

@@ -39,39 +39,55 @@ export function CompanyDirectory({ companies }: { companies: ReturnType<typeof g
 
 export function CompanyTimeline({ news }: { news: CompanyNewsRecord[] }) {
   const [category, setCategory] = useState("");
+  const [year, setYear] = useState("");
   const { language } = useLanguage();
-  const matching = category ? news.filter((record) => record.category === category) : news;
+  const years = [...new Set(news.map((record) => record.publishedDate.slice(0, 4)))];
+  const matching = news.filter((record) =>
+    (!category || record.category === category) && (!year || record.publishedDate.slice(0, 4) === year));
+  const hasMhiHistory = news.some((record) => record.historicalSubjects.includes("MHI Vestas Offshore Wind"));
   return (
     <section className={styles.section} aria-labelledby="company-timeline-heading">
       <h2 id="company-timeline-heading"><Copy en="Company Timeline" zh="企业动态时间线" /></h2>
       <p className={styles.scope}><Copy en="FOWT Digest retains source-backed developments relevant to offshore and floating wind. This timeline covers only reviewed records in the Digest archive." zh="FOWT Digest 收录有来源依据的海上风电与浮式风电相关动态。此时间线仅涵盖档案中已审核的记录。" /></p>
+      {hasMhiHistory && <p className={styles.scope}><Copy en="MHI Vestas Offshore Wind was a joint venture between Mitsubishi Heavy Industries and Vestas. Vestas acquired MHI’s share in December 2020. The timeline identifies developments involving the former joint venture." zh="MHI Vestas Offshore Wind 曾是三菱重工与维斯塔斯的合资企业。维斯塔斯于 2020 年 12 月收购三菱重工所持股权。时间线标明涉及原合资企业的动态。" /></p>}
       {news.length > 0 && (
-        <label className={styles.filter}>
-          <span><Copy en="Filter by category" zh="按类别筛选" /></span>
-          <select value={category} onChange={(event) => setCategory(event.target.value)}>
-            <option value="">{language === "zh" ? "所有类别" : "All categories"}</option>
-            {Object.entries(companyNewsCategories).map(([id, labels]) => (
-              <option key={id} value={id}>{labels[language]}</option>
-            ))}
-          </select>
-        </label>
+        <div className={styles.timelineFilters}>
+          <label className={styles.filter}>
+            <span><Copy en="Filter by category" zh="按类别筛选" /></span>
+            <select value={category} onChange={(event) => setCategory(event.target.value)}>
+              <option value="">{language === "zh" ? "所有类别" : "All categories"}</option>
+              {Object.entries(companyNewsCategories).map(([id, labels]) => (
+                <option key={id} value={id}>{labels[language]}</option>
+              ))}
+            </select>
+          </label>
+          {years.length > 1 && <label className={styles.filter}>
+            <span><Copy en="Filter by year" zh="按年份筛选" /></span>
+            <select value={year} onChange={(event) => setYear(event.target.value)}>
+              <option value="">{language === "zh" ? "所有年份" : "All years"}</option>
+              {years.map((value) => <option key={value} value={value}>{value}</option>)}
+            </select>
+          </label>}
+        </div>
       )}
       {matching.length ? (
         <ol className={styles.rows}>
           {matching.map((record) => (
-            <li key={record.url}>
+            <li key={record.id}>
               <p className={styles.meta}><time dateTime={record.publishedDate}>{record.publishedDate}</time> · <Copy {...companyNewsCategories[record.category]} /></p>
+              {record.historicalSubjects.filter((name) => name !== record.publisher).map((name) =>
+                <p className={styles.meta} key={name} translate="no">{name}</p>)}
               <h3 translate="no">{record.title}</h3>
               <p translate="no">{record.summary}</p>
               <p className={styles.links}>
                 <a href={record.url}><Copy en={`Original source · ${record.publisher}`} zh={`原始来源 · ${record.publisher}`} /></a>
-                {record.project && <Link href={`/projects/${record.project.slug}`}><Copy en="Project" zh="项目" /> <span translate="no">{record.project.name}</span></Link>}
+                {record.projects.map((project) => <Link href={`/projects/${project.slug}`} key={project.slug}><Copy en="Project" zh="项目" /> <span translate="no">{project.name}</span></Link>)}
               </p>
             </li>
           ))}
         </ol>
       ) : news.length ? (
-        <p role="status"><Copy en="No retained developments in this category." zh="此类别暂无已收录的动态。" /></p>
+        <p role="status"><Copy en="No retained developments match these filters." zh="没有符合筛选条件的已收录动态。" /></p>
       ) : (
         <p><Copy en="No reviewed developments have been linked to this company yet." zh="该企业暂未关联经审核的动态。" /></p>
       )}

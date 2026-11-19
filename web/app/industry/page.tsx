@@ -97,6 +97,7 @@ export default function IndustryPage() {
       <section className="industry-hero" id="industry-catalogue" aria-labelledby="industry-heading">
         <p className="eyebrow"><LocalizedCopy en="International company reference" zh="国际企业参考目录" /></p>
         <h2 id="industry-heading"><LocalizedCopy en="Explore the delivery ecosystem" zh="探索交付生态" /></h2>
+        <p><Link href="/companies"><LocalizedCopy en="Browse Company Intelligence" zh="浏览企业动态" /></Link></p>
         <p><LocalizedCopy en="This international catalogue complements the four country guides. A listing does not prove local manufacturing, current procurement or a contract on a particular project. Expand a company for its recorded project roles and evidence." zh="此国际目录补充四国指南。收录不代表本地制造、当前采购或某项目合同。展开企业可查看记录的项目角色与证据。" /></p>
         <dl className="industry-stats" aria-label="International catalogue coverage">
           <div><dt><LocalizedCopy en="Companies in this catalogue" zh="目录内企业" /></dt><dd>{industryCompanyCount}</dd></div>
@@ -169,6 +170,7 @@ export default function IndustryPage() {
                             <Link className="industry-source-link" href={company.sourceUrl}>
                               <LocalizedCopy en="Source" zh="来源" />
                             </Link>
+                            <p><Link href={`/companies/${company.id}`}><LocalizedCopy en="Company Intelligence" zh="企业动态" /></Link></p>
                             <CompanyProjectContext companyId={company.id} instanceId={`${category.id}-${company.id}`} />
                           </div>
                         </details>

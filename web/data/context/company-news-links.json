@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "company-news-links.v1",
+  "links": [
+    {
+      "companyId": "vestas",
+      "source": {
+        "kind": "engineering",
+        "editionSlug": "2025-12-14",
+        "sourceRecordId": "eng-src-2025-12-14-eolmed-first-turbine"
+      },
+      "category": "projects_contracts",
+      "projectId": "eolmed",
+      "mappingReviewedOn": "2026-11-19",
+      "storedExcerpt": "the first of three Vestas V164-10.0 MW turbines left Port-La Nouvelle for installation at the EolMed floating offshore wind farm."
+    },
+    {
+      "companyId": "vestas",
+      "source": {
+        "kind": "engineering",
+        "editionSlug": "2026-10-11",
+        "sourceRecordId": "eng-src-2026-10-11-ow-neretek"
+      },
+      "category": "technology_engineering",
+      "mappingReviewedOn": "2026-11-19",
+      "storedExcerpt": "The Vestas and Neretek MoU concerns a bottom-fixed BC90 concept for transitional deep water, described as an alternative to floating wind."
+    }
+  ]
+}

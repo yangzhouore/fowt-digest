@@ -1,0 +1,3779 @@
+{
+  "schemaVersion": "company-events.v1",
+  "events": [
+    {
+      "id": "warrington-operations-office",
+      "publishedDate": "2018-01-08",
+      "title": "UK offshore support office opens in Warrington",
+      "summary": "MHI Vestas Offshore Wind opened a Warrington office supporting construction, servicing, health and safety, and quality assurance for its UK offshore projects.",
+      "category": "corporate_market",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/UK-Operational-Footprint",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-four-localisation-mous",
+      "publishedDate": "2018-03-28",
+      "title": "Taiwan offshore supply-chain agreements",
+      "summary": "MHI Vestas Offshore Wind signed four memoranda with Taiwanese companies covering towers, blade manufacturing and blade materials.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Pens-Sweeping-Series-of-MOUs-in-Taiwan",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "smart-turbine-tools-launch",
+      "publishedDate": "2018-04-11",
+      "title": "SMART offshore turbine tools launched",
+      "summary": "MHI Vestas Offshore Wind launched a digital tool suite for offshore turbine design assessment, monitoring and operational decisions, including integrated foundation-load software developed with Ramboll.",
+      "category": "digital_ai",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/MVOW-SMART-Turbine-Product-Portfolio",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "northwester-2-supplier-selection",
+      "publishedDate": "2018-04-25",
+      "title": "Parkwind selects turbines for Northwester 2",
+      "summary": "Parkwind selected MHI Vestas Offshore Wind to supply 23 V164-9.5 MW turbines for Northwester 2 in Belgium.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/parkwind-northwest-2-belgium",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-generator-localisation-mou",
+      "publishedDate": "2018-05-15",
+      "title": "Taiwan generator supply memorandum signed",
+      "summary": "MHI Vestas Offshore Wind signed a memorandum with TECO and The Switch for generator products for the Taiwanese offshore market.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/vestas-taiwan-offshore-wind-projects",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "blyth-demonstrator-commissioning",
+      "publishedDate": "2018-06-22",
+      "title": "Blyth demonstration turbines commissioned",
+      "summary": "MHI Vestas Offshore Wind commissioned five V164-8.4 MW turbines at the Blyth Offshore Wind Demonstration Project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/blyth-offshore-wind-demonstration-project-fully-commissioned",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "v164-95-type-certification",
+      "publishedDate": "2018-06-27",
+      "title": "V164-9.5 MW receives final type certification",
+      "summary": "MHI Vestas Offshore Wind announced Class S type certification for the V164-9.5 MW offshore turbine.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Final-Certification-V164-9-5-MW-Offshore-Turbine",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "borssele-iii-iv-financial-close",
+      "publishedDate": "2018-06-28",
+      "title": "Borssele III and IV reach financial close",
+      "summary": "The Blauwwind consortium reached financial close on Borssele III and IV, advancing plans to use 77 V164-9.5 MW turbines made by MHI Vestas Offshore Wind.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Blauwwind-Consortium-Reaches-Financial-Close-Borssele-III-IV",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "deutsche-bucht-mono-bucket-demo-approved",
+      "publishedDate": "2018-07-20",
+      "title": "Deutsche Bucht mono-bucket demonstration advances",
+      "summary": "The Deutsche Bucht demonstration reached financial close for a planned trial of two MHI Vestas Offshore Wind V164-8.4 MW turbines on mono-bucket foundations.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/financial-close-for-industry-first-demo-at-deutsche-bucht",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "moray-east-conditional-agreement",
+      "publishedDate": "2018-08-21",
+      "title": "Conditional turbine agreement signed for Moray East",
+      "summary": "MHI Vestas Offshore Wind signed a conditional supply agreement for the 950 MW Moray East offshore wind project in the UK.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2018/mhi-vestas-offshore-wind-has-entered-into-a-conditional-c2963345",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "borkum-riffgrund-2-final-turbine",
+      "publishedDate": "2018-09-03",
+      "title": "Last Borkum Riffgrund 2 turbine installed",
+      "summary": "MHI Vestas Offshore Wind completed installation of all 56 turbines at Borkum Riffgrund 2 in its first German offshore wind project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/borkum-riffgrund-2",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "triton-knoll-firm-order",
+      "publishedDate": "2018-09-03",
+      "title": "Triton Knoll turbine order confirmed",
+      "summary": "The Triton Knoll firm order covered 90 V164-9.5 MW turbines from MHI Vestas Offshore Wind and five years of service and maintenance.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Largest-MW-Project-Company-History",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "walney-extension-inauguration",
+      "publishedDate": "2018-09-06",
+      "title": "Walney Extension opens",
+      "summary": "The Walney Extension was inaugurated with 40 V164-8.25 MW turbines supplied by MHI Vestas Offshore Wind alongside turbines from another supplier.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Inauguration-Walney-Extension-Offshore-Wind-Farm",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "aberdeen-bay-inauguration",
+      "publishedDate": "2018-09-07",
+      "title": "Aberdeen Bay offshore demonstration centre opens",
+      "summary": "Vattenfall opened its European Offshore Wind Deployment Centre at Aberdeen Bay, where the eleven turbines included two MHI Vestas Offshore Wind V164-8.8 MW units.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vattenfall",
+          "url": "https://group.vattenfall.com/de/newsroom/pressemitteilungen/2018/vattenfall-eroffnet-offshore-windpark-aberdeen-bay",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-supplier-selection",
+      "publishedDate": "2018-09-10",
+      "title": "WindPlus chooses MHI Vestas for WindFloat Atlantic",
+      "summary": "WindPlus selected MHI Vestas Offshore Wind for WindFloat Atlantic, a three-turbine floating offshore wind project in Portugal.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "windfloat-atlantic"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Windplus-windfloat-atlantic-offshore-wind-park",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "isle-of-wight-test-relocation",
+      "publishedDate": "2018-09-20",
+      "title": "Testing relocates to free offshore blade-factory space",
+      "summary": "Vestas agreed to relocate testing on the Isle of Wight so MHI Vestas Offshore Wind could consider expanding offshore blade production at West Medina Mills.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Isle-of-wight-expansion",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "v164-10-launch",
+      "publishedDate": "2018-09-25",
+      "title": "V164-10.0 MW offshore turbine launched",
+      "summary": "MHI Vestas Offshore Wind introduced the 10 MW version of its V164 offshore turbine platform.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/mhi-vestas-launches-the-first-10-mw-wind-turbine-in-history",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-tower-conditional-contract",
+      "publishedDate": "2018-10-30",
+      "title": "Conditional Taiwan tower supply contract signed",
+      "summary": "MHI Vestas Offshore Wind signed a conditional contract with CS Wind and Chin Fong to manufacture offshore turbine towers locally.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Tower-Contract-Firms-Up-Localisation-Plans-Taiwan",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "northwester-2-firm-order",
+      "publishedDate": "2018-11-07",
+      "title": "Northwester 2 order becomes firm",
+      "summary": "Belgian developer Parkwind and MHI Vestas Offshore Wind confirmed the firm Northwester 2 order for 23 V164-9.5 MW turbines.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/parkwind-and-mhi-vestas-confirm-firm-order-for-northwester-2",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "isle-of-wight-second-blade-mould",
+      "publishedDate": "2018-11-20",
+      "title": "Second blade mould arrives on the Isle of Wight",
+      "summary": "MHI Vestas Offshore Wind received a new blade mould at its Isle of Wight factory as part of a plan to expand V164 blade manufacturing.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/blade-mould-isle-of-wight-solent-region",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-first-floating-turbine",
+      "publishedDate": "2018-11-27",
+      "title": "First Kincardine floating turbine installed",
+      "summary": "Bourbon reported installation of the first floating turbine at Kincardine in summer 2018. The existing Projects record identifies this unit as a Vestas V80-2.0 MW.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "kincardine-offshore-wind-farm"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Bourbon",
+          "url": "https://www.bourbonoffshore.com/en/press-releases/bourbon-subsea-services-has-installed-first-floating-wind-turbine-kincardine",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "lindoe-nacelle-capacity-ramp",
+      "publishedDate": "2018-11-27",
+      "title": "Lindø nacelle plant plans capacity increase",
+      "summary": "MHI Vestas Offshore Wind announced additional hiring and revised testing at its Lindø nacelle factory to increase offshore production.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/mhi-vestas-to-hire-50-new-employees-at-nacelle-factory-in-region",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "vineyard-wind-preferred-supplier",
+      "publishedDate": "2018-11-27",
+      "title": "Vineyard Wind originally names MHI Vestas preferred supplier",
+      "summary": "Vineyard Wind selected MHI Vestas Offshore Wind as preferred turbine supplier for its 800 MW Massachusetts project. The developer later selected another supplier.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vineyard Wind",
+          "url": "https://www.vineyardwind.com/press-releases/2018/12/2/vineyard-wind-names-mhi-vestas-offshore-wind-as-preferred-supplier-for-usas-first-utility-scale-offshore-wind-farm",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "rampion-commissioning",
+      "publishedDate": "2018-11-30",
+      "title": "Rampion commissioning completed",
+      "summary": "MHI Vestas Offshore Wind reported that all 116 V112-3.45 MW turbines at the 400 MW Rampion wind farm had been installed and commissioned.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/mhi-vestas-celebrates-commissioning-of-rampion-offshore-wind-far",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "moray-east-firm-order",
+      "publishedDate": "2018-12-06",
+      "title": "Moray East order confirmed",
+      "summary": "Moray East placed a firm order with MHI Vestas Offshore Wind for 100 V164-9.5 MW turbines for its Scottish offshore wind farm.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/moray-east-signs-firm-order-with-mhi-vestas-offshore-wind",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "borssele-v-firm-order",
+      "publishedDate": "2018-12-20",
+      "title": "Borssele V innovation site places turbine order",
+      "summary": "Two Towers placed a firm order with MHI Vestas Offshore Wind for two V164-9.5 MW turbines for the Borssele V offshore innovation site.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2018/Borssele-V-Innovation-Site",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "boston-us-headquarters-selected",
+      "publishedDate": "2019-01-11",
+      "title": "Boston chosen as US offshore headquarters",
+      "summary": "MHI Vestas Offshore Wind selected Boston for its US headquarters to support offshore sales, strategy and a local project presence.",
+      "category": "corporate_market",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/Commissioning-rampion-offshore-wind-farm",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "oostende-service-hub-expansion",
+      "publishedDate": "2019-01-11",
+      "title": "Offshore service base expands at Oostende",
+      "summary": "MHI Vestas Offshore Wind opened a larger base at the Port of Oostende to support its growing Belgian offshore maintenance portfolio.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/Port-of-Oostende",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "horns-reef-3-final-turbine",
+      "publishedDate": "2019-01-21",
+      "title": "Horns Reef 3 turbine installation completed",
+      "summary": "MHI Vestas Offshore Wind reported the final turbine installation at Denmark’s Horns Reef 3 offshore wind farm.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/Final-Turbine-Installation-Horns-Reef-3",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "norther-first-turbine",
+      "publishedDate": "2019-02-04",
+      "title": "First Norther turbine installed",
+      "summary": "MHI Vestas Offshore Wind installed the first turbine at the Norther offshore wind farm in Belgium.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/Norther-Largest-Offshore-Wind-Park",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "baltic-eagle-preferred-supplier",
+      "publishedDate": "2019-02-11",
+      "title": "Baltic Eagle names preferred turbine supplier",
+      "summary": "Iberdrola named MHI Vestas Offshore Wind as preferred turbine supplier for Baltic Eagle, with the V174-9.5 MW turbine specified.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/preferred-supplier-Baltic-Eagle-project",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-firm-order",
+      "publishedDate": "2019-04-01",
+      "title": "Kincardine orders five floating wind turbines",
+      "summary": "MHI Vestas Offshore Wind signed a firm order to supply five V164-9.5 MW turbines for the Kincardine floating offshore wind farm in Scotland.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "kincardine-offshore-wind-farm"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/kincarde-floating-offshore-v164-9-5-mw",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "norther-final-turbine",
+      "publishedDate": "2019-04-29",
+      "title": "Norther turbine installation completed",
+      "summary": "MHI Vestas Offshore Wind confirmed completion of the turbine installation campaign at Norther in Belgium.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/Norther-offshore-installation",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "borkum-riffgrund-2-handover",
+      "publishedDate": "2019-06-04",
+      "title": "Borkum Riffgrund 2 turbines handed over",
+      "summary": "MHI Vestas Offshore Wind and Ørsted marked the handover of the 56 Borkum Riffgrund 2 turbines for commercial operation.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/borkum-riffgrund-2",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "deutsche-bucht-first-turbine",
+      "publishedDate": "2019-06-05",
+      "title": "First Deutsche Bucht turbine installed",
+      "summary": "MHI Vestas Offshore Wind confirmed its first installation at the Deutsche Bucht offshore wind farm.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/Deutsche-bucht-installation",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "boston-us-headquarters-opened",
+      "publishedDate": "2019-06-11",
+      "title": "US offshore office opens in Boston",
+      "summary": "MHI Vestas Offshore Wind opened its Boston office for US offshore wind projects, sales and market strategy.",
+      "category": "corporate_market",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/opening-boston-office",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-first-blade-materials-contract",
+      "publishedDate": "2019-07-03",
+      "title": "Taiwan offshore blade-materials contract signed",
+      "summary": "MHI Vestas Offshore Wind signed a conditional agreement with Swancor to source offshore blade materials in Taiwan.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/Contract-for-Blade-Materials-in-Taiwan",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "deutsche-bucht-first-power",
+      "publishedDate": "2019-07-29",
+      "title": "Deutsche Bucht reaches first power",
+      "summary": "MHI Vestas Offshore Wind reported that Deutsche Bucht began feeding electricity to the German grid.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/first-power-deutsche-bucht",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-local-switchgear-contract",
+      "publishedDate": "2019-08-21",
+      "title": "First Taiwan switchgear localisation contract signed",
+      "summary": "MHI Vestas Offshore Wind signed a conditional agreement with Mitsubishi Electric Europe covering local high-voltage switchgear assembly by Shihlin Electric in Taiwan.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/taiwan-local-supply-switchgear",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "horns-reef-3-inauguration",
+      "publishedDate": "2019-08-22",
+      "title": "Horns Reef 3 officially opens",
+      "summary": "MHI Vestas Offshore Wind reported the inauguration of Horns Reef 3 offshore wind farm after the turbine installation and commissioning campaign.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/horns-reef-3-inaugurated-Today-in-Hvide-Sande",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "deutsche-bucht-base-turbines-complete",
+      "publishedDate": "2019-08-29",
+      "title": "Base turbine installation complete at Deutsche Bucht",
+      "summary": "MHI Vestas Offshore Wind reported installation of all 31 turbines in the main Deutsche Bucht project. The separate mono-bucket demonstration was a different scope.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/milestone-at-deutsche-bucht",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "groix-belle-ile-preferred-supplier",
+      "publishedDate": "2019-10-07",
+      "title": "Groix and Belle-Île chooses preferred turbine supplier",
+      "summary": "The Groix and Belle-Île floating wind project selected MHI Vestas Offshore Wind as preferred supplier for V164-9.5 MW turbines.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/Groix-Belle-Ile-Floating-Offshore-wind-park",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-first-turbine",
+      "publishedDate": "2019-10-22",
+      "title": "First WindFloat Atlantic turbine reaches its position",
+      "summary": "The first MHI Vestas Offshore Wind turbine was moved into position at WindFloat Atlantic, using a floating platform assembled with the turbine in port.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "windfloat-atlantic"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/first-turbine-of-windfloat-atlantic-moves-into-position",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "efgl-mhi-vestas-selection",
+      "publishedDate": "2019-11-18",
+      "title": "EFGL selects V164-10.0 MW turbines",
+      "summary": "The EFGL floating wind project selected MHI Vestas Offshore Wind to supply its V164-10.0 MW turbines.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "efgl"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/EFGL-Selects-V164-10-MW-turbines-from-MHI-Vestas-Offshore-Wind",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "hibikinada-preferred-supplier",
+      "publishedDate": "2019-11-25",
+      "title": "Hibiki Wind Energy chooses preferred turbine supplier",
+      "summary": "Hibiki Wind Energy selected MHI Vestas Offshore Wind as preferred supplier for the commercial Kitakyushu-Hibikinada offshore wind project in Japan.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/hibiki-selects-vestas-as-preferred-supplier",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "arcadis-ost-1-supplier-selection",
+      "publishedDate": "2019-11-26",
+      "title": "Parkwind selects MHI Vestas for Arcadis Ost 1",
+      "summary": "Parkwind selected MHI Vestas Offshore Wind to supply V174-9.5 MW offshore turbines for Germany’s Arcadis Ost 1 project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/parkwind-arcadis-ost-1",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "northwester-2-first-turbine",
+      "publishedDate": "2019-12-18",
+      "title": "First V164-9.5 MW installed at Northwester 2",
+      "summary": "MHI Vestas Offshore Wind installed its first V164-9.5 MW turbine at the Belgian Northwester 2 offshore wind farm.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/northwester-installation-V164-9MW",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "offshore-digital-safety-training",
+      "publishedDate": "2019-12-19",
+      "title": "Digital safety training introduced for offshore technicians",
+      "summary": "MHI Vestas Offshore Wind announced an app for safety refresher training for offshore wind turbine technicians.",
+      "category": "digital_ai",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2019/Standard-Digital-Safety-Training",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-first-grid-power",
+      "publishedDate": "2020-01-02",
+      "title": "WindFloat Atlantic delivers first electricity",
+      "summary": "EDP Renewables announced that the first WindFloat Atlantic platform was supplying the Portuguese grid after connection on 31 December 2019. The unit carried an 8.4 MW MHI Vestas Offshore Wind turbine.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "windfloat-atlantic"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "EDP Renewables",
+          "url": "https://www.edpr-investors.com/en/media/news/windfloat-atlantic-project-starts-supplying-clean-energy-portugal",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "arcadis-ost-1-ronne-port-selection",
+      "publishedDate": "2020-01-08",
+      "title": "Rønne selected for Arcadis Ost 1 turbine pre-assembly",
+      "summary": "MHI Vestas Offshore Wind selected the Port of Rønne on Bornholm for pre-assembly and shipment of Arcadis Ost 1 turbine components.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/mhi-vestas-selects-port-of-roenne-for-pre-assembly-and-shipment-",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "v174-prototype-installed",
+      "publishedDate": "2020-01-24",
+      "title": "V174-9.5 MW prototype installed at Østerild",
+      "summary": "MHI Vestas Offshore Wind installed its V174-9.5 MW offshore prototype at the Danish national test centre in Østerild.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/mhi-vestas-installs-flagship-v174-9-5-mw-prototype",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "zhong-neng-preferred-supplier",
+      "publishedDate": "2020-02-18",
+      "title": "Zhong Neng chooses preferred turbine supplier",
+      "summary": "MHI Vestas Offshore Wind reported its selection as preferred supplier for Taiwan’s Zhong Neng offshore wind development.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/zhong-neng-agreement-considerables-localisation-progress",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "changfang-xidao-firm-orders",
+      "publishedDate": "2020-02-26",
+      "title": "Changfang and Xidao offshore orders confirmed",
+      "summary": "MHI Vestas Offshore Wind finalised firm turbine-supply contracts with Copenhagen Infrastructure Partners for the Changfang and Xidao offshore wind farms in Taiwan.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/mhi-vestas-offshore-wind-inks-firm-orders-for-taiwan-projects",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "akita-noshiro-firm-order",
+      "publishedDate": "2020-03-03",
+      "title": "Akita and Noshiro place a firm offshore turbine order",
+      "summary": "MHI Vestas Offshore Wind received a firm order for 33 V117-4.2 MW turbines across the fixed-bottom Akita and Noshiro projects in Japan.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/Akita-Noshiro-Offshore-Wind-Farm-Project",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-tien-li-blade-contract",
+      "publishedDate": "2020-03-24",
+      "title": "Tien Li signs Taiwan blade manufacturing contract",
+      "summary": "MHI Vestas Offshore Wind and Tien Li finalised a conditional agreement for local offshore blade manufacturing at a new facility planned for Taichung Harbour.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/tien-Li-confirms-MHI-as-manufacturer-to-build-blades-locally-in-Taiwan",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "northwester-2-final-turbine",
+      "publishedDate": "2020-04-15",
+      "title": "Northwester 2 turbine installation complete",
+      "summary": "MHI Vestas Offshore Wind reported installation of all 23 V164-9.5 MW turbines at Northwester 2.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/northwester-2-completes-turbine-installation-of-first-9-5mw-plat",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-swancor-blade-materials-purchase",
+      "publishedDate": "2020-04-28",
+      "title": "Swancor offshore blade-materials agreement confirmed",
+      "summary": "MHI Vestas Offshore Wind confirmed a purchase agreement with Swancor for locally sourced blade materials, including carbon plates, resin and adhesive.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/mhi-vestas-blade-materials-to-be-sourced-in-taiwan",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "borssele-iii-iv-first-turbine",
+      "publishedDate": "2020-05-28",
+      "title": "First Borssele III and IV turbine installed",
+      "summary": "MHI Vestas Offshore Wind installed the first of 77 V164-9.5 MW turbines for the Blauwwind Borssele III and IV project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/first-turbine-installed-at-borssele-iii-iv-project",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-final-turbine-tow",
+      "publishedDate": "2020-05-29",
+      "title": "Final WindFloat Atlantic turbine departs for site",
+      "summary": "The last of three floating units carrying MHI Vestas Offshore Wind V164-8.4 MW turbines left Ferrol for the WindFloat Atlantic site.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "windfloat-atlantic"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/final-turbine-sails-to-windfloat-atlantic-project-site-for-insta",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "seagreen-conditional-order",
+      "publishedDate": "2020-06-01",
+      "title": "Conditional offshore turbine agreement signed for Seagreen",
+      "summary": "MHI Vestas Offshore Wind signed a conditional turbine supply agreement for the 1,140 MW Seagreen project. The firm order was confirmed separately.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2020/mhi-vestas-offshore-wind-a-s-has-signed-a-conditional-a-c3125399",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "seagreen-firm-order",
+      "publishedDate": "2020-06-15",
+      "title": "Seagreen places firm offshore turbine order",
+      "summary": "Seagreen finalised a firm order with MHI Vestas Offshore Wind to supply 114 offshore wind turbines for the Scottish project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/mhi-vestas-uk-pipeline-enhanced-with-seagreen-firm-order",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taichung-blade-factory-construction",
+      "publishedDate": "2020-06-16",
+      "title": "Construction starts at Taichung blade factory",
+      "summary": "MHI Vestas Offshore Wind reported that its supplier Tien Li began construction of the Taichung Harbour facility for manufacturing offshore turbine blades.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/construction-started-on-major-blade-facility-at-taichung-harbour",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-high-voltage-switchgear-purchase",
+      "publishedDate": "2020-06-23",
+      "title": "Taiwan high-voltage switchgear purchase agreement",
+      "summary": "MHI Vestas Offshore Wind concluded a contract to source high-voltage switchgear locally for offshore turbines in Taiwan.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/another-key-component-to-be-sourced-locally-in-taiwan",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-additional-local-components",
+      "publishedDate": "2020-06-30",
+      "title": "Local component sourcing expanded in Taiwan",
+      "summary": "MHI Vestas Offshore Wind agreed to buy rotor hubs, hub plates and nacelle base frames from Taiwan-based Yeong Guan Energy Technology Group.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/MHI-continues-to-deliver-localisation-commitments-in-taiwan",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-cable-fastener-agreements",
+      "publishedDate": "2020-07-13",
+      "title": "Taiwan cables and fasteners sourced locally",
+      "summary": "MHI Vestas Offshore Wind signed agreements with Taiwanese suppliers for cables and fasteners for offshore wind projects.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/Cables-and-fasteners-be-produced-by-local-companies",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "windfloat-atlantic-full-power",
+      "publishedDate": "2020-07-28",
+      "title": "WindFloat Atlantic reaches full power",
+      "summary": "MHI Vestas Offshore Wind reported that all three floating turbines at WindFloat Atlantic were generating power.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "windfloat-atlantic"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/full-power-at-first-floating-wind-project-in-continental-europe",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "borssele-iii-iv-first-power",
+      "publishedDate": "2020-08-07",
+      "title": "Borssele III and IV deliver first power",
+      "summary": "MHI Vestas Offshore Wind reported that the Borssele III and IV offshore wind farm began feeding power to the Dutch grid.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/first-power-achieved-at-blauwwind-project",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-tower-purchase-agreement",
+      "publishedDate": "2020-08-19",
+      "title": "Taiwan tower purchase agreement finalised",
+      "summary": "MHI Vestas Offshore Wind finalised its Taiwan turbine tower purchase agreement with the CS Wind and Chin Fong partnership.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/tower-supply-purchase-agreement-finalised-in-taiwan",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-additional-component-supply",
+      "publishedDate": "2020-09-09",
+      "title": "Additional turbine components to be sourced in Taiwan",
+      "summary": "MHI Vestas Offshore Wind agreed to buy spinner and nacelle covers from the Fassmer Atech Composites Taiwan joint venture.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/mhi-vestas-to-source-additional-key-turbine-components-locally-i",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-offshore-transformer-contract",
+      "publishedDate": "2020-09-11",
+      "title": "Taiwan offshore transformer sourcing agreement",
+      "summary": "MHI Vestas Offshore Wind signed a purchase agreement to source offshore turbine transformers locally in Taiwan.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/taiwan-supply-chain-gains-link-transformer-purchase-agreement",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-preferred-supplier",
+      "publishedDate": "2020-10-05",
+      "title": "EolMed chooses MHI Vestas as preferred supplier",
+      "summary": "MHI Vestas Offshore Wind was selected as preferred turbine supplier for the EolMed floating offshore wind farm in France.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "eolmed"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/EolMed-partner-floating-offshore-wind-farm-France",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "triton-knoll-assembly-port-mobilises",
+      "publishedDate": "2020-10-06",
+      "title": "Triton Knoll pre-assembly begins at Able Seaton Port",
+      "summary": "MHI Vestas Offshore Wind moved into Able Seaton Port to begin preparatory works for the Triton Knoll turbine installation campaign.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/triton-knoll-pre-assembly-hub-ramps-up-activity",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "vestas-mhi-offshore-jv-acquisition-signed",
+      "publishedDate": "2020-10-29",
+      "title": "Agreement signed for Vestas to acquire offshore joint-venture stake",
+      "summary": "Vestas and Mitsubishi Heavy Industries signed an agreement for Vestas to acquire MHI’s stake in MHI Vestas Offshore Wind. Completion still required approval.",
+      "category": "corporate_market",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2020/vestas-to-acquire-offshore-business-in-joint-venture-c3227457",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-first-v164-on-floater",
+      "publishedDate": "2020-11-11",
+      "title": "First V164-9.5 MW fitted to a Kincardine floater",
+      "summary": "MHI Vestas Offshore Wind mounted the first of five Kincardine V164-9.5 MW turbines on a Principle Power WindFloat foundation at the installation harbour.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "kincardine-offshore-wind-farm"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/first-ever-v164-9-5-mw-turbine-installed-on-a-floating-wind-proj",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "borssele-iii-iv-final-turbine",
+      "publishedDate": "2020-11-27",
+      "title": "Borssele III and IV complete turbine installation",
+      "summary": "MHI Vestas Offshore Wind reported installation of the last of 77 V164-9.5 MW turbines for Borssele III and IV.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/final-turbine-installed-at-borssele-iii-iv-in-spite-of-covid-19",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "vestas-mhi-offshore-jv-regulatory-approval",
+      "publishedDate": "2020-11-27",
+      "title": "Competition authorities approve offshore joint-venture acquisition",
+      "summary": "Vestas announced that competition authorities had approved its proposed acquisition of Mitsubishi Heavy Industries’ share of MHI Vestas Offshore Wind.",
+      "category": "corporate_market",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2020/agreement-to-acquire-offshore-business-in-joint-venture-c3245330",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "vineyard-wind-replaces-mhi-preferred-supplier",
+      "publishedDate": "2020-12-01",
+      "title": "Vineyard Wind replaces preferred turbine supplier",
+      "summary": "Vineyard Wind named GE as preferred turbine supplier for Vineyard Wind 1, superseding the project’s earlier selection of MHI Vestas Offshore Wind.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vineyard Wind",
+          "url": "https://www.vineyardwind.com/press-releases/2020/12/1/vineyard-wind-selects-ge-renewable-energy-as-preferred-turbine-supplier",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "taichung-waterside-manufacturing-site",
+      "publishedDate": "2020-12-02",
+      "title": "Waterside Taichung turbine facility secured",
+      "summary": "MHI Vestas Offshore Wind and the Changfang and Xidao project leased a waterside manufacturing site at Taichung for offshore turbine work.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/MHI-Vestas-secures-footprint-Taiwan",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "lindoe-500th-v164-nacelle",
+      "publishedDate": "2020-12-07",
+      "title": "Lindø makes its 500th V164 nacelle",
+      "summary": "MHI Vestas Offshore Wind produced its 500th V164 nacelle at its Lindø manufacturing site in Denmark.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MHI Vestas Offshore Wind",
+          "url": "https://www.vestas.com/en/media/mwow-press-releases/2020/500th-v164-nacelle-produced-at-lindo-facility",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "vestas",
+          "name": "MHI Vestas Offshore Wind"
+        }
+      ]
+    },
+    {
+      "id": "vestas-mhi-offshore-jv-acquisition-closed",
+      "publishedDate": "2020-12-14",
+      "title": "Vestas completes acquisition of MHI’s offshore joint-venture stake",
+      "summary": "Vestas acquired Mitsubishi Heavy Industries’ stake in MHI Vestas Offshore Wind, taking full ownership of the former offshore joint venture. The parties expected organisational integration by 1 February 2021.",
+      "category": "corporate_market",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2020/vestas-and-mitsubishi-heavy-industries-close-partnershi-c3254048",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "vestas-offshore-operations-integration",
+      "publishedDate": "2021-01-14",
+      "title": "Offshore unit integrated into Vestas operating model",
+      "summary": "Vestas announced the integration of former offshore joint-venture functions into its own organisation following the December 2020 acquisition.",
+      "category": "corporate_market",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2021/vestas-takes-next-steps-in-integration-of-onshore-and-o-c3267842",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "mhi-vestas-japan-starts-operations",
+      "publishedDate": "2021-02-01",
+      "title": "New Japanese sales joint venture begins operations",
+      "summary": "Mitsubishi Heavy Industries and Vestas started operating MHI Vestas Japan, a separate venture to market onshore and offshore turbines in Japan.",
+      "category": "corporate_market",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Mitsubishi Heavy Industries",
+          "url": "https://www.mhi.com/news/210201.html",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "v236-platform-launch",
+      "publishedDate": "2021-02-10",
+      "title": "V236-15.0 MW offshore platform unveiled",
+      "summary": "Vestas introduced the V236-15.0 MW offshore turbine platform as it integrated its former offshore joint venture.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2021/vestas-launches-the-v236-15-0-mw-to-set-new-industry-be-c3283489",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "arcadis-ost-1-firm-order",
+      "publishedDate": "2021-06-24",
+      "title": "Arcadis Ost 1 places firm turbine order",
+      "summary": "Vestas secured a firm Parkwind order for 27 V174-9.5 MW turbines at Arcadis Ost 1, a fixed-bottom project using an installation method from a floating vessel.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2021/vestas-wins-offshore-order-for-arcadis-ost-1--which-wil-c3373900",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "baltic-eagle-firm-order",
+      "publishedDate": "2021-06-30",
+      "title": "Iberdrola and Vestas finalise Baltic Eagle contract",
+      "summary": "Vestas and Iberdrola finalised the Baltic Eagle contract, covering supply and installation of V174-9.5 MW turbines and long-term servicing.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://mb.cision.com/Public/18886/3376966/bd04343212c7d44f.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "he-dreiht-preferred-supplier",
+      "publishedDate": "2021-07-09",
+      "title": "EnBW preselects Vestas for He Dreiht",
+      "summary": "EnBW preselected Vestas and its V236-15.0 MW turbine for He Dreiht, conditional on a firm order.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2021/vestas-pre-selected-tenderer-for-the-900-mw-he-dreiht-p-c3382948",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "triton-knoll-final-turbine",
+      "publishedDate": "2021-09-17",
+      "title": "Triton Knoll completes turbine installation",
+      "summary": "RWE announced the installation of the last of 90 Vestas V164-9.5 MW turbines at Triton Knoll.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "RWE",
+          "url": "https://www.rwe.com/en/press/rwe-renewables/2021-09-17-triton-knoll-installs-its-final-turbine/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-turbine-installation-complete",
+      "publishedDate": "2021-09-21",
+      "title": "Kincardine completes floating turbine installation",
+      "summary": "Offtake partner Statkraft confirmed completion of turbine installation at Kincardine. The Vestas-equipped project has five V164 turbines and one smaller V80 unit.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "kincardine-offshore-wind-farm"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Statkraft",
+          "url": "https://www.statkraft.co.uk/newsroom/2021/statkraft-helps-worlds-largest-floating-wind-farm-find-its-customers/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "v236-osterild-prototype-site",
+      "publishedDate": "2021-10-15",
+      "title": "Østerild selected for V236 prototype test",
+      "summary": "Vestas selected Østerild in Denmark for the prototype and its initial power testing campaign.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2021/vestas-to-install-v236-15-0-mw-prototype-turbine-at-ost-c3433411",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "empire-wind-1-and-2-preferred-supplier",
+      "publishedDate": "2021-10-18",
+      "title": "Vestas named preferred supplier for both Empire Wind phases",
+      "summary": "Empire Offshore Wind selected Vestas as preferred turbine supplier for Empire Wind 1 and 2, with a combined 2.1 GW of capacity announced at the time.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2021/vestas-selected-as-preferred-supplier-for-the-2-1-gw-em-c3434433",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "vestas-greater-asia-offshore-expansion",
+      "publishedDate": "2021-10-18",
+      "title": "Asian business regions consolidated during offshore expansion",
+      "summary": "Vestas announced the consolidation of its China and Asia-Pacific operations into a single region as part of its offshore expansion and wider organisational alignment.",
+      "category": "corporate_market",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2021/vestas-creates-business-region-for-greater-asia-as-next-c3434428",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "tetraspar-demonstrator-commissioned",
+      "publishedDate": "2021-12-01",
+      "title": "TetraSpar floating demonstrator commissioned",
+      "summary": "The TetraSpar partners commissioned the full-scale floating demonstrator off Norway using a 3.6 MW offshore wind turbine from Vestas.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Stiesdal and project partners",
+          "url": "https://www.stiesdal.com/wp-content/uploads/2021/12/Joint-Press-Statement-TetraSpar-Demonstrator-commissioned-Media-Release-01-Dec-2021.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "triton-knoll-turbines-commissioned",
+      "publishedDate": "2022-01-13",
+      "title": "All Triton Knoll turbines commissioned",
+      "summary": "RWE announced completion of commissioning for the Vestas-equipped Triton Knoll offshore wind farm, with full operations still expected later in the quarter.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "RWE",
+          "url": "https://www.rwe.com/en/press/rwe-renewables/2022-01-13-rwe-announces-further-milestones-for-triton-knoll-offshore-wind-farm/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "efgl-firm-order",
+      "publishedDate": "2022-03-31",
+      "title": "Ocean Winds places firm EFGL order",
+      "summary": "Vestas secured an order from Ocean Winds for three V164-10.0 MW turbines for the 30 MW EFGL floating offshore wind project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "efgl"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2022/vestas-secures-offshore-order-with-ocean-winds-for-floa-c3537414",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "taipower-phase-2-firm-order",
+      "publishedDate": "2022-03-31",
+      "title": "Separate 295 MW Taiwan order announced for Taipower Phase II",
+      "summary": "Vestas secured a 295 MW offshore order from Foxwell Energy for Taiwan Power Company’s Phase II project, distinct from the Zhong Neng order announced the same day.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://mb.cision.com/Public/18886/3537408/a3062c11edd8761e.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "zhong-neng-firm-order",
+      "publishedDate": "2022-03-31",
+      "title": "Zhong Neng places firm offshore order",
+      "summary": "Vestas won a 295 MW turbine order for the Zhong Neng offshore wind project in Taiwan.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2022/vestas-wins-295-mw-order-for-the-zhong-neng-offshore-wi-c3537404",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "he-dreiht-conditional-order",
+      "publishedDate": "2022-06-07",
+      "title": "EnBW and Vestas sign conditional He Dreiht order",
+      "summary": "Vestas and EnBW signed a conditional turbine supply and service agreement for the He Dreiht offshore project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://news.cision.com/vestas-wind-systems-a-s/r/vestas-and-enbw-sign-conditional-order-agreement-for-the-900-mw-he-dreiht-offshore-project-in-german,c3581445",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-firm-order",
+      "publishedDate": "2022-06-27",
+      "title": "Vestas confirms EolMed turbine order",
+      "summary": "Vestas secured a 30 MW order to supply three V164-10.0 MW turbines for the EolMed floating offshore wind project in France.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "eolmed"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2022/vestas-secures-offshore-order-for-floating-wind-project-c3592016",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "norther-hydrogen-service-vessel-pilot",
+      "publishedDate": "2022-07-04",
+      "title": "Hydrogen-capable service vessel pilot announced",
+      "summary": "Vestas and Windcat Workboats launched a pilot to test a dual-fuel hydrogen and marine-gas-oil crew transfer vessel at Norther.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2022/vestas-pioneers-world-s-first-hydrogen-powered-offshore-c3596070",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "baltic-power-preferred-supplier",
+      "publishedDate": "2022-09-26",
+      "title": "Baltic Power names Vestas preferred supplier",
+      "summary": "Baltic Power selected Vestas as preferred turbine supplier for its Polish offshore wind project, proposing V236-15.0 MW turbines.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2022/vestas-selected-as-preferred-supplier-for-the-1-2-gw-ba-c3636425",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "inch-cape-preferred-supplier",
+      "publishedDate": "2022-09-28",
+      "title": "Inch Cape chooses Vestas as preferred turbine supplier",
+      "summary": "Inch Cape Offshore selected Vestas as preferred supplier for its Scottish project, proposing the V236-15.0 MW turbine.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2022/vestas-selected-as-preferred-supplier-for-the-1-1-gw-in-c3638142",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "atlantic-shores-1-preferred-supplier",
+      "publishedDate": "2022-10-06",
+      "title": "Atlantic Shores selects preferred turbine supplier",
+      "summary": "Atlantic Shores selected Vestas as preferred supplier for its 1.5 GW New Jersey offshore project. The release also described a proposed New Jersey nacelle assembly facility.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas and Atlantic Shores Offshore Wind",
+          "url": "https://www.vestas.com/en/media/company-news/2022/atlantic-shores-selects-vestas-as-preferred-turbine-sup-c3644063",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "szczecin-nacelle-factory-planned",
+      "publishedDate": "2022-10-13",
+      "title": "V236 nacelle and hub assembly plant announced in Poland",
+      "summary": "Vestas announced plans to assemble V236-15.0 MW offshore nacelles and hubs at a new Szczecin facility.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/content/dam/vestas-com/global/en/pages/factory-visit-in-poland/2022-10-13%20Poland%20Factory%20Announcement_final.pdf.coredownload.inline.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "groix-belle-ile-project-abandoned",
+      "publishedDate": "2022-11-16",
+      "title": "Groix and Belle-Île floating wind project abandoned",
+      "summary": "The developer abandoned the Groix and Belle-Île floating project in France. MHI Vestas Offshore Wind had previously been named preferred turbine supplier.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Le Monde",
+          "url": "https://www.lemonde.fr/economie/article/2022/11/16/eolien-flottant-le-projet-de-groix-belle-ile-tombe-a-l-eau_6150172_3234.html",
+          "tier": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "arcadis-ost-1-floating-rna-first-installation",
+      "publishedDate": "2022-11-24",
+      "title": "First Arcadis Ost 1 turbine installed from a floating vessel",
+      "summary": "Heerema, Parkwind and Vestas installed the first V174-9.5 MW unit at the fixed-bottom Arcadis Ost 1 project using a floating-vessel rotor–nacelle assembly method.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Heerema Marine Contractors",
+          "url": "https://heerema.com/news/heerema-installs-first-wind-turbine-using-novel-rna-method",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "munmubaram-preferred-supplier",
+      "publishedDate": "2022-11-29",
+      "title": "MunmuBaram names Vestas preferred supplier",
+      "summary": "MunmuBaram selected Vestas as preferred turbine supplier for the 1.3 GW MunmuBaram floating project in South Korea. Supply of V236-15.0 MW turbines remained subject to further development.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "munmubaram"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "MunmuBaram",
+          "url": "https://www.munmubaram.com/news-notices/munmubaram-selected-vestas-as-preferred-supplier-for-wind-turbine-generators",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "akita-noshiro-commercial-operation",
+      "publishedDate": "2022-12-22",
+      "title": "Noshiro starts commercial operation after turbine installation",
+      "summary": "Project partner Marubeni reported that Noshiro began commercial generation after all 33 turbines across Akita and Noshiro had been installed. The Vestas turbine package was documented in the earlier firm order.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Marubeni",
+          "url": "https://www.marubeni.com/en/news/2022/release/00096.html",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "v236-prototype-first-power",
+      "publishedDate": "2022-12-30",
+      "title": "V236 offshore prototype makes its first electricity",
+      "summary": "Vestas announced that its V236-15.0 MW prototype generated its first power at Østerild in Denmark.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2022/vestas--v236-15-0-mw-prototype-wind-turbine-produces-fi-c3691167",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "nordseecluster-preferred-supplier",
+      "publishedDate": "2023-02-28",
+      "title": "Nordseecluster names Vestas preferred supplier",
+      "summary": "Vestas was named preferred supplier for up to 104 V236-15.0 MW turbines for the two-phase German Nordseecluster, subject to investment decisions.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2023/vestas-selected-as-preferred-supplier-for-the-1-6-gw-no-c3725142",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "wando-geumil-preferred-supplier",
+      "publishedDate": "2023-03-01",
+      "title": "Wando Geumil names Vestas preferred supplier",
+      "summary": "Vestas signed a preferred supplier agreement with Korea South-East Power for the 600 MW Wando Geumil offshore project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://mb.cision.com/Public/18886/3725747/babf4250fd6cc14e.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "south-korea-495mw-floating-preferred-supplier",
+      "publishedDate": "2023-03-31",
+      "title": "Preferred supplier agreement signed for 495 MW Korean floating project",
+      "summary": "Vestas announced a preferred supplier agreement for an unnamed 495 MW South Korean floating offshore wind project using V236-15.0 MW turbines, conditional on the project proceeding.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2023/vestas-selected-as-preferred-supplier-for-495-mw-floati-c3744994",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "hibikinada-firm-order",
+      "publishedDate": "2023-04-25",
+      "title": "Kitakyushu-Hibikinada places firm turbine order",
+      "summary": "Vestas received a 238 MW order to supply and install 25 V174-9.5 MW turbines and provide long-term service for Japan’s commercial Kitakyushu-Hibikinada offshore project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2023/vestas-secures-238-mw-order-for-offshore-wind-project-i-c3757246",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "seagreen-final-turbine-installed",
+      "publishedDate": "2023-06-22",
+      "title": "Final Seagreen turbine installed",
+      "summary": "SSE reported that the last of 114 Vestas V164-10.0 MW turbines had been installed at Seagreen, with commissioning still in progress.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "SSE",
+          "url": "https://www.sse.com/news-and-views/2023/06/final-wind-turbine-installed-at-seagreen-scotland-s-largest-offshore-wind-farm/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "baltic-power-conditional-order",
+      "publishedDate": "2023-08-10",
+      "title": "Conditional Baltic Power turbine agreement signed",
+      "summary": "Vestas entered a conditional turbine supply agreement for Poland’s Baltic Power project before the subsequent firm order.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2023/vestas-has-signed-a-conditional-agreement-for-an-up-to--c3816237",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "baltic-power-firm-order",
+      "publishedDate": "2023-09-28",
+      "title": "Baltic Power places firm order for 76 V236 turbines",
+      "summary": "Vestas secured an order for 76 V236-15.0 MW turbines for the 1,140 MW Baltic Power offshore wind project in Poland.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2023/vestas-wins-1-140-mw-offshore-order-for-v236-15-0-mw-wi-c3844196",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "he-dreiht-firm-order",
+      "publishedDate": "2023-09-29",
+      "title": "He Dreiht places firm order for 64 V236 turbines",
+      "summary": "Vestas secured a 960 MW order for 64 V236-15.0 MW turbines for EnBW’s He Dreiht project, with an initial five-year service agreement.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2023/vestas-secures-a-960-mw-firm-order-of-v236-15-0-mw-wind-c3845287",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "seagreen-fully-operational",
+      "publishedDate": "2023-10-17",
+      "title": "Seagreen reaches full operation",
+      "summary": "SSE and TotalEnergies announced full operation of all 114 Vestas V164-10.0 MW turbines at Seagreen.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "SSE",
+          "url": "https://www.sse.com/news-and-views/2023/10/scotland-s-largest-offshore-wind-farm-now-fully-operational/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "arcadis-ost-1-turbine-installation-complete",
+      "publishedDate": "2023-11-17",
+      "title": "Arcadis Ost 1 completes turbine installation",
+      "summary": "Parkwind, Heerema and Vestas installed the last three of 27 turbines at Arcadis Ost 1 using a floating installation method for the fixed-bottom project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "offshoreWIND.biz",
+          "url": "https://www.offshorewind.biz/2023/11/17/all-arcadis-ost-1-wind-turbines-stand-complete",
+          "tier": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "v236-dnv-type-certification",
+      "publishedDate": "2023-12-04",
+      "title": "V236 receives DNV type certification",
+      "summary": "DNV type-certified the Vestas V236-15.0 MW offshore platform following prototype testing at Østerild. Vestas’s annual report dates the certification to November 2023.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Danish Offshore Industry",
+          "url": "https://www.doi.dk/en/vindkraft/artikel/vestas-flagskibsmoelle-bliver-certificeret",
+          "tier": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "norfolk-zone-preferred-and-exclusive-agreements",
+      "publishedDate": "2023-12-20",
+      "title": "Vanguard West preferred supplier and neighbouring exclusivity agreements",
+      "summary": "Vattenfall and Vestas agreed preferred supplier terms for Vanguard West and exclusivity terms for Vanguard East and Norfolk Boreas.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2023/vestas-and-vattenfall-sign-1-4-gw-preferred-supplier-ag-c3897230",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "ecowende-firm-order",
+      "publishedDate": "2023-12-22",
+      "title": "Ecowende places firm order for offshore turbines",
+      "summary": "Vestas secured a firm order for 52 V236-15.0 MW turbines and a 15-year service agreement for Ecowende at Hollandse Kust West.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://news.cision.com/vestas-wind-systems-a-s/r/vestas-secures-a-firm-order-for-ecowende-s-hollandse-kust-west-offshore-wind-farm-in-the-netherlands,c3898464",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "shinan-ui-preferred-supplier",
+      "publishedDate": "2023-12-29",
+      "title": "Shinan-Ui names Vestas preferred supplier",
+      "summary": "Vestas signed a preferred supplier agreement with Hanwha for the 390 MW Shinan-Ui offshore project in South Korea.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2023/vestas-selected-as-preferred-supplier-for-the-390-mw-sh-c3902541",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "szczecin-offshore-blade-factory-planned",
+      "publishedDate": "2024-01-11",
+      "title": "Second Polish offshore manufacturing plant proposed",
+      "summary": "Vestas announced plans for a V236-15.0 MW blade factory in Szczecin, separate from its planned offshore nacelle assembly plant.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-plans-to-establish-a-second-offshore-factory-in--c3907387",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "empire-wind-1-conditional-agreement",
+      "publishedDate": "2024-03-05",
+      "title": "Empire Wind 1 conditional agreement progresses",
+      "summary": "Vestas announced progress on a conditional turbine supply agreement for Equinor’s 810 MW Empire Wind 1 project following New York’s new offshore award.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-is-readying-new-york-for-offshore-wind-and-moves-c3941164",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "thyboron-v236-verification-order",
+      "publishedDate": "2024-03-08",
+      "title": "Waterfront V236 verification turbine ordered in Denmark",
+      "summary": "Vestas secured an order for a V236-15.0 MW turbine at the Port of Thyborøn to support verification before serial offshore production and installation.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-to-install-v236-15-0-mw-turbine-for-a-project-in-c3943237",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "nordseecluster-a-firm-order",
+      "publishedDate": "2024-06-14",
+      "title": "Nordseecluster A places firm turbine order",
+      "summary": "Vestas received a firm order for the 660 MW Nordseecluster A phase, covering 44 V236-15.0 MW turbines and service.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-receives-660-mw-offshore-order-in-germany-c4000333",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "nordlicht-i-ii-conditional-agreement",
+      "publishedDate": "2024-06-17",
+      "title": "Conditional Nordlicht I and II turbine agreement announced",
+      "summary": "Vestas announced the named scope of its previously disclosed conditional deal with Vattenfall and BASF for 112 V236-15.0 MW turbines across Nordlicht I and II. The deal specified low-emission steel for sections of 56 of the 112 turbine towers.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-has-signed-conditional-agreement-with-vattenfall-c4002209",
+          "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "Vattenfall",
+          "url": "https://group.vattenfall.com/press-and-media/newsroom/2024/vattenfall-and-basf-partner-with-vestas-for-low-emission-steel-wind-turbines-in-germany",
+          "tier": "primary",
+          "publishedDate": "2024-06-24",
+          "evidence": "Vattenfall and BASF said that low-emission steel would be used in parts of the towers for 56 of the 112 Vestas turbines planned across Nordlicht."
+        }
+      ]
+    },
+    {
+      "id": "oranjewind-firm-order",
+      "publishedDate": "2024-07-29",
+      "title": "OranjeWind places firm turbine order",
+      "summary": "Vestas secured a 795 MW order for 53 V236-15.0 MW turbines for the OranjeWind offshore wind farm in the Netherlands.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-secures-795-mw-order-for-the-oranjewind-offshore-c4019421",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "zhong-neng-turbine-installation-complete",
+      "publishedDate": "2024-09-05",
+      "title": "Zhong Neng turbine installation completed",
+      "summary": "Vestas confirmed completion of offshore turbine installation at the Zhong Neng wind farm in Taiwan.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.prnewswire.com/apac/news-releases/vestas-completes-turbine-installation-for-zhong-neng-offshore-wind-farm-302239239.html",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "empire-wind-1-firm-order",
+      "publishedDate": "2024-09-09",
+      "title": "First US offshore order confirmed for Empire Wind 1",
+      "summary": "Vestas secured a firm order from Equinor for 54 V236-15.0 MW turbines for the 810 MW Empire Wind 1 project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-secures-its-first-u-s--offshore-order-with-810-m-c4034915",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "inch-cape-conditional-order",
+      "publishedDate": "2024-09-30",
+      "title": "Inch Cape signs conditional turbine order",
+      "summary": "Vestas signed a conditional agreement for 72 V236-15.0 MW turbines at Inch Cape ahead of the December firm order.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-signs-conditional-agreement-for-a-1-1-gw-offshor-c4045042",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "nordseecluster-b-firm-order",
+      "publishedDate": "2024-11-28",
+      "title": "Nordseecluster B secures firm turbine order",
+      "summary": "Vestas secured an order for 60 V236-15.0 MW turbines for the separate 900 MW Nordseecluster B phase.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://news.cision.com/vestas-wind-systems-a-s/r/vestas-secures-900-mw-order-for-the-nordseecluster-b-offshore-wind-project-in-germany,c4072816",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "szczecin-offshore-port-logistics-deal",
+      "publishedDate": "2024-12-09",
+      "title": "Szczecin factory gains port logistics partner",
+      "summary": "Blue Water Shipping and Vestas expanded their agreement to cover port handling and stevedoring for the Szczecin V236 factory.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Blue Water Shipping",
+          "url": "https://www.bws.net/media/news/expansion-of-port-service-and-stevedoring-agreement-with-vestas",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "inch-cape-firm-order",
+      "publishedDate": "2024-12-13",
+      "title": "Inch Cape places firm turbine order",
+      "summary": "Vestas secured an order for 72 V236-15.0 MW turbines for the Inch Cape offshore wind project in Scotland.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-wins-1-1-gw-order-for-the-inch-cape-offshore-win-c4083665",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "oga-katagami-akita-firm-order",
+      "publishedDate": "2024-12-27",
+      "title": "Japanese offshore project orders 21 V236 turbines",
+      "summary": "Vestas received a 315 MW order for 21 V236-15.0 MW turbines at Oga Katagami Akita, its first firm order for the platform in the Asia-Pacific region.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2024/vestas-wins-315-mw-offshore-order-in-japan-c4086724",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "fengmiao-i-firm-order",
+      "publishedDate": "2025-03-28",
+      "title": "Fengmiao I places firm turbine order in Taiwan",
+      "summary": "Vestas received a 495 MW order from Copenhagen Infrastructure Partners for 33 V236-15.0 MW turbines and long-term service for Fengmiao I.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2025/vestas-wins-495-mw-offshore-order-with-v236-15-0-mw-tur-c4127286",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "nordlicht-1-firm-order",
+      "publishedDate": "2025-03-31",
+      "title": "Nordlicht 1 places firm turbine order",
+      "summary": "Vestas confirmed a firm order from Vattenfall for 68 V236-15.0 MW turbines for Nordlicht 1 in the German North Sea.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2025/vestas-wins-firm-order-for-the-nordlicht-1-offshore-win-c4128389",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "he-dreiht-first-v236-installed",
+      "publishedDate": "2025-04-25",
+      "title": "First commercial V236 installed offshore at He Dreiht",
+      "summary": "EnBW reported the first installation at He Dreiht, marking the first commercial offshore installation of the Vestas V236-15.0 MW turbine.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "EnBW",
+          "url": "https://www.enbw.com/press/enbw-he-dreiht-offshore-wind-farm.html",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "efgl-first-turbine-assembly",
+      "publishedDate": "2025-06-10",
+      "title": "First EFGL turbine mounted on its floater",
+      "summary": "Ocean Winds reported that the first 10 MW Vestas turbine at EFGL was mounted on its floating foundation at Port-La Nouvelle.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "efgl"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Ocean Winds",
+          "url": "https://www.oceanwinds.com/news/uncategorized/ocean-winds-celebrates-successful-assembly-of-the-first-turbine-of-its-efgl-floating-offshore-wind-project-at-port-la-nouvelle/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "cadeler-wind-keeper-firm-contract",
+      "publishedDate": "2025-07-18",
+      "title": "Vestas secures long-term offshore vessel capacity",
+      "summary": "Cadeler signed a three-year firm contract with Vestas for Wind Keeper to support offshore installation, transport and maintenance, starting in early 2026.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Cadeler",
+          "url": "https://www.cadeler.dk/news/cadeler-takes-delivery-of-wind-keeper-and-locks-down-first-three-years-of-utilisation-with-the-signing-of-a-long-term-firm-contract",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "efgl-first-turbine-installed-at-sea",
+      "publishedDate": "2025-08-04",
+      "title": "First EFGL floating turbine installed at sea",
+      "summary": "EDP reported that the first 10 MW Vestas floating turbine at EFGL was towed and anchored at the project site.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "efgl"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "EDP",
+          "url": "https://edp.com/en/media/news/first-floating-wind-turbine-successfully-installed-french-sea",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "atlantic-shores-1-orec-terminated",
+      "publishedDate": "2025-08-13",
+      "title": "New Jersey terminates Atlantic Shores 1 renewable-credit award",
+      "summary": "New Jersey regulators approved termination of the renewable energy credit award for Atlantic Shores 1, the offshore project that previously named Vestas preferred turbine supplier.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "New Jersey Board of Public Utilities",
+          "url": "https://www.nj.gov/bpu/pdf/boardorders/2025/20250813/8D%20ORDER%20ASOW%20Petition%20to%20Terminate.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "szczecin-blade-factory-paused",
+      "publishedDate": "2025-10-20",
+      "title": "Planned Szczecin offshore blade factory paused",
+      "summary": "Vestas confirmed to media that it had paused the separate Szczecin offshore blade plant because of lower-than-expected offshore demand in Europe.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Notes from Poland",
+          "url": "https://notesfrompoland.com/2025/10/20/danish-wind-turbine-giant-vestas-suspends-plans-for-major-plant-in-poland/",
+          "tier": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "szczecin-nacelles-first-offshore-installation",
+      "publishedDate": "2025-11-13",
+      "title": "First Szczecin-built nacelles installed offshore",
+      "summary": "ORLEN reported installation of the first three Baltic Power turbines with nacelles made at the Vestas factory in Szczecin.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "ORLEN",
+          "url": "https://www.orlen.pl/en/about-the-company/media/press-releases/current/2025/November-2025/first-turbines-with-polish-made-nacelles-installed-at-the-orlen-groups-offshore-wind-farm",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "he-dreiht-first-power",
+      "publishedDate": "2025-11-26",
+      "title": "First He Dreiht V236 sends power to grid",
+      "summary": "EnBW reported that the first of its Vestas 15 MW turbines at He Dreiht generated power and exported electricity to the grid.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "EnBW",
+          "url": "https://www.enbw.com/press/first-wind-turbine-from-enbw-he-dreiht-produces-electricity.html",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "emea-660mw-firm-order",
+      "publishedDate": "2025-12-01",
+      "title": "Vestas announces 660 MW offshore order in EMEA",
+      "summary": "Vestas disclosed a 660 MW offshore order in EMEA. The announcement did not disclose a project or customer.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2025/vestas-announces-660-mw-offshore-order-in-emea-c4275089",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-first-floating-turbine-tow",
+      "publishedDate": "2025-12-10",
+      "title": "First EolMed Floating Offshore Wind Turbine Heads to Installation Site",
+      "summary": "The first Vestas V164-10.0 MW turbine left Port-La Nouvelle for the EolMed site.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "eolmed"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "engineering",
+          "editionSlug": "2025-12-14",
+          "sourceRecordId": "eng-src-2025-12-14-eolmed-first-turbine",
+          "tier": "secondary",
+          "evidence": "the first of three Vestas V164-10.0 MW turbines left Port-La Nouvelle for installation at the EolMed floating offshore wind farm."
+        }
+      ]
+    },
+    {
+      "id": "shinan-ui-firm-order",
+      "publishedDate": "2025-12-29",
+      "title": "Shinan-Ui becomes Vestas’s first firm offshore order in South Korea",
+      "summary": "Vestas secured a firm order for 26 V236-15.0 MW turbines and 20 years of service for the 390 MW Shinan-Ui offshore project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2025/vestas-secures-390-mw-offshore-order-in-south-korea-c4287052",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "vanguard-west-firm-order",
+      "publishedDate": "2026-02-20",
+      "title": "Vanguard West places 1.38 GW turbine order",
+      "summary": "Vestas received a firm order from RWE for 92 V236-15.0 MW turbines and service for Vanguard West.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2026/vestas-increases-offshore-momentum-in-europe-with-1-38--c4310850",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "hibikinada-commercial-operation",
+      "publishedDate": "2026-03-02",
+      "title": "Kitakyushu-Hibikinada begins commercial operation",
+      "summary": "Hibiki Wind Energy announced commercial operation of the fixed-bottom Kitakyushu-Hibikinada offshore project with 25 Vestas turbines.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Hibiki Wind Energy",
+          "url": "https://www.hibikiwindenergy.co.jp/news/2026/0301.html",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "vanguard-east-firm-order",
+      "publishedDate": "2026-03-10",
+      "title": "Vanguard East places 1.38 GW turbine order",
+      "summary": "Vestas received a separate firm order from RWE for 92 V236-15.0 MW turbines and service for Vanguard East.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2026/vestas-builds-offshore-momentum-in-europe-with-another--c4318975",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "scotland-offshore-nacelle-factory-planned",
+      "publishedDate": "2026-03-25",
+      "title": "V236 nacelle and hub plant proposed for Scotland",
+      "summary": "Vestas proposed a Scottish factory for V236 nacelles and hubs, with the investment decision subject to demand and other conditions.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Vestas",
+          "url": "https://www.vestas.com/en/media/company-news/2026/vestas-sets-out-plans-to-build-nacelle-factory-in-scotl-c4326269",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-project-energised",
+      "publishedDate": "2026-04-20",
+      "title": "Qair announces energisation of EolMed",
+      "summary": "Qair reported energisation of the EolMed floating offshore wind pilot, which uses three 10 MW Vestas turbines.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "eolmed"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Qair France",
+          "url": "https://france.qair.energy/qair-met-sous-tension-son-projet-pilote-deoliennes-flottantes/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "efgl-first-power",
+      "publishedDate": "2026-05-04",
+      "title": "EFGL floating wind farm delivers first power",
+      "summary": "Ocean Winds reported first grid power from EFGL. Its three 10 MW floating turbines are the Vestas units confirmed in the developer’s earlier assembly announcement and the existing Projects record.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "efgl"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Ocean Winds",
+          "url": "https://www.oceanwinds.com/news/uncategorized/ocean-winds-delivers-its-first-power-from-floating-offshore-wind-project-in-france/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "nordseecluster-a-first-turbine",
+      "publishedDate": "2026-06-11",
+      "title": "First Nordseecluster A turbine installed",
+      "summary": "RWE reported installation of the first Vestas 15 MW turbine at Nordseecluster A in the German North Sea.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "RWE",
+          "url": "https://www.rwe.com/en/press/rwe-offshore-wind-gmbh/2026-06-11-first-turbine-up-at-nordseecluster-a-offshore-wind-farm-in-german-north-sea/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "efgl-full-power",
+      "publishedDate": "2026-07-10",
+      "title": "EFGL reaches full power",
+      "summary": "Ocean Winds reported full power at the 30 MW EFGL floating wind farm, which uses three Vestas 10 MW turbines.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "efgl"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Ocean Winds",
+          "url": "https://www.oceanwinds.com/news/uncategorized/ocean-winds-reaches-full-power-from-its-first-floating-offshore-wind-project-in-france/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "he-dreiht-turbine-installation-complete",
+      "publishedDate": "2026-08-12",
+      "title": "He Dreiht completes turbine installation",
+      "summary": "Cadeler completed the offshore installation campaign for all 64 Vestas V236-15.0 MW turbines at He Dreiht.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Cadeler",
+          "url": "https://ir.cadeler.com/press-releases/detail/114/cadeler-installs-final-turbine-at-he-dreiht-offshore-wind-farm",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "nordseecluster-a-first-power-and-half-installed",
+      "publishedDate": "2026-08-31",
+      "title": "Nordseecluster A reaches half-installation milestone",
+      "summary": "RWE reported that 22 of 44 Vestas turbines had been installed at Nordseecluster A and the first turbine had started exporting power in July.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "RWE",
+          "url": "https://www.rwe.com/en/investor-relations/financial-calendar-and-publications/news-and-ad-hoc-announcements/news/news-2026-08-31_a/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "culzean-v112-tow-to-site",
+      "publishedDate": "2026-09-02",
+      "title": "Culzean floating pilot reaches its offshore site",
+      "summary": "The Culzean Demo Floating Wind Pilot unit carrying a 3 MW Vestas turbine arrived at the North Sea site after tow-out from Wergeland Base in Norway.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [
+        "culzean-demo-floating-wind"
+      ],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Norwegian Offshore Wind",
+          "url": "https://www.norwegianoffshorewind.no/news/culzean-floating-wind-turbine-reaches-north-sea-field-after-tow-out-from-norway",
+          "tier": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "neretek-bc90-collaboration",
+      "publishedDate": "2026-10-06",
+      "title": "Vestas and Neretek agree to study deeper-water fixed foundations",
+      "summary": "Vestas and Neretek signed a memorandum to explore pairing offshore turbines with Neretek’s bottom-fixed BC90 concept for depths beyond those suited to conventional fixed foundations.",
+      "category": "technology_engineering",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Neretek",
+          "url": "https://www.neretek.com/post/neretek-and-vestas-sign-memorandum-of-understanding-to-explore-opportunities-to-accelerate-offshore",
+          "tier": "primary"
+        },
+        {
+          "kind": "engineering",
+          "editionSlug": "2026-10-11",
+          "sourceRecordId": "eng-src-2026-10-11-ow-neretek",
+          "tier": "secondary",
+          "evidence": "The Vestas and Neretek MoU concerns a bottom-fixed BC90 concept for transitional deep water, described as an alternative to floating wind."
+        }
+      ]
+    },
+    {
+      "id": "baltic-power-turbine-installation-complete",
+      "publishedDate": "2026-10-07",
+      "title": "Baltic Power completes turbine installation",
+      "summary": "Cadeler completed installation of all 76 Vestas V236-15.0 MW turbines, with full commissioning still pending in the October announcement.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "BW Group (Cadeler release)",
+          "url": "https://bw-group.com/newsroom/articles/2026/10/cadeler-completes-its-turbine-installation-campaign-at-baltic-power-polands-first-offshore-wind-farm/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "ecowende-last-turbine-installed",
+      "publishedDate": "2026-11-02",
+      "title": "Ecowende completes turbine installation",
+      "summary": "Van Oord and Vestas completed installation of all 52 offshore turbines at Ecowende, moving the project into testing and commissioning.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Van Oord",
+          "url": "https://www.vanoord.com/drupal/media/data/default/2026-11/Press%20Release%20-%20Van%20Oord%20and%20Vestas%20install%20last%20turbine%20at%20Ecowende.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "wando-geumil-supply-negotiations-delayed",
+      "publishedDate": "2026-11-11",
+      "title": "Wando Geumil turbine negotiations delay financing",
+      "summary": "Asia Today reported, citing the project’s Korean power companies, that negotiations with Vestas over construction risk allocation had delayed the financing timetable. The report did not confirm a firm order or cancellation.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "vestas"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-19",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Asia Today via UPI",
+          "url": "https://www.upi.com/Top_News/World-News/2026/11/11/offshore-wind-wando-geumil-vestas/1301794437457/",
+          "tier": "secondary"
+        }
+      ]
+    }
+  ]
+}

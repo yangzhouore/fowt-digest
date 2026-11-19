@@ -26,28 +26,32 @@ test("company directory search leads to the Vestas timeline, source and project"
   await expect(directory.getByRole("status")).toHaveText("No companies match this search.");
   await search.fill(" vEsT ");
   await expect(directory.getByRole("link")).toHaveCount(1);
-  await expect(directory.getByText("2 retained updates · Latest 2026-10-07")).toBeVisible();
+  await expect(directory.getByText(/\d+ retained updates · Latest 2026-/)).toBeVisible();
   await directory.getByRole("link", { name: "Vestas", exact: true }).click();
   await expect(page).toHaveURL("/companies/vestas");
   await expect(page.getByRole("heading", { name: "Vestas", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Company website" })).toHaveAttribute("href", "https://www.vestas.com/");
   const timeline = page.getByRole("region", { name: "Company Timeline" });
   await expect(timeline.getByText(/relevant to offshore and floating wind.*only reviewed records in the Digest archive/)).toBeVisible();
-  await expect(timeline.getByRole("heading", { level: 3 })).toHaveText([
-    "Vestas Partners with Deepwater Wind Technology Developer",
-    "First EolMed Floating Offshore Wind Turbine Heads to Installation Site",
-  ]);
   const filter = timeline.getByLabel("Filter by category");
+  const year = timeline.getByLabel("Filter by year");
+  await expect(timeline.getByText(/Vestas acquired MHI’s share in December 2020/)).toBeVisible();
+  const dates = await timeline.locator("time").evaluateAll((entries) => entries.map((entry) => entry.textContent));
+  expect(dates).toEqual([...dates].sort().reverse());
+  await year.selectOption("2018");
   await filter.selectOption("digital_ai");
-  await expect(timeline.getByRole("status")).toHaveText("No retained developments in this category.");
+  await expect(timeline.getByRole("heading", { level: 3 })).toHaveText("SMART offshore turbine tools launched");
+  await expect(timeline.getByRole("link", { name: "Original source · MHI Vestas Offshore Wind" })).toBeVisible();
+  await year.selectOption("2025");
+  await expect(timeline.getByRole("status")).toHaveText("No retained developments match these filters.");
   await filter.selectOption("projects_contracts");
-  await expect(timeline.getByRole("heading", { level: 3 })).toHaveText(["First EolMed Floating Offshore Wind Turbine Heads to Installation Site"]);
-  await expect(timeline.getByRole("link", { name: /^Project EolMed/i })).toHaveAttribute("href", "/projects/eolmed");
+  const item = timeline.locator("li").filter({ has: page.getByRole("heading", { name: "First EolMed Floating Offshore Wind Turbine Heads to Installation Site" }) });
+  await expect(item.getByRole("link", { name: /^Project EolMed/i })).toHaveAttribute("href", "/projects/eolmed");
 
   const projects = page.getByRole("region", { name: "Related Projects" });
   await expect(projects.getByRole("link")).toHaveCount(6);
   await expect(projects.getByText(/Preferred supplier; conditional on development/)).toBeVisible();
-  await timeline.getByRole("link", { name: /^Original source/ }).click();
+  await item.getByRole("link", { name: /^Original source/ }).click();
   await expect(page).toHaveURL(sourceUrl);
   await expect(page.getByRole("heading", { name: "Original EolMed source" })).toBeVisible();
   await page.goBack();
@@ -70,16 +74,18 @@ test("Industry links to Company Intelligence and unreviewed companies show the e
   expect((await request.get("/companies/not-in-catalogue")).status()).toBe(404);
 });
 
-test("company timeline keeps the selected category in mobile Chinese and dark mode", async ({ page }) => {
+test("company timeline keeps the selected year and category in mobile Chinese and dark mode", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/companies/vestas");
   const timeline = page.getByRole("region", { name: "Company Timeline" });
+  await timeline.getByLabel("Filter by year").selectOption("2026");
   await timeline.getByLabel("Filter by category").selectOption("technology_engineering");
   await page.getByRole("button", { name: "中文", exact: true }).click();
   await page.locator('label[for="theme-dark"]').click();
   const translatedTimeline = page.getByRole("region", { name: "企业动态时间线" });
   await expect(translatedTimeline.getByLabel("按类别筛选")).toHaveValue("technology_engineering");
-  await expect(translatedTimeline.getByRole("heading", { level: 3 })).toHaveText("Vestas Partners with Deepwater Wind Technology Developer");
+  await expect(translatedTimeline.getByLabel("按年份筛选")).toHaveValue("2026");
+  await expect(translatedTimeline.getByRole("heading", { name: "Vestas and Neretek agree to study deeper-water fixed foundations" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "相关项目" })).toBeVisible();
   const contentFits = await translatedTimeline.evaluate((element) => element.scrollWidth <= element.clientWidth);
   expect(contentFits).toBe(true);

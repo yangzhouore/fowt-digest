@@ -1,0 +1,72 @@
+.content {
+  width: min(100%, 760px);
+  margin-inline: auto;
+  padding-bottom: 2rem;
+}
+
+.form label,
+.meta,
+.status {
+  color: var(--muted);
+  font: 0.875rem system-ui, sans-serif;
+}
+
+.inputRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.inputRow input,
+.inputRow button,
+.filters button {
+  border: 1px solid var(--strong-border);
+  background: var(--paper);
+  color: var(--ink);
+  font: 0.9rem system-ui, sans-serif;
+  padding: 0.5rem 0.7rem;
+}
+
+.inputRow input {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  font-size: 1rem;
+}
+
+.inputRow button,
+.filters button {
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+}
+
+.filters button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.results li {
+  border-top: 1px solid var(--border);
+  padding: 0.8rem 0;
+}
+
+.results h2 {
+  font-size: 1.18rem;
+  margin: 0.2rem 0;
+}
+
+.results p {
+  margin: 0.3rem 0;
+}

@@ -59,7 +59,24 @@ test("company directory search leads to the Vestas timeline, source and project"
   await expect(page).toHaveURL("/projects/eolmed");
 });
 
-test("Industry links to Company Intelligence and unreviewed companies show the empty timeline", async ({ page, request }) => {
+test("every company listed in the directory renders a static timeline", async ({ page, request }) => {
+  await page.goto("/companies");
+  const links = page.getByRole("region", { name: "Company directory" }).getByRole("link");
+  await expect(links).toHaveCount(47);
+  const paths = await links.evaluateAll((entries) => entries.map((entry) => entry.getAttribute("href") ?? ""));
+  expect(new Set(paths).size).toBe(47);
+  for (let start = 0; start < paths.length; start += 8) {
+    await Promise.all(paths.slice(start, start + 8).map(async (path) => {
+      expect(path).toMatch(/^\/companies\/[a-z0-9-]+$/);
+      const response = await request.get(path);
+      expect(response.status(), path).toBe(200);
+      expect(await response.text(), path).toContain('id="company-timeline-heading"');
+      await response.dispose();
+    }));
+  }
+});
+
+test("Industry links to Company Intelligence and sparse timelines retain reviewed evidence", async ({ page, request }) => {
   await page.goto("/industry#industry-catalogue");
   await expect(page.getByRole("link", { name: "Browse Company Intelligence" })).toHaveAttribute("href", "/companies");
   const entry = page.locator("#company-equinor");
@@ -67,10 +84,18 @@ test("Industry links to Company Intelligence and unreviewed companies show the e
   await entry.getByRole("link", { name: "Company Intelligence", exact: true }).click();
   await expect(page).toHaveURL("/companies/equinor");
   const timeline = page.getByRole("region", { name: "Company Timeline" });
-  await expect(timeline.getByText("No reviewed developments have been linked to this company yet.")).toBeVisible();
-  await expect(timeline.getByLabel("Filter by category")).toHaveCount(0);
+  await timeline.getByLabel("Filter by year").selectOption("2019");
+  await timeline.getByLabel("Filter by category").selectOption("projects_contracts");
+  const award = timeline.locator("li").filter({ has: page.getByRole("heading", { name: "Hywind Tampen main contracts awarded" }) });
+  await expect(award.getByRole("link", { name: /Project Hywind Tampen/i })).toHaveAttribute("href", "/projects/hywind-tampen");
   await expect(page.getByRole("region", { name: "Related Projects" })).toBeVisible();
   await expect(page.locator(".site-header").locator('a[href^="/companies"]')).toHaveCount(0);
+  await page.goto("/companies/vicinay-marine");
+  await expect(timeline.getByRole("heading", { name: "Vicinay Marine and TECNALIA validate a mooring corrosion sensor" })).toBeVisible();
+  await timeline.getByLabel("Filter by year").selectOption("2023");
+  await expect(timeline.getByRole("heading", { level: 3 })).toHaveText("FLOAT&M reports progress on floating wind operations and maintenance");
+  await timeline.getByLabel("Filter by category").selectOption("corporate_market");
+  await expect(timeline.getByRole("status")).toHaveText("No retained developments match these filters.");
   expect((await request.get("/companies/not-in-catalogue")).status()).toBe(404);
 });
 

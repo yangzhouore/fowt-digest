@@ -60,7 +60,8 @@ The product succeeds when a reader can:
 - Source-backed facts and provenance come before presentation.
 - Research and Engineering selection methods remain separate and transparent.
 - The pipeline is the source of truth for Research data.
-- The website is a static presentation layer over committed data.
+- Intelligence content is a static presentation of committed data. Subscribe
+  handles server-side preferences and scheduled email delivery only.
 - Industry and Projects are structured intelligence, not ranked news feeds.
 - Digital & AI stays narrow to offshore wind, digital engineering, energy
   systems, and relevant compute infrastructure.

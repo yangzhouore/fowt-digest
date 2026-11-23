@@ -159,8 +159,9 @@ git diff --check
 ## Deployment
 
 Production is deployed by Vercel from committed `main` through Git integration.
-The repository does not use Vercel CLI, deployment tokens, scheduled jobs, or a
-second deployment system.
+Subscribe uses Vercel Cron for weekly email delivery. Setup and operating
+instructions are in [Subscribe MVP](docs/SUBSCRIBE_MVP.md). Deployment uses the
+Git integration.
 
 ## Current Limitations
 
@@ -174,8 +175,9 @@ second deployment system.
   publishers, proper nouns, and URLs remain in their original language unless
   an explicit translated field exists.
 - New data publication is a manual accepted-change workflow.
-- There is no backend, database, CMS, API, scheduler, semantic search, or
-  automatic Engineering/project collection. Research collection runs locally via OpenAlex.
+- Intelligence content is served from committed static data. Only Subscribe
+  uses API handlers, persistence, email and scheduling. Research collection
+  runs locally via OpenAlex. Engineering and project source review stay manual.
 - The site does not generate AI summaries, findings, limitations,
   scores, or editorial analysis.
 - Paper content is displayed from deterministic pipeline output and is not

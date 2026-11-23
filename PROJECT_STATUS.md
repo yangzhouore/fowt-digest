@@ -365,9 +365,10 @@ committed `main` through Git integration.
   fallback for expected access/quota failures. It does not use external
   translation, locale routes, or duplicated source datasets.
 - Archive Search is deterministic, client-side, and uses committed website data.
-- No backend, database, CMS, API routes, scheduler, semantic search, AI writing,
-  automatic collection, automatic publication, automatic project updates, stock
-  data, market data, or deployment automation exists.
+- Intelligence content remains static and committed. Subscribe alone uses
+  server-side persistence, email and a weekly schedule. See
+  `docs/SUBSCRIBE_MVP.md`. Collection, editorial review and publication follow
+  their existing workflows.
 - The website must not invent, repair, re-rank, summarise, or reinterpret paper
   records.
 - Engineering briefing copy must remain traceable to source records.

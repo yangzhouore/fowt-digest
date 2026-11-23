@@ -181,9 +181,11 @@ for each edition with selected/candidate/source counts.
 The Homepage now presents the weekly Engineering and Research selections with a
 multi-week timeline selecting the newest week with both Engineering and Research
 data by default. Engineering and Research archive pages support static search over
-committed records. The website is a static presentation layer over committed
-JSON and TypeScript fixtures. It does not run the pipeline, query OpenAlex,
-collect engineering sources, deploy itself, or use AI-generated summaries.
+committed records. Intelligence content is a static presentation of committed
+JSON and TypeScript fixtures. Subscribe alone uses request-time persistence,
+email and weekly scheduling. See `docs/SUBSCRIBE_MVP.md`. The website does not
+run the pipeline, query OpenAlex, collect engineering sources, deploy itself,
+or use AI-generated summaries.
 
 The primary navigation covers Engineering, Industry Map, Projects, Digital & AI,
 Research, and Methodology. `/digital-ai` explains the broader AI × Energy system

@@ -14,6 +14,7 @@ function loadStaticAdapter(fileName) {
     });
     const compiledExports = {};
     const resolve = (name) => {
+      if (!name.startsWith(".")) return require(name);
       const target = path.resolve(path.dirname(file), name);
       return load(path.extname(target) ? target : target + ".ts");
     };

@@ -18,6 +18,7 @@ export function SiteHeader() {
           <Link href="/archive">{t("research")}</Link>
           <Link href="/methodology">{t("methodology")}</Link>
           <Link href="/search" prefetch={false}>{t("search")}</Link>
+          <Link href="/subscribe" prefetch={false}>{t("subscribe")}</Link>
         </nav>
         <div className="preference-switches">
           <fieldset className="language-toggle" aria-label={t("language")}>

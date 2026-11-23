@@ -15,7 +15,8 @@ export default defineConfig({
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
-    command: "npm run start -- --hostname 127.0.0.1 --port 3100",
+    command: "node --require ./tests/browser/fixtures/subscribe-services.cjs ./node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3100",
+    env: { SUBSCRIBE_BROWSER_FIXTURE: "1" },
     url: baseURL,
     reuseExistingServer: false,
   },

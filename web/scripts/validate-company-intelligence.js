@@ -4,8 +4,7 @@ const path = require("node:path");
 const { compileFunction } = require("node:vm");
 const ts = require("typescript");
 
-// Load the same static adapter and resolver used by the Company pages.
-function loadCompanyIntelligence() {
+function loadStaticAdapter(fileName) {
   const cache = new Map();
   function load(file) {
     if (file.endsWith(".json")) return require(file);
@@ -22,7 +21,12 @@ function loadCompanyIntelligence() {
     cache.set(file, compiledExports);
     return compiledExports;
   }
-  return load(path.resolve(__dirname, "../data/company-intelligence-adapter.ts"));
+  return load(path.resolve(__dirname, "../data", fileName));
+}
+
+// Load the same static adapter and resolver used by the Company pages.
+function loadCompanyIntelligence() {
+  return loadStaticAdapter("company-intelligence-adapter.ts");
 }
 
 if (require.main === module) {
@@ -35,4 +39,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { loadCompanyIntelligence };
+module.exports = { loadCompanyIntelligence, loadStaticAdapter };

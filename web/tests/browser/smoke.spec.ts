@@ -15,6 +15,82 @@ const test = base.extend<{ runtimeErrors: void }>({
   }, { auto: true }],
 });
 
+test("global search opens from the header, reads shared queries and links to canonical records", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Search", exact: true }).click();
+  await expect(page).toHaveURL("/search");
+  await expect(page.getByRole("heading", { name: "Search Floating Wind Digest" })).toBeVisible();
+  await expect(page.getByText("Enter a company, project, topic, or keyword.")).toBeVisible();
+  await expect(page.getByRole("region", { name: "Search results" })).toHaveCount(0);
+
+  await page.goto("/search?q=vestas");
+  await expect(page.getByRole("searchbox", { name: "Search the site" })).toHaveValue("vestas");
+  const results = page.getByRole("region", { name: "Search results" });
+  await expect(results.getByRole("heading").first()).toHaveText("Vestas");
+  await expect(results.getByRole("button", { name: "Companies (1)", exact: true })).toBeVisible();
+  await expect(results.getByRole("listitem")).toHaveCount(30);
+  await expect(results.locator('a[href^="/engineering/"]')).toBeVisible();
+  await expect(results.locator('a[href^="/projects/"]').first()).toBeVisible();
+  await results.getByRole("button", { name: /^Company Intelligence \(\d+\)$/ }).click();
+  await expect(results.getByRole("link", { name: "Vestas", exact: true })).toHaveCount(0);
+  const event = results.getByRole("link").first();
+  const href = await event.getAttribute("href");
+  expect(href).toMatch(/^\/companies\/vestas#event-/);
+  const anchor = href!.split("#")[1];
+  await event.click();
+  await expect(page).toHaveURL(new RegExp(`/companies/vestas#${anchor}$`));
+  await expect(page.getByRole("heading", { name: "Vestas", exact: true })).toBeVisible();
+  await expect(page.locator(`[id="${anchor}"]`)).toBeInViewport();
+});
+
+test("global search ranks an exact project first and routes one shared event to either company", async ({ page }) => {
+  const results = page.getByRole("region", { name: "Search results" });
+  await page.goto("/search?q=Hywind+Tampen");
+  const first = results.getByRole("heading").first().getByRole("link");
+  await expect(first).toHaveText("Hywind Tampen");
+  await expect(first).toHaveAttribute("href", "/projects/hywind-tampen");
+
+  const event = results.getByRole("link", { name: "EFGL reaches full power", exact: true });
+  for (const [query, company] of [
+    ["vestas", "vestas"], ["ocean-winds", "ocean-winds"], ["EFGL reaches full power", "ocean-winds"],
+  ]) {
+    await page.goto(`/search?${new URLSearchParams({ q: query })}`);
+    await results.getByRole("button", { name: /^Company Intelligence \(/ }).click();
+    await expect(event).toHaveCount(1);
+    await expect(event).toHaveAttribute("href", `/companies/${company}#event-efgl-full-power`);
+  }
+});
+
+test("global search handles technical terms, language persistence and mobile dark mode", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/search");
+  const search = page.getByRole("searchbox", { name: "Search the site" });
+  await search.fill("dynamic cable");
+  await search.press("Enter");
+  await expect(page).toHaveURL(/\/search\?q=dynamic\+cable$/);
+  const results = page.getByRole("region", { name: "Search results" });
+  await results.getByRole("button", { name: /^Engineering \([1-9]\d*\)$/ }).click();
+  const engineering = results.getByRole("link").first();
+  await expect(engineering).toHaveAttribute("href", /^\/engineering\/.+#item-/);
+
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "搜索", exact: true })).toHaveAttribute("href", "/search");
+  await expect(page.getByRole("button", { name: /^工程 \(/ })).toHaveAttribute("aria-pressed", "true");
+  await page.reload();
+  await expect(page.getByRole("heading", { name: "搜索浮式风电摘要" })).toBeVisible();
+  const chineseSearch = page.getByRole("searchbox", { name: "搜索全站" });
+  await expect(chineseSearch).toHaveValue("dynamic cable");
+  await page.locator('label[for="theme-dark"]').click();
+  await expect(page.locator("#theme-dark")).toBeChecked();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+
+  await chineseSearch.fill("[unmatched]+");
+  await chineseSearch.press("Enter");
+  await expect(page.getByRole("status")).toHaveText("没有匹配的结果。");
+  await page.goBack();
+  await expect(chineseSearch).toHaveValue("dynamic cable");
+});
+
 test("company directory search leads to the Vestas timeline, source and project", async ({ page }) => {
   const sourceUrl = "https://www.offshorewind.biz/2025/12/10/first-eolmed-floating-offshore-wind-turbine-heads-to-installation-site/";
   await page.route(sourceUrl, (route) => route.fulfill({ contentType: "text/html", body: "<h1>Original EolMed source</h1>" }));

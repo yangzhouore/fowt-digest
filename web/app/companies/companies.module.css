@@ -93,6 +93,14 @@
   padding: 0.85rem 0;
 }
 
+.timelineEvent {
+  scroll-margin-top: 24px;
+}
+
+.timelineEvent:target {
+  border-top-color: var(--accent);
+}
+
 .rows h2,
 .rows h3 {
   margin: 0;

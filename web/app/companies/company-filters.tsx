@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { CompanyNewsRecord, getCompanyIndex } from "../../data/company-intelligence-adapter";
 import { companyNewsCategories } from "../../data/company-news-categories";
+import { companyEventAnchor } from "../../data/context-navigation";
 import { useLanguage } from "../i18n/language-context";
 import { LocalizedCopy as Copy } from "../i18n/localized-copy";
 import { translateContentText } from "../i18n/render-content";
@@ -73,7 +74,7 @@ export function CompanyTimeline({ news }: { news: CompanyNewsRecord[] }) {
       {matching.length ? (
         <ol className={styles.rows}>
           {matching.map((record) => (
-            <li key={record.id}>
+            <li key={record.id} id={companyEventAnchor(record.id)} className={styles.timelineEvent}>
               <p className={styles.meta}><time dateTime={record.publishedDate}>{record.publishedDate}</time> · <Copy {...companyNewsCategories[record.category]} /></p>
               {record.historicalSubjects.filter((name) => name !== record.publisher).map((name) =>
                 <p className={styles.meta} key={name} translate="no">{name}</p>)}

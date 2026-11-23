@@ -1,5 +1,12 @@
 # Vestas Company Intelligence historical research review
 
+**Cross-company correction, 20 November 2026.** The TetraSpar commissioning
+source identifies a 3.6 MW Siemens turbine. The demonstrator partners also
+explicitly identified Siemens Gamesa before commissioning. The event remains
+in the shared catalogue with the same ID and date, now linked to Siemens
+Gamesa, Stiesdal Offshore, Shell and RWE. Vestas has 162 events after this
+correction. Counts and editorial decisions below describe the original review.
+
 Publication coverage requested runs from 1 January 2018 through 19 November 2026 inclusive. Review date is 19 November 2026. The register distinguishes a candidate publication from a retained development. One event can have several candidate publications. Editorial titles and evidence in the historical dataset are concise paraphrases of the selected source. Dates are the local publication dates shown by those sources. They can differ from the date of the underlying work.
 
 ## Discovery and selection

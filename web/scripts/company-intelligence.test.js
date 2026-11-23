@@ -11,21 +11,20 @@ const lookup = (id) => structuredClone(dataset.events.find((event) => event.id =
 const eolmed = lookup("eolmed-first-floating-turbine-tow");
 const windfloat = lookup("windfloat-atlantic-supplier-selection");
 
-test("company routes use exact Industry IDs and unreviewed companies have zero updates", () => {
+test("company routes use exact Industry IDs and all canonical companies have reviewed developments", () => {
   const directory = getCompanyIndex();
   assert.equal(directory.length, 47);
   assert.equal(new Set(directory.map((company) => company.id)).size, directory.length);
   for (const entry of directory) assert.equal(getCompanyIntelligence(entry.id).company.name, entry.name);
   assert.equal(getCompanyIntelligence("Vestas"), undefined);
-  assert.deepEqual(getCompanyIntelligence("equinor").news, []);
-  assert.equal(directory.find((entry) => entry.id === "equinor").latestDate, undefined);
+  assert.ok(directory.every(({ updateCount }) => updateCount > 0));
 });
 
 test("Vestas renders the full reviewed period using event IDs and the lead original source", () => {
   const { company, news, projects } = getCompanyIntelligence("vestas");
-  const events = getCompanyEvents();
+  const events = getCompanyEvents().filter((event) => event.companyIds.includes("vestas"));
   assert.equal(company.countryRegion, "Denmark / Global");
-  assert.equal(news.length, 163);
+  assert.equal(news.length, 162);
   assert.deepEqual(news.map(({ id }) => id), events.map(({ id }) => id));
   assert.ok(events.every(({ publishedDate }) => "2018-01-01" <= publishedDate && publishedDate <= "2026-11-19"));
   assert.deepEqual([...new Set(events.map(({ publishedDate }) => publishedDate.slice(0, 4)))],
@@ -46,9 +45,19 @@ test("Vestas renders the full reviewed period using event IDs and the lead origi
   assert.equal(entry.updateCount, news.length);
 });
 
+test("TetraSpar commissioning keeps its event identity with its verified developer and turbine memberships", () => {
+  const event = getCompanyEvents().find(({ id }) => id === "tetraspar-demonstrator-commissioned");
+  assert.equal(event.publishedDate, "2021-12-01");
+  assert.deepEqual([...event.companyIds].sort(), ["rwe", "shell", "siemens-gamesa", "stiesdal-offshore"]);
+  assert.match(event.summary, /Siemens Gamesa/);
+  assert.equal(event.sources.length, 2);
+  assert.ok(!getCompanyIntelligence("vestas").news.some(({ id }) => id === event.id));
+});
+
 test("historical names belong to the linked Industry identity without overriding publishers", () => {
   const events = getCompanyEvents();
-  assert.equal(events.filter((event) => event.historicalAttributions.length).length, 76);
+  assert.equal(events.filter((event) =>
+    event.historicalAttributions.some(({ companyId, name }) => companyId === "vestas" && name === "MHI Vestas Offshore Wind")).length, 76);
   const legacy = events.find(({ id }) => id === windfloat.id);
   assert.deepEqual(legacy.historicalAttributions, [{ companyId: "vestas", name: "MHI Vestas Offshore Wind" }]);
   assert.equal(legacy.sources[0].publisher, "MHI Vestas Offshore Wind");
@@ -59,12 +68,47 @@ test("historical names belong to the linked Industry identity without overriding
 
 test("a reviewed Vestas and Equinor event shares one event identity across both company indexes", () => {
   const order = lookup("empire-wind-1-firm-order");
-  order.companyIds.push("equinor");
   const [event] = resolve([order]);
   const index = indexCompanyEvents([event]);
   assert.strictEqual(index.get("vestas")[0], index.get("equinor")[0]);
   assert.equal(event.id, "empire-wind-1-firm-order");
   assert.deepEqual(event.companyIds, ["vestas", "equinor"]);
+});
+
+test("expanded timelines share canonical events and preserve sparse reviewed coverage", () => {
+  const events = getCompanyEvents();
+  assert.ok(events.every(({ publishedDate }) => "2018-01-01" <= publishedDate && publishedDate <= "2026-11-20"));
+  const index = indexCompanyEvents(events);
+  const award = events.find(({ id }) => id === "hywind-tampen-main-contract-awards");
+  assert.equal(award.sources.length, 2);
+  for (const companyId of ["equinor", "siemens-gamesa", "jdr-cables", "subsea7-seaway7"]) {
+    assert.strictEqual(index.get(companyId).find(({ id }) => id === award.id), award);
+    assert.equal(getCompanyIntelligence(companyId).news.find(({ id }) => id === award.id).projects[0].slug, "hywind-tampen");
+  }
+  const { news } = getCompanyIntelligence("vryhof");
+  assert.ok(news.length > 0 && news.length < getCompanyIntelligence("vestas").news.length);
+  assert.ok(news.some((event) => event.projects.some(({ slug }) => slug === "windfloat-atlantic")));
+  const legacy = events.find(({ id }) => id === "dnv-gl-floating-certification-guidelines");
+  assert.deepEqual(legacy.historicalAttributions, [{ companyId: "dnv", name: "DNV GL" }]);
+  const floatm = index.get("vicinay-marine").find(({ id }) => id === "floatm-reports-floating-om-research-progress");
+  assert.strictEqual(index.get("saitec-offshore").find(({ id }) => id === floatm.id), floatm);
+  assert.deepEqual(floatm.historicalAttributions, [{ companyId: "vicinay-marine", name: "Vicinay Cadenas" }]);
+});
+
+test("supplier timelines share the Culzean subcontract and preserve contract stages and publisher attribution", () => {
+  const events = getCompanyEvents();
+  const index = indexCompanyEvents(events);
+  const subcontract = events.find(({ id }) => id === "culzean-delmar-lankhorst-mooring-line-subcontract");
+  for (const companyId of ["delmar-systems", "ocergy", "totalenergies"]) {
+    assert.strictEqual(index.get(companyId).find(({ id }) => id === subcontract.id), subcontract);
+  }
+  assert.deepEqual(subcontract.projectIds, ["culzean-demo-floating-wind"]);
+  const award = events.find(({ id }) => id === "culzean-delmar-mooring-contract");
+  assert.ok(award.publishedDate < subcontract.publishedDate);
+  assert.deepEqual(award.sources.map(({ publisher }) => publisher), ["Delmar Systems", "offshoreWIND.biz"]);
+  const equipment = index.get("hitachi-energy").find(({ id }) => id === "hitachi-abb-first-66kv-offshore-hybrid-switchgear");
+  assert.equal(equipment.sources[0].publisher, "Hitachi");
+  assert.deepEqual(equipment.historicalAttributions, [{ companyId: "hitachi-energy", name: "Hitachi ABB Power Grids" }]);
 });
 
 test("an event can reference multiple canonical projects backed by its reviewed evidence", () => {
@@ -75,6 +119,21 @@ test("an event can reference multiple canonical projects backed by its reviewed 
     tier: "secondary", evidence: "Fixture evidence identifying Eolmed alongside EFGL and Vestas.",
   });
   assert.deepEqual(resolve([event])[0].projectIds, ["efgl", "eolmed"]);
+});
+
+test("the Phase 1 catalogue shares the Ostwind award and preserves certification attribution", () => {
+  const events = getCompanyEvents();
+  const byCompany = indexCompanyEvents(events);
+  const award = byCompany.get("nkt").find(({ id }) => id === "ostwind-two-nkt-export-cable-order");
+  assert.strictEqual(byCompany.get("boskalis").find(({ id }) => id === award.id), award);
+  assert.deepEqual(award.sources.map(({ publisher }) => publisher), ["NKT", "Boskalis"]);
+  const qualification = byCompany.get("bureau-veritas").find(({ id }) => id === "snapwind-float-bureau-veritas-approval");
+  assert.strictEqual(byCompany.get("lloyds-register").find(({ id }) => id === qualification.id), qualification);
+  assert.deepEqual(qualification.sources.map(({ publisher }) => publisher), ["Bureau Veritas", "Lloyd's Register"]);
+  const verification = byCompany.get("dnv").find(({ id }) => id === "hywind-tampen-dnv-gl-verification-study");
+  assert.deepEqual(verification.historicalAttributions, [{ companyId: "dnv", name: "DNV GL" }]);
+  assert.deepEqual(verification.projectIds, ["hywind-tampen"]);
+  assert.ok(byCompany.get("corio-generation").every(({ publishedDate }) => publishedDate >= "2022-01-01"));
 });
 
 test("parallel Nordlicht reporting is retained as two publications on one event", () => {

@@ -16,27 +16,20 @@ historical notes.
 
 ## Project Boundary
 
-FOWT Research Digest is a static source-backed intelligence website plus a
-deterministic local pipeline for Floating Offshore Wind Turbine research data.
-The reader-facing product covers Engineering, Research, Industry, Projects, and
-Digital & AI, with English and Simplified Chinese interface copy.
-
-Keep boundaries explicit:
-
-- `pipeline/` owns deterministic research data production.
-- `web/` owns static website presentation and committed JSON consumption.
-- Engineering Briefing data is independent static source-backed website data.
-- Industry, Projects, and Digital & AI are independent curated static datasets.
-- Project Intelligence is optional curated data within Projects: keep factual
-  records separate from sourced editorial inferences, FID status, qualitative
-  readiness gates, and watchpoints.
-- Methodology explains the source and selection boundaries; it is presentation copy.
-- Language switching is a local presentation concern; it must not rewrite
-  source-backed records or introduce runtime translation services.
-- Intelligence content stays static and committed. The website must not run
-  collection, scoring, summarisation, or publication automation.
-- Subscribe alone uses request-time persistence and email delivery with one
-  weekly schedule. See `docs/SUBSCRIBE_MVP.md`.
+- `pipeline/` owns deterministic Research data production and runs locally.
+- Keep collection, scoring, and publication in local workflows. The website
+  must not generate editorial content at runtime.
+- `web/` presents committed intelligence. Keep Engineering's sources and
+  selection independent of Research. Preserve curated datasets, canonical
+  identities, reviewed relationships, and original source attribution.
+- Separate confirmed Project facts from editorial inferences, FID status,
+  readiness gates, and watchpoints. Methodology explains evidence and selection
+  boundaries. Language switching changes presentation only.
+- Global Search derives its index from committed records and ranks matches
+  deterministically in the browser.
+- Subscribe alone uses server-side persistence, email, and weekly scheduling.
+  It reads committed intelligence for delivery. See the
+  [Subscribe runbook](docs/SUBSCRIBE_MVP.md).
 
 Do not add backend services, databases, CMS, API routes, schedulers, AI writing,
 semantic search, deployment automation, or new pipeline stages unless an

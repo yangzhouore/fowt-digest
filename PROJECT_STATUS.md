@@ -1,460 +1,120 @@
 # Project Status
 
-## Weekly Update: 2026-11-16
+## Current state
 
-- Prepared the 9–15 November editions on `data/weekly-digest-2026-11-15`,
-  based on main `cdc5be3` (merged PR #60).
-- Complete authenticated OpenAlex collection: 13 queries, 19 successful pages,
-  481 raw records, no failures/partial pages and no reached cap. Retained 135
-  ranked candidates and five selected records; data-deposit and metadata limits
-  are disclosed in the visible candidate note.
-- Engineering discovery covered all 42 registry domains; six reviewed source
-  records yielded two independent candidates and two primary-backed highlights:
-  the UK–Japan compact and Partrac's Baltic measurement campaign. The latter
-  concerns floating buoys, not floating turbine foundations.
-- Full baseline passed: 270 pipeline tests, data validators, 179 website tests,
-  lint, 481-route build and whitespace checks. Browser suites were not rerun for
-  this static-data update. The owner's existing `next-env.d.ts` edit is excluded.
-- Evidence, exclusions and access limitations: `docs/weekly/2026-11-15.md`.
-  Review PR requested; merge and deployment await acceptance.
+FOWT Research Digest provides source-backed floating and offshore wind
+intelligence in English and Simplified Chinese. Company Intelligence, Global
+Search, and Subscribe are implemented. Subscribe production delivery remains
+unverified.
 
-## Local Weekly Update: 2026-11-09
+## Product capabilities
 
-- Prepared 2–8 November Research and Engineering editions on
-  `data/weekly-digest-2026-11-08`, based on merged maintenance PR #58 (`a1bf8bf`).
-- Authenticated OpenAlex collection succeeded: all 13 queries, 19 pages, 630 raw
-  records, no failed/partial pages and no reached cap (budget 5,000).
-- Retained 165 ranked Research candidates and five selected records. Four are
-  separate DOI parts of one OpenFAST archive; this concentration is disclosed.
-- Reviewed all 42 Engineering registry domains through search discovery; retained
-  nine dated records, two independent candidates and two highlights. Repeat
-  events were excluded; search/index coverage remains incomplete.
-- Local totals: 44 Research editions, 31 Research candidate pools and 44
-  Engineering editions. Record: `docs/weekly/2026-11-08.md`.
-- Full baseline passed: 270 pipeline tests, data validation, 174 website tests,
-  lint, 472-page production build and diff whitespace checks. No browser suite
-  was rerun for this static-data update. PR delivery was requested; merge and
-  deployment await acceptance.
+- **Engineering** provides weekly source-backed briefings, topic and region
+  navigation, and candidate and scoring transparency where available.
+- **Research** provides a searchable archive, weekly selections, paper details,
+  and candidate provenance where a supporting pool is available.
+- **Industry** maps 47 canonical companies to supply-chain roles and provides
+  guides for the UK, Germany, Norway, and China.
+- **Projects** provides structured project facts, participants, public evidence,
+  and timelines. Project Intelligence distinguishes sourced facts from editorial
+  inferences and records FID status, readiness, and watchpoints.
+- **Company Intelligence** provides source-backed timelines built from one
+  shared event catalogue. One real-world development has one canonical event.
+  Events use canonical `companyIds[]` and `projectIds[]`, retain original
+  citations, and preserve historical attribution separately from current company
+  identity.
+- **Digital & AI** connects practical wind-industry workflows with energy
+  pathways, dated developments, conditional futures, and source-backed Signals.
+- **Global Search** searches Companies, Projects, Company Intelligence Events,
+  Engineering, Research, and Digital & AI at `/search`. It ranks entities before
+  text, uses recorded relationships, and keeps original section search and
+  filters available.
+- **Subscribe** offers Weekly News Digest, Weekly Research Digest, and Company
+  Brief. Readers confirm by email, select canonical companies, manage
+  preferences without an account, and unsubscribe.
 
-## Collection Maintenance: 2026-11-09
+See the [README route table](README.md#routes) for entry points and the
+[handover](PROJECT_HANDOVER.md) for the owning modules.
 
-- Guide PR #51 is merged at `4e743c6`; this is the base of
-  `fix/openalex-collection-readiness`.
-- Added process-environment OpenAlex bearer authentication and configurable
-  positive raw-record limits on collection/orchestration (default 200).
-- The existing publication guard remains mandatory for every configured limit.
-- 270 pipeline tests passed. Live authenticated collection awaits a configured
-  `OPENALEX_API_KEY`; it is not yet verified and no edition has been published.
-- Scope and operating instructions: `docs/OPENALEX_COLLECTION_READINESS.md`.
-- The dated snapshot below retains earlier guide integration evidence.
+## Data and architecture boundaries
 
-Last updated: 2026-11-06. Verified stable main: `cab926b` (merged handover PR #57).
+- The deterministic Python pipeline owns Research collection, normalisation,
+  deduplication, classification, ranking, and digest assembly. The local
+  publishing workflow prepares accepted output for review and commit.
+- Engineering maintains its own source registry, records, and selection.
+  Industry, Projects, and Digital & AI have separate curated datasets.
+- Industry defines canonical company identities. Projects provides canonical
+  project identities. Company Intelligence and connected context link those
+  records through reviewed data. Their adapters resolve existing identities and
+  source references.
+- Site routes present committed intelligence. Global Search derives its index
+  from those records and ranks results in the browser. It uses no embeddings,
+  semantic or vector search, retrieval-augmented generation, or chatbot.
+- Subscribe is the only subsystem with server-side persistence, email, and
+  scheduling. Neon stores subscriber and delivery state. Resend sends email,
+  and Vercel Cron invokes weekly delivery from committed intelligence. The job
+  delivers the previous completed UTC week and skips missing current material.
+  See the [runbook](docs/SUBSCRIBE_MVP.md) for exact timing and recovery.
+- Presentation can localise interface and reviewed copy. Source facts and
+  retained provenance stay unchanged.
 
-## Current State
+## Current validation baseline
 
-- Latest completed product milestone: AI × Energy explainer, PR #50, merged at
-  `bb3b06a`. Scope: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`;
-  source review: `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
-- Latest paired weekly editions: week ending 2026-11-01, PR #52, merged at `0a03771`.
-- Subsequent fixes #53–#56 are merged; details and validation are below.
-- Pending product work: unified Digital & AI guide, open
-  [PR #51](https://github.com/yangzhouore/fowt-digest/pull/51), now incorporating
-  main `cab926b`. This presentation is not yet in main.
-- Separate unmerged implementation: `feature/private-analytics-dashboard`,
-  head `7a0ecd0`; live provider access and hosted collection remain unverified.
-- Latest release tag: `v1.4.0`.
-- Production website: https://fowt-digest-oegd.vercel.app/.
-  Production rendering was not independently inspected during this status refresh.
+[AGENTS.md](AGENTS.md#validation-baseline) owns the shared commands. They cover
+the Python pipeline, static data, website data tests, lint, the production
+build, and diff whitespace.
 
-## Next Work
+[GitHub Actions](.github/workflows/ci.yml) runs separate pipeline, website, and
+Chromium jobs for pull requests targeting `main` and pushes to it. Website tests
+cover adapters, schema and provenance constraints, selection transparency,
+search, and Subscribe. The browser suite uses a production build and a loopback
+fixture for Subscribe, with in-memory PostgreSQL and intercepted email.
+Builds and tests run without live delivery credentials.
 
-1. Checkout/handover refresh is complete: PR #57 was accepted and merged at
-   `cab926b`. The pre-existing `web/next-env.d.ts` development-route import
-   remains excluded from feature delivery.
-2. Current main is incorporated into the unified-guide branch; handover conflicts
-   are resolved and local acceptance is complete (details below). Update PR #51,
-   verify CI on the integration commit, then leave it open for manual review
-   and merge. Scope and acceptance documents are
-   `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md` and
-   `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
-   The existing feature head passed [CI run #87](https://github.com/yangzhouore/fowt-digest/actions/runs/40846641690);
-   that result predates the weekly update and recent fixes.
-3. Before the next Research edition, investigate the earlier OpenAlex HTTP 401
-   continuation failures and record cap, then verify a complete collection.
-   The new guard prevents incomplete publication; it does not resolve collection
-   access or coverage. Do not bypass it or silently regenerate historical editions.
-4. Review the analytics branch separately against current main. Its branch-local
-   `docs/private-analytics.md` records an owner-requested exception limited to
-   the private admin route, provider setup and unverified live checks. The static
-   architecture below describes merged main, not this pending branch.
+- Full Chromium smoke from `web/` after a build is `npm.cmd run test:smoke`.
+- Focused Subscribe checks from `web/` use `npm.cmd run test:subscribe`. These
+  tests are also included in `test:data`.
+- See the [browser setup guide](web/tests/browser/README.md) for installation
+  and local Industry-guide checks.
 
-## Recent Merged Fixes
+For release evidence, check the CI run for the exact commit under review.
+Subscribe production acceptance is a separate operational check.
 
-- [PR #53](https://github.com/yangzhouore/fowt-digest/pull/53), `f1079ec`:
-  upgraded Next.js and eslint-config-next to 16.4.5. Its recorded audit still
-  contained unrelated dependency findings; this is not a clean current audit.
-- [PR #54](https://github.com/yangzhouore/fowt-digest/pull/54), `b1cb1d8`:
-  corrected OpenAlex publication-type mapping using explicit source metadata.
-  Scoring weights and Top 5 policy are unchanged. Historical records were not
-  regenerated; the retained latest-pool audit preserved Top 5 membership/order
-  while correcting venue scores and changing other candidate ranks.
-- [PR #55](https://github.com/yangzhouore/fowt-digest/pull/55), `4ef2d5c`:
-  failed, partial or capped collection stops before digest generation with
-  `publishable: false`. Publishing independently requires successful, uncapped
-  collection diagnostics matching the run. Missing/invalid legacy diagnostics
-  and `--overwrite` cannot bypass the guard. Complete zero-result collection
-  remains valid. See `docs/PIPELINE_ARCHITECTURE.md` and
-  `docs/WEBSITE_PUBLISHING_WORKFLOW.md`.
-- [PR #56](https://github.com/yangzhouore/fowt-digest/pull/56), `35b7feb`:
-  expected localStorage security/quota failures fall back to an in-memory
-  language preference for the current document and client navigation. Normal
-  persistence remains; unrelated errors are rethrown. Four browser regressions
-  bring the shared suite to 27 tests.
+## Current operational work
 
-## Current Validation Evidence
+- **Subscribe delivery** still needs production Neon and migration setup,
+  verified Resend sending with tracking disabled, Vercel environment and cron
+  verification, and a controlled live-email acceptance test. Follow the
+  [Subscribe runbook](docs/SUBSCRIBE_MVP.md) before treating delivery as live.
+- **Weekly publication** is reviewed and triggered locally. The
+  [publishing workflow](docs/WEBSITE_PUBLISHING_WORKFLOW.md) describes the
+  collection gate for new Research editions. Refer to the latest committed
+  editions and [weekly release records](docs/weekly/) for publication status
+  and any edition-specific limitations.
 
-- Integrated unified guide on main `cab926b`, checked 2026-11-06: 258 pipeline
-  tests, all static-data validators, 174 data tests, lint and standard Turbopack
-  build passed (463 static pages). All 29 shared Chromium tests passed their
-  assertions. Windows server teardown stalled; stopping only this run's Next.js
-  server released the runner, which exited 0 with `29 passed`. Record hosted CI
-  separately to verify unattended teardown on the final integration commit.
-- Desktop English and mobile Chinese workflow screenshots were visually inspected
-  in light/dark themes. Browser checks cover keyboard focus, overflow, all ten
-  legacy task links, history, fourteen reader routes' supporting data, evidence
-  boundaries, pathways, weekly navigation and the four storage regressions.
-- The integrated feature leaves pipeline, all `web/data`, dependencies, CI and
-  the language provider identical to main `cab926b`. Guide runtime/test code is
-  unchanged from the existing feature head `d0d5f5c`; integration required only
-  handover conflict resolution and updated validation documentation. The existing
-  `web/next-env.d.ts` bytes were restored after build generation and remain excluded.
-- Fresh local status-review checks on 2026-11-06 at `eab2c97`: 258 pipeline tests,
-  all static-data validators, 172 website data tests, lint and `git diff --check`
-  passed. This commit's tracked tree matches merged main `35b7feb`.
-- Full local acceptance recorded in PR #56: the same baseline plus standard
-  Turbopack production build (463 static pages) and 27 browser smoke tests passed.
-- Remote evidence rechecked on 2026-11-06: [PR CI run #97](https://github.com/yangzhouore/fowt-digest/actions/runs/42058606527)
-  for feature head `eab2c97` passed Pipeline validation, Website validation
-  (including build), and Browser smoke. This is PR validation, not a separate
-  verification of the post-merge production deployment.
-- Handover PR #57 changed documentation only. Its validation was limited to
-  reference/status consistency, diff whitespace and preservation of the existing
-  generated-file change. Build, browser suites and the full baseline were not
-  rerun for those documentation edits; those earlier results remain dated evidence.
+## Known limitations
 
-## Current Unified Digital & AI Guide (PR #51, Not Yet Merged)
+- The weekly Research and Engineering archives contain selected editions and
+  coverage. Candidate transparency depends on retained evidence.
+- Company and Project coverage depends on published sources, reviewed records,
+  and the canonical registry. The [Company Intelligence audit](docs/COMPANY_INTELLIGENCE_FULL_HISTORY_AUDIT.md)
+  records source limitations and project coverage gaps.
+- Search can only use the text and relationships represented in committed
+  data. Digital & AI retains its offshore-wind and energy evidence scope.
+- Incomplete or capped Research collection is gated from ordinary publication.
+  Historical editions retain their contemporaneous coverage notes.
 
-- One chapter sequence joins foundations, seven topics with contextual practical
-  examples, four supply options, dated developments, conditional futures and a
-  final evidence library. The competing standalone lifecycle map is removed.
-- Ten practical workflows sit under their relevant topic. Changing topics resets
-  the selected task; task titles replace generic AI labels.
-- Developments and futures link back to explanation and supply contexts.
-- All fourteen reader routes and legacy task/field/pathway/evidence links remain.
-  The two evidence collections retain their independent records and provenance.
-- Scope: `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md`; integration and validation:
-  `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
+## Reference map
 
-## Latest Merged Weekly Update: 26 October–1 November 2026 (PR #52)
-
-- Branch: `data/weekly-digest-2026-11-01`, from main `bb3b06a` (merged PR #50).
-- Merged into main at `0a03771` in [PR #52](https://github.com/yangzhouore/fowt-digest/pull/52).
-- Collection, evidence boundaries and selection: `docs/weekly/2026-11-01.md`.
-- Research: 212 obtained raw records → 86 deduplicated candidates → five selected
-  records by the then-current pipeline. Coverage is partial: three HTTP 401
-  continuation failures persisted on retry; the configured cap was reached.
-  The highest-ranked record is a benchmark dataset; metadata is preserved.
-- Engineering: all 42 registry domains searched; 16 retained source records →
-  14 in-window → 11 eligible reports → six independent candidates → five
-  scored highlights. Five candidate publishers, four selected publishers.
-- Both new editions and candidate transparency are registered. Historical
-  records, scoring, datasets outside the weekly update and page behavior remain
-  unchanged. Separate analytics work is excluded. Later pipeline fixes did not
-  regenerate these published records or remove their coverage disclosure.
-- Local validation: 210 pipeline tests, all data validators, 172 data tests,
-  lint, a 463-route static production build and 23 browser smoke tests passed.
-  Focused weekly counts, coverage disclosure and mobile Chinese/dark checks
-  passed; `git diff --check` passed. The known reader `NoFallbackError` diagnostic
-  recurred with passing assertions. Remote CI/Preview are recorded in the PR.
-
-## Merged AI × Energy Explainer (PR #50, `bb3b06a`)
-
-- `/digital-ai` starts with three relationships and two illustrative flow diagrams:
-  electricity supply and information supporting decisions.
-- Seven fields connect computing, weather, wind assets, solar/storage/hybrids,
-  grids, floating wind and electricity procurement. Reader/developer perspectives
-  explain questions to ask and illustrative workflows to evaluate.
-- Six terms, six dated 2026 developments and three conditional editorial scenarios
-  separate publication dates, review dates, contracts, operations, research and
-  projections. Ten primary public source pages are recorded in separate context data.
-- Original fourteen Signals/readers, ten wind cards, four pathways and unrelated
-  source datasets stay unchanged. No runtime AI, news collection or automation.
-- Local acceptance: 210 Python tests, all static-data validation, 172 data tests,
-  lint, 454-page production build and 23 shared Chromium journeys passed after
-  incorporating maintenance main `20533eb`.
-
-## Previous Merged Weekly Update: 19-25 October 2026 (PR #48)
-
-- Branch: `data/weekly-digest-2026-10-25`, based on main `710bba5`; merged manually into main at `580a83e` (PR #48).
-- Skills: `skills/fowt-paper/SKILL.md` and `skills/fowt-news/SKILL.md`.
-- Collection/selection/validation record: `docs/weekly/2026-10-25.md`.
-- Research: 207 obtained raw records -> 83 deduplicated candidates -> five selected
-  by the unchanged deterministic model. Coverage is partial: two HTTP 401
-  continuation failures persisted on retry, and the configured cap was reached.
-  The candidate-page note preserves these limitations.
-- Engineering: 42 registry-domain attempts; eight retained reviewed inventory.
-  Eighteen source records -> 16 in-window -> 11 eligible reports -> six same-event
-  overlaps removed -> five independent candidates and five highlights. Primary
-  candidate records represent five publishers. Counts are not exhaustive coverage.
-- Both editions and candidate transparency are registered; the homepage defaults
-  to the newly paired week. Historical records and product behaviour are unchanged.
-- Local validation: 210 Python tests, data validation, 155 data tests, lint,
-  454 static routes and 17 browser journeys passed, plus focused local weekly
-  navigation/count/coverage-note and 390px checks. Final-head CI/preview are in the
-  weekly PR #48 description; that PR was merged at `580a83e`.
-
-## Merged Digital & AI Evidence Reader and Pathway Comparison (PR #47)
-
-- Branch: `feat/digital-ai-evidence-pathways`, based on main `b409213`.
-- User authorised recommendations 2 and 3 without another approval gate.
-- Scope/design: `web/app/digital-ai/design/EVIDENCE_PATHWAYS_MVP.md`.
-- Source review/validation: `web/app/digital-ai/design/EVIDENCE_PATHWAYS_IMPLEMENTATION.md`.
-- Fourteen static internal reading pages expose original records and provenance,
-  separate editorial relevance/source notes, and link back to exact page contexts.
-- Four pathways compare physical routing, procurement, continuity and evidence;
-  coverage labels replace broad maturity badges. Context is not deployment proof.
-- Local acceptance: 210 Python tests, static data validation, 155 data tests, lint,
-  445-page build (14 reader routes) and 17 browser journeys passed.
-- Original Signals/use-case records, papers, pipeline and unrelated datasets were
-  unchanged by this feature. [PR #47](https://github.com/yangzhouore/fowt-digest/pull/47)
-  was merged manually into main at `710bba5`. All three CI jobs passed on feature
-  head `55cc536` in [run #79](https://github.com/yangzhouore/fowt-digest/actions/runs/39972100167).
-
-## Merged Digital & AI Practical Cards (PR #46)
-
-- Branch: `feat/digital-ai-use-case-cards`, based on main `963e891`.
-- Accepted design: `web/app/digital-ai/design/USE_CASE_CARDS_MVP.md`.
-- Source review and validation: `web/app/digital-ai/design/USE_CASE_CARDS_IMPLEMENTATION.md`.
-- Ten bilingual application cards explain problem, inputs, method, output, human
-  decision, evidence and limitations. Illustrative workflows and documented
-  examples are labelled separately. Two areas retain explicit evidence gaps;
-  inaccessible EPROA evidence is labelled as stored context, not freshly verified.
-- Local acceptance: 210 Python tests, data validation, 151 data tests, lint,
-  431-page build and 14 browser journeys passed. The original 14 Signals,
-  authoritative datasets and other product sections are unchanged.
-- [PR #46](https://github.com/yangzhouore/fowt-digest/pull/46) was merged manually
-  into main at `b409213`. Pipeline validation, Website validation and Browser smoke
-  passed on implementation head `91b77c5` in
-  [CI run #77](https://github.com/yangzhouore/fowt-digest/actions/runs/39967078082).
-
-## Merged International Industry Guides
-
-- International Industry Guides: [PR #44](https://github.com/yangzhouore/fowt-digest/pull/44), merged at `da48422`.
-- Objectives, design/self-review, implementation and acceptance:
-  `web/app/industry/design/INTERNATIONAL_INDUSTRY_GUIDES.md`.
-- `/industry` provides four country entry points, a sourced responsibility
-  comparison and the unchanged international company directory.
-- `/industry/uk` retains the UK guide delivered in
-  [PR #43](https://github.com/yangzhouore/fowt-digest/pull/43), merged at `84c8e69`.
-  UK design/evidence: `web/app/industry/design/UK_FOWT_SYSTEM_DESIGN.md` and
-  `web/app/industry/design/UK_FOWT_SYSTEM_IMPLEMENTATION.md`.
-- `/industry/germany`, `/industry/norway` and `/industry/china` each use the
-  22-topic structure: nine chain levels, 17 lifecycle stages, 12 grouped power
-  steps, 15 investigation questions and 16 organisation-role cards.
-- New-country coverage has 64 primary/public technical source records. This is
-  representative dated coverage, not a complete national supplier register or
-  real-time project tracker. The UK guide retains its independent source dataset.
-- Distinguish industrial delivery, development, permissions and electricity/money;
-  distinguish capability, R&D, announced plans and documented project scopes.
-- The original 47-company registry, canonical anchors, Project backlinks, paper
-  records and authoritative Projects data were preserved.
-- Final implementation head `db8cae9` passed Pipeline validation, Website
-  validation and Browser smoke in
-  [PR CI run #73](https://github.com/yangzhouore/fowt-digest/actions/runs/39927826616).
-- The next product implementation needs a new feature branch and an accepted
-  objective/design/validation scope; no new product MVP is implied by this
-  handover/CI maintenance task.
-
-## Merged Connected Project Context MVP
-
-- Objectives and acceptance: `docs/CONNECTED_PROJECT_CONTEXT_MVP.md`.
-- Design self-review: `docs/CONNECTED_PROJECT_CONTEXT_DESIGN_REVIEW.md`.
-- Implementation and validation evidence: `docs/CONNECTED_PROJECT_CONTEXT_IMPLEMENTATION.md`.
-- Branch: `feat/connected-project-context-mvp`.
-- Scope: Projects <-> Engineering coverage and Projects <-> existing Industry entries.
-- Initial Engineering coverage: six audited links across Eolmed, EFGL, Green Volt and Pentland; all 48 profiles have coverage or an explicit empty state.
-- Company coverage: existing valid `industryCompanyId` roles only; no inferred matches.
-- Papers and all authoritative datasets remain unchanged.
-- User accepted the design on 2026-10-22 ("yes please continue"); implementation and local acceptance are complete.
-- Local validation: 210 Python tests, data validation, 148 data tests, lint, 427-page build and ten browser tests passed. All 121 protected files match the base by Git-normalized content hash.
-- Delivery: [PR #42](https://github.com/yangzhouore/fowt-digest/pull/42) was merged manually and is present in main at `2e3a0cc`.
-
-## Previous Completed MVP
-
-- Scope and measurable acceptance: `docs/PROJECTS_PUBLIC_EVIDENCE_MVP.md`.
-- Design self-review: `docs/PROJECTS_PUBLIC_EVIDENCE_DESIGN_REVIEW.md`.
-- Implementation and validation evidence: `docs/PROJECTS_PUBLIC_EVIDENCE_IMPLEMENTATION.md`.
-- Branch: `feat/projects-public-evidence-mvp`.
-- Goals: area-specific public evidence, explicit uncertainty, substantive review dates and change history across Projects.
-- Pilot public-source assessment reviews: Green Volt, Hywind Tampen and CampionWind.
-- Papers and Research remain outside scope.
-- User accepted the design on 2026-10-21. Local validation passed: 210 Python tests, static data validation, 118 data tests, lint, 427-page build and seven browser tests.
-- All 48 profiles have explicit evidence areas; three pilot public-source assessment reviews are recorded. Other historical review dates remain unrecorded.
-- Pipeline validation, Website validation and Browser smoke passed on implementation-delivery head `00a36be`; the PR records verification of its final head.
-- Delivery: https://github.com/yangzhouore/fowt-digest/pull/41 was merged manually and is present in local main at `e88d325`.
-
-## Current Capabilities
-
-The repository contains five independent static content areas:
-
-- Research Digest: deterministic OpenAlex pipeline output published as static
-  JSON under `web/data/digests/`.
-- Engineering Briefing: manual source-backed static JSON under
-  `web/data/briefings/`.
-- Industry Map: independent curated country-system guides, evidence and an
-  international company registry under `web/data/industry/`.
-- Projects: curated source-backed floating offshore wind project data under
-  `web/data/projects/`.
-- Digital & AI: 14 curated source-backed Signals under `web/data/digital-ai/`,
-  used as evidence for the AI × offshore-wind impact maps.
-
-The website supports:
-
-- Homepage with a concise weekly briefing across Engineering and Research, plus
-  a multi-week timeline defaulting to the newest paired Engineering/Research week;
-- current and archived Research Digest pages;
-- Paper Detail pages;
-- Research Archive with static client-side search;
-- Engineering archive and briefing pages with static search and region filters;
-- Engineering candidate transparency pages with deterministic
-  `engineering_selection_score_v1`, source-registry diagnostics, selected
-  state, score breakdowns and source links for supported weeks;
-- Industry overview comparing four countries, UK/Germany/Norway/China system
-  guides, and the original company directory with canonical project navigation;
-- Projects index and detail pages for 48 source-backed floating offshore wind
-  project records, with region/country/status filtering, technical facts,
-  verified ecosystem roles, source-backed timelines and provenance links;
-- Project Intelligence on all 48 project detail pages, including current
-  assessment, explicit FID status, lifecycle progress, project story, qualitative
-  readiness gates, watchpoints, and separate sourced facts/editorial inferences;
-- Digital & AI page explaining the wider AI/energy system, with offshore-wind
-  lifecycle applications and land, coastal, offshore and flexible compute pathways;
-- reader-facing Methodology and About pages;
-- English / Simplified Chinese interface and fixed-copy switching, persisted
-  when browser storage is available, with an in-memory fallback for expected
-  storage failures; independent from the Light / Dark theme control.
-
-The local research publishing workflow can copy an accepted pipeline
-`weekly_digest.json` into website data and refresh adapter registration only when
-complete successful collection diagnostics match the run. GitHub
-CI validates pushes and pull requests to `main`. Vercel deploys production from
-committed `main` through Git integration.
-
-## Architecture Boundaries
-
-- The pipeline remains the source of truth for research paper data.
-- The website is presentation only and consumes committed static JSON and
-  TypeScript data fixtures.
-- Engineering Briefing data is independent from the OpenAlex Research Pipeline.
-- Industry Map data is independent from Research Digest and Engineering data.
-- Projects data is static website data and is independent from Research Digest,
-  Engineering Briefing and Industry Map UI data.
-- Digital & AI data is independent static evidence data; its 14 Signals support
-  the impact diagrams and are not a generic AI news feed or ranked pipeline.
-- The language layer is local UI state backed by `localStorage` with an in-memory
-  fallback for expected access/quota failures. It does not use external
-  translation, locale routes, or duplicated source datasets.
-- Archive Search is deterministic, client-side, and uses committed website data.
-- Intelligence content remains static and committed. Subscribe alone uses
-  server-side persistence, email and a weekly schedule. See
-  `docs/SUBSCRIBE_MVP.md`. Collection, editorial review and publication follow
-  their existing workflows.
-- The website must not invent, repair, re-rank, summarise, or reinterpret paper
-  records.
-- Engineering briefing copy must remain traceable to source records.
-- Projects facts, relationships, timelines and sources must remain traceable to
-  accepted project source records.
-
-## Current Data Baseline
-
-- Static Research Digest editions: 43 editions, latest week ending 2026-11-01.
-- Static Research candidate-pool files: 30 retained or reconstructed weekly
-  candidate pools.
-- Static Engineering Briefing editions: 43 editions, latest week ending 2026-11-01.
-- Static Engineering source registry: 42 approved source records.
-- Static Industry Map companies: 47 curated organisations.
-- Static Projects records: 48 source-backed floating offshore wind project
-  records.
-- Static Digital & AI Signals: 14 source-backed records.
-- These archives are demonstration coverage, not complete historical coverage.
-- Weekly Digest pages may show abstract previews.
-- Paper Detail pages show complete abstracts when available.
-- Homepage Research cards do not show abstract previews.
-- Current Engineering Homepage items use controlled region labels, with
-  global/non-specific items classified as `Unspecified`.
-- Projects filtering includes region, country, lifecycle, FID, capacity and
-  paired readiness area/state. Merged Connected Project Context adds navigation to
-  existing Industry entries through recorded company IDs. Geographic maps, GIS
-  data and automatic project collection/update remain outside scope.
-
-## Earlier Industry Validation Baseline
-
-Fresh local validation of merged main `da48422` on 2026-10-23
-(Python 3.14.5, Node 24.19.0):
-
-```text
-python -m pytest pipeline/tests -> 210 passed
-npm.cmd run validate:data -> passed
-npm.cmd run test:data -> 148 passed
-node --test data/industry/country-guides.test.js data/industry/uk-guide.test.js -> 62 passed
-npm.cmd run lint -> passed, zero errors
-npm.cmd run build -> passed, 431 static pages
-git diff --check -> passed
-```
-
-Python tests used the installed Python executable and an ignored local pytest
-temporary directory. Lint reported six pre-existing warnings in ignored local
-prior-MVP pytest fixtures; tracked source had no lint errors. The feature's
-accepted browser runs also passed 12 Industry journeys and 10 shared regression
-journeys; see the Industry implementation document for exact commands.
-
-Pushes and pull requests to `main` trigger CI. The focused 62 Industry checks and
-12 Industry browser journeys are additional direct local checks, not new CI jobs.
-Historical pre-maintenance browser runs stalled during OS dependency installation;
-the current workflow below already includes the container fix. Those old runs
-do not describe current branch health. Record new final-head CI in its PR.
-
-Browser CI now uses the official Playwright Noble image, pinned to the locked
-`@playwright/test` version 1.63.0 and an immutable image digest, with browsers and
-OS dependencies preinstalled. An explicit installed-package version check fails
-if the package is upgraded without updating the image/check. Update all three
-together; do not restore unbounded per-run OS package installation or treat
-skipped setup/tests as passing. The ten-minute job limit and failure-diagnostic
-upload remain in place. See [Playwright's Docker guidance](https://playwright.dev/docs/docker)
-for image contents and version compatibility.
-
-## Merged Maintenance Review (PR #49, `20533eb`)
-
-- Scope, section map, findings and acceptance: `docs/WEBSITE_MAINTENANCE.md`.
-- Fixed Engineering edition-date/year search without changing the page layout.
-- Added three shared browser journeys for Engineering search, Research provenance
-  navigation, and Methodology/About mobile bilingual reading.
-- Updated routes, ownership, publication checks and browser CI documentation.
-- Source-backed data, styling, pipeline and scoring remain unchanged.
-- Local results are in the review document; remote CI and preview status must be
-  checked against the eventual PR head.
-
-## Reference Map
-
-Read only when relevant:
-
-- Product principles: `docs/PRODUCT_VISION.md`
-- Pipeline architecture: `docs/PIPELINE_ARCHITECTURE.md`
-- Pipeline contracts: `docs/PIPELINE_DATA_MODEL.md`
-- Website publishing: `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
-- Engineering source policy: `docs/ENGINEERING_SOURCE_POLICY.md`
-- Engineering briefing contract: `docs/ENGINEERING_BRIEFING_DATA_MODEL.md`
-- Selection transparency: `docs/SELECTION_TRANSPARENCY.md`
-- Digital & AI scope and evidence rules: `docs/M11_DIGITAL_AI_SIGNALS_DESIGN.md`
-- Optional module map: `PROJECT_HANDOVER.md`
-- Historical records: `docs/archive/`
+| Topic | Reference |
+| --- | --- |
+| Product principles | [Product Vision](docs/PRODUCT_VISION.md) |
+| Code, data, tests, and skills | [Project Handover](PROJECT_HANDOVER.md) |
+| Research architecture and contracts | [Pipeline architecture](docs/PIPELINE_ARCHITECTURE.md), [data model](docs/PIPELINE_DATA_MODEL.md) |
+| Research publication and selection | [Publishing workflow](docs/WEBSITE_PUBLISHING_WORKFLOW.md), [selection transparency](docs/SELECTION_TRANSPARENCY.md) |
+| Engineering evidence and data | [Source policy](docs/ENGINEERING_SOURCE_POLICY.md), [briefing data model](docs/ENGINEERING_BRIEFING_DATA_MODEL.md) |
+| Project relationships and public evidence | [Connected context](docs/CONNECTED_PROJECT_CONTEXT_IMPLEMENTATION.md), [public evidence](docs/PROJECTS_PUBLIC_EVIDENCE_IMPLEMENTATION.md) |
+| Company Intelligence sources and coverage | [Full-history audit](docs/COMPANY_INTELLIGENCE_FULL_HISTORY_AUDIT.md) |
+| Digital & AI | [Signals design](docs/M11_DIGITAL_AI_SIGNALS_DESIGN.md), [unified guide implementation](web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md) |
+| Subscribe operations and recovery | [Subscribe runbook](docs/SUBSCRIBE_MVP.md) |
+| Previous releases and designs | [Weekly records](docs/weekly/), [archive](docs/archive/) |

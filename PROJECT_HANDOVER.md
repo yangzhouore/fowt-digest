@@ -1,133 +1,93 @@
 # Project Handover
 
-This file is an optional repository map for agents who need orientation after
-reading `AGENTS.md`, `START_HERE.md`, and `PROJECT_STATUS.md`. It is not part of
-the default reading path and should not duplicate current status.
+Use this optional module map after reading [AGENTS.md](AGENTS.md),
+[START_HERE.md](START_HERE.md), and [PROJECT_STATUS.md](PROJECT_STATUS.md).
+For product state and operational follow-up, use Project Status.
 
-## Repository Layout
+## Repository layout
 
-```text
-pipeline/  deterministic Research Digest pipeline and tests
-web/       static Next.js website, adapters, validation scripts, committed data
-docs/      durable reference docs plus archived historical notes
-tools/     repository workflow helpers
-skills/    fowt-paper, fowt-news, and fowt-project-intelligence workflows
-.github/   GitHub Actions validation workflow
-```
+| Area | Location |
+| --- | --- |
+| Deterministic Research pipeline | [pipeline/](pipeline/) |
+| App Router pages and route handlers | [web/app/](web/app/) |
+| Committed intelligence and adapters | [web/data/](web/data/) |
+| Subscribe server modules and SQL | [web/subscribe/](web/subscribe/) |
+| Local workflow tooling | [tools/](tools/) |
+| Durable references and audits | [docs/](docs/) |
 
-## Main Runtime Areas
+## Routes and owning modules
 
-Research pipeline:
+| Area | Route groups | Main code and records |
+| --- | --- | --- |
+| Home and presentation | `/`, `/about`, `/methodology` | [Homepage](web/app/page.tsx), [header](web/app/site-header.tsx), [language and copies](web/app/i18n/), [global styles](web/app/globals.css) |
+| Engineering | `/engineering`, `/engineering/[slug]`, `/engineering/[slug]/candidates` | [Pages and filters](web/app/engineering/), [briefing adapter](web/data/engineering-briefing-adapter.ts), [editions](web/data/briefings/), [source registry](web/data/engineering-source-registry.json) |
+| Research | `/archive`, `/weekly/[slug]`, `/weekly/[slug]/candidates`, `/papers/[slug]` | [Archive](web/app/archive/), [digest adapter](web/data/digest-adapter.ts), [editions](web/data/digests/), [candidate adapter](web/data/research-candidate-adapter.ts), [candidate pools](web/data/research-candidates/) |
+| Industry | `/industry`, `/industry/uk`, `/industry/[country]` | [Pages](web/app/industry/), [canonical Industry map](web/data/industry/industry-map.ts), [country guide registry](web/data/industry/country-guides.ts) |
+| Projects | `/projects`, `/projects/[slug]` | [Pages](web/app/projects/), [project data](web/data/projects/), [project adapter](web/data/project-adapter.ts), [public evidence adapter](web/data/project-public-evidence-adapter.ts) |
+| Company Intelligence | `/companies`, `/companies/[company-id]` | [Pages and filters](web/app/companies/), [event catalogue](web/data/context/company-events.json), [company adapter](web/data/company-intelligence-adapter.ts), [category labels](web/data/company-news-categories.ts) |
+| Digital & AI | `/digital-ai`, `/digital-ai/signals/[slug]` | [Pages and guide components](web/app/digital-ai/), [committed context and Signals](web/data/digital-ai/), [Digital & AI adapter](web/data/digital-ai-adapter.ts) |
+| Global Search | `/search` | [Page and results](web/app/search/), [index construction](web/data/global-search-adapter.ts), [query and ranking](web/data/global-search.ts) |
+| Subscribe | `/subscribe`, `/subscribe/confirm`, `/subscribe/manage` | [Pages and forms](web/app/subscribe/), [Subscribe API](web/app/api/subscribe/route.ts), [weekly API](web/app/api/subscribe/weekly/route.ts) |
 
-- `pipeline/openalex_query.py`
-- `pipeline/openalex_client.py`
-- `pipeline/openalex_collector.py`
-- `pipeline/normaliser.py`
-- `pipeline/deduplicator.py`
-- `pipeline/relevance_classifier.py`
-- `pipeline/ranker.py`
-- `pipeline/weekly_digest.py`
-- `pipeline/orchestrator.py`
-- `pipeline/website_publisher.py`
-- `pipeline/tests/`
+The [connected-context adapter](web/data/connected-context-adapter.ts) and
+[context navigation helpers](web/data/context-navigation.ts) join committed
+project, company, and Engineering records. [Project–Engineering
+links](web/data/context/project-engineering-links.json) are maintained as
+reviewed references.
 
-Website:
+Global Search builds browser search documents from existing adapters.
+Company Intelligence, Search, and Subscribe use the canonical Industry company
+IDs. Company events can link projects and preserve historical names independently
+of current identity.
 
-- `web/app/page.tsx`
-- `web/app/site-header.tsx`
-- `web/app/weekly/[slug]/page.tsx`
-- `web/app/weekly/[slug]/candidates/page.tsx`
-- `web/app/papers/[slug]/page.tsx`
-- `web/app/archive/page.tsx`
-- `web/app/archive/archive-search.tsx`
-- `web/app/engineering/page.tsx`
-- `web/app/engineering/[slug]/page.tsx`
-- `web/app/engineering/[slug]/candidates/page.tsx`
-- `web/app/industry/page.tsx`
-- `web/app/industry/uk/page.tsx` and `web/app/industry/[country]/page.tsx`
-- `web/app/industry/uk-system-guide.tsx` and `country-system-guide.tsx`
-- `web/app/projects/page.tsx`
-- `web/app/projects/[slug]/page.tsx`
-- `web/app/digital-ai/page.tsx`
-- `web/app/digital-ai/signal-filters.tsx`
-- `web/app/digital-ai/energy-system.tsx` and `energy-system.module.css`
-- `web/app/digital-ai/guide-structure.ts` (explicit topic/workflow reading mappings)
-- `web/app/digital-ai/use-case-card.tsx` and `pathway-comparison.tsx`
-- `web/app/digital-ai/signals/[slug]/page.tsx` and `signal-reader.tsx`
-- `web/app/connected-project-context.tsx`
-- `web/app/projects/project-public-evidence.tsx`
-- `web/app/methodology/page.tsx`
-- `web/app/i18n/`
-- `web/app/globals.css`
+## Research and publication
 
-Static website data:
+- [OpenAlex query construction](pipeline/openalex_query.py),
+  [client](pipeline/openalex_client.py), and [collector](pipeline/openalex_collector.py)
+  handle source retrieval.
+- [Orchestration](pipeline/orchestrator.py) and [run storage](pipeline/run_storage.py)
+  coordinate local runs and diagnostics.
+- [Normalisation](pipeline/normaliser.py), [deduplication](pipeline/deduplicator.py),
+  [classification](pipeline/relevance_classifier.py), [ranking](pipeline/ranker.py),
+  and [digest assembly](pipeline/weekly_digest.py) prepare Research output.
+- [Website publisher](pipeline/website_publisher.py) and the
+  [publication workflow](tools/publication_workflow.py) transfer and validate
+  accepted output locally.
 
-- `web/data/digests/*.json`
-- `web/data/digest-adapter.ts`
-- `web/data/research-candidates/*.json`
-- `web/data/research-candidate-adapter.ts`
-- `web/data/briefings/*.json`
-- `web/data/engineering-briefing-adapter.ts`
-- `web/data/engineering-source-registry.json`
-- `web/data/industry/industry-map.ts`
-- `web/data/projects/projects.json`
-- `web/data/project-adapter.ts`
-- `web/data/projects/public-evidence.json`
-- `web/data/project-public-evidence-adapter.ts`
-- `web/data/context/project-engineering-links.json`
-- `web/data/connected-context-adapter.ts` and `context-navigation.ts`
-- `web/data/industry/country-guides.ts` and `country-guide-*.ts`
-- `web/data/industry/uk-system-guide.json` (independent UK guide fixture)
-- `web/data/digital-ai/signals.json`
-- `web/data/digital-ai-adapter.ts`
-- `web/data/digital-ai/energy-context.json` (independent broader energy context)
-- `web/data/digital-ai/use-cases.json`, `pathways.json`, `reader-notes.json`
+## Subscribe server modules
 
-Website validation scripts:
+- Input and canonical company registry access live in [preferences](web/subscribe/preferences.ts).
+  Subscription actions are in [service](web/subscribe/service.ts).
+- [Runtime configuration](web/subscribe/runtime.ts), [SQL access](web/subscribe/store.ts),
+  [tokens](web/subscribe/tokens.ts), and the [migration](web/subscribe/migrations/001_subscribe.sql)
+  define the server and database boundary.
+- [Weekly selection](web/subscribe/digests.ts), [delivery](web/subscribe/delivery.ts),
+  [templates](web/subscribe/templates.ts), and [Resend client](web/subscribe/mail.ts)
+  implement the delivery path. [Vercel configuration](web/vercel.json) owns the schedule.
+- See the [runbook](docs/SUBSCRIBE_MVP.md) for environment, setup, and recovery.
 
-- `web/scripts/validate-static-digests.js`
-- `web/scripts/validate-static-digests.test.js`
-- `web/scripts/validate-static-briefings.js`
-- `web/scripts/validate-static-briefings.test.js`
-- `web/scripts/validate-static-projects.js`
-- `web/scripts/validate-static-projects.test.js`
-- `web/scripts/validate-static-digital-ai.js`
-- `web/scripts/validate-static-digital-ai.test.js`
-- `web/scripts/validate-energy-context.js` (called by Digital & AI validation)
-- `web/scripts/validate-project-public-evidence.js`
-- `web/scripts/validate-connected-context.js`
-- `web/data/industry/country-guides.test.js` and `uk-guide.test.js`
-- `web/tests/browser/` and `web/playwright.config.ts`
-- `web/app/industry/*.smoke.spec.ts` and `browser.playwright.config.ts`
+## Validation and test locations
 
-Repository workflow:
+- Python regression tests live in [pipeline/tests/](pipeline/tests/).
+- [Website validators and Node tests](web/scripts/) are registered in
+  [web/package.json](web/package.json). The focused suites include
+  [Company Intelligence](web/scripts/company-intelligence.test.js),
+  [Global Search](web/scripts/global-search.test.js), and
+  [Subscribe](web/scripts/subscribe.test.js).
+- [Shared Chromium tests](web/tests/browser/) use
+  [Playwright configuration](web/playwright.config.ts). The
+  [Subscribe test fixture](web/tests/browser/fixtures/subscribe-services.cjs)
+  provides isolated persistence and mail interception.
+- Country-guide tests live under [web/data/industry/](web/data/industry/).
+  Their separate local browser configuration is in
+  [web/app/industry/](web/app/industry/).
+- Hosted validation is defined in [the GitHub Actions workflow](.github/workflows/ci.yml).
 
-- `tools/publication_workflow.py`
-- `.github/workflows/ci.yml`
+## Repository skills
 
-Project records may include optional `intelligence` (populated on all current
-records): current assessment, FID status, sourced confirmed facts and separate
-editorial inferences, qualitative gates, watchpoints, and uncertainties. The
-project detail route renders intelligence pages, with a dedicated Green Volt
-layout and a factual fallback for records without intelligence.
-
-## Durable Reference Docs
-
-Open only when relevant:
-
-- Product principles: `docs/PRODUCT_VISION.md`
-- Research pipeline architecture: `docs/PIPELINE_ARCHITECTURE.md`
-- Research pipeline contracts: `docs/PIPELINE_DATA_MODEL.md`
-- Website publishing workflow: `docs/WEBSITE_PUBLISHING_WORKFLOW.md`
-- Section maintenance and code review: `docs/WEBSITE_MAINTENANCE.md`
-- Engineering source policy: `docs/ENGINEERING_SOURCE_POLICY.md`
-- Engineering briefing contract: `docs/ENGINEERING_BRIEFING_DATA_MODEL.md`
-- Selection transparency: `docs/SELECTION_TRANSPARENCY.md`
-- Digital & AI scope and evidence rules: `docs/M11_DIGITAL_AI_SIGNALS_DESIGN.md`
-- AI × Energy extension scope/source review: `web/app/digital-ai/design/ENERGY_SYSTEM_MVP.md`
-  and `ENERGY_SYSTEM_IMPLEMENTATION.md` in the same directory
-- Unified guide review, scope and acceptance: `web/app/digital-ai/design/UNIFIED_GUIDE_MVP.md`
-  and `UNIFIED_GUIDE_IMPLEMENTATION.md` in the same directory
-
-Historical milestone and early-design records live under `docs/archive/` and
-should normally remain outside active context.
+| Task | Skill |
+| --- | --- |
+| Weekly Research collection and selection | [fowt-paper](skills/fowt-paper/SKILL.md) |
+| Weekly Engineering source discovery and review | [fowt-news](skills/fowt-news/SKILL.md) |
+| Project records and evidence review | [fowt-project-intelligence](skills/fowt-project-intelligence/SKILL.md) |
+| Company Intelligence research and event maintenance | [company-intelligence](skills/company-intelligence/SKILL.md) |

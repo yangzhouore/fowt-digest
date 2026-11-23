@@ -1,184 +1,93 @@
 # FOWT Research Digest
 
 FOWT Research Digest is a source-backed intelligence briefing for floating and
-offshore wind. It combines a deterministic local Research pipeline with a
-static Next.js website covering Engineering, Research, Industry, Projects, and
-Digital & AI.
+offshore wind. The site helps readers follow Engineering and Research,
+understand the Industry and its Projects, and find or subscribe to the
+intelligence they need.
 
-Live website: https://fowt-digest-oegd.vercel.app/
+[Live site](https://fowt-digest-oegd.vercel.app/) ·
+[Repository](https://github.com/yangzhouore/fowt-digest)
 
-Repository: https://github.com/yangzhouore/fowt-digest
+## What the site provides
 
-## What It Provides
+- **Engineering and Research** pair source-backed industry briefings with
+  selected research papers. Candidate pools and selection details are available
+  where supporting records are retained.
+- **Industry and Projects** explain the supply chain, country context,
+  participants, status, and project evidence.
+- **Company Intelligence** provides source-backed timelines. A shared catalogue
+  records each development once and uses canonical company and project IDs
+  to link related records.
+- **Digital & AI** connects practical wind-industry workflows and energy
+  pathways with supporting evidence.
+- **Global Search** finds companies, projects, company events, Engineering,
+  Research, and Digital & AI. It derives its index from committed records and
+  uses deterministic, entity-first ranking.
+- **Subscribe** offers Weekly News Digest, Weekly Research Digest, and Company
+  Brief. Readers confirm by email and can manage preferences or unsubscribe
+  without an account.
 
-- A deterministic OpenAlex research pipeline from collection through weekly
-  digest assembly.
-- Static Research Digest editions committed under `web/data/digests/`.
-- Static source-backed Engineering Briefing editions committed under
-  `web/data/briefings/`.
-- Static source-backed Projects data committed under `web/data/projects/`.
-- Project Intelligence across all 48 projects: current state, FID gates, sourced
-  facts and separate editorial inferences, readiness, and watchpoints.
-- A curated Industry Map under `web/data/industry/`.
-- Fourteen source-backed Digital & AI Signals under `web/data/digital-ai/`,
-  presented as evidence for AI × offshore-wind lifecycle and energy pathways.
-- An AI × Energy guide connecting computing, weather, wind, solar/storage,
-  grids and renewable procurement, with reader/developer perspectives, dated
-  developments and conditional future pathways. Sources and review scope:
-  `web/app/digital-ai/design/ENERGY_SYSTEM_IMPLEMENTATION.md`.
-- A unified Digital & AI reading sequence connects those explanations directly
-  to practical wind workflows, supply comparisons, developments, futures and
-  a final evidence library; see `web/app/digital-ai/design/UNIFIED_GUIDE_IMPLEMENTATION.md`.
-- Homepage, Engineering, Research, Industry Map, Projects, Digital & AI,
-  Methodology, About, paper detail, and selection-transparency reading paths.
-- A reader-facing Methodology that separates Research and Engineering methods,
-  explains provenance and editorial control, and states known limitations.
-- English and Simplified Chinese interface and fixed editorial copy, persisted
-  locally without external translation services or locale-specific routes.
-- Local validation guardrails for all committed static datasets.
-- Deterministic publishing tooling that copies an accepted pipeline
-  `weekly_digest.json` into the website data directory and refreshes adapter
-  registration.
-- GitHub CI for pull requests and pushes to `main`.
+The interface supports English and Simplified Chinese. Original source text and
+provenance are preserved. Coverage reflects selected and reviewed material.
 
-The website does not run the pipeline, collect sources, query OpenAlex, generate
-content at runtime, or deploy itself. It displays committed static data.
+## Routes
 
-## How The Research Digest Works
+| Area | Routes |
+| --- | --- |
+| Weekly overview | `/` |
+| Engineering | `/engineering`, `/engineering/[slug]`, `/engineering/[slug]/candidates` |
+| Research | `/archive`, `/weekly/[slug]`, `/weekly/[slug]/candidates`, `/papers/[slug]` |
+| Industry | `/industry` and its UK, Germany, Norway, and China guides |
+| Projects | `/projects`, `/projects/[slug]` |
+| Company Intelligence | `/companies`, `/companies/[company-id]` |
+| Digital & AI | `/digital-ai`, `/digital-ai/signals/[slug]` |
+| Global Search | `/search` |
+| Subscribe | `/subscribe`, `/subscribe/confirm`, `/subscribe/manage` |
+| About the briefing | `/methodology`, `/about` |
 
-Implemented research flow:
+## How the repository works
 
-```text
-OpenAlex
--> Collection
--> Metadata normalisation
--> Deduplication
--> FOWT relevance classification
--> Ranking and selection
--> Weekly digest assembly
--> Website publishing tool
--> Static website data
-```
+The deterministic Python Research pipeline runs locally. It uses OpenAlex
+and prepares weekly selections through normalisation, deduplication,
+classification, and ranking. The Next.js site renders accepted committed output
+alongside independently curated intelligence. Global Search runs in the browser.
 
-Publish a completed pipeline run into the static website data structure from the
-repository root:
+Subscribe is the sole server-side persistence, email, and scheduling subsystem.
+It uses Neon, Resend, and Vercel Cron. Delivery reads committed intelligence and
+does not collect or generate content. Production deployment uses Vercel Git
+integration. Live Subscribe delivery remains unverified. See the
+[Subscribe runbook](docs/SUBSCRIBE_MVP.md) for setup and acceptance.
 
-```powershell
-python -m pipeline.website_publisher pipeline\data\runs\<run_id>
-```
-
-Run the full local publication workflow from the repository root:
+For weekly Research publication, pass a completed run to the local workflow
+from the repository root.
 
 ```powershell
 python -m tools.publication_workflow pipeline\data\runs\<run_id>
 ```
 
-The workflow publishes an existing `weekly_digest.json`, runs repository and
-website validation, and prints a summary report. It does not run the pipeline,
-commit, push, deploy, or choose whether a digest should be published.
+The workflow publishes the accepted digest data locally and runs validation.
+See the [publishing workflow](docs/WEBSITE_PUBLISHING_WORKFLOW.md) for the
+collection gate, direct publisher command, and adapter registration.
 
-## Routes and Content Workflows
+## Local development
 
-- `/`: paired Engineering/Research weeks, newest first, with a multi-week timeline.
-- `/engineering`, `/engineering/[slug]`, `/engineering/[slug]/candidates`.
-- `/archive`, `/weekly/[slug]`, `/weekly/[slug]/candidates`, `/papers/[slug]`.
-- `/projects`, `/projects/[slug]`, `/industry`, `/digital-ai`.
-- `/industry/uk`, `/industry/germany`, `/industry/norway`, `/industry/china`.
-- `/digital-ai/signals/[slug]`: fourteen static evidence readers.
-- `/methodology` and `/about`.
+CI uses Python 3.14 and Node 24.
 
-Weekly Research and Engineering work uses `skills/fowt-paper/SKILL.md` and
-`skills/fowt-news/SKILL.md`; project audits use
-`skills/fowt-project-intelligence/SKILL.md`. See
-`docs/WEBSITE_PUBLISHING_WORKFLOW.md` for publication and candidate registration.
-For section ownership, presentation behavior, review findings and verification,
-see [Website maintenance and code review](docs/WEBSITE_MAINTENANCE.md).
+- Install pipeline test dependencies with `python -m pip install pytest`.
+- From `web/`, run `npm.cmd ci`, then `npm.cmd run dev`. Open `http://localhost:3000`.
+- For the full validation baseline, follow [AGENTS.md](AGENTS.md#validation-baseline).
+  [Project Status](PROJECT_STATUS.md#current-validation-baseline) describes the
+  test suites, including Chromium and the Subscribe fixture.
 
-## Technology Stack
+## Repository map
 
-- Python standard-library pipeline modules with pytest coverage.
-- Next.js, React, and TypeScript for the static website.
-- Dependency-free Node scripts for static data validation.
-- GitHub Actions for validation.
-- Vercel Git integration for production deployment.
+- [pipeline/](pipeline/) contains the Python pipeline and its tests.
+- [web/](web/) contains the site, data, adapters, Subscribe subsystem, and web tests.
+- [tools/](tools/) contains local workflow helpers.
+- [docs/](docs/) contains durable references, weekly records, and audits.
+- [skills/](skills/) contains repository workflows, linked by task in the
+  [module map](PROJECT_HANDOVER.md#repository-skills).
 
-## Repository Structure
-
-```text
-fowt-digest/
-  AGENTS.md            # Codex rules and default reading order
-  START_HERE.md        # Short resume entry point
-  PROJECT_STATUS.md    # Current capabilities, boundaries, and validation
-  PROJECT_HANDOVER.md  # Optional module/reference map
-  docs/                # Durable references and docs/archive history
-  pipeline/            # Deterministic Python pipeline and tests
-  tools/               # Repository workflow helpers
-  skills/              # Research, Engineering news, and Project Intelligence skills
-  web/                 # Static Next.js website and committed data
-```
-
-## Local Development
-
-Install dependencies first: `python -m pip install pytest` and, from `web/`,
-`npm.cmd ci`. CI uses Python 3.14 and Node 24.
-
-Run pipeline tests from the repository root:
-
-```powershell
-python -m pytest pipeline/tests
-```
-
-Run website checks from `web/`:
-
-```powershell
-npm.cmd run validate:data
-npm.cmd run test:data
-npm.cmd run lint
-npm.cmd run build
-npm.cmd run dev
-```
-
-Use `http://localhost:3000` for development. To inspect the production build,
-stop the development server, run `npm.cmd run build` and `npm.cmd run start`
-from `web/`. Browser acceptance commands and their prerequisites are documented
-in [the browser test guide](web/tests/browser/README.md).
-
-Full accepted validation baseline:
-
-```powershell
-python -m pytest pipeline/tests
-cd web
-npm.cmd run validate:data
-npm.cmd run test:data
-npm.cmd run lint
-npm.cmd run build
-cd ..
-git diff --check
-```
-
-## Deployment
-
-Production is deployed by Vercel from committed `main` through Git integration.
-Subscribe uses Vercel Cron for weekly email delivery. Setup and operating
-instructions are in [Subscribe MVP](docs/SUBSCRIBE_MVP.md). Deployment uses the
-Git integration.
-
-## Current Limitations
-
-- Research and Engineering archives are selected representative static editions,
-  not complete historical coverage.
-- Projects are curated source-backed records, not a claim of complete global
-  market coverage.
-- Digital & AI is a narrow offshore-wind evidence area, not a generic AI news
-  feed; emerging and experimental pathways require caution.
-- Source-backed titles, abstracts, briefing summaries, company/project facts,
-  publishers, proper nouns, and URLs remain in their original language unless
-  an explicit translated field exists.
-- New data publication is a manual accepted-change workflow.
-- Intelligence content is served from committed static data. Only Subscribe
-  uses API handlers, persistence, email and scheduling. Research collection
-  runs locally via OpenAlex. Engineering and project source review stay manual.
-- The site does not generate AI summaries, findings, limitations,
-  scores, or editorial analysis.
-- Paper content is displayed from deterministic pipeline output and is not
-  rewritten or repaired by the website.
+Start a new session with [START_HERE.md](START_HERE.md). Use
+[PROJECT_STATUS.md](PROJECT_STATUS.md) for current state and
+[PROJECT_HANDOVER.md](PROJECT_HANDOVER.md) to find the owning modules.

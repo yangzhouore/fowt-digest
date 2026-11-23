@@ -9,9 +9,13 @@ and publication stay in their existing workflows.
 
 ## Production setup
 
+Live Subscribe delivery remains unverified until production setup and a
+controlled live-email acceptance test are complete.
+
 1. Create a Neon Postgres database and apply
-   `web/subscribe/migrations/001_subscribe.sql` once, for example in the Neon
-   SQL Editor. The migration creates `subscribers` (identity, status, locale,
+   [migration `001_subscribe.sql`](../web/subscribe/migrations/001_subscribe.sql)
+   once, for example in the Neon SQL Editor. The migration creates
+   `subscribers` (identity, status, locale,
    preference flags and canonical company IDs), `subscription_confirmations`
    (requested preferences, hashed token, expiry and consumption time), and
    `subscription_deliveries` (product, week, edition or period key, selected
@@ -36,15 +40,20 @@ and publication stay in their existing workflows.
 | `CRON_SECRET` | Separate random secret of at least 32 characters sent in Vercel's Bearer authorization header |
 
 Enable Cron for the Vercel project rooted at `web/`. The schedule in
-`web/vercel.json` calls `GET /api/subscribe/weekly` Mondays at 18:00 UTC, after
-the normal weekly publishing window. Vercel invokes the job on production
+[`web/vercel.json`](../web/vercel.json) calls `GET /api/subscribe/weekly` Mondays
+at 18:00 UTC, after the normal weekly publishing window. Vercel invokes the job on production
 deployments. Retain the same management secret across deployments to preserve
 existing links.
+
+Use a controlled recipient for production acceptance. Verify email
+confirmation, preference changes and unsubscribe. Verify an authenticated
+weekly invocation and its delivery record when an eligible period has content.
+Check that a repeat invocation leaves the successful delivery closed.
 
 Provider references for [Neon’s HTTP driver](https://neon.com/docs/serverless/serverless-driver),
 [Resend’s send endpoint](https://resend.com/docs/api-reference/emails/send-email),
 [Resend’s idempotency policy](https://resend.com/changelog/idempotency-keys), and
-[Vercel Cron management](https://vercel.com/docs/cron-jobs/manage-cron-jobs).
+[Vercel Cron management](https://vercel.com/docs/schedules/cron-jobs/manage-cron-jobs).
 
 ## Confirmation and preferences
 
@@ -61,9 +70,9 @@ whether an address already has an active subscription.
 A confirmation link contains a 256-bit random token in the URL fragment. The
 database keeps only its SHA-256 hash. The recipient must press Confirm on
 `/subscribe/confirm`. An atomic database statement consumes the unexpired
-token with a recorded send and applies the pending preferences. Tokens expire after 24 hours, and
-weekly processing deletes expired requests. An older pending request cannot
-reactivate a subscriber who subsequently unsubscribed.
+token with a recorded send and applies the pending preferences. Tokens expire
+after 24 hours, and weekly processing deletes expired requests. An older pending
+request cannot reactivate a subscriber who subsequently unsubscribed.
 
 `/subscribe/manage` accepts a bearer link signed with HMAC-SHA-256 and bound
 to a random subscriber ID and management version. It supports loading and
@@ -88,9 +97,9 @@ after their latest confirmation. A confirmation exactly at the closing
 boundary belongs to the next period. Current preferences are read at delivery.
 
 News and Research require the edition whose week-end slug equals that Sunday
-and whose generation timestamp is no later than the run. News uses selected Engineering items,
-their existing one-line summaries, and source links. Research uses selected
-paper titles, authors, publishers, tags, and paper links. A missing or empty
+and whose generation timestamp is no later than the run. News uses selected
+Engineering items, their existing one-line summaries, and source links. Research
+uses selected paper titles, authors, publishers, tags, and paper links. A missing or empty
 current edition records a skip. Earlier editions and events are never
 automatically backfilled. A recorded skip closes that subscriber's product
 for the period, including on repeated runs.
@@ -105,9 +114,8 @@ A unique database constraint per subscriber/product/edition or period and a
 second constraint per subscriber/product/week guard delivery. A worker renders
 the email before claiming the right to send. A local preparation failure is
 recorded as retryable without contacting Resend. Resend receives a deterministic
-idempotency key.
-Successful requests store the provider ID and timestamp. Definite provider
-rejections remain failed and can be retried with the same selected items during
+idempotency key. Successful requests store the provider ID and timestamp. Definite
+provider rejections remain failed and can be retried with the same selected items during
 the same week. Ambiguous sends and interrupted claims become uncertain and are
 never automatically replayed. This avoids duplicates even after Resend's
 idempotency window expires.

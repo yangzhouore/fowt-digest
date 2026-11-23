@@ -1,104 +1,101 @@
 # Product Vision
 
-## Product Purpose
+## Purpose
 
-FOWT Digest is a source-backed intelligence briefing for floating and offshore
-wind. It helps technical readers understand what happened in Engineering, what
-is being studied in Research, who builds the sector, where projects are
-happening, and how offshore wind intersects with Digital & AI.
+FOWT Research Digest is a source-backed intelligence briefing for floating and
+offshore wind. It helps readers understand what happened, what is being
+studied, who is involved, and how offshore wind intersects with Digital & AI.
+Its scope is selected, attributable intelligence for technical readers.
 
-The product is not a complete research database, market database, or general
-news feed. It is a focused static reading experience built from deterministic
-pipeline output and curated source-backed records.
+The primary audience includes engineers, researchers, developers, analysts,
+supply-chain and policy professionals, and students. It values provenance,
+transparent selection, and clear evidence limits.
 
-## Target Reader
+## Product model
 
-The primary reader is an offshore-wind engineer, researcher, developer, analyst,
-project or supply-chain professional, policy professional, or student who needs
-a concise view across the floating-wind system. Readers are expected to value
-provenance, transparent selection, and honest data boundaries.
+The product follows a simple progression from **Build** to **Find** to
+**Deliver**.
 
-## Product Areas
+### Build source-backed intelligence
 
-- **Engineering - what happened:** weekly source-backed project, technology,
-  infrastructure, policy, supply-chain, and operational developments.
-- **Research - what is being studied:** papers selected through the deterministic
-  OpenAlex pipeline and exposed with candidate and score transparency where the
-  supporting pool exists.
-- **Industry - who builds it:** curated organisations and roles across the
-  floating-wind value chain.
-- **Projects - where it is happening:** structured project facts, status,
-  participants, timelines, and provenance.
-- **Digital & AI - how the systems affect each other:** practical AI and digital
-  impacts across the offshore-wind lifecycle, plus qualified pathways through
-  which offshore wind may support compute infrastructure.
+- **Engineering** explains weekly developments in projects, technology,
+  infrastructure, policy, supply chains, and operations.
+- **Research** makes curated papers, metadata, and available candidate
+  evidence easy to inspect.
+- **Industry** defines companies and their roles in the offshore-wind value chain.
+- **Projects** documents project facts, status, participants, timelines, and
+  evidence. Readers can distinguish confirmed facts from editorial assessments.
+- **Company Intelligence** treats the company as a core intelligence entity.
+  A source-backed development is represented once and can appear on several
+  company timelines through canonical company and project relationships.
+  Historical attribution stays visible alongside current company identity.
+- **Digital & AI** connects practical use cases and energy pathways with
+  qualified evidence from the offshore-wind sector.
 
-## Product Value
+### Find across sections
 
-The product reduces the effort required to scan a fragmented sector while
-preserving the route back to original records. Deterministic selection is used
-where applicable; Industry and Projects remain structured intelligence rather
-than ranked feeds; Digital & AI Signals remain supporting evidence rather than
-a generic news stream.
+Global Search connects companies, projects, company events, Engineering,
+Research, and Digital & AI. It uses deterministic entity-aware ranking
+that gives canonical identities priority over text matches. Readers can move
+from a cross-section result to its owning record and then to its evidence.
+Section-specific searches and filters support narrower questions.
 
-## Definition Of Success
+### Deliver what readers follow
 
-The product succeeds when a reader can:
+Subscribe delivers weekly Engineering news, Research selections, and briefings
+for followed companies. People can confirm, manage, and cancel their own
+preferences through email links. Delivery selects from reviewed records and
+keeps their citations and canonical relationships intact.
 
-- understand the five product areas and move between them without confusion;
-- scan weekly Engineering and Research selections quickly;
-- inspect candidate pools, scores, metadata, abstracts, and source links;
-- understand the floating-wind value chain and browse verified project records;
-- grasp the two-way AI × offshore-wind relationship without overstated claims;
-- distinguish application areas from real-world evidence and emerging concepts;
-- trust that missing facts remain missing rather than being inferred;
-- switch fixed interface and editorial copy between English and Simplified
-  Chinese without changing source-backed records.
+## Definition of success
 
-## Product Principles
+A reader can:
 
-- Source-backed facts and provenance come before presentation.
+- Scan weekly Engineering and Research selections, then inspect the source or
+  candidate evidence for a result.
+- Understand company roles and trace a development from a company timeline to
+  its sources and recorded project context.
+- Find a known company or project and discover relevant evidence across sections
+  through predictable search.
+- Receive the weekly products they selected and change or cancel delivery
+  without an account.
+- Distinguish confirmed findings, editorial interpretation, and uncertainty,
+  including in Digital & AI.
+- Read the interface in English or Simplified Chinese with underlying source
+  facts and provenance preserved.
+
+## Product and presentation principles
+
+- Source facts, provenance, and reviewed relationships come first.
 - Research and Engineering selection methods remain separate and transparent.
-- The pipeline is the source of truth for Research data.
-- Intelligence content is a static presentation of committed data. Subscribe
-  handles server-side preferences and scheduled email delivery only.
-- Industry and Projects are structured intelligence, not ranked news feeds.
-- Digital & AI stays narrow to offshore wind, digital engineering, energy
-  systems, and relevant compute infrastructure.
-- Deterministic scores are selection aids, not universal quality judgements.
-- `UNKNOWN`, `null`, or omission is preferred to unsupported inference.
-- Human review and repository-controlled publication remain explicit.
-- Content and reading hierarchy take priority over decorative UI.
+  Deterministic scores help readers understand selection decisions.
+- Keep lists scannable and reserve fuller evidence for detail or expanded views.
+  Make navigation, filters, source links, and reading paths predictable.
+- Preserve source-backed titles, abstracts, names, publishers, and links unless
+  an explicit translation exists. Language and theme are presentation choices.
+- Represent missing information as unknown or omit it. Preserve uncertainty and
+  separate editorial interpretation from confirmed facts.
 
-## UX Principles
+## Architecture boundary
 
-- Keep list pages scannable and reserve fuller evidence for detail or expanded
-  views.
-- Make navigation, filters, source links, and reading paths predictable.
-- Preserve restrained editorial typography and the existing visual language.
-- Keep Light / Dark theme and English / Simplified Chinese language preferences
-  independent.
-- Preserve source-backed titles, abstracts, names, standards, publishers, and
-  URLs in their original language unless an explicit translated field exists.
+The local deterministic Research pipeline owns Research collection, scoring,
+selection, and digest assembly. Local publication transfers accepted Research
+output to committed website data. Engineering, Industry, Projects, Company
+Intelligence, and Digital & AI use curated, committed records. Editorial
+decisions and recorded relationships remain reviewable in the repository.
 
-## Architecture Boundary
+The site renders those records and derives deterministic Global Search from
+them. Subscribe is the only use of backend persistence, email, and scheduling.
+It stores preferences and delivery state, and reads existing intelligence for
+weekly delivery. See the [Subscribe runbook](SUBSCRIBE_MVP.md) for the
+operational boundary and setup.
 
-The local Python pipeline owns deterministic Research collection,
-normalisation, deduplication, classification, scoring, selection, digest
-assembly, and orchestration. The local publishing workflow copies accepted
-Research output into committed website data.
+## Non-goals
 
-Engineering, Industry, Projects, and Digital & AI use independent committed
-static datasets. The website may format those records for display but must not
-collect, score, translate, rewrite, repair, or reinterpret them at runtime.
-
-## Current Non-goals
-
-- backend services, databases, CMS, or API routes;
-- authentication or user accounts;
-- automatic collection, scheduling, or publication;
-- runtime AI writing or translation;
-- semantic search or AI scoring;
-- generic AI news, financial feeds, or market dashboards;
-- inferred company, project, or technology relationships;
-- automatic synchronization between product-area datasets.
+- Runtime AI generation, translation, or scoring.
+- Semantic search, vector search, retrieval-augmented generation, or inferred
+  company and project relationships.
+- User accounts or passwords.
+- Runtime collection, editorial publication, or automatic synchronisation
+  between intelligence datasets.
+- General news feeds, financial feeds, or market dashboards.

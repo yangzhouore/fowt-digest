@@ -1,0 +1,99 @@
+.content {
+  width: min(100%, 42rem);
+  margin-inline: auto;
+  padding-bottom: 2.5rem;
+}
+
+.form {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.form fieldset {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 0;
+  padding: 0.9rem 0 0;
+  min-width: 0;
+}
+
+.form legend {
+  padding-right: 0.5rem;
+  font-weight: 600;
+}
+
+.form input[type="email"],
+.form input[type="search"] {
+  display: block;
+  width: min(100%, 28rem);
+  margin-top: 0.4rem;
+  border: 1px solid var(--strong-border);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0.6rem;
+  font: inherit;
+}
+
+.product {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.35rem 0;
+}
+
+.product small {
+  display: block;
+  color: var(--muted);
+}
+
+.options,
+.selected {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.options {
+  max-height: 12rem;
+  overflow: auto;
+  border-bottom: 1px solid var(--border);
+}
+
+.selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.action,
+.options button,
+.selected button {
+  border: 1px solid var(--strong-border);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  padding: 0.4rem 0.65rem;
+  cursor: pointer;
+}
+
+.options button {
+  border: 0;
+  text-align: left;
+}
+
+.action {
+  justify-self: start;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.action:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.unsubscribe {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}

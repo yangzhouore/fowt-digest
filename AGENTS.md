@@ -33,8 +33,10 @@ Keep boundaries explicit:
 - Methodology explains the source and selection boundaries; it is presentation copy.
 - Language switching is a local presentation concern; it must not rewrite
   source-backed records or introduce runtime translation services.
-- The website must not run collection, scoring, summarisation, scheduling, or
-  publication automation.
+- Intelligence content stays static and committed. The website must not run
+  collection, scoring, summarisation, or publication automation.
+- Subscribe alone uses request-time persistence and email delivery with one
+  weekly schedule. See `docs/SUBSCRIBE_MVP.md`.
 
 Do not add backend services, databases, CMS, API routes, schedulers, AI writing,
 semantic search, deployment automation, or new pipeline stages unless an

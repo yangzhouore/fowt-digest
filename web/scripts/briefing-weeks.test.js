@@ -12,14 +12,21 @@ const dateRange = "9 November 2026 - 15 November 2026";
 function engineering(slug, ids) {
   return {
     slug, dateRange,
-    items: ids.map((id) => ({ id, title: `Headline ${id}`, oneLineSummary: `Summary ${id}`, sourceRecords: ["evidence"] })),
+    items: ids.map((id) => ({
+      id, title: `Headline ${id}`, oneLineSummary: `Summary ${id}`, category: "policy",
+      sourceUrl: `https://example.org/${id}`,
+      sourceRecords: [
+        { publisher: "Supporting source", publishedDate: "2026-11-09", sourceUrl: `https://example.org/support/${id}` },
+        { publisher: "Item source", publishedDate: "2026-11-10", sourceUrl: `https://example.org/${id}` },
+      ],
+    })),
   };
 }
 
 function research(slug, ids) {
   return {
     slug, dateRange,
-    papers: ids.map((id) => ({ slug: id, title: `Paper ${id}`, publicationSource: "Journal", abstract: "Full text" })),
+    papers: ids.map((id) => ({ id: `paper-${id}`, slug: id, title: `Paper ${id}`, publicationSource: `Journal ${id}`, abstract: "Full text" })),
   };
 }
 
@@ -36,15 +43,26 @@ test("latest paired previews keep all selected counts and the first three canoni
       href: `/engineering/${latest}`,
       selectedCount: 4,
       previewItems: itemIds.slice(0, 3).map((id) => ({
-        href: `/engineering/${latest}#item-${id}`, title: `Headline ${id}`, summary: `Summary ${id}`,
+        id, href: `/engineering/${latest}#item-${id}`, title: `Headline ${id}`, summary: `Summary ${id}`,
+        category: "policy",
+        source: { publisher: "Item source", publishedDate: "2026-11-10", href: `https://example.org/${id}` },
       })),
     },
     research: {
       href: `/weekly/${latest}`,
       selectedCount: 4,
-      previewPapers: itemIds.slice(0, 3).map((id) => ({ href: `/papers/${id}`, title: `Paper ${id}`, publicationSource: "Journal" })),
+      previewPapers: itemIds.slice(0, 3).map((id) => ({
+        id: `paper-${id}`, slug: id, href: `/papers/${id}`, title: `Paper ${id}`, publicationSource: `Journal ${id}`,
+      })),
     },
   });
+});
+
+test("lead attribution stays absent when its canonical source URL does not match a retained record", () => {
+  const edition = engineering(latest, ["one"]);
+  edition.items[0].sourceUrl = "https://example.org/unmatched";
+  const preview = getLatestBriefingPreview([edition], []);
+  assert.equal(preview.engineering.previewItems[0].source, null);
 });
 
 test("a latest Engineering-only week stays sparse without borrowing older Research", () => {

@@ -3,6 +3,7 @@ import { HomepageWeeklyBriefing } from "./homepage-weekly-briefing";
 import { getLatestBriefingPreview } from "./briefing-weeks";
 import { getAllDigests } from "../data/digest-adapter";
 import { getAllEngineeringBriefings } from "../data/engineering-briefing-adapter";
+import "./homepage-briefing.css";
 
 export const metadata: Metadata = {
   title: "Home",

@@ -64,5 +64,7 @@ crop only when the crop preserves essential context.
 
 Without a verified image, use a complete text-first presentation. Exclude
 scraped images, AI depictions of actual events, and unsourced stock used as
-evidence. The image registry and story treatments belong to the homepage
-follow-up.
+evidence. The homepage registry lives in `web/app/editorial-images.ts` and
+keys each record by edition slug and briefing item ID. Commit approved
+derivatives under `web/public/editorial/`. The first selected Engineering item
+remains the lead regardless of image availability.

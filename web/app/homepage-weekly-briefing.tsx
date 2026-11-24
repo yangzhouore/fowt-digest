@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { getLatestBriefingPreview } from "./briefing-weeks";
 import { EditorialImageFigure } from "./editorial-image-figure";
-import { getEditorialImage } from "./editorial-images";
+import { getEditorialImage, type EditorialImage } from "./editorial-images";
 import { formatPublicationDate } from "./format-publication-date";
 import { LocalizedCopy } from "./i18n/localized-copy";
 
@@ -18,11 +18,9 @@ const categories: Record<EngineeringPreview["category"], { en: string; zh: strin
   event: { en: "Event", zh: "活动" },
 };
 
-function EngineeringLead({ item, editionSlug }: { item: EngineeringPreview; editionSlug: string }) {
-  const image = getEditorialImage(editionSlug, item.id);
-
+function EngineeringLead({ item, image }: { item: EngineeringPreview; image?: EditorialImage }) {
   return (
-    <article className="briefing-lead">
+    <article className="briefing-lead" aria-labelledby="briefing-lead-title">
       {image && <EditorialImageFigure image={image} />}
       <div className="briefing-lead-body">
         <p className="briefing-meta briefing-lead-meta">
@@ -31,7 +29,7 @@ function EngineeringLead({ item, editionSlug }: { item: EngineeringPreview; edit
             <time dateTime={item.source.publishedDate} translate="no">{formatPublicationDate(item.source.publishedDate)}</time>
           )}
         </p>
-        <h3 id="briefing-lead-title"><Link href={item.href} translate="no">{item.title}</Link></h3>
+        <h3 id="briefing-lead-title"><Link className="briefing-headline" href={item.href} translate="no">{item.title}</Link></h3>
         <p className="briefing-lead-summary" translate="no">{item.summary}</p>
         <div className="briefing-lead-actions">
           {item.source && (
@@ -40,7 +38,7 @@ function EngineeringLead({ item, editionSlug }: { item: EngineeringPreview; edit
               <a href={item.source.href} translate="no">{item.source.publisher}</a>
             </p>
           )}
-          <Link href={item.href} aria-labelledby="briefing-lead-read briefing-lead-title">
+          <Link className="briefing-read-action" href={item.href} aria-labelledby="briefing-lead-read briefing-lead-title">
             <span id="briefing-lead-read"><LocalizedCopy en="Read briefing item" zh="阅读简报条目" /></span>
             {" "}<span aria-hidden="true">→</span>
           </Link>
@@ -53,6 +51,8 @@ function EngineeringLead({ item, editionSlug }: { item: EngineeringPreview; edit
 export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
   const engineeringCount = preview?.engineering?.selectedCount ?? 0;
   const researchCount = preview?.research?.selectedCount ?? 0;
+  const lead = preview?.engineering?.previewItems[0];
+  const leadImage = preview && lead ? getEditorialImage(preview.slug, lead.id) : undefined;
 
   return (
     <div className="homepage-briefing">
@@ -80,16 +80,17 @@ export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
                 <ol className="briefing-story-list briefing-engineering-list">
                   {preview.engineering.previewItems.map((item, index) => (
                     <li key={item.id}>
-                      {index === 0 ? <EngineeringLead item={item} editionSlug={preview.slug} /> : (
-                        <article className="briefing-compact-story" translate="no">
-                          <h3><Link href={item.href}>{item.title}</Link></h3>
-                          <p>{item.summary}</p>
+                      {index === 0 ? <EngineeringLead item={item} image={leadImage} /> : (
+                        <article className="briefing-compact-story" aria-labelledby={`home-${item.id}`}>
+                          <p className="briefing-meta briefing-story-category"><LocalizedCopy {...categories[item.category]} /></p>
+                          <h3 id={`home-${item.id}`}><Link className="briefing-headline briefing-arrow-link" href={item.href} translate="no">{item.title}</Link></h3>
+                          <p className="briefing-compact-summary" translate="no">{item.summary}</p>
                         </article>
                       )}
                     </li>
                   ))}
                 </ol>
-                <p><Link href={preview.engineering.href}><LocalizedCopy en="Read the full Engineering briefing" zh="阅读完整工程简报" /></Link></p>
+                <p className="briefing-track-action"><Link href={preview.engineering.href}><LocalizedCopy en="Read the full Engineering briefing" zh="阅读完整工程简报" /></Link></p>
               </>
             ) : (
               <p><LocalizedCopy en="No Engineering edition was published for this date." zh="该日期暂无已发布的工程简报。" />{" "}
@@ -102,15 +103,15 @@ export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
             <h2 id="papers-heading"><LocalizedCopy en="Research" zh="研究" /></h2>
             {preview.research ? (
               <>
-                <ol className="briefing-story-list briefing-research-list">
+                <ol className="briefing-story-list briefing-research-list" aria-labelledby="papers-heading">
                   {preview.research.previewPapers.map(({ href, title, publicationSource }) => (
                     <li key={href} translate="no">
-                      <h3><Link href={href}>{title}</Link></h3>
+                      <h3><Link className="briefing-headline briefing-arrow-link" href={href}>{title}</Link></h3>
                       {publicationSource && <p className="briefing-meta">{publicationSource}</p>}
                     </li>
                   ))}
                 </ol>
-                <p><Link href={preview.research.href}><LocalizedCopy en="Read the full Research digest" zh="阅读完整研究摘要" /></Link></p>
+                <p className="briefing-track-action"><Link href={preview.research.href}><LocalizedCopy en="Read the full Research digest" zh="阅读完整研究摘要" /></Link></p>
               </>
             ) : (
               <p><LocalizedCopy en="No Research edition was published for this date." zh="该日期暂无已发布的研究摘要。" />{" "}
@@ -123,7 +124,7 @@ export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
 
       <p className="briefing-links briefing-continuation">
         <Link href="/briefings"><LocalizedCopy en="Past briefings" zh="往期简报" /></Link>
-        <Link href="/subscribe" prefetch={false}><LocalizedCopy en="Subscribe" zh="订阅" /></Link>
+        <Link className="briefing-subscribe" href="/subscribe" prefetch={false}><LocalizedCopy en="Subscribe" zh="订阅" /></Link>
       </p>
     </div>
   );

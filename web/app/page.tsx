@@ -14,10 +14,8 @@ export const metadata: Metadata = {
 export default function Home() {
   const preview = getLatestBriefingPreview(getAllEngineeringBriefings(), getAllDigests());
   return (
-    <main>
-
+    <main className="briefing-home">
       <HomepageWeeklyBriefing preview={preview} />
-
     </main>
   );
 }

@@ -59,36 +59,6 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
         <p>{digest.introduction}</p>
       </section>
 
-      <section className="edition-meta" aria-labelledby="edition-meta-heading">
-        <h2 id="edition-meta-heading"><LocalizedCopy en="Digest metadata" zh="摘要元数据" /></h2>
-        <dl>
-          <div>
-            <dt>Date range</dt>
-            <dd>{digest.dateRange}</dd>
-          </div>
-          <div>
-            <dt>Selected</dt>
-            <dd>{digest.selectedPaperCount}</dd>
-          </div>
-          <div>
-            <dt>Checked results</dt>
-            <dd>
-              {hasCandidatePool ? (
-                <Link href={`/weekly/${digest.slug}/candidates`}>
-                  {digest.checkedResultCount} candidates reviewed -&gt;
-                </Link>
-              ) : (
-                digest.checkedResultCount
-              )}
-            </dd>
-          </div>
-          <div>
-            <dt>Generated</dt>
-            <dd>{digest.generatedAt}</dd>
-          </div>
-        </dl>
-      </section>
-
       <section id="papers" aria-labelledby="selected-papers-heading">
         <h2 id="selected-papers-heading"><LocalizedCopy en="Selected papers" zh="精选论文" /></h2>
         <ol className="paper-list">
@@ -132,6 +102,36 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="edition-meta" aria-labelledby="edition-meta-heading">
+        <h2 id="edition-meta-heading"><LocalizedCopy en="Digest metadata" zh="摘要元数据" /></h2>
+        <dl>
+          <div>
+            <dt>Date range</dt>
+            <dd>{digest.dateRange}</dd>
+          </div>
+          <div>
+            <dt>Selected</dt>
+            <dd>{digest.selectedPaperCount}</dd>
+          </div>
+          <div>
+            <dt>Checked results</dt>
+            <dd>
+              {hasCandidatePool ? (
+                <Link href={`/weekly/${digest.slug}/candidates`}>
+                  {digest.checkedResultCount} candidates reviewed -&gt;
+                </Link>
+              ) : (
+                digest.checkedResultCount
+              )}
+            </dd>
+          </div>
+          <div>
+            <dt>Generated</dt>
+            <dd>{digest.generatedAt}</dd>
+          </div>
+        </dl>
       </section>
 
       <section aria-labelledby="weekly-notice-heading">

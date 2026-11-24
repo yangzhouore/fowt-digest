@@ -1,8 +1,8 @@
-import { localizeServerContent } from "./i18n/server-content";
 import type { Metadata } from "next";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { HomepageWeeklyBriefing } from "./homepage-weekly-briefing";
+import { getLatestBriefingPreview } from "./briefing-weeks";
 import { getAllDigests } from "../data/digest-adapter";
 import { getAllEngineeringBriefings } from "../data/engineering-briefing-adapter";
 
@@ -13,26 +13,14 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const engineeringBriefings = getAllEngineeringBriefings();
-  const engineeringBySlug = new Map(
-    engineeringBriefings.map((briefing) => [briefing.slug, briefing]),
-  );
-  const homepageEditions = getAllDigests().flatMap((digest) => {
-    const engineeringBriefing = engineeringBySlug.get(digest.slug);
-    if (!engineeringBriefing) {
-      return [];
-    }
-
-    return [{ digest, engineeringBriefing }];
-  });
-
-  return localizeServerContent((
+  const preview = getLatestBriefingPreview(getAllEngineeringBriefings(), getAllDigests());
+  return (
     <main>
       <SiteHeader />
 
-      <HomepageWeeklyBriefing editions={homepageEditions} />
+      <HomepageWeeklyBriefing preview={preview} />
 
       <SiteFooter />
     </main>
-  ));
+  );
 }

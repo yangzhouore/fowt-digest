@@ -1,4 +1,5 @@
 import { test as base, expect } from "@playwright/test";
+import { selectDarkTheme } from "./theme";
 
 // Runtime errors can otherwise leave a readable server-rendered page behind.
 const test = base.extend<{ runtimeErrors: void }>({
@@ -80,7 +81,7 @@ test("global search handles technical terms, language persistence and mobile dar
   await expect(page.getByRole("heading", { name: "搜索浮式风电摘要" })).toBeVisible();
   const chineseSearch = page.getByRole("searchbox", { name: "搜索全站" });
   await expect(chineseSearch).toHaveValue("dynamic cable");
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   await expect(page.locator("#theme-dark")).toBeChecked();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 
@@ -182,7 +183,7 @@ test("company timeline keeps the selected year and category in mobile Chinese an
   await timeline.getByLabel("Filter by year").selectOption("2026");
   await timeline.getByLabel("Filter by category").selectOption("technology_engineering");
   await page.getByRole("button", { name: "中文", exact: true }).click();
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   const translatedTimeline = page.getByRole("region", { name: "企业动态时间线" });
   await expect(translatedTimeline.getByLabel("按类别筛选")).toHaveValue("technology_engineering");
   await expect(translatedTimeline.getByLabel("按年份筛选")).toHaveValue("2026");
@@ -254,7 +255,7 @@ test("connected context works in mobile Chinese and dark theme without translati
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/projects/efgl");
   await page.getByRole("button", { name: "中文", exact: true }).click();
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   const coverage = page.getByRole("region", { name: "工程报道", exact: true });
   await expect(coverage.getByRole("link", { name: /^阅读工程条目/ })).toHaveCount(3);
   await coverage.locator("summary").first().click();
@@ -266,7 +267,7 @@ test("connected context works in mobile Chinese and dark theme without translati
   await coverage.getByRole("link", { name: /^阅读工程条目/ }).first().click();
   await expect(page.getByText("项目背景", { exact: true }).first()).toBeVisible();
   await page.goto("/industry#company-equinor");
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   const company = page.locator("#company-equinor");
   await company.locator("details > summary").first().click();
   await expect(company.getByRole("heading", { name: /^项目记录/ })).toBeVisible();
@@ -277,32 +278,108 @@ test("connected context works in mobile Chinese and dark theme without translati
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
+test("briefing navigation exposes four primary links, Explore, footer utilities and keyboard preferences", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 760 });
+  await page.goto("/");
+  const navigation = page.getByRole("navigation", { name: "Primary navigation" });
+  await expect(navigation.getByRole("link")).toHaveText(["Briefing", "Explore", "Search", "Subscribe"]);
+  await expect(navigation.getByRole("link", { name: "Briefing" })).toHaveAttribute("href", "/");
+  await expect(navigation.getByRole("link", { name: "Search" })).toHaveAttribute("href", "/search");
+  await expect(navigation.getByRole("link", { name: "Subscribe" })).toHaveAttribute("href", "/subscribe");
+  await expect(page.getByRole("navigation", { name: "Further reading" }).getByRole("link", { name: "Methodology" })).toHaveAttribute("href", "/methodology");
+  const preferences = page.locator(".theme-preferences summary");
+  await preferences.focus();
+  await page.keyboard.press("Enter");
+  await page.keyboard.press("Tab");
+  await expect(page.getByRole("radio", { name: "Light" })).toBeFocused();
+  await page.keyboard.press("ArrowRight");
+  await expect(page.getByRole("radio", { name: "Dark" })).toBeChecked();
+  await preferences.focus();
+  await page.keyboard.press("Space");
+  await expect(page.locator("#theme-dark")).toBeChecked();
+  await expect(page.getByRole("radio", { name: "Dark" })).toBeHidden();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+
+  await navigation.getByRole("link", { name: "Explore" }).click();
+  await expect(page).toHaveURL("/explore");
+  const destinations = page.getByRole("region", { name: "Explore floating wind" }).getByRole("link");
+  await expect(destinations).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
+  expect(await destinations.evaluateAll((links) => links.map((link) => link.getAttribute("href"))))
+    .toEqual(["/projects", "/companies", "/industry", "/digital-ai"]);
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link")).toHaveText(["简报", "探索", "搜索", "订阅"]);
+  await expect(page.getByRole("heading", { name: "探索浮式风电" })).toBeVisible();
+  await expect(page.getByRole("region", { name: "探索浮式风电" }).getByRole("link")).toHaveText(["项目", "企业", "产业", "数字化与 AI"]);
+  await selectDarkTheme(page);
+  await expect(page.locator("#theme-dark")).toBeChecked();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+});
+
 test("homepage renders the latest briefing and its Engineering / Research links work", async ({ page }) => {
   const response = await page.goto("/");
   expect(response?.status()).toBe(200);
-  await expect(page.getByRole("heading", { name: "Floating Wind, Curated.", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Latest briefing", exact: true })).toBeVisible();
+  const week = await page.locator(".briefing-masthead time").getAttribute("datetime");
+  expect(week).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  await expect(page.getByRole("group", { name: "Select a week" })).toHaveCount(0);
 
   const engineering = page.getByRole("region", { name: "Engineering", exact: true });
   const research = page.getByRole("region", { name: "Research", exact: true });
-  await expect(engineering.getByRole("heading", { level: 3 }).first()).toBeVisible();
-  await expect(research.getByRole("heading", { level: 3 }).first()).toBeVisible();
+  const engineeringPreviews = engineering.getByRole("heading", { level: 3 }).getByRole("link");
+  const researchPreviews = research.getByRole("heading", { level: 3 }).getByRole("link");
+  await expect(engineeringPreviews.first()).toBeVisible();
+  await expect(researchPreviews.first()).toBeVisible();
+  expect(await engineeringPreviews.count()).toBeLessThanOrEqual(3);
+  expect(await researchPreviews.count()).toBeLessThanOrEqual(3);
+  expect(await researchPreviews.evaluateAll((links) => links.every((a) => (a.getAttribute("href") ?? "").startsWith("/papers/")))).toBe(true);
 
-  // Follow the homepage's current edition, without pinning dates or reading JSON.
-  const engineeringLink = engineering.getByRole("link", { name: "Explore Engineering" });
-  const researchPath = await research.getByRole("link", { name: "Explore Research" }).getAttribute("href");
-  const engineeringPath = await engineeringLink.getAttribute("href");
-  expect(engineeringPath).toMatch(/^\/engineering\/[^/]+$/);
-  expect(researchPath).toMatch(/^\/weekly\/[^/]+$/);
-  await engineeringLink.click();
-  await expect(page).toHaveURL(engineeringPath!);
+  await expect(engineering.getByRole("link", { name: "Read the full Engineering briefing" })).toHaveAttribute("href", `/engineering/${week}`);
+  await expect(research.getByRole("link", { name: "Read the full Research digest" })).toHaveAttribute("href", `/weekly/${week}`);
+  const href = await engineeringPreviews.first().getAttribute("href");
+  expect(href).toMatch(/^\/engineering\/[^/]+#item-.+$/);
+  await engineeringPreviews.first().click();
+  await expect(page).toHaveURL(href!);
   await expect(page.getByRole("heading", { name: "Engineering highlights", exact: true })).toBeVisible();
-  await expect(page.getByRole("region", { name: "Engineering highlights" }).getByRole("heading", { level: 3 }).first()).toBeVisible();
+  const item = page.locator(href!.slice(href!.indexOf("#")));
+  await expect(item.getByRole("heading", { level: 3 })).toBeVisible();
+  await expect(item.getByRole("link", { name: "Open source" })).toHaveAttribute("href", /^https?:\/\//);
+  await expect(page.getByRole("heading", { level: 2 }).first()).toHaveText("Engineering highlights");
+  await expect(page.getByRole("region", { name: "Briefing metadata" }).getByRole("link")).toHaveAttribute("href", `/engineering/${week}/candidates`);
 
   await page.getByRole("link", { name: "Back to Homepage", exact: true }).click();
-  await page.getByRole("link", { name: "Explore Research" }).click();
-  await expect(page).toHaveURL(researchPath!);
+  await page.getByRole("link", { name: "Read the full Research digest" }).click();
+  await expect(page).toHaveURL(`/weekly/${week}`);
   await expect(page.getByRole("heading", { name: "Selected papers", exact: true })).toBeVisible();
   await expect(page.getByRole("region", { name: "Selected papers" }).getByRole("heading", { level: 3 }).first()).toBeVisible();
+  await expect(page.getByRole("heading", { level: 2 }).first()).toHaveText("Selected papers");
+  await expect(page.getByRole("region", { name: "Digest metadata" }).getByRole("link")).toHaveAttribute("href", `/weekly/${week}/candidates`);
+});
+
+test("past briefings retains paired and single-track weeks in reverse date order", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  const latest = await page.locator(".briefing-masthead time").getAttribute("datetime");
+  await page.getByRole("link", { name: "Past briefings" }).click();
+  await expect(page).toHaveURL("/briefings");
+  await expect(page.getByRole("heading", { level: 1, name: "Past briefings" })).toBeVisible();
+  const weeks = await page.locator(".briefings-list li").evaluateAll((rows) => rows.map((row) => ({
+    date: row.querySelector("time")?.getAttribute("datetime"),
+    links: [...row.querySelectorAll("a")].map((a) => a.getAttribute("href")),
+  })));
+  const dates = weeks.map(({ date }) => date);
+  expect(dates[0]).toBe(latest);
+  expect(dates).toEqual([...new Set(dates)].sort().reverse());
+  expect(weeks.some(({ links }) => links.length === 2)).toBe(true);
+  expect(weeks.some(({ links }) => links.length === 1)).toBe(true);
+  for (const { date, links } of weeks) {
+    expect(links.length).toBeGreaterThan(0);
+    expect(links.every((link) => link === `/engineering/${date}` || link === `/weekly/${date}`)).toBe(true);
+  }
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await selectDarkTheme(page);
+  await expect(page.locator("#theme-dark")).toBeChecked();
+  await expect(page.getByRole("heading", { level: 1, name: "往期简报" })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
 });
 
 test("Engineering search matches edition dates and combines with region filters", async ({ page }) => {
@@ -356,7 +433,7 @@ test("Methodology and About render bilingual static reading paths on mobile", as
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await page.getByRole("button", { name: "中文", exact: true }).click();
     await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
-    await page.locator('label[for="theme-dark"]').click();
+    await selectDarkTheme(page);
     await expect(page.locator("#theme-dark")).toBeChecked();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     await page.screenshot({ path: `test-results/${path.slice(1)}-mobile-zh-dark.png` });
@@ -406,8 +483,9 @@ test("a project overview link opens Hywind Tampen intelligence and returns to th
 test("language switches to Chinese, persists on navigation, and switches back", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "中文", exact: true }).click();
-  await expect(page.getByRole("heading", { name: "浮式风电，精选呈现。", exact: true })).toBeVisible();
-  await page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "项目", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "最新简报", exact: true })).toBeVisible();
+  await page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "探索", exact: true }).click();
+  await page.getByRole("region", { name: "探索浮式风电" }).getByRole("link", { name: "项目", exact: true }).click();
   await expect(page.getByRole("heading", { name: "项目全景", exact: true })).toBeVisible();
   await page.reload();
   await expect(page.getByRole("heading", { name: "项目全景", exact: true })).toBeVisible();
@@ -459,7 +537,7 @@ test("public evidence stays accessible on mobile in Chinese and dark theme", asy
   await gate.locator("summary").click();
   await expect(gate.getByRole("link", { name: "Investing in Hywind Tampen development", exact: true })).toBeVisible();
   await expect(gate.getByText("已查阅公开网页", { exact: false })).toBeVisible();
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   await expect(page.locator("#theme-dark")).toBeChecked();
   await gate.scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/project-evidence-mobile-zh-dark.png" });

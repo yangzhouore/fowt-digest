@@ -1,4 +1,5 @@
 import { test as base, expect } from "@playwright/test";
+import { selectDarkTheme } from "../../tests/browser/theme";
 
 const test = base.extend<{ errors: void }>({ errors: [async ({ page }, use) => {
   const errors: string[] = [];
@@ -64,7 +65,7 @@ for (const country of ["germany", "norway", "china"]) {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`/industry/${country}`);
     await page.getByRole("button", { name: "中文", exact: true }).click();
-    await page.locator('label[for="theme-dark"]').click();
+    await selectDarkTheme(page);
     await expect(page.locator("h1")).toContainText(/。/);
     await page.screenshot({ path: `test-results/${country}-mobile-hero-zh-dark.png` });
     const lifecycle = page.locator(`#${country}-topic-03`); await lifecycle.locator(":scope > summary").click();

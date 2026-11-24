@@ -1,4 +1,5 @@
 import { test as base, expect } from "@playwright/test";
+import { selectDarkTheme } from "../../tests/browser/theme";
 
 const test = base.extend<{ errors: void }>({ errors: [async ({ page }, use) => {
   const errors: string[] = [];
@@ -63,7 +64,7 @@ test("lifecycle and organisations preserve decision fields and existing project 
 test("Chinese mobile guide stays readable in dark theme with isolated table scrolling", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 }); await page.goto("/industry/uk");
   await page.getByRole("button", { name: "中文", exact: true }).click();
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   await expect(page.getByRole("heading", { level: 1, name: "从材料到兆瓦时。" })).toBeVisible();
   const cfd = page.locator("#uk-topic-13"); await cfd.locator(":scope > summary").click();
   await expect(cfd.locator(".uk-zh")).toBeVisible(); await expect(cfd.locator(".uk-en")).toBeHidden();

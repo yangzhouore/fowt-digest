@@ -63,34 +63,6 @@ export default async function EngineeringBriefingPage({
         </p>
       </section>
 
-      <section className="edition-meta" aria-labelledby="engineering-meta-heading">
-        <h2 id="engineering-meta-heading"><LocalizedCopy en="Briefing metadata" zh="简报元数据" /></h2>
-        <dl>
-          <div>
-            <dt>Date range</dt>
-            <dd>{briefing.dateRange}</dd>
-          </div>
-          <div>
-            <dt>Highlights</dt>
-            <dd>{briefing.itemCount}</dd>
-          </div>
-          <div>
-            <dt>Candidate pool</dt>
-            <dd>
-              <Link href={`/engineering/${briefing.slug}/candidates`}>
-                {briefing.sourceCandidates.length > 0
-                  ? `${briefing.sourceCandidates.length} candidates across ${briefing.candidateSourceCount} sources ->`
-                  : `${briefing.sourceRecords.length} retained sources ->`}
-              </Link>
-            </dd>
-          </div>
-          <div>
-            <dt>Checked results</dt>
-            <dd>{briefing.checkedResultCount}</dd>
-          </div>
-        </dl>
-      </section>
-
       <section aria-labelledby="engineering-items-heading">
         <h2 id="engineering-items-heading"><LocalizedCopy en="Engineering highlights" zh="工程重点" /></h2>
         <ol className="engineering-list">
@@ -138,6 +110,34 @@ export default async function EngineeringBriefingPage({
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="edition-meta" aria-labelledby="engineering-meta-heading">
+        <h2 id="engineering-meta-heading"><LocalizedCopy en="Briefing metadata" zh="简报元数据" /></h2>
+        <dl>
+          <div>
+            <dt>Date range</dt>
+            <dd>{briefing.dateRange}</dd>
+          </div>
+          <div>
+            <dt>Highlights</dt>
+            <dd>{briefing.itemCount}</dd>
+          </div>
+          <div>
+            <dt>Candidate pool</dt>
+            <dd>
+              <Link href={`/engineering/${briefing.slug}/candidates`}>
+                {briefing.sourceCandidates.length > 0
+                  ? `${briefing.sourceCandidates.length} candidates across ${briefing.candidateSourceCount} sources ->`
+                  : `${briefing.sourceRecords.length} retained sources ->`}
+              </Link>
+            </dd>
+          </div>
+          <div>
+            <dt>Checked results</dt>
+            <dd>{briefing.checkedResultCount}</dd>
+          </div>
+        </dl>
       </section>
 
       <section aria-labelledby="engineering-boundary-heading">

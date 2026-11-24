@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { BriefingVisual } from "./briefing-visual";
 import type { getLatestBriefingPreview } from "./briefing-weeks";
 import { EditorialImageFigure } from "./editorial-image-figure";
 import { getEditorialImage, type EditorialImage } from "./editorial-images";
@@ -58,21 +57,18 @@ export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
   return (
     <div className="homepage-briefing">
       <section className="briefing-masthead" aria-labelledby="intro-heading">
-        <div className="briefing-masthead-copy">
-          <h1 id="intro-heading"><LocalizedCopy en="Latest briefing" zh="最新简报" /></h1>
-          {preview ? (
-            <>
-              <p className="briefing-date"><time dateTime={preview.slug}>{preview.dateRange}</time></p>
-              <p className="briefing-meta">
-                <LocalizedCopy
-                  en={`${engineeringCount} Engineering ${engineeringCount === 1 ? "update" : "updates"} · ${researchCount} Research ${researchCount === 1 ? "pick" : "picks"}`}
-                  zh={`${engineeringCount} 条工程动态 · ${researchCount} 篇精选论文`}
-                />
-              </p>
-            </>
-          ) : <p><LocalizedCopy en="No editions are available yet." zh="暂无已发布的简报。" /></p>}
-        </div>
-        {!leadImage && <BriefingVisual />}
+        <h1 id="intro-heading"><LocalizedCopy en="Latest briefing" zh="最新简报" /></h1>
+        {preview ? (
+          <>
+            <p className="briefing-date"><time dateTime={preview.slug}>{preview.dateRange}</time></p>
+            <p className="briefing-meta">
+              <LocalizedCopy
+                en={`${engineeringCount} Engineering ${engineeringCount === 1 ? "update" : "updates"} · ${researchCount} Research ${researchCount === 1 ? "pick" : "picks"}`}
+                zh={`${engineeringCount} 条工程动态 · ${researchCount} 篇精选论文`}
+              />
+            </p>
+          </>
+        ) : <p><LocalizedCopy en="No editions are available yet." zh="暂无已发布的简报。" /></p>}
       </section>
 
       {preview && (

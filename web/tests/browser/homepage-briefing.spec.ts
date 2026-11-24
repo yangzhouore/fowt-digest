@@ -68,7 +68,7 @@ test("homepage preserves the latest edition date, full counts, ordered preview c
   await page.goto("/");
   await expectHomepageContract(page);
   const masthead = page.getByRole("region", { name: "Latest briefing" });
-  await expect(masthead.getByRole("figure", { name: "Floating wind schematic" })).toBeVisible();
+  await expect(masthead.locator("figure, img, svg")).toHaveCount(0);
   const lead = page.getByRole("region", { name: "Engineering", exact: true }).getByRole("listitem").first();
   if (engineeringEdition?.items.length) {
     const first = engineeringEdition.items[0];
@@ -160,8 +160,10 @@ test("editorial imagery uses the exact edition and lead item ID and renders bili
 
   for (const language of ["en", "zh"] as const) {
     await page.setContent(renderHomepageFixture(preview, language, { [edition.slug]: { [first.id]: image } }));
-    await expect(page.getByRole("figure", { name: language === "en" ? "Floating wind schematic" : "浮式风电示意图" })).toHaveCount(0);
-    const picture = page.getByRole("img", { name: image.alt[language] });
+    const masthead = page.getByRole("region", { name: language === "en" ? "Latest briefing" : "最新简报" });
+    await expect(masthead.locator("figure, img, svg")).toHaveCount(0);
+    const lead = page.getByRole("article", { name: first.title, exact: true });
+    const picture = lead.getByRole("img", { name: image.alt[language] });
     await expect(picture).toBeVisible();
     await expect(picture).toHaveAttribute("width", "1600");
     await expect(picture).toHaveAttribute("height", "900");
@@ -180,7 +182,6 @@ test("homepage previews and continuation stay readable at 390px and 320px in bot
       await page.getByRole("button", { name: language === "en" ? "EN" : "中文", exact: true }).click();
       const main = page.getByRole("main");
       await expect(main.getByRole("heading", { level: 1 })).toHaveText(language === "en" ? "Latest briefing" : "最新简报");
-      await expect(main.getByRole("figure", { name: language === "en" ? "Floating wind schematic" : "浮式风电示意图" })).toBeVisible();
       for (const theme of ["light", "dark"] as const) {
         if (theme === "dark") await selectDarkTheme(page);
         else if (await page.locator("#theme-dark").isChecked()) await page.locator('label[for="theme-light"]').click();

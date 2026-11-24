@@ -55,13 +55,10 @@ original headlines, metadata, and citations when localizing surrounding UI.
 Avoid decorative gradients, glassmorphism, excessive shadows, decorative
 animation, generic SaaS dashboard widgets, fake actions, and arbitrary colors.
 
-## Briefing artwork and editorial images
+## Editorial images
 
-The homepage masthead uses an original floating-wind schematic as briefing
-artwork. Keep it apart from story attribution and omit it when the lead has a
-registered event image. Its localized caption describes the schematic.
-The illustration depicts generic concepts without project identifiers,
-measurements, or event details.
+The homepage masthead presents the briefing title, date range, and edition
+counts. Verified editorial imagery belongs within the Engineering Lead Story.
 
 Images require reviewed provenance. Attach an approved image to an exact
 canonical item or entity. Record what it depicts, the original source, credit,

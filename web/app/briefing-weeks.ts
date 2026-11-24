@@ -38,15 +38,20 @@ export function getLatestBriefingPreview(engineering: readonly EngineeringBriefi
     engineering: week.engineering ? {
       href: `/engineering/${slug}`,
       selectedCount: week.engineering.items.length,
-      previewItems: week.engineering.items.slice(0, PREVIEW_LIMIT).map(({ id, title, oneLineSummary }) => ({
-        href: engineeringItemHref(slug, id), title, summary: oneLineSummary,
-      })),
+      previewItems: week.engineering.items.slice(0, PREVIEW_LIMIT).map((item) => {
+        const { id, title, oneLineSummary, category, sourceRecords, sourceUrl } = item;
+        const source = sourceRecords.find((record) => record.sourceUrl === sourceUrl);
+        return {
+          id, href: engineeringItemHref(slug, id), title, summary: oneLineSummary, category,
+          source: source ? { publisher: source.publisher, publishedDate: source.publishedDate, href: source.sourceUrl } : null,
+        };
+      }),
     } : null,
     research: week.research ? {
       href: `/weekly/${slug}`,
       selectedCount: week.research.papers.length,
-      previewPapers: week.research.papers.slice(0, PREVIEW_LIMIT).map(({ slug, title, publicationSource }) => ({
-        href: `/papers/${slug}`, title, publicationSource,
+      previewPapers: week.research.papers.slice(0, PREVIEW_LIMIT).map(({ id, slug, title, publicationSource }) => ({
+        id, slug, href: `/papers/${slug}`, title, publicationSource,
       })),
     } : null,
   };

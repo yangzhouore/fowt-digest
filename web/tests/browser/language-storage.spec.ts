@@ -56,8 +56,9 @@ for (const mode of ["getter", "read", "write"] as const) {
       expect(await page.evaluate(() => localStorage.getItem("fowt-digest-language"))).toBe("zh");
     }
     await page.getByRole("button", { name: "中文", exact: true }).click();
-    await expect(page.getByRole("heading", { name: "浮式风电，精选呈现。", exact: true })).toBeVisible();
-    await page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "项目", exact: true }).click();
+    await expect(page.getByRole("heading", { name: "最新简报", exact: true })).toBeVisible();
+    await page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "探索", exact: true }).click();
+    await page.getByRole("region", { name: "探索浮式风电" }).getByRole("link", { name: "项目", exact: true }).click();
     await expect(page.getByRole("heading", { name: "项目全景", exact: true })).toBeVisible();
     await page.getByRole("button", { name: "EN", exact: true }).click();
     await expect(page.getByRole("heading", { name: "Project landscape", exact: true })).toBeVisible();

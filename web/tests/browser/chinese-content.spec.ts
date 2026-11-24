@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { selectDarkTheme } from "./theme";
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem("fowt-digest-language", "zh"));
@@ -52,16 +53,17 @@ test("About and Digital evidence prose translate while original citation links r
 
 test("Engineering news and Research titles are preserved when Chinese is selected", async ({ page }) => {
   await page.goto("/");
-  const selector = ".engineering-highlight-list h3, .homepage-paper-list h3";
+  const selector = ".briefing-story-list h3";
   const titles = await page.locator(selector).allTextContents();
+  expect(titles.length).toBeGreaterThan(0);
   await page.getByRole("button", { name: "EN", exact: true }).click();
   expect(await page.locator(selector).allTextContents()).toEqual(titles);
 });
 
 test("candidate-page interface labels translate without changing Research titles", async ({ page }) => {
   await page.goto("/");
-  const firstTitle = await page.locator(".homepage-paper-list h3").first().innerText();
-  const weekly = await page.getByRole("link", { name: /^查看研究摘要/ }).getAttribute("href");
+  const firstTitle = await page.getByRole("region", { name: "研究", exact: true }).getByRole("heading", { level: 3 }).first().innerText();
+  const weekly = await page.getByRole("link", { name: "阅读完整研究摘要" }).getAttribute("href");
   await page.goto(`${weekly}/candidates`);
   await expect(page.getByRole("heading", { name: "排序后的候选记录", exact: true })).toBeVisible();
   await expect(page.locator(".candidate-list h3").first()).toHaveText(firstTitle);
@@ -72,7 +74,7 @@ test("all section entry pages support mobile Chinese and dark presentation", asy
   for (const route of ["/", "/engineering", "/archive", "/industry", "/industry/uk", "/industry/germany", "/industry/norway", "/industry/china", "/projects", "/digital-ai", "/methodology", "/about"]) {
     await page.goto(route);
     await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
-    await page.locator('label[for="theme-dark"]').click();
+    await selectDarkTheme(page);
     await expect(page.locator("main h1").first()).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route).toBe(true);
   }

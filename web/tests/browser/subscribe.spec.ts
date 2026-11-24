@@ -2,6 +2,7 @@ import { randomUUID } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { expect, test } from "@playwright/test";
+import { selectDarkTheme } from "./theme";
 
 test("subscribe confirms, manages and unsubscribes using real routes with fake mail", async ({ page, request }) => {
   const address = `smoke-${randomUUID()}@example.test`;
@@ -75,7 +76,7 @@ test("Subscribe remains usable on mobile in Chinese and dark mode", async ({ pag
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/subscribe");
   await page.getByRole("button", { name: "中文" }).click();
-  await page.getByText("深色", { exact: true }).click();
+  await selectDarkTheme(page);
   await expect(page.getByRole("heading", { name: "订阅浮式风电动态" })).toBeVisible();
   await page.getByRole("checkbox", { name: /企业简报/ }).check();
   await page.getByRole("searchbox", { name: "搜索企业" }).fill("vestas");

@@ -1,4 +1,5 @@
 import { test as base, expect, type Page } from "@playwright/test";
+import { selectDarkTheme } from "./theme";
 
 const test = base.extend<{ runtimeErrors: void }>({
   runtimeErrors: [async ({ page }, use) => {
@@ -76,7 +77,7 @@ test("dated developments distinguish projections, contracts and conditional futu
 test("energy system stays readable on mobile in Chinese and dark theme", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole("button", { name: "中文", exact: true }).click();
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("AI × 能源");
   await page.screenshot({ path: "test-results/ai-energy-overview-mobile-zh-dark.png", fullPage: false });
   await page.getByRole("button", { name: "我开发或评估工具", exact: true }).click();
@@ -140,7 +141,7 @@ test("keyboard selection announces a short title and resets expanded evidence", 
   await page.locator("#energy-fields").screenshot({ path: "test-results/unified-topic-workflow-desktop.png" });
   await card.scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/digital-ai-desktop-en-light.png" });
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   await card.scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/digital-ai-desktop-en-dark.png" });
 });
@@ -175,7 +176,7 @@ test("mobile bilingual workflows follow their topic without duplicate content or
   await page.locator("#energy-fields").screenshot({ path: "test-results/unified-topic-workflow-mobile-zh.png" });
   await card.scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/digital-ai-mobile-zh-light.png" });
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   await card.scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/digital-ai-mobile-zh-dark.png" });
 });
@@ -302,7 +303,7 @@ test("all pathways compare physical routes, procurement and contextual evidence"
 test("reader and bounded comparison work on mobile in Chinese and dark theme", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole("button", { name: "中文", exact: true }).click();
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   await page.locator("summary").filter({ hasText: "比较全部四条路径" }).click();
   const region = page.getByRole("region", { name: "路径比较表", exact: true });
   await region.focus();
@@ -317,7 +318,7 @@ test("reader and bounded comparison work on mobile in Chinese and dark theme", a
   await expect(page.getByRole("heading", { level: 1 })).toContainText("IEA");
   // Existing theme radios belong to each page header; this feature does not
   // introduce a site-wide theme persistence service.
-  await page.locator('label[for="theme-dark"]').click();
+  await selectDarkTheme(page);
   await expect(page.locator("#theme-dark")).toBeChecked();
   await page.getByRole("heading", { level: 1 }).scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/digital-ai-reader-mobile-zh-dark.png" });

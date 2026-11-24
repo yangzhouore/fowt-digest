@@ -23,7 +23,7 @@ function research(slug, ids) {
   };
 }
 
-test("latest paired previews retain selection order and canonical links, with at most three per track", () => {
+test("latest paired previews keep all selected counts and the first three canonical links per track", () => {
   const itemIds = ["b", "d", "a", "c"];
   const preview = getLatestBriefingPreview(
     [engineering(earlier, ["old"]), engineering(latest, itemIds)],
@@ -34,13 +34,15 @@ test("latest paired previews retain selection order and canonical links, with at
     slug: latest, dateRange,
     engineering: {
       href: `/engineering/${latest}`,
-      items: itemIds.slice(0, 3).map((id) => ({
+      selectedCount: 4,
+      previewItems: itemIds.slice(0, 3).map((id) => ({
         href: `/engineering/${latest}#item-${id}`, title: `Headline ${id}`, summary: `Summary ${id}`,
       })),
     },
     research: {
       href: `/weekly/${latest}`,
-      papers: itemIds.slice(0, 3).map((id) => ({ href: `/papers/${id}`, title: `Paper ${id}`, publicationSource: "Journal" })),
+      selectedCount: 4,
+      previewPapers: itemIds.slice(0, 3).map((id) => ({ href: `/papers/${id}`, title: `Paper ${id}`, publicationSource: "Journal" })),
     },
   });
 });
@@ -51,7 +53,8 @@ test("a latest Engineering-only week stays sparse without borrowing older Resear
     [research(earlier, ["old"])],
   );
   assert.equal(preview.slug, latest);
-  assert.equal(preview.engineering.items.length, 2);
+  assert.equal(preview.engineering.selectedCount, 2);
+  assert.equal(preview.engineering.previewItems.length, 2);
   assert.equal(preview.research, null);
 });
 
@@ -61,7 +64,8 @@ test("a latest Research-only week stays sparse without borrowing older Engineeri
     [research(latest, ["one"]), research(earlier, ["old"])],
   );
   assert.equal(preview.slug, latest);
-  assert.equal(preview.research.papers.length, 1);
+  assert.equal(preview.research.selectedCount, 1);
+  assert.equal(preview.research.previewPapers.length, 1);
   assert.equal(preview.engineering, null);
   assert.equal(getLatestBriefingPreview([], []), null);
 });

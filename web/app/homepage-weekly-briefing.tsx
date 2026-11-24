@@ -5,8 +5,8 @@ import { LocalizedCopy } from "./i18n/localized-copy";
 type Preview = ReturnType<typeof getLatestBriefingPreview>;
 
 export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
-  const engineeringCount = preview?.engineering?.items.length ?? 0;
-  const researchCount = preview?.research?.papers.length ?? 0;
+  const engineeringCount = preview?.engineering?.selectedCount ?? 0;
+  const researchCount = preview?.research?.selectedCount ?? 0;
 
   return (
     <div className="briefing-reading-column">
@@ -32,7 +32,7 @@ export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
             {preview.engineering ? (
               <>
                 <ol className="briefing-story-list">
-                  {preview.engineering.items.map(({ href, title, summary }) => (
+                  {preview.engineering.previewItems.map(({ href, title, summary }) => (
                     <li key={href} translate="no">
                       <h3><Link href={href}>{title}</Link></h3>
                       <p>{summary}</p>
@@ -53,7 +53,7 @@ export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
             {preview.research ? (
               <>
                 <ol className="briefing-story-list">
-                  {preview.research.papers.map(({ href, title, publicationSource }) => (
+                  {preview.research.previewPapers.map(({ href, title, publicationSource }) => (
                     <li key={href} translate="no">
                       <h3><Link href={href}>{title}</Link></h3>
                       {publicationSource && <p className="briefing-meta">{publicationSource}</p>}

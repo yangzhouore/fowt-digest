@@ -320,6 +320,7 @@ test("homepage renders the latest briefing and its Engineering / Research links 
   expect(response?.status()).toBe(200);
   await expect(page.getByRole("heading", { name: "Latest briefing", exact: true })).toBeVisible();
   const week = await page.locator(".briefing-masthead time").getAttribute("datetime");
+  const mastheadCounts = await page.locator(".briefing-masthead .briefing-meta").innerText();
   expect(week).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   await expect(page.getByRole("group", { name: "Select a week" })).toHaveCount(0);
 
@@ -340,6 +341,7 @@ test("homepage renders the latest briefing and its Engineering / Research links 
   await engineeringPreviews.first().click();
   await expect(page).toHaveURL(href!);
   await expect(page.getByRole("heading", { name: "Engineering highlights", exact: true })).toBeVisible();
+  const engineeringCount = await page.getByRole("region", { name: "Engineering highlights", exact: true }).getByRole("heading", { level: 3 }).count();
   const item = page.locator(href!.slice(href!.indexOf("#")));
   await expect(item.getByRole("heading", { level: 3 })).toBeVisible();
   await expect(item.getByRole("link", { name: "Open source" })).toHaveAttribute("href", /^https?:\/\//);
@@ -350,7 +352,10 @@ test("homepage renders the latest briefing and its Engineering / Research links 
   await page.getByRole("link", { name: "Read the full Research digest" }).click();
   await expect(page).toHaveURL(`/weekly/${week}`);
   await expect(page.getByRole("heading", { name: "Selected papers", exact: true })).toBeVisible();
-  await expect(page.getByRole("region", { name: "Selected papers" }).getByRole("heading", { level: 3 }).first()).toBeVisible();
+  const selectedPapers = page.getByRole("region", { name: "Selected papers" }).getByRole("heading", { level: 3 });
+  await expect(selectedPapers.first()).toBeVisible();
+  const researchCount = await selectedPapers.count();
+  expect(mastheadCounts).toBe(`${engineeringCount} Engineering ${engineeringCount === 1 ? "update" : "updates"} · ${researchCount} Research ${researchCount === 1 ? "pick" : "picks"}`);
   await expect(page.getByRole("heading", { level: 2 }).first()).toHaveText("Selected papers");
   await expect(page.getByRole("region", { name: "Digest metadata" }).getByRole("link")).toHaveAttribute("href", `/weekly/${week}/candidates`);
 });

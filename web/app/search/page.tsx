@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getGlobalSearchDocuments } from "../../data/global-search-adapter";
 import { LocalizedCopy } from "../i18n/localized-copy";
-import { SiteFooter } from "../site-footer";
-import { SiteHeader } from "../site-header";
 import { GlobalSearch } from "./search-results";
 import styles from "./search.module.css";
 
@@ -15,7 +13,6 @@ export const metadata: Metadata = {
 export default function SearchPage() {
   return (
     <main>
-      <SiteHeader />
       <div className={styles.content}>
         <section className="intro" aria-labelledby="global-search-heading">
           <h1 id="global-search-heading"><LocalizedCopy en="Search Floating Wind Digest" zh="搜索浮式风电摘要" /></h1>
@@ -24,7 +21,6 @@ export default function SearchPage() {
           <GlobalSearch documents={getGlobalSearchDocuments()} />
         </Suspense>
       </div>
-      <SiteFooter />
     </main>
   );
 }

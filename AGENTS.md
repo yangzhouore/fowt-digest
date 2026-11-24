@@ -14,6 +14,9 @@ Open other reference documents only when the task requires them. Do not read
 resolve an ambiguity. Current milestone scope and current status override older
 historical notes.
 
+For UI or visual work, read [Design System v1.7](docs/DESIGN_SYSTEM_V1_7.md)
+before changing presentation.
+
 ## Project Boundary
 
 - `pipeline/` owns deterministic Research data production and runs locally.

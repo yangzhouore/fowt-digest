@@ -1,7 +1,5 @@
 import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
-import { SiteFooter } from "../site-footer";
-import { SiteHeader } from "../site-header";
 import {
   formatDigitalAiMaturity,
   formatDigitalAiTopic,
@@ -24,7 +22,6 @@ export default function DigitalAiPage() {
 
   return localizeServerContent((
     <main className="digital-ai-page">
-      <SiteHeader />
 
       <section className="digital-ai-hero" aria-labelledby="digital-ai-heading">
         <p className="eyebrow"><LocalizedCopy en="Digital & AI" zh="数字化与 AI" /></p>
@@ -50,7 +47,6 @@ export default function DigitalAiPage() {
         regions={options.regions}
       />
 
-      <SiteFooter />
     </main>
   ));
 }

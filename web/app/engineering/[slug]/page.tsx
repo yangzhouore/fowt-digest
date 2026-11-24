@@ -2,8 +2,6 @@ import { localizeServerContent } from "../../i18n/server-content";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SiteHeader } from "../../site-header";
-import { SiteFooter } from "../../site-footer";
 import { LocalizedCopy } from "../../i18n/localized-copy";
 import { EngineeringProjectContext } from "../../connected-project-context";
 import { engineeringItemAnchor } from "../../../data/context-navigation";
@@ -52,7 +50,6 @@ export default async function EngineeringBriefingPage({
 
   return localizeServerContent((
     <main>
-      <SiteHeader />
 
       <section className="intro" aria-labelledby="engineering-heading">
         <p className="eyebrow"><LocalizedCopy en="Engineering briefing" zh="工程简报" /></p>
@@ -153,7 +150,6 @@ export default async function EngineeringBriefingPage({
         </p>
       </section>
 
-      <SiteFooter />
     </main>
   ));
 }

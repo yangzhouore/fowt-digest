@@ -1,7 +1,5 @@
 import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
-import { SiteFooter } from "../site-footer";
-import { SiteHeader } from "../site-header";
 import { LocalizedCopy } from "../i18n/localized-copy";
 
 const coverageAreas = [
@@ -192,7 +190,6 @@ export const metadata: Metadata = {
 export default function MethodologyPage() {
   return localizeServerContent((
     <main className="methodology-page">
-      <SiteHeader />
 
       <section className="intro" aria-labelledby="methodology-heading">
         <p className="eyebrow"><LocalizedCopy en="01 / What FOWT Digest is" zh="01 / FOWT Digest 是什么" /></p>
@@ -331,7 +328,6 @@ export default function MethodologyPage() {
         </ul>
       </section>
 
-      <SiteFooter />
     </main>
   ));
 }

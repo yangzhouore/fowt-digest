@@ -4,8 +4,6 @@ import { getAllDigests } from "../../data/digest-adapter";
 import { getAllEngineeringBriefings } from "../../data/engineering-briefing-adapter";
 import { getBriefingWeeks } from "../briefing-weeks";
 import { LocalizedCopy } from "../i18n/localized-copy";
-import { SiteFooter } from "../site-footer";
-import { SiteHeader } from "../site-header";
 
 export const metadata: Metadata = {
   title: "Past briefings",
@@ -18,7 +16,6 @@ export default function BriefingsPage() {
 
   return (
     <main>
-      <SiteHeader />
       <div className="briefing-reading-column">
         <section className="intro" aria-labelledby="briefings-heading">
           <h1 id="briefings-heading"><LocalizedCopy en="Past briefings" zh="往期简报" /></h1>
@@ -42,7 +39,6 @@ export default function BriefingsPage() {
           </section>
         ))}
       </div>
-      <SiteFooter />
     </main>
   );
 }

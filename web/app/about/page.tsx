@@ -1,7 +1,5 @@
 import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
-import { SiteHeader } from "../site-header";
-import { SiteFooter } from "../site-footer";
 import { LocalizedCopy } from "../i18n/localized-copy";
 
 const sellingPoints = [
@@ -47,7 +45,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return localizeServerContent((
     <main>
-      <SiteHeader />
 
       <section className="intro" aria-labelledby="about-heading">
         <p className="eyebrow"><LocalizedCopy en="About" zh="关于" /></p>
@@ -84,7 +81,6 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <SiteFooter />
     </main>
   ));
 }

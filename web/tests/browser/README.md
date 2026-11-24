@@ -75,8 +75,9 @@ stored separately from canonical records. Engineering news and Research paper
 content, proper names and original citation titles retain their source language.
 See [the translation audit](../../../docs/CHINESE_TRANSLATION_AUDIT.md) for scope,
 coverage and fallback behaviour.
-Theme uses CSS and the current page header's radio inputs; it resets with a new
-page header and is not a persistent site preference. Exercise English/Chinese
-and light/dark independently. Original sources and identifiers remain unchanged.
+Theme uses CSS and the shared shell's radio inputs. It survives client-side
+navigation while the shell stays mounted and resets on a full reload. Exercise
+English/Chinese and light/dark independently. Original sources and identifiers
+remain unchanged.
 See [the maintenance review](../../../docs/WEBSITE_MAINTENANCE.md)
 for the section map, validation evidence and remaining limits.

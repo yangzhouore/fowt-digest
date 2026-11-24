@@ -1,20 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import type { Ref } from "react";
 import { useLanguage } from "./i18n/language-context";
-export function SiteHeader() {
+
+type SiteHeaderProps = {
+  menuOpen: boolean;
+  menuButton: Ref<HTMLButtonElement>;
+  onMenuToggle: () => void;
+  onNavigate: () => void;
+};
+
+export function SiteHeader({ menuOpen, menuButton, onMenuToggle, onNavigate }: SiteHeaderProps) {
   const { language, setLanguage, t } = useLanguage();
   return (
     <header className="site-header">
-      <Link className="site-name" href="/">
+      <Link className="site-name" href="/" onNavigate={onNavigate}>
         <span>Floating Wind Digest</span>
       </Link>
-      <nav aria-label={t("primaryNavigation")}>
-        <Link href="/">{t("briefing")}</Link>
-        <Link href="/explore">{t("explore")}</Link>
-        <Link href="/search" prefetch={false}>{t("search")}</Link>
-        <Link href="/subscribe" prefetch={false}>{t("subscribe")}</Link>
-      </nav>
       <div className="preference-switches">
         <fieldset className="language-toggle" aria-label={t("language")}>
           <legend>{t("language")}</legend>
@@ -31,6 +34,10 @@ export function SiteHeader() {
             <label htmlFor="theme-dark">{t("dark")}</label>
           </fieldset>
         </details>
+        <button className="shell-menu-button" type="button" ref={menuButton}
+          aria-expanded={menuOpen} aria-controls="shell-navigation" onClick={onMenuToggle}>
+          {t("menu")}
+        </button>
       </div>
     </header>
   );

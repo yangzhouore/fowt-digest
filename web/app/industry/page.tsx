@@ -4,8 +4,6 @@ import { CountryOverview } from "./country-overview";
 import { CountryNavigation } from "./country-navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { SiteFooter } from "../site-footer";
-import { SiteHeader } from "../site-header";
 import {
   getIndustryCompanies,
   getIndustryMap,
@@ -89,7 +87,6 @@ function companyLogoUrl(company: IndustryCompany) {
 export default function IndustryPage() {
   return localizeServerContent((
     <main className="industry-page">
-      <SiteHeader />
 
       <CountryNavigation />
       <CountryOverview />
@@ -194,7 +191,6 @@ export default function IndustryPage() {
         <Link href="https://map.tgs4c.com/offshorewind/"><LocalizedCopy en="Open the global TGS4C map" zh="打开 TGS4C 全球地图" /></Link>
       </section>
 
-      <SiteFooter />
     </main>
   ));
 }

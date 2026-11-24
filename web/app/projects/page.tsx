@@ -1,7 +1,5 @@
 import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
-import { SiteFooter } from "../site-footer";
-import { SiteHeader } from "../site-header";
 import {
   formatStatus,
   getProjectCount,
@@ -28,7 +26,6 @@ export default function ProjectsPage() {
 
   return localizeServerContent((
     <main className="projects-page">
-      <SiteHeader />
 
       <section className="project-hero" aria-labelledby="projects-heading">
         <p className="eyebrow"><LocalizedCopy en="Project Intelligence" zh="项目信息" /></p>
@@ -71,7 +68,6 @@ export default function ProjectsPage() {
         </p>
       </section>
 
-      <SiteFooter />
     </main>
   ));
 }

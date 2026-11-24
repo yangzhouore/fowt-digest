@@ -2,8 +2,6 @@ import { localizeServerContent } from "../../i18n/server-content";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { formatPublicationDate } from "../../format-publication-date";
-import { SiteHeader } from "../../site-header";
-import { SiteFooter } from "../../site-footer";
 import { LocalizedCopy } from "../../i18n/localized-copy";
 import { notFound } from "next/navigation";
 import {
@@ -61,7 +59,6 @@ export default async function PaperPage({ params }: PaperPageProps) {
 
   return localizeServerContent((
     <main>
-      <SiteHeader />
 
       <article>
         <section className="intro" aria-labelledby="paper-heading">
@@ -208,7 +205,6 @@ export default async function PaperPage({ params }: PaperPageProps) {
         </section>
       </article>
 
-      <SiteFooter />
     </main>
   ));
 }

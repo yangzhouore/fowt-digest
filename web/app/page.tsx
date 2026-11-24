@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { SiteHeader } from "./site-header";
-import { SiteFooter } from "./site-footer";
 import { HomepageWeeklyBriefing } from "./homepage-weekly-briefing";
 import { getLatestBriefingPreview } from "./briefing-weeks";
 import { getAllDigests } from "../data/digest-adapter";
@@ -16,11 +14,9 @@ export default function Home() {
   const preview = getLatestBriefingPreview(getAllEngineeringBriefings(), getAllDigests());
   return (
     <main>
-      <SiteHeader />
 
       <HomepageWeeklyBriefing preview={preview} />
 
-      <SiteFooter />
     </main>
   );
 }

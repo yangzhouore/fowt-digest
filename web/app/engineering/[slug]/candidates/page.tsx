@@ -3,8 +3,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { formatPublicationDate } from "../../../format-publication-date";
 import { notFound } from "next/navigation";
-import { SiteHeader } from "../../../site-header";
-import { SiteFooter } from "../../../site-footer";
 import {
   getAllEngineeringBriefings,
   getEngineeringBriefingBySlug,
@@ -71,7 +69,6 @@ export default async function EngineeringCandidatesPage({
 
   return localizeServerContent((
     <main>
-      <SiteHeader />
 
       <section className="intro" aria-labelledby="engineering-candidates-heading">
         <p className="eyebrow">Engineering selection transparency</p>
@@ -251,7 +248,6 @@ export default async function EngineeringCandidatesPage({
         </p>
       </section>
 
-      <SiteFooter />
     </main>
   ));
 }

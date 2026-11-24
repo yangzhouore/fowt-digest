@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "./i18n/language-context";
+import { AppShell } from "./app-shell";
+import { SiteFooter } from "./site-footer";
+import "./app-shell.css";
 
 export const metadata: Metadata = {
   title: {
@@ -18,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><LanguageProvider>{children}</LanguageProvider></body>
+      <body>
+        <LanguageProvider>
+          <AppShell footer={<SiteFooter />}>{children}</AppShell>
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

@@ -16,7 +16,7 @@ const test = base.extend<{ runtimeErrors: void }>({
   }, { auto: true }],
 });
 
-test("global search opens from the header, reads shared queries and links to canonical records", async ({ page }) => {
+test("global search opens from primary navigation, reads shared queries and links to canonical records", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Search", exact: true }).click();
   await expect(page).toHaveURL("/search");
@@ -75,6 +75,7 @@ test("global search handles technical terms, language persistence and mobile dar
   await expect(engineering).toHaveAttribute("href", /^\/engineering\/.+#item-/);
 
   await page.getByRole("button", { name: "中文", exact: true }).click();
+  await page.getByRole("button", { name: "菜单", exact: true }).click();
   await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "搜索", exact: true })).toHaveAttribute("href", "/search");
   await expect(page.getByRole("button", { name: /^工程 \(/ })).toHaveAttribute("aria-pressed", "true");
   await page.reload();
@@ -167,6 +168,7 @@ test("Industry links to Company Intelligence and sparse timelines retain reviewe
   await expect(award.getByRole("link", { name: /Project Hywind Tampen/i })).toHaveAttribute("href", "/projects/hywind-tampen");
   await expect(page.getByRole("region", { name: "Related Projects" })).toBeVisible();
   await expect(page.locator(".site-header").locator('a[href^="/companies"]')).toHaveCount(0);
+  await expect(page.getByRole("navigation", { name: "Explore navigation" }).getByRole("link", { name: "Companies" })).toHaveAttribute("href", "/companies");
   await page.goto("/companies/vicinay-marine");
   await expect(timeline.getByRole("heading", { name: "Vicinay Marine and TECNALIA validate a mooring corrosion sensor" })).toBeVisible();
   await timeline.getByLabel("Filter by year").selectOption("2023");
@@ -238,7 +240,7 @@ test("recorded participants connect Projects to canonical Industry entries and o
   expect(new Set(ids).size).toBe(ids.length);
   await expect(page.locator('[id^="company-"]')).toHaveCount(47);
   const cables = page.locator("#company-jdr-cables");
-  await cables.locator("details > summary").first().click();
+  await cables.locator("details > summary").first().press("Enter");
   const cableRoles = cables.locator('[data-context-relationship^="rel-supply-efgl-jdr-"]');
   await expect(cableRoles).toHaveCount(2);
   for (const role of await cableRoles.all()) {
@@ -269,7 +271,7 @@ test("connected context works in mobile Chinese and dark theme without translati
   await page.goto("/industry#company-equinor");
   await selectDarkTheme(page);
   const company = page.locator("#company-equinor");
-  await company.locator("details > summary").first().click();
+  await company.locator("details > summary").first().press("Enter");
   await expect(company.getByRole("heading", { name: /^项目记录/ })).toBeVisible();
   await expect(company.locator(".context-company-role summary").first()).toHaveCSS("display", "list-item");
   await expect(page.locator("#theme-dark")).toBeChecked();
@@ -282,7 +284,21 @@ test("briefing navigation exposes four primary links, Explore, footer utilities 
   await page.setViewportSize({ width: 320, height: 760 });
   await page.goto("/");
   const navigation = page.getByRole("navigation", { name: "Primary navigation" });
+  const menu = page.getByRole("button", { name: "Menu", exact: true });
+  await expect(navigation).toHaveCount(0);
+  await expect(menu).toHaveAttribute("aria-controls", "shell-navigation");
+  await menu.focus();
+  await page.keyboard.press("Enter");
+  await expect(menu).toHaveAttribute("aria-expanded", "true");
+  await page.keyboard.press("Tab");
+  await expect(navigation.getByRole("link", { name: "Briefing" })).toBeFocused();
+  await page.keyboard.press("Escape");
+  await expect(menu).toBeFocused();
+  await expect(menu).toHaveAttribute("aria-expanded", "false");
+  await expect(navigation).toHaveCount(0);
+  await menu.press("Space");
   await expect(navigation.getByRole("link")).toHaveText(["Briefing", "Explore", "Search", "Subscribe"]);
+  await expect(page.getByRole("navigation", { name: "Explore navigation" }).getByRole("link")).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
   await expect(navigation.getByRole("link", { name: "Briefing" })).toHaveAttribute("href", "/");
   await expect(navigation.getByRole("link", { name: "Search" })).toHaveAttribute("href", "/search");
   await expect(navigation.getByRole("link", { name: "Subscribe" })).toHaveAttribute("href", "/subscribe");
@@ -302,17 +318,72 @@ test("briefing navigation exposes four primary links, Explore, footer utilities 
 
   await navigation.getByRole("link", { name: "Explore" }).click();
   await expect(page).toHaveURL("/explore");
+  await expect(menu).toHaveAttribute("aria-expanded", "false");
+  await expect(navigation).toHaveCount(0);
+  await expect(page.locator("#theme-dark")).toBeChecked();
   const destinations = page.getByRole("region", { name: "Explore floating wind" }).getByRole("link");
   await expect(destinations).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
   expect(await destinations.evaluateAll((links) => links.map((link) => link.getAttribute("href"))))
     .toEqual(["/projects", "/companies", "/industry", "/digital-ai"]);
   await page.getByRole("button", { name: "中文", exact: true }).click();
+  await page.getByRole("button", { name: "菜单", exact: true }).click();
   await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link")).toHaveText(["简报", "探索", "搜索", "订阅"]);
+  await expect(page.getByRole("navigation", { name: "探索导航" }).getByRole("link")).toHaveText(["项目", "企业", "产业", "数字化与 AI"]);
   await expect(page.getByRole("heading", { name: "探索浮式风电" })).toBeVisible();
   await expect(page.getByRole("region", { name: "探索浮式风电" }).getByRole("link")).toHaveText(["项目", "企业", "产业", "数字化与 AI"]);
   await selectDarkTheme(page);
   await expect(page.locator("#theme-dark")).toBeChecked();
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+});
+
+test("desktop sidebar reflects route families and the shell fits either side of its breakpoint", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 960 });
+  await page.goto("/");
+  const primary = page.getByRole("navigation", { name: "Primary navigation" });
+  const explore = page.getByRole("navigation", { name: "Explore navigation" });
+  const menu = page.getByRole("button", { name: "Menu", exact: true });
+  await expect(menu).toHaveCount(0);
+  await expect(primary.getByRole("link")).toHaveText(["Briefing", "Explore", "Search", "Subscribe"]);
+  await expect(explore.getByRole("link")).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
+  await expect(primary.getByRole("link", { name: "Briefing" })).toHaveAttribute("aria-current", "page");
+  await expect(page.getByRole("banner").getByRole("link")).toHaveCount(1);
+
+  await explore.getByRole("link", { name: "Projects" }).click();
+  await expect(explore.getByRole("link", { name: "Projects" })).toHaveAttribute("aria-current", "page");
+  await expect(primary.getByRole("link", { name: "Explore" })).toHaveAttribute("data-active", "true");
+  await expect(page.locator(".shell-navigation [aria-current='page']")).toHaveCount(1);
+  await expect(page.getByRole("main")).toHaveCount(1);
+  await expect(page.getByRole("contentinfo")).toHaveCount(1);
+  const project = page.locator(".project-overview");
+  const lightStatus = await project.evaluate((element) => getComputedStyle(element).getPropertyValue("--pi-secured").trim());
+  await selectDarkTheme(page);
+  await expect.poll(() => project.evaluate((element) => getComputedStyle(element).getPropertyValue("--pi-secured").trim())).toBe("#82c7a6");
+  expect(lightStatus).not.toBe("#82c7a6");
+  await expect(page.getByRole("main")).toHaveCSS("background-color", "rgb(15, 23, 42)");
+  await expect(page.locator(".app-shell")).toHaveCSS("color", "rgb(241, 245, 249)");
+
+  for (const [path, name] of [["/archive", "Briefing"], ["/projects/hywind-tampen", "Explore"], ["/search?q=vestas", "Search"], ["/subscribe", "Subscribe"]]) {
+    await page.goto(path);
+    await expect(primary.getByRole("link", { name })).toHaveAttribute("data-active", "true");
+    if (name === "Explore") await expect(explore.getByRole("link", { name: "Projects" })).toHaveAttribute("data-active", "true");
+  }
+
+  for (const width of [1440, 960, 959, 390, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    if (width < 960) {
+      await expect(primary).toHaveCount(0);
+      await menu.click();
+    }
+    await expect(primary).toBeVisible();
+    const controls = page.locator(".site-header a, .site-header button, .site-header summary, .shell-navigation a");
+    for (const control of await controls.all()) {
+      if (!await control.isVisible()) continue;
+      const box = (await control.boundingBox())!;
+      expect(box.x).toBeGreaterThanOrEqual(0);
+      expect(box.x + box.width).toBeLessThanOrEqual(width);
+    }
+    if (width < 960) await menu.click();
+  }
 });
 
 test("homepage renders the latest briefing and its Engineering / Research links work", async ({ page }) => {
@@ -344,6 +415,7 @@ test("homepage renders the latest briefing and its Engineering / Research links 
   const engineeringCount = await page.getByRole("region", { name: "Engineering highlights", exact: true }).getByRole("heading", { level: 3 }).count();
   const item = page.locator(href!.slice(href!.indexOf("#")));
   await expect(item.getByRole("heading", { level: 3 })).toBeVisible();
+  await expect(item.getByRole("heading", { level: 3 })).toBeInViewport();
   await expect(item.getByRole("link", { name: "Open source" })).toHaveAttribute("href", /^https?:\/\//);
   await expect(page.getByRole("heading", { level: 2 }).first()).toHaveText("Engineering highlights");
   await expect(page.getByRole("region", { name: "Briefing metadata" }).getByRole("link")).toHaveAttribute("href", `/engineering/${week}/candidates`);

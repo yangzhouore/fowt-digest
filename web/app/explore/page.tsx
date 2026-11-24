@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LocalizedCopy } from "../i18n/localized-copy";
-import { SiteFooter } from "../site-footer";
-import { SiteHeader } from "../site-header";
 
 export const metadata: Metadata = {
   title: "Explore",
@@ -23,7 +21,6 @@ const destinations = [
 export default function ExplorePage() {
   return (
     <main>
-      <SiteHeader />
       <section className="intro" aria-labelledby="explore-heading">
         <h1 id="explore-heading"><LocalizedCopy en="Explore floating wind" zh="探索浮式风电" /></h1>
         <ul className="explore-list">
@@ -35,7 +32,6 @@ export default function ExplorePage() {
           ))}
         </ul>
       </section>
-      <SiteFooter />
     </main>
   );
 }

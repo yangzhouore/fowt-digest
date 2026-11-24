@@ -2,8 +2,6 @@ import { localizeServerContent } from "../../i18n/server-content";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { formatPublicationDate } from "../../format-publication-date";
-import { SiteHeader } from "../../site-header";
-import { SiteFooter } from "../../site-footer";
 import { LocalizedCopy } from "../../i18n/localized-copy";
 import { notFound } from "next/navigation";
 import { getAllDigests, getDigestBySlug } from "../../../data/digest-adapter";
@@ -51,7 +49,6 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
 
   return localizeServerContent((
     <main>
-      <SiteHeader />
 
       <section className="intro" aria-labelledby="weekly-heading">
         <p className="eyebrow"><LocalizedCopy en="Weekly digest" zh="每周研究摘要" /></p>
@@ -144,7 +141,6 @@ export default async function WeeklyPage({ params }: WeeklyPageProps) {
         </p>
       </section>
 
-      <SiteFooter />
     </main>
   ));
 }

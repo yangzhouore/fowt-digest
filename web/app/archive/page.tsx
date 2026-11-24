@@ -1,7 +1,5 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { SiteHeader } from "../site-header";
-import { SiteFooter } from "../site-footer";
 import {
   getAllDigestPaperResults,
   getAllDigests,
@@ -59,7 +57,6 @@ export default function ArchivePage() {
 
   return (
     <main>
-      <SiteHeader />
 
       <section className="intro" aria-labelledby="archive-heading">
         <p className="eyebrow"><LocalizedCopy en="Archive" zh="研究往期" /></p>
@@ -126,7 +123,6 @@ export default function ArchivePage() {
         </p>
       </section>
 
-      <SiteFooter />
     </main>
   );
 }

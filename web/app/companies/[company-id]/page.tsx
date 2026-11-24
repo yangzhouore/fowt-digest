@@ -5,8 +5,6 @@ import { getCompanyIndex, getCompanyIntelligence } from "../../../data/company-i
 import { getIndustryEntryHref } from "../../../data/connected-context-adapter";
 import { LocalizedCopy as Copy } from "../../i18n/localized-copy";
 import { localizeServerContent } from "../../i18n/server-content";
-import { SiteFooter } from "../../site-footer";
-import { SiteHeader } from "../../site-header";
 import { CompanyTimeline } from "../company-filters";
 import styles from "../companies.module.css";
 
@@ -33,7 +31,6 @@ export default async function CompanyPage({ params }: Props) {
 
   return localizeServerContent(
     <main>
-      <SiteHeader />
       <div className={styles.content}>
         <header className={styles.intro}>
           <nav className={styles.links} aria-label="Company navigation">
@@ -67,7 +64,6 @@ export default async function CompanyPage({ params }: Props) {
           </section>
         )}
       </div>
-      <SiteFooter />
     </main>,
   );
 }

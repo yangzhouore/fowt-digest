@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { SiteHeader } from "../site-header";
-import { SiteFooter } from "../site-footer";
 import { getAllEngineeringBriefings } from "../../data/engineering-briefing-adapter";
 import { EngineeringSearch } from "./engineering-search";
 import { LocalizedCopy } from "../i18n/localized-copy";
@@ -36,7 +34,6 @@ export default function EngineeringArchivePage() {
 
   return (
     <main className="engineering-archive-page">
-      <SiteHeader />
 
       <section className="intro" aria-labelledby="engineering-archive-heading">
         <p className="eyebrow"><LocalizedCopy en="Engineering archive" zh="工程简报往期" /></p>
@@ -55,7 +52,6 @@ export default function EngineeringArchivePage() {
         </p>
       </section>
 
-      <SiteFooter />
     </main>
   );
 }

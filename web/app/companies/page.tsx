@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getCompanyIndex } from "../../data/company-intelligence-adapter";
 import { LocalizedCopy as Copy } from "../i18n/localized-copy";
-import { SiteFooter } from "../site-footer";
-import { SiteHeader } from "../site-header";
 import { CompanyDirectory } from "./company-filters";
 import styles from "./companies.module.css";
 
@@ -15,7 +13,6 @@ export const metadata: Metadata = {
 export default function CompaniesPage() {
   return (
     <main>
-      <SiteHeader />
       <div className={styles.content}>
         <header className={styles.intro}>
           <Link href="/industry#industry-catalogue"><Copy en="Industry directory" zh="产业目录" /></Link>
@@ -24,7 +21,6 @@ export default function CompaniesPage() {
         </header>
         <CompanyDirectory companies={getCompanyIndex()} />
       </div>
-      <SiteFooter />
     </main>
   );
 }

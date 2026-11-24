@@ -2,8 +2,6 @@ import { localizeServerContent } from "../../i18n/server-content";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { countryGuides } from "../../../data/industry/country-guides";
-import { SiteHeader } from "../../site-header";
-import { SiteFooter } from "../../site-footer";
 import { CountryNavigation } from "../country-navigation";
 import { CountrySystemGuide } from "../country-system-guide";
 
@@ -16,5 +14,5 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
 export default async function CountryIndustryPage({ params }: { params: Promise<{ country: string }> }) {
   const { country } = await params; const guide = countryGuides.find((g) => g.slug === country);
   if (!guide) notFound();
-  return localizeServerContent(<main className="industry-page"><SiteHeader /><CountryNavigation active={country} /><CountrySystemGuide guide={guide} /><SiteFooter /></main>);
+  return localizeServerContent(<main className="industry-page"><CountryNavigation active={country} /><CountrySystemGuide guide={guide} /></main>);
 }

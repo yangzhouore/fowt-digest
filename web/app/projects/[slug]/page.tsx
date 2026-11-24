@@ -4,8 +4,6 @@ import { ProjectEngineeringCoverage, IndustryEntryLink } from "../../connected-p
 import { ProjectPublicEvidence, ProjectReviewStrip, ProjectReviewHistory } from "../project-public-evidence";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SiteFooter } from "../../site-footer";
-import { SiteHeader } from "../../site-header";
 import { LocalizedCopy } from "../../i18n/localized-copy";
 import {
   formatCapacity,
@@ -104,7 +102,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   return localizeServerContent((
     <main>
-      <SiteHeader />
 
       <article>
         <section className="project-detail-hero" aria-labelledby="project-heading">
@@ -263,7 +260,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </section>
       </article>
 
-      <SiteFooter />
     </main>
   ));
 }
@@ -310,7 +306,6 @@ function ProjectIntelligenceDetailPage({
 
   return localizeServerContent((
     <main>
-      <SiteHeader />
 
       <article className="project-intel-detail">
         <section className="project-intel-hero" aria-labelledby="project-heading">
@@ -517,7 +512,6 @@ function ProjectIntelligenceDetailPage({
         </section>
       </article>
 
-      <SiteFooter />
     </main>
   ));
 }
@@ -624,7 +618,6 @@ function GreenVoltProjectDetailPage({
 
   return localizeServerContent((
     <main>
-      <SiteHeader />
 
       <article className="green-volt-detail">
         <section className="green-volt-hero" aria-labelledby="project-heading">
@@ -815,7 +808,6 @@ function GreenVoltProjectDetailPage({
         </section>
       </article>
 
-      <SiteFooter />
     </main>
   ));
 }

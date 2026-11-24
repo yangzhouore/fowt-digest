@@ -43,6 +43,7 @@ async function expectHomepageContract(page: Page) {
 
   const researchTrack = main.getByRole("region", { name: "Research", exact: true });
   const papers = researchEdition?.papers.slice(0, 3) ?? [];
+  if (researchEdition) await expect(researchTrack.getByRole("list", { name: "Research" })).toBeVisible();
   await expect(researchTrack.getByRole("listitem")).toHaveCount(papers.length);
   for (const [index, paper] of papers.entries()) {
     const row = researchTrack.getByRole("listitem").nth(index);
@@ -66,9 +67,16 @@ async function expectHomepageContract(page: Page) {
 test("homepage preserves the latest edition date, full counts, ordered preview contents and links", async ({ page }) => {
   await page.goto("/");
   await expectHomepageContract(page);
+  const masthead = page.getByRole("region", { name: "Latest briefing" });
+  await expect(masthead.getByRole("figure", { name: "Floating wind schematic" })).toBeVisible();
   const lead = page.getByRole("region", { name: "Engineering", exact: true }).getByRole("listitem").first();
   if (engineeringEdition?.items.length) {
     const first = engineeringEdition.items[0];
+    await expect(lead.getByRole("article", { name: first.title })).toBeVisible();
+    const secondary = engineeringEdition.items.slice(1, 3);
+    for (const item of secondary) {
+      await expect(page.getByRole("article", { name: item.title, exact: true })).toBeVisible();
+    }
     const source = first.sourceRecords.find(({ sourceUrl }) => sourceUrl === first.sourceUrl);
     const action = lead.getByRole("link", { name: `Read briefing item ${first.title}` });
     await expect(action).toHaveAttribute("href", engineeringItemHref(latest, first.id));
@@ -91,6 +99,7 @@ test("single-track and empty fixtures keep availability messages, counts and con
   await expect(items).toHaveCount(3);
   for (const [index, item] of engineeringOnly.items.slice(0, 3).entries()) {
     const entry = items.nth(index);
+    await expect(entry.getByRole("article", { name: item.title, exact: true })).toBeVisible();
     const headline = entry.getByRole("heading", { level: 3 }).getByRole("link");
     await expect(headline).toHaveText(item.title);
     await expect(headline).toHaveAttribute("href", engineeringItemHref(engineeringOnly.slug, item.id));
@@ -102,6 +111,13 @@ test("single-track and empty fixtures keep availability messages, counts and con
   await expect(page.getByText("No Engineering edition was published for this date.")).toBeVisible();
   await expect(page.getByRole("link", { name: "Engineering archive" })).toHaveAttribute("href", "/engineering");
   await expect(page.getByRole("link", { name: "Read the full Research digest" })).toHaveAttribute("href", `/weekly/${researchOnly.slug}`);
+  const papers = page.getByRole("list", { name: "Research" }).getByRole("listitem");
+  await expect(papers).toHaveCount(3);
+  for (const [index, paper] of researchOnly.papers.slice(0, 3).entries()) {
+    const row = papers.nth(index);
+    await expect(row.getByRole("link", { name: paper.title, exact: true })).toHaveAttribute("href", `/papers/${paper.slug}`);
+    await expect(row.getByText(paper.publicationSource, { exact: true })).toBeVisible();
+  }
 
   await page.setContent(renderHomepageFixture(null));
   await expect(page.getByText("No editions are available yet.")).toBeVisible();
@@ -144,6 +160,7 @@ test("editorial imagery uses the exact edition and lead item ID and renders bili
 
   for (const language of ["en", "zh"] as const) {
     await page.setContent(renderHomepageFixture(preview, language, { [edition.slug]: { [first.id]: image } }));
+    await expect(page.getByRole("figure", { name: language === "en" ? "Floating wind schematic" : "浮式风电示意图" })).toHaveCount(0);
     const picture = page.getByRole("img", { name: image.alt[language] });
     await expect(picture).toBeVisible();
     await expect(picture).toHaveAttribute("width", "1600");
@@ -163,6 +180,7 @@ test("homepage previews and continuation stay readable at 390px and 320px in bot
       await page.getByRole("button", { name: language === "en" ? "EN" : "中文", exact: true }).click();
       const main = page.getByRole("main");
       await expect(main.getByRole("heading", { level: 1 })).toHaveText(language === "en" ? "Latest briefing" : "最新简报");
+      await expect(main.getByRole("figure", { name: language === "en" ? "Floating wind schematic" : "浮式风电示意图" })).toBeVisible();
       for (const theme of ["light", "dark"] as const) {
         if (theme === "dark") await selectDarkTheme(page);
         else if (await page.locator("#theme-dark").isChecked()) await page.locator('label[for="theme-light"]').click();

@@ -346,7 +346,17 @@ test("desktop sidebar reflects route families and the shell fits either side of 
   await expect(primary.getByRole("link")).toHaveText(["Briefing", "Explore", "Search", "Subscribe"]);
   await expect(explore.getByRole("link")).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
   await expect(primary.getByRole("link", { name: "Briefing" })).toHaveAttribute("aria-current", "page");
-  await expect(page.getByRole("banner").getByRole("link")).toHaveCount(1);
+  const banner = page.getByRole("banner");
+  await expect(banner.getByRole("link")).toHaveCount(2);
+  await expect(banner.getByRole("link", { name: "Floating Wind Digest" })).toHaveAttribute("href", "/");
+  const searchEntry = banner.getByRole("link", { name: "Search intelligence" });
+  await expect(searchEntry).toHaveAttribute("href", "/search");
+  await expect(banner.getByRole("textbox")).toHaveCount(0);
+  await searchEntry.press("Enter");
+  await expect(page).toHaveURL("/search");
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await expect(banner.getByRole("link", { name: "搜索情报" })).toBeVisible();
+  await page.getByRole("button", { name: "EN", exact: true }).click();
 
   await explore.getByRole("link", { name: "Projects" }).click();
   await expect(explore.getByRole("link", { name: "Projects" })).toHaveAttribute("aria-current", "page");
@@ -371,8 +381,12 @@ test("desktop sidebar reflects route families and the shell fits either side of 
   for (const width of [1440, 960, 959, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
     if (width < 960) {
+      await expect(searchEntry).toHaveCount(0);
       await expect(primary).toHaveCount(0);
       await menu.click();
+      await expect(primary.getByRole("link", { name: "Search", exact: true })).toHaveAttribute("href", "/search");
+    } else {
+      await expect(searchEntry).toBeVisible();
     }
     await expect(primary).toBeVisible();
     const controls = page.locator(".site-header a, .site-header button, .site-header summary, .shell-navigation a");

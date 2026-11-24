@@ -30,8 +30,10 @@ wrap without clipping or truncating meaningful labels and headlines.
 
 ## Shell and navigation
 
-- Keep the brand, language controls, and Preferences in the top bar. Theme
-  changes apply to the complete shell and content.
+- Keep the wordmark, small floating-wind mark, language controls, and
+  Preferences in the top bar. The desktop Search entry links to `/search`.
+  Search remains in both the sidebar and mobile menu. Theme changes apply to
+  the complete shell and content.
 - Keep Briefing, Explore, Search, and Subscribe in the primary navigation.
   Projects, Companies, Industry, and Digital & AI form the Explore group.
 - At wide widths use the sidebar. Below 960px use one non-modal navigation
@@ -53,7 +55,13 @@ original headlines, metadata, and citations when localizing surrounding UI.
 Avoid decorative gradients, glassmorphism, excessive shadows, decorative
 animation, generic SaaS dashboard widgets, fake actions, and arbitrary colors.
 
-## Editorial images for the homepage follow-up
+## Briefing artwork and editorial images
+
+The homepage masthead uses an original floating-wind schematic as briefing
+artwork. Keep it apart from story attribution and omit it when the lead has a
+registered event image. Its localized caption describes the schematic.
+The illustration depicts generic concepts without project identifiers,
+measurements, or event details.
 
 Images require reviewed provenance. Attach an approved image to an exact
 canonical item or entity. Record what it depicts, the original source, credit,

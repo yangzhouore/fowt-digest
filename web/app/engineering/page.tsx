@@ -36,10 +36,9 @@ export default function EngineeringArchivePage() {
     <main className="engineering-archive-page">
 
       <section className="intro" aria-labelledby="engineering-archive-heading">
-        <p className="eyebrow"><LocalizedCopy en="Engineering archive" zh="工程简报往期" /></p>
-        <h1 id="engineering-archive-heading"><LocalizedCopy en="Representative engineering briefings." zh="具有代表性的工程简报。" /></h1>
+        <h1 id="engineering-archive-heading"><LocalizedCopy en="All Engineering Briefings" zh="全部工程简报" /></h1>
         <p>
-          <LocalizedCopy en="Browse selected source-backed floating offshore wind engineering briefings. This archive is representative static coverage, not a complete historical record." zh="浏览经筛选且有来源依据的浮式海上风电工程简报。本往期内容为具有代表性的静态覆盖，并非完整历史记录。" />
+          <LocalizedCopy en="Explore selected floating offshore wind engineering news, with links to the original sources." zh="浏览精选浮式海上风电工程新闻，查看原始来源。" />
         </p>
       </section>
 

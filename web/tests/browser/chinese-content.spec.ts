@@ -62,9 +62,9 @@ test("Engineering news and Research titles are preserved when Chinese is selecte
 
 test("candidate-page interface labels translate without changing Research titles", async ({ page }) => {
   await page.goto("/");
-  const firstTitle = await page.getByRole("region", { name: "研究", exact: true }).getByRole("heading", { level: 3 }).first().innerText();
-  const weekly = await page.getByRole("link", { name: "阅读完整研究摘要" }).getAttribute("href");
-  await page.goto(`${weekly}/candidates`);
+  const firstTitle = await page.getByRole("region", { name: "研究论文", exact: true }).getByRole("heading", { level: 3 }).first().innerText();
+  const week = await page.getByRole("radio", { checked: true }).inputValue();
+  await page.goto(`/weekly/${week}/candidates`);
   await expect(page.getByRole("heading", { name: "排序后的候选记录", exact: true })).toBeVisible();
   await expect(page.locator(".candidate-list h3").first()).toHaveText(firstTitle);
 });

@@ -16,9 +16,9 @@ const test = base.extend<{ runtimeErrors: void }>({
   }, { auto: true }],
 });
 
-test("global search opens from primary navigation, reads shared queries and links to canonical records", async ({ page }) => {
+test("global search opens from the header, reads shared queries and links to canonical records", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Search", exact: true }).click();
+  await page.getByRole("searchbox", { name: "Site-wide search" }).press("Enter");
   await expect(page).toHaveURL("/search");
   await expect(page.getByRole("heading", { name: "Search Floating Wind Digest" })).toBeVisible();
   await expect(page.getByText("Enter a company, project, topic, or keyword.")).toBeVisible();
@@ -76,14 +76,14 @@ test("global search handles technical terms, language persistence and mobile dar
 
   await page.getByRole("button", { name: "中文", exact: true }).click();
   await page.getByRole("button", { name: "菜单", exact: true }).click();
-  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "搜索", exact: true })).toHaveAttribute("href", "/search");
+  await expect(page.getByRole("banner").getByRole("searchbox", { name: "全站搜索" })).toBeVisible();
   await expect(page.getByRole("button", { name: /^工程 \(/ })).toHaveAttribute("aria-pressed", "true");
   await page.reload();
   await expect(page.getByRole("heading", { name: "搜索浮式风电摘要" })).toBeVisible();
   const chineseSearch = page.getByRole("searchbox", { name: "搜索全站" });
   await expect(chineseSearch).toHaveValue("dynamic cable");
   await selectDarkTheme(page);
-  await expect(page.locator("#theme-dark")).toBeChecked();
+  await expect(page.locator(".theme-toggle")).toHaveAttribute("aria-pressed", "true");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 
   await chineseSearch.fill("[unmatched]+");
@@ -274,13 +274,13 @@ test("connected context works in mobile Chinese and dark theme without translati
   await company.locator("details > summary").first().press("Enter");
   await expect(company.getByRole("heading", { name: /^项目记录/ })).toBeVisible();
   await expect(company.locator(".context-company-role summary").first()).toHaveCSS("display", "list-item");
-  await expect(page.locator("#theme-dark")).toBeChecked();
+  await expect(page.locator(".theme-toggle")).toHaveAttribute("aria-pressed", "true");
   await company.scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/connected-industry-mobile-zh-dark.png" });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
-test("briefing navigation exposes four primary links, Explore, footer utilities and keyboard preferences", async ({ page }) => {
+test("briefing navigation exposes three primary links, Explore, footer utilities and keyboard preferences", async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 760 });
   await page.goto("/");
   const navigation = page.getByRole("navigation", { name: "Primary navigation" });
@@ -297,42 +297,39 @@ test("briefing navigation exposes four primary links, Explore, footer utilities 
   await expect(menu).toHaveAttribute("aria-expanded", "false");
   await expect(navigation).toHaveCount(0);
   await menu.press("Space");
-  await expect(navigation.getByRole("link")).toHaveText(["Briefing", "Explore", "Search", "Subscribe"]);
+  await expect(navigation.getByRole("link")).toHaveText(["Briefing", "Explore", "Subscribe"]);
   await expect(page.getByRole("navigation", { name: "Explore navigation" }).getByRole("link")).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
   await expect(navigation.getByRole("link", { name: "Briefing" })).toHaveAttribute("href", "/");
-  await expect(navigation.getByRole("link", { name: "Search" })).toHaveAttribute("href", "/search");
+  await expect(navigation.getByRole("link", { name: "Search" })).toHaveCount(0);
   await expect(navigation.getByRole("link", { name: "Subscribe" })).toHaveAttribute("href", "/subscribe");
   await expect(page.getByRole("navigation", { name: "Further reading" }).getByRole("link", { name: "Methodology" })).toHaveAttribute("href", "/methodology");
-  const preferences = page.locator(".theme-preferences summary");
-  await preferences.focus();
-  await page.keyboard.press("Enter");
-  await page.keyboard.press("Tab");
-  await expect(page.getByRole("radio", { name: "Light" })).toBeFocused();
-  await page.keyboard.press("ArrowRight");
-  await expect(page.getByRole("radio", { name: "Dark" })).toBeChecked();
-  await preferences.focus();
-  await page.keyboard.press("Space");
-  await expect(page.locator("#theme-dark")).toBeChecked();
-  await expect(page.getByRole("radio", { name: "Dark" })).toBeHidden();
+  const themeToggle = page.getByRole("button", { name: "Dark mode" });
+  await expect(themeToggle).toHaveAttribute("aria-pressed", "false");
+  await themeToggle.press("Enter");
+  await expect(themeToggle).toHaveAttribute("aria-pressed", "true");
+  await themeToggle.press("Space");
+  await expect(themeToggle).toHaveAttribute("aria-pressed", "false");
+  await themeToggle.press("Space");
+  await expect(themeToggle).toHaveAttribute("aria-pressed", "true");
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
 
   await navigation.getByRole("link", { name: "Explore" }).click();
   await expect(page).toHaveURL("/explore");
   await expect(menu).toHaveAttribute("aria-expanded", "false");
   await expect(navigation).toHaveCount(0);
-  await expect(page.locator("#theme-dark")).toBeChecked();
+  await expect(page.locator(".theme-toggle")).toHaveAttribute("aria-pressed", "true");
   const destinations = page.getByRole("region", { name: "Explore floating wind" }).getByRole("link");
   await expect(destinations).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
   expect(await destinations.evaluateAll((links) => links.map((link) => link.getAttribute("href"))))
     .toEqual(["/projects", "/companies", "/industry", "/digital-ai"]);
   await page.getByRole("button", { name: "中文", exact: true }).click();
   await page.getByRole("button", { name: "菜单", exact: true }).click();
-  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link")).toHaveText(["简报", "探索", "搜索", "订阅"]);
+  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link")).toHaveText(["简报", "探索", "订阅"]);
   await expect(page.getByRole("navigation", { name: "探索导航" }).getByRole("link")).toHaveText(["项目", "企业", "产业", "数字化与 AI"]);
   await expect(page.getByRole("heading", { name: "探索浮式风电" })).toBeVisible();
   await expect(page.getByRole("region", { name: "探索浮式风电" }).getByRole("link")).toHaveText(["项目", "企业", "产业", "数字化与 AI"]);
   await selectDarkTheme(page);
-  await expect(page.locator("#theme-dark")).toBeChecked();
+  await expect(page.locator(".theme-toggle")).toHaveAttribute("aria-pressed", "true");
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
 });
 
@@ -343,19 +340,20 @@ test("desktop sidebar reflects route families and the shell fits either side of 
   const explore = page.getByRole("navigation", { name: "Explore navigation" });
   const menu = page.getByRole("button", { name: "Menu", exact: true });
   await expect(menu).toHaveCount(0);
-  await expect(primary.getByRole("link")).toHaveText(["Briefing", "Explore", "Search", "Subscribe"]);
+  await expect(primary.getByRole("link")).toHaveText(["Briefing", "Explore", "Subscribe"]);
   await expect(explore.getByRole("link")).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
   await expect(primary.getByRole("link", { name: "Briefing" })).toHaveAttribute("aria-current", "page");
   const banner = page.getByRole("banner");
-  await expect(banner.getByRole("link")).toHaveCount(2);
+  await expect(banner.getByRole("link")).toHaveCount(1);
   await expect(banner.getByRole("link", { name: "Floating Wind Digest" })).toHaveAttribute("href", "/");
-  const searchEntry = banner.getByRole("link", { name: "Search intelligence" });
-  await expect(searchEntry).toHaveAttribute("href", "/search");
+  const searchEntry = banner.getByRole("searchbox", { name: "Site-wide search" });
+  await page.keyboard.press("Control+k");
+  await expect(searchEntry).toBeFocused();
   await expect(banner.getByRole("textbox")).toHaveCount(0);
   await searchEntry.press("Enter");
   await expect(page).toHaveURL("/search");
   await page.getByRole("button", { name: "中文", exact: true }).click();
-  await expect(banner.getByRole("link", { name: "搜索情报" })).toBeVisible();
+  await expect(banner.getByRole("searchbox", { name: "全站搜索" })).toBeVisible();
   await page.getByRole("button", { name: "EN", exact: true }).click();
 
   await explore.getByRole("link", { name: "Projects" }).click();
@@ -372,7 +370,7 @@ test("desktop sidebar reflects route families and the shell fits either side of 
   await expect(page.getByRole("main")).toHaveCSS("background-color", "rgb(15, 23, 42)");
   await expect(page.locator(".app-shell")).toHaveCSS("color", "rgb(241, 245, 249)");
 
-  for (const [path, name] of [["/archive", "Briefing"], ["/projects/hywind-tampen", "Explore"], ["/search?q=vestas", "Search"], ["/subscribe", "Subscribe"]]) {
+  for (const [path, name] of [["/archive", "Briefing"], ["/projects/hywind-tampen", "Explore"], ["/subscribe", "Subscribe"]]) {
     await page.goto(path);
     await expect(primary.getByRole("link", { name })).toHaveAttribute("data-active", "true");
     if (name === "Explore") await expect(explore.getByRole("link", { name: "Projects" })).toHaveAttribute("data-active", "true");
@@ -381,10 +379,10 @@ test("desktop sidebar reflects route families and the shell fits either side of 
   for (const width of [1440, 960, 959, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
     if (width < 960) {
-      await expect(searchEntry).toHaveCount(0);
+      await expect(searchEntry).toBeVisible();
       await expect(primary).toHaveCount(0);
       await menu.click();
-      await expect(primary.getByRole("link", { name: "Search", exact: true })).toHaveAttribute("href", "/search");
+      await expect(primary.getByRole("link", { name: "Search", exact: true })).toHaveCount(0);
     } else {
       await expect(searchEntry).toBeVisible();
     }
@@ -404,29 +402,28 @@ test("homepage renders the latest briefing and its Engineering / Research links 
   const response = await page.goto("/");
   expect(response?.status()).toBe(200);
   await expect(page.getByRole("heading", { name: "Latest briefing", exact: true })).toBeVisible();
-  const week = await page.locator(".briefing-masthead time").getAttribute("datetime");
-  const mastheadCounts = await page.locator(".briefing-masthead .briefing-meta").innerText();
+  const week = await page.getByRole("radio", { checked: true }).inputValue();
   expect(week).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-  await expect(page.getByRole("group", { name: "Select a week" })).toHaveCount(0);
+  await expect(page.getByRole("group", { name: "Select a week" }).getByRole("radio").first()).toBeChecked();
 
-  const engineering = page.getByRole("region", { name: "Engineering", exact: true });
-  const research = page.getByRole("region", { name: "Research", exact: true });
+  const engineering = page.getByRole("region", { name: "Engineering News", exact: true });
+  const research = page.getByRole("region", { name: "Research Papers", exact: true });
   const engineeringPreviews = engineering.getByRole("heading", { level: 3 }).getByRole("link");
   const researchPreviews = research.getByRole("heading", { level: 3 }).getByRole("link");
   await expect(engineeringPreviews.first()).toBeVisible();
   await expect(researchPreviews.first()).toBeVisible();
-  expect(await engineeringPreviews.count()).toBeLessThanOrEqual(3);
-  expect(await researchPreviews.count()).toBeLessThanOrEqual(3);
+  const engineeringPreviewCount = await engineeringPreviews.count();
+  const researchPreviewCount = await researchPreviews.count();
   expect(await researchPreviews.evaluateAll((links) => links.every((a) => (a.getAttribute("href") ?? "").startsWith("/papers/")))).toBe(true);
 
-  await expect(engineering.getByRole("link", { name: "Read the full Engineering briefing" })).toHaveAttribute("href", `/engineering/${week}`);
-  await expect(research.getByRole("link", { name: "Read the full Research digest" })).toHaveAttribute("href", `/weekly/${week}`);
+  await expect(engineering.getByRole("link", { name: "Browse all engineering news" })).toHaveAttribute("href", "/engineering");
+  await expect(research.getByRole("link", { name: "Browse all research papers" })).toHaveAttribute("href", "/archive");
   const href = await engineeringPreviews.first().getAttribute("href");
   expect(href).toMatch(/^\/engineering\/[^/]+#item-.+$/);
   await engineeringPreviews.first().click();
   await expect(page).toHaveURL(href!);
   await expect(page.getByRole("heading", { name: "Engineering highlights", exact: true })).toBeVisible();
-  const engineeringCount = await page.getByRole("region", { name: "Engineering highlights", exact: true }).getByRole("heading", { level: 3 }).count();
+  await expect(page.getByRole("region", { name: "Engineering highlights", exact: true }).getByRole("heading", { level: 3 })).toHaveCount(engineeringPreviewCount);
   const item = page.locator(href!.slice(href!.indexOf("#")));
   await expect(item.getByRole("heading", { level: 3 })).toBeVisible();
   await expect(item.getByRole("heading", { level: 3 })).toBeInViewport();
@@ -435,13 +432,12 @@ test("homepage renders the latest briefing and its Engineering / Research links 
   await expect(page.getByRole("region", { name: "Briefing metadata" }).getByRole("link")).toHaveAttribute("href", `/engineering/${week}/candidates`);
 
   await page.getByRole("link", { name: "Back to Homepage", exact: true }).click();
-  await page.getByRole("link", { name: "Read the full Research digest" }).click();
-  await expect(page).toHaveURL(`/weekly/${week}`);
+  await page.getByRole("link", { name: "Browse all research papers" }).click();
+  await expect(page).toHaveURL("/archive");
+  await page.locator(`a[href="/weekly/${week}"]`).first().click();
   await expect(page.getByRole("heading", { name: "Selected papers", exact: true })).toBeVisible();
   const selectedPapers = page.getByRole("region", { name: "Selected papers" }).getByRole("heading", { level: 3 });
-  await expect(selectedPapers.first()).toBeVisible();
-  const researchCount = await selectedPapers.count();
-  expect(mastheadCounts).toBe(`${engineeringCount} Engineering ${engineeringCount === 1 ? "update" : "updates"} · ${researchCount} Research ${researchCount === 1 ? "pick" : "picks"}`);
+  await expect(selectedPapers).toHaveCount(researchPreviewCount);
   await expect(page.getByRole("heading", { level: 2 }).first()).toHaveText("Selected papers");
   await expect(page.getByRole("region", { name: "Digest metadata" }).getByRole("link")).toHaveAttribute("href", `/weekly/${week}/candidates`);
 });
@@ -449,8 +445,8 @@ test("homepage renders the latest briefing and its Engineering / Research links 
 test("past briefings retains paired and single-track weeks in reverse date order", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  const latest = await page.locator(".briefing-masthead time").getAttribute("datetime");
-  await page.getByRole("link", { name: "Past briefings" }).click();
+  const latest = await page.getByRole("radio", { checked: true }).inputValue();
+  await page.goto("/briefings");
   await expect(page).toHaveURL("/briefings");
   await expect(page.getByRole("heading", { level: 1, name: "Past briefings" })).toBeVisible();
   const weeks = await page.locator(".briefings-list li").evaluateAll((rows) => rows.map((row) => ({
@@ -468,7 +464,7 @@ test("past briefings retains paired and single-track weeks in reverse date order
   }
   await page.getByRole("button", { name: "中文", exact: true }).click();
   await selectDarkTheme(page);
-  await expect(page.locator("#theme-dark")).toBeChecked();
+  await expect(page.locator(".theme-toggle")).toHaveAttribute("aria-pressed", "true");
   await expect(page.getByRole("heading", { level: 1, name: "往期简报" })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
 });
@@ -480,26 +476,37 @@ test("Engineering search matches edition dates and combines with region filters"
   const firstDate = await editions.first().locator(".engineering-briefing-card-meta > p").first().innerText();
   const year = firstDate.match(/\b\d{4}\b/)![0];
   const expectedCount = await editions.filter({ has: page.locator(".engineering-briefing-card-meta > p:first-child", { hasText: year }) }).count();
-  const input = page.getByRole("searchbox");
+  const input = page.getByRole("main").getByRole("searchbox");
   await input.fill(year);
   await expect(editions).toHaveCount(expectedCount);
   await input.fill(firstDate);
   await expect(editions).toHaveCount(1);
+  const categories = page.getByRole("group", { name: "Filter by category" });
+  await expect(categories.getByRole("button")).toHaveCount(8);
+  await categories.getByRole("button", { name: "Policy", exact: true }).click();
+  const contexts = page.locator(".engineering-news-copy > p");
+  await expect(contexts.first()).toBeVisible();
+  for (const context of await contexts.allTextContents()) {
+    expect(context).toMatch(/^policy \/ /);
+  }
   await page.getByRole("button", { name: "Europe", exact: true }).click();
   for (const context of await page.locator(".engineering-news-copy > p").allTextContents()) {
     expect(context).toContain("Europe");
   }
-  await page.getByRole("button", { name: "Clear filters", exact: true }).click();
-  await expect(input).toHaveValue("");
+  await expect(page.getByRole("button", { name: "Clear filters" })).toHaveCount(0);
+  await page.getByRole("button", { name: "All", exact: true }).click();
+  await categories.getByRole("button", { name: "All categories" }).click();
+  await input.fill("");
   await expect(editions).toHaveCount(initialCount);
+  await expect(categories.getByRole("button", { name: "All categories" })).toHaveAttribute("aria-pressed", "true");
   await input.fill("no-such-engineering-record-xyz");
   await expect(page.getByText("No matching news in the engineering archive.", { exact: true })).toBeVisible();
 });
 
 test("Research search opens a paper, its edition and candidate provenance", async ({ page, request }) => {
   await page.goto("/archive");
-  const title = await page.locator(".research-archive-item-copy > a").first().innerText();
-  const input = page.getByRole("searchbox");
+  const title = await page.locator(".research-archive-item-copy > strong").first().innerText();
+  const input = page.getByRole("main").getByRole("searchbox");
   await input.fill(title);
   const result = page.locator(".archive-search-results > li").first();
   const editionPath = await result.getByRole("link", { name: "View weekly digest", exact: true }).getAttribute("href");
@@ -513,7 +520,7 @@ test("Research search opens a paper, its edition and candidate provenance", asyn
   await expect(page.locator(".candidate-source a").first()).toHaveAttribute("href", /^https:\/\//);
   expect((await request.get("/papers/not-a-real-paper")).status()).toBe(404);
   await page.goto("/archive");
-  await page.getByRole("searchbox").fill("no-such-research-record-xyz");
+  await page.getByRole("main").getByRole("searchbox").fill("no-such-research-record-xyz");
   await expect(page.getByText("No matching papers in the static archive.", { exact: true })).toBeVisible();
 });
 
@@ -525,7 +532,7 @@ test("Methodology and About render bilingual static reading paths on mobile", as
     await page.getByRole("button", { name: "中文", exact: true }).click();
     await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
     await selectDarkTheme(page);
-    await expect(page.locator("#theme-dark")).toBeChecked();
+    await expect(page.locator(".theme-toggle")).toHaveAttribute("aria-pressed", "true");
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     await page.screenshot({ path: `test-results/${path.slice(1)}-mobile-zh-dark.png` });
     await page.getByRole("button", { name: "EN", exact: true }).click();
@@ -629,7 +636,7 @@ test("public evidence stays accessible on mobile in Chinese and dark theme", asy
   await expect(gate.getByRole("link", { name: "Investing in Hywind Tampen development", exact: true })).toBeVisible();
   await expect(gate.getByText("已查阅公开网页", { exact: false })).toBeVisible();
   await selectDarkTheme(page);
-  await expect(page.locator("#theme-dark")).toBeChecked();
+  await expect(page.locator(".theme-toggle")).toHaveAttribute("aria-pressed", "true");
   await gate.scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/project-evidence-mobile-zh-dark.png" });
   await page.reload();

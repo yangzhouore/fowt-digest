@@ -5,14 +5,14 @@ import { compileFunction } from "node:vm";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import ts from "typescript";
-import type { getLatestBriefingPreview } from "../../../app/briefing-weeks";
+import type { getBriefingWeekPreviews } from "../../../app/briefing-weeks";
 import type { EditorialImage } from "../../../app/editorial-images";
 import type { HomepageWeeklyBriefing } from "../../../app/homepage-weekly-briefing";
 
 // Render the production components against local fixture records. Only the
 // language provider is substituted so the two server-rendered locales can be inspected.
 export function renderHomepageFixture(
-  preview: ReturnType<typeof getLatestBriefingPreview>,
+  weeks: ReturnType<typeof getBriefingWeekPreviews>,
   language: "en" | "zh" = "en",
   images: Record<string, Record<string, EditorialImage>> = {},
 ) {
@@ -39,5 +39,5 @@ export function renderHomepageFixture(
   const app = resolve(__dirname, "../../../app");
   Object.assign(load(resolve(app, "editorial-images.ts")).editorialImages as object, images);
   const component = load(resolve(app, "homepage-weekly-briefing.tsx")).HomepageWeeklyBriefing as typeof HomepageWeeklyBriefing;
-  return renderToStaticMarkup(createElement("main", null, createElement(component, { preview })));
+  return renderToStaticMarkup(createElement("main", null, createElement(component, { weeks })));
 }

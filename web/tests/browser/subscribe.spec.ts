@@ -10,7 +10,7 @@ test("subscribe confirms, manages and unsubscribes using real routes with fake m
   await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Subscribe" }).click();
   await expect(page).toHaveURL(/\/subscribe$/);
   await expect(page.getByRole("heading", { name: "Stay informed on floating wind" })).toBeVisible();
-  await expect(page.locator("form")).toHaveAttribute("method", "post");
+  await expect(page.getByRole("main").locator("form")).toHaveAttribute("method", "post");
   await page.getByRole("textbox", { name: "Email address" }).fill(address);
   await page.getByRole("button", { name: "Subscribe", exact: true }).click();
   await expect(page.getByRole("alert").filter({ hasText: "Choose at least one subscription." })).toBeVisible();

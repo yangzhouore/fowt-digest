@@ -1,96 +1,113 @@
+"use client";
+
+import { categories } from "./engineering-categories";
 import Link from "next/link";
-import type { getLatestBriefingPreview } from "./briefing-weeks";
+import { useState } from "react";
+import type { getBriefingWeekPreviews } from "./briefing-weeks";
 import { EditorialImageFigure } from "./editorial-image-figure";
 import { getEditorialImage, type EditorialImage } from "./editorial-images";
 import { formatPublicationDate } from "./format-publication-date";
 import { LocalizedCopy } from "./i18n/localized-copy";
 
-type Preview = ReturnType<typeof getLatestBriefingPreview>;
-type EngineeringPreview = NonNullable<NonNullable<Preview>["engineering"]>["previewItems"][number];
+type WeekPreview = ReturnType<typeof getBriefingWeekPreviews>[number];
+type EngineeringPreview = NonNullable<WeekPreview["engineering"]>["items"][number];
 
-const categories: Record<EngineeringPreview["category"], { en: string; zh: string }> = {
-  project: { en: "Project", zh: "项目" },
-  policy: { en: "Policy", zh: "政策" },
-  technology: { en: "Technology", zh: "技术" },
-  software: { en: "Software", zh: "软件" },
-  standards: { en: "Standards", zh: "标准" },
-  supply_chain: { en: "Supply chain", zh: "供应链" },
-  event: { en: "Event", zh: "活动" },
+const paperKeywords: Partial<Record<string, readonly string[]>> = {
+  paper_doi_0fdbd893655a9cdc: ["Fatigue loads", "FAST simulations", "Damage equivalent loads"],
+  paper_doi_7c215e99933870d2: ["Hydrodynamic models", "Time-domain simulation", "VolturnUS-S platform"],
+  paper_openalex_28dd392021cd8142: ["Dynamic reconfiguration", "Vertical axis wind turbine", "Mooring stiffness degradation"],
+  paper_doi_0e278c4206ea65f8: ["GRU sensor reconstruction", "Floating offshore wind turbine", "False-data injection"],
+  paper_doi_912c60bbd0e5194b: ["Economic viability", "Market conditions", "Financial support mechanisms"],
 };
 
-function EngineeringLead({ item, image }: { item: EngineeringPreview; image?: EditorialImage }) {
+type BriefingStoryProps = {
+  id: string;
+  title: string;
+  href: string;
+  publishedDate?: string;
+  category?: EngineeringPreview["category"];
+  keywords: readonly string[];
+  source?: { publisher: string; href: string | null } | null;
+  image?: EditorialImage;
+};
+
+function BriefingStory({ id, title, href, publishedDate, category, keywords, source, image }: BriefingStoryProps) {
+  const titleId = "home-" + id;
+
   return (
-    <article className="briefing-lead" aria-labelledby="briefing-lead-title">
+    <article className="briefing-story" aria-labelledby={titleId}>
       {image && <EditorialImageFigure image={image} />}
-      <div className="briefing-lead-body">
-        <p className="briefing-meta briefing-lead-meta">
-          <span><LocalizedCopy {...categories[item.category]} /></span>
-          {item.source && (
-            <time dateTime={item.source.publishedDate} translate="no">{formatPublicationDate(item.source.publishedDate)}</time>
+      <div className="briefing-story-body">
+        <p className="briefing-meta briefing-story-meta">
+          {publishedDate && (
+            <time dateTime={publishedDate} translate="no">{formatPublicationDate(publishedDate)}</time>
+          )}
+          {category && (
+            <span className="briefing-category" data-category={category}>
+              <LocalizedCopy {...categories[category]} />
+            </span>
           )}
         </p>
-        <h3 id="briefing-lead-title"><Link className="briefing-headline" href={item.href} translate="no">{item.title}</Link></h3>
-        <p className="briefing-lead-summary" translate="no">{item.summary}</p>
-        <div className="briefing-lead-actions">
-          {item.source && (
-            <p className="briefing-meta">
-              <LocalizedCopy en="Source" zh="来源" />{" "}
-              <a href={item.source.href} translate="no">{item.source.publisher}</a>
-            </p>
-          )}
-          <Link className="briefing-read-action" href={item.href} aria-labelledby="briefing-lead-read briefing-lead-title">
-            <span id="briefing-lead-read"><LocalizedCopy en="Read briefing item" zh="阅读简报条目" /></span>
-            {" "}<span aria-hidden="true">→</span>
-          </Link>
-        </div>
+        <h3 id={titleId}><Link className="briefing-headline" href={href} translate="no">{title}</Link></h3>
+        {keywords.length > 0 && (
+          <p className="briefing-story-keywords" translate="no">
+            {keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}
+          </p>
+        )}
+        {source && (
+          <p className="briefing-meta briefing-story-source">
+            <LocalizedCopy en="Source" zh="来源" />{" "}
+            {source.href ? <a href={source.href} translate="no">{source.publisher}</a> : <span translate="no">{source.publisher}</span>}
+          </p>
+        )}
       </div>
     </article>
   );
 }
 
-export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
-  const engineeringCount = preview?.engineering?.selectedCount ?? 0;
-  const researchCount = preview?.research?.selectedCount ?? 0;
-  const lead = preview?.engineering?.previewItems[0];
+export function HomepageWeeklyBriefing({ weeks }: { weeks: readonly WeekPreview[] }) {
+  const [selectedSlug, setSelectedSlug] = useState(weeks[0]?.slug);
+  const preview = weeks.find(({ slug }) => slug === selectedSlug) ?? weeks[0];
+  const lead = preview?.engineering?.items[0];
   const leadImage = preview && lead ? getEditorialImage(preview.slug, lead.id) : undefined;
 
   return (
     <div className="homepage-briefing">
-      <section className="briefing-masthead" aria-labelledby="intro-heading">
-        <h1 id="intro-heading"><LocalizedCopy en="Latest briefing" zh="最新简报" /></h1>
-        {preview ? (
-          <>
-            <p className="briefing-date"><time dateTime={preview.slug}>{preview.dateRange}</time></p>
-            <p className="briefing-meta">
-              <LocalizedCopy
-                en={`${engineeringCount} Engineering ${engineeringCount === 1 ? "update" : "updates"} · ${researchCount} Research ${researchCount === 1 ? "pick" : "picks"}`}
-                zh={`${engineeringCount} 条工程动态 · ${researchCount} 篇精选论文`}
-              />
-            </p>
-          </>
-        ) : <p><LocalizedCopy en="No editions are available yet." zh="暂无已发布的简报。" /></p>}
-      </section>
+      <h1 className="context-sr-only"><LocalizedCopy en="Latest briefing" zh="最新简报" /></h1>
+      {weeks.length > 0 && (
+        <fieldset className="briefing-week-picker">
+          <legend><LocalizedCopy en="Select a week" zh="选择周次" /></legend>
+          <div className="briefing-week-strip">
+            {weeks.map(({ slug, dateRange }) => (
+              <label className="briefing-week-option" key={slug} title={dateRange}>
+                <input type="radio" name="briefing-week" value={slug} checked={slug === preview?.slug}
+                  onChange={() => setSelectedSlug(slug)} aria-label={dateRange} />
+                <time dateTime={slug} translate="no">{formatPublicationDate(slug)}</time>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      )}
+      {!preview && <p><LocalizedCopy en="No editions are available yet." zh="暂无已发布的简报。" /></p>}
 
       {preview && (
         <>
           <section className="briefing-track" aria-labelledby="engineering-briefing-heading">
-            <h2 id="engineering-briefing-heading"><LocalizedCopy en="Engineering" zh="工程" /></h2>
+            <h2 id="engineering-briefing-heading"><LocalizedCopy en="Engineering News" zh="工程新闻" /></h2>
             {preview.engineering ? (
               <>
-                <ol className="briefing-story-list briefing-engineering-list">
-                  {preview.engineering.previewItems.map((item, index) => (
+                <ol className="briefing-story-list">
+                  {preview.engineering.items.map((item, index) => (
                     <li key={item.id}>
-                      {index === 0 ? <EngineeringLead item={item} image={leadImage} /> : (
-                        <article className="briefing-compact-story" aria-labelledby={`home-${item.id}`}>
-                          <p className="briefing-meta briefing-story-category"><LocalizedCopy {...categories[item.category]} /></p>
-                          <h3 id={`home-${item.id}`}><Link className="briefing-headline briefing-arrow-link" href={item.href} translate="no">{item.title}</Link></h3>
-                          <p className="briefing-compact-summary" translate="no">{item.summary}</p>
-                        </article>
-                      )}
+                      <BriefingStory
+                        {...item}
+                        publishedDate={item.source?.publishedDate}
+                        image={index === 0 ? leadImage : undefined}
+                      />
                     </li>
                   ))}
                 </ol>
-                <p className="briefing-track-action"><Link href={preview.engineering.href}><LocalizedCopy en="Read the full Engineering briefing" zh="阅读完整工程简报" /></Link></p>
+                <p className="briefing-track-action"><Link href="/engineering"><LocalizedCopy en="Browse all engineering news" zh="浏览全部工程新闻" /></Link></p>
               </>
             ) : (
               <p><LocalizedCopy en="No Engineering edition was published for this date." zh="该日期暂无已发布的工程简报。" />{" "}
@@ -100,18 +117,24 @@ export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
           </section>
 
           <section id="weekly" className="briefing-track" aria-labelledby="papers-heading">
-            <h2 id="papers-heading"><LocalizedCopy en="Research" zh="研究" /></h2>
+            <h2 id="papers-heading"><LocalizedCopy en="Research Papers" zh="研究论文" /></h2>
             {preview.research ? (
               <>
-                <ol className="briefing-story-list briefing-research-list" aria-labelledby="papers-heading">
-                  {preview.research.previewPapers.map(({ href, title, publicationSource }) => (
-                    <li key={href} translate="no">
-                      <h3><Link className="briefing-headline briefing-arrow-link" href={href}>{title}</Link></h3>
-                      {publicationSource && <p className="briefing-meta">{publicationSource}</p>}
+                <ol className="briefing-story-list" aria-labelledby="papers-heading">
+                  {preview.research.papers.map((paper) => (
+                    <li key={paper.id}>
+                      <BriefingStory
+                        id={"research-" + paper.id}
+                        title={paper.title}
+                        href={paper.href}
+                        publishedDate={paper.publicationDate}
+                        keywords={paperKeywords[paper.id] ?? paper.topicTags}
+                        source={{ publisher: paper.publicationSource, href: paper.sourceUrl }}
+                      />
                     </li>
                   ))}
                 </ol>
-                <p className="briefing-track-action"><Link href={preview.research.href}><LocalizedCopy en="Read the full Research digest" zh="阅读完整研究摘要" /></Link></p>
+                <p className="briefing-track-action"><Link href="/archive"><LocalizedCopy en="Browse all research papers" zh="浏览全部研究论文" /></Link></p>
               </>
             ) : (
               <p><LocalizedCopy en="No Research edition was published for this date." zh="该日期暂无已发布的研究摘要。" />{" "}
@@ -123,7 +146,6 @@ export function HomepageWeeklyBriefing({ preview }: { preview: Preview }) {
       )}
 
       <p className="briefing-links briefing-continuation">
-        <Link href="/briefings"><LocalizedCopy en="Past briefings" zh="往期简报" /></Link>
         <Link className="briefing-subscribe" href="/subscribe" prefetch={false}><LocalizedCopy en="Subscribe" zh="订阅" /></Link>
       </p>
     </div>

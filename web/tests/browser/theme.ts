@@ -1,7 +1,6 @@
 import type { Page } from "@playwright/test";
 
 export async function selectDarkTheme(page: Page) {
-  const dark = page.locator('label[for="theme-dark"]');
-  if (!await dark.isVisible()) await page.locator(".theme-preferences summary").click();
-  await dark.click();
+  const toggle = page.locator(".theme-toggle");
+  if (await toggle.getAttribute("aria-pressed") === "false") await toggle.click();
 }

@@ -1,4 +1,8 @@
 :root {
+  --briefing-rainbow: linear-gradient(120deg, #31a9da, #7688f5 30%, #ba71d7 58%, #ef91a0 80%, #e9b160);
+}
+
+:root {
   font-family: "Geist", "Inter", ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -43,24 +47,6 @@ a {
   font: 0.85rem ui-sans-serif, system-ui, sans-serif;
 }
 
-.theme-preferences {
-  position: relative;
-}
-
-.theme-preferences summary {
-  padding: 7px 4px;
-  cursor: pointer;
-}
-
-.theme-preferences .theme-toggle {
-  position: absolute;
-  z-index: 2;
-  inset-inline-end: 0;
-  inset-block-start: 100%;
-  width: max-content;
-  background: var(--paper);
-}
-
 nav {
   min-width: 0;
   display: flex;
@@ -70,7 +56,6 @@ nav {
   font-size: 1rem;
 }
 
-.theme-toggle,
 .language-toggle {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -84,7 +69,6 @@ nav {
   font-size: 0.78rem;
 }
 
-.theme-toggle legend,
 .language-toggle legend {
   position: absolute;
   width: 1px;
@@ -93,12 +77,6 @@ nav {
   clip: rect(0 0 0 0);
 }
 
-.theme-toggle input {
-  position: absolute;
-  opacity: 0;
-}
-
-.theme-toggle label,
 .language-toggle button {
   min-width: 0;
   padding: 7px 9px;
@@ -114,19 +92,16 @@ nav {
   font: inherit;
 }
 
-.theme-toggle input:checked + label,
 .language-toggle button[aria-pressed="true"] {
   background: var(--strong-border);
   color: var(--page);
 }
 
-.site-header :is(a, button, summary):focus-visible,
-.theme-toggle input:focus-visible + label {
+.site-header :is(a, button):focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-.theme-toggle input:focus-visible + label,
 .language-toggle button:focus-visible {
   outline-offset: -2px;
 }
@@ -581,6 +556,52 @@ dd {
   color: var(--paper);
 }
 
+.briefing-category {
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: light-dark(var(--badge-pale), var(--badge-deep));
+  color: light-dark(var(--badge-deep), var(--badge-pale));
+}
+
+.briefing-category[data-category="policy"] { --badge-pale: #f1e8ff; --badge-deep: #553378; }
+.briefing-category[data-category="project"] { --badge-pale: #dff3df; --badge-deep: #24532d; }
+.briefing-category[data-category="technology"] { --badge-pale: #d7f3f2; --badge-deep: #105556; }
+.briefing-category[data-category="software"] { --badge-pale: #e0eaff; --badge-deep: #2d4782; }
+.briefing-category[data-category="standards"] { --badge-pale: #fff1bb; --badge-deep: #634b06; }
+.briefing-category[data-category="supply_chain"] { --badge-pale: #ffe6d5; --badge-deep: #793d16; }
+.briefing-category[data-category="event"] { --badge-pale: #fce1eb; --badge-deep: #792c4d; }
+
+.engineering-category-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.engineering-category-options button {
+  padding: 7px 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+  font-size: .875rem;
+  cursor: pointer;
+}
+
+.engineering-category-options button:first-child {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--border);
+}
+
+.engineering-category-options button[aria-pressed="true"] {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+
+.engineering-category-options button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .archive-search-results {
   margin: 20px 0 0;
   padding-left: 0;
@@ -632,6 +653,38 @@ dd {
   padding: 24px 26px;
   border: 1px solid var(--border);
   background: color-mix(in srgb, var(--paper) 82%, var(--page));
+}
+
+:is(.engineering-archive-page, .research-archive-page) .engineering-briefing-editions {
+  margin-top: 24px;
+}
+
+:is(.engineering-archive-page, .research-archive-page) .engineering-briefing-card {
+  position: relative;
+  border-radius: 12px;
+}
+
+.archive-week-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.archive-week-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.engineering-briefing-card:has(.archive-week-link:is(:hover, :focus-visible, :active)) {
+  border-color: transparent;
+  background: linear-gradient(var(--surface), var(--surface)) padding-box,
+    var(--briefing-rainbow) border-box;
+}
+
+.archive-week-link:focus-visible::after {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .engineering-briefing-card-meta {
@@ -689,7 +742,7 @@ dd {
   gap: 5px;
 }
 
-.research-archive-item-copy a {
+.research-archive-item-copy strong {
   font-size: 1.04rem;
   font-weight: 700;
 }
@@ -781,7 +834,7 @@ dd {
   font-weight: 700;
 }
 
-.engineering-archive-page .intro > p:not(.eyebrow) {
+:is(.engineering-archive-page, .research-archive-page) .intro > p:not(.eyebrow) {
   max-width: none;
 }
 
@@ -3479,7 +3532,7 @@ dd {
   --pi-unknown: var(--muted);
 }
 
-:root:has(#theme-dark:checked) .projects-page .project-overview {
+:root:has(.theme-toggle[aria-pressed="true"]) .projects-page .project-overview {
   --pi-secured: #82c7a6;
   --pi-active: #dfbd76;
   --pi-open: #e8a29c;

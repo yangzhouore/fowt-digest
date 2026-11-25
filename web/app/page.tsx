@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HomepageWeeklyBriefing } from "./homepage-weekly-briefing";
-import { getLatestBriefingPreview } from "./briefing-weeks";
+import { getBriefingWeekPreviews } from "./briefing-weeks";
 import { getAllDigests } from "../data/digest-adapter";
 import { getAllEngineeringBriefings } from "../data/engineering-briefing-adapter";
 import "./homepage-briefing.css";
@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const preview = getLatestBriefingPreview(getAllEngineeringBriefings(), getAllDigests());
+  const weeks = getBriefingWeekPreviews(getAllEngineeringBriefings(), getAllDigests());
   return (
     <main className="briefing-home">
-      <HomepageWeeklyBriefing preview={preview} />
+      <HomepageWeeklyBriefing weeks={weeks} />
     </main>
   );
 }

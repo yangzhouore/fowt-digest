@@ -9,7 +9,6 @@ import { SiteHeader } from "./site-header";
 const primaryLinks = [
   { href: "/", label: "briefing", families: ["/briefings", "/engineering", "/weekly", "/papers", "/archive"] },
   { href: "/explore", label: "explore", families: ["/projects", "/companies", "/industry", "/digital-ai"] },
-  { href: "/search", label: "search", families: [], prefetch: false },
   { href: "/subscribe", label: "subscribe", families: ["/subscribe"], prefetch: false },
 ] as const;
 

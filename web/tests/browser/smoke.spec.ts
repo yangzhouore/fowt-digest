@@ -76,7 +76,7 @@ test("global search handles technical terms, language persistence and mobile dar
 
   await page.getByRole("button", { name: "中文", exact: true }).click();
   await page.getByRole("button", { name: "菜单", exact: true }).click();
-  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "搜索", exact: true })).toHaveAttribute("href", "/search");
+  await expect(page.getByRole("banner").getByRole("searchbox", { name: "全站搜索" })).toBeVisible();
   await expect(page.getByRole("button", { name: /^工程 \(/ })).toHaveAttribute("aria-pressed", "true");
   await page.reload();
   await expect(page.getByRole("heading", { name: "搜索浮式风电摘要" })).toBeVisible();
@@ -324,7 +324,7 @@ test("briefing navigation exposes three primary links, Explore, footer utilities
     .toEqual(["/projects", "/companies", "/industry", "/digital-ai"]);
   await page.getByRole("button", { name: "中文", exact: true }).click();
   await page.getByRole("button", { name: "菜单", exact: true }).click();
-  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link")).toHaveText(["简报", "探索", "搜索", "订阅"]);
+  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link")).toHaveText(["简报", "探索", "订阅"]);
   await expect(page.getByRole("navigation", { name: "探索导航" }).getByRole("link")).toHaveText(["项目", "企业", "产业", "数字化与 AI"]);
   await expect(page.getByRole("heading", { name: "探索浮式风电" })).toBeVisible();
   await expect(page.getByRole("region", { name: "探索浮式风电" }).getByRole("link")).toHaveText(["项目", "企业", "产业", "数字化与 AI"]);

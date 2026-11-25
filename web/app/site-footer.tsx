@@ -9,8 +9,6 @@ export function SiteFooter() {
       </p>
       <nav aria-labelledby="footer-nav-label">
         <span id="footer-nav-label" className="context-sr-only"><LocalizedCopy en="Further reading" zh="延伸阅读" /></span>
-        <Link href="/engineering"><LocalizedCopy en="Engineering archive" zh="工程往期" /></Link>
-        <Link href="/archive"><LocalizedCopy en="Research archive" zh="研究往期" /></Link>
         <Link href="/methodology"><LocalizedCopy en="Methodology" zh="方法论" /></Link>
         <Link href="/about"><LocalizedCopy en="About" zh="关于" /></Link>
       </nav>

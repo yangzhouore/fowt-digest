@@ -1,5 +1,6 @@
 "use client";
 
+import { categories } from "../engineering-categories";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useLanguage } from "../i18n/language-context";
@@ -68,9 +69,10 @@ export function EngineeringSearch({
   const { language } = useLanguage();
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const normalisedQuery = query.trim().toLowerCase();
   const hasRegionFilter = selectedRegion !== "All";
-  const hasActiveFilter = Boolean(normalisedQuery) || hasRegionFilter;
+  const hasActiveFilter = Boolean(normalisedQuery) || hasRegionFilter || selectedCategory !== null;
 
   const enrichedBriefings = useMemo(
     () =>
@@ -103,7 +105,7 @@ export function EngineeringSearch({
             .toLowerCase().includes(normalisedQuery);
         const matchesRegion =
           !hasRegionFilter || item.displayRegion === selectedRegion;
-        return matchesQuery && matchesRegion;
+        return matchesQuery && matchesRegion && (selectedCategory === null || item.category === selectedCategory);
       });
 
       return {
@@ -155,6 +157,20 @@ export function EngineeringSearch({
             ))}
           </div>
         </div>
+        <div className="engineering-region-filter" role="group" aria-labelledby="engineering-category-heading">
+          <h3 id="engineering-category-heading">{language === "zh" ? "按类别筛选" : "Filter by category"}</h3>
+          <div className="engineering-category-options">
+            <button type="button" aria-pressed={selectedCategory === null} onClick={() => setSelectedCategory(null)}>
+              {language === "zh" ? "全部类别" : "All categories"}
+            </button>
+            {Object.entries(categories).map(([category, label]) => (
+              <button key={category} type="button" className="briefing-category" data-category={category}
+                aria-pressed={selectedCategory === category} onClick={() => setSelectedCategory(category)}>
+                {label[language]}
+              </button>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section aria-labelledby="engineering-archive-list-heading">
@@ -162,18 +178,6 @@ export function EngineeringSearch({
           <h2 id="engineering-archive-list-heading">
             {language === "zh" ? (hasActiveFilter ? "按周显示匹配动态" : "简报期次") : (hasActiveFilter ? "Matching news by week" : "Briefing editions")}
           </h2>
-          {hasActiveFilter ? (
-            <button
-              className="text-button"
-              type="button"
-              onClick={() => {
-                setQuery("");
-                setSelectedRegion("All");
-              }}
-            >
-              {language === "zh" ? "清除筛选" : "Clear filters"}
-            </button>
-          ) : null}
         </div>
 
         {filteredBriefings.length > 0 ? (
@@ -182,13 +186,7 @@ export function EngineeringSearch({
               <li key={briefing.slug}>
                 <article className="engineering-briefing-card">
                   <div className="engineering-briefing-card-meta">
-                    <p>{briefing.dateRange}</p>
-                    <p>{archiveMetricsText(briefing)}</p>
-                    <p>
-                      <Link href={`/engineering/${briefing.slug}/candidates`}>
-                        {candidatePoolLinkText(briefing)}
-                      </Link>
-                    </p>
+                    <p><Link className="archive-week-link" href={`/engineering/${briefing.slug}`}>{briefing.dateRange}</Link></p>
                   </div>
                   <ol className="engineering-top-news">
                     {briefing.visibleItems.map((item, index) => (
@@ -197,9 +195,7 @@ export function EngineeringSearch({
                           {String(index + 1).padStart(2, "0")}
                         </span>
                         <div className="engineering-news-copy">
-                          <Link href={`/engineering/${briefing.slug}`}>
-                            {item.oneLineSummary}
-                          </Link>
+                          <span>{item.oneLineSummary}</span>
                           {hasActiveFilter ? (
                             <p>{contextLine(item)}</p>
                           ) : null}
@@ -207,11 +203,6 @@ export function EngineeringSearch({
                       </li>
                     ))}
                   </ol>
-                  <p className="text-link-row">
-                    <Link href={`/engineering/${briefing.slug}`}>
-                      {language === "zh" ? "查看本周详情" : "View more details for this week"}
-                    </Link>
-                  </p>
                 </article>
               </li>
             ))}
@@ -269,26 +260,4 @@ function inferRegion(item: EngineeringArchiveNews): string | null {
 
 function formatCategory(value: string): string {
   return value.replace(/_/g, " ");
-}
-
-function archiveMetricsText(briefing: EngineeringArchiveBriefing): string {
-  const selectedText = pluralise(briefing.items.length, "selected highlight");
-
-  if (briefing.candidateCount > 0) {
-    return `${selectedText} / ${pluralise(briefing.candidateCount, "candidate")} / ${pluralise(briefing.candidateSourceCount, "source")}`;
-  }
-
-  return `${selectedText} / ${pluralise(briefing.sourceCount, "retained source")}`;
-}
-
-function pluralise(count: number, label: string): string {
-  return `${count} ${label}${count === 1 ? "" : "s"}`;
-}
-
-function candidatePoolLinkText(briefing: EngineeringArchiveBriefing): string {
-  if (briefing.candidateCount > 0) {
-    return `Curated from ${briefing.candidateCount} candidates across ${briefing.candidateSourceCount} sources ->`;
-  }
-
-  return `Curated from ${briefing.sourceCount} retained sources ->`;
 }

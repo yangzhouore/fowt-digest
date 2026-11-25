@@ -5,7 +5,6 @@ import {
   getAllDigests,
 } from "../../data/digest-adapter";
 import { ArchiveSearch, type ArchiveSearchPaper } from "./archive-search";
-import { hasResearchCandidatePool } from "../../data/research-candidate-adapter";
 import { LocalizedCopy } from "../i18n/localized-copy";
 
 const RESEARCH_ARCHIVE_TOP_PAPER_LIMIT = 3;
@@ -56,13 +55,12 @@ export default function ArchivePage() {
   );
 
   return (
-    <main>
+    <main className="research-archive-page">
 
       <section className="intro" aria-labelledby="archive-heading">
-        <p className="eyebrow"><LocalizedCopy en="Archive" zh="研究往期" /></p>
-        <h1 id="archive-heading"><LocalizedCopy en="Weekly editions in sequence." zh="按周查看研究摘要。" /></h1>
+        <h1 id="archive-heading"><LocalizedCopy en="All Research Papers" zh="全部研究论文" /></h1>
         <p>
-          <LocalizedCopy en="Browse selected historical demonstration editions generated from static deterministic pipeline outputs. This archive is not complete weekly historical coverage." zh="浏览由静态确定性流水线输出生成的精选历史演示期次。本往期并非完整的逐周历史覆盖。" />
+          <LocalizedCopy en="Browse selected floating offshore wind research papers by week." zh="按周浏览精选浮式海上风电研究论文。" />
         </p>
       </section>
 
@@ -75,8 +73,7 @@ export default function ArchivePage() {
             <li key={digest.slug}>
               <article className="engineering-briefing-card">
                 <div className="engineering-briefing-card-meta">
-                  <p>{digest.dateRange}</p>
-                  <p>{hasResearchCandidatePool(digest.slug) ? (<Link href={`/weekly/${digest.slug}/candidates`}>Curated from {digest.checkedResultCount} results -&gt;</Link>) : (`Curated from ${digest.checkedResultCount} results`)}</p>
+                  <p><Link className="archive-week-link" href={`/weekly/${digest.slug}`}>{digest.dateRange}</Link></p>
                 </div>
                 <ol className="engineering-top-news">
                   {digest.papers
@@ -87,7 +84,7 @@ export default function ArchivePage() {
                           {String(index + 1).padStart(2, "0")}
                         </span>
                         <div className="research-archive-item-copy">
-                          <Link href={`/papers/${paper.slug}`}>{paper.title}</Link>
+                          <strong>{paper.title}</strong>
                           <p className="research-archive-source">
                             {paper.publicationSource}
                           </p>
@@ -107,9 +104,6 @@ export default function ArchivePage() {
                       </li>
                     ))}
                 </ol>
-                <p className="text-link-row">
-                  <Link href={`/weekly/${digest.slug}`}><LocalizedCopy en="View weekly digest" zh="查看本周研究摘要" /></Link>
-                </p>
               </article>
             </li>
           ))}

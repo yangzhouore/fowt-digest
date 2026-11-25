@@ -2,8 +2,6 @@ import { engineeringItemHref } from "../data/context-navigation";
 import type { DigestEdition } from "../data/digest-adapter";
 import type { EngineeringBriefing } from "../data/engineering-briefing-adapter";
 
-const PREVIEW_LIMIT = 3;
-
 type BriefingWeek = {
   slug: string;
   dateRange: string;
@@ -27,31 +25,29 @@ export function getBriefingWeeks(engineering: readonly EngineeringBriefing[], re
   return [...weeks.values()].sort((a, b) => b.slug.localeCompare(a.slug));
 }
 
-export function getLatestBriefingPreview(engineering: readonly EngineeringBriefing[], research: readonly DigestEdition[]) {
-  const week = getBriefingWeeks(engineering, research)[0];
-  if (!week) return null;
+export function getBriefingWeekPreviews(engineering: readonly EngineeringBriefing[], research: readonly DigestEdition[]) {
+  return getBriefingWeeks(engineering, research).map(toWeekPreview);
+}
 
-  const { slug, dateRange } = week;
+function toWeekPreview({ slug, dateRange, engineering, research }: BriefingWeek) {
   return {
     slug,
     dateRange,
-    engineering: week.engineering ? {
+    engineering: engineering ? {
       href: `/engineering/${slug}`,
-      selectedCount: week.engineering.items.length,
-      previewItems: week.engineering.items.slice(0, PREVIEW_LIMIT).map((item) => {
-        const { id, title, oneLineSummary, category, sourceRecords, sourceUrl } = item;
+      items: Array.from(Map.groupBy(engineering.items, (item) => item.category).values()).flat().map((item) => {
+        const { id, title, engineeringTopics, category, sourceRecords, sourceUrl } = item;
         const source = sourceRecords.find((record) => record.sourceUrl === sourceUrl);
         return {
-          id, href: engineeringItemHref(slug, id), title, summary: oneLineSummary, category,
+          id, href: engineeringItemHref(slug, id), title, keywords: engineeringTopics.slice(0, 3), category,
           source: source ? { publisher: source.publisher, publishedDate: source.publishedDate, href: source.sourceUrl } : null,
         };
       }),
     } : null,
-    research: week.research ? {
+    research: research ? {
       href: `/weekly/${slug}`,
-      selectedCount: week.research.papers.length,
-      previewPapers: week.research.papers.slice(0, PREVIEW_LIMIT).map(({ id, slug, title, publicationSource }) => ({
-        id, slug, href: `/papers/${slug}`, title, publicationSource,
+      papers: research.papers.map(({ id, slug, title, publicationDate, publicationSource, sourceUrl, topicTags }) => ({
+        id, href: "/papers/" + slug, title, publicationDate, publicationSource, sourceUrl, topicTags: topicTags.slice(0, 3),
       })),
     } : null,
   };

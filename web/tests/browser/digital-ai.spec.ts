@@ -319,7 +319,7 @@ test("reader and bounded comparison work on mobile in Chinese and dark theme", a
   // Existing theme radios belong to each page header; this feature does not
   // introduce a site-wide theme persistence service.
   await selectDarkTheme(page);
-  await expect(page.locator("#theme-dark")).toBeChecked();
+  await expect(page.locator(".theme-toggle")).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("heading", { level: 1 }).scrollIntoViewIfNeeded();
   await page.screenshot({ path: "test-results/digital-ai-reader-mobile-zh-dark.png" });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);

@@ -2,7 +2,6 @@ import { localizeServerContent } from "../i18n/server-content";
 import type { Metadata } from "next";
 import {
   formatStatus,
-  getProjectCount,
   getProjectIndexItems,
   getProjectOptions,
   readinessAreas,
@@ -22,31 +21,15 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   const projects = getProjectIndexItems().map((project) => ({ ...connectProjectIndexItem(project), ...getProjectReviewSummary(project.id) }));
   const options = getProjectOptions();
-  const countryCount = options.countries.length;
 
   return localizeServerContent((
     <main className="projects-page">
 
       <section className="project-hero" aria-labelledby="projects-heading">
-        <p className="eyebrow"><LocalizedCopy en="Project Intelligence" zh="项目信息" /></p>
-        <h1 id="projects-heading"><LocalizedCopy en="Global FOWT Projects" zh="全球浮式海上风电项目" /></h1>
+        <h1 id="projects-heading"><LocalizedCopy en="Floating Wind Projects" zh="浮式海上风电项目" /></h1>
         <p>
-          <LocalizedCopy en="Compare lifecycle, FID evidence, readiness and next observable signals across floating offshore wind projects. Curated coverage is representative; assessments follow the evidence stored in each project profile." zh="比较浮式海上风电项目的生命周期、FID 证据、准备度及下一步可观察信号。精选项目具有代表性；评估依据各项目档案中记录的证据。" />
+          <LocalizedCopy en="Compare project stages, investment decisions and readiness by region." zh="按地区比较项目阶段、投资决策和建设准备情况。" />
         </p>
-        <dl className="project-hero-stats" aria-label="Project dataset coverage">
-          <div>
-            <dt><LocalizedCopy en="Projects" zh="项目" /></dt>
-            <dd>{getProjectCount()}</dd>
-          </div>
-          <div>
-            <dt><LocalizedCopy en="Countries" zh="国家" /></dt>
-            <dd>{countryCount}</dd>
-          </div>
-          <div>
-            <dt><LocalizedCopy en="Regions" zh="地区" /></dt>
-            <dd>{options.regions.length}</dd>
-          </div>
-        </dl>
       </section>
 
       <ProjectFilters

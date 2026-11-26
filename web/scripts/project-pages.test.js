@@ -248,6 +248,7 @@ function renderOverview(language) {
   const context = { exports: {}, require: (name) => {
     if (name === "../i18n/language-context") return { useLanguage: () => ({ language }) };
     if (name === "../i18n/render-content") return localizer.exports;
+    if (name === "../../data/projects/map-locations.json") return require("../data/projects/map-locations.json");
     if (name === "next/link") return function MockLink(props) { return React.createElement("a", props, props.children); };
     return require(name);
   } };
@@ -278,4 +279,16 @@ test("English and Chinese overview render all supply categories, missing roles, 
     const canopy = html.slice(html.indexOf('aria-labelledby="name-canopy-'), html.indexOf('aria-labelledby="name-celtic-', html.indexOf('aria-labelledby="name-canopy-')));
     assert.ok(canopy.includes(language === "en" ? "Current: N/A — not verified" : "当前: N/A — 未核实"));
   }
+});
+
+test("project map records cover every project and display only sourced pins", () => {
+  const locations = require("../data/projects/map-locations.json");
+  assert.deepEqual(Object.keys(locations).sort(), projectDataset.projects.map(({ slug }) => slug).sort());
+  const html = renderOverview("en");
+  const pins = Object.values(locations).filter(Boolean);
+  assert.ok(pins.every(({ latitude, longitude, source }) =>
+    Number.isFinite(latitude) && Number.isFinite(longitude) && source.startsWith("https://")
+  ));
+  assert.equal((html.match(/class="project-map-pin"/g) ?? []).length, pins.length);
+  assert.equal((html.match(/class="project-map-note">Location NA/g) ?? []).length, Object.keys(locations).length - pins.length);
 });

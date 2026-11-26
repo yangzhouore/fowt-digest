@@ -154,6 +154,7 @@ main.briefing-home {
 }
 
 .briefing-story .briefing-story-source {
+  max-width: none;
   margin: 12px 0 0;
   text-align: end;
 }

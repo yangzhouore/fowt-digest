@@ -1,5 +1,25 @@
 # Company Intelligence full-history research audit
 
+## Project-linked company backfill, 26 November 2026
+
+The 96 companies added from reviewed project relationships now each have at least
+one sourced catalogue event. The catalogue contains 731 canonical events, up from
+701 at the Phase 1 checkpoint. Existing developments gained company memberships
+where the source established the company’s role. New records cover documented
+milestones such as Goto and Hibiki commercial operation, the Atlas lease
+assignment, and the Gulf of Maine research lease. Source citations are retained
+with each event.
+
+The directory also records the country for each of the 96 companies. Country
+references are stored with the company entries. The country reflects the entity’s
+headquarters or registration where applicable, including separate project
+companies with their own legal identity.
+
+This was a project-led first pass. Full annual histories for these 96 companies
+remain **INCOMPLETE** where company archives and counterparties have yet to be
+reviewed year by year. The completeness decisions below apply to the original 47
+companies.
+
 ## Phase 1 final research checkpoint
 
 Research coverage runs from **1 January 2018 to 20 November 2026 inclusive**.

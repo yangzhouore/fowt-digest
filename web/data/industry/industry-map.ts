@@ -1,3 +1,5 @@
+import projectCompanyEntries from "./project-company-entries.json";
+
 export type IndustryRoleId =
   | "developer-owner"
   | "utility"
@@ -12,11 +14,14 @@ export type IndustryRoleId =
   | "marine-installation"
   | "certification-assurance"
   | "engineering-consulting"
-  | "simulation-software";
+  | "simulation-software"
+  | "fabrication"
+  | "research-public-body";
 
 export type IndustryCompany = {
   id: string;
   name: string;
+  profilePending?: true;
   countryRegion: string;
   companyType: string;
   roles: IndustryRoleId[];
@@ -139,6 +144,12 @@ export const industryStages: IndustryStage[] = [
         roles: ["epci-subsea"],
       },
       {
+        id: "fabrication",
+        title: "Fabrication",
+        description: "Fabricates structures and components for offshore projects.",
+        roles: ["fabrication"],
+      },
+      {
         id: "marine-installation-vessels",
         title: "Marine Installation / Vessels",
         description:
@@ -168,6 +179,12 @@ export const industryStages: IndustryStage[] = [
         description:
           "Provides classification, certification, verification, and technical assurance for floating assets and marine systems.",
         roles: ["certification-assurance"],
+      },
+      {
+        id: "research-public-body",
+        title: "Research / Public Bodies",
+        description: "Contributes to project research or participates as a public body.",
+        roles: ["research-public-body"],
       },
       {
         id: "engineering-simulation-software",
@@ -749,7 +766,50 @@ export const industryCompanies: IndustryCompany[] = [
   },
 ];
 
-export const industryCompanyCount = industryCompanies.length;
+export const industryRoleLabels: Record<IndustryRoleId, string> = {
+  "developer-owner": "Developer / Project Owner",
+  utility: "Utility",
+  "turbine-oem": "Wind Turbine OEM",
+  "floating-platform": "Floating Platform",
+  "platform-engineering": "Platform Engineering",
+  "mooring-anchoring": "Mooring & Anchoring",
+  "cable-systems": "Cable Systems",
+  "offshore-electrical": "Offshore Electrical",
+  "grid-technology": "Grid Technology",
+  "epci-subsea": "EPCI / Subsea",
+  "marine-installation": "Marine Installation",
+  "certification-assurance": "Certification / Assurance",
+  "engineering-consulting": "Engineering Consulting",
+  "simulation-software": "Simulation Software",
+  fabrication: "Fabrication",
+  "research-public-body": "Research / Public Body",
+};
+
+const projectCompanyPlaceholders: IndustryCompany[] = projectCompanyEntries.placeholders.map(({ id, name, roles, country }) => ({
+  id,
+  name,
+  roles: roles as IndustryRoleId[],
+  profilePending: true,
+  companyType: roles.map((role) => industryRoleLabels[role as IndustryRoleId]).join(" / "),
+  countryRegion: country?.name ?? "",
+  description: "",
+  website: "",
+  representativeInvolvement: "",
+  sourceUrl: "",
+}));
+
+const companies = [...industryCompanies, ...projectCompanyPlaceholders];
+export const industryCompanyCount = companies.length;
+
+const companyByRelationship = new Map(
+  [...projectCompanyEntries.placeholders, ...projectCompanyEntries.existingLinks].flatMap(({ id, relationshipIds }) =>
+    relationshipIds.map((relationshipId) => [relationshipId, id] as const),
+  ),
+);
+
+export function resolveProjectCompanyId(relationshipId: string, companyId: string | null) {
+  return companyId ?? companyByRelationship.get(relationshipId) ?? null;
+}
 
 const allRoleIds = new Set(
   industryStages.flatMap((stage) =>
@@ -764,7 +824,7 @@ export function getIndustryMap(): IndustryStageView[] {
     ...stage,
     categories: stage.categories.map((category) => ({
       ...category,
-      companies: industryCompanies.filter((company) =>
+      companies: companies.filter((company) =>
         company.roles.some((role) => category.roles.includes(role)),
       ),
     })),
@@ -773,7 +833,7 @@ export function getIndustryMap(): IndustryStageView[] {
 
 export function getIndustryCompanies(): IndustryCompany[] {
   validateIndustryData();
-  return industryCompanies;
+  return companies;
 }
 
 export function validateIndustryData() {
@@ -796,15 +856,17 @@ export function validateIndustryData() {
     }
   }
 
-  for (const company of industryCompanies) {
+  for (const company of companies) {
     requiredString(company.id, "company.id");
     requiredString(company.name, `${company.id}.name`);
-    requiredString(company.countryRegion, `${company.id}.countryRegion`);
-    requiredString(company.companyType, `${company.id}.companyType`);
-    requiredString(company.description, `${company.id}.description`);
-    requiredUrl(company.website, `${company.id}.website`);
-    requiredString(company.representativeInvolvement, `${company.id}.representativeInvolvement`);
-    requiredUrl(company.sourceUrl, `${company.id}.sourceUrl`);
+    if (!company.profilePending) {
+      requiredString(company.countryRegion, `${company.id}.countryRegion`);
+      requiredString(company.companyType, `${company.id}.companyType`);
+      requiredString(company.description, `${company.id}.description`);
+      requiredUrl(company.website, `${company.id}.website`);
+      requiredString(company.representativeInvolvement, `${company.id}.representativeInvolvement`);
+      requiredUrl(company.sourceUrl, `${company.id}.sourceUrl`);
+    }
 
     if (companyIds.has(company.id)) {
       throw new Error(`Duplicate industry company id: ${company.id}`);

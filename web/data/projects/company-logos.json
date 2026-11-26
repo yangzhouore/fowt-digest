@@ -1,0 +1,474 @@
+{
+  "acteon.com": {
+    "file": "acteon.com.ico",
+    "source": "https://acteon.com/themes/custom/acteon/favicon.ico"
+  },
+  "archerwell.com": {
+    "file": "archerwell.com.ico",
+    "source": "https://archerwell.com/favicon.ico"
+  },
+  "boskalis.com": {
+    "file": "boskalis.com.ico",
+    "source": "https://boskalis.com/assets/images/favicon_boskalis.ico"
+  },
+  "esb.ie": {
+    "file": "esb.ie.png",
+    "source": "https://esb.ie/ResourcePackages/ESBCorporate/assets/dist/favicons/apple-touch-icon.png"
+  },
+  "fredolsenseawind.com": {
+    "file": "fredolsenseawind.com.png",
+    "source": "https://fredolsenseawind.com/media/1ttjsjjp/favicon.png?width=512&height=512&v=1db3b5bfdfb5010"
+  },
+  "g-local.co.jp": {
+    "file": "g-local.co.jp.png",
+    "source": "https://g-local.co.jp/wp-content/uploads/2019/02/logo-ico.png"
+  },
+  "gojin.co.jp": {
+    "file": "gojin.co.jp.png",
+    "source": "https://gojin.co.jp/img/logo.png"
+  },
+  "goldenstatewind.com": {
+    "file": "goldenstatewind.com.png",
+    "source": "https://goldenstatewind.com/wp-content/uploads/2023/05/favicon-GSW-150x150.png"
+  },
+  "group.bureauveritas.com": {
+    "file": "group.bureauveritas.com.png",
+    "source": "https://cdn3-group.bureauveritas.com/themes/custom/bureauveritasbase/favicon/android-chrome-192x192.png"
+  },
+  "group.vattenfall.com": {
+    "file": "group.vattenfall.com.ico",
+    "source": "https://group.vattenfall.com/favicon.ico?v=2"
+  },
+  "inpex-idemitsu.no": {
+    "file": "inpex-idemitsu.no.jpg",
+    "source": "https://inpex-idemitsu.no/app/uploads/2022/03/cropped-INPEX-1-180x180.jpg"
+  },
+  "kentplc.com": {
+    "file": "kentplc.com.ico",
+    "source": "https://kentplc.com/favicon/favicon.ico"
+  },
+  "masdar.ae": {
+    "file": "masdar.ae.ico",
+    "source": "https://masdar.ae/-/media/corporate-revamp/icons/favicon/masdar-fav-64x64.ico"
+  },
+  "mediterranee-grand-large.com": {
+    "file": "mediterranee-grand-large.com.png",
+    "source": "https://mediterranee-grand-large.com/wp-content/uploads/sites/6/2025/02/favicon-150x150.jpg"
+  },
+  "mingyang.com": {
+    "file": "mingyang.com.png",
+    "source": "https://mingyang.com/wp-content/uploads/2026/04/Logo-V2-1024x262.png"
+  },
+  "nadara.com": {
+    "file": "nadara.com.png",
+    "source": "https://nadara.com/favicon-96x96.png"
+  },
+  "navantiaseanergies.com": {
+    "file": "navantiaseanergies.com.png",
+    "source": "https://navantiaseanergies.com/wp-content/uploads/2022/09/cropped-favicon-navantia-seanergies-32x32.png"
+  },
+  "odfjelloceanwind.com": {
+    "file": "odfjelloceanwind.com.png",
+    "source": "https://odfjelloceanwind.com/wp-content/themes/odfjelltech/assets/images/favicons/apple-touch-icon.png"
+  },
+  "openfast.readthedocs.io": {
+    "file": "openfast.readthedocs.io.jpg",
+    "source": "https://openfast.readthedocs.io/en/main/_static/openfastlogo.jpg"
+  },
+  "pentlandfloatingwind.com": {
+    "file": "pentlandfloatingwind.com.png",
+    "source": "https://pentlandfloatingwind.com/favicon.svg"
+  },
+  "renexia.it": {
+    "file": "renexia.it.png",
+    "source": "https://renexia.it/wp-content/uploads/2024/10/icona-renexia-2024-80x80.jpg"
+  },
+  "saitec-offshore.com": {
+    "file": "saitec-offshore.com.png",
+    "source": "https://saitec-offshore.com/assets/favicon.svg"
+  },
+  "simplybluegroup.com": {
+    "file": "simplybluegroup.com.png",
+    "source": "https://simplyblueenergy.com/wp-content/uploads/2026/03/cropped-simply-blue-icon-32x32.png"
+  },
+  "totalenergies.com": {
+    "file": "totalenergies.com.png",
+    "source": "https://totalenergies.com/themes/custom/totalenergies_com/dist/img/favicon.png"
+  },
+  "umaine.edu": {
+    "file": "umaine.edu.png",
+    "source": "https://umaine.edu/wp-content/uploads/sites/4/2026/11/cropped-512Favicon-32x32.png"
+  },
+  "varenergi.no": {
+    "file": "varenergi.no.png",
+    "source": "https://varenergi.no/wp-content/themes/varenergi/images/favicons/apple-touch-icon.png"
+  },
+  "wintershalldea.com": {
+    "file": "wintershalldea.com.ico",
+    "source": "https://wintershalldea.de/themes/custom/wintershall/favicon.ico"
+  },
+  "woodthilsted.com": {
+    "file": "woodthilsted.com.svg",
+    "source": "https://www.woodthilsted.com/wp-content/uploads/2024/12/wt-logomark-blue.svg"
+  },
+  "ww2.eagle.org": {
+    "file": "ww2.eagle.org.ico",
+    "source": "https://ww2.eagle.org/content/dam/eagle/icons/abs-favicon.ico"
+  },
+  "www.aerodyn-engineering.com": {
+    "file": "www.aerodyn-engineering.com.png",
+    "source": "https://www.aerodyn-engineering.com/favicon.ico"
+  },
+  "www.akersolutions.com": {
+    "file": "www.akersolutions.com.ico",
+    "source": "https://www.akersolutions.com/favicon.ico"
+  },
+  "www.banquedesterritoires.fr": {
+    "file": "www.banquedesterritoires.fr.png",
+    "source": "https://www.banquedesterritoires.fr/sites/default/files/favicons/apple-touch-icon.png"
+  },
+  "www.baywa-re.com": {
+    "file": "www.baywa-re.com.png",
+    "source": "https://www.baywa-re.com/favicon.png"
+  },
+  "www.bluegemwind.com": {
+    "file": "www.bluegemwind.com.png",
+    "source": "https://www.bluegemwind.com/wp-content/uploads/2020/08/cropped-Blue-Gem-Wind-Logo-Dark-Blue-32x32.png.webp"
+  },
+  "www.bourbonoffshore.com": {
+    "file": "www.bourbonoffshore.com.ico",
+    "source": "https://www.bourbonoffshore.com/sites/default/files/favicon.ico"
+  },
+  "www.bridon-bekaert.com": {
+    "file": "www.bridon-bekaert.com.ico",
+    "source": "https://ropes.bekaert.com/content/dam/bridon-bekaert/en/icons/favicon.ico"
+  },
+  "www.bw-ideol.com": {
+    "file": "www.bw-ideol.com.ico",
+    "source": "https://www.bw-ideol.com/core/misc/favicon.ico"
+  },
+  "www.chuden.co.jp": {
+    "file": "www.chuden.co.jp.ico",
+    "source": "https://www.chuden.co.jp/favicon.ico"
+  },
+  "www.cip.com": {
+    "file": "www.cip.com.png",
+    "source": "https://www.cip.com/media/ipzhbnp0/favicon.png?width=32&height=32&rnd=133866788674500000"
+  },
+  "www.cnoocengineering.com": {
+    "file": "www.cnoocengineering.com.png",
+    "source": "https://www.cnoocengineering.com/english/images/P020240520525772274439.png"
+  },
+  "www.cnoocltd.com": {
+    "file": "www.cnoocltd.com.png",
+    "source": "https://www.cnoocltd.com/images/en_x_logo_01.jpg"
+  },
+  "www.cop.dk": {
+    "file": "www.cop.dk.png",
+    "source": "https://www.cop.dk/wp-content/uploads/2024/12/cropped-COP-Favicon-32x32.png"
+  },
+  "www.coriogeneration.com": {
+    "file": "www.coriogeneration.com.webp",
+    "source": "https://images.squarespace-cdn.com/content/v1/620a24576588f4630adc86f5/dda04e03-5760-4b70-84a4-40342b771aa9/favicon.ico?format=100w"
+  },
+  "www.cowi.com": {
+    "file": "www.cowi.com.png",
+    "source": "https://www.cowi.com/favicon-16x16.png"
+  },
+  "www.cppinvestments.com": {
+    "file": "www.cppinvestments.com.png",
+    "source": "https://www.cppinvestments.com/wp-content/uploads/2020/01/cropped-512x512_Logo-32x32.png"
+  },
+  "www.deepoceangroup.com": {
+    "file": "www.deepoceangroup.com.png",
+    "source": "https://cdn.prod.website-files.com/61a75c28b7cfda2cb5c7c794/61a75e4634d7881ceb8fa469_Favicon.png"
+  },
+  "www.deepwindoffshore.com": {
+    "file": "www.deepwindoffshore.com.png",
+    "source": "https://cdn.prod.website-files.com/65c0a41cae75ac4cffb853a0/65f4320cdd0c468891031eca_faviconDWO.png"
+  },
+  "www.delmarsystems.com": {
+    "file": "www.delmarsystems.com.png",
+    "source": "https://delmarsystems.com/wp-content/themes/vryhof/favicon/apple-touch-icon.png?v=2"
+  },
+  "www.deme-group.com": {
+    "file": "www.deme-group.com.png",
+    "source": "https://www.deme-group.com/themes/custom/dredger/public/images/favicons/apple-touch-icon.png"
+  },
+  "www.dnv.com": {
+    "file": "www.dnv.com.png",
+    "source": "https://www.dnv.com/assets/meta/apple-touch-icon.png"
+  },
+  "www.dof.com": {
+    "file": "www.dof.com.png",
+    "source": "https://cdn.prod.website-files.com/62985d0dc77f0d11f641b830/6298620538300c494bd797de_favicon.png"
+  },
+  "www.dowind.com": {
+    "file": "www.dowind.com.png",
+    "source": "https://static.wixstatic.com/media/744da7_b5f3276284db4debb71cfa04fe7094a3%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/744da7_b5f3276284db4debb71cfa04fe7094a3%7Emv2.png"
+  },
+  "www.edf-powersolutions.com": {
+    "file": "www.edf-powersolutions.com.png",
+    "source": "https://edf-powersolutions.com/wp-content/uploads/cropped-site-icon-300x300-1-150x150.png"
+  },
+  "www.eiffagemetal.com": {
+    "file": "www.eiffagemetal.com.png",
+    "source": "https://www.eiffagemetal.com/modules/EIFFAGEUXDesignTemplates/images/favicon/favicon-57x57.png"
+  },
+  "www.elicio.be": {
+    "file": "www.elicio.be.png",
+    "source": "https://www.elicio.eu/src/Frontend/Themes/Custom/apple-touch-icon-120.png"
+  },
+  "www.eneos-re.com": {
+    "file": "www.eneos-re.com.ico",
+    "source": "https://www.eneos-re.com/favicon.ico"
+  },
+  "www.energia.co.jp": {
+    "file": "www.energia.co.jp.ico",
+    "source": "https://www.energia.co.jp/favicon.ico"
+  },
+  "www.equinor.com": {
+    "file": "www.equinor.com.ico",
+    "source": "https://www.equinor.com/favicon.ico?7e7fcbab5f7fe5c3"
+  },
+  "www.ferrovial.com": {
+    "file": "www.ferrovial.com.ico",
+    "source": "https://www.ferrovial.com/wp-content/themes/global/front/dist/static/favicon/favicon.ico"
+  },
+  "www.firstmarinesolutions.com": {
+    "file": "www.firstmarinesolutions.com.ico",
+    "source": "https://www.firstmarinesolutions.com/favicon.ico"
+  },
+  "www.gevernova.com": {
+    "file": "www.gevernova.com.ico",
+    "source": "https://www.gevernova.com/themes/custom/ge_vernova_unified/favicon.ico"
+  },
+  "www.harbourenergy.com": {
+    "file": "www.harbourenergy.com.ico",
+    "source": "https://www.harbourenergy.com/favicon.ico"
+  },
+  "www.heerema.com": {
+    "file": "www.heerema.com.ico",
+    "source": "https://www.heerema.com/favicon.ico"
+  },
+  "www.hexicongroup.com": {
+    "file": "www.hexicongroup.com.png",
+    "source": "https://images.squarespace-cdn.com/content/v1/66671109d5eb9460a07575e6/555daf9c-e390-40ff-9a17-a40f59939928/favicon.ico?format=100w"
+  },
+  "www.hitachi.com": {
+    "file": "www.hitachi.com.ico",
+    "source": "https://www.hitachi.com/favicon.ico"
+  },
+  "www.hitachienergy.com": {
+    "file": "www.hitachienergy.com.png",
+    "source": "https://www.hitachienergy.com/etc.clientlibs/pg/clientlibs/clientlib-site/resources/apple-touch-icon-120x120.png"
+  },
+  "www.iberdrola.com": {
+    "file": "www.iberdrola.com.ico",
+    "source": "https://www.iberdrola.com/favicon.ico"
+  },
+  "www.ifpenergiesnouvelles.com": {
+    "file": "www.ifpenergiesnouvelles.com.png",
+    "source": "https://www.ifpenergiesnouvelles.com/sites/ifpen.fr/files/ifpen.jpg"
+  },
+  "www.inpex.com": {
+    "file": "www.inpex.com.ico",
+    "source": "https://www.inpex.com/favicon.ico"
+  },
+  "www.jandenul.com": {
+    "file": "www.jandenul.com.png",
+    "source": "https://www.jandenul.com/themes/custom/jandenul/favicons/generated/apple-touch-icon.png"
+  },
+  "www.jdrcables.com": {
+    "file": "www.jdrcables.com.png",
+    "source": "https://www.jdrcables.com/storage/file/core_files/2026/10/22/58aac13dc97eea54a6ab6c51c35a5439/loga-jdr-kolo.png"
+  },
+  "www.kanadevia.com": {
+    "file": "www.kanadevia.com.ico",
+    "source": "https://www.kanadevia.com/english/app-files/img/symbol/favicon.ico"
+  },
+  "www.kemco.co.jp": {
+    "file": "www.kemco.co.jp.ico",
+    "source": "https://www.kemco.co.jp/img/all/favicon.ico"
+  },
+  "www.kepco.co.jp": {
+    "file": "www.kepco.co.jp.ico",
+    "source": "https://www.kepco.co.jp/favicon.ico"
+  },
+  "www.lr.org": {
+    "file": "www.lr.org.ico",
+    "source": "https://www.lr.org/favicon.ico"
+  },
+  "www.magnoraoffshorewind.com": {
+    "file": "www.magnoraoffshorewind.com.png",
+    "source": "https://www.magnoraoffshorewind.com/wp-content/uploads/2022/03/cropped-cropped-Magnora-32x32.png"
+  },
+  "www.mainstreamrp.com": {
+    "file": "www.mainstreamrp.com.ico",
+    "source": "https://www.mainstreamrp.com/favicon.ico"
+  },
+  "www.marubeni.com": {
+    "file": "www.marubeni.com.ico",
+    "source": "https://www.marubeni.com/favicon.ico"
+  },
+  "www.munmubaram.co.kr": {
+    "file": "www.munmubaram.co.kr.png",
+    "source": "https://images.squarespace-cdn.com/content/v1/67e50c4d032f35278af73e7f/67fceafc-2b4c-46a4-b9ed-4f6acf083ec6/favicon.ico?format=100w"
+  },
+  "www.nedo.go.jp": {
+    "file": "www.nedo.go.jp.ico",
+    "source": "https://www.nedo.go.jp/content/100071451.ico"
+  },
+  "www.nexans.com": {
+    "file": "www.nexans.com.png",
+    "source": "https://www.nexans.com/app/uploads/2024/01/favicon-nexans-150x150.png"
+  },
+  "www.nkt.com": {
+    "file": "www.nkt.com.png",
+    "source": "https://embed.widencdn.net/img/nkt/xkv5j2dvdp/196x196px@1x/nkt_n.png?crop=yes"
+  },
+  "www.northlandpower.com": {
+    "file": "www.northlandpower.com.ico",
+    "source": "https://northlandpower.com/wp-content/themes/northland-power/images/favicon.ico"
+  },
+  "www.oceanwinds.com": {
+    "file": "www.oceanwinds.com.png",
+    "source": "https://www.oceanwinds.com/wp-content/uploads/2021/06/favicon.png"
+  },
+  "www.ocergy.com": {
+    "file": "www.ocergy.com.png",
+    "source": "https://www.ocergy.com/wp-content/uploads/2024/01/icon-ocergy.png"
+  },
+  "www.omv.com": {
+    "file": "www.omv.com.png",
+    "source": "https://www.omv.com/en/icon/small?be14beea65c56e69"
+  },
+  "www.orcina.com": {
+    "file": "www.orcina.com.ico",
+    "source": "https://www.orcina.com/wp-content/uploads/favicon.ico"
+  },
+  "www.osakagas.co.jp": {
+    "file": "www.osakagas.co.jp.ico",
+    "source": "https://www.osakagas.co.jp/misc/favicon.ico"
+  },
+  "www.principlepower.com": {
+    "file": "www.principlepower.com.png",
+    "source": "https://www.principlepower.com/apple-touch-icon.png"
+  },
+  "www.prysmian.com": {
+    "file": "www.prysmian.com.ico",
+    "source": "https://www.prysmian.com/themes/custom/prysmian/favicon.ico"
+  },
+  "www.qair.energy": {
+    "file": "www.qair.energy.png",
+    "source": "https://www.qair.energy/wp-content/uploads/cropped-favicon-32x32.png"
+  },
+  "www.ramboll.com": {
+    "file": "www.ramboll.com.ico",
+    "source": "https://www.ramboll.com/favicon.ico"
+  },
+  "www.reene-energy.co.jp": {
+    "file": "www.reene-energy.co.jp.png",
+    "source": "https://www.reene-energy.co.jp/wp-content/uploads/2026/03/cropped-favicon-3-32x32.webp"
+  },
+  "www.repsol.com": {
+    "file": "www.repsol.com.png",
+    "source": "https://www.repsol.com/content/dam/global/favicon/favicon-96x96.png"
+  },
+  "www.rpsgroup.com": {
+    "file": "www.rpsgroup.com.png",
+    "source": "https://www.rpsgroup.com/assets/favicon/favicon-196x196.png"
+  },
+  "www.rte-france.com": {
+    "file": "www.rte-france.com.ico",
+    "source": "https://assets.rte-france.com/prod/favicon_5.ico"
+  },
+  "www.rwe.com": {
+    "file": "www.rwe.com.png",
+    "source": "https://www.rwe.com/Favicons/apple-touch-icon.png"
+  },
+  "www.saipem.com": {
+    "file": "www.saipem.com.ico",
+    "source": "https://www.saipem.com/themes/custom/saipem_theme/favicon.ico"
+  },
+  "www.sbmoffshore.com": {
+    "file": "www.sbmoffshore.com.png",
+    "source": "https://www.sbmoffshore.com/wp-content/uploads/2024/09/cropped-logo-32x32.png"
+  },
+  "www.scottishpowerrenewables.com": {
+    "file": "www.scottishpowerrenewables.com.ico",
+    "source": "https://www.scottishpowerrenewables.com/documents/236078/0/favicon.ico/25462b09-05c8-38b6-af74-0cc042bf1b01"
+  },
+  "www.segwang.net": {
+    "file": "www.segwang.net.png",
+    "source": "https://www.segwang.net/assets/segwang-symbol.png"
+  },
+  "www.shell.com": {
+    "file": "www.shell.com.ico",
+    "source": "https://www.shell.com/etc.clientlibs/amidala/clientlibs/theme-base/resources/favicon/favicon.ico"
+  },
+  "www.siemens-energy.com": {
+    "file": "www.siemens-energy.com.ico",
+    "source": "https://www.siemens-energy.com/favicon.ico"
+  },
+  "www.siemensgamesa.com": {
+    "file": "www.siemensgamesa.com.png",
+    "source": "https://www.siemensgamesa.com/favicon.ico"
+  },
+  "www.smulders.com": {
+    "file": "www.smulders.com.ico",
+    "source": "https://www.smulders.com/favicon.ico"
+  },
+  "www.sserenewables.com": {
+    "file": "www.sserenewables.com.ico",
+    "source": "https://www.sserenewables.com/favicon.ico"
+  },
+  "www.stiesdal.com": {
+    "file": "www.stiesdal.com.png",
+    "source": "https://www.stiesdal.com/wp-includes/images/w-logo-gray-white-bg.png"
+  },
+  "www.subsea7.com": {
+    "file": "www.subsea7.com.ico",
+    "source": "https://www.subsea7.com/etc/designs/subsea-7/corporate2018/favicon.ico"
+  },
+  "www.technipfmc.com": {
+    "file": "www.technipfmc.com.ico",
+    "source": "https://www.technipfmc.com/favicon.ico"
+  },
+  "www.ten.com": {
+    "file": "www.ten.com.png",
+    "source": "https://www.ten.com/themes/custom/energies_radix/favicon.png"
+  },
+  "www.toda.co.jp": {
+    "file": "www.toda.co.jp.png",
+    "source": "https://www.toda.co.jp/english/images/logo.png"
+  },
+  "www.tokyo-gas.co.jp": {
+    "file": "www.tokyo-gas.co.jp.ico",
+    "source": "https://www.tokyo-gas.co.jp/favicon.ico"
+  },
+  "www.vargronn.com": {
+    "file": "www.vargronn.com.png",
+    "source": "https://cdn.prod.website-files.com/6409eba06b3da5c947053353/6422d6eefa1627f7859c00ce_63480af0d5674f8511302ed0_favicon-sm.png"
+  },
+  "www.vestas.com": {
+    "file": "www.vestas.com.ico",
+    "source": "https://www.vestas.com/etc.clientlibs/vestas/clientlibs/clientlib-site/resources/icons/favicon.ico"
+  },
+  "www.vicinaymarine.com": {
+    "file": "www.vicinaymarine.com.png",
+    "source": "https://www.vicinaymarine.com/wp-content/uploads/2024/12/vicinay-favicon-150x150-1.png"
+  },
+  "www.vryhof.com": {
+    "file": "www.vryhof.com.png",
+    "source": "https://delmarsystems.com/wp-content/themes/vryhof/favicon/apple-touch-icon.png?v=2"
+  },
+  "www.windstalleralliance.com": {
+    "file": "www.windstalleralliance.com.png",
+    "source": "https://images.squarespace-cdn.com/content/v1/61125b3d9f7f352a8155d3b8/4a4a83db-9e6e-4f94-ac96-11d2dbd727be/favicon.ico?format=100w"
+  },
+  "www.worley.com": {
+    "file": "www.worley.com.ico",
+    "source": "https://www.worley.com/assets/worley/src/assets/images/favicon.ico"
+  }
+}

@@ -38,15 +38,15 @@ export default async function CompanyPage({ params }: Props) {
             {industryHref && <Link href={industryHref}><Copy en="Industry entry" zh="产业条目" /></Link>}
           </nav>
           <h1 translate="no">{company.name}</h1>
-          <p className={styles.meta}>{company.companyType} · {company.countryRegion} · <a href={company.website}><Copy en="Company website" zh="企业网站" /></a></p>
+          <p className={styles.meta}>{company.companyType}{company.countryRegion && <> · {company.countryRegion}</>}{company.website && <> · <a href={company.website}><Copy en="Company website" zh="企业网站" /></a></>}</p>
           <dl className={styles.stats}>
-            <div><dt><Copy en="Retained updates" zh="收录动态" /></dt><dd>{news.length}</dd></div>
+            {(!company.profilePending || news.length > 0) && <div><dt><Copy en="Retained updates" zh="收录动态" /></dt><dd>{news.length}</dd></div>}
             {latestDate && <div><dt><Copy en="Latest retained update" zh="最新收录动态" /></dt><dd><time dateTime={latestDate}>{latestDate}</time></dd></div>}
             {projects.length > 0 && <div><dt><Copy en="Related FOWT projects" zh="相关浮式海上风电项目" /></dt><dd>{projects.length}</dd></div>}
           </dl>
         </header>
 
-        <CompanyTimeline news={news} />
+        {(!company.profilePending || news.length > 0) && <CompanyTimeline news={news} />}
 
         {projects.length > 0 && (
           <section className={styles.section} aria-labelledby="company-projects-heading">

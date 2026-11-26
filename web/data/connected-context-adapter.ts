@@ -1,7 +1,7 @@
 import linkDataset from "./context/project-engineering-links.json";
 import { getAllEngineeringBriefings, type EngineeringBriefing } from "./engineering-briefing-adapter";
 import { getAllProjects, getProjectWithRelations, formatRole, relationshipContextLabel, type Project, type ProjectIndexItem, type ProjectWithRelations } from "./project-adapter";
-import { getIndustryCompanies } from "./industry/industry-map";
+import { getIndustryCompanies, resolveProjectCompanyId } from "./industry/industry-map";
 import { engineeringItemHref, industryCompanyAnchor } from "./context-navigation";
 
 export type ProjectEngineeringLink = {
@@ -48,7 +48,7 @@ export function getIndustryEntryHref(companyId: string | null) {
 export function connectProjectIndexItem(project: ProjectIndexItem) {
   return { ...project, supplyChain: project.supplyChain.map((category) => ({ ...category,
     groups: category.groups.map((group) => ({ ...group,
-      entries: group.entries.map((entry) => ({ ...entry, industryHref: getIndustryEntryHref(entry.industryCompanyId) })),
+      entries: group.entries.map((entry) => ({ ...entry, industryHref: getIndustryEntryHref(resolveProjectCompanyId(entry.id, entry.industryCompanyId)) })),
     })),
   })) };
 }
@@ -57,7 +57,7 @@ export type ConnectedProjectIndexItem = ReturnType<typeof connectProjectIndexIte
 export function buildCompanyProjectRecords(companyId: string, projects: ProjectWithRelations[], validCompanyIds: ReadonlySet<string>) {
   if (!validCompanyIds.has(companyId)) return [];
   return projects.flatMap((project) => {
-    const roles = project.relationships.filter((relationship) => relationship.industryCompanyId === companyId).flatMap((relationship) => {
+    const roles = project.relationships.filter((relationship) => resolveProjectCompanyId(relationship.id, relationship.industryCompanyId) === companyId).flatMap((relationship) => {
       const sources = relationship.sourceIds.flatMap((id) => project.sources.filter((source) => source.sourceId === id));
       if (!sources.length || sources.length !== relationship.sourceIds.length) return [];
       return [{ id: relationship.id, roleLabel: formatRole(relationship.role),

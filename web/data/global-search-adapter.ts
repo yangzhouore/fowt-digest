@@ -39,7 +39,7 @@ export function getGlobalSearchDocuments(): SearchDocument[] {
   const companyDocuments = companies.map((company): SearchDocument => {
     const { id, name, companyType, countryRegion, description } = company;
     const aliases = [...(aliasesByCompany.get(id) ?? [])];
-    const context = [companyType, countryRegion].join(" · ");
+    const context = [companyType, countryRegion].filter(Boolean).join(" · ");
     return {
       id, type: "company", title: name, href: `/companies/${id}`, context, aliases,
       companyIds: [id],

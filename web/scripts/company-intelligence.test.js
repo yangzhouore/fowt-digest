@@ -11,13 +11,23 @@ const lookup = (id) => structuredClone(dataset.events.find((event) => event.id =
 const eolmed = lookup("eolmed-first-floating-turbine-tow");
 const windfloat = lookup("windfloat-atlantic-supplier-selection");
 
-test("company routes use exact Industry IDs and all canonical companies have reviewed developments", () => {
+test("company routes retain reviewed developments and include source-backed project company profiles", () => {
   const directory = getCompanyIndex();
-  assert.equal(directory.length, 47);
+  const curated = directory.filter(({ profilePending }) => !profilePending);
+  assert.equal(curated.length, 47);
   assert.equal(new Set(directory.map((company) => company.id)).size, directory.length);
   for (const entry of directory) assert.equal(getCompanyIntelligence(entry.id).company.name, entry.name);
   assert.equal(getCompanyIntelligence("Vestas"), undefined);
-  assert.ok(directory.every(({ updateCount }) => updateCount > 0));
+  assert.ok(curated.every(({ updateCount }) => updateCount > 0));
+  const cnooc = getCompanyIntelligence("cnooc");
+  assert.equal(cnooc.company.profilePending, true);
+  assert.equal(cnooc.company.description, "");
+  assert.equal(cnooc.company.website, "");
+  assert.equal(cnooc.company.countryRegion, "China");
+  assert.ok(cnooc.news.some(({ id }) => id === "haiyou-guanlan-first-grid-connection"));
+  assert.ok(directory.find(({ id }) => id === "cnooc").logo);
+  assert.ok(directory.every(({ countryRegion, updateCount }) => countryRegion && updateCount > 0));
+  assert.equal(cnooc.projects[0].slug, "haiyou-guanlan");
 });
 
 test("Vestas renders the full reviewed period using event IDs and the lead original source", () => {

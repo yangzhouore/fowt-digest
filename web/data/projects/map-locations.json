@@ -1,0 +1,280 @@
+{
+  "hywind-scotland": {
+    "longitude": -1.33228,
+    "latitude": 57.48427,
+    "kind": "turbine",
+    "source": "https://marine.gov.scot/sites/default/files/00516548.pdf"
+  },
+  "hywind-tampen": {
+    "longitude": 2.26159,
+    "latitude": 61.33278,
+    "kind": "area",
+    "source": "https://www.equinor.com/content/dam/statoil/documents/impact-assessment/hywind-tampen/equinor-hywind-tampen-pud-del-II-konsekvensutredning-mars-2019.pdf"
+  },
+  "kincardine-offshore-wind-farm": {
+    "longitude": -1.85328,
+    "latitude": 57.00655,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "windfloat-atlantic": {
+    "longitude": -9.0574,
+    "latitude": 41.6865,
+    "kind": "site",
+    "source": "https://emodnet.ec.europa.eu/geonetwork/srv/api/records/8201070b-4b0b-4d54-8910-abcea5dce57f"
+  },
+  "provence-grand-large": {
+    "longitude": 4.78758,
+    "latitude": 43.1831,
+    "kind": "turbine",
+    "source": "https://provencegrandlarge.fr/navigation/"
+  },
+  "eolmed": {
+    "longitude": 3.32693,
+    "latitude": 43.02095,
+    "kind": "area",
+    "source": "https://www.data.gouv.fr/datasets/parcs-eoliens-en-mer-et-zones-de-developpement-de-leolien-en-mer"
+  },
+  "demosath": {
+    "longitude": -2.88,
+    "latitude": 43.47,
+    "kind": "site",
+    "source": "https://emodnet.ec.europa.eu/geonetwork/srv/api/records/8201070b-4b0b-4d54-8910-abcea5dce57f"
+  },
+  "pentland-floating-offshore-wind-farm": {
+    "longitude": -3.87134,
+    "latitude": 58.65598,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "erebus-floating-wind-farm": {
+    "longitude": -5.59634,
+    "latitude": 51.46452,
+    "kind": "area",
+    "source": "https://www.bluegemwind.com/wp-content/uploads/2020/07/Erebus-ES-Vol-3-Appendix-17.1-Aviation-Military-and-Radar-Technical-Report.pdf"
+  },
+  "gulf-of-maine-research-array": {
+    "longitude": -69.36878,
+    "latitude": 43.30255,
+    "kind": "area",
+    "source": "https://services7.arcgis.com/G5Ma95RzqJRPKsWL/arcgis/rest/services/Wind_Leases__BOEM_/FeatureServer/0"
+  },
+  "goto-offshore-wind-farm": {
+    "longitude": 128.97696,
+    "latitude": 32.66517,
+    "kind": "area",
+    "source": "https://www.mlit.go.jp/kowan/content/001349756.pdf"
+  },
+  "haiyou-guanlan": null,
+  "windfloat-pacific": {
+    "longitude": -124.69863,
+    "latitude": 43.46504,
+    "kind": "area",
+    "source": "https://www.boem.gov/oil-gas-energy/windfloat-pacific-lease-request"
+  },
+  "culzean-demo-floating-wind": {
+    "longitude": 1.87778,
+    "latitude": 57.19138,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "green-volt": {
+    "longitude": -0.63991,
+    "latitude": 57.88265,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "salamander-floating-wind": {
+    "longitude": -1.19837,
+    "latitude": 57.61591,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "ayre-offshore-wind": {
+    "longitude": -2.2006,
+    "latitude": 58.86203,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "buchan-offshore-wind": {
+    "longitude": -1.23501,
+    "latitude": 58.40883,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "marramwind": {
+    "longitude": -0.62264,
+    "latitude": 58.16221,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "muir-mhor": {
+    "longitude": -0.56982,
+    "latitude": 57.41866,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "ossian": {
+    "longitude": -0.39359,
+    "latitude": 56.68759,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "arven-offshore-wind": {
+    "longitude": -0.14059,
+    "latitude": 60.2896,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "bellrock-offshore-wind": {
+    "longitude": 0.03552,
+    "latitude": 56.8456,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "broadshore-offshore-wind": {
+    "longitude": -1.80203,
+    "latitude": 58.17324,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "havbredey-offshore-wind": {
+    "longitude": -5.53691,
+    "latitude": 58.86294,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "stoura-offshore-wind": {
+    "longitude": -0.02843,
+    "latitude": 60.47065,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "stromar-offshore-wind": {
+    "longitude": -2.14571,
+    "latitude": 58.51446,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "talisk-offshore-wind": {
+    "longitude": -6.36172,
+    "latitude": 58.79603,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "campionwind": {
+    "longitude": 0.11376,
+    "latitude": 57.30624,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=e26b96b461a84457a54994e754ce488c"
+  },
+  "cenos-offshore-wind": {
+    "longitude": 1.42937,
+    "latitude": 57.12194,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=b9c7d514362f40ceb3fe299b47aeb8b3"
+  },
+  "celtic-sea-round5-equinor-pda": {
+    "longitude": -5.40038,
+    "latitude": 50.95247,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=f14c2aa7ccdd40e9a7b3e443023a2197"
+  },
+  "celtic-sea-round5-gwynt-glas-pda": {
+    "longitude": -5.64109,
+    "latitude": 51.32731,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=f14c2aa7ccdd40e9a7b3e443023a2197"
+  },
+  "celtic-sea-round5-ocean-winds-pda": {
+    "longitude": -5.70633,
+    "latitude": 51.0583,
+    "kind": "area",
+    "source": "https://www.arcgis.com/home/item.html?id=f14c2aa7ccdd40e9a7b3e443023a2197"
+  },
+  "canopy-offshore-wind-ocs-p-0561": {
+    "longitude": -124.61216,
+    "latitude": 41.00446,
+    "kind": "area",
+    "source": "https://services7.arcgis.com/G5Ma95RzqJRPKsWL/arcgis/rest/services/Wind_Leases__BOEM_/FeatureServer/0"
+  },
+  "california-north-floating-ocs-p-0562": {
+    "longitude": -124.70824,
+    "latitude": 40.92839,
+    "kind": "area",
+    "source": "https://services7.arcgis.com/G5Ma95RzqJRPKsWL/arcgis/rest/services/Wind_Leases__BOEM_/FeatureServer/0"
+  },
+  "atlas-offshore-wind-ocs-p-0563": {
+    "longitude": -121.97907,
+    "latitude": 35.65461,
+    "kind": "area",
+    "source": "https://services7.arcgis.com/G5Ma95RzqJRPKsWL/arcgis/rest/services/Wind_Leases__BOEM_/FeatureServer/0"
+  },
+  "golden-state-wind-ocs-p-0564": {
+    "longitude": -121.84525,
+    "latitude": 35.56929,
+    "kind": "area",
+    "source": "https://services7.arcgis.com/G5Ma95RzqJRPKsWL/arcgis/rest/services/Wind_Leases__BOEM_/FeatureServer/0"
+  },
+  "invenergy-california-offshore-ocs-p-0565": {
+    "longitude": -121.69281,
+    "latitude": 35.52749,
+    "kind": "area",
+    "source": "https://services7.arcgis.com/G5Ma95RzqJRPKsWL/arcgis/rest/services/Wind_Leases__BOEM_/FeatureServer/0"
+  },
+  "utsira-nord-equinor-vargronn-area-3": {
+    "longitude": 4.53849,
+    "latitude": 59.13245,
+    "kind": "area",
+    "source": "https://www.regjeringen.no/contentassets/c6499948aa2a46e4bf66401e613df8e1/utlysning-utsira-nord.pdf"
+  },
+  "utsira-nord-harald-harfagre": {
+    "longitude": 4.48943,
+    "latitude": 59.27229,
+    "kind": "area",
+    "source": "https://www.regjeringen.no/contentassets/c6499948aa2a46e4bf66401e613df8e1/utlysning-utsira-nord.pdf"
+  },
+  "efgl": {
+    "longitude": 3.25128,
+    "latitude": 42.85199,
+    "kind": "area",
+    "source": "https://www.occitanie.developpement-durable.gouv.fr/IMG/pdf/dreal_ap_aeu_efgl_ferme_06nov2019corpsetanx.pdf"
+  },
+  "eflo-narbonnaise": {
+    "longitude": 3.57767,
+    "latitude": 43.02392,
+    "kind": "area",
+    "source": "https://www.data.gouv.fr/datasets/parcs-eoliens-en-mer-et-zones-de-developpement-de-leolien-en-mer"
+  },
+  "mediterranee-grand-large": {
+    "longitude": 4.606,
+    "latitude": 43.08049,
+    "kind": "area",
+    "source": "https://www.data.gouv.fr/datasets/parcs-eoliens-en-mer-et-zones-de-developpement-de-leolien-en-mer"
+  },
+  "seven-seas-med": {
+    "longitude": 13.2676,
+    "latitude": 36.2817,
+    "kind": "site",
+    "source": "https://emodnet.ec.europa.eu/geonetwork/srv/api/records/8201070b-4b0b-4d54-8910-abcea5dce57f"
+  },
+  "med-wind": {
+    "longitude": 11.5171,
+    "latitude": 37.9614,
+    "kind": "site",
+    "source": "https://emodnet.ec.europa.eu/geonetwork/srv/api/records/8201070b-4b0b-4d54-8910-abcea5dce57f"
+  },
+  "munmubaram": null,
+  "firefly-floating-wind": {
+    "longitude": 129.98331,
+    "latitude": 35.51213,
+    "kind": "proposed turbine",
+    "source": "https://cdn.equinor.com/files/h61q9gi9/global/714b0914bcdfa6a27b66afdc6ec70c7fe4a099a0.pdf?firefly-floating-offshore-wind-power-project-%28scoping-report%29-eng-equinor.pdf="
+  },
+  "hibiki-floating-demonstrator": {
+    "longitude": 130.72333,
+    "latitude": 34.05333,
+    "kind": "turbine",
+    "source": "https://www1.kaiho.mlit.go.jp/shoshi/tsuiho/pdf/303/303-2024-02.pdf"
+  }
+}

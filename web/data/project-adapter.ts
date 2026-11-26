@@ -262,6 +262,16 @@ export function getProjectIndexItems() {
       normalizedStatus: project.normalizedStatus,
       statusLabel: statusLabels[project.normalizedStatus],
       capacityMw: project.capacityMw,
+      turbineCount: project.turbineCount,
+      turbineRatingMw: project.turbineRatingMw,
+      developerOwnerText: project.developerOwnerText,
+      actualCod: project.actualCod,
+      constructionStart: (eventsByProject.get(project.id) ?? []).find((event) => event.eventType === "construction_start")?.date ?? null,
+      milestones: [...(eventsByProject.get(project.id) ?? [])]
+        .sort((a, b) => a.date.localeCompare(b.date))
+        .map(({ id, date, datePrecision, title }) => ({
+          id, title, date: date.slice(0, datePrecision === "year" ? 4 : 7),
+        })),
       floatingTechnology: project.floatingTechnology,
       developers: unique(developers),
       supplyChain: buildSupplyChain(relationships),

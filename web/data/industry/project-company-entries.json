@@ -1,0 +1,1411 @@
+{
+  "placeholders": [
+    {
+      "id": "7seas-med-s-r-l",
+      "name": "7SEAS med S.r.l.",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "seven-seas-med-7seas-med-s-r-l-developer"
+      ],
+      "country": {
+        "name": "Italy",
+        "sourceUrl": "https://va.mite.gov.it/en-GB/Oggetti/Info/7273"
+      }
+    },
+    {
+      "id": "aerodyn",
+      "name": "Aerodyn",
+      "roles": [
+        "turbine-oem"
+      ],
+      "relationshipIds": [
+        "rel-supply-hibiki-floating-demonstrator-aerodyn-wind-turbine-oem"
+      ],
+      "country": {
+        "name": "Germany",
+        "sourceUrl": "https://www.aerodyn-engineering.com/"
+      }
+    },
+    {
+      "id": "aker-solutions",
+      "name": "Aker Solutions",
+      "roles": [
+        "fabrication",
+        "engineering-consulting"
+      ],
+      "relationshipIds": [
+        "hywind-tampen-aker-substructures",
+        "bellrock-aker-electrical"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://www.akersolutions.com/"
+      }
+    },
+    {
+      "id": "archer-wind",
+      "name": "Archer Wind",
+      "roles": [
+        "epci-subsea",
+        "fabrication"
+      ],
+      "relationshipIds": [
+        "rel-supply-culzean-demo-floating-wind-archer-wind-epci",
+        "rel-supply-culzean-demo-floating-wind-archer-wind-fabrication"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://archerwell.com/products-services/renewable-services/floating-offshore-wind/"
+      }
+    },
+    {
+      "id": "atlas-offshore-wind-llc",
+      "name": "Atlas Offshore Wind LLC",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "atlas-offshore-wind-ocs-p-0563-atlas-offshore-wind-llc-developer"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://www.boem.gov/renewable-energy/state-activities/atlas-offshore-wind-llc-ocs-p-0563"
+      }
+    },
+    {
+      "id": "banque-des-territoires",
+      "name": "Banque des Territoires",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "efgl-banque-des-territoires-developer",
+        "eflo-banque-des-territoires-developer"
+      ],
+      "country": {
+        "name": "France",
+        "sourceUrl": "https://www.banquedesterritoires.fr/"
+      }
+    },
+    {
+      "id": "baywa-r-e",
+      "name": "BayWa r.e.",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-buchan-offshore-wind-baywa-r-e-developer-owner"
+      ],
+      "country": {
+        "name": "Germany",
+        "sourceUrl": "https://www.baywa-re.com/"
+      }
+    },
+    {
+      "id": "blue-gem-wind",
+      "name": "Blue Gem Wind",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "erebus-blue-gem-developer"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://www.bluegemwind.com/"
+      }
+    },
+    {
+      "id": "bluefloat-energy",
+      "name": "BlueFloat Energy",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "stromar-offshore-wind-bluefloat-energy-developer"
+      ],
+      "country": {
+        "name": "Spain",
+        "sourceUrl": "https://www.bluefloat.com/"
+      }
+    },
+    {
+      "id": "bourbon-subsea-services",
+      "name": "Bourbon Subsea Services",
+      "roles": [
+        "marine-installation",
+        "mooring-anchoring",
+        "cable-systems"
+      ],
+      "relationshipIds": [
+        "kincardine-bourbon-installation",
+        "windfloat-atlantic-bourbon-installation",
+        "rel-supply-kincardine-offshore-wind-farm-bourbon-subsea-services-mooring",
+        "rel-supply-windfloat-atlantic-bourbon-subsea-services-mooring",
+        "rel-supply-eolmed-bourbon-subsea-services-inter-array-cable",
+        "rel-supply-eolmed-bourbon-subsea-services-mooring",
+        "rel-supply-eolmed-bourbon-subsea-services-anchoring",
+        "rel-supply-eolmed-bourbon-subsea-services-marine-installation"
+      ],
+      "country": {
+        "name": "France",
+        "sourceUrl": "https://www.bourbonoffshore.com/"
+      }
+    },
+    {
+      "id": "buchan-offshore-wind",
+      "name": "Buchan Offshore Wind",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "buchan-offshore-wind-buchan-offshore-wind-developer"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://buchanoffshorewind.com/"
+      }
+    },
+    {
+      "id": "bw-ideol-projects-company",
+      "name": "BW Ideol Projects Company",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-mediterranee-grand-large-bw-ideol-projects-company-developer-owner"
+      ],
+      "country": {
+        "name": "France",
+        "sourceUrl": "https://annuaire-entreprises.data.gouv.fr/entreprise/952737575"
+      }
+    },
+    {
+      "id": "california-north-floating-llc",
+      "name": "California North Floating LLC",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "california-north-floating-ocs-p-0562-california-north-floating-llc-developer"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://www.boem.gov/renewable-energy/state-activities/california-north-floating-llc-ocs-p-0562"
+      }
+    },
+    {
+      "id": "canopy-offshore-wind-llc",
+      "name": "Canopy Offshore Wind, LLC",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "canopy-offshore-wind-ocs-p-0561-canopy-offshore-wind-llc-developer"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://www.boem.gov/renewable-energy/state-activities/california-activities"
+      }
+    },
+    {
+      "id": "chubu-electric-power",
+      "name": "Chubu Electric Power",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-goto-offshore-wind-farm-chubu-electric-power-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.chuden.co.jp/english/"
+      }
+    },
+    {
+      "id": "chugoku-electric-power",
+      "name": "Chugoku Electric Power",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hibiki-floating-demonstrator-chugoku-electric-power-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.energia.co.jp/e/"
+      }
+    },
+    {
+      "id": "cnooc",
+      "name": "CNOOC",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "guanlan-cnooc-developer"
+      ],
+      "country": {
+        "name": "China",
+        "sourceUrl": "https://www.cnoocltd.com/english/"
+      }
+    },
+    {
+      "id": "copenhagen-offshore-partners",
+      "name": "Copenhagen Offshore Partners",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-pentland-floating-offshore-wind-farm-copenhagen-offshore-partners-developer-owner"
+      ],
+      "country": {
+        "name": "Denmark",
+        "sourceUrl": "https://www.cop.dk/"
+      }
+    },
+    {
+      "id": "cpp-investments",
+      "name": "CPP Investments",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-golden-state-wind-ocs-p-0564-cpp-investments-developer-owner"
+      ],
+      "country": {
+        "name": "Canada",
+        "sourceUrl": "https://www.cppinvestments.com/"
+      }
+    },
+    {
+      "id": "deep-wind-offshore-norway",
+      "name": "Deep Wind Offshore Norway",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "utsira-nord-harald-harfagre-deep-wind-offshore-norway-developer"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://www.deepwindoffshore.com/"
+      }
+    },
+    {
+      "id": "deepocean",
+      "name": "DeepOcean",
+      "roles": [
+        "cable-systems",
+        "marine-installation"
+      ],
+      "relationshipIds": [
+        "rel-supply-demosath-deepocean-dynamic-cable",
+        "rel-supply-demosath-deepocean-marine-installation",
+        "rel-supply-efgl-deepocean-marine-installation"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://www.deepoceangroup.com/"
+      }
+    },
+    {
+      "id": "diamond-offshore-wind",
+      "name": "Diamond Offshore Wind",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-gulf-of-maine-research-array-diamond-offshore-wind-developer-owner"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://www.dowind.com/"
+      }
+    },
+    {
+      "id": "dof-subsea",
+      "name": "DOF Subsea",
+      "roles": [
+        "mooring-anchoring",
+        "marine-installation"
+      ],
+      "relationshipIds": [
+        "rel-supply-hywind-tampen-dof-subsea-mooring",
+        "rel-supply-hywind-tampen-dof-subsea-marine-installation"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://www.dof.com/"
+      }
+    },
+    {
+      "id": "eiffage-metal",
+      "name": "Eiffage Métal",
+      "roles": [
+        "mooring-anchoring"
+      ],
+      "relationshipIds": [
+        "rel-supply-efgl-eiffage-m-tal-mooring"
+      ],
+      "country": {
+        "name": "France",
+        "sourceUrl": "https://www.eiffagemetal.com/"
+      }
+    },
+    {
+      "id": "elicio",
+      "name": "Elicio",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-buchan-offshore-wind-elicio-developer-owner"
+      ],
+      "country": {
+        "name": "Belgium",
+        "sourceUrl": "https://www.elicio.be/"
+      }
+    },
+    {
+      "id": "enbridge-eolien-france-2",
+      "name": "Enbridge Éolien France 2",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-provence-grand-large-enbridge-olien-france-2-developer-owner"
+      ],
+      "country": {
+        "name": "Luxembourg",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/895728/000119312526049810/enb-ex21_1.htm"
+      }
+    },
+    {
+      "id": "eneos-renewable-energy",
+      "name": "ENEOS Renewable Energy",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-goto-offshore-wind-farm-eneos-renewable-energy-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.eneos-re.com/english/"
+      }
+    },
+    {
+      "id": "eolien-en-mer-participations",
+      "name": "Eolien en Mer Participations",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "eflo-narbonnaise-eolien-en-mer-participations-developer"
+      ],
+      "country": {
+        "name": "France",
+        "sourceUrl": "https://www.premar-mediterranee.gouv.fr/communiques-presse/installation-de-l-instance-de-concertation-et-de-suivi-du-projet-de-parc-eolien-en-mer-eoliennes-flottantes-d-occitanie-eflo"
+      }
+    },
+    {
+      "id": "eoliennes-mediterranee-grand-large",
+      "name": "Eoliennes Mediterranee Grand Large",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "mediterranee-grand-large-eoliennes-mediterranee-grand-large-developer"
+      ],
+      "country": {
+        "name": "France",
+        "sourceUrl": "https://mediterranee-grand-large.com/"
+      }
+    },
+    {
+      "id": "equinor-wind-us-llc",
+      "name": "Equinor Wind US LLC",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-atlas-offshore-wind-ocs-p-0563-equinor-wind-us-llc-developer-owner"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://www.boem.gov/renewable-energy/state-activities/atlas-offshore-wind-llc-ocs-p-0563"
+      }
+    },
+    {
+      "id": "esb",
+      "name": "ESB",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "havbredey-offshore-wind-esb-developer",
+        "stoura-offshore-wind-esb-asset-management-developer",
+        "celtic-round5-gwynt-glas-esb"
+      ],
+      "country": {
+        "name": "Ireland",
+        "sourceUrl": "https://esb.ie/"
+      }
+    },
+    {
+      "id": "ferrovial",
+      "name": "Ferrovial",
+      "roles": [
+        "fabrication"
+      ],
+      "relationshipIds": [
+        "rel-supply-demosath-ferrovial-fabrication"
+      ],
+      "country": {
+        "name": "Spain",
+        "sourceUrl": "https://www.ferrovial.com/"
+      }
+    },
+    {
+      "id": "first-marine-solutions",
+      "name": "First Marine Solutions",
+      "roles": [
+        "mooring-anchoring"
+      ],
+      "relationshipIds": [
+        "rel-supply-bellrock-offshore-wind-first-marine-solutions-mooring",
+        "rel-supply-broadshore-offshore-wind-first-marine-solutions-mooring"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://www.firstmarinesolutions.com/"
+      }
+    },
+    {
+      "id": "flotation-energy",
+      "name": "Flotation Energy",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "green-volt-flotation-energy-developer",
+        "cenos-offshore-wind-flotation-energy-developer"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://flotationenergy.com/"
+      }
+    },
+    {
+      "id": "fred-olsen-seawind",
+      "name": "Fred. Olsen Seawind",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "muir-mhor-fred-olsen-seawind-developer"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://fredolsenseawind.com/about/contact/"
+      }
+    },
+    {
+      "id": "glocal",
+      "name": "Glocal",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hibiki-floating-demonstrator-glocal-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://g-local.co.jp/"
+      }
+    },
+    {
+      "id": "gojin-group",
+      "name": "Gojin Group",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hibiki-floating-demonstrator-gojin-group-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.smfl.co.jp/news/assets/250422.pdf"
+      }
+    },
+    {
+      "id": "golden-state-wind-llc",
+      "name": "Golden State Wind LLC",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "golden-state-wind-ocs-p-0564-golden-state-wind-llc-developer"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://goldenstatewind.com/"
+      }
+    },
+    {
+      "id": "goto-floating-wind-farm-llc",
+      "name": "Goto Floating Wind Farm LLC",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "goto-spc-developer"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.chuden.co.jp/english/corporate/releases/pressreleases/1217247_5163.html"
+      }
+    },
+    {
+      "id": "gwynt-glas",
+      "name": "Gwynt Glas",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "celtic-sea-round5-gwynt-glas-pda-gwynt-glas-developer"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://gwyntglas.com/"
+      }
+    },
+    {
+      "id": "harbour-energy",
+      "name": "Harbour Energy",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hywind-tampen-harbour-energy-developer-owner"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://www.harbourenergy.com/"
+      }
+    },
+    {
+      "id": "hexicon",
+      "name": "Hexicon",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "munmubaram-hexicon-developer",
+        "rel-supply-pentland-floating-offshore-wind-farm-hexicon-developer-owner"
+      ],
+      "country": {
+        "name": "Sweden",
+        "sourceUrl": "https://www.hexicongroup.com/"
+      }
+    },
+    {
+      "id": "hibiki-floating-wind-power-llc",
+      "name": "Hibiki Floating Wind Power LLC",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hibiki-floating-demonstrator-hibiki-floating-wind-power-llc-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://g-local.co.jp/hibiki/"
+      }
+    },
+    {
+      "id": "highland-wind-limited",
+      "name": "Highland Wind Limited",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-pentland-floating-offshore-wind-farm-highland-wind-limited-developer-owner"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://pentlandfloatingwind.com/about-us/"
+      }
+    },
+    {
+      "id": "hitachi",
+      "name": "Hitachi",
+      "roles": [
+        "turbine-oem"
+      ],
+      "relationshipIds": [
+        "rel-supply-goto-offshore-wind-farm-hitachi-wind-turbine-oem"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.hitachi.com/"
+      }
+    },
+    {
+      "id": "hitachi-zosen",
+      "name": "Hitachi Zosen",
+      "roles": [
+        "fabrication"
+      ],
+      "relationshipIds": [
+        "rel-supply-hibiki-floating-demonstrator-hitachi-zosen-fabrication"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.kanadevia.com/english/"
+      }
+    },
+    {
+      "id": "ifp-energies-nouvelles",
+      "name": "IFP Energies Nouvelles",
+      "roles": [
+        "platform-engineering"
+      ],
+      "relationshipIds": [
+        "rel-supply-provence-grand-large-ifp-energies-nouvelles-platform-engineering"
+      ],
+      "country": {
+        "name": "France",
+        "sourceUrl": "https://www.ifpenergiesnouvelles.com/"
+      }
+    },
+    {
+      "id": "inpex",
+      "name": "INPEX",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "goto-inpex-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.inpex.com/english/"
+      }
+    },
+    {
+      "id": "inpex-idemitsu-norge",
+      "name": "INPEX Idemitsu Norge",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hywind-tampen-inpex-idemitsu-norge-developer-owner"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://inpex-idemitsu.no/"
+      }
+    },
+    {
+      "id": "invenergy-california-offshore-llc",
+      "name": "Invenergy California Offshore LLC",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "invenergy-california-offshore-ocs-p-0565-invenergy-california-offshore-llc-developer"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://www.boem.gov/renewable-energy/state-activities/invenergy-california-offshore-llc-ocs-p-0565"
+      }
+    },
+    {
+      "id": "isleburn-global-energy-group",
+      "name": "Isleburn (Global Energy Group)",
+      "roles": [
+        "mooring-anchoring"
+      ],
+      "relationshipIds": [
+        "rel-supply-hywind-scotland-isleburn-global-energy-group-anchoring"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://www.gegroup.com/"
+      }
+    },
+    {
+      "id": "kansai-electric-power",
+      "name": "Kansai Electric Power",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "demosath-kepco-partner",
+        "rel-supply-goto-offshore-wind-farm-kansai-electric-power-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.kepco.co.jp/english/"
+      }
+    },
+    {
+      "id": "kent",
+      "name": "Kent",
+      "roles": [
+        "engineering-consulting"
+      ],
+      "relationshipIds": [
+        "buchan-kent-owner-engineer"
+      ],
+      "country": {
+        "name": "United Arab Emirates",
+        "sourceUrl": "https://kentplc.com/"
+      }
+    },
+    {
+      "id": "kincardine-offshore-windfarm-ltd",
+      "name": "Kincardine Offshore Windfarm Ltd",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-kincardine-offshore-wind-farm-kincardine-offshore-windfarm-ltd-developer-owner"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://find-and-update.company-information.service.gov.uk/company/SC475345"
+      }
+    },
+    {
+      "id": "kotobuki-engineering-manufacturing-kemco",
+      "name": "Kotobuki Engineering & Manufacturing (KEMCO)",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hibiki-floating-demonstrator-kotobuki-engineering-manufacturing-kemco-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.kemco.co.jp/eng/"
+      }
+    },
+    {
+      "id": "maersk-supply-service",
+      "name": "Maersk Supply Service",
+      "roles": [
+        "mooring-anchoring",
+        "marine-installation"
+      ],
+      "relationshipIds": [
+        "rel-supply-efgl-maersk-supply-service-mooring",
+        "rel-supply-efgl-maersk-supply-service-marine-installation"
+      ],
+      "country": {
+        "name": "Denmark",
+        "sourceUrl": "https://www.maersksupplyservice.com/"
+      }
+    },
+    {
+      "id": "magnora-offshore-wind",
+      "name": "Magnora Offshore Wind",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "talisk-offshore-wind-magnora-offshore-wind-developer"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://www.magnoraoffshorewind.com/"
+      }
+    },
+    {
+      "id": "maple-power",
+      "name": "Maple Power",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "mediterranee-grand-large-maple-power-developer"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://www.maplepower.com/"
+      }
+    },
+    {
+      "id": "marubeni",
+      "name": "Marubeni",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "ossian-marubeni-developer"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.marubeni.com/en/"
+      }
+    },
+    {
+      "id": "masdar",
+      "name": "Masdar",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "hywind-scotland-masdar-owner"
+      ],
+      "country": {
+        "name": "United Arab Emirates",
+        "sourceUrl": "https://masdar.ae/"
+      }
+    },
+    {
+      "id": "munmubaram-co-ltd",
+      "name": "MunmuBaram Co., Ltd.",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "munmubaram-munmubaram-co-ltd-developer"
+      ],
+      "country": {
+        "name": "South Korea",
+        "sourceUrl": "https://www.munmubaram.co.kr/"
+      }
+    },
+    {
+      "id": "nadara",
+      "name": "Nadara",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "bellrock-offshore-wind-nadara-developer",
+        "broadshore-offshore-wind-nadara-developer",
+        "stromar-offshore-wind-nadara-developer"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://nadara.com/"
+      }
+    },
+    {
+      "id": "navantia-windar",
+      "name": "Navantia-Windar",
+      "roles": [
+        "fabrication"
+      ],
+      "relationshipIds": [
+        "rel-supply-kincardine-offshore-wind-farm-navantia-windar-fabrication",
+        "rel-supply-hywind-scotland-navantia-windar-fabrication"
+      ],
+      "country": {
+        "name": "Spain",
+        "sourceUrl": "https://navantiaseanergies.com/"
+      }
+    },
+    {
+      "id": "nedo",
+      "name": "NEDO",
+      "roles": [
+        "research-public-body",
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "hibiki-nedo-research",
+        "rel-supply-hibiki-floating-demonstrator-nedo-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.nedo.go.jp/english/"
+      }
+    },
+    {
+      "id": "northland-power",
+      "name": "Northland Power",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "havbredey-offshore-wind-northland-power-developer"
+      ],
+      "country": {
+        "name": "Canada",
+        "sourceUrl": "https://www.northlandpower.com/"
+      }
+    },
+    {
+      "id": "odfjell-oceanwind",
+      "name": "Odfjell Oceanwind",
+      "roles": [
+        "developer-owner",
+        "floating-platform"
+      ],
+      "relationshipIds": [
+        "salamander-floating-wind-odfjell-oceanwind-developer",
+        "salamander-odfjell-platform"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://odfjelloceanwind.com/"
+      }
+    },
+    {
+      "id": "offshore-oil-engineering-co-ltd",
+      "name": "Offshore Oil Engineering Co., Ltd.",
+      "roles": [
+        "epci-subsea",
+        "platform-engineering"
+      ],
+      "relationshipIds": [
+        "guanlan-cooec-epci",
+        "rel-supply-haiyou-guanlan-offshore-oil-engineering-co-ltd-platform-engineering"
+      ],
+      "country": {
+        "name": "China",
+        "sourceUrl": "https://www.cnoocengineering.com/english/"
+      }
+    },
+    {
+      "id": "omv",
+      "name": "OMV",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hywind-tampen-omv-developer-owner"
+      ],
+      "country": {
+        "name": "Austria",
+        "sourceUrl": "https://www.omv.com/"
+      }
+    },
+    {
+      "id": "orsted",
+      "name": "Orsted",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "stromar-offshore-wind-orsted-developer",
+        "rel-supply-salamander-floating-wind-orsted-developer-owner"
+      ],
+      "country": {
+        "name": "Denmark",
+        "sourceUrl": "https://orsted.com/"
+      }
+    },
+    {
+      "id": "osaka-gas",
+      "name": "Osaka Gas",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-goto-offshore-wind-farm-osaka-gas-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.osakagas.co.jp/en/"
+      }
+    },
+    {
+      "id": "petoro",
+      "name": "Petoro",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hywind-tampen-petoro-developer-owner"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://www.petoro.no/"
+      }
+    },
+    {
+      "id": "pilot-offshore-renewables",
+      "name": "Pilot Offshore Renewables",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-kincardine-offshore-wind-farm-pilot-offshore-renewables-developer-owner"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://find-and-update.company-information.service.gov.uk/company/SC447614"
+      }
+    },
+    {
+      "id": "pine-tree-offshore-wind",
+      "name": "Pine Tree Offshore Wind",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "maine-pine-tree-operator"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://www.boem.gov/renewable-energy/state-activities/state-maine-research-lease"
+      }
+    },
+    {
+      "id": "qair",
+      "name": "Qair",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "eolmed-qair-developer",
+        "ayre-offshore-wind-qair-developer"
+      ],
+      "country": {
+        "name": "France",
+        "sourceUrl": "https://www.qair.energy/"
+      }
+    },
+    {
+      "id": "renewable-japan",
+      "name": "Renewable Japan",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hibiki-floating-demonstrator-renewable-japan-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.reene-energy.co.jp/"
+      }
+    },
+    {
+      "id": "renexia",
+      "name": "Renexia",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "med-wind-renexia-developer"
+      ],
+      "country": {
+        "name": "Italy",
+        "sourceUrl": "https://renexia.it/en/"
+      }
+    },
+    {
+      "id": "repsol",
+      "name": "Repsol",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-windfloat-atlantic-repsol-developer-owner"
+      ],
+      "country": {
+        "name": "Spain",
+        "sourceUrl": "https://www.repsol.com/"
+      }
+    },
+    {
+      "id": "rps",
+      "name": "RPS",
+      "roles": [
+        "engineering-consulting"
+      ],
+      "relationshipIds": [
+        "firefly-rps-esia"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://www.rpsgroup.com/"
+      }
+    },
+    {
+      "id": "rte",
+      "name": "RTE",
+      "roles": [
+        "grid-technology"
+      ],
+      "relationshipIds": [
+        "pgl-rte-grid",
+        "eolmed-rte-grid",
+        "mediterranee-grand-large-rte-grid"
+      ],
+      "country": {
+        "name": "France",
+        "sourceUrl": "https://www.rte-france.com/"
+      }
+    },
+    {
+      "id": "sekwang-engineering",
+      "name": "Sekwang Engineering",
+      "roles": [
+        "engineering-consulting"
+      ],
+      "relationshipIds": [
+        "firefly-sekwang-eia"
+      ],
+      "country": {
+        "name": "South Korea",
+        "sourceUrl": "https://www.segwang.net/"
+      }
+    },
+    {
+      "id": "simply-blue-energy",
+      "name": "Simply Blue Energy",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "salamander-floating-wind-simply-blue-developer",
+        "rel-supply-erebus-floating-wind-farm-simply-blue-energy-developer-owner"
+      ],
+      "country": {
+        "name": "Ireland",
+        "sourceUrl": "https://simplybluegroup.com/"
+      }
+    },
+    {
+      "id": "smfl-mirai-partners",
+      "name": "SMFL Mirai Partners",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hibiki-floating-demonstrator-smfl-mirai-partners-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.smfl-mp.co.jp/"
+      }
+    },
+    {
+      "id": "smulders",
+      "name": "Smulders",
+      "roles": [
+        "mooring-anchoring"
+      ],
+      "relationshipIds": [
+        "rel-supply-efgl-smulders-mooring"
+      ],
+      "country": {
+        "name": "Belgium",
+        "sourceUrl": "https://www.smulders.com/"
+      }
+    },
+    {
+      "id": "sse-renewables",
+      "name": "SSE Renewables",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "ossian-sse-renewables-developer"
+      ],
+      "country": {
+        "name": "United Kingdom",
+        "sourceUrl": "https://www.sserenewables.com/"
+      }
+    },
+    {
+      "id": "state-of-maine",
+      "name": "State of Maine",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "maine-state-developer"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://www.maine.gov/"
+      }
+    },
+    {
+      "id": "technipfmc",
+      "name": "TechnipFMC",
+      "roles": [
+        "mooring-anchoring",
+        "marine-installation"
+      ],
+      "relationshipIds": [
+        "rel-supply-hywind-scotland-technipfmc-mooring",
+        "rel-supply-hywind-scotland-technipfmc-marine-installation"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://www.technipfmc.com/media/vsmb1cj2/form-sd-id7971144.pdf"
+      }
+    },
+    {
+      "id": "toda-corporation",
+      "name": "Toda Corporation",
+      "roles": [
+        "developer-owner",
+        "floating-platform",
+        "marine-installation",
+        "cable-systems",
+        "mooring-anchoring"
+      ],
+      "relationshipIds": [
+        "goto-toda-owner",
+        "goto-toda-hybrid-spar",
+        "rel-supply-goto-offshore-wind-farm-toda-corporation-marine-installation",
+        "rel-supply-goto-offshore-wind-farm-toda-corporation-dynamic-cable",
+        "rel-supply-goto-offshore-wind-farm-toda-corporation-mooring"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.toda.co.jp/english/"
+      }
+    },
+    {
+      "id": "tokyo-gas",
+      "name": "Tokyo Gas",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-windfloat-atlantic-tokyo-gas-developer-owner"
+      ],
+      "country": {
+        "name": "Japan",
+        "sourceUrl": "https://www.tokyo-gas.co.jp/en/"
+      }
+    },
+    {
+      "id": "university-of-maine",
+      "name": "University of Maine",
+      "roles": [
+        "floating-platform"
+      ],
+      "relationshipIds": [
+        "maine-umaine-technology"
+      ],
+      "country": {
+        "name": "United States",
+        "sourceUrl": "https://umaine.edu/"
+      }
+    },
+    {
+      "id": "var-energi",
+      "name": "Vår Energi",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hywind-tampen-v-r-energi-developer-owner"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://varenergi.no/"
+      }
+    },
+    {
+      "id": "vargronn",
+      "name": "Vårgrønn",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "green-volt-vargronn-developer",
+        "cenos-offshore-wind-vargronn-developer",
+        "utsira-nord-equinor-vargronn-area-3-vargronn-developer"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://www.vargronn.com/"
+      }
+    },
+    {
+      "id": "vattenfall",
+      "name": "Vattenfall",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "muir-mhor-vattenfall-developer"
+      ],
+      "country": {
+        "name": "Sweden",
+        "sourceUrl": "https://group.vattenfall.com/"
+      }
+    },
+    {
+      "id": "windplus",
+      "name": "Windplus",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-windfloat-atlantic-windplus-developer-owner"
+      ],
+      "country": {
+        "name": "Portugal",
+        "sourceUrl": "https://www.principlepower.com/projects/windfloat-atlantic"
+      }
+    },
+    {
+      "id": "windstaller-alliance",
+      "name": "Windstaller Alliance",
+      "roles": [
+        "marine-installation",
+        "mooring-anchoring"
+      ],
+      "relationshipIds": [
+        "rel-supply-demosath-windstaller-alliance-marine-installation",
+        "rel-supply-demosath-windstaller-alliance-mooring"
+      ],
+      "country": {
+        "name": "Norway",
+        "sourceUrl": "https://www.windstalleralliance.com/"
+      }
+    },
+    {
+      "id": "wintershall-dea",
+      "name": "Wintershall Dea",
+      "roles": [
+        "developer-owner"
+      ],
+      "relationshipIds": [
+        "rel-supply-hywind-tampen-wintershall-dea-developer-owner"
+      ],
+      "country": {
+        "name": "Germany",
+        "sourceUrl": "https://wintershalldea.com/"
+      }
+    },
+    {
+      "id": "worley",
+      "name": "Worley",
+      "roles": [
+        "engineering-consulting"
+      ],
+      "relationshipIds": [
+        "green-volt-worley-feed"
+      ],
+      "country": {
+        "name": "Australia",
+        "sourceUrl": "https://www.worley.com/"
+      }
+    }
+  ],
+  "existingLinks": [
+    {
+      "id": "edf-renewables",
+      "relationshipIds": [
+        "celtic-round5-gwynt-glas-edf"
+      ]
+    }
+  ]
+}

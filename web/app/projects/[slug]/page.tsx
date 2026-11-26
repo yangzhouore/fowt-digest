@@ -1,6 +1,7 @@
+import { ProjectRelationships } from "../project-relationships";
 import { localizeServerContent } from "../../i18n/server-content";
 import Link from "next/link";
-import { ProjectEngineeringCoverage, IndustryEntryLink } from "../../connected-project-context";
+import { ProjectEngineeringCoverage } from "../../connected-project-context";
 import { ProjectPublicEvidence, ProjectReviewStrip, ProjectReviewHistory } from "../project-public-evidence";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -9,11 +10,9 @@ import {
   formatCapacity,
   formatDate,
   formatEventType,
-  formatRole,
   formatStatus,
   getAllProjects,
   getProjectBySlug,
-  relationshipContextLabel,
   type ProjectCompanyRelationship,
   type ProjectWithRelations,
 } from "../../../data/project-adapter";
@@ -101,8 +100,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   }
 
   return localizeServerContent((
-    <main>
-
+    <main className="project-profile-page">
       <article>
         <section className="project-detail-hero" aria-labelledby="project-heading">
           <p className="eyebrow"><LocalizedCopy en="Project profile" zh="项目档案" /></p>
@@ -141,9 +139,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           ) : null}
         </section>
 
+        <ProjectRelationships groups={groupedRelationships} />
         <ProjectReviewStrip project={project} />
-        <ProjectPublicEvidence project={project} />
-        <ProjectReviewHistory project={project} />
 
         <section className="project-technical" aria-labelledby="technical-heading">
           <h2 id="technical-heading"><LocalizedCopy en="Technical configuration" zh="技术配置" /></h2>
@@ -163,37 +160,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </p>
           )}
         </section>
-
-        <section className="project-ecosystem" aria-labelledby="ecosystem-heading">
-          <div className="project-section-copy">
-            <p className="eyebrow"><LocalizedCopy en="Project ecosystem" zh="项目生态" /></p>
-            <h2 id="ecosystem-heading"><LocalizedCopy en="Who is involved, and what are they doing?" zh="有哪些参与方，各自承担什么工作？" /></h2>
-          </div>
-          <div className="project-ecosystem-grid">
-            {groupedRelationships.map(([role, relationships]) => (
-              <section className="project-role-group" key={role}>
-                <h3>{formatRole(role)}</h3>
-                <ul>
-                  {relationships.map((relationship) => (
-                    <li key={relationship.id}>
-                      <p>{relationship.companyName}</p>
-                      <IndustryEntryLink companyId={relationship.industryCompanyId} companyName={relationship.companyName} />
-                      <span><LocalizedCopy
-                        {...relationshipContextLabel(relationship)}
-                      /></span>
-                      {relationship.sourceStatusText && <span>{relationship.sourceStatusText}</span>}
-                      {relationship.roleDetail ? (
-                        <span>{relationship.roleDetail}</span>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ))}
-          </div>
-        </section>
-
-        <ProjectEngineeringCoverage projectId={project.id} />
 
         <section className="project-timeline-section" aria-labelledby="timeline-heading">
           <div className="project-section-copy">
@@ -228,6 +194,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </p>
           )}
         </section>
+
+        <ProjectEngineeringCoverage projectId={project.id} />
+        <ProjectPublicEvidence project={project} />
+        <ProjectReviewHistory project={project} />
 
         <section className="project-sources" aria-labelledby="sources-heading">
           <div className="project-section-copy">
@@ -305,8 +275,7 @@ function ProjectIntelligenceDetailPage({
   const watchpoints = intelligence.watchpoints.map(parseWatchpoint);
 
   return localizeServerContent((
-    <main>
-
+    <main className="project-profile-page">
       <article className="project-intel-detail">
         <section className="project-intel-hero" aria-labelledby="project-heading">
           <p className="eyebrow"><LocalizedCopy en="Project intelligence" zh="项目情报" /></p>
@@ -329,23 +298,8 @@ function ProjectIntelligenceDetailPage({
           </div>
         </section>
 
+        <ProjectRelationships groups={groupedRelationships} />
         <ProjectReviewStrip project={project} />
-
-        <section className="project-intel-section project-intel-progress-section" aria-labelledby="progress-heading">
-          <div className="project-section-copy">
-            <p className="eyebrow">Project progress</p>
-            <h2 id="progress-heading">Lifecycle gates</h2>
-          </div>
-          <ol className="project-intel-progress">
-            {progressGates.map((gate) => (
-              <li key={gate.label} className={`project-intel-state-${stateClass(gate.state)}`}>
-                <p>{gate.label}</p>
-                <strong>{gate.state}</strong>
-                <span>{gate.note}</span>
-              </li>
-            ))}
-          </ol>
-        </section>
 
         <section className="project-intel-section project-intel-stands" aria-labelledby="stands-heading">
           <div className="project-section-copy">
@@ -369,22 +323,20 @@ function ProjectIntelligenceDetailPage({
           </div>
         </section>
 
-        <section className="project-intel-section" aria-labelledby="story-heading">
+        <section className="project-intel-section project-intel-progress-section" aria-labelledby="progress-heading">
           <div className="project-section-copy">
-            <p className="eyebrow">Why the story changed</p>
-            <h2 id="story-heading">From original thesis to current gate</h2>
+            <h2 id="progress-heading">Lifecycle gates</h2>
           </div>
-          <ol className="project-intel-story-chain">
-            {storySteps.map((step) => (
-              <li key={step.label}>
-                <span>{step.label}</span>
-                <p>{step.text}</p>
+          <ol className="project-intel-progress">
+            {progressGates.map((gate) => (
+              <li key={gate.label} className={`project-intel-state-${stateClass(gate.state)}`}>
+                <p>{gate.label}</p>
+                <strong>{gate.state}</strong>
+                <span>{gate.note}</span>
               </li>
             ))}
           </ol>
         </section>
-
-        <ProjectPublicEvidence project={project} />
 
         <section className="project-intel-section" aria-labelledby="watch-heading">
           <div className="project-section-copy">
@@ -400,8 +352,6 @@ function ProjectIntelligenceDetailPage({
             ))}
           </ol>
         </section>
-
-        <ProjectEngineeringCoverage projectId={project.id} />
 
         <section className="project-timeline-section project-intel-section project-intel-secondary" aria-labelledby="timeline-heading">
           <div className="project-section-copy">
@@ -450,34 +400,23 @@ function ProjectIntelligenceDetailPage({
           )}
         </section>
 
-        <section className="project-ecosystem project-intel-section project-intel-secondary" aria-labelledby="ecosystem-heading">
+        <section className="project-intel-section" aria-labelledby="story-heading">
           <div className="project-section-copy">
-            <p className="eyebrow">Companies</p>
-            <h2 id="ecosystem-heading">Project relationships</h2>
+            <p className="eyebrow">Why the story changed</p>
+            <h2 id="story-heading">From original thesis to current gate</h2>
           </div>
-          <div className="project-ecosystem-grid">
-            {groupedRelationships.map(([role, relationships]) => (
-              <section className="project-role-group" key={role}>
-                <h3>{formatRole(role)}</h3>
-                <ul>
-                  {relationships.map((relationship) => (
-                    <li key={relationship.id}>
-                      <p>{relationship.companyName}</p>
-                      <IndustryEntryLink companyId={relationship.industryCompanyId} companyName={relationship.companyName} />
-                      <span><LocalizedCopy
-                        {...relationshipContextLabel(relationship)}
-                      /></span>
-                      {relationship.sourceStatusText && <span>{relationship.sourceStatusText}</span>}
-                      {relationship.roleDetail ? (
-                        <span>{relationship.roleDetail}</span>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
-              </section>
+          <ol className="project-intel-story-chain">
+            {storySteps.map((step) => (
+              <li key={step.label}>
+                <span>{step.label}</span>
+                <p>{step.text}</p>
+              </li>
             ))}
-          </div>
+          </ol>
         </section>
+
+        <ProjectPublicEvidence project={project} />
+        <ProjectEngineeringCoverage projectId={project.id} />
 
         <section className="project-sources project-intel-section project-intel-secondary" aria-labelledby="sources-heading">
           <div className="project-section-copy">
@@ -617,8 +556,7 @@ function GreenVoltProjectDetailPage({
   ];
 
   return localizeServerContent((
-    <main>
-
+    <main className="project-profile-page">
       <article className="green-volt-detail">
         <section className="green-volt-hero" aria-labelledby="project-heading">
           <p className="eyebrow"><LocalizedCopy en="Project intelligence" zh="项目情报" /></p>
@@ -643,23 +581,8 @@ function GreenVoltProjectDetailPage({
           </div>
         </section>
 
+        <ProjectRelationships groups={groupedRelationships} />
         <ProjectReviewStrip project={project} />
-
-        <section className="green-volt-section green-volt-progress-section" aria-labelledby="progress-heading">
-          <div className="project-section-copy">
-            <p className="eyebrow">Project progress</p>
-            <h2 id="progress-heading">Lifecycle gates</h2>
-          </div>
-          <ol className="green-volt-progress">
-            {progressGates.map((gate) => (
-              <li key={gate.label} className={`green-volt-state-${stateClass(gate.state)}`}>
-                <p>{gate.label}</p>
-                <strong>{gate.state}</strong>
-                <span>{gate.note}</span>
-              </li>
-            ))}
-          </ol>
-        </section>
 
         <section className="green-volt-section green-volt-stands" aria-labelledby="stands-heading">
           <div className="project-section-copy">
@@ -684,22 +607,20 @@ function GreenVoltProjectDetailPage({
           </div>
         </section>
 
-        <section className="green-volt-section" aria-labelledby="story-heading">
+        <section className="green-volt-section green-volt-progress-section" aria-labelledby="progress-heading">
           <div className="project-section-copy">
-            <p className="eyebrow">Why the story changed</p>
-            <h2 id="story-heading">From route to market to gating decisions</h2>
+            <h2 id="progress-heading">Lifecycle gates</h2>
           </div>
-          <ol className="green-volt-story-chain">
-            {storySteps.map((step) => (
-              <li key={step.label}>
-                <span>{step.label}</span>
-                <p>{step.text}</p>
+          <ol className="green-volt-progress">
+            {progressGates.map((gate) => (
+              <li key={gate.label} className={`green-volt-state-${stateClass(gate.state)}`}>
+                <p>{gate.label}</p>
+                <strong>{gate.state}</strong>
+                <span>{gate.note}</span>
               </li>
             ))}
           </ol>
         </section>
-
-        <ProjectPublicEvidence project={project} />
 
         <section className="green-volt-section" aria-labelledby="watch-heading">
           <div className="project-section-copy">
@@ -715,8 +636,6 @@ function GreenVoltProjectDetailPage({
             ))}
           </ol>
         </section>
-
-        <ProjectEngineeringCoverage projectId={project.id} />
 
         <section className="project-timeline-section green-volt-section green-volt-secondary" aria-labelledby="timeline-heading">
           <div className="project-section-copy">
@@ -746,34 +665,23 @@ function GreenVoltProjectDetailPage({
           </ol>
         </section>
 
-        <section className="project-ecosystem green-volt-section green-volt-secondary" aria-labelledby="ecosystem-heading">
+        <section className="green-volt-section" aria-labelledby="story-heading">
           <div className="project-section-copy">
-            <p className="eyebrow">Companies</p>
-            <h2 id="ecosystem-heading">Project relationships</h2>
+            <p className="eyebrow">Why the story changed</p>
+            <h2 id="story-heading">From route to market to gating decisions</h2>
           </div>
-          <div className="project-ecosystem-grid">
-            {groupedRelationships.map(([role, relationships]) => (
-              <section className="project-role-group" key={role}>
-                <h3>{formatRole(role)}</h3>
-                <ul>
-                  {relationships.map((relationship) => (
-                    <li key={relationship.id}>
-                      <p>{relationship.companyName}</p>
-                      <IndustryEntryLink companyId={relationship.industryCompanyId} companyName={relationship.companyName} />
-                      <span><LocalizedCopy
-                        {...relationshipContextLabel(relationship)}
-                      /></span>
-                      {relationship.sourceStatusText && <span>{relationship.sourceStatusText}</span>}
-                      {relationship.roleDetail ? (
-                        <span>{relationship.roleDetail}</span>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
-              </section>
+          <ol className="green-volt-story-chain">
+            {storySteps.map((step) => (
+              <li key={step.label}>
+                <span>{step.label}</span>
+                <p>{step.text}</p>
+              </li>
             ))}
-          </div>
+          </ol>
         </section>
+
+        <ProjectPublicEvidence project={project} />
+        <ProjectEngineeringCoverage projectId={project.id} />
 
         <section className="project-sources green-volt-section green-volt-secondary" aria-labelledby="sources-heading">
           <div className="project-section-copy">

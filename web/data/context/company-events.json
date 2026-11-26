@@ -351,7 +351,8 @@
       "summary": "Vattenfall opened its European Offshore Wind Deployment Centre at Aberdeen Bay, where the eleven turbines included two MHI Vestas Offshore Wind V164-8.8 MW units.",
       "category": "projects_contracts",
       "companyIds": [
-        "vestas"
+        "vestas",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-19",
@@ -377,7 +378,8 @@
       "summary": "WindPlus selected MHI Vestas Offshore Wind for WindFloat Atlantic, a three-turbine floating offshore wind project in Portugal.",
       "category": "projects_contracts",
       "companyIds": [
-        "vestas"
+        "vestas",
+        "windplus"
       ],
       "projectIds": [
         "windfloat-atlantic"
@@ -1739,7 +1741,8 @@
       "companyIds": [
         "vestas",
         "principle-power",
-        "jdr-cables"
+        "jdr-cables",
+        "repsol"
       ],
       "projectIds": [
         "windfloat-atlantic"
@@ -1759,6 +1762,14 @@
           "publishedDate": "2020-07-27",
           "evidence": "WindFloat Atlantic was fully operational after connecting its final unit. The project identified Principle Power as a consortium member and JDR Cable Systems (named as JDR Cables) as its dynamic cable supplier.",
           "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "Windplus consortium via Repsol",
+          "url": "https://www.repsol.com/content/dam/repsol-corporate/en_gb/sala-de-prensa/documentos-sala-de-prensa/2020/PR27072020_windfloat_fully_operational_tcm14-198514.pdf",
+          "tier": "primary",
+          "evidence": "The consortium confirmed full commissioning of WindFloat Atlantic and identified Repsol among the owners.",
+          "publishedDate": "2020-07-27"
         }
       ],
       "historicalAttributions": [
@@ -2695,7 +2706,8 @@
       "summary": "Project partner Marubeni reported that Noshiro began commercial generation after all 33 turbines across Akita and Noshiro had been installed. The Vestas turbine package was documented in the earlier firm order.",
       "category": "projects_contracts",
       "companyIds": [
-        "vestas"
+        "vestas",
+        "marubeni"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-19",
@@ -2736,7 +2748,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "vestas",
-        "rwe"
+        "rwe",
+        "northland-power"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-19",
@@ -2965,7 +2978,8 @@
       "summary": "Vattenfall and Vestas agreed preferred supplier terms for Vanguard West and exclusivity terms for Vanguard East and Norfolk Boreas.",
       "category": "projects_contracts",
       "companyIds": [
-        "vestas"
+        "vestas",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-19",
@@ -3106,7 +3120,8 @@
       "summary": "Vestas announced the named scope of its previously disclosed conditional deal with Vattenfall and BASF for 112 V236-15.0 MW turbines across Nordlicht I and II. The deal specified low-emission steel for sections of 56 of the 112 turbine towers.",
       "category": "projects_contracts",
       "companyIds": [
-        "vestas"
+        "vestas",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-19",
@@ -3319,7 +3334,8 @@
       "summary": "Vestas confirmed a firm order from Vattenfall for 68 V236-15.0 MW turbines for Nordlicht 1 in the German North Sea.",
       "category": "projects_contracts",
       "companyIds": [
-        "vestas"
+        "vestas",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-19",
@@ -3660,7 +3676,8 @@
       "companyIds": [
         "vestas",
         "bw-ideol",
-        "totalenergies"
+        "totalenergies",
+        "qair"
       ],
       "projectIds": [
         "eolmed"
@@ -4198,7 +4215,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "vryhof",
-        "principle-power"
+        "principle-power",
+        "bourbon-subsea-services"
       ],
       "projectIds": [
         "windfloat-atlantic"
@@ -4758,7 +4776,12 @@
       "summary": "Equinor reported first power from Hywind Tampen to the Gullfaks A platform.",
       "category": "projects_contracts",
       "companyIds": [
-        "equinor"
+        "equinor",
+        "petoro",
+        "omv",
+        "var-energi",
+        "wintershall-dea",
+        "inpex-idemitsu-norge"
       ],
       "projectIds": [
         "hywind-tampen"
@@ -4769,7 +4792,8 @@
           "kind": "external",
           "publisher": "Equinor",
           "url": "https://www.equinor.com/news/20221114-first-power-from-hywind-tampen",
-          "tier": "primary"
+          "tier": "primary",
+          "evidence": "Equinor reported first power from Hywind Tampen to Gullfaks A. It named Petoro, OMV, Vår Energi, Wintershall Dea and INPEX Idemitsu Norge among the project partners at first power."
         }
       ]
     },
@@ -4887,7 +4911,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "rwe",
-        "saitec-offshore"
+        "saitec-offshore",
+        "windstaller-alliance"
       ],
       "projectIds": [
         "demosath"
@@ -4899,6 +4924,13 @@
           "publisher": "RWE and Saitec Offshore Technologies",
           "url": "https://www.rwe.com/-/media/RWE/documents/07-presse/rwe-offshore-wind-gmbh/2023/2023-08-11-demosath-has-achieved-a-key-project-milestone-with-the-offshore-installation.pdf",
           "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "Saitec Offshore Technologies",
+          "url": "https://saitec-offshore.com/en/demosath-installation-windstaller/",
+          "tier": "primary",
+          "evidence": "The Windstaller Alliance completed towing and installation of the DemoSATH floating platform."
         }
       ]
     },
@@ -5084,7 +5116,8 @@
       "category": "manufacturing_supply_chain",
       "companyIds": [
         "principle-power",
-        "technip-energies"
+        "technip-energies",
+        "aker-solutions"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -5132,7 +5165,8 @@
       "summary": "Prysmian reported completing the Gruissan/Eolmed export cable, including installation, testing and commissioning under its contract with RTE.",
       "category": "projects_contracts",
       "companyIds": [
-        "prysmian"
+        "prysmian",
+        "rte"
       ],
       "projectIds": [
         "eolmed"
@@ -5304,7 +5338,8 @@
       "companyIds": [
         "bureau-veritas",
         "saitec-offshore",
-        "rwe"
+        "rwe",
+        "kansai-electric-power"
       ],
       "projectIds": [
         "demosath"
@@ -5326,7 +5361,8 @@
       "summary": "Renexia and Mingyang Smart Energy signed a front-end engineering and design agreement for turbines for the Med Wind floating project.",
       "category": "projects_contracts",
       "companyIds": [
-        "mingyang"
+        "mingyang",
+        "renexia"
       ],
       "projectIds": [
         "med-wind"
@@ -5349,7 +5385,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "delmar-systems",
-        "totalenergies"
+        "totalenergies",
+        "archer-wind"
       ],
       "projectIds": [
         "culzean-demo-floating-wind"
@@ -5399,7 +5436,8 @@
       "summary": "France awarded the 250 MW Eoliennes Flottantes d Occitanie floating offshore wind project to Ocean Winds and Banque des Territoires.",
       "category": "projects_contracts",
       "companyIds": [
-        "ocean-winds"
+        "ocean-winds",
+        "banque-des-territoires"
       ],
       "projectIds": [
         "eflo-narbonnaise"
@@ -5421,7 +5459,9 @@
       "summary": "France selected Eoliennes Méditerranée Grand Large, owned by EDF Renewables and Maple Power, to design, build and operate the 250 MW Golfe de Fos 1 floating project.",
       "category": "projects_contracts",
       "companyIds": [
-        "edf-renewables"
+        "edf-renewables",
+        "maple-power",
+        "eoliennes-mediterranee-grand-large"
       ],
       "projectIds": [
         "mediterranee-grand-large"
@@ -5434,6 +5474,12 @@
           "url": "https://edf-renouvelables.com/en/communiques/edf-renouvelables-et-maple-power-remportent-un-projet-eolien-en-mer-flottant-de-250-mw-en-mediterranee/",
           "tier": "primary",
           "evidence": "France selected Eoliennes Méditerranée Grand Large, owned by EDF Renewables and Maple Power, to design, build and operate the 250 MW Golfe de Fos 1 floating project. The awarded project is the Mediterranee Grand Large project."
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "eoliennes-mediterranee-grand-large",
+          "name": "Eoliennes Méditerranée Grand Large"
         }
       ]
     },
@@ -5526,7 +5572,9 @@
       "companyIds": [
         "edf-renewables",
         "siemens-gamesa",
-        "sbm-offshore"
+        "sbm-offshore",
+        "enbridge-eolien-france-2",
+        "cpp-investments"
       ],
       "projectIds": [
         "provence-grand-large"
@@ -5537,7 +5585,8 @@
           "kind": "external",
           "publisher": "EDF Group",
           "url": "https://www.edf.fr/en/the-edf-group/dedicated-sections/journalists/all-press-releases/provence-grand-large-full-commissioning-of-the-first-french-floating-offshore-wind-farm",
-          "tier": "primary"
+          "tier": "primary",
+          "evidence": "EDF Renewables and Enbridge Éolien France 2, a subsidiary of Enbridge and CPP Investments, announced full commissioning of Provence Grand Large. Siemens Gamesa supplied the turbines and SBM Offshore supplied the foundations."
         }
       ]
     },
@@ -5616,7 +5665,9 @@
       "category": "projects_contracts",
       "companyIds": [
         "equinor",
-        "edf-renewables"
+        "edf-renewables",
+        "esb",
+        "gwynt-glas"
       ],
       "projectIds": [
         "celtic-sea-round5-equinor-pda",
@@ -5951,7 +6002,8 @@
       "summary": "RWE announced a settlement under which it would relinquish its federal offshore wind leases off California and in the Gulf of Mexico.",
       "category": "corporate_market",
       "companyIds": [
-        "rwe"
+        "rwe",
+        "canopy-offshore-wind-llc"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -5961,6 +6013,13 @@
           "publisher": "RWE",
           "url": "https://americas.rwe.com/press/2026-08-06-rwe-us-offshore-reaches-settlement-agreement/",
           "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "Bureau of Ocean Energy Management",
+          "url": "https://www.boem.gov/renewable-energy/state-activities/rwe-lease-relinquishment-ocs-p-0561",
+          "tier": "primary",
+          "evidence": "BOEM confirms that Canopy Offshore Wind, LLC, the then-holder of California lease OCS-P 0561, filed the relinquishment under the RWE settlement."
         }
       ]
     },
@@ -5993,7 +6052,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "boskalis",
-        "cip"
+        "cip",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -6301,7 +6361,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "ge-vernova",
-        "equinor"
+        "equinor",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -6450,7 +6511,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "heerema",
-        "equinor"
+        "equinor",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -6736,7 +6798,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "saipem",
-        "equinor"
+        "equinor",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -6777,7 +6840,8 @@
       "summary": "Shell agreed to acquire 51% of Simply Blue Energy's venture to develop the Emerald floating wind project off southern Ireland.",
       "category": "corporate_market",
       "companyIds": [
-        "shell"
+        "shell",
+        "simply-blue-energy"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -6972,7 +7036,8 @@
       "summary": "France selected the EDF Renewables and Maple Power project company for the roughly 1 GW Centre Manche 1 offshore wind project.",
       "category": "projects_contracts",
       "companyIds": [
-        "edf-renewables"
+        "edf-renewables",
+        "maple-power"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -7013,7 +7078,8 @@
       "summary": "Hexicon signed an agreement to buy Shell's stake in the MunmuBaram floating offshore wind project company.",
       "category": "corporate_market",
       "companyIds": [
-        "shell"
+        "shell",
+        "hexicon"
       ],
       "projectIds": [
         "munmubaram"
@@ -7035,7 +7101,9 @@
       "summary": "Hexicon completed the acquisition of Shell's 80% interest in MunmuBaram after receiving regulatory approvals.",
       "category": "corporate_market",
       "companyIds": [
-        "shell"
+        "shell",
+        "hexicon",
+        "munmubaram-co-ltd"
       ],
       "projectIds": [
         "munmubaram"
@@ -7047,6 +7115,13 @@
           "publisher": "MunmuBaram",
           "url": "https://www.munmubaram.com/news-notices/hexicon-completes-acquisition-of-munmubaram",
           "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "MunmuBaram",
+          "url": "https://www.munmubaram.com/the-project",
+          "tier": "primary",
+          "evidence": "MunmuBaram Co., Ltd. was established by Hexicon and Shell and is now owned by Hexicon."
         }
       ]
     },
@@ -7229,7 +7304,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "bw-ideol",
-        "edf-renewables"
+        "edf-renewables",
+        "maple-power"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -7830,7 +7906,8 @@
       "summary": "Equinor and Masdar installed Batwind, a battery system designed to store electricity from the Hywind Scotland floating wind farm.",
       "category": "technology_engineering",
       "companyIds": [
-        "equinor"
+        "equinor",
+        "masdar"
       ],
       "projectIds": [
         "hywind-scotland"
@@ -8069,7 +8146,8 @@
       "category": "corporate_market",
       "companyIds": [
         "edf-renewables",
-        "bw-ideol"
+        "bw-ideol",
+        "bw-ideol-projects-company"
       ],
       "projectIds": [
         "mediterranee-grand-large"
@@ -8237,7 +8315,8 @@
       "summary": "Iberdrola and Masdar announced financial close for the 1.4 GW East Anglia THREE offshore wind project.",
       "category": "projects_contracts",
       "companyIds": [
-        "iberdrola-scottishpower"
+        "iberdrola-scottishpower",
+        "masdar"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -8525,7 +8604,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "equinor",
-        "ge-vernova"
+        "ge-vernova",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -8552,7 +8632,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "equinor",
-        "ge-vernova"
+        "ge-vernova",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -8638,7 +8719,8 @@
       "summary": "Equinor was selected for California's offshore wind lease OCS-P 0563, later known as Atlas Offshore Wind lease OCS-P 0563.",
       "category": "projects_contracts",
       "companyIds": [
-        "equinor"
+        "equinor",
+        "equinor-wind-us-llc"
       ],
       "projectIds": [
         "atlas-offshore-wind-ocs-p-0563"
@@ -8650,6 +8732,13 @@
           "publisher": "Equinor",
           "url": "https://www.equinor.com/news/20221207-lease-california-floating-offshore-wind",
           "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "Bureau of Ocean Energy Management",
+          "url": "https://www.boem.gov/renewable-energy/state-activities/atlas-offshore-wind-llc-ocs-p-0563",
+          "tier": "primary",
+          "evidence": "Equinor Wind US LLC won Lease Area OCS-P 0563 and later assigned it to Atlas Offshore Wind LLC."
         }
       ]
     },
@@ -8827,7 +8916,8 @@
       "summary": "ScottishPower announced installation of the first turbine at its East Anglia THREE offshore wind farm, co-owned with Masdar.",
       "category": "projects_contracts",
       "companyIds": [
-        "iberdrola-scottishpower"
+        "iberdrola-scottishpower",
+        "masdar"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -9061,7 +9151,8 @@
       "summary": "Equinor and SSE Renewables secured Contracts for Difference for the three Dogger Bank offshore wind projects at the UK auction.",
       "category": "projects_contracts",
       "companyIds": [
-        "equinor"
+        "equinor",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -9108,7 +9199,8 @@
       "summary": "EDF Renewables announced construction of the 450 MW Neart na Gaoithe offshore wind farm and a new partnership with ESB.",
       "category": "projects_contracts",
       "companyIds": [
-        "edf-renewables"
+        "edf-renewables",
+        "esb"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -9170,7 +9262,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "edf-renewables",
-        "sbm-offshore"
+        "sbm-offshore",
+        "ifp-energies-nouvelles"
       ],
       "projectIds": [
         "provence-grand-large"
@@ -9234,7 +9327,8 @@
       "summary": "Golden State Wind, a joint venture of Ocean Winds and CPP Investments, won California's Golden State Wind lease OCS-P 0564 in the federal auction.",
       "category": "projects_contracts",
       "companyIds": [
-        "ocean-winds"
+        "ocean-winds",
+        "cpp-investments"
       ],
       "projectIds": [
         "golden-state-wind-ocs-p-0564"
@@ -9318,7 +9412,8 @@
       "summary": "Ocean Winds and Tokyo Gas announced an ownership partnership in the operating WindFloat Atlantic floating wind farm.",
       "category": "corporate_market",
       "companyIds": [
-        "ocean-winds"
+        "ocean-winds",
+        "tokyo-gas"
       ],
       "projectIds": [
         "windfloat-atlantic"
@@ -9493,7 +9588,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "edf-renewables",
-        "sbm-offshore"
+        "sbm-offshore",
+        "eiffage-metal"
       ],
       "projectIds": [
         "provence-grand-large"
@@ -9849,7 +9945,9 @@
       "category": "projects_contracts",
       "companyIds": [
         "equinor",
-        "edf-renewables"
+        "edf-renewables",
+        "vargronn",
+        "deep-wind-offshore-norway"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -9865,6 +9963,10 @@
         {
           "companyId": "edf-renewables",
           "name": "EDF Renouvelables International"
+        },
+        {
+          "companyId": "deep-wind-offshore-norway",
+          "name": "Deep Wind Offshore"
         }
       ]
     },
@@ -9897,7 +9999,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "siemens-gamesa",
-        "cip"
+        "cip",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -9977,7 +10080,8 @@
       "summary": "CNOOC Engineering reported grid connection of Haiyou Guanlan. Mingyang Smart Energy identified the platform as a project it jointly developed with CNOOC.",
       "category": "projects_contracts",
       "companyIds": [
-        "mingyang"
+        "mingyang",
+        "cnooc"
       ],
       "projectIds": [
         "haiyou-guanlan"
@@ -10035,7 +10139,8 @@
       "summary": "RWE subsidiary innogy agreed to sell interests in the Triton Knoll offshore wind farm to J-Power and Kansai Electric Power, subject to closing conditions.",
       "category": "corporate_market",
       "companyIds": [
-        "rwe"
+        "rwe",
+        "kansai-electric-power"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -10271,7 +10376,8 @@
       "summary": "ESB reported that the 54-turbine Neart na Gaoithe offshore wind farm it co-owns with EDF power solutions had reached full operation.",
       "category": "projects_contracts",
       "companyIds": [
-        "edf-renewables"
+        "edf-renewables",
+        "esb"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -10324,7 +10430,8 @@
       "summary": "Eni announced a collaboration agreement between Equinor and Vårgrønn to pursue a floating offshore wind project in the Utsira Nord area.",
       "category": "projects_contracts",
       "companyIds": [
-        "equinor"
+        "equinor",
+        "vargronn"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -10483,7 +10590,8 @@
       "summary": "RWE agreed with Northland Power to acquire its 49% stake in their Nordseecluster offshore wind developments.",
       "category": "corporate_market",
       "companyIds": [
-        "rwe"
+        "rwe",
+        "northland-power"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -10642,7 +10750,9 @@
       "summary": "Principle Power reported that first power from the Kincardine Offshore Wind Farm flowed in September from a 2 MW turbine on a WindFloat foundation.",
       "category": "projects_contracts",
       "companyIds": [
-        "principle-power"
+        "principle-power",
+        "kincardine-offshore-windfarm-ltd",
+        "pilot-offshore-renewables"
       ],
       "projectIds": [
         "kincardine-offshore-wind-farm"
@@ -10654,6 +10764,20 @@
           "publisher": "Principle Power",
           "url": "https://www.principlepower.com/news/principle-powers-windfloat-provides-the-foundation-for-the-kincardine-floating-wind-projects-first-electrons",
           "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "Scottish Government",
+          "url": "https://www.gov.scot/binaries/content/documents/govscot/publications/strategy-plan/2020/10/sectoral-marine-plan-appropriate-assessment2/documents/appropriate-assessment-sectoral-marine-plan-offshore-wind-energy-2020/appropriate-assessment-sectoral-marine-plan-offshore-wind-energy-2020/govscot%3Adocument/appropriate-assessment-sectoral-marine-plan-offshore-wind-energy-2020.pdf",
+          "tier": "primary",
+          "evidence": "The Scottish Government lists Pilot Offshore Renewables alongside Atkins as a project developer for Kincardine."
+        },
+        {
+          "kind": "external",
+          "publisher": "The Crown Estate",
+          "url": "https://www.thecrownestate.co.uk/our-business/marine/wind-farm-ownership",
+          "tier": "primary",
+          "evidence": "The Crown Estate lists Kincardine Offshore Windfarm Ltd as the project company for Kincardine."
         }
       ]
     },
@@ -10704,7 +10828,8 @@
       "summary": "Haewoori Offshore Wind awarded a front-end engineering and design contract for its South Korean floating project to Principle Power and Aker Solutions.",
       "category": "projects_contracts",
       "companyIds": [
-        "principle-power"
+        "principle-power",
+        "aker-solutions"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -10744,7 +10869,8 @@
       "summary": "ClassNK granted Approval in Principle to a 15 MW WindFloat TC design adapted by Principle Power and its partners for Japanese conditions.",
       "category": "technology_engineering",
       "companyIds": [
-        "principle-power"
+        "principle-power",
+        "tokyo-gas"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -10798,7 +10924,8 @@
       "summary": "Ideol and Elicio signed a partnership to develop floating offshore wind projects in Scotland.",
       "category": "corporate_market",
       "companyIds": [
-        "bw-ideol"
+        "bw-ideol",
+        "elicio"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -11039,7 +11166,8 @@
       "summary": "Stiesdal Offshore and Maersk Supply Service agreed to combine floating foundation design and offshore installation expertise.",
       "category": "corporate_market",
       "companyIds": [
-        "stiesdal-offshore"
+        "stiesdal-offshore",
+        "maersk-supply-service"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -11141,7 +11269,8 @@
       "summary": "Ocergy reported that Kyuden Mirai Energy had selected it as floater provider for a Japanese offshore wind observation project supported by NEDO.",
       "category": "projects_contracts",
       "companyIds": [
-        "ocergy"
+        "ocergy",
+        "nedo"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -11306,7 +11435,8 @@
       "summary": "RWE and Northland Power awarded Van Oord the preferred supplier mandate to transport and install Nordseecluster foundations.",
       "category": "projects_contracts",
       "companyIds": [
-        "rwe"
+        "rwe",
+        "northland-power"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -11424,7 +11554,10 @@
       "summary": "Ideol announced that the Hibiki floating offshore wind demonstrator off Kitakyushu had fulfilled its permit requirements and entered formal operation.",
       "category": "projects_contracts",
       "companyIds": [
-        "bw-ideol"
+        "bw-ideol",
+        "hitachi-zosen",
+        "nedo",
+        "aerodyn"
       ],
       "projectIds": [
         "hibiki-floating-demonstrator"
@@ -11436,6 +11569,20 @@
           "publisher": "Ideol",
           "url": "https://www.bw-ideol.com/jp/ribenchonghenoiteorunofutishiyangshangfenglifadiankazhengshiniyunzhuankaishiwoshimemashita",
           "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "BW Ideol",
+          "url": "https://bw-ideol.com/en/japanese-demonstrator",
+          "tier": "primary",
+          "evidence": "The Hibiki floating offshore wind demonstrator was part of a NEDO project. BW Ideol designed its floating foundations on behalf of Hitachi Zosen."
+        },
+        {
+          "kind": "external",
+          "publisher": "BW Ideol",
+          "url": "https://www.bw-ideol.com/sites/default/files/inline-files/Company%20presentation%20-%20March%202023.pdf",
+          "tier": "primary",
+          "evidence": "BW Ideol identifies the 3 MW Hibiki floating offshore wind demonstrator turbine as an Aerodyn SCD."
         }
       ],
       "historicalAttributions": [
@@ -11860,7 +12007,8 @@
       "summary": "SSE Renewables selected Nexans as preferred supplier to design, supply and install onshore and offshore export cables for Seagreen.",
       "category": "projects_contracts",
       "companyIds": [
-        "nexans"
+        "nexans",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -12128,7 +12276,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "nkt",
-        "equinor"
+        "equinor",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -12149,7 +12298,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "nkt",
-        "equinor"
+        "equinor",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -12606,7 +12756,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "bridon-bekaert",
-        "equinor"
+        "equinor",
+        "aker-solutions"
       ],
       "projectIds": [
         "hywind-tampen"
@@ -12835,7 +12986,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "nkt",
-        "equinor"
+        "equinor",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -12903,7 +13055,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "hitachi-energy",
-        "equinor"
+        "equinor",
+        "sse-renewables"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -13232,7 +13385,8 @@
       "summary": "Prysmian signed a framework with French grid operator RTE covering submarine and land cable systems for offshore wind connections.",
       "category": "projects_contracts",
       "companyIds": [
-        "prysmian"
+        "prysmian",
+        "rte"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-20",
@@ -13400,7 +13554,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "cip",
-        "iberdrola-scottishpower"
+        "iberdrola-scottishpower",
+        "copenhagen-offshore-partners"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-23",
@@ -13662,7 +13817,8 @@
       "summary": "Aker Solutions received a front-end engineering and design contract for Copenhagen Infrastructure Partners’ floating Haewoori offshore wind project in South Korea.",
       "category": "projects_contracts",
       "companyIds": [
-        "cip"
+        "cip",
+        "aker-solutions"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-23",
@@ -13724,7 +13880,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "saipem",
-        "edf-renewables"
+        "edf-renewables",
+        "esb"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-23",
@@ -14008,7 +14165,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "cip",
-        "deme"
+        "deme",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-23",
@@ -14029,7 +14187,8 @@
       "category": "projects_contracts",
       "companyIds": [
         "deme",
-        "cip"
+        "cip",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-23",
@@ -14875,7 +15034,8 @@
       "summary": "Freja Offshore, the Hexicon and Mainstream Renewable Power joint venture, reported receipt of a Natura 2000 permit for its proposed Mareld offshore wind farm.",
       "category": "projects_contracts",
       "companyIds": [
-        "mainstream-renewable-power"
+        "mainstream-renewable-power",
+        "hexicon"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-23",
@@ -15014,7 +15174,8 @@
       "summary": "Vattenfall selected Seaway 7 as an installation partner for Hollandse Kust Zuid 1 and 2, with a separate possible scope for phases 3 and 4. Terms remained to be agreed.",
       "category": "projects_contracts",
       "companyIds": [
-        "subsea7-seaway7"
+        "subsea7-seaway7",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-23",
@@ -15246,7 +15407,8 @@
       "summary": "Jan De Nul ordered cable protection systems from CRP Subsea for Vattenfall’s Nordlicht I offshore development.",
       "category": "projects_contracts",
       "companyIds": [
-        "jan-de-nul"
+        "jan-de-nul",
+        "vattenfall"
       ],
       "projectIds": [],
       "reviewedOn": "2026-11-23",
@@ -15917,6 +16079,743 @@
           "url": "https://www.offshorewind.biz/2021/04/23/ramboll-cowi-win-work-on-danish-nearshore-projects/",
           "publisher": "offshoreWIND.biz",
           "tier": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "goto-commercial-operation",
+      "publishedDate": "2026-01-05",
+      "title": "Goto Offshore Wind Farm begins commercial operation",
+      "summary": "Chubu Electric Power announced commercial operation of Goto Offshore Wind Farm. The announcement names Toda Corporation, ENEOS Renewable Energy, Osaka Gas, INPEX, Kansai Electric Power and Chubu Electric Power as investors in Goto Floating Wind Farm LLC.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "chubu-electric-power",
+        "goto-floating-wind-farm-llc",
+        "toda-corporation",
+        "eneos-renewable-energy",
+        "osaka-gas",
+        "inpex",
+        "kansai-electric-power"
+      ],
+      "projectIds": [
+        "goto-offshore-wind-farm"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Chubu Electric Power",
+          "url": "https://www.chuden.co.jp/english/corporate/releases/pressreleases/1217247_5163.html",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "hibiki-commercial-operation",
+      "publishedDate": "2025-04-22",
+      "title": "Hibiki floating wind demonstrator enters commercial operation",
+      "summary": "Hibiki Floating Wind Power LLC began commercial operation of the Hibiki floating offshore wind demonstrator. The announcement lists SMFL Mirai Partners, Glocal, Gojin Group, Kotobuki Engineering & Manufacturing (KEMCO), Chugoku Electric Power and Renewable Japan as investors.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "hibiki-floating-wind-power-llc",
+        "smfl-mirai-partners",
+        "glocal",
+        "gojin-group",
+        "kotobuki-engineering-manufacturing-kemco",
+        "chugoku-electric-power",
+        "renewable-japan"
+      ],
+      "projectIds": [
+        "hibiki-floating-demonstrator"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "SMFL / project partners",
+          "url": "https://www.smfl.co.jp/news/assets/250422.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "green-volt-worley-onshore-feed",
+      "publishedDate": "2025-07-17",
+      "title": "Green Volt awards onshore FEED to Worley",
+      "summary": "Green Volt, developed by Flotation Energy and Vårgrønn, awarded the onshore front-end engineering design contract to Worley.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "flotation-energy",
+        "vargronn",
+        "worley"
+      ],
+      "projectIds": [
+        "green-volt"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Green Volt Offshore Windfarm",
+          "url": "https://greenvoltoffshorewind.com/green-volt-awards-onshore-feed-contract-to-worley/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "bellrock-aker-electrical-design",
+      "publishedDate": "2026-07-14",
+      "title": "Bellrock appoints Aker Solutions for electrical design",
+      "summary": "Nadara appointed Aker Solutions to advance electrical design for Bellrock.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "nadara",
+        "aker-solutions"
+      ],
+      "projectIds": [
+        "bellrock-offshore-wind"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Bellrock Wind",
+          "url": "https://bellrockwind.co.uk/bellrock-advances-electrical-design-with-aker-solutions-appointment/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "buchan-kent-owner-engineer",
+      "publishedDate": "2026-07-01",
+      "title": "Buchan appoints Kent as owner’s engineer",
+      "summary": "Buchan Offshore Wind appointed Kent as owner’s engineer for the floating offshore wind project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "buchan-offshore-wind",
+        "kent"
+      ],
+      "projectIds": [
+        "buchan-offshore-wind"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Buchan Offshore Wind",
+          "url": "https://buchanoffshorewind.com/owners-engineer-appointed-to-pioneering-energy-project/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "erebus-marine-licence-and-consent",
+      "publishedDate": "2023-03-13",
+      "title": "Wales grants consent for Erebus",
+      "summary": "The Welsh Government announced consent for the Erebus Floating Wind Farm, developed by Blue Gem Wind, a joint venture between TotalEnergies and Simply Blue Energy.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "blue-gem-wind",
+        "simply-blue-energy",
+        "totalenergies"
+      ],
+      "projectIds": [
+        "erebus-floating-wind-farm"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Welsh Government",
+          "url": "https://www.gov.wales/consent-granted-for-wales-first-floating-windfarm",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "efgl-anchors-mooring-installed",
+      "publishedDate": "2025-05-07",
+      "title": "EFGL installs anchors and mooring lines",
+      "summary": "The EFGL project reported its anchors and mooring lines installed, identifying Eiffage Métal, Smulders and Maersk Supply Service in the installation work.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "eiffage-metal",
+        "smulders",
+        "maersk-supply-service"
+      ],
+      "projectIds": [
+        "efgl"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "EFGL",
+          "url": "https://info-efgl.fr/video-construction-pose-des-ancres-efgl/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "hywind-tampen-dof-marine-operations",
+      "publishedDate": "2019-10-31",
+      "title": "DOF Subsea awarded Hywind Tampen marine operations",
+      "summary": "DOF Subsea announced a Hywind Tampen contract covering mooring and marine operations.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "dof-subsea"
+      ],
+      "projectIds": [
+        "hywind-tampen"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "DOF",
+          "url": "https://www.dof.com/news/dof-subsea-contract-for-hywind-tampen-is-a-strategic-breakthrough",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "salamander-odfjell-acquires-orsted-stake",
+      "publishedDate": "2025-08-26",
+      "title": "Odfjell Oceanwind acquires Ørsted’s Salamander stake",
+      "summary": "Odfjell Oceanwind announced its acquisition of the shares held by Orsted in Salamander.",
+      "category": "corporate_market",
+      "companyIds": [
+        "odfjell-oceanwind",
+        "orsted"
+      ],
+      "projectIds": [
+        "salamander-floating-wind"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Salamander",
+          "url": "https://salamanderfloatingwind.com/wp-content/uploads/2025/08/Salamander-PR-Odfjell-Oceanwind-acquires-Orsteds-shares-in-the-Salamander-Offshore-Wind-Farm.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "efgl-inter-array-cables-installed",
+      "publishedDate": "2026-01-17",
+      "title": "EFGL completes inter-array cable installation",
+      "summary": "The EFGL project reported that DeepOcean completed installation of its inter-array cables.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "deepocean"
+      ],
+      "projectIds": [
+        "efgl"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "EFGL",
+          "url": "https://info-efgl.fr/projet-efgl-une-nouvelle-etape-majeure-franchie-en-mediterranee/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "demosath-enters-manufacturing",
+      "publishedDate": "2020-10-28",
+      "title": "DemoSATH enters manufacturing",
+      "summary": "The DemoSATH demonstrator entered manufacture, with Ferrovial participating in foundation fabrication.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "ferrovial"
+      ],
+      "projectIds": [
+        "demosath"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "RWE",
+          "url": "https://www.rwe.com/en/press/rwe-renewables/2020-10-28-pilot-project-for-floating-offshore-wind-is-picking-up-speed/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "kincardine-final-platform-delivered",
+      "publishedDate": "2021-05-07",
+      "title": "Final Kincardine floating platform delivered",
+      "summary": "Navantia announced delivery of the fifth Kincardine floating platform built with its Navantia-Windar partnership.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "navantia-windar"
+      ],
+      "projectIds": [
+        "kincardine-offshore-wind-farm"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Navantia",
+          "url": "https://www.navantia.es/es/actualidad/notas-prensa/navantia-entrega-la-quinta-plataforma-flotante-para-el-parque-eolico-de-kincardine/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "goto-construction-announcement",
+      "publishedDate": "2022-04-26",
+      "title": "Goto floating wind construction announced",
+      "summary": "Toda Corporation announced construction of Goto Offshore Wind Farm, with Hitachi turbines planned for the project.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "toda-corporation",
+        "hitachi"
+      ],
+      "projectIds": [
+        "goto-offshore-wind-farm"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Toda and project partners",
+          "url": "https://www.toda.co.jp/english/about_us/images/20220426_Goto%20Floating%20Wind%20Farm.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "eolmed-bourbon-epci-contract",
+      "publishedDate": "2022-05-17",
+      "title": "Bourbon awarded Eolmed offshore installation contract",
+      "summary": "Bourbon Subsea Services announced an Eolmed offshore contract spanning mooring, inter-array cables and installation.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "bourbon-subsea-services"
+      ],
+      "projectIds": [
+        "eolmed"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Bourbon",
+          "url": "https://www.bourbonoffshore.com/en/press-releases/bourbon-subsea-services-awarded-eolmed-epci-contract-one-first-floating-wind-pilot",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "eflo-monitoring-committee-installed",
+      "publishedDate": "2026-06-29",
+      "title": "EFLO establishes a consultation and monitoring committee",
+      "summary": "The Mediterranean maritime prefecture announced establishment of the consultation and monitoring committee for EFLO, identifying Eolien en Mer Participations as the project company.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "eolien-en-mer-participations"
+      ],
+      "projectIds": [
+        "eflo-narbonnaise"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Prefecture maritime de la Mediterranee",
+          "url": "https://www.premar-mediterranee.gouv.fr/communiques-presse/installation-de-l-instance-de-concertation-et-de-suivi-du-projet-de-parc-eolien-en-mer-eoliennes-flottantes-d-occitanie-eflo",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "maine-offshore-wind-research-lease",
+      "publishedDate": "2024-08-19",
+      "title": "BOEM executes Maine floating wind research lease",
+      "summary": "BOEM executed the research lease for the Gulf of Maine Floating Offshore Wind Research Array with the State of Maine.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "state-of-maine",
+        "pine-tree-offshore-wind",
+        "diamond-offshore-wind",
+        "university-of-maine"
+      ],
+      "projectIds": [
+        "gulf-of-maine-research-array"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Bureau of Ocean Energy Management",
+          "url": "https://www.boem.gov/newsroom/press-releases/boem-issues-offshore-wind-research-lease-state-maine",
+          "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "Bureau of Ocean Energy Management",
+          "url": "https://www.boem.gov/renewable-energy/state-activities/state-maine-research-lease",
+          "tier": "primary",
+          "evidence": "The State of Maine designated Pine Tree Offshore Wind as operator for research lease OCS-A 0553."
+        },
+        {
+          "kind": "external",
+          "publisher": "Maine Department of Marine Resources",
+          "url": "https://www.maine.gov/dmr/science/ecology-environment/wind-research",
+          "tier": "primary",
+          "evidence": "Maine identifies Diamond Offshore Wind as development partner and the University of Maine as the developer of the floating platform technology."
+        }
+      ]
+    },
+    {
+      "id": "pentland-marine-licence",
+      "publishedDate": "2023-06-28",
+      "title": "Scottish Ministers license Pentland’s offshore array",
+      "summary": "Scottish Ministers issued Highland Wind Limited a marine licence covering the Pentland Floating Offshore Wind Farm offshore array.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "highland-wind-limited"
+      ],
+      "projectIds": [
+        "pentland-floating-offshore-wind-farm"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Scottish Ministers",
+          "url": "https://pentlandfloatingwind.com/wp-content/uploads/2023/06/decision_notice_mw_redacted.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "talisk-offshore-and-onshore-scoping",
+      "publishedDate": "2025-04-04",
+      "title": "Magnora submits Talisk scoping reports",
+      "summary": "Magnora Offshore Wind reported submitting onshore and offshore scoping reports for Talisk in January.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "magnora-offshore-wind"
+      ],
+      "projectIds": [
+        "talisk-offshore-wind"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Magnora Offshore Wind",
+          "url": "https://www.magnoraoffshorewind.com/2025/04/04/scoping-reports-submitted-a-major-step-towards-environmental-consent-for-talisk/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "muir-mhor-fred-olsen-full-ownership",
+      "publishedDate": "2026-04-22",
+      "title": "Fred. Olsen Seawind announces Muir Mhòr ownership deal",
+      "summary": "Fred. Olsen Seawind announced it would assume full ownership of Muir Mhor Offshore Wind Farm by taking over Vattenfall’s 50% stake.",
+      "category": "corporate_market",
+      "companyIds": [
+        "fred-olsen-seawind",
+        "vattenfall"
+      ],
+      "projectIds": [
+        "muir-mhor"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Fred. Olsen Seawind",
+          "url": "https://fredolsenseawind.com/news/fred-olsen-seawind-assumes-100-ownership-of-muir-mhor-floating-offshore-wind-farm-project/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "california-north-invenergy-lease-selection",
+      "publishedDate": "2022-12-07",
+      "title": "California North Floating and Invenergy win lease areas",
+      "summary": "BOEM identified California North Floating LLC and Invenergy California Offshore LLC as winners for the California North Floating lease OCS-P 0562 and Invenergy California Offshore lease OCS-P 0565 respectively.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "california-north-floating-llc",
+        "invenergy-california-offshore-llc"
+      ],
+      "projectIds": [
+        "california-north-floating-ocs-p-0562",
+        "invenergy-california-offshore-ocs-p-0565"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Bureau of Ocean Energy Management",
+          "url": "https://www.boem.gov/sites/default/files/documents/renewable-energy/state-activities/PACW-1-Round-by-Round-Results.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "golden-state-wind-doi-settlement",
+      "publishedDate": "2026-04-27",
+      "title": "Golden State Wind signs federal settlement",
+      "summary": "Golden State Wind LLC signed a settlement with the United States covering cancellation of the Golden State Wind lease OCS-P 0564.",
+      "category": "corporate_market",
+      "companyIds": [
+        "golden-state-wind-llc"
+      ],
+      "projectIds": [
+        "golden-state-wind-ocs-p-0564"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "US Department of the Interior",
+          "url": "https://www.doi.gov/node/66636",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "broadshore-bellrock-fms-mooring-design",
+      "publishedDate": "2024-08-28",
+      "title": "Broadshore and Bellrock appoint First Marine Solutions",
+      "summary": "BlueFloat Energy and Nadara contracted First Marine Solutions for mooring engineering consultancy on Broadshore and Bellrock and two INTOG projects.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "bluefloat-energy",
+        "nadara",
+        "first-marine-solutions"
+      ],
+      "projectIds": [
+        "broadshore-offshore-wind",
+        "bellrock-offshore-wind"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Broadshore Offshore Wind",
+          "url": "https://broadshorewind.co.uk/bluefloat-energy-nadara-partnership-appoints-fms-for-mooring-solutions/",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "seven-seas-med-environmental-decree",
+      "publishedDate": "2024-03-21",
+      "title": "Italy issues the 7Seas Med environmental decree",
+      "summary": "Italy’s environment ministry recorded the environmental impact assessment decree for the 7Seas Med floating wind proposal submitted by 7SEAS med S.r.l.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "7seas-med-s-r-l"
+      ],
+      "projectIds": [
+        "seven-seas-med"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Italian Ministry of Environment and Energy Security",
+          "url": "https://va.mite.gov.it/it-IT/Oggetti/Info/8378",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "haiyou-guanlan-offshore-installation-complete",
+      "publishedDate": "2023-05-13",
+      "title": "Offshore installation of Haiyou Guanlan completed",
+      "summary": "Offshore Oil Engineering Co., Ltd. completed offshore construction of Haiyou Guanlan on 6 May and reported it ready for grid connection.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "offshore-oil-engineering-co-ltd"
+      ],
+      "projectIds": [
+        "haiyou-guanlan"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Offshore Oil Engineering Co., Ltd.",
+          "url": "https://www.cnoocengineering.com/english/Media/CompanyNewsTwo/202410/t20241022_97444.html",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "harbour-completes-tampen-owner-portfolio-acquisition",
+      "publishedDate": "2024-09-03",
+      "title": "Harbour Energy completes Wintershall Dea portfolio purchase",
+      "summary": "Harbour Energy completed its acquisition of the Wintershall Dea upstream portfolio. Equinor subsequently identified Harbour Energy among the owners of Hywind Tampen.",
+      "category": "corporate_market",
+      "companyIds": [
+        "harbour-energy",
+        "wintershall-dea"
+      ],
+      "projectIds": [
+        "hywind-tampen"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Harbour Energy",
+          "url": "https://www.harbourenergy.com/news-and-media/announcements-and-latest-news/completion-of-wintershall-dea-asset-portfolio-acquisition/",
+          "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "Equinor",
+          "url": "https://www.equinor.com/magazine/olea-and-the-floating-wind-turbines",
+          "tier": "primary",
+          "evidence": "Equinor identifies Harbour Energy among the owners of Hywind Tampen.",
+          "publishedDate": "2025-06-05"
+        }
+      ]
+    },
+    {
+      "id": "atlas-offshore-wind-lease-assignment",
+      "publishedDate": "2024-06-27",
+      "title": "BOEM approves Atlas Offshore Wind lease assignment",
+      "summary": "BOEM approved transfer of the full interest in Atlas Offshore Wind lease OCS-P 0563 from Equinor Wind US LLC to Atlas Offshore Wind LLC.",
+      "category": "corporate_market",
+      "companyIds": [
+        "atlas-offshore-wind-llc",
+        "equinor-wind-us-llc"
+      ],
+      "projectIds": [
+        "atlas-offshore-wind-ocs-p-0563"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Bureau of Ocean Energy Management",
+          "url": "https://www.boem.gov/sites/default/files/documents/renewable-energy/state-activities/Atlas%20Offshore%20Wind%20LLC%20Record%20Title%20Interest%20Letter_signed.pdf",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "baywa-elicio-ao6-prequalification",
+      "publishedDate": "2022-08-03",
+      "title": "BayWa r.e. and Elicio qualify for Mediterranean floating wind tender",
+      "summary": "BayWa r.e. and Elicio announced prequalification to bid in the Mediterranean floating offshore wind tender. The same announcement describes their existing Buchan Offshore Wind partnership.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "baywa-r-e",
+        "elicio"
+      ],
+      "projectIds": [],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "BayWa r.e. and Elicio",
+          "url": "https://www.baywa-re.com/en/news/baywa-r-e-elicio-shortlisted-in-floating-wind-tender",
+          "tier": "primary"
+        }
+      ]
+    },
+    {
+      "id": "talisk-scotwind-option-offer",
+      "publishedDate": "2022-01-18",
+      "title": "Magnora Offshore Wind offered ScotWind option for Talisk",
+      "summary": "TechnipFMC reported that Crown Estate Scotland offered its partnership, Magnora Offshore Wind, an option agreement for area N3. Magnora identifies the development as Talisk.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "technipfmc",
+        "magnora-offshore-wind"
+      ],
+      "projectIds": [
+        "talisk-offshore-wind"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "TechnipFMC",
+          "url": "https://www.technipfmc.com/en/investors/financial-news-releases/press-release/technipfmc-partnership-magnora-offshore-wind-is-successful-in-scotwind-leasing-round-application/",
+          "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "Magnora Offshore Wind",
+          "url": "https://www.magnoraoffshorewind.com/talisk/",
+          "tier": "primary",
+          "evidence": "Magnora Offshore Wind identifies its ScotWind N3 development as Talisk."
+        }
+      ]
+    },
+    {
+      "id": "firefly-esia-scoping-report",
+      "publishedDate": "2023-06-02",
+      "title": "RPS publishes Firefly environmental and social scoping report",
+      "summary": "RPS prepared an environmental and social impact assessment scoping report for Equinor’s Firefly Floating Offshore Wind Project. RPS identifies Sekwang Engineering as its local environmental impact assessment partner.",
+      "category": "projects_contracts",
+      "companyIds": [
+        "equinor",
+        "rps",
+        "sekwang-engineering"
+      ],
+      "projectIds": [
+        "firefly-floating-wind"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "RPS Group via Pacific Northwest National Laboratory",
+          "url": "https://tethys.pnnl.gov/publications/project-bandibulifirefly-environmental-and-social-impact-assessment-scoping-report",
+          "tier": "primary"
+        },
+        {
+          "kind": "external",
+          "publisher": "RPS Group",
+          "url": "https://www.rpsgroup.com/about-us/news/equinor-selects-rps-as-esia-consultant-for-their-south-korea-firefly-wind-farm-project/",
+          "tier": "primary",
+          "evidence": "RPS identifies Sekwang Engineering Consultants as the local environmental impact assessment delivery partner."
+        }
+      ]
+    },
+    {
+      "id": "hywind-scotland-supply-chain-case-study",
+      "publishedDate": "2022-11-03",
+      "title": "Scottish case study documents Hywind Scotland anchor fabrication",
+      "summary": "A Scottish Government-commissioned review of the Hywind Scotland supply chain identifies Isleburn as the fabricator of the project’s suction anchors.",
+      "category": "manufacturing_supply_chain",
+      "companyIds": [
+        "isleburn-global-energy-group"
+      ],
+      "projectIds": [
+        "hywind-scotland"
+      ],
+      "reviewedOn": "2026-11-26",
+      "sources": [
+        {
+          "kind": "external",
+          "publisher": "Scottish Government",
+          "url": "https://www.gov.scot/publications/case-studies-support-scenario-mapping-offshore-renewable-energy-development-economic-benefits/pages/9/",
+          "tier": "primary"
+        }
+      ],
+      "historicalAttributions": [
+        {
+          "companyId": "isleburn-global-energy-group",
+          "name": "Isleburn"
         }
       ]
     }

@@ -137,18 +137,19 @@ test("company directory search leads to the Vestas timeline, source and project"
   await expect(page).toHaveURL("/projects/eolmed");
 });
 
-test("every company listed in the directory renders a static timeline", async ({ page, request }) => {
+test("every company listed in the directory renders a static profile", async ({ page, request }) => {
   await page.goto("/companies");
   const links = page.getByRole("region", { name: "Company directory" }).getByRole("link");
-  await expect(links).toHaveCount(47);
+  await expect(links).toHaveCount(143);
   const paths = await links.evaluateAll((entries) => entries.map((entry) => entry.getAttribute("href") ?? ""));
-  expect(new Set(paths).size).toBe(47);
+  expect(new Set(paths).size).toBe(143);
   for (let start = 0; start < paths.length; start += 8) {
     await Promise.all(paths.slice(start, start + 8).map(async (path) => {
       expect(path).toMatch(/^\/companies\/[a-z0-9-]+$/);
       const response = await request.get(path);
       expect(response.status(), path).toBe(200);
-      expect(await response.text(), path).toContain('id="company-timeline-heading"');
+      const html = await response.text();
+      expect(html, path).toMatch(/id="company-timeline-heading"|id="company-projects-heading"/);
       await response.dispose();
     }));
   }
@@ -168,7 +169,7 @@ test("Industry links to Company Intelligence and sparse timelines retain reviewe
   await expect(award.getByRole("link", { name: /Project Hywind Tampen/i })).toHaveAttribute("href", "/projects/hywind-tampen");
   await expect(page.getByRole("region", { name: "Related Projects" })).toBeVisible();
   await expect(page.locator(".site-header").locator('a[href^="/companies"]')).toHaveCount(0);
-  await expect(page.getByRole("navigation", { name: "Explore navigation" }).getByRole("link", { name: "Companies" })).toHaveAttribute("href", "/companies");
+  await expect(page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Companies" })).toHaveAttribute("href", "/companies");
   await page.goto("/companies/vicinay-marine");
   await expect(timeline.getByRole("heading", { name: "Vicinay Marine and TECNALIA validate a mooring corrosion sensor" })).toBeVisible();
   await timeline.getByLabel("Filter by year").selectOption("2023");
@@ -238,7 +239,7 @@ test("recorded participants connect Projects to canonical Industry entries and o
   await page.goto("/industry");
   const ids = await page.locator("[id]").evaluateAll((elements) => elements.map((element) => element.id));
   expect(new Set(ids).size).toBe(ids.length);
-  await expect(page.locator('[id^="company-"]')).toHaveCount(47);
+  await expect(page.locator('[id^="company-"]')).toHaveCount(143);
   const cables = page.locator("#company-jdr-cables");
   await cables.locator("details > summary").first().press("Enter");
   const cableRoles = cables.locator('[data-context-relationship^="rel-supply-efgl-jdr-"]');
@@ -280,7 +281,7 @@ test("connected context works in mobile Chinese and dark theme without translati
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
-test("briefing navigation exposes three primary links, Explore, footer utilities and keyboard preferences", async ({ page }) => {
+test("briefing navigation exposes six primary sections, footer utilities and keyboard preferences", async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 760 });
   await page.goto("/");
   const navigation = page.getByRole("navigation", { name: "Primary navigation" });
@@ -297,8 +298,7 @@ test("briefing navigation exposes three primary links, Explore, footer utilities
   await expect(menu).toHaveAttribute("aria-expanded", "false");
   await expect(navigation).toHaveCount(0);
   await menu.press("Space");
-  await expect(navigation.getByRole("link")).toHaveText(["Briefing", "Explore", "Subscribe"]);
-  await expect(page.getByRole("navigation", { name: "Explore navigation" }).getByRole("link")).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
+  await expect(navigation.getByRole("link")).toHaveText(["Briefing", "Projects", "Companies", "Industry", "Digital & AI", "Subscribe"]);
   await expect(navigation.getByRole("link", { name: "Briefing" })).toHaveAttribute("href", "/");
   await expect(navigation.getByRole("link", { name: "Search" })).toHaveCount(0);
   await expect(navigation.getByRole("link", { name: "Subscribe" })).toHaveAttribute("href", "/subscribe");
@@ -313,19 +313,19 @@ test("briefing navigation exposes three primary links, Explore, footer utilities
   await expect(themeToggle).toHaveAttribute("aria-pressed", "true");
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
 
-  await navigation.getByRole("link", { name: "Explore" }).click();
-  await expect(page).toHaveURL("/explore");
+  await navigation.getByRole("link", { name: "Projects" }).click();
+  await expect(page).toHaveURL("/projects");
   await expect(menu).toHaveAttribute("aria-expanded", "false");
   await expect(navigation).toHaveCount(0);
   await expect(page.locator(".theme-toggle")).toHaveAttribute("aria-pressed", "true");
+  await page.goto("/explore");
   const destinations = page.getByRole("region", { name: "Explore floating wind" }).getByRole("link");
   await expect(destinations).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
   expect(await destinations.evaluateAll((links) => links.map((link) => link.getAttribute("href"))))
     .toEqual(["/projects", "/companies", "/industry", "/digital-ai"]);
   await page.getByRole("button", { name: "中文", exact: true }).click();
   await page.getByRole("button", { name: "菜单", exact: true }).click();
-  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link")).toHaveText(["简报", "探索", "订阅"]);
-  await expect(page.getByRole("navigation", { name: "探索导航" }).getByRole("link")).toHaveText(["项目", "企业", "产业", "数字化与 AI"]);
+  await expect(page.getByRole("navigation", { name: "主导航" }).getByRole("link")).toHaveText(["简报", "项目", "企业", "产业", "数字化与 AI", "订阅"]);
   await expect(page.getByRole("heading", { name: "探索浮式风电" })).toBeVisible();
   await expect(page.getByRole("region", { name: "探索浮式风电" }).getByRole("link")).toHaveText(["项目", "企业", "产业", "数字化与 AI"]);
   await selectDarkTheme(page);
@@ -337,11 +337,9 @@ test("desktop sidebar reflects route families and the shell fits either side of 
   await page.setViewportSize({ width: 1440, height: 960 });
   await page.goto("/");
   const primary = page.getByRole("navigation", { name: "Primary navigation" });
-  const explore = page.getByRole("navigation", { name: "Explore navigation" });
   const menu = page.getByRole("button", { name: "Menu", exact: true });
   await expect(menu).toHaveCount(0);
-  await expect(primary.getByRole("link")).toHaveText(["Briefing", "Explore", "Subscribe"]);
-  await expect(explore.getByRole("link")).toHaveText(["Projects", "Companies", "Industry", "Digital & AI"]);
+  await expect(primary.getByRole("link")).toHaveText(["Briefing", "Projects", "Companies", "Industry", "Digital & AI", "Subscribe"]);
   await expect(primary.getByRole("link", { name: "Briefing" })).toHaveAttribute("aria-current", "page");
   const banner = page.getByRole("banner");
   await expect(banner.getByRole("link")).toHaveCount(1);
@@ -356,9 +354,9 @@ test("desktop sidebar reflects route families and the shell fits either side of 
   await expect(banner.getByRole("searchbox", { name: "全站搜索" })).toBeVisible();
   await page.getByRole("button", { name: "EN", exact: true }).click();
 
-  await explore.getByRole("link", { name: "Projects" }).click();
-  await expect(explore.getByRole("link", { name: "Projects" })).toHaveAttribute("aria-current", "page");
-  await expect(primary.getByRole("link", { name: "Explore" })).toHaveAttribute("data-active", "true");
+  await primary.getByRole("link", { name: "Projects" }).click();
+  await expect(primary.getByRole("link", { name: "Projects" })).toHaveAttribute("aria-current", "page");
+  await expect(primary.getByRole("link", { name: "Projects" })).toHaveAttribute("data-active", "true");
   await expect(page.locator(".shell-navigation [aria-current='page']")).toHaveCount(1);
   await expect(page.getByRole("main")).toHaveCount(1);
   await expect(page.getByRole("contentinfo")).toHaveCount(1);
@@ -370,10 +368,9 @@ test("desktop sidebar reflects route families and the shell fits either side of 
   await expect(page.getByRole("main")).toHaveCSS("background-color", "rgb(15, 23, 42)");
   await expect(page.locator(".app-shell")).toHaveCSS("color", "rgb(241, 245, 249)");
 
-  for (const [path, name] of [["/archive", "Briefing"], ["/projects/hywind-tampen", "Explore"], ["/subscribe", "Subscribe"]]) {
+  for (const [path, name] of [["/archive", "Briefing"], ["/projects/hywind-tampen", "Projects"], ["/subscribe", "Subscribe"]]) {
     await page.goto(path);
     await expect(primary.getByRole("link", { name })).toHaveAttribute("data-active", "true");
-    if (name === "Explore") await expect(explore.getByRole("link", { name: "Projects" })).toHaveAttribute("data-active", "true");
   }
 
   for (const width of [1440, 960, 959, 390, 320]) {

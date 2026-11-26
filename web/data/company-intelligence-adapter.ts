@@ -1,3 +1,4 @@
+import companyDirectoryLogos from "./industry/company-directory-logos.json";
 import eventDataset from "./context/company-events.json";
 import { type CompanyNewsCategory, companyNewsCategories } from "./company-news-categories";
 import { getCompanyProjectRecords } from "./connected-context-adapter";
@@ -228,10 +229,13 @@ export function getCompanyEvents(): readonly CompanyEvent[] {
   return companyEvents;
 }
 
+const directoryLogos: Readonly<Record<string, { file: string; width: number; height: number; source: string }>> = companyDirectoryLogos;
+
 export function getCompanyIndex() {
-  return companies.map(({ id, name, companyType, countryRegion }) => {
+  return companies.map(({ id, name, companyType, countryRegion, profilePending, roles }) => {
     const news = newsByCompany.get(id) ?? [];
-    return { id, name, companyType, countryRegion, updateCount: news.length, latestDate: news[0]?.publishedDate };
+    const logo = directoryLogos[id];
+    return { id, name, companyType, countryRegion, profilePending, roles, logo, updateCount: news.length, latestDate: news[0]?.publishedDate };
   });
 }
 

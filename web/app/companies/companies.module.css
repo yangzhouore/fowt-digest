@@ -110,3 +110,84 @@
 .rows p {
   margin: 0.3rem 0;
 }
+
+.directoryFilters {
+  min-inline-size: 0;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.directoryFilters legend {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+.directoryFilters button strong {
+  margin-inline-start: 0.25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.countryCards button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-color: var(--border);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.countryCards img {
+  flex: none;
+  border-radius: 2px;
+}
+
+.categoryCard[data-category="fabrication"] { --badge-pale: #e9e6da; --badge-deep: #51452b; }
+.categoryCard[data-category="marine"] { --badge-pale: #dceefa; --badge-deep: #255374; }
+.categoryCard[data-category="grid"] { --badge-pale: #f0f4cf; --badge-deep: #4e5c1d; }
+.categoryCard[data-category="assurance"] { --badge-pale: #e6e9ee; --badge-deep: #404e62; }
+.categoryCard[data-category="research"] { --badge-pale: #e8e0f2; --badge-deep: #5c426e; }
+.categoryCard[data-category="engineering"] { --badge-pale: #f1dedf; --badge-deep: #683e42; }
+
+.directoryIntro {
+  padding: 1.2rem 0 0.9rem;
+}
+
+.directoryIntro h1 {
+  margin-top: 0;
+}
+
+.directoryCompany {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  overflow-wrap: anywhere;
+}
+
+.directoryLogo {
+  flex: none;
+  width: auto;
+  height: auto;
+  max-inline-size: min(7rem, 24vw);
+  max-block-size: 2rem;
+}
+
+:global(:root:has(.theme-toggle[aria-pressed="true"])) .directoryLogo {
+  background-color: #f8fafc;
+}
+
+.directoryInitials {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 28px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.72rem;
+}

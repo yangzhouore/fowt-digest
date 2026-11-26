@@ -8,6 +8,7 @@ import {
   getIndustryCompanies,
   getIndustryMap,
   industryCompanyCount,
+  industryRoleLabels,
   type IndustryCompany,
 } from "../../data/industry/industry-map";
 import { LocalizedCopy } from "../i18n/localized-copy";
@@ -32,23 +33,6 @@ for (const stage of industryMap) {
 }
 const roleCount = companies.reduce((total, company) => total + company.roles.length, 0);
 
-const roleLabels: Record<string, string> = {
-  "developer-owner": "Developer / Project Owner",
-  utility: "Utility",
-  "turbine-oem": "Wind Turbine OEM",
-  "floating-platform": "Floating Platform",
-  "platform-engineering": "Platform Engineering",
-  "mooring-anchoring": "Mooring & Anchoring",
-  "cable-systems": "Cable Systems",
-  "offshore-electrical": "Offshore Electrical",
-  "grid-technology": "Grid Technology",
-  "epci-subsea": "EPCI / Subsea",
-  "marine-installation": "Marine Installation",
-  "certification-assurance": "Certification / Assurance",
-  "engineering-consulting": "Engineering Consulting",
-  "simulation-software": "Simulation Software",
-};
-
 const industryTaxonomyZh: Record<string, string> = {
   "Project side": "项目方", "Delivery chain": "交付链", "Develop & Own": "开发与持有", "Build The Floating System": "建造浮式系统",
   "Secure & Connect": "定位与连接", "Install & Deliver": "安装与交付", "Enable & Assure": "赋能与保障",
@@ -57,6 +41,7 @@ const industryTaxonomyZh: Record<string, string> = {
   "Offshore Electrical / Substation": "海上电气 / 升压站", "EPCI / Subsea Engineering": "EPCI / 水下工程",
   "Marine Installation / Vessels": "海上安装 / 船舶", "Grid Technology": "电网技术", "Certification / Assurance": "认证 / 保障",
   "Engineering / Simulation / Software": "工程 / 仿真 / 软件",
+  Fabrication: "制造", "Research / Public Bodies": "研究 / 公共机构",
 };
 
 function companyInitials(name: string) {
@@ -75,8 +60,9 @@ function conciseRegion(countryRegion: string) {
   return countryRegion.split("/")[0].trim();
 }
 
-function conciseRole(company: IndustryCompany) {
-  return roleLabels[company.roles[0]] ?? company.companyType;
+function conciseRole(company: IndustryCompany, categoryRoles: IndustryCompany["roles"]) {
+  const role = company.roles.find((role) => categoryRoles.includes(role));
+  return role ? industryRoleLabels[role] : company.companyType;
 }
 
 function companyLogoUrl(company: IndustryCompany) {
@@ -130,7 +116,7 @@ export default function IndustryPage() {
                             <span className="industry-company-mark" aria-hidden="true">
                               {companyInitials(company.name)}
                             </span>
-                            <Image
+                            {company.website && <Image
                               className="industry-company-logo"
                               src={companyLogoUrl(company)}
                               alt=""
@@ -138,35 +124,37 @@ export default function IndustryPage() {
                               height={28}
                               unoptimized
                               aria-hidden="true"
-                            />
+                            />}
                             <span className="industry-company-summary-copy">
                               <span className="industry-company-name">
-                                <Link href={company.website}>{company.name}</Link>
+                                {company.website ? <Link href={company.website}>{company.name}</Link> : company.name}
                               </span>
                               <span className="industry-company-meta">
-                                {conciseRegion(company.countryRegion)} - {conciseRole(company)}
+                                {[conciseRegion(company.countryRegion), conciseRole(company, category.roles)].filter(Boolean).join(" · ")}
                               </span>
                             </span>
                           </summary>
                           <div className="industry-company-detail">
-                            <p>{company.description}</p>
-                            <dl>
-                              <div>
-                                <dt><LocalizedCopy en="Region" zh="地区" /></dt>
-                                <dd>{company.countryRegion}</dd>
-                              </div>
-                              <div>
-                                <dt><LocalizedCopy en="Type" zh="类型" /></dt>
-                                <dd>{company.companyType}</dd>
-                              </div>
-                              <div>
-                                <dt><LocalizedCopy en="Involvement" zh="参与情况" /></dt>
-                                <dd>{company.representativeInvolvement}</dd>
-                              </div>
-                            </dl>
-                            <Link className="industry-source-link" href={company.sourceUrl}>
-                              <LocalizedCopy en="Source" zh="来源" />
-                            </Link>
+                            {!company.profilePending && <>
+                              <p>{company.description}</p>
+                              <dl>
+                                <div>
+                                  <dt><LocalizedCopy en="Region" zh="地区" /></dt>
+                                  <dd>{company.countryRegion}</dd>
+                                </div>
+                                <div>
+                                  <dt><LocalizedCopy en="Type" zh="类型" /></dt>
+                                  <dd>{company.companyType}</dd>
+                                </div>
+                                <div>
+                                  <dt><LocalizedCopy en="Involvement" zh="参与情况" /></dt>
+                                  <dd>{company.representativeInvolvement}</dd>
+                                </div>
+                              </dl>
+                              <Link className="industry-source-link" href={company.sourceUrl}>
+                                <LocalizedCopy en="Source" zh="来源" />
+                              </Link>
+                            </>}
                             <p><Link href={`/companies/${company.id}`}><LocalizedCopy en="Company Intelligence" zh="企业动态" /></Link></p>
                             <CompanyProjectContext companyId={company.id} instanceId={`${category.id}-${company.id}`} />
                           </div>

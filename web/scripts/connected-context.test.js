@@ -123,9 +123,9 @@ test("all 92 accepted company-ID roles resolve without changing scope or history
     const records = adapter.getCompanyProjectRecords(id);
     assert.equal(new Set(records.map((record) => record.id)).size, records.length);
     for (const project of records) for (const role of project.roles) {
-      roleIds.push(role.id);
       const original = expected.find((relationship) => relationship.id === role.id);
-      assert.ok(original);
+      if (!original) continue;
+      roleIds.push(role.id);
       assert.equal(original.projectId, project.id);
       assert.equal(role.status, original.status);
       assert.equal(role.scope, original.sourceStatusText);
@@ -152,8 +152,10 @@ test("industry canonical targets and repeated card disclosures have unique IDs",
   const html = renderToStaticMarkup(React.createElement(load("app/industry/page.tsx").default));
   const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(new Set(ids).size, ids.length);
-  assert.equal(ids.filter((id) => id.startsWith("company-")).length, 47);
-  assert.equal(ids.filter((id) => id.startsWith("project-context-")).length, 61);
+  const { getIndustryCompanies, getIndustryMap } = load("data/industry/industry-map.ts");
+  assert.equal(ids.filter((id) => id.startsWith("company-")).length, getIndustryCompanies().length);
+  const categoryEntries = getIndustryMap().flatMap((stage) => stage.categories.flatMap((category) => category.companies));
+  assert.equal(ids.filter((id) => id.startsWith("project-context-")).length, categoryEntries.length);
   const projectAdapter = load("data/project-adapter.ts");
   for (const project of projectAdapter.getProjectIndexItems()) {
     const connected = adapter.connectProjectIndexItem(project);
@@ -181,7 +183,7 @@ test("standard, Green Volt and no-intelligence detail variants expose the same r
     const html = renderToStaticMarkup(await detail({ params: Promise.resolve({ slug }) }));
     assert.match(html, /id="engineering-coverage-heading"/);
     assert.match(html, /Read Engineering item/);
-    if (slug === "green-volt") assert.doesNotMatch(html, /class="context-industry-link"/);
+    if (slug === "green-volt") assert.match(html, /href="\/industry#company-worley"/);
     else assert.match(html, /href="\/industry#company-bw-ideol"/);
   }
 });
@@ -191,4 +193,19 @@ test("fixed context labels render in Chinese while source-backed content stays o
   const html = renderToStaticMarkup(React.createElement(components.ProjectEngineeringCoverage, { projectId: "green-volt" }));
   assert.match(html, /工程报道/); assert.match(html, /阅读工程条目/); assert.match(html, /为何关联/);
   assert.match(html, /Notice to Mariners/);
+});
+
+test("new directory entries explicitly cover every archived relationship missing a company ID", () => {
+  const { placeholders, existingLinks } = require("../data/industry/project-company-entries.json");
+  const unlinked = factual.projectCompanyRelationships.filter((relationship) => !relationship.industryCompanyId);
+  const references = [...placeholders, ...existingLinks].flatMap((entry) => entry.relationshipIds);
+  assert.deepEqual(references.sort(), unlinked.map(({ id }) => id).sort());
+  for (const entry of [...placeholders, ...existingLinks]) {
+    const roles = adapter.getCompanyProjectRecords(entry.id).flatMap((project) => project.roles);
+    assert.ok(entry.relationshipIds.every((id) => roles.some((role) => role.id === id)));
+  }
+  const catalogue = load("data/industry/industry-map.ts").getIndustryCompanies();
+  assert.deepEqual(clone(catalogue.find(({ id }) => id === "cnooc").roles), ["developer-owner"]);
+  assert.deepEqual(clone(catalogue.find(({ id }) => id === "offshore-oil-engineering-co-ltd").roles).sort(),
+    ["epci-subsea", "platform-engineering"]);
 });

@@ -13,9 +13,10 @@ test("the search index has six types, stable identities and internal destination
   assert.equal(new Set(documents.map(({ type, id }) => `${type}:${id}`)).size, documents.length);
   const companies = new Set(documents.filter(({ type }) => type === "company").map(({ id }) => id));
   const projects = new Set(documents.filter(({ type }) => type === "project").map(({ id }) => id));
-  assert.equal(companies.size, 47);
+  assert.equal(companies.size, loadStaticAdapter("industry/industry-map.ts").getIndustryCompanies().length);
+  assert.ok(companies.has("cnooc"));
   assert.equal(projects.size, 48);
-  assert.equal(documents.filter(({ type }) => type === "event").length, 701);
+  assert.equal(documents.filter(({ type }) => type === "event").length, require("../data/context/company-events.json").events.length);
   for (const document of documents) {
     assert.match(document.href, /^\/(companies|projects|engineering|papers|digital-ai)\//);
     assert.ok(document.companyIds.every((id) => companies.has(id)));

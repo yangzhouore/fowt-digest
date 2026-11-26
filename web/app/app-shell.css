@@ -195,23 +195,9 @@
   font-family: inherit;
 }
 
-.shell-navigation nav + nav {
-  margin-block-start: calc(2 * var(--shell-space));
-  padding-block-start: var(--shell-space);
-  border-block-start: var(--shell-border) solid var(--border);
-}
-
-.shell-navigation p {
-  margin: 0;
-  padding: var(--shell-space) calc(2 * var(--shell-space));
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 .shell-navigation a {
   display: flex;
+  gap: 10px;
   align-items: center;
   min-block-size: 44px;
   padding: var(--shell-space) calc(2 * var(--shell-space));
@@ -286,6 +272,10 @@
 }
 
 @media (min-width: 960px) {
+  .site-search-entry {
+    margin-inline-start: auto;
+  }
+
   .shell-columns {
     grid-template-columns: 192px minmax(0, 1fr);
   }

@@ -2,8 +2,10 @@
 import { localizeContent } from "../i18n/render-content";
 
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import projectMapLocations from "../../data/projects/map-locations.json";
 import type { ProjectStatus, ReadinessState } from "../../data/project-adapter";
 import type { ConnectedProjectIndexItem } from "../../data/connected-context-adapter";
 import { useLanguage } from "../i18n/language-context";
@@ -18,13 +20,97 @@ type ProjectFiltersProps = {
   readinessStates: readonly ReadinessState[];
 };
 
+const countryFlags: Record<string, string> = {
+  China: "cn", France: "fr", Italy: "it", Japan: "jp", Norway: "no",
+  Portugal: "pt", "South Korea": "kr", Spain: "es", "United Kingdom": "gb", "United States": "us",
+};
+
+const regionViews: Record<string, string> = {
+  "Asia-Pacific": "254 27 90 50",
+  Europe: "151 14 72 40",
+  "North America": "48 29 72 40",
+};
+
+const mapLocations: Record<string, {
+  longitude: number;
+  latitude: number;
+  kind: string;
+  source: string;
+} | null> = projectMapLocations;
+
+const locationLabels: Record<string, [string, string]> = {
+  area: ["Documented project area", "已公布的项目区域"],
+  site: ["Published site location", "已公布的项目位置"],
+  turbine: ["Documented turbine location", "已公布的风机位置"],
+  "proposed turbine": ["Proposed turbine location", "拟建风机位置"],
+};
+
+function ProjectCardMap({ project, zh }: { project: ConnectedProjectIndexItem; zh: boolean }) {
+  const location = mapLocations[project.slug];
+  const view = regionViews[project.region];
+  const unavailable = zh ? "位置暂无" : "Location NA";
+  const label = location ? locationLabels[location.kind][zh ? 1 : 0] : unavailable;
+  if (!view) return <p className="project-map-note">{unavailable}</p>;
+
+  return (
+    <div className="project-map-frame">
+      <svg className="project-card-map" viewBox={view} role="img" aria-label={`${project.region} · ${label}`}>
+        <title>{`${project.region} · ${label}`}</title>
+        <image href="/editorial/maps/world-land.svg" width="360" height="150" />
+        {location && (
+          <g className="project-map-pin"
+            transform={`translate(${180 + location.longitude} ${85 - location.latitude}) scale(0.36)`}>
+            <circle r="6" className="project-map-area" />
+            <path d="M0 0C-2-3-4-5-4-7a4 4 0 0 1 8 0C4-5 2-3 0 0Z" />
+            <circle cy="-7" r="1.35" fill="white" />
+          </g>
+        )}
+      </svg>
+      {location
+        ? <a className="project-map-source" href={location.source}>{label}</a>
+        : <span className="project-map-note">{unavailable}</span>}
+    </div>
+  );
+}
+
+
+const monthFormats = {
+  en: new Intl.DateTimeFormat("en-GB", { month: "short", year: "numeric", timeZone: "UTC" }),
+  zh: new Intl.DateTimeFormat("zh-CN", { month: "short", year: "numeric", timeZone: "UTC" }),
+};
+
+function Month({ date, language }: { date: string; language: "en" | "zh" }) {
+  const month = date.slice(0, 7);
+  return <time dateTime={month}>{month.length === 7 ? monthFormats[language].format(new Date(month + "-01T00:00:00Z")) : month}</time>;
+}
+
+function CardDate({ value }: { value: string | null }) {
+  if (!value) return <>N/A</>;
+  const [year, month] = value.split("-");
+  return <time dateTime={value}>{month ? `${month}/${year.slice(-2)}` : year}</time>;
+}
+
 const fidLabels = {
   confirmed: ["Confirmed", "已确认"], not_reached: ["Not reached", "未达到"],
   not_verified: ["Not verified", "未核实"], unknown: ["UNKNOWN", "未知"],
 };
 const areaZh: Record<string, string> = { Permitting: "许可", Revenue: "收入", Engineering: "工程", Procurement: "采购", "Financing / FID": "融资 / FID", Execution: "执行" };
 const stateZh: Record<ReadinessState, string> = { SECURED: "已落实", ACTIVE: "推进中", "NOT VERIFIED": "未核实", "NOT STARTED": "未开始", UNKNOWN: "未知" };
-const capacityOptions = [ ["small", "< 100 MW", "< 100 MW"], ["medium", "100–<500 MW", "100–<500 MW"], ["large", "≥ 500 MW", "≥ 500 MW"], ["unknown", "UNKNOWN", "未知"] ];
+function capacityBand(value: number | null | undefined, medium: number, large: number) {
+  if (value == null) return "unknown";
+  if (value < medium) return "small";
+  return value < large ? "medium" : "large";
+}
+
+function capacityOptions(medium: number, large: number, unknown: string) {
+  return [
+    ["small", `< ${medium} MW`],
+    ["medium", `${medium}–<${large} MW`],
+    ["large", `≥ ${large} MW`],
+    ["unknown", unknown],
+  ];
+}
+
 
 export function ProjectFilters({ projects, regions, countries, statuses, readinessAreas, readinessStates }: ProjectFiltersProps) {
   const { language } = useLanguage();
@@ -35,6 +121,7 @@ export function ProjectFilters({ projects, regions, countries, statuses, readine
   const [status, setStatus] = useState("All");
   const [fid, setFid] = useState("All");
   const [capacity, setCapacity] = useState("All");
+  const [turbineCapacity, setTurbineCapacity] = useState("All");
   const [area, setArea] = useState("All");
   const [state, setState] = useState("All");
   const filteredProjects = useMemo(() => projects.filter((project) =>
@@ -42,19 +129,28 @@ export function ProjectFilters({ projects, regions, countries, statuses, readine
     (country === "All" || project.country === country) &&
     (status === "All" || project.normalizedStatus === status) &&
     (fid === "All" || project.fid === fid) &&
-    (capacity === "All" || (project.capacityMw === null ? capacity === "unknown"
-      : capacity === "small" ? project.capacityMw < 100
-      : capacity === "medium" ? project.capacityMw >= 100 && project.capacityMw < 500
-      : capacity === "large" && project.capacityMw >= 500)) &&
+    (capacity === "All" || capacityBand(project.capacityMw, 100, 500) === capacity) &&
+    (turbineCapacity === "All" || capacityBand(project.turbineRatingMw, 5, 10) === turbineCapacity) &&
     project.readiness.some((gate) => (area === "All" || gate.area === area) && (state === "All" || gate.state === state))
-  ), [projects, region, country, status, fid, capacity, area, state]);
-  const hasFilters = [region, country, status, fid, capacity, area, state].some((value) => value !== "All");
+  ), [projects, region, country, status, fid, capacity, turbineCapacity, area, state]);
+  const hasFilters = [region, country, status, fid, capacity, turbineCapacity, area, state].some((value) => value !== "All");
+  const groups = [
+    { label: copy("Lifecycle", "生命周期"), value: status, set: setStatus,
+      options: statuses.map(({ value, label }) => [value, zh ? projectStatusZh(value) : label]),
+      category: (project: ConnectedProjectIndexItem) => project.normalizedStatus },
+    { label: copy("Region", "地区"), value: region, set: setRegion,
+      options: regions.map((name) => [name, name]),
+      category: (project: ConnectedProjectIndexItem) => project.region },
+    { label: copy("Total capacity", "总容量"), value: capacity, set: setCapacity,
+      options: capacityOptions(100, 500, copy("Unknown", "未知")),
+      category: (project: ConnectedProjectIndexItem) => capacityBand(project.capacityMw, 100, 500) },
+    { label: copy("Capacity per turbine", "单机容量"), value: turbineCapacity, set: setTurbineCapacity,
+      options: capacityOptions(5, 10, copy("Unknown", "未知")),
+      category: (project: ConnectedProjectIndexItem) => capacityBand(project.turbineRatingMw, 5, 10) },
+  ];
   const controls = [
-    { label: copy("Region", "地区"), value: region, set: setRegion, options: regions.map((v) => [v, v]) },
     { label: copy("Country", "国家"), value: country, set: setCountry, options: countries.map((v) => [v, v]) },
-    { label: copy("Lifecycle", "生命周期"), value: status, set: setStatus, options: statuses.map((s) => [s.value, zh ? projectStatusZh(s.value) : s.label]) },
     { label: "FID", value: fid, set: setFid, options: Object.entries(fidLabels).map(([v, labels]) => [v, labels[zh ? 1 : 0]]) },
-    { label: copy("Capacity", "容量"), value: capacity, set: setCapacity, options: capacityOptions.map(([v, en, chinese]) => [v, copy(en, chinese)]) },
     { label: copy("Readiness area", "准备度领域"), value: area, set: setArea, options: readinessAreas.map((v) => [v, zh ? areaZh[v] : v]) },
     { label: copy("Readiness state", "准备度状态"), value: state, set: setState, options: readinessStates.map((v) => [v, zh ? `${stateZh[v]} / ${v}` : v]) },
   ];
@@ -65,36 +161,74 @@ export function ProjectFilters({ projects, regions, countries, statuses, readine
         <h2 id="project-filter-heading">{copy("Compare project intelligence", "比较项目情报")}</h2>
         <p aria-live="polite">{filteredProjects.length} / {projects.length} {copy("projects", "个项目")}</p>
       </div>
-      <div className="project-overview-lifecycle" aria-label={copy("Lifecycle distribution in the dataset", "数据集中的生命周期分布")}>
-        {statuses.map((item) => <button key={item.value} type="button" aria-pressed={status === item.value} onClick={() => setStatus(status === item.value ? "All" : item.value)}>
-          {zh ? projectStatusZh(item.value) : item.label} <strong>{projects.filter((p) => p.normalizedStatus === item.value).length}</strong>
-        </button>)}
-      </div>
-      <div className="project-filter-controls project-overview-filters">
-        {controls.map((control) => <label key={control.label}><span>{control.label}</span>
-          <select value={control.value} onChange={(event) => control.set(event.target.value)}>
-            <option value="All">{copy("All", "全部")}</option>
-            {control.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
-          </select>
-        </label>)}
-      </div>
-      <p className="project-muted-note">{copy("Readiness filters match the selected area and state together; All areas matches any gate. Active development does not confirm construction commitment. FID not verified remains visible for operating assets.", "准备度筛选同时匹配所选领域和状态；全部领域可匹配任一门槛。开发推进并不确认建设承诺。运营资产的未核实 FID 仍明确显示。")}</p>
-      {hasFilters && <button className="text-button project-clear-filters" type="button" onClick={() => { setRegion("All"); setCountry("All"); setStatus("All"); setFid("All"); setCapacity("All"); setArea("All"); setState("All"); }}>{copy("Clear filters", "清除筛选")}</button>}
+      {groups.map((group) => <fieldset key={group.label} className="project-filter-group">
+        <legend>{group.label}</legend>
+        <div className="project-overview-lifecycle">
+          {group.options.map(([value, label]) => (
+            <button key={value} type="button" aria-pressed={group.value === value}
+              onClick={() => group.set(group.value === value ? "All" : value)}>
+              {label} <strong>{projects.filter((project) => group.category(project) === value).length}</strong>
+            </button>
+          ))}
+        </div>
+      </fieldset>)}
+      <details className="project-extra-filters">
+        <summary>{copy("Additional filters", "其他筛选条件")}</summary>
+        <div className="project-filter-controls project-overview-filters">
+          {controls.map((control) => <label key={control.label}><span>{control.label}</span>
+            <select value={control.value} onChange={(event) => control.set(event.target.value)}>
+              <option value="All">{copy("All", "全部")}</option>
+              {control.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+            </select>
+          </label>)}
+        </div>
+      </details>
+      {hasFilters && <button className="text-button project-clear-filters" type="button" onClick={() => { setRegion("All"); setCountry("All"); setStatus("All"); setFid("All"); setCapacity("All"); setTurbineCapacity("All"); setArea("All"); setState("All"); }}>{copy("Clear filters", "清除筛选")}</button>}
     </section>
     <section aria-labelledby="project-list-heading" className="project-overview">
       <h2 id="project-list-heading">{copy("Project landscape", "项目全景")}</h2>
-      <p className="project-muted-note">{copy("Next signal is the first recorded watchpoint, not a priority ranking or a single confirmed blocker. Expand a row for all gates and watchpoints. Readiness is the existing editorial assessment; evidence gaps are not proof of inactivity.", "下一信号为记录中的首项观察点，不代表优先排名或唯一已确认阻碍。展开各行可查看所有门槛和观察点。准备度沿用现有编辑评估；证据缺失不等于项目停滞。")}</p>
-      <div className="project-comparison-heading" aria-hidden="true"><span>{copy("Project / Capacity", "项目 / 容量")}</span><span>{copy("Lifecycle", "生命周期")}</span><span>FID</span><span>{copy("Key readiness", "关键准备度")}</span><span>{copy("Next signal", "下一信号")}</span></div>
       {filteredProjects.length ? <ol className="project-index-list">
         {filteredProjects.map((project) => <li key={project.id}>
           <article className="project-comparison-row" aria-labelledby={`name-${project.id}`}>
+            <header className="project-card-header">
+              <div>
+                <h3 id={`name-${project.id}`}><Link href={`/projects/${project.slug}`}>{project.name}</Link></h3>
+                <p className="project-location">
+                  <span className="project-country">
+                    {countryFlags[project.country] && <Image src={`/flags/${countryFlags[project.country]}.svg`} width={20} height={15} alt="" />}
+                    {project.country}
+                  </span>
+                  <span className="project-region" data-region={project.region}>{project.region}</span></p>
+                <dl className="project-card-owner">
+                  <div><dt>{copy("Owner / developer", "业主 / 开发商")}</dt><dd>{project.developerOwnerText ?? copy("Not recorded", "未记录")}</dd></div>
+                </dl>
+              </div>
+              <ProjectCardMap project={project} zh={zh} />
+            </header>
             <div className="project-comparison-cells">
-              <div><h3 id={`name-${project.id}`}><Link href={`/projects/${project.slug}`}>{project.name}</Link></h3><p>{project.country} / {project.region}</p><p>{project.capacityMw === null ? copy("Capacity UNKNOWN", "容量未知") : `${new Intl.NumberFormat("en-GB", { maximumFractionDigits: 2 }).format(project.capacityMw)} MW`}</p><p className="project-review-date">{project.reviewedOn ? <>{copy("Assessment reviewed", "评估复核日期")}: <time dateTime={project.reviewedOn}>{project.reviewedOn}</time></> : copy("Assessment review: not recorded", "评估复核：未记录")}</p></div>
-              <div><span className="project-mobile-label">{copy("Lifecycle", "生命周期")}</span><span className={`project-status project-status-${project.normalizedStatus}`}>{zh ? projectStatusZh(project.normalizedStatus) : project.statusLabel}</span></div>
-              <div><span className="project-mobile-label">FID</span><strong>{fidLabels[project.fid][zh ? 1 : 0]}</strong></div>
-              <dl className="project-overview-key-gates">{project.readiness.filter((g) => ["Permitting", "Revenue", "Execution"].includes(g.area)).map((g) => <div key={g.area}><dt>{zh ? areaZh[g.area] : g.area}</dt><dd>{gateState(g.state)}</dd></div>)}</dl>
-              <div><span className="project-mobile-label">{copy("Next signal", "下一信号")}</span><p>{project.nextSignal ?? copy("UNKNOWN", "未知")}</p></div>
+              <div>
+                <dl className="project-card-facts">
+                  <div><dt>{copy("Total capacity", "总容量")}</dt><dd>{project.capacityMw === null ? copy("Unknown", "未知") : `${new Intl.NumberFormat("en-GB", { maximumFractionDigits: 2 }).format(project.capacityMw)} MW`}</dd></div>
+                  <div><dt>{copy("Turbine count", "风机数量")}</dt><dd>{project.turbineCount ?? copy("Not recorded", "未记录")}</dd></div>
+                  <div><dt title={copy("Capacity per turbine", "单机容量")}>{copy("Per turbine", "单机容量")}</dt><dd>{project.turbineRatingMw == null ? copy("Not recorded", "未记录") : `${project.turbineRatingMw} MW`}</dd></div>
+                  <div className="project-card-date"><dt title={copy("Construction start", "开工日期")}>{copy("Build start", "开工日期")}</dt><dd><CardDate value={project.constructionStart} /></dd></div>
+                  <div className="project-card-date"><dt title={copy("Commercial operation", "商业运行")}>{copy("In service", "商业运行")}</dt><dd><CardDate value={project.actualCod} /></dd></div>
+                </dl>
+                <p className="project-review-date">{project.reviewedOn ? <>{copy("Assessment reviewed", "评估复核日期")}: <time dateTime={project.reviewedOn}>{project.reviewedOn}</time></> : copy("Assessment review: not recorded", "评估复核：未记录")}</p>
+              </div>
+              <dl className="project-overview-key-gates">
+                <div><dt>{copy("Lifecycle", "生命周期")}</dt><dd><span className={`project-status project-status-${project.normalizedStatus}`}>{zh ? projectStatusZh(project.normalizedStatus) : project.statusLabel}</span></dd></div>
+                <div><dt>FID</dt><dd><strong className="project-fid-badge">{fidLabels[project.fid][zh ? 1 : 0]}</strong></dd></div>
+                {project.readiness.filter((g) => ["Permitting", "Revenue", "Execution"].includes(g.area)).map((g) => <div key={g.area}><dt>{zh ? areaZh[g.area] : g.area}</dt><dd>{gateState(g.state)}</dd></div>)}
+              </dl>
             </div>
+            <div className="project-card-next"><span>{copy("Next signal", "下一信号")}</span><p>{project.nextSignal ?? copy("UNKNOWN", "未知")}</p></div>
+            <details className="project-overview-details project-card-milestones">
+              <summary>{copy("Recorded milestones", "已记录的里程碑")}</summary>
+              {project.milestones.length ? <ol className="project-card-timeline">
+                {project.milestones.map((event) => <li key={event.id}><Month date={event.date} language={language} /> <span>{event.title}</span></li>)}
+              </ol> : <p>{copy("No dated milestones recorded", "暂无已记录日期的里程碑")}</p>}
+            </details>
             <details className="project-overview-details">
               <summary aria-label={`${copy("Assessment, gates & milestones", "评估、门槛与里程碑")} — ${project.name}`}>{copy("Assessment, gates & milestones", "评估、门槛与里程碑")}</summary>
               <div className="project-overview-expansion">
